@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+	<!--
+		<record model='ir.ui.menu' id='attendance_students_menu'>
+					<field name='groups_id' eval="[(6,0,[ref('bus_supervisor_group')])]"/>
+		</record>
+	-->
+
+	<!--record model='ir.ui.menu' id='transport_config_main_menu'>
+				<field name='groups_id' eval="[(6,0,[ref('mk_users.mk_admin')])]"/>
+	</record-->
+
+	<record model='ir.ui.menu' id='mk_transport_main_menu'>
+		<field name='groups_id' eval="[(6,0,[ref('read_vehicles')])],
+		            [(6,0,[ref('read_transportation_request')])],
+					[(6,0,[ref('read_apologize_request')])],
+					[(6,0,[ref('read_transportation_management')])],
+					[(6,0,[ref('trans_read_attendance')])],
+					[(6,0,[ref('read_driver')])]"/>
+	</record>
+
+	<record model='ir.ui.menu' id='transportation_request_menu'>
+				<field name='groups_id' eval="[(6,0,[ref('read_transportation_request')])]"/>
+	</record>
+
+	<!--record model='ir.ui.menu' id='apology_request_menu'>
+				<field name='groups_id' eval="[(6,0,[ref('read_apologize_request')])]"/>
+	</record-->
+
+
+	</data>
+</odoo>
+

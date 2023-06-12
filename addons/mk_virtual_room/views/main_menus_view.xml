@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+
+		<menuitem id="virtual_room_basic_menu" 
+				  name="Virtual room basic"
+				  web_icon="mk_virtual_room,static/description/icon.png" 
+				  sequence="50" />
+				  
+		<menuitem id="virtual_room_settings_menu"
+				  name="Setting" 
+				  parent="virtual_room_basic_menu" 
+				  sequence="30"/>
+	  
+	</data>
+</odoo>

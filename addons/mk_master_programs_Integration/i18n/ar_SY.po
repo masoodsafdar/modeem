@@ -1,0 +1,118 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* mk_master_programs_Integration
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-11-21 17:36+0000\n"
+"PO-Revision-Date: 2017-11-21 17:36+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: mk_master_programs_Integration
+#: model:ir.ui.view,arch_db:mk_master_programs_Integration.mk_mosque_kanban_inh_view
+msgid "<span style=\"color:#c7dde2\"><b>supervisors</b></span>"
+msgstr "<span style=\"color:#c7dde2\"><b>المشرفين</b></span>"
+
+#. module: mk_master_programs_Integration
+#: selection:supervisor.line,state:0
+msgid "Accepted"
+msgstr "مقبول"
+
+#. module: mk_master_programs_Integration
+#: model:ir.model.fields,field_description:mk_master_programs_Integration.field_supervisor_line_create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: mk_master_programs_Integration
+#: model:ir.model.fields,field_description:mk_master_programs_Integration.field_supervisor_line_create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: mk_master_programs_Integration
+#: model:ir.model,name:mk_master_programs_Integration.model_supervisor_line
+msgid "Description"
+msgstr "الوصف"
+
+#. module: mk_master_programs_Integration
+#: model:ir.model.fields,field_description:mk_master_programs_Integration.field_supervisor_line_display_name
+msgid "Display Name"
+msgstr "اسم العرض"
+
+#. module: mk_master_programs_Integration
+#: selection:supervisor.line,state:0
+msgid "Draft"
+msgstr "مبدئي"
+
+#. module: mk_master_programs_Integration
+#: model:ir.model.fields,field_description:mk_master_programs_Integration.field_supervisor_line_id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: mk_master_programs_Integration
+#: model:ir.model.fields,field_description:mk_master_programs_Integration.field_supervisor_line___last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: mk_master_programs_Integration
+#: model:ir.model.fields,field_description:mk_master_programs_Integration.field_supervisor_line_write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: mk_master_programs_Integration
+#: model:ir.model.fields,field_description:mk_master_programs_Integration.field_supervisor_line_write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: mk_master_programs_Integration
+#: model:ir.model.fields,field_description:mk_master_programs_Integration.field_supervisor_line_order_id
+msgid "Order"
+msgstr "الترتيب"
+
+#. module: mk_master_programs_Integration
+#: model:ir.model.fields,field_description:mk_master_programs_Integration.field_supervisor_line_registeration_code
+msgid "Registeration Code"
+msgstr "رقم التسجيل"
+
+#. module: mk_master_programs_Integration
+#: selection:supervisor.line,state:0
+msgid "Rejected"
+msgstr "مرفوض"
+
+#. module: mk_master_programs_Integration
+#: model:ir.model.fields,field_description:mk_master_programs_Integration.field_supervisor_line_state
+msgid "State"
+msgstr "المحافظة"
+
+#. module: mk_master_programs_Integration
+#: model:ir.model.fields,field_description:mk_master_programs_Integration.field_supervisor_line_supervisor_id
+#: model:ir.ui.view,arch_db:mk_master_programs_Integration.mk_episode_inherit_form_view
+msgid "Supervisor"
+msgstr "مشرف"
+
+#. module: mk_master_programs_Integration
+#: model:ir.model.fields,field_description:mk_master_programs_Integration.field_mk_mosque_superviser_number
+msgid "episode numbers"
+msgstr "episode numbers"
+
+#. module: mk_master_programs_Integration
+#: model:ir.model,name:mk_master_programs_Integration.model_mk_episode
+msgid "mk.episode"
+msgstr "mk.episode"
+
+#. module: mk_master_programs_Integration
+#: model:ir.model,name:mk_master_programs_Integration.model_mk_mosque
+msgid "mk.mosque"
+msgstr "mk.mosque"
+
+#. module: mk_master_programs_Integration
+#: model:ir.model.fields,field_description:mk_master_programs_Integration.field_mk_mosque_supervisor_ids
+msgid "supervisor"
+msgstr "مشرف"
+

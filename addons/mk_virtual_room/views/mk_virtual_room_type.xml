@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	 <data>
+        <record id="mk_virtual_room_type_tree_view" model="ir.ui.view">
+            <field name="name">Virtual room type tree view</field>
+            <field name="model">mk.virtual_room.type</field>
+            <field name="arch" type="xml">
+                <tree delete="0" string="Virtual room day">
+                	<field name="name" />
+                	<field name="order_type"/>
+                </tree>
+            </field>
+        </record>
+        
+	 	<record id="mk_virtual_room_type_form_view" model="ir.ui.view">
+	          <field name="name">Virtual room type form view</field>
+	          <field name="model">mk.virtual_room.type</field>
+	          <field name="arch" type="xml">
+	              <form string = "Virtual room type">
+					<sheet>
+						<group>
+							<group>
+								<field name="name" />
+							</group> 
+							<group>
+								<field name="order_type"/>
+							</group> 
+						</group>
+					</sheet>                
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+	              </form>
+	             </field>
+	         </record>
+	
+	        <record id="mk_virtual_room_type_search_view" model="ir.ui.view">
+	            <field name="name">Virtual room type search view</field>
+	            <field name="model">mk.virtual_room.type</field>
+	            <field name="arch" type="xml">
+	                <search string="Virtual room type">
+	                    <field name="name"/>
+	                    <field name="order_type"/>
+	                </search>
+	            </field>
+	        </record>
+	        
+	        <record id="action_virtual_room_type" model="ir.actions.act_window">
+	            <field name="name">Virtual room type</field>
+	            <field name="res_model">mk.virtual_room.type</field>
+	            <field name="type">ir.actions.act_window</field> 
+	            <field name="view_mode">tree,form</field>
+	        </record>
+	
+	         <menuitem
+		         name="Virtual room type"
+		         id="mk_virtual_room_type_menu" 
+		         sequence="20" 
+		         parent="mk_virtual_room.virtual_room_settings_menu"
+		         action="action_virtual_room_type"/>
+	</data>
+</odoo>

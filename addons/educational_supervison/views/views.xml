@@ -1,0 +1,645 @@
+<odoo>
+  <data>
+
+    <act_window
+      id ="edu_v2.action_distribute"
+      name="distribute"
+      view_mode ="form"
+      view_type ="form"
+      res_model ="edu_v2.distribute.supervisor"
+      target ="new"/>
+
+       <act_window 
+        id="edu_v2.action_item"
+        name="Items"
+        res_model="edu.item"
+        view_mode="tree,form"/>
+ 
+ <record id="edu_v2.tree_item" model="ir.ui.view">
+      <field name="name">item tree</field>
+      <field name="model">edu.item</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name" string="item name"/>
+          <field name="item_number"/>
+        </tree>
+   </field>
+ </record>
+
+    <record id="edu_v2.form_item" model="ir.ui.view">
+      <field name="name">item form</field>
+      <field name="model">edu.item</field>
+      <field name="arch" type="xml">
+        <form>
+          <sheet>
+            <group>
+              <group>
+                <field name="item_number" required="1"/>
+                <field name="need_approve"/>
+                <field name="approval_type"/>
+              </group>
+              <group>
+                <field name="name" required="1"/>
+                <field name="item_degree"/>
+                <field name="item_description"/>
+                <field name="criterion" widget="many2many_tags"/>
+              </group>
+            </group>
+
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <record id="edu_v2.tree_criterion" model="ir.ui.view">
+      <field name="name">criterion form</field>
+      <field name="model">edu_v2.criterion</field>
+      <field name="arch" type="xml">
+      <tree>
+        <field name="name" string="criterion_name"/>
+        <field name="criterion_number"/>
+        <field name="criterion_weight"/>
+      </tree>
+      </field>
+
+    </record>
+    <record id="edu_v2.form_criterion" model="ir.ui.view">
+      <field name="name">criterion form</field>
+      <field name="model">edu_v2.criterion</field>
+      <field name="arch" type="xml">
+        <form>
+          <sheet>
+            <group>
+              <group>
+                <field name="criterion_number" required="1"/>
+              </group>
+              <group>
+                <field name="name" required="1"/>
+                <field name="criterion_weight" required="1"/>
+              </group>
+            </group>
+            <notebook>
+              <page string="البنود">
+                <field name="items">
+                  <tree>
+                    <field name="item_number"/>
+                    <field name="name"/>
+                    <field name="item_degree"/>
+                  </tree>
+                </field>
+              </page>
+            </notebook>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <record id="edu_v2.form_name" model="ir.ui.view">
+      <field name="name">name form</field>
+      <field name="model">edu_v2.name</field>
+      <field name="arch" type="xml">
+        <form>
+          <sheet>
+            <group>
+              <group>
+                <field name="number" required="1"/>
+              </group>
+              <group>
+                <field name="name" required="1"/>
+              </group>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <record id="edu_v2.form_field" model="ir.ui.view">
+      <field name="name">field form</field>
+      <field name="model">edu_v2.field</field>
+      <field name="arch" type="xml">
+        <form>
+          <sheet>
+            <group>
+              <group>
+                <field name="number" required="1"/>
+              </group>
+              <group>
+                <field name="name" required="1"/>
+              </group>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <record id="edu_v2.form_visit" model="ir.ui.view">
+      <field name="name">visit form</field>
+      <field name="model">edu_v2.visit</field>
+      <field name="arch" type="xml">
+        <form>
+          <sheet>
+            <group>
+              <group>
+                <field name="number" required="1"/>
+              </group>
+              <group>
+                <field name="name" required="1"/>
+                <field name="sudden" required="1"/>
+              </group>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <record id="edu_v2.form_approve" model="ir.ui.view">
+      <field name="name">approve form</field>
+      <field name="model">edu_v2.approve</field>
+      <field name="arch" type="xml">
+        <form>
+          <sheet>
+            <group>
+              <group>
+                <field name="number" required="1"/>
+              </group>
+              <group>
+                <field name="name" required="1"/>
+              </group>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <record id="edu_v2.tree_item1" model="ir.ui.view">
+      <field name="name">item tree</field>
+      <field name="model">edu_v2.pointer.line</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="item"/>
+          <field name="item_description"/>
+          <field name="pointer_dist"/>
+          <field name="need_approve"/>
+          
+          <field name="approval_type"/>
+          <field name="notes"/>
+          <field name="state"/>
+        </tree>
+      </field>
+    </record>
+
+    <record id="edu_v2.form_pointer_supervisor" model="ir.ui.view">
+      <field name="name">pointer supervisor form</field>
+      <field name="model">edu_v2.pointer.line</field>
+      <field name="arch" type="xml">
+        <form create='false'>
+          <header>
+            <field name="state" widget="statusbar"/>
+            <button name="confirm" type="object" string="confirm" class="oe_highlight" attrs="{'invisible':[('state','=','done')]}"/>
+          </header>
+          <sheet>
+          <group>
+            <group>
+              <field name="supervisor" readonly="1"/>
+              <field name="item" readonly="1"/>
+              <field name="item_description" readonly="1"/>
+              
+              <field name="pointer_dist" readonly="1"/>
+          
+            </group>
+            <group>
+              <field name="need_approve" readonly="1"/>
+          
+              <field name="approval_type" readonly="1"/>
+            </group>
+          </group>
+          <group>
+          <field name="date" string="done_date" attrs="{'invisible':[('state','!=','done')]}"/>
+
+            <field name="notes"/>
+          </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+
+
+
+    <record id="edu_v2.tree_pointer_management" model="ir.ui.view">
+      <field name="name">pointer management tree</field>
+      <field name="model">edu_v2.pointer</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="field"/>
+          <field name="name"/>
+        </tree>
+      </field>
+    </record>
+
+    <record id="edu_v2.tree_pointer_distribution" model="ir.ui.view">
+      <field name="name">pointer distribution tree</field>
+      <field name="model">edu_v2.pointer</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+        </tree>
+      </field>
+    </record>
+
+    <record id="edu_v2.tree_pointer_distribution_supervisor" model="ir.ui.view">
+      <field name="name">pointer distribution Supervisor tree</field>
+      <field name="model">edu_v2.pointer</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+        </tree>
+      </field>
+    </record>
+
+    <record id="edu_v2.form_pointer_management" model="ir.ui.view">
+      <field name="name">pointer management form</field>
+      <field name="model">edu_v2.pointer</field>
+      <field name="arch" type="xml">
+        <form>
+          <header>
+            <field name="state" widget="statusbar"/>
+            <button name="confirm" type="object" string="confirm" class="oe_highlight" attrs="{'invisible':[('state','!=','draft')]}"/>
+          </header>
+          <sheet>
+            <group>
+              <field name="field" required="1" attrs="{'readonly':[('state','!=','draft')]}"/>
+            </group>
+            <notebook>
+              <page string="items">
+            <field name="lines">
+              <tree editable="bottom">
+                <field name="criterion" required="1" />
+                <field name="item" domain="[('criterion','in',criterion)]" required="1"/>
+                <field name="need_approve"/>
+                <field name="approval_type"/>
+                <!-- <field name="attachment" attrs="{'invisible':[('need_approve','=',False)]}"/> -->
+              </tree>
+            </field>
+          </page>
+        </notebook>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <record id="edu_v2.form_pointer_distribution" model="ir.ui.view">
+      <field name="name">pointer distribution form</field>
+      <field name="model">edu_v2.pointer</field>
+      <field name="arch" type="xml">
+        <form create='false'>
+          <header>
+            <field name="state" widget="statusbar"/>
+            <button name="distribute" type="object" string="distribute" class="oe_highlight" attrs="{'invisible':[('state','!=','confirm')]}"/>
+          </header>
+          <sheet>
+            <group>
+              <field name="center" required="1"  widget="many2many_tags"/>
+                 
+            </group>
+            <notebook>
+              <page string="Items">
+            <field name="lines" >
+              <tree editable="bottom">
+                <field name="criterion"/>
+                <field name="item"/>
+               <field name="state"/>
+                </tree>
+            </field>
+          </page>
+        </notebook>
+            <group>  
+              <field name="item_count"/>
+             <field name="pointers" required="1"/>
+                  <field name="assigned"/>
+
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <record id="edu_v2.form_pointer_distribution_supervisor" model="ir.ui.view">
+      <field name="name">pointer distribution supervisor form</field>
+      <field name="model">edu_v2.pointer</field>
+      <field name="arch" type="xml">
+        <form create="false">
+          <header>
+            <field name="state" widget="statusbar"/>
+            <button name="%(multiple_assgin_actoin)d" type="action" context="{'default_pointer':active_id,}" string="distribute"/>
+          </header>
+          <sheet>
+            <group>
+              <group>
+                <field name="center" required="1" readonly="1" widget="many2many_tags"/>
+              </group>
+              <group>
+               <!-- <field name="supervisors" required="1" widget="many2many_tags"/>-->
+                <field name="supervision" required="1"/>
+              </group>
+            </group>
+            <notebook>
+              <page string="Items">
+            <field name="lines" readonly="1">
+              <tree editable="bottom" edit="true">
+                <field name="criterion" readonly="1"/>
+                <field name="item" readonly="1"/>
+                <field name="supervisor" domain="[('category','=','edu_supervisor')]"/>
+                <field name="state"/>
+              </tree>
+            </field>
+          </page>
+        </notebook>
+            <group>  
+              <field name="item_count"/>
+             <field name="pointers" required="1"/>
+                  <field name="assigned"/>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <record id="edu_v2.form_supervisor_assessment" model="ir.ui.view">
+      <field name="name">supervisor assessment form</field>
+      <field name="model">edu_v2.pointer</field>
+      <field name="arch" type="xml">
+        <form>
+          <sheet>
+            <group>
+              <group>
+                <field name="center" required="1" widget="many2many_tags" readonly="1"/>
+                <field name="supervision" required="1"  readonly="1"/>
+              </group>
+              <group>
+                <field name="supervisors" required="1" readonly="1" widget="many2many_tags"/>
+              </group>
+            </group>
+            <notebook>
+              <page string="items">
+            <field name="lines">
+              <tree editable="bottom">
+                <field name="criterion" readonly="1"/>
+                <field name="item" readonly="1"/>
+
+              </tree>
+            </field>
+          </page>
+        </notebook>
+            <group>  
+              <field name="item_count"/>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <record id="edu_v2.form_supervisor_item_management" model="ir.ui.view">
+      <field name="name">supervisor item management form</field>
+      <field name="model">edu_v2.supervisor.item.management</field>
+      <field name="arch" type="xml">
+        <form>
+          <header>
+            <button name="get_items" type="object" string="get_items"/>
+            <button name="confirm" type="object" string="confirm plan"/>
+          </header>
+          <sheet>
+            <group>
+              <field name="supervisor" required="1"/>
+            </group>
+            <notebook>
+              <page string="items">
+                <field name="items">
+                  <tree editable="bottom">
+                    <field name="item" readonly="1"/>
+                    <field name="item_description" readonly="1"/>
+                    <field name="approval_type" readonly="1"/>
+                    <field name="date"/>
+                    <field name="attachment"/>
+                    <field name="done"/>
+                    <field name="notes"/>
+                  </tree>
+                </field>
+              </page>
+              <page string="visits">
+                <field name="visits">
+                  <tree editable="bottom">
+                    <field name="item"/>
+                    <field name="date"/>
+                    <field name="visit_type"/>
+                    <field name="location"/>
+                    <field name="attachment"/>
+                    <field name="approval_type"/>
+                    <field name="done"/>
+                    <field name="notes"/>
+                  </tree>
+                </field>
+              </page>
+            </notebook>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <record id="edu_v2.tree_visit_assessment" model="ir.ui.view">
+      <field name="name">Visit Assessment Tree</field>
+      <field name="model">edu_v2.visit.assessment</field>
+      <field name="arch" type="xml">
+        <tree create="false" editable="bottom" delete="false">
+          <field name="date" readonly="1"/>
+          <field name="item" readonly="1"/>
+          <field name="supervisor" readonly="1"/>
+          <field name="visited"/>
+          <field name="notes"/>
+          <button name="confirm" type="object" string="confirm"/>
+        </tree>
+      </field>
+    </record>
+
+    <act_window 
+      id="edu_v2.action_item"
+      name="Items"
+      res_model="edu.item"
+      view_mode="tree,form"/>
+
+    <act_window 
+      id="edu_v2.action_criterion"
+      name="Criterions"
+      res_model="edu_v2.criterion"
+      view_mode="tree,form"/>
+
+    <act_window 
+      id="edu_v2.action_name"
+      name="Names"
+      res_model="edu_v2.name"
+      view_mode="tree,form"/>
+
+    <act_window 
+      id="edu_v2.action_field"
+      name="Fields"
+      res_model="edu_v2.field"
+      view_mode="tree,form"/>
+
+    <act_window 
+      id="edu_v2.action_visit"
+      name="Visits"
+      res_model="edu_v2.visit"
+      view_mode="tree,form"/>
+
+    <act_window 
+      id="edu_v2.action_approve"
+      name="Approves"
+      res_model="edu_v2.approve"
+      view_mode="tree,form"/>
+
+    <act_window 
+      id="edu_v2.action_center"
+      name="Centers"
+      res_model="edu_v2.center"
+      view_mode="tree,form"/>
+
+    <act_window 
+      id="edu_v2.action_mosque"
+      name="Mosques"
+      res_model="edu_v2.mosque"
+      view_mode="tree,form"/>
+
+    <act_window 
+      id="edu_v2.action_supervisor"
+      name="Supervisors"
+      res_model="edu_v2.supervisor"
+      view_mode="tree,form"/>
+
+    <act_window 
+      id="edu_v2.action_pointer_management"
+      name="Pointer Management"
+      res_model="edu_v2.pointer"
+      view_mode="tree,form"/>
+
+    <record id="edu_v2.action_pointer_management_tree" model="ir.actions.act_window.view">
+      <field eval="1" name="sequence"/>
+      <field name="view_mode">tree</field>
+      <field name="view_id" ref="edu_v2.tree_pointer_management" />
+      <field name="act_window_id" ref="edu_v2.action_pointer_management" />
+    </record>
+
+    <record id="edu_v2.action_pointer_management_form" model="ir.actions.act_window.view">
+      <field eval="3" name="sequence"/>
+      <field name="view_mode">form</field>
+      <field name="view_id" ref="edu_v2.form_pointer_management" />
+      <field name="act_window_id" ref="edu_v2.action_pointer_management" />
+    </record>
+
+
+
+    <act_window 
+      id="edu_v2.action_pointer_distribution"
+      name="Pointer Distribution"
+      res_model="edu_v2.pointer"
+      view_mode="tree,form"
+      domain="[('state','!=','draft')]"/>
+
+    <record id="edu_v2.action_pointer_distribution_tree" model="ir.actions.act_window.view">
+      <field eval="1" name="sequence"/>
+     <field name="view_mode">tree</field>
+     <field name="view_id" ref="edu_v2.tree_pointer_distribution" />
+     <field name="act_window_id" ref="edu_v2.action_pointer_distribution" />
+    </record>
+
+    <record id="edu_v2.action_pointer_distribution_form" model="ir.actions.act_window.view">
+      <field eval="3" name="sequence"/>
+     <field name="view_mode">form</field>
+     <field name="view_id" ref="edu_v2.form_pointer_distribution" />
+     <field name="act_window_id" ref="edu_v2.action_pointer_distribution" />
+    </record>
+
+
+    <act_window 
+      id="edu_v2.action_pointer_distribution_supervisor"
+      name="Pointer Distribution Supervisors"
+      res_model="edu_v2.pointer"
+      view_mode="tree,form"/>
+
+    <record id="edu_v2.action_pointer_distribution_supervisor_tree" model="ir.actions.act_window.view">
+      <field eval="1" name="sequence"/>
+     <field name="view_mode">tree</field>
+     <field name="view_id" ref="edu_v2.tree_pointer_distribution_supervisor" />
+     <field name="act_window_id" ref="edu_v2.action_pointer_distribution_supervisor" />
+    </record>
+
+    <record id="edu_v2.action_pointer_distribution_supervisor_form" model="ir.actions.act_window.view">
+      <field eval="3" name="sequence"/>
+     <field name="view_mode">form</field>
+     <field name="view_id" ref="edu_v2.form_pointer_distribution_supervisor" />
+     <field name="act_window_id" ref="edu_v2.action_pointer_distribution_supervisor" />
+    </record>
+
+    <act_window 
+      id="edu_v2.action_supervisor_item_management"
+      name="Supervisors Item Management"
+      res_model="edu_v2.pointer.line"
+      view_mode="tree,form"/>
+
+    <act_window 
+      id="edu_v2.action_supervisor_assessment"
+      name="Supervisors Assessment"
+      res_model="edu_v2.pointer"
+      view_mode="tree,form"/>
+
+    <record id="edu_v2.action_superviosr_assessment_form" model="ir.actions.act_window.view">
+      <field eval="3" name="sequence"/>
+     <field name="view_mode">form</field>
+     <field name="view_id" ref="edu_v2.form_supervisor_assessment" />
+     <field name="act_window_id" ref="edu_v2.action_supervisor_assessment" />
+    </record>
+
+    <act_window 
+      id="edu_v2.action_visit_assessment"
+      name="Visit Assessment"
+      res_model="edu_v2.visit.assessment"
+      view_mode="tree,form"/>
+    
+    <menuitem name="اﻹﺷﺮاﻑ اﻟﺘﺮﺑﻮﻱ" id="edu_v2.menu_root"/>
+
+    <menuitem name="اﻹﺷﺮاﻑ اﻟﺘﺮﺑﻮﻱ" id="edu_v2.menu_supervision" parent="edu_v2.menu_root"/>
+
+    <menuitem name="الإعدادات" id="edu_v2.menu_settings" parent="edu_v2.menu_root"/>
+
+    <menuitem name="ﺑﻨﻮﺩ اﻹﺷﺮاﻑ اﻟﺘﺮﺑﻮﻱ" id="edu_v2.menu_item" parent="edu_v2.menu_supervision" action="edu_v2.action_item"/>
+
+    <menuitem name="معايير اﻹﺷﺮاﻑ اﻟﺘﺮﺑﻮﻱ" id="edu_v2.menu_criterion" parent="edu_v2.menu_supervision" action="edu_v2.action_criterion"/>
+
+    <menuitem name="مسميات اﻹﺷﺮاﻑ اﻟﺘﺮﺑﻮﻱ" id="edu_v2.menu_name" parent="edu_v2.menu_settings" action="edu_v2.action_name"/>
+
+    <menuitem name="مجالات اﻹﺷﺮاﻑ اﻟﺘﺮﺑﻮﻱ" id="edu_v2.menu_field" parent="edu_v2.menu_settings" action="edu_v2.action_field"/>
+
+    <menuitem name="أنواع الزيارات" id="edu_v2.menu_visit" parent="edu_v2.menu_settings" action="edu_v2.action_visit"/>
+    
+    <menuitem name="أنواع التوثيق" id="edu_v2.menu_approve" parent="edu_v2.menu_settings" action="edu_v2.action_approve"/>
+    
+    <menuitem name="إدارة المؤشرات والبنود" id="edu_v2.menu_pointer_management" parent="edu_v2.menu_supervision" action="edu_v2.action_pointer_management"/>
+    
+    <menuitem name="المساجد" id="edu_v2.menu_mosque" parent="edu_v2.menu_settings" action="edu_v2.action_mosque"/>
+    
+    <menuitem name="المراكز" id="edu_v2.menu_center" parent="edu_v2.menu_settings" action="edu_v2.action_center"/>
+    
+    <menuitem name="المشرفين" id="edu_v2.menu_supervisor" parent="edu_v2.menu_settings" action="edu_v2.action_supervisor"/>
+    
+    <menuitem name="توزيع البنود على المراكز" id="edu_v2.menu_distribute" parent="edu_v2.menu_supervision" action="edu_v2.action_pointer_distribution"/>
+    
+    <menuitem name="توزيع البنود على المشرفين" id="edu_v2.menu_distribute_supervisor" parent="edu_v2.menu_supervision" action="edu_v2.action_pointer_distribution_supervisor"/>
+    
+
+    <menuitem name="تقييم البنود للمشرفين" id="edu_v2.menu_supervisor_item_management" parent="edu_v2.menu_supervision" action="edu_v2.action_supervisor_item_management"/>
+    
+    <menuitem name="تقييم أداء المشرفين" id="edu_v2.menu_supervisor_assessment" parent="edu_v2.menu_supervision" action="edu_v2.action_supervisor_assessment"/>
+
+    <menuitem name="تقييم الزيارات الإشرافية" id="edu_v2.menu_visit_assessment" parent="edu_v2.menu_supervision" action="edu_v2.action_visit_assessment"/>
+
+  </data>
+</odoo>

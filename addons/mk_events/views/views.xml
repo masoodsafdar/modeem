@@ -1,0 +1,208 @@
+<odoo>
+  <data>
+   
+    <record model="ir.ui.view" id="events_form">
+      <field name="name">events form</field>
+      <field name="model">event.event</field>
+      <field name="priority" eval="15"/>
+      <field name="arch" type="xml">
+        <form>
+           <header>  
+            
+                        <button string="Confirm Event" name="button_confirm" states="draft" type="object" class="oe_highlight" groups="mk_events.accept_deny_event"/>
+                        <button string="Finish Event" name="button_done" states="confirm" type="object" class="oe_highlight" groups="mk_events.start_end_event"/>
+                        <button string="Set To Draft" name="button_draft" states="cancel" type="object" groups="mk_events.start_end_event"/>
+                        <button string="Cancel Event" name="button_cancel" states="draft" type="object" groups="mk_events.accept_deny_event" />
+                        <button name="action_send_badge_email" string="Send by Email" type="object" states="done" class="oe_highlight" groups="mk_events.send_recommondation"/>
+                        <button name="send_sms" string="Send remainder" type="object"  states="draft"  class="oe_highlight" groups="mk_events.send_reminder_event"/>
+                        <button name="send_reminder_for_users" string="Send remainder for users" type="object"    class="oe_highlight" groups="mk_events.send_reminder_event"/>
+                        <field name="state" widget="statusbar" statusbar_visible="draft,confirm,done"/>
+                      
+          </header>
+            <sheet>
+               <!--<field name="state" invisible="1"/>-->
+                <group col="4" colspan="4">
+                  <field name="name" required="1"/>
+                  <field name="event_type_id" required="1"/>
+                </group>
+                <group col="4" colspan="4">
+                  <field name="event_status" required="1"/>
+                  <field name="event_start" widget="float_time" required="1"/>
+                </group>
+                <group col="4" colspan="4">
+                  <field name="event_date" required="1"/>
+                  <field name="event_end" widget="float_time" required="1"/>
+                  <field name="period" />
+                </group>
+                <group>
+                    <field name="remind_sms" states="draft" />
+
+                </group>
+                <notebook>
+                    <page string="Agenda" class="oe_page_title" accesskey="T">
+                      <group>
+                         <field name="agenda" widget="html"/>
+                      </group>                    
+                    </page>
+                    <page string="Event files" class="oe_page_title" accesskey="T">
+                         <field name="attachments" widget="many2many_binary" string="attach files"/>
+                         <!-- <tree  create="1" delete="1" edit="1" editable="top">
+                              <field name="name"  />
+                              <field name="url"  />
+                          </tree>
+                        </field>-->
+                    </page>
+                    <page string="Attendee" class="oe_page_title" accesskey="T">
+                       <field name="employee_ids" >
+                          <tree  create="1" delete="1" edit="1" editable="top">
+                              <field name="employee_id" options="{'no_open':1,'no_create':1}"/>
+                              <field name="center_id" options="{'no_open':1,'no_create':1}"/>
+                              <field name="mosque_ids"  widget="many2many_tags"/>
+                              <field name="job_id" options="{'no_open':1,'no_create':1}"/>
+                              <field name="email"  />
+                              <field name="attendance_confirm"  />
+                              <field name="attendance_state"  />
+                              <field name="agenda_sent"  />
+                              <field name="agenda_reply"  />
+                              <field name="recommendation_acceptance"  />
+
+                          </tree>
+                        </field>
+                        <p>أشخاص لهم صلة باﻹجتماع</p>
+
+                        <field name="attendee_ids" >
+                          <tree  create="1" delete="1" edit="1" editable="top">
+                              <field name="employee_id" options="{'no_open':1,'no_create':1}"/>
+                              <field name="center_id" options="{'no_open':1,'no_create':1}"/>
+                              <field name="mosque_ids"  widget="many2many_tags"/>
+                              <field name="job_id" options="{'no_open':1,'no_create':1}"/>
+                              <field name="email"  />
+                              <field name="attendance_confirm"  />
+                              <field name="attendance_state"  />
+                              <field name="agenda_sent"  />
+                              <field name="agenda_reply"  />
+                              <field name="recommendation_acceptance"  />
+
+                          </tree>
+                        </field>
+                        <p> مدعوين خارجيين</p>
+                        <field name="guest_ids" >
+                          <tree  create="1" delete="1" edit="1" editable="top">
+                              <field name="name"  />
+                              <field name="email"  />
+                              <field name="phone"  />
+                              <field name="partner"  />
+                              <field name="attendance_confirm"  />
+                              <field name="attendance_state"  />
+                              <field name="agenda_sent"  />
+                              <field name="agenda_reply"  />
+                              <field name="recommendation_acceptance"  />
+                              
+                          </tree>
+                        </field>
+                    </page>
+                    <page string="place" class="oe_page_title" accesskey="T">
+                        <group col="6" colspan="6">
+                         <field name="place" required="1"/>
+                         <field name="center_id" attrs="{'invisible': [('place', '!=', 'inside')],
+                                                         'required':[('place','=','inside')]}" 
+                                                 options="{'no_create': True,'no_open': True,}"/>
+                         <field name="mosque_id" attrs="{'invisible': [('place', '!=', 'inside')]}"/>
+                         <field name="latitude"  attrs="{'invisible': [('place', '!=', 'outside')],'required':[('place','=','outside')]}"/>
+                         <field name="longitude" attrs="{'invisible': [('place', '!=', 'outside')],'required':[('place','=','outside')]}"/>
+                         </group>
+                         <group>
+                         <field name="describe_place" attrs="{'invisible': [('place', '!=', 'outside')]}"/>
+                         <field name="maknoon_street" attrs="{'invisible': [('place', '!=', 'company')]}"/>
+
+                       </group>
+                    </page>
+                     <page string="Recommendation" class="oe_page_title" accesskey="T">
+                         <group>
+                            <field name="recommendations" widget="html"/>
+                            <field name="obj_recommendation" widget="html"/>
+
+                            <field name="other_attachements" widget="many2many_binary" />
+                       </group>
+                    </page>
+                </notebook>
+            </sheet>
+        </form>
+        
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_event_tree">
+            <field name="name">event.event.tree</field>
+            <field name="model">event.event</field>
+            <field name="priority" eval="15"/>
+
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="event_date"/>
+                    <field name="event_status" />
+                    <field name="event_start"/>
+                    <field name="event_end"/>
+                    <field name="state"/>
+
+                </tree>
+            </field>
+        </record>
+
+    <record id="event.action_event_view" model="ir.actions.act_window">
+        <field name="view_mode">tree,form</field>
+        <field name="context">{"search_default_upcoming":0}</field>
+    </record>
+    
+
+    <!-- actions opening views on models -->
+
+
+    
+  
+
+    <!-- server action to the one above -->
+    <!--
+    <record model="ir.actions.server" id="mk_events.action_server">
+      <field name="name">mk_events server</field>
+      <field name="model_id" ref="model_mk_events_mk_events"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": self._name,
+        }
+      </field>
+    </record>
+    -->
+
+    <!-- Top menu item -->
+    <!--
+    <menuitem name="mk_events" id="mk_events.menu_root"/>
+    -->
+    <!-- menu categories -->
+    <!--
+    <menuitem name="Menu 1" id="mk_events.menu_1" parent="mk_events.menu_root"/>
+    <menuitem name="Menu 2" id="mk_events.menu_2" parent="mk_events.menu_root"/>
+    -->
+    <!-- actions -->
+  
+   <!--
+   <delete model="ir.ui.menu" id="event.menu_reporting_events" />
+   <delete model="ir.ui.menu" id="event.menu_event_mail_schedulers" />
+   <delete model="ir.ui.menu" id="event.menu_event_type" />
+   <delete model="ir.ui.menu" id="event.menu_action_registration" />
+   <delete model="ir.ui.menu" id="event.menu_event_global_settings" />
+  <delete model="ir.ui.menu" id="event.event_event_menu_pivot_report" />-->
+   
+
+
+
+
+    <!--<menuitem name="Server to list" id="mk_events" parent="mk_events.menu_2"
+              action="mk_events.action_server"/>-->
+  
+  </data>
+</odoo>

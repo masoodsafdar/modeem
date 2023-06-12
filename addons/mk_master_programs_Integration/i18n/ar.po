@@ -1,0 +1,749 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* mk_master_models
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 9.0c-20160726\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-08-09 18:38+0000\n"
+"PO-Revision-Date: 2017-08-09 18:38+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: mk_master_models
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_periods_aasr_period
+msgid "Aasr Period"
+msgstr "فترة العصر"
+
+#. module: mk_master_models
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_formal_leave_active
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_study_class_active
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_study_year_active
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_urgent_leave_active
+msgid "Active"
+msgstr "مُفَعّل"
+
+#. module: mk_master_models
+#: model:ir.ui.view,arch_db:mk_master_models.mk_approach_form_view
+#: model:ir.ui.view,arch_db:mk_master_models.mk_approach_search_view
+msgid "Approach"
+msgstr "المناهج"
+
+#. module: mk_master_models
+#: model:ir.actions.act_window,name:mk_master_models.mk_approach_action
+#: model:ir.ui.menu,name:mk_master_models.mk_approach_menu
+msgid "Approach "
+msgstr "المناهج "
+
+#. module: mk_master_models
+#: selection:hr.department,level_type:0
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_student_center_department_id
+#: model:ir.ui.view,arch_db:mk_master_models.mk_center_form_view
+#: model:ir.ui.view,arch_db:mk_master_models.mk_center_search_view
+msgid "Center"
+msgstr "المراكز"
+
+#. module: mk_master_models
+#: model:ir.actions.act_window,name:mk_master_models.mk_center_action
+#: model:ir.ui.menu,name:mk_master_models.mk_center_menu
+msgid "Center "
+msgstr "مركز "
+
+#. module: mk_master_models
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_study_year_class_ids
+#: model:ir.ui.view,arch_db:mk_master_models.mk_study_year_form_view
+msgid "Classes"
+msgstr "الفصول الدراسية"
+
+#. module: mk_master_models
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_formal_leave_company_id
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_periods_company_id
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_study_class_company_id
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_study_year_company_id
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_urgent_leave_company_id
+msgid "Company"
+msgstr "الجمعية"
+
+#. module: mk_master_models
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_approach_create_uid
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_center_create_uid
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_episode_create_uid
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_formal_leave_create_uid
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_leave_create_uid
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_level_create_uid
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_mosque_create_uid
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_parts_create_uid
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_periods_create_uid
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_student_create_uid
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_study_class_create_uid
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_study_year_create_uid
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_surah_create_uid
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_surah_verses_create_uid
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_urgent_leave_create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: mk_master_models
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_approach_create_date
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_center_create_date
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_episode_create_date
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_formal_leave_create_date
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_leave_create_date
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_level_create_date
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_mosque_create_date
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_parts_create_date
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_periods_create_date
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_student_create_date
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_study_class_create_date
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_study_year_create_date
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_surah_create_date
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_surah_verses_create_date
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_urgent_leave_create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: mk_master_models
+#: selection:hr.department,level_type:0
+msgid "Department"
+msgstr "Department"
+
+#. module: mk_master_models
+#: selection:mk.surah.verses,difficulty_level:0
+msgid "Difficult"
+msgstr "صعب"
+
+#. module: mk_master_models
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_surah_verses_difficulty_level
+msgid "Difficulty Level"
+msgstr "مستوى الصعوبة"
+
+#. module: mk_master_models
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_approach_display_name
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_center_display_name
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_episode_display_name
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_formal_leave_display_name
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_leave_display_name
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_level_display_name
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_mosque_display_name
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_parts_display_name
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_periods_display_name
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_student_display_name
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_study_class_display_name
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_study_year_display_name
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_surah_display_name
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_surah_verses_display_name
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_urgent_leave_display_name
+msgid "Display Name"
+msgstr "اسم العرض"
+
+#. module: mk_master_models
+#: selection:mk.surah.verses,difficulty_level:0
+msgid "Easy"
+msgstr "ساهل"
+
+#. module: mk_master_models
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_formal_leave_end_date
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_urgent_leave_end_date
+
+msgid "End Date"
+msgstr "تاريخ نهاية الاجازة ميلادي"
+
+#. module: mk_master_models
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_study_year_end_date
+msgid "End Date"
+msgstr "نهاية السنة بالميلادي"
+
+#. module: mk_master_models
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_study_class_end_date
+msgid "End Date"
+msgstr "تاريخ نهاية الفصل ميلادي"
+
+#. module: mk_master_models
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_surah_end_verses
+msgid "End Verses "
+msgstr "نهاية الآيات "
+
+#. module: mk_master_models
+#: model:ir.ui.view,arch_db:mk_master_models.mk_episode_form_view
+#: model:ir.ui.view,arch_db:mk_master_models.mk_episode_search_view
+msgid "Episode"
+msgstr "الحلقات"
+
+#. module: mk_master_models
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_student_episode_id
+msgid "Episode"
+msgstr "الحلقة"
+
+#. module: mk_master_models
+#: model:ir.actions.act_window,name:mk_master_models.mk_episode_action
+#: model:ir.ui.menu,name:mk_master_models.mk_episode_menu
+msgid "Episode "
+msgstr "الحلقات "
+
+#. module: mk_master_models
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_periods_esha_period
+msgid "Esha Period"
+msgstr "فترة العشاء"
+
+#. module: mk_master_models
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_study_year_fiscal_year
+msgid "Fiscal Year"
+msgstr "العام المالي"
+
+#. module: mk_master_models
+#: model:ir.ui.view,arch_db:mk_master_models.mk_formal_leave_form_view
+#: model:ir.ui.view,arch_db:mk_master_models.mk_formal_leave_search_view
+msgid "Formal Leave"
+msgstr "الاجازات الرسمية"
+
+#. module: mk_master_models
+#: model:ir.actions.act_window,name:mk_master_models.mk_formal_leave_action
+#: model:ir.ui.menu,name:mk_master_models.mk_formal_leave_menu
+msgid "Formal Leave "
+msgstr "الاجازات الرسمية "
+
+#. module: mk_master_models
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_study_year_formal_leave_ids
+#: model:ir.ui.view,arch_db:mk_master_models.mk_study_year_form_view
+msgid "Formal Leaves"
+msgstr "الاجازات الرسمية"
+
+#. module: mk_master_models
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_periods_aasr_period_from
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_periods_esha_period_from
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_periods_magrib_period_from
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_periods_subh_period_from
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_periods_zuhr_period_from
+msgid "From Hour"
+msgstr "من الساعة"
+
+#. module: mk_master_models
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_parts_from_surah
+msgid "From Surah"
+msgstr "من سورة"
+
+#. module: mk_master_models
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_parts_from_verses
+msgid "From Verses "
+msgstr "من آية "
+
+#. module: mk_master_models
+#: selection:hr.department,level_type:0
+msgid "General Management"
+msgstr "ادارة عامة"
+
+#. module: mk_master_models
+#: model:ir.model,name:mk_master_models.model_hr_department
+msgid "HR Department"
+msgstr "قسم الموارد البشرية"
+
+#. module: mk_master_models
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_approach_id
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_center_id
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_episode_id
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_formal_leave_id
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_leave_id
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_level_id
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_mosque_id
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_parts_id
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_periods_id
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_student_id
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_study_class_id
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_study_year_id
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_surah_id
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_surah_verses_id
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_urgent_leave_id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: mk_master_models
+#: code:addons/mk_master_models/models/mk_formal_leave.py:46
+#: code:addons/mk_master_models/models/mk_study_class.py:47
+#: code:addons/mk_master_models/models/mk_urgent_leave.py:46
+#, python-format
+msgid "Invalid End Date"
+msgstr "تاريخ نهاية غير صحيح"
+
+#. module: mk_master_models
+#: code:addons/mk_master_models/models/mk_formal_leave.py:44
+#: code:addons/mk_master_models/models/mk_study_class.py:45
+#: code:addons/mk_master_models/models/mk_urgent_leave.py:44
+#, python-format
+msgid "Invalid Start Date"
+msgstr "تاريخ بداية غير صحيح"
+
+#. module: mk_master_models
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_formal_leave_islamic_end_date
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_urgent_leave_islamic_end_date
+msgid "Islamic End Date"
+msgstr "تاريخ نهاية الاجازة هجري"
+
+#. module: mk_master_models
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_study_year_islamic_end_date
+msgid "Islamic End Date"
+msgstr "نهاية السنة بالهجري"
+
+
+#. module: mk_master_models
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_study_class_islamic_end_date
+msgid "Islamic End Date"
+msgstr "تاريخ نهاية الفصل هجري"
+
+#. module: mk_master_models
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_formal_leave_islamic_start_date
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_urgent_leave_islamic_start_date
+msgid "Islamic Start Date"
+msgstr "تاريخ بداية الاجازة هجري"
+
+#. module: mk_master_models
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_study_year_islamic_start_date
+msgid "Islamic Start Date"
+msgstr "بداية السنة بالهجري"
+
+#. module: mk_master_models
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_study_class_islamic_start_date
+msgid "Islamic Start Date"
+msgstr "تاريخ بداية الفصل هجري"
+
+#. module: mk_master_models
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_approach___last_update
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_center___last_update
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_episode___last_update
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_formal_leave___last_update
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_leave___last_update
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_level___last_update
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_mosque___last_update
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_parts___last_update
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_periods___last_update
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_student___last_update
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_study_class___last_update
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_study_year___last_update
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_surah___last_update
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_surah_verses___last_update
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_urgent_leave___last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: mk_master_models
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_approach_write_uid
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_center_write_uid
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_episode_write_uid
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_formal_leave_write_uid
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_leave_write_uid
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_level_write_uid
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_mosque_write_uid
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_parts_write_uid
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_periods_write_uid
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_student_write_uid
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_study_class_write_uid
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_study_year_write_uid
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_surah_verses_write_uid
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_surah_write_uid
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_urgent_leave_write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: mk_master_models
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_approach_write_date
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_center_write_date
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_episode_write_date
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_formal_leave_write_date
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_leave_write_date
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_level_write_date
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_mosque_write_date
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_parts_write_date
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_periods_write_date
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_student_write_date
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_study_class_write_date
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_study_year_write_date
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_surah_verses_write_date
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_surah_write_date
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_urgent_leave_write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: mk_master_models
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_formal_leave_leave_id
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_urgent_leave_leave_id
+msgid "Leave"
+msgstr "الاجازة"
+
+#. module: mk_master_models
+#: model:ir.ui.menu,name:mk_master_models.mk_leave_menu
+#: model:ir.ui.view,arch_db:mk_master_models.mk_leave_form_view
+#: model:ir.ui.view,arch_db:mk_master_models.mk_leave_search_view
+msgid "Leave"
+msgstr "الاجازات"
+
+#. module: mk_master_models
+#: model:ir.actions.act_window,name:mk_master_models.mk_leave_action
+msgid "Leave "
+msgstr "الاجازات "
+
+#. module: mk_master_models
+#: model:ir.ui.view,arch_db:mk_master_models.mk_level_form_view
+#: model:ir.ui.view,arch_db:mk_master_models.mk_level_search_view
+msgid "Level"
+msgstr "المستوى"
+
+#. module: mk_master_models
+#: model:ir.actions.act_window,name:mk_master_models.mk_level_action
+#: model:ir.ui.menu,name:mk_master_models.mk_level_menu
+msgid "Level "
+msgstr "المستوى "
+
+#. module: mk_master_models
+#: model:ir.model.fields,field_description:mk_master_models.field_hr_department_level_type
+msgid "Level Type"
+msgstr "نوع المستوى"
+
+#. module: mk_master_models
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_approach_level_ids
+msgid "Levels"
+msgstr "المراحل"
+
+#. module: mk_master_models
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_periods_magrib_period
+msgid "Magrib Period"
+msgstr "فترة المغرب"
+
+#. module: mk_master_models
+#: selection:hr.department,level_type:0
+msgid "Management"
+msgstr "ادارة"
+
+#. module: mk_master_models
+#: model:ir.ui.menu,name:mk_master_models.mk_master_main_menu
+#: model:ir.ui.menu,name:mk_master_models.mk_master_menu
+msgid "Master Models"
+msgstr "الاعدادت الاساسية"
+
+#. module: mk_master_models
+#: selection:mk.surah.verses,difficulty_level:0
+msgid "Middle"
+msgstr "متوسط"
+
+#. module: mk_master_models
+#: model:ir.ui.view,arch_db:mk_master_models.mk_mosque_form_view
+#: model:ir.ui.view,arch_db:mk_master_models.mk_mosque_search_view
+msgid "Mosque"
+msgstr "المساجد"
+
+#. module: mk_master_models
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_student_mosque_department_id
+msgid "Mosque"
+msgstr "المسجد"
+
+#. module: mk_master_models
+#: model:ir.actions.act_window,name:mk_master_models.mk_mosque_action
+#: model:ir.ui.menu,name:mk_master_models.mk_mosque_menu
+msgid "Mosque "
+msgstr "المساجد "
+
+#. module: mk_master_models
+#: selection:hr.department,level_type:0
+msgid "Mosque / Company"
+msgstr "مسجد / مجمّع تحفيظ"
+
+#. module: mk_master_models
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_approach_name
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_center_name
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_episode_mosque_id
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_episode_name
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_level_name
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_mosque_name
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_parts_name
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_student_name
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_surah_name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: mk_master_models
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_study_year_name
+msgid "Name"
+msgstr "اسم العام الدراسي"
+
+#. module: mk_master_models
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_study_class_name
+msgid "Name"
+msgstr "اسم الفصل"
+
+#. module: mk_master_models
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_leave_name
+msgid "Name"
+msgstr "اسم الاجازة"
+
+#. module: mk_master_models
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_study_class_order
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_study_year_order
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_surah_order
+msgid "Order"
+msgstr "الترتيب"
+
+#. module: mk_master_models
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_surah_verses_original_accumalative_order
+msgid "Original Accumalative Order"
+msgstr "الترتيب التراكمي العادي"
+
+#. module: mk_master_models
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_surah_verses_original_surah_order
+msgid "Original Surah Order"
+msgstr "الترتيب في السورة"
+
+#. module: mk_master_models
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_surah_verses_part_id
+msgid "Part"
+msgstr "الجزء"
+
+#. module: mk_master_models
+#: model:ir.ui.view,arch_db:mk_master_models.mk_parts_form_view
+#: model:ir.ui.view,arch_db:mk_master_models.mk_parts_search_view
+msgid "Parts"
+msgstr "الأجزاء"
+
+#. module: mk_master_models
+#: model:ir.actions.act_window,name:mk_master_models.mk_parts_action
+#: model:ir.ui.menu,name:mk_master_models.mk_parts_menu
+msgid "Parts "
+msgstr "الأجزاء "
+
+#. module: mk_master_models
+#: model:ir.actions.act_window,name:mk_master_models.mk_periods_action
+#: model:ir.ui.menu,name:mk_master_models.mk_periods_menu
+#: model:ir.ui.view,arch_db:mk_master_models.mk_periods_form_view
+#: model:ir.ui.view,arch_db:mk_master_models.mk_periods_search_view
+msgid "Periods"
+msgstr "الفترات"
+
+#. module: mk_master_models
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_surah_verses_reverse_accumalative_order
+msgid "Reverse Accumalative Order"
+msgstr "الترتيب التراكمي العكسي"
+
+#. module: mk_master_models
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_surah_verses_reverse_surah_order
+msgid "Reverse Surah Order"
+msgstr "الترتيب العكسي في السورة"
+
+#. module: mk_master_models
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_formal_leave_start_date
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_urgent_leave_start_date
+msgid "Start Date"
+msgstr "تاريخ بداية الاجازة ميلادي"
+
+#. module: mk_master_models
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_study_year_start_date
+msgid "Start Date"
+msgstr "بداية السنة بالميلادي"
+
+#. module: mk_master_models
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_study_class_start_date
+msgid "Start Date"
+msgstr "تاريخ بداية الفصل ميلادي"
+
+#. module: mk_master_models
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_surah_start_verses
+msgid "Start Verses "
+msgstr "بداية الآيات "
+
+#. module: mk_master_models
+#: model:ir.actions.act_window,name:mk_master_models.mk_student_action
+#: model:ir.ui.menu,name:mk_master_models.mk_student_menu
+#: model:ir.ui.view,arch_db:mk_master_models.mk_student_form_view
+#: model:ir.ui.view,arch_db:mk_master_models.mk_student_search_view
+msgid "Student"
+msgstr "سجل الطلّاب"
+
+#. module: mk_master_models
+#: model:ir.ui.view,arch_db:mk_master_models.mk_study_class_form_view
+#: model:ir.ui.view,arch_db:mk_master_models.mk_study_class_search_view
+msgid "Study Class"
+msgstr "اعداد الفصول الدراسية"
+
+#. module: mk_master_models
+#: model:ir.actions.act_window,name:mk_master_models.mk_study_class_action
+#: model:ir.ui.menu,name:mk_master_models.mk_study_class_menu
+msgid "Study Class "
+msgstr "اعداد الفصول الدراسية "
+
+#. module: mk_master_models
+#: model:ir.ui.view,arch_db:mk_master_models.mk_study_year_form_view
+#: model:ir.ui.view,arch_db:mk_master_models.mk_study_year_search_view
+msgid "Study Year"
+msgstr "اعداد الأعوام الدراسية"
+
+#. module: mk_master_models
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_formal_leave_study_year_id
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_study_class_study_year_id
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_urgent_leave_study_year_id
+msgid "Study Year"
+msgstr "العام الدراسي"
+
+#. module: mk_master_models
+#: model:ir.actions.act_window,name:mk_master_models.mk_study_year_action
+#: model:ir.ui.menu,name:mk_master_models.mk_study_year_menu
+msgid "Study Year "
+msgstr "اعداد الأعوام الدراسية "
+
+#. module: mk_master_models
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_periods_subh_period
+msgid "Subh Period"
+msgstr "فترة الصبح"
+
+#. module: mk_master_models
+#: model:ir.actions.act_window,name:mk_master_models.mk_surah_action
+#: model:ir.ui.menu,name:mk_master_models.mk_surah_menu
+#: model:ir.ui.view,arch_db:mk_master_models.mk_surah_form_view
+#: model:ir.ui.view,arch_db:mk_master_models.mk_surah_search_view
+
+msgid "Surah"
+msgstr "السُوَر"
+
+#. module: mk_master_models
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_surah_verses_surah_id
+#: model:ir.ui.view,arch_db:mk_master_models.mk_surah_verse_form_view
+#: model:ir.ui.view,arch_db:mk_master_models.mk_surah_verse_search_view
+msgid "Surah"
+msgstr "سورة"
+
+#. module: mk_master_models
+#: model:ir.actions.act_window,name:mk_master_models.mk_surah_verse_action
+#: model:ir.ui.menu,name:mk_master_models.mk_surah_verse_menu
+msgid "Surah Verse"
+msgstr "الآيات"
+
+#. module: mk_master_models
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_periods_aasr_period_to
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_periods_esha_period_to
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_periods_magrib_period_to
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_periods_subh_period_to
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_periods_zuhr_period_to
+msgid "To Hour"
+msgstr "الى الساعة"
+
+#. module: mk_master_models
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_parts_to_surah
+msgid "To Surah"
+msgstr "الى سورة"
+
+#. module: mk_master_models
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_parts_to_verses
+msgid "To Verses "
+msgstr "الى الآية "
+
+#. module: mk_master_models
+#: model:ir.ui.view,arch_db:mk_master_models.mk_urgent_leave_form_view
+#: model:ir.ui.view,arch_db:mk_master_models.mk_urgent_leave_search_view
+msgid "Urgent Leave"
+msgstr "الاجازات الطارئة"
+
+#. module: mk_master_models
+#: model:ir.actions.act_window,name:mk_master_models.mk_urgent_leave_action
+#: model:ir.ui.menu,name:mk_master_models.mk_urgent_leave_menu
+msgid "Urgent Leave "
+msgstr "الاجازات الطارئة "
+
+#. module: mk_master_models
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_study_year_urgent_leave_ids
+#: model:ir.ui.view,arch_db:mk_master_models.mk_study_year_form_view
+msgid "Urgent Leaves"
+msgstr "الاجازات الطارئة"
+
+#. module: mk_master_models
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_surah_verses_verse
+msgid "Verse"
+msgstr "الآية"
+
+#. module: mk_master_models
+#: model:ir.model.fields,field_description:mk_master_models.field_mk_periods_zuhr_period
+msgid "Zuhr Period"
+msgstr "فترة الظهر"
+
+#. module: mk_master_models
+#: sql_constraint:hr.department:0
+#: sql_constraint:mk.leave:0
+#: sql_constraint:mk.parts:0
+#: sql_constraint:mk.surah:0
+msgid "already exists !"
+msgstr "موجد مُسبقاً !"
+
+#. module: mk_master_models
+#: model:ir.model,name:mk_master_models.model_mk_approach
+msgid "mk.approach"
+msgstr "mk.approach"
+
+#. module: mk_master_models
+#: model:ir.model,name:mk_master_models.model_mk_center
+msgid "mk.center"
+msgstr "mk.center"
+
+#. module: mk_master_models
+#: model:ir.model,name:mk_master_models.model_mk_episode
+msgid "mk.episode"
+msgstr "mk.episode"
+
+#. module: mk_master_models
+#: model:ir.model,name:mk_master_models.model_mk_formal_leave
+msgid "mk.formal.leave"
+msgstr "mk.formal.leave"
+
+#. module: mk_master_models
+#: model:ir.model,name:mk_master_models.model_mk_leave
+msgid "mk.leave"
+msgstr "mk.leave"
+
+#. module: mk_master_models
+#: model:ir.model,name:mk_master_models.model_mk_level
+msgid "mk.level"
+msgstr "mk.level"
+
+#. module: mk_master_models
+#: model:ir.model,name:mk_master_models.model_mk_mosque
+msgid "mk.mosque"
+msgstr "mk.mosque"
+
+#. module: mk_master_models
+#: model:ir.model,name:mk_master_models.model_mk_parts
+msgid "mk.parts"
+msgstr "mk.parts"
+
+#. module: mk_master_models
+#: model:ir.model,name:mk_master_models.model_mk_periods
+msgid "mk.periods"
+msgstr "mk.periods"
+
+#. module: mk_master_models
+#: model:ir.model,name:mk_master_models.model_mk_student
+msgid "mk.student"
+msgstr "mk.student"
+
+#. module: mk_master_models
+#: model:ir.model,name:mk_master_models.model_mk_study_class
+msgid "mk.study.class"
+msgstr "mk.study.class"
+
+#. module: mk_master_models
+#: model:ir.model,name:mk_master_models.model_mk_study_year
+msgid "mk.study.year"
+msgstr "mk.study.year"
+
+#. module: mk_master_models
+#: model:ir.model,name:mk_master_models.model_mk_surah
+msgid "mk.surah"
+msgstr "mk.surah"
+
+#. module: mk_master_models
+#: model:ir.model,name:mk_master_models.model_mk_surah_verses
+msgid "mk.surah.verses"
+msgstr "mk.surah.verses"
+
+#. module: mk_master_models
+#: model:ir.model,name:mk_master_models.model_mk_urgent_leave
+msgid "mk.urgent.leave"
+msgstr "mk.urgent.leave"
+

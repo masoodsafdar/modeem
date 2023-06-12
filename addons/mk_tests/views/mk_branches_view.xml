@@ -1,0 +1,84 @@
+<odoo>
+    <data>
+    
+ 	<record id="mk_branches_form_view" model="ir.ui.view">
+          <field name="name">Branches Form View</field>
+          <field name="model">mk.branches</field>
+          <field name="arch" type="xml">
+              <form string = "Branches">
+		  <header>
+		    
+		  </header>
+		  <sheet>
+			  <group>
+				<field name="name" required="1"/>  
+				<field name="age_category" required="1" widget="radio"/>
+			  </group>
+			  <group>
+			  	<group>
+			  		<field name="from_age" attrs="{'invisible':[('age_category','!=','s')],'required':[('age_category','=','s')]}"/>
+			  		<field name="start_date" required="1"/>
+		  		</group>
+			  	<group>
+			  		<field name="to_age" attrs="{'invisible':[('age_category','!=','s')],'required':[('age_category','=','s')]}"/>
+			  		<field name="end_date" required="1"/>
+				</group>
+		  	</group>
+		  	<group>
+				<field name="path" required="1"/>  
+			 </group>
+			 <group>
+			  	<group>
+			  		<field name="from_surah" required="1" options="{'no_create': True,'no_open': True,}"/>
+		  		</group>
+			  	<group>
+			  		<field name="to_surah"   required="1" options="{'no_create': True,'no_open': True,}"/>
+				</group>
+		  	</group>
+	  	</sheet>
+              </form>
+             </field>
+         </record>
+
+        <record id="mk_branches_tree_view" model="ir.ui.view">
+            <field name="name">Branches Tree View</field>
+            <field name="model">mk.branches</field>
+            <field name="arch" type="xml">
+                <tree delete="0" string="Branches">
+                	<field name="name"/>
+                	<field name="age_category"/>
+                	<field name="start_date"/>
+                	<field name="end_date"/>
+                	<field name="path"/>
+                	<field name="from_surah" options="{'no_create': True,'no_open': True,}"/>
+                	<field name="to_surah"   options="{'no_create': True,'no_open': True,}"/>
+                	
+                </tree>
+            </field>
+        </record>
+        
+        <record id="mk_branches_search_view" model="ir.ui.view">
+            <field name="name">Branches Search View</field>
+            <field name="model">mk.branches</field>
+            <field name="arch" type="xml">
+                <search string="Branches">
+                    <field name="name" string="Branch" filter_domain="[('name','ilike', self)]"/>
+                </search>
+            </field>
+        </record>
+        
+        <record id="mk_branches_action" model="ir.actions.act_window">
+            <field name="name">Branches</field>
+            <field name="res_model">mk.branches</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+            <field name="search_view_id" ref="mk_branches_search_view"/>
+        </record>
+
+	<!--menuitem name="Branches" id="mk_branches_menu" sequence="5" parent="mk_tests_menu" action="mk_branches_action"/-->    
+
+    </data>  
+</odoo>

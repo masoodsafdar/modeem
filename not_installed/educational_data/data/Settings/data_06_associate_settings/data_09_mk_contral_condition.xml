@@ -1,0 +1,33 @@
+<odoo>
+    <data noupdate="1">
+        <record id="mk_type_contral1" model="mk.type.contral">
+            <field name="name">افتتاح الحلقات بالمساجد / المدارس النسائية</field>
+        </record>
+        <record id="mk_type_contral2" model="mk.type.contral">
+            <field name="name">ضوابط الدورات المكثفة والصيفية</field>
+        </record>
+
+        <record id="mk_contral_condition1" model="mk.contral.condition">
+            <field name="type_id" ref="mk_type_contral1"/>
+            <field name="address_contral">افتتاح الحلقات بالمساجد / المدارس النسائية</field>
+            <field name="order">1</field>
+            <field name="active" eval=" True"/>
+            <field name="check_episode" eval="True"/>
+            <field name="check_summer" eval="False"/>
+            <field name="check_courses" eval="False"/>
+            <field name="check_compet" eval="False"/>
+            <field name="check_test" eval="False"/>
+        </record>
+        <record id="mk_contral_condition2" model="mk.contral.condition">
+            <field name="type_id" ref="mk_type_contral2"/>
+            <field name="address_contral">شروط الدورات</field>
+            <field name="order">2</field>
+            <field name="active" eval="True"/>
+            <field name="check_episode" eval="False"/>
+            <field name="check_summer" eval="False"/>
+            <field name="check_courses" eval="True"/>
+            <field name="check_compet" eval="False"/>
+            <field name="check_test" eval="False"/>
+        </record>
+    </data>
+</odoo>

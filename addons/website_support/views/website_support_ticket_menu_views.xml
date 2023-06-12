@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+  
+<!-- for security -->
+      <menuitem id="website_support_parent_menu_main" name="Technical Support"  parent="mk_master_models.mk_master_menu" 
+groups="website_support.group_technical_support_settings"/>
+      <!--menuitem name="Technical Support Category" id="technical_support_cat" parent="website_support_parent_menu_main"/> 
+      <menuitem id="technical_support_subcat" name="Technical Support SubCategory" parent="website_support_parent_menu_main" sequence="3" /-->   
+      
+
+    </data>
+</odoo>

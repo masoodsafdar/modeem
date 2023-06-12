@@ -1,0 +1,119 @@
+<odoo>
+    <data>
+    
+ 		<record id="mk_study_year_form_view" model="ir.ui.view">
+        	<field name="name">Study Year Form View</field>
+          	<field name="model">mk.study.year</field>
+          	<field name="arch" type="xml">
+            	<form string="Study Year">
+		  			<header>
+		   				<button type="object" name="set_as_default" attrs="{'invisible': ['|',('is_default','=',True),('active','=',False)]}" string="إعتماد العام الحالي"/>
+		  			</header>
+		  			<sheet>			  			
+			  			<group>
+						  	<group>
+						  		<field name="name"       required="1"/>
+						  		<field name="order"      required="1"/>
+						  		<field name="is_default" required="1"/>
+						  	</group>
+						  	<group>
+						  		<field name="fiscal_year" required="1"/>
+						  		<field name="active"/>
+						  		<field name="company_id"  required="1" options="{'no_open':1,'no_create':1}" invisible="1"/>
+						  	</group>						  	
+			  			</group>
+
+						<group>
+						  	<group>
+						  		<field name="start_date" required="1"/>
+						  		<!-- field name="islamic_start_date" required="1"/-->
+						  	</group>
+						  	<group>
+						  		<field name="end_date" required="1"/>
+						  		<!-- field name="islamic_end_date" required="1"/-->
+						  	</group>
+			  			</group>
+			  			
+			  			<notebook>
+			  				<page string="Classes">
+			  					<field name="class_ids" nolabel="1" readonly="1">
+						  			<tree string="Classes">
+						  				<field name="name"/>
+						  				<field name="order"/>
+						  				<field name="start_date"/>
+						  				<field name="end_date"/>
+						  			</tree>
+			  					</field>
+			  				</page>
+			  				
+						  	<page string="Formal Leaves">
+						  		<field name="formal_leave_ids" nolabel="1" readonly="1">
+						  			<tree string="Formal Leaves">
+						  				<!-- field name="leave_id"/ -->
+						  				<field name="start_date"/>
+						  				<field name="end_date"/>
+						  			</tree>
+						  		</field>
+						  	</page>
+						  	
+						  	<page string="Urgent Leaves">
+						  		<field name="urgent_leave_ids" nolabel="1" readonly="1">
+						  			<tree string="Formal Leaves">
+						  				<field name="leave_id"/>
+						  				<field name="start_date"/>
+						  				<field name="end_date"/>
+						  			</tree>
+						  		</field>
+						  	</page>
+			  			</notebook>
+	  				</sheet>
+					<div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+              	</form>
+             </field>
+         </record>
+
+        <record id="mk_study_year_tree_view" model="ir.ui.view">
+            <field name="name">Study Year Tree View</field>
+            <field name="model">mk.study.year</field>
+            <field name="arch" type="xml">
+                <tree delete="0" string="Study Year">
+                	<field name="company_id"  required="1" invisible="1" options="{'no_open':1,'no_create':1}"/>
+                	<field name="name"        required="1"/>
+                	<field name="order"       required="1"/>
+                	<field name="fiscal_year" required="1"/>
+                	<field name="start_date"  required="1"/>
+                	<field name="end_date"    required="1"/>
+                </tree>
+            </field>
+        </record>
+        
+        <record id="mk_study_year_search_view" model="ir.ui.view">
+            <field name="name">Study Year Search View</field>
+            <field name="model">mk.study.year</field>
+            <field name="arch" type="xml">
+                <search string="Study Year ">
+                     <field name="name" string="Study Year" filter_domain="[('name','ilike', self)]"/>
+                     <field name="fiscal_year"/>
+                     <filter domain="[('active','=',False)]" name="active" string="Un Active"/>
+                </search>
+            </field>
+        </record>
+        
+        <record id="mk_study_year_action" model="ir.actions.act_window">
+            <field name="name">Study Year </field>
+            <field name="res_model">mk.study.year</field>
+            <field name="type">ir.actions.act_window</field>
+            <!-- <field name="view_type">form</field> -->
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+            <field name="search_view_id" ref="mk_study_year_search_view"/>
+        </record>
+
+	<menuitem name="Study Year " id="mk_study_year_menu" sequence="5" parent="mk_associate_management_settings_menu" action="mk_study_year_action"/>    
+
+    </data>  
+</odoo>

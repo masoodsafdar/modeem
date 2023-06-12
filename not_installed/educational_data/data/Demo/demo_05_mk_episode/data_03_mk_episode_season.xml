@@ -1,0 +1,8 @@
+<odoo>
+    <data noupdate="1">
+        <record id="mk_episode_season1" model="mk.episode.season">
+            <field name="active" eval="True"/>
+            <field name="name">دورة مكثفة رمضانية</field>
+        </record>
+    </data>
+</odoo>

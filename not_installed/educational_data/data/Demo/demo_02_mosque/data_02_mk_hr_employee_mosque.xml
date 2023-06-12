@@ -1,0 +1,142 @@
+<odoo>
+    <data noupdate="1">
+        <record id="hr_employee1" model="hr.employee">
+            <field name="recruit_ids" eval="[(4, ref('hr_recruitment.degree_licenced'))]"/>
+            <field name="mosqtech_ids" eval="[(4, ref('educational_data.mk_mosque1'))]"/>
+        </record>
+        <record id="hr_employee2" model="hr.employee">
+            <field name="recruit_ids" eval="[(4, ref('hr_recruitment.degree_licenced'))]"/>
+            <field name="mosqtech_ids" eval="[(4, ref('educational_data.mk_mosque1'))]"/>
+
+        </record>
+        <record id="hr_employee3" model="hr.employee">
+            <field name="recruit_ids" eval="[(4, ref('hr_recruitment.degree_licenced'))]"/>
+            <field name="mosqtech_ids" eval="[(4, ref('educational_data.mk_mosque1'))]"/>
+
+        </record>
+        <record id="hr_employee4" model="hr.employee">
+            <field name="recruit_ids" eval="[(4, ref('hr_recruitment.degree_licenced'))]"/>
+            <field name="mosqtech_ids" eval="[(4, ref('educational_data.mk_mosque1'))]"/>
+
+        </record>
+        <record id="hr_employee5" model="hr.employee">
+            <field name="recruit_ids" eval="[(4, ref('hr_recruitment.degree_licenced'))]"/>
+            <field name="mosqtech_ids" eval="[(4, ref('educational_data.mk_mosque2'))]"/>
+
+        </record>
+        <record id="hr_employee6" model="hr.employee">
+            <field name="recruit_ids" eval="[(4, ref('hr_recruitment.degree_licenced'))]"/>
+            <field name="mosqtech_ids" eval="[(4, ref('educational_data.mk_mosque2'))]"/>
+
+        </record>
+        <record id="hr_employee7" model="hr.employee">
+            <field name="recruit_ids" eval="[(4, ref('hr_recruitment.degree_licenced'))]"/>
+            <field name="mosqtech_ids" eval="[(4, ref('educational_data.mk_mosque1'))]"/>
+
+        </record>
+        <record id="hr_employee8" model="hr.employee">
+            <field name="recruit_ids" eval="[(4, ref('hr_recruitment.degree_licenced'))]"/>
+            <field name="mosqtech_ids" eval="[(4, ref('educational_data.mk_mosque2'))]"/>
+
+        </record>
+        <record id="hr_employee9" model="hr.employee">
+            <field name="recruit_ids" eval="[(4, ref('hr_recruitment.degree_licenced'))]"/>
+            <field name="mosque_sup" eval="[(4, ref('educational_data.mk_mosque1'))]"/>
+        </record>
+        <record id="hr_employee10" model="hr.employee">
+            <field name="recruit_ids" eval="[(4, ref('hr_recruitment.degree_licenced'))]"/>
+            <field name="mosque_sup" eval="[(4, ref('educational_data.mk_mosque2'))]"/>
+
+        </record>
+        <record id="hr_employee11" model="hr.employee">
+            <field name="recruit_ids" eval="[(4, ref('hr_recruitment.degree_licenced'))]"/>
+
+        </record>
+        <record id="hr_employee12" model="hr.employee">
+            <field name="recruit_ids" eval="[(4, ref('hr_recruitment.degree_licenced'))]"/>
+
+        </record>
+        <record id="hr_employee13" model="hr.employee">
+            <field name="recruit_ids" eval="[(4, ref('hr_recruitment.degree_licenced'))]"/>
+
+        </record>
+        <record id="hr_employee14" model="hr.employee">
+            <field name="recruit_ids" eval="[(4, ref('hr_recruitment.degree_licenced'))]"/>
+
+        </record>
+        <record id="hr_employee15" model="hr.employee">
+            <field name="recruit_ids" eval="[(4, ref('hr_recruitment.degree_licenced'))]"/>
+
+        </record>
+        <record id="hr_employee16" model="hr.employee">
+            <field name="recruit_ids" eval="[(4, ref('hr_recruitment.degree_licenced'))]"/>
+
+        </record>
+        <record id="hr_employee17" model="hr.employee">
+            <field name="recruit_ids" eval="[(4, ref('hr_recruitment.degree_licenced'))]"/>
+
+        </record>
+        <record id="hr_employee18" model="hr.employee">
+            <field name="recruit_ids" eval="[(4, ref('hr_recruitment.degree_licenced'))]"/>
+
+        </record>
+        <record id="hr_employee19" model="hr.employee">
+            <field name="recruit_ids" eval="[(4, ref('hr_recruitment.degree_licenced'))]"/>
+
+        </record>
+        <record id="hr_employee20" model="hr.employee">
+            <field name="recruit_ids" eval="[(4, ref('hr_recruitment.degree_licenced'))]"/>
+
+        </record>
+        <record id="hr_employee21" model="hr.employee">
+            <field name="recruit_ids" eval="[(4, ref('hr_recruitment.degree_licenced'))]"/>
+
+        </record>
+        <record id="hr_employee22" model="hr.employee">
+            <field name="recruit_ids" eval="[(4, ref('hr_recruitment.degree_licenced'))]"/>
+
+        </record>
+        <record id="hr_employee23" model="hr.employee">
+            <field name="recruit_ids" eval="[(4, ref('hr_recruitment.degree_licenced'))]"/>
+
+        </record>
+        <record id="hr_employee24" model="hr.employee">
+            <field name="recruit_ids" eval="[(4, ref('hr_recruitment.degree_licenced'))]"/>
+
+        </record>
+        <record id="hr_employee25" model="hr.employee">
+            <field name="recruit_ids" eval="[(4, ref('hr_recruitment.degree_licenced'))]"/>
+
+        </record>
+        <record id="hr_employee26" model="hr.employee">
+            <field name="recruit_ids" eval="[(4, ref('hr_recruitment.degree_licenced'))]"/>
+
+        </record>
+        <record id="hr_employee27" model="hr.employee">
+            <field name="recruit_ids" eval="[(4, ref('hr_recruitment.degree_licenced'))]"/>
+
+        </record>
+        <record id="hr_employee28" model="hr.employee">
+            <field name="recruit_ids" eval="[(4, ref('hr_recruitment.degree_licenced'))]"/>
+
+        </record>
+        <record id="hr_employee29" model="hr.employee">
+            <field name="recruit_ids" eval="[(4, ref('hr_recruitment.degree_licenced'))]"/>
+
+        </record>
+        <record id="hr_employee30" model="hr.employee">
+            <field name="recruit_ids" eval="[(4, ref('hr_recruitment.degree_licenced'))]"/>
+            <field name="mosqtech_ids" eval="[(4, ref('educational_data.mk_mosque2'))]"/>
+
+        </record>
+        <record id="hr_employee31" model="hr.employee">
+            <field name="recruit_ids" eval="[(4, ref('hr_recruitment.degree_licenced'))]"/>
+
+        </record>
+
+        <record id="hr_employee32" model="hr.employee">
+            <field name="recruit_ids" eval="[(4, ref('hr_recruitment.degree_licenced'))]"/>
+
+        </record>
+    </data>
+</odoo>

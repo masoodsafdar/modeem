@@ -1,0 +1,324 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* dashboard
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0-20170914\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-11-23 15:54+0000\n"
+"PO-Revision-Date: 2017-11-23 15:54+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: dashboard
+#: model:ir.ui.view,arch_db:dashboard.dashboard_kanban_view
+msgid "<i class=\"fa fa-cog\"/>\n"
+"										customize"
+msgstr "<i class=\"fa fa-cog\"/>\n"
+"										تعديل"
+
+#. module: dashboard
+#: model:ir.ui.view,arch_db:dashboard.dashboard_kanban_view
+msgid "<i class=\"fa fa-refresh\"/>\n"
+"										Refresh"
+msgstr "<i class=\"fa fa-refresh\"/>\n"
+"										تحديث"
+
+#. module: dashboard
+#: model:ir.ui.view,arch_db:dashboard.dashboard_kanban_view
+msgid "<span class=\"pull-left\">View Details</span>\n"
+"													<span class=\"pull-right\">\n"
+"														<i class=\"fa fa-arrow-circle-right\"/>\n"
+"													</span>"
+msgstr "<span class=\"pull-left\">عرض التفاصيل</span>\n"
+"													<span class=\"pull-right\">\n"
+"														<i class=\"fa fa-arrow-circle-right\"/>\n"
+"													</span>"
+
+#. module: dashboard
+#: selection:dashboard.settings.chart,display_type:0
+msgid "Area"
+msgstr "المجال"
+
+#. module: dashboard
+#: selection:dashboard.settings.chart,display_type:0
+msgid "Bar"
+msgstr "الشرائط\""
+
+#. module: dashboard
+#: model:ir.model.fields,field_description:dashboard.field_dashboard_settings_chart_chart_model_id
+msgid "Chart Model"
+msgstr "نموذج الرسم البياني"
+
+#. module: dashboard
+#: model:ir.model.fields,field_description:dashboard.field_dashboard_settings_chart_chart_date_field_id
+msgid "Chart date Field"
+msgstr "حقل تاريخ المخطط"
+
+#. module: dashboard
+#: model:ir.model.fields,field_description:dashboard.field_dashboard_settings_chart_chart_measure_field_id
+msgid "Chart measure Field"
+msgstr " المقياس"
+
+#. module: dashboard
+#: model:ir.model.fields,field_description:dashboard.field_dashboard_dashboard_chart_list
+#: model:ir.model.fields,field_description:dashboard.field_dashboard_settings_chart_ids
+#: model:ir.ui.view,arch_db:dashboard.dashboard_config_settings
+msgid "Charts"
+msgstr "الرسوم البيانية"
+
+#. module: dashboard
+#: model:ir.model.fields,field_description:dashboard.field_dashboard_settings_line_color
+msgid "Color"
+msgstr "اللون"
+
+#. module: dashboard
+#: model:ir.model.fields,field_description:dashboard.field_dashboard_dashboard_company_id
+msgid "Company"
+msgstr "المؤسسة"
+
+#. module: dashboard
+#: model:ir.ui.view,arch_db:dashboard.dashboard_config_settings
+msgid "Configure Car Sales"
+msgstr "تكوين مبيعات السيارات"
+
+#. module: dashboard
+#: model:ir.actions.act_window,name:dashboard.action_dashboard_config
+msgid "Configure dashboard"
+msgstr "تكوين لوحة المعلومات"
+
+#. module: dashboard
+#: model:ir.model.fields,field_description:dashboard.field_dashboard_dashboard_create_uid
+#: model:ir.model.fields,field_description:dashboard.field_dashboard_settings_chart_create_uid
+#: model:ir.model.fields,field_description:dashboard.field_dashboard_settings_create_uid
+#: model:ir.model.fields,field_description:dashboard.field_dashboard_settings_line_create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: dashboard
+#: model:ir.model.fields,field_description:dashboard.field_dashboard_dashboard_create_date
+#: model:ir.model.fields,field_description:dashboard.field_dashboard_settings_chart_create_date
+#: model:ir.model.fields,field_description:dashboard.field_dashboard_settings_create_date
+#: model:ir.model.fields,field_description:dashboard.field_dashboard_settings_line_create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: dashboard
+#: model:ir.model.fields,field_description:dashboard.field_dashboard_dashboard_currency_id
+msgid "Currency"
+msgstr "العملة"
+
+#. module: dashboard
+#: model:ir.actions.act_window,name:dashboard.dashboard_action_view
+#: model:ir.module.category,name:dashboard.category_dashboard
+#: model:ir.ui.menu,name:dashboard.dashboard_menu
+#: model:ir.ui.menu,name:dashboard.dashboard_root
+#: model:ir.ui.view,arch_db:dashboard.dashboard_config_settings
+msgid "Dashboard"
+msgstr "لوحات المعلومات"
+
+#. module: dashboard
+#: model:res.groups,name:dashboard.dashboard_manager
+msgid "Dashboard Managers"
+msgstr "لوحة التحكم"
+
+#. module: dashboard
+#: model:res.groups,name:dashboard.dashboard_user
+msgid "Dashboard Users"
+msgstr "Dashboard Users"
+
+#. module: dashboard
+#: model:ir.model.fields,field_description:dashboard.field_dashboard_dashboard_display_name
+#: model:ir.model.fields,field_description:dashboard.field_dashboard_settings_chart_display_name
+#: model:ir.model.fields,field_description:dashboard.field_dashboard_settings_display_name
+#: model:ir.model.fields,field_description:dashboard.field_dashboard_settings_line_display_name
+msgid "Display Name"
+msgstr "اسم العرض"
+
+#. module: dashboard
+#: model:ir.model.fields,field_description:dashboard.field_dashboard_settings_chart_display_type
+msgid "Display Type"
+msgstr "نوع العرض"
+
+#. module: dashboard
+#: model:ir.model.fields,field_description:dashboard.field_dashboard_settings_line_field_id
+msgid "Field"
+msgstr "حقل"
+
+#. module: dashboard
+#: model:ir.model.fields,field_description:dashboard.field_dashboard_settings_line_ids
+msgid "Fields"
+msgstr "الحقول"
+
+#. module: dashboard
+#: model:ir.model.fields,field_description:dashboard.field_dashboard_settings_chart_filter
+#: model:ir.model.fields,field_description:dashboard.field_dashboard_settings_line_filter
+msgid "Filter"
+msgstr "الفلتر"
+
+#. module: dashboard
+#: selection:dashboard.settings.line,color:0
+msgid "Green"
+msgstr "أخضر"
+
+#. module: dashboard
+#: model:ir.model.fields,field_description:dashboard.field_dashboard_settings_line_group_id
+msgid "Group By"
+msgstr "حسب المجموعة"
+
+#. module: dashboard
+#: model:ir.model.fields,field_description:dashboard.field_dashboard_settings_line_groupby
+msgid "Group by"
+msgstr "حسب المجموعة"
+
+#. module: dashboard
+#: model:ir.model.fields,field_description:dashboard.field_dashboard_dashboard_id
+#: model:ir.model.fields,field_description:dashboard.field_dashboard_settings_chart_id
+#: model:ir.model.fields,field_description:dashboard.field_dashboard_settings_id
+#: model:ir.model.fields,field_description:dashboard.field_dashboard_settings_line_id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: dashboard
+#: model:ir.model.fields,field_description:dashboard.field_dashboard_settings_line_icon
+msgid "Icon"
+msgstr "أيقونة"
+
+#. module: dashboard
+#: model:ir.ui.view,arch_db:dashboard.dashboard_config_settings
+msgid "Icon picker:"
+msgstr "رمز الأيقونات"
+
+#. module: dashboard
+#: model:ir.model.fields,field_description:dashboard.field_dashboard_dashboard___last_update
+#: model:ir.model.fields,field_description:dashboard.field_dashboard_settings___last_update
+#: model:ir.model.fields,field_description:dashboard.field_dashboard_settings_chart___last_update
+#: model:ir.model.fields,field_description:dashboard.field_dashboard_settings_line___last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: dashboard
+#: model:ir.model.fields,field_description:dashboard.field_dashboard_dashboard_write_uid
+#: model:ir.model.fields,field_description:dashboard.field_dashboard_settings_chart_write_uid
+#: model:ir.model.fields,field_description:dashboard.field_dashboard_settings_line_write_uid
+#: model:ir.model.fields,field_description:dashboard.field_dashboard_settings_write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: dashboard
+#: model:ir.model.fields,field_description:dashboard.field_dashboard_dashboard_write_date
+#: model:ir.model.fields,field_description:dashboard.field_dashboard_settings_chart_write_date
+#: model:ir.model.fields,field_description:dashboard.field_dashboard_settings_line_write_date
+#: model:ir.model.fields,field_description:dashboard.field_dashboard_settings_write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: dashboard
+#: model:ir.model.fields,field_description:dashboard.field_dashboard_settings_line_model_id
+msgid "Model"
+msgstr "النموذج"
+
+#. module: dashboard
+#: selection:dashboard.settings.chart,type:0
+#: selection:dashboard.settings.line,type:0
+msgid "Money"
+msgstr "نقود"
+
+#. module: dashboard
+#: model:ir.model.fields,field_description:dashboard.field_dashboard_dashboard_name
+#: model:ir.model.fields,field_description:dashboard.field_dashboard_settings_chart_name
+#: model:ir.model.fields,field_description:dashboard.field_dashboard_settings_line_name
+#: model:ir.model.fields,field_description:dashboard.field_dashboard_settings_name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: dashboard
+#: model:ir.ui.view,arch_db:dashboard.dashboard_config_settings
+msgid "Panels"
+msgstr "لوحات"
+
+#. module: dashboard
+#: selection:dashboard.settings.line,color:0
+msgid "Primary"
+msgstr "ابتدائي"
+
+#. module: dashboard
+#: selection:dashboard.settings.chart,type:0
+#: selection:dashboard.settings.line,type:0
+msgid "Quantity"
+msgstr "كمية"
+
+#. module: dashboard
+#: selection:dashboard.settings.line,color:0
+msgid "Red"
+msgstr "أحمر"
+
+#. module: dashboard
+#: model:ir.model.fields,field_description:dashboard.field_dashboard_settings_chart_sequence
+msgid "Sequence"
+msgstr "المسلسل"
+
+#. module: dashboard
+#: model:ir.model.fields,field_description:dashboard.field_dashboard_settings_chart_dashboard_id
+#: model:ir.model.fields,field_description:dashboard.field_dashboard_settings_line_dashboard_id
+msgid "Setting"
+msgstr "إعدادات"
+
+#. module: dashboard
+#: model:ir.model.fields,field_description:dashboard.field_dashboard_settings_chart_display
+#: model:ir.model.fields,field_description:dashboard.field_dashboard_settings_line_display
+msgid "Show/hide"
+msgstr "إظهار / إخفاء"
+
+#. module: dashboard
+#: model:ir.model.fields,field_description:dashboard.field_dashboard_dashboard_field_list
+msgid "Slices names"
+msgstr "أسماء شرائح"
+
+#. module: dashboard
+#: model:ir.model.fields,field_description:dashboard.field_dashboard_settings_chart_type
+#: model:ir.model.fields,field_description:dashboard.field_dashboard_settings_line_type
+msgid "Type"
+msgstr "نوع"
+
+#. module: dashboard
+#: selection:dashboard.settings.line,color:0
+msgid "Yellow"
+msgstr "أصفر"
+
+#. module: dashboard
+#: model:ir.model,name:dashboard.model_dashboard_dashboard
+msgid "dashboard.dashboard"
+msgstr "dashboard.dashboard"
+
+#. module: dashboard
+#: model:ir.model,name:dashboard.model_dashboard_settings
+msgid "dashboard.settings"
+msgstr "dashboard.settings"
+
+#. module: dashboard
+#: model:ir.model,name:dashboard.model_dashboard_settings_chart
+msgid "dashboard.settings.chart"
+msgstr "dashboard.settings.chart"
+
+#. module: dashboard
+#: model:ir.model,name:dashboard.model_dashboard_settings_line
+msgid "dashboard.settings.line"
+msgstr "dashboard.settings.line"
+
+#. module: dashboard
+#: model:ir.model.fields,field_description:dashboard.field_dashboard_settings_provider_latitude
+msgid "latitude"
+msgstr "عرض"
+
+#. module: dashboard
+#: model:ir.model.fields,field_description:dashboard.field_dashboard_settings_map
+#: model:ir.model.fields,field_description:dashboard.field_dashboard_settings_provider_longitude
+msgid "ongitude"
+msgstr "طول"
+

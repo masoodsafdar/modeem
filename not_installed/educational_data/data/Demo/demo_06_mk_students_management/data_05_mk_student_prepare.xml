@@ -1,0 +1,72 @@
+<odoo>
+    <data noupdate="1">
+        <record id="mk_student_prepare1" model="mk.student.prepare">
+            <field name="name" ref="hr_employee2"/>
+            <field name="prepare_date">2020-10-27</field>
+            <field name="link_id" ref="mk_link1"/>
+            <field name="program_id" ref="mk_program1"/>
+            <field name="stage_pre_id" ref="mk_episode01"/>
+            <field name="subh" eval="False"/>
+            <field name="zuhr" eval="False"/>
+            <field name="aasr" eval="False"/>
+            <field name="magrib" eval="False"/>
+            <field name="esha" eval="False"/>
+            <field name="check_memory" eval="True"/>
+            <field name="check_minimum" eval="True"/>
+            <field name="check_max" eval="True"/>
+            <field name="check_read" eval="True"/>
+            <field name="archived" eval="False"/>
+        </record>
+        <record id="mk_student_prepare2" model="mk.student.prepare">
+            <field name="name" ref="hr_employee2"/>
+            <field name="prepare_date">2020-10-27</field>
+            <field name="link_id" ref="mk_link2"/>
+            <field name="program_id" ref="mk_program1"/>
+            <field name="stage_pre_id" ref="mk_episode01"/>
+            <field name="subh" eval="False"/>
+            <field name="zuhr" eval="False"/>
+            <field name="aasr" eval="False"/>
+            <field name="magrib" eval="False"/>
+            <field name="esha" eval="False"/>
+            <field name="check_memory" eval="True"/>
+            <field name="check_minimum" eval="True"/>
+            <field name="check_max" eval="True"/>
+            <field name="check_read" eval="True"/>
+            <field name="archived" eval="False"/>
+        </record>
+        <record id="mk_student_prepare3" model="mk.student.prepare">
+            <field name="name" ref="hr_employee6"/>
+            <field name="prepare_date">2020-10-27</field>
+            <field name="link_id" ref="mk_link3"/>
+            <field name="program_id" ref="mk_program1"/>
+            <field name="stage_pre_id" ref="mk_episode03"/>
+            <field name="subh" eval="False"/>
+            <field name="zuhr" eval="False"/>
+            <field name="aasr" eval="False"/>
+            <field name="magrib" eval="False"/>
+            <field name="esha" eval="False"/>
+            <field name="check_memory" eval="True"/>
+            <field name="check_minimum" eval="True"/>
+            <field name="check_max" eval="True"/>
+            <field name="check_read" eval="True"/>
+            <field name="archived" eval="False"/>
+        </record>
+        <record id="mk_student_prepare4" model="mk.student.prepare">
+            <field name="name" ref="hr_employee6"/>
+            <field name="prepare_date">2020-10-27</field>
+            <field name="link_id" ref="mk_link4"/>
+            <field name="program_id" ref="mk_program1"/>
+            <field name="stage_pre_id" ref="mk_episode03"/>
+            <field name="subh" eval="False"/>
+            <field name="zuhr" eval="False"/>
+            <field name="aasr" eval="False"/>
+            <field name="magrib" eval="False"/>
+            <field name="esha" eval="False"/>
+            <field name="check_memory" eval="True"/>
+            <field name="check_minimum" eval="True"/>
+            <field name="check_max" eval="True"/>
+            <field name="check_read" eval="True"/>
+            <field name="archived" eval="False"/>
+        </record>
+    </data>
+</odoo>

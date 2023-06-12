@@ -1,0 +1,152 @@
+<odoo>
+    <data noupdate="1">
+        <record id="mk_student_register1" model="mk.student.register">
+            <field name="name">أسامة</field>
+            <field name="display_name">أسامة عبدالعزيز سعيد</field>
+            <field name="second_name">عبدالعزيز</field>
+            <field name="third_name">سعيد</field>
+            <field name="fourth_name"></field>
+            <field name="no_identity" eval="False"/>
+            <field name="identity_no">1132568179</field>
+            <field name="mobile">553332048</field>
+            <field name="email">oussama.said@mk.com</field>
+            <field name="passwd">8894</field>
+            <field name="gender">male</field>
+            <field name="country_id" ref="base.sa"/>
+            <field name="area_id" ref="mk_area1"/>
+            <field name="city_id" ref="mk_city1"/>
+            <field name="district_id" ref="mk_district152"/>
+            <field name="birthdate">1996-09-24</field>
+            <field name="mosq_id" ref="mk_mosque1"/>
+            <field name="department_id" ref="mk_hr_department7"/>
+            <field name="part_id" eval="[(4, ref('educational_data.mk_parts1'))]"/>
+            <field name="request_state">accept</field>
+            <field name="grade_id" ref="mk_episode_management.mk_grade16"/>
+            <field name="job_type">student</field>
+            <field name="parent_identity"></field>
+            <field name="st_parent_id"/>
+            <field name="marital_status">single</field>
+            <field name="is_student" eval="True"/>
+            <field name="check_filter">student</field>
+            <field name="registeration_code">1000001</field>
+            <field name="latitude">0</field>
+            <field name="longitude">0</field>
+            <field name="active" eval="True"/>
+            <field name="flag" eval="False"/>
+            <field name="flag2" eval="False"/>
+            <field name="gender_mosque">male</field>
+            <field name="categ_mosque_id" ref="mk_mosque_category2"/>
+        </record>
+        <record id="mk_student_register2" model="mk.student.register">
+            <field name="name">أحمد</field>
+            <field name="display_name">أحمد حمد محمد</field>
+            <field name="second_name">حمد</field>
+            <field name="third_name">محمد</field>
+            <field name="fourth_name"></field>
+            <field name="no_identity" eval="False"/>
+            <field name="identity_no">1069988739</field>
+            <field name="mobile">544448066</field>
+            <field name="email">ahmad.2@ah.com</field>
+            <field name="passwd">5465</field>
+            <field name="gender">male</field>
+            <field name="country_id" ref="base.sa"/>
+            <field name="area_id" ref="mk_area1"/>
+            <field name="city_id" ref="mk_city1"/>
+            <field name="district_id" ref="mk_district152"/>
+            <field name="birthdate">2000-10-10</field>
+            <field name="mosq_id" ref="mk_mosque1"/>
+            <field name="department_id" ref="mk_hr_department7"/>
+            <field name="part_id" eval="[(4, ref('educational_data.mk_parts1'))]"/>
+            <field name="request_state">accept</field>
+            <field name="grade_id" ref="mk_episode_management.mk_grade16"/>
+            <field name="job_type">student</field>
+            <field name="parent_identity"></field>
+            <field name="st_parent_id"/>
+            <field name="marital_status">single</field>
+            <field name="is_student" eval="True"/>
+            <field name="check_filter">student</field>
+            <field name="registeration_code">1000003</field>
+            <field name="latitude">0</field>
+            <field name="longitude">0</field>
+            <field name="active" eval="True"/>
+            <field name="flag" eval="False"/>
+            <field name="flag2" eval="False"/>
+            <field name="gender_mosque">male</field>
+            <field name="categ_mosque_id" ref="mk_mosque_category2"/>
+        </record>
+        <record id="mk_student_register3" model="mk.student.register">
+            <field name="name">نور</field>
+            <field name="display_name">نور احمد منير</field>
+            <field name="second_name">احمد</field>
+            <field name="third_name">منير</field>
+            <field name="fourth_name"></field>
+            <field name="no_identity" eval="False"/>
+            <field name="identity_no">1000000396</field>
+            <field name="mobile">502153100</field>
+            <field name="email">nourahmad@gmail.com</field>
+            <field name="passwd">8560</field>
+            <field name="gender">female</field>
+            <field name="country_id" ref="base.sa"/>
+            <field name="area_id" ref="mk_area1"/>
+            <field name="city_id" ref="mk_city1"/>
+            <field name="district_id" ref="mk_district152"/>
+            <field name="birthdate">2010-10-13</field>
+            <field name="mosq_id" ref="mk_mosque2"/>
+            <field name="department_id" ref="mk_hr_department2"/>
+            <field name="part_id" eval="[(4, ref('educational_data.mk_parts1'))]"/>
+            <field name="request_state">accept</field>
+            <field name="grade_id" ref="mk_episode_management.mk_grade7"/>
+            <field name="job_type">student</field>
+            <field name="parent_identity">1000000370</field>
+            <field name="st_parent_id" ref="mk_parent"/>
+            <field name="marital_status">single</field>
+            <field name="is_student" eval="True"/>
+            <field name="check_filter">student</field>
+            <field name="registeration_code">1000007</field>
+            <field name="latitude">0</field>
+            <field name="longitude">0</field>
+            <field name="active" eval="True"/>
+            <field name="flag" eval="True"/>
+            <field name="flag2" eval="False"/>
+            <field name="gender_mosque">female</field>
+            <field name="categ_mosque_id" ref="mk_mosque_category1"/>
+        </record>
+        <record id="mk_student_register4" model="mk.student.register">
+            <field name="name">مريم</field>
+            <field name="display_name">مريم احمد منير</field>
+            <field name="second_name">احمد</field>
+            <field name="third_name">منير</field>
+            <field name="fourth_name"></field>
+            <field name="no_identity" eval="False"/>
+            <field name="identity_no">1000000388</field>
+            <field name="mobile">550517740</field>
+            <field name="email">maryamahmad@gmail.com</field>
+            <field name="passwd">3405</field>
+            <field name="gender">female</field>
+            <field name="country_id" ref="base.sa"/>
+            <field name="area_id" ref="mk_area1"/>
+            <field name="city_id" ref="mk_city1"/>
+            <field name="district_id" ref="mk_district152"/>
+            <field name="birthdate">2012-11-13</field>
+            <field name="mosq_id" ref="mk_mosque2"/>
+            <field name="department_id" ref="mk_hr_department2"/>
+            <field name="part_id" eval="[(4, ref('educational_data.mk_parts1'))]"/>
+            <field name="request_state">accept</field>
+            <field name="grade_id" ref="mk_episode_management.mk_grade6"/>
+            <field name="job_type">student</field>
+            <field name="parent_identity">1000000370</field>
+            <field name="st_parent_id" ref="mk_parent"/>
+            <field name="marital_status">single</field>
+            <field name="is_student" eval="True"/>
+            <field name="check_filter">student</field>
+            <field name="registeration_code">1000008</field>
+            <field name="latitude">0</field>
+            <field name="longitude">0</field>
+            <field name="active" eval="True"/>
+            <field name="flag" eval="False"/>
+            <field name="flag2" eval="False"/>
+            <field name="gender_mosque">female</field>
+            <field name="categ_mosque_id" ref="mk_mosque_category2"/>
+        </record>
+    </data>
+</odoo>

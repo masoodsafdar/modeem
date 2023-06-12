@@ -1,0 +1,179 @@
+<odoo>
+    <data>
+    
+ 	<record id="mk_test_internal_registerations_form_view" model="ir.ui.view">
+          <field name="name">Test Internal Registerations Form View</field>
+          <field name="model">mk.test.internal.registerations</field>
+          <field name="arch" type="xml">
+              <form string = "Test Internal Registerations">
+		  <header>
+		    
+		  </header>
+		  <sheet>
+	  		  <group>
+		  		<field name="company_id"            required="1" options="{'no_open':1,'no_create':1}"/>
+			  	<field name="study_year_id"         required="1" domain="[('company_id','=',company_id)]"       options="{'no_open':1,'no_create':1}"/>
+			  	<field name="study_class_id"        required="1" domain="[('study_year_id','=',study_year_id)]" options="{'no_open':1,'no_create':1}"/>
+			  	<field name="test_center_config_id" required="1" domain="[('company_id','=',company_id)]"       options="{'no_open':1,'no_create':1}"/>
+			  	<field name="test_type_id"          required="1" domain="[('company_id','=',company_id)]"       options="{'no_open':1,'no_create':1}"/>
+                <field name="test_branch_id"        required="1" attrs="{'invisible':[('test_type_id','=', False)]}" options="{'no_open':1,'no_create':1}"/>
+			  </group>
+			  <group>
+			  	<group>
+			  		<field name="center_department_id"    domain="[('level_type','=','c')]"/>
+				  	<field name="student_id" required="1" domain="[('mosq_id','=',mosque_id)]"/>
+			  	</group>
+				<group>
+					<field name="mosque_id" domain="[('center_department_id','=',center_department_id),('center_department_id','!=',False)]"/>
+					<field name="test_date" required="1"/>
+				</group>
+			</group>
+			<separator string="Tests Periods"/>
+			  <group col="8" colspan="2">
+			  	<field name="period_id" required="1" domain="[('company_id','=',company_id)]" invisible="1"/>
+		  	</group>
+		  	<field name="period_subh" invisible="1"/>
+		  	<field name="period_zuhr" invisible="1"/>
+		  	<field name="period_aasr" invisible="1"/>
+		  	<field name="period_magrib" invisible="1"/>
+		  	<field name="period_esha" invisible="1"/>
+			  <group col="6" colspan="2">
+				  	<field name="subh" attrs="{'invisible':[('period_subh','!=','s')],'readonly':['|','|','|',('zuhr','=',True),('aasr','=',True),('magrib','=',True),('esha','=',True)]}"/>
+				  	<field name="zuhr" attrs="{'invisible':[('period_zuhr','!=','z')],'readonly':['|','|','|',('aasr','=',True),('subh','=',True),('magrib','=',True),('esha','=',True)]}"/>
+				  	<field name="aasr" attrs="{'invisible':[('period_aasr','!=','a')],'readonly':['|','|','|',('zuhr','=',True),('subh','=',True),('magrib','=',True),('esha','=',True)]}"/>
+				  	<field name="magrib" attrs="{'invisible':[('period_magrib','!=','m')],'readonly':['|','|','|',('zuhr','=',True),('subh','=',True),('aasr','=',True),('esha','=',True)]}"/>
+				  	<field name="esha" attrs="{'invisible':[('period_esha','!=','e')],'readonly':['|','|','|',('zuhr','=',True),('subh','=',True),('magrib','=',True),('aasr','=',True)]}"/>
+			  </group>
+
+			<group>
+				<button name="update_test_time" string="Update Test Time" type="object"/>
+
+			</group>
+			  <group>
+			  	<field name="test_time" invisible="0"/>
+			  	<field name="time_backup_id" invisible="1"/>
+				<field name="time_id" domain="[('chec','!=',True),('test_center_config_id','=',test_center_config_id),('test_date','=',test_date),('test_type_id','=',test_type_id),('study_year_id','=',study_year_id),('study_class_id','=',study_class_id),('subh','=',subh),('zuhr','=',zuhr),('aasr','=',aasr),('magrib','=',magrib),('esha','=',esha),]" widget="radio"/>
+			  </group>
+	  	</sheet>
+              </form>
+             </field>
+         </record>
+
+        <record id="mk_test_internal_registerations_tree_view" model="ir.ui.view">
+            <field name="name">Test Internal Registerations Tree View</field>
+            <field name="model">mk.test.internal.registerations</field>
+            <field name="arch" type="xml">
+                <tree delete="0" string="Test Internal Registerations">
+                	<field name="company_id"            required="1" options="{'no_open':1,'no_create':1}"/>
+                	<field name="study_year_id"         required="1" options="{'no_open':1,'no_create':1}"/>
+                	<field name="study_class_id"        required="1" options="{'no_open':1,'no_create':1}"/>
+                	<field name="test_center_config_id" required="1" options="{'no_open':1,'no_create':1}"/>
+                	<field name="test_type_id"          required="1" options="{'no_open':1,'no_create':1}"/>
+                	<field name="student_id"            required="1" options="{'no_open':1,'no_create':1}"/>
+                </tree>
+            </field>
+        </record>
+        
+        <record id="mk_test_internal_registerations_search_view" model="ir.ui.view">
+            <field name="name">Test Internal Registerations Search View</field>
+            <field name="model">mk.test.internal.registerations</field>
+            <field name="arch" type="xml">
+                <search string="Test Internal Registerations ">
+                </search>
+            </field>
+        </record>
+        
+        <record id="mk_test_internal_registerations_action" model="ir.actions.act_window">
+            <field name="name">Test Internal Registerations </field>
+            <field name="res_model">mk.test.internal.registerations</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+            <field name="search_view_id" ref="mk_test_internal_registerations_search_view"/>
+        </record>
+
+	<menuitem name="Test Internal Registerations " id="mk_test_internal_registerations_menu" sequence="5" parent="mk_tests_menu" action="mk_test_internal_registerations_action"/>    
+
+
+   
+ 	<record id="mk_test_time_form_view" model="ir.ui.view">
+          <field name="name">Test Time Form View</field>
+          <field name="model">mk.test.time</field>
+          <field name="arch" type="xml">
+              <form string = "Test Time">
+		  <header>
+		    
+		  </header>
+		  <sheet>
+	  		  <group>
+		  		  <group>
+                			<field name="name"/>
+							<field name="company_id"    options="{'no_open':1,'no_create':1}"/>
+							<field name="study_year_id" options="{'no_open':1,'no_create':1}"/>
+							<field name="checked"       invisible="1"/>
+							<field name="from_period"   widget="float_time"/>
+							<field name="test_id"       options="{'no_open':1,'no_create':1}"/>
+                			<field name="chec"          invisible="1"/>
+				  </group>
+		  		  <group>
+					<field name="test_date"/>
+					<field name="study_class_id"        options="{'no_open':1,'no_create':1}"/>
+					<field name="test_center_config_id" options="{'no_open':1,'no_create':1}"/>
+					<field name="test_type_id"          options="{'no_open':1,'no_create':1}"/>
+					<field name="to_period" widget="float_time"/>
+				  </group>
+			  </group>
+	  	</sheet>
+              </form>
+             </field>
+         </record>
+
+        <record id="mk_test_time_tree_view" model="ir.ui.view">
+            <field name="name">Test Time Tree View</field>
+            <field name="model">mk.test.time</field>
+            <field name="arch" type="xml">
+                <tree delete="0" string="Test Time">
+                	<field name="company_id"            options="{'no_open':1,'no_create':1}"/>
+                	<field name="study_year_id"         options="{'no_open':1,'no_create':1}"/>
+                	<field name="study_class_id"        options="{'no_open':1,'no_create':1}"/>
+                	<field name="test_center_config_id" options="{'no_open':1,'no_create':1}"/>
+                	<field name="test_type_id"          options="{'no_open':1,'no_create':1}"/>
+
+
+                	<field name="from_period"/>
+                	<field name="to_period"/>
+
+                	<field name="checked" invisible="1"/>
+                	<field name="chec"    invisible="1"/>
+                	<field name="test_date"/>
+                	<field name="name"/>
+                </tree>
+            </field>
+        </record>
+        
+        <record id="mk_test_time_search_view" model="ir.ui.view">
+            <field name="name">Test Time Search View</field>
+            <field name="model">mk.test.time</field>
+            <field name="arch" type="xml">
+                <search string="Test Time ">
+                </search>
+            </field>
+        </record>
+        
+        <record id="mk_test_time_action" model="ir.actions.act_window">
+            <field name="name">Test Time </field>
+            <field name="res_model">mk.test.time</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+            <field name="search_view_id" ref="mk_test_time_search_view"/>
+        </record>
+
+	<!--<menuitem name="Test Time " id="mk_test_time_menu" sequence="5" parent="mk_tests_menu" action="mk_test_time_action"/>-->
+
+    </data>  
+</odoo>

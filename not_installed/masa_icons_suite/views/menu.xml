@@ -1,0 +1,23 @@
+<odoo>
+    <data>
+
+
+        <menuitem id="fleet.menu_root" web_icon="masa_icons_suite,static/src/img/icones/fleet_icone.png"/>
+
+        <menuitem id="students_motivation.menu_motivation_root"       web_icon="masa_icons_suite,static/src/img/icones/motivation_icone.png"/>
+
+        <menuitem id="mk_transport_management.mk_transport_main_menu" web_icon="masa_icons_suite,static/src/img/icones/transport_icone.png"/>
+
+        <menuitem id="educational_supervison.menu_root"               web_icon="masa_icons_suite,static/src/img/icones/supervisor_icone.png"/>
+
+        <menuitem id="mk_intensive_courses.mk_courses_settings_menu"  web_icon="masa_icons_suite,static/src/img/icones/icone_20.png"/>
+
+        <menuitem id="sms_center_menu"  web_icon="masa_icons_suite,static/src/img/icones/icone_lettre.png" name="مركز الرسائل"/>
+
+        <menuitem name="إرسال رسائل نصية للطلاب"   id="student_sms_menu"     parent="sms_center_menu"  action="mk_student_register.action_student_sms_form"  sequence="1" groups="mk_student_register.group_sms_student"/>
+        <menuitem name="إرسال رسائل نصية للموظفين "   id="employee_sms_menu1"   parent="sms_center_menu"  action="mk_student_register.action_employee_sms_form" sequence="1" groups="mk_student_register.group_sms_employee"/>
+        <menuitem name="إعدادات بوابة الرسائل القصيرة" id="gateway_config_menu"  parent="sms_center_menu"  action="mk_student_register.gateway_config_action"    sequence="3" groups="mk_student_register.group_sms_configuration"/>
+
+
+    </data>
+</odoo>

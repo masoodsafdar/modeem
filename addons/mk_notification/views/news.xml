@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="view_mk_news_from" model="ir.ui.view">
+            <field name="name">mk.news.form</field>
+            <field name="model">mk.news.notification</field>
+            <field name="arch" type="xml">
+                <form string="اشعارات النظام" delete="0">
+                    <header>
+                    <button name="action_renotify" string="تكرار الاشعار" type="object" class="oe_highlight"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="type_news"/>
+
+                                <field name="image" widget='image' attrs="{'required': [('type_news', '!=', 'video')] , 'invisible': [(('type_news', '=', 'video'))] }"/>
+                                <field name="url"   widget="url"   attrs="{'invisible': [(('type_news', '!=', 'image_url'))] }"/>
+                                <field name="url_video" attrs="{'required': [('type_news', '=', 'video')] , 'invisible': [(('type_news', '!=', 'video'))] }"/>
+                                <field name="embed_url_video" invisible="1"/>
+                            </group>
+                            <group>
+                                <field name="category"/>
+                            </group>
+                        </group>
+                         <group string="الفيديو" attrs="{'invisible': [(('type_news', '!=', 'video'))] }">
+                            <iframe id="news_iframe_id" width="100%" height="720" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen;" >
+                                <script>
+                                    if(document.getElementsByName("embed_url_video")){
+                                        document.getElementById("news_iframe_id").src = document.getElementsByName("embed_url_video")[0].innerHTML;
+                                    }
+                                </script>
+                            </iframe>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_mk_news_tree" model="ir.ui.view">
+            <field name="name">mk.news.tree</field>
+            <field name="model">mk.news.notification</field>
+            <field name="arch" type="xml">
+                <tree string="اشعارات النظام" delete="0">
+                    <field name="name"/>
+                    <field name="category"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="mk_news_action" model="ir.actions.act_window">
+            <field name="name">اشعارات النظام </field>
+            <field name="res_model">mk.news.notification</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+	    <menuitem name="اشعارات النظام" id="mk_news_menu" sequence="5" parent="mk_notification.mk_notification_root_menu" action="mk_news_action"/>
+
+        <record id="news_notification_pop_up_from" model="ir.ui.view">
+            <field name="name">اشعار</field>
+            <field name="model">news.notification.popup</field>
+            <field name="arch" type="xml">
+                <form string="اشعار">
+                    <sheet>
+                        <div style="text-align: center;">
+                            <field name="type_news" invisible="1"/>
+                            <field name="image" widget='image' readonly="1" attrs="{'required': [('type_news', '!=', 'video')] , 'invisible': [(('type_news', '=', 'video'))] }" options='{"size": [800, 800]}'/>
+                            <field name="url" widget="url" readonly="1" attrs="{'invisible': ['|',('url', '=', False),('type_news', '!=', 'image_url')] }"/>
+                            <field name="url_video" readonly="1" invisible="1"/>
+                            <field name="embed_url" invisible="1"/>
+                            <iframe id="news_iframe_id" attrs="{'invisible': [(('type_news', '!=', 'video'))]}" width="100%" height="720" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen;" >
+                                <script>
+                                    if(document.getElementsByName("embed_url")){
+                                    document.getElementById("news_iframe_id").src = document.getElementsByName("embed_url")[0].value;
+                                    }
+                                </script>
+                            </iframe>
+                        </div>
+                    </sheet>
+                    <footer>
+                        <button name="action_validate" type="object" string="تأكيد" class="oe_highlight"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="news_notification_pop_up_action" model="ir.actions.act_window">
+            <field name="name">اشعار</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">news.notification.popup</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+    </data>
+</odoo>

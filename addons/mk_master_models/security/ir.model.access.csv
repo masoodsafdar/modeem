@@ -1,0 +1,59 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+Create_center_ccd,Access Create center dep,hr.model_hr_department,group_Create_center,1,1,1,1
+Create_center_cce,Access Create center emp,hr.model_hr_employee,group_Create_center,1,0,0,0
+Create_center_ccc,Access Create center countrs,base.model_res_country_state,group_Create_center,1,0,0,0
+read_center_ccd,Access read center dep,hr.model_hr_department,group_read_center,1,0,0,0
+read_center_cce,Access read center emp,hr.model_hr_employee,group_read_center,1,0,0,0
+read_center_ccc,Access read center countrs,base.model_res_country_state,group_read_center,1,0,0,0
+Edit_center_ccd,Access Edit center dep,hr.model_hr_department,group_Edit_center,1,1,0,0
+Edit_center_cce,Access Edit center emp,hr.model_hr_employee,group_Edit_center,1,0,0,0
+Edit_center_ccc,Access Edit center countrs,base.model_res_country_state,group_Edit_center,1,0,0,0
+Create_center_employee_emp,Access Create employee emp,hr.model_hr_employee,group_Create_employee,1,1,1,1
+Create_center_employee_rec,Access Create employee rec,hr_recruitment.model_hr_recruitment_degree,group_Create_employee,1,0,0,0
+Create_center_employee_jop,Access Create employee jop,hr.model_hr_job,group_Create_employee,1,0,0,0
+Create_center_employee_dep,Access Create employee dep,hr.model_hr_department,group_Create_employee,1,0,0,0
+Create_center_employee_mosq,Access Create employee mosq,mk_master_models.model_mk_mosque,group_Create_employee,1,0,0,0
+Create_center_employee_cou,Access Create employee con,base.model_res_country,group_Create_employee,1,0,0,0
+Create_center_employee_parts,Access Create employee parts,mk_master_models.model_mk_parts,group_Create_employee,1,0,0,0
+Read_center_employee_emp,Access Read employee emp,hr.model_hr_employee,group_read_employee,1,0,0,0
+Read_center_employee_rec,Access Read employee rec,hr_recruitment.model_hr_recruitment_degree,group_read_employee,1,0,0,0
+Read_hr_applicant,Access Read hr applicant,hr_recruitment.model_hr_applicant,group_read_employee,1,0,0,0
+Read_center_employee_jop,Access Read employee jop,hr.model_hr_job,group_read_employee,1,0,0,0
+Read_center_employee_dep,Access Read employee dep,hr.model_hr_department,group_read_employee,1,0,0,0
+Read_center_employee_mosq,Access Read employee mosq,mk_master_models.model_mk_mosque,group_read_employee,1,0,0,0
+Read_center_employee_cou,Access Read employee con,base.model_res_country,group_read_employee,1,0,0,0
+Read_center_employee_part,Access Read employee parts,mk_master_models.model_mk_parts,group_read_employee,1,0,0,0
+Read_center_employee_resource,Access Read employee resource,resource.model_resource_resource,,1,0,0,0
+Edit_center_employee_emp,Access Edit employee emp,hr.model_hr_employee,group_Edit_employee,1,1,0,0
+Edit_center_employee_rec,Access Edit employee rec,hr_recruitment.model_hr_recruitment_degree,group_Edit_employee,1,0,0,0
+Edit_center_employee_jop,Access Edit employee jop,hr.model_hr_job,group_Edit_employee,1,0,0,0
+Edit_center_employee_dep,Access Edit employee dep,hr.model_hr_department,group_Edit_employee,1,0,0,0
+Edit_center_employee_mosq,Access Edit employee mosq,mk_master_models.model_mk_mosque,group_Edit_employee,1,0,0,0
+Edit_center_employee_cou,Access Edit employee con,base.model_res_country,group_Edit_employee,1,0,0,0
+Edit_center_employee_part,Access Edit employee parts,mk_master_models.model_mk_parts,group_Edit_employee,1,0,0,0
+password_center_employee_emp,Access password employee emp,hr.model_hr_employee,group_Send_password_employee,1,0,0,0
+password_center_employee_rec,Access password employee rec,hr_recruitment.model_hr_recruitment_degree,group_Send_password_employee,1,0,0,0
+password_center_employee_jop,Access password employee jop,hr.model_hr_job,group_Send_password_employee,1,0,0,0
+password_center_employee_dep,Access password employee dep,hr.model_hr_department,group_Send_password_employee,1,0,0,0
+password_center_employee_mosq,Access password employee mosq,mk_master_models.model_mk_mosque,group_Send_password_employee,1,0,0,0
+password_center_employee_cou,Access password employee con,base.model_res_country,group_Send_password_employee,1,0,0,0
+password_center_employee_part,Access password employee parts,mk_master_models.model_mk_parts,group_Send_password_employee,1,0,0,0
+
+Acceptance_center_employee_emp,Access Acceptance employee emp,hr.model_hr_employee,group_Acceptance_employee,1,1,0,0
+Acceptancep_center_employee_rec,Access Acceptance employee rec,hr_recruitment.model_hr_recruitment_degree,group_Acceptance_employee,1,0,0,0
+Acceptance_center_employee_jop,Access Acceptance employee jop,hr.model_hr_job,group_Acceptance_employee,1,0,0,0
+Acceptance_center_employee_dep,Access Acceptance employee dep,hr.model_hr_department,group_Acceptance_employee,1,0,0,0
+Acceptance_center_employee_mosq,Access Acceptance employee mosq,mk_master_models.model_mk_mosque,group_Acceptance_employee,1,0,0,0
+Acceptance_center_employee_cou,Access Acceptance employee con,base.model_res_country,group_Acceptance_employee,1,0,0,0
+Acceptance_center_employee_part,Access Acceptance employee parts,mk_master_models.model_mk_parts,group_Acceptance_employee,1,0,0,0
+activated_center_employee_emp,Access activated employee emp,hr.model_hr_employee,group_Not_activated_employee,1,1,0,0
+activated_center_employee_rec,Access activated employee rec,hr_recruitment.model_hr_recruitment_degree,group_Not_activated_employee,1,0,0,0
+activated_center_employee_jop,Access activated employee jop,hr.model_hr_job,group_Not_activated_employee,1,0,0,0
+activated_center_employee_dep,Access activated employee dep,hr.model_hr_department,group_Not_activated_employee,1,0,0,0
+activated_center_employee_mosq,Access activated employee mosq,mk_master_models.model_mk_mosque,group_Not_activated_employee,1,0,0,0
+activated_center_employee_cou,Access activated employee con,base.model_res_country,group_Not_activated_employee,1,0,0,0
+activated_center_employee_part,Access activated employee parts,mk_master_models.model_mk_parts,group_Not_activated_employee,1,0,0,0
+responsible_mosque_add_mos,Access responsible_mosque_add_mos,mk_master_models.model_responsible_mosque,group_read_employee,1,1,1,0
+hr_department_category,Access_hr_department_category ,mk_master_models.model_hr_department_category,,1,0,0,0
+
+

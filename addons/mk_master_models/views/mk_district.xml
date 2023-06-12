@@ -1,0 +1,59 @@
+<odoo>
+    <data>
+    
+ 	<record id="view_district_form" model="ir.ui.view">
+				<field name="name">view.district.form</field>
+				<field name="model">mk.district</field>
+				<field name="arch" type="xml">
+					<form string="District" version="8.0">
+                        <sheet>
+                        	<group>
+                        		<field name="name"    required="True"/>
+                                <field name="area_id" options="{'no_create': True, 'no_open': True}"/>
+                        	</group>
+                        </sheet>
+                    </form>
+                </field>
+        </record>
+
+        <!-- Tree View MK Campus-->
+		<record id="view_district_tree" model="ir.ui.view">
+				<field name="name">view.district.tree</field>
+				<field name="model">mk.district</field>
+				<field name="arch" type="xml">
+					<tree>
+                        <field name="name" required="True"/>
+                    </tree>
+                </field>
+        </record>
+
+        <record id="mk_district_search_view" model="ir.ui.view">
+            <field name="name">district</field>
+            <field name="model">mk.district</field>
+            <field name="arch" type="xml">
+                <search string="district">
+                    <field name="name" string="district" filter_domain="[('name','ilike', self)]"/>
+                </search>
+            </field>
+        </record>
+        
+        <record id="mk_district_action" model="ir.actions.act_window">
+            <field name="name">district</field>
+            <field name="res_model">mk.district</field>
+            <field name="type">ir.actions.act_window</field>
+            <!-- <field name="view_type">form</field> -->
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+            <field name="search_view_id" ref="mk_district_search_view"/>
+        </record>
+<!--
+<menuitem
+			id="mk_district_menu"
+			name="Districts"
+			action="mk_district_action"
+			parent="mk_student_setting_menu"
+			sequence="3" />
+-->
+    </data>  
+</odoo>

@@ -1,0 +1,57 @@
+<odoo>
+  <data>
+
+  	<record id="top_five_form" model="ir.ui.view">
+      <field name="name">top_five_form</field>
+      <field name="model">top.five</field>
+      <field name="arch" type="xml">
+        <form create='false'>
+          <header>
+            <button name="get_best_studant_episode_dashboard" type="object" string="confirm" class="oe_highlight" />
+          </header>
+          <sheet>
+           
+            <field name="study_class" />
+            <field name="best_students" >
+              <tree>
+                <field name="name" />
+                <field name="rate" />
+              </tree>
+            </field>
+            <p>الحلقات</p>
+             <field name="best_episodes" >
+              <tree>
+                <field name="name" />
+                <field name="rate" />
+              </tree>
+            </field>
+
+             <p>المعلمين</p>
+             <field name="best_teachers" >
+              <tree>
+                <field name="name" />
+                <field name="rate" />
+              </tree>
+            </field>
+          </sheet>
+            </form>
+      </field>
+    </record>
+
+ <act_window 
+      id="top_five_action"
+      name="top_five"
+      res_model="top.five"
+      view_mode="tree,form"/>
+
+
+
+ <!--menuitem
+            id="top_five_menu"
+            name="top five"
+            action="top_five_action"
+            parent="student_management_view_menu"
+            sequence="4" /-->
+
+</data>
+</odoo>

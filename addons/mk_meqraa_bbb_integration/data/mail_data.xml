@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="email_template_warning_max_number_student_BBB" model="mail.template">
+            <field name="name">تحذير من تجاوز الحد الأقصى لعدد الطلاب في المنصة</field>
+            <field name="model_id" ref="base.model_res_company" />
+            <field name="subject">تحذير من تجاوز الحد الأقصى لعدد الطلاب في المنصة</field>
+
+            <field name="email_from">${object.email}</field>
+
+            <field name="body_html" type="html">
+                <center>
+                    <div style="font-size: 20px;direction:rtl;">
+                        <table border="0" cellpadding="0" cellspacing="0"
+                            style="background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;">
+
+                            <tbody>
+                                <tr>
+                                    <center>
+                                        <img src="/logo.png?company=${object.id}"
+                                            style="padding: 0px; margin: 0px; height: auto; width: 80px;" alt="Logo" />
+                                        <br />
+                                        <strong>${object.name}</strong>
+                                        <br />
+                                    </center>
+                                </tr>
+                                <tr
+                                    style="background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin:16px 0px 16px 0px;">
+                                </tr>
+                                <tr>
+                                    <td align="center" style="">
+                                        <table border="0" cellpadding="0" cellspacing="0"
+                                            style="background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;">
+                                            <tr>
+                                                <td valign="top" style="font-size: 20px;">
+                                                    <div style="text-align: center;">
+                                                        <br />
+                                                        لقد تم تجاوز الحد الأقصى لعدد الطلاب (في نفس الوقت) في نظام
+                                                        الجلسات الافتراضية
+                                                        <br />
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align:center;">
+                                                    <hr width="100%"
+                                                        style="background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 16px 0px 16px 0px;" />
+                                                    العدد الأقصى للطلاب في النظام : ${ctx['max_student_number']}
+                                                    <br />
+                                                    عدد الطلاب حالياً : ${ctx['current_student_counter']}
+
+                                                    <br />
+                                                    عدد الحصص السارية: ${ctx['total']}
+                                                    <br />
+                                                </td>
+                                            </tr>
+                                        </table>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center">
+
+                                        <table border="1" cellpadding="0" cellspacing="0" width="100%"
+                                            style="background-color: white; padding: 0px 0px 0px 0px; border-collapse:separate;">
+                                            <thead>
+                                                <tr>
+                                                    <th>الاسم</th>
+                                                    <th>الرابط</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                % for line in ctx['email_vals']:
+                                                <tr>
+                                                    <td>${line['name']}</td>
+                                                    <td>
+                                                        <p>
+                                                            <a
+                                                                style="padding: 8px; color: blue; border-radius: 5px; font-size:18px;"
+                                                                href="${line['link']}">انقر هنا</a>
+                                                        </p>
+                                                    </td>
+                                                </tr>
+                                                % endfor
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <di class="col-xs-12">
+                            <table>
+                                <tr style="">
+                                    <td>
+                                    </td>
+                                    <td>
+                                        <a style="padding: 15px;" href="${object.social_facebook}">
+                                            <i class="fa fa-facebook" />
+                                        </a>
+                                        <a style="padding: 15px;" href="'%s' % ${object.social_twitter}">
+                                            <i class="fa fa-twitter" />
+                                        </a>
+                                        <a style="padding: 15px;" href="'%s' % ${object.social_instagram}">
+                                            <i class="fa fa-instagram" />
+                                        </a>
+                                    </td>
+                                    <td>
+                                    </td>
+                                </tr>
+                            </table>
+                        </di>
+
+                    </div>
+                </center>
+            </field>
+            <field name="user_signature" eval="False" />
+            <field name="auto_delete" eval="True" />
+        </record>
+
+    </data>
+</odoo>

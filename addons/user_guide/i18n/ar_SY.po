@@ -1,0 +1,243 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* user_guide
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-02-15 13:35+0000\n"
+"PO-Revision-Date: 2022-02-15 13:35+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: user_guide
+#: code:addons/user_guide/models/user_guide.py:48
+#, python-format
+msgid "<p class=\"oe_view_nocontent_create\">\n"
+"\n"
+"                                        Attach\n"
+"        documents of your employee.</p>"
+msgstr "<p class=\"oe_view_nocontent_create\">\n"
+"\n"
+"                                        Attach\n"
+"        documents of your employee.</p>"
+
+#. module: user_guide
+#: model:ir.model.fields,field_description:user_guide.field_user_guide_active
+msgid "Active"
+msgstr "Active"
+
+#. module: user_guide
+#: selection:user.guide,guide_type:0
+msgid "Announce"
+msgstr "تعميم"
+
+#. module: user_guide
+#: model:ir.ui.view,arch_db:user_guide.view_user_guide_filter
+msgid "Archived"
+msgstr "مؤرشف"
+
+#. module: user_guide
+#: code:addons/user_guide/models/user_guide.py:41
+#, python-format
+msgid "Attachments"
+msgstr "المرفقات"
+
+#. module: user_guide
+#: model:ir.model.fields,field_description:user_guide.field_user_guide_category_id_19198
+msgid "Category"
+msgstr "التصنيف"
+
+#. module: user_guide
+#: model:ir.model.fields,field_description:user_guide.field_user_guide_category_name
+#: model:ir.ui.view,arch_db:user_guide.user_guide_category_form_view
+msgid "Category Name"
+msgstr "التصنيف"
+
+#. module: user_guide
+#: model:ir.model.fields,field_description:user_guide.field_user_guide_category_create_uid
+#: model:ir.model.fields,field_description:user_guide.field_user_guide_create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: user_guide
+#: model:ir.model.fields,field_description:user_guide.field_user_guide_category_create_date
+#: model:ir.model.fields,field_description:user_guide.field_user_guide_create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: user_guide
+#: model:ir.model.fields,field_description:user_guide.field_user_guide_category_department_id
+msgid "Department"
+msgstr "القسم"
+
+#. module: user_guide
+#: model:ir.model.fields,field_description:user_guide.field_user_guide_description
+msgid "Description"
+msgstr "الوصف"
+
+#. module: user_guide
+#: model:ir.model.fields,field_description:user_guide.field_user_guide_category_display_name
+#: model:ir.model.fields,field_description:user_guide.field_user_guide_display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: user_guide
+#: selection:user.guide,guide_type:0
+msgid "Document"
+msgstr "نماذج"
+
+#. module: user_guide
+#: model:ir.model.fields,field_description:user_guide.field_user_guide_embed_video
+msgid "Embed video"
+msgstr "رابط التضمين"
+
+#. module: user_guide
+#: model:ir.ui.view,arch_db:user_guide.view_user_guide_filter
+msgid "Group by category"
+msgstr "تجميع حسب التصنيف"
+
+#. module: user_guide
+#: model:ir.ui.view,arch_db:user_guide.view_user_guide_filter
+msgid "Group by type"
+msgstr "تجميع حسب النوع"
+
+#. module: user_guide
+#: selection:user.guide,guide_type:0
+msgid "Guide"
+msgstr "دليل استخدام"
+
+#. module: user_guide
+#: model:ir.actions.act_window,name:user_guide.user_guide_category_action
+msgid "Guide Categories"
+msgstr "التصنيف"
+
+#. module: user_guide
+#: model:ir.ui.view,arch_db:user_guide.user_guide_category_tree_view
+msgid "Guide Category"
+msgstr "Guide Category"
+
+#. module: user_guide
+#: model:ir.model.fields,field_description:user_guide.field_user_guide_name
+msgid "Guide Name"
+msgstr "الاسم"
+
+#. module: user_guide
+#: model:ir.model.fields,field_description:user_guide.field_user_guide_guide_type
+msgid "Guide Type"
+msgstr "النوع"
+
+#. module: user_guide
+#: model:ir.ui.menu,name:user_guide.menu_user_guide_root
+msgid "User Guide"
+msgstr "أدلة الاستحدام"
+
+#. module: user_guide
+#: model:ir.model.fields,field_description:user_guide.field_user_guide_category_id
+#: model:ir.model.fields,field_description:user_guide.field_user_guide_id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: user_guide
+#: model:ir.model.fields,field_description:user_guide.field_user_guide___last_update
+#: model:ir.model.fields,field_description:user_guide.field_user_guide_category___last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: user_guide
+#: model:ir.model.fields,field_description:user_guide.field_user_guide_category_write_uid
+#: model:ir.model.fields,field_description:user_guide.field_user_guide_write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: user_guide
+#: model:ir.model.fields,field_description:user_guide.field_user_guide_category_write_date
+#: model:ir.model.fields,field_description:user_guide.field_user_guide_write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: user_guide
+#: code:addons/user_guide/models/user_guide.py:65
+#, python-format
+msgid "Link is not valid"
+msgstr "الرابط غير صحيح"
+
+#. module: user_guide
+#: model:ir.ui.view,arch_db:user_guide.view_user_guide_filter
+msgid "Name"
+msgstr "الاسم"
+
+#. module: user_guide
+#: model:ir.model.fields,field_description:user_guide.field_user_guide_num_of_attachments
+msgid "Number Of Attachments"
+msgstr "عدد المرفقات"
+
+#. module: user_guide
+#: model:ir.model.fields,field_description:user_guide.field_user_guide_order_by
+msgid "Order by"
+msgstr "Order by"
+
+#. module: user_guide
+#: model:ir.ui.view,arch_db:user_guide.view_user_guide_filter
+msgid "Search User Guide"
+msgstr "بحث"
+
+#. module: user_guide
+#: model:ir.ui.view,arch_db:user_guide.user_guide_tree_view
+msgid "Show Document"
+msgstr "عرض المستندات"
+
+#. module: user_guide
+#: model:ir.actions.act_window,name:user_guide.act_user_guide_view
+#: model:ir.model,name:user_guide.model_user_guide
+#: model:ir.module.category,name:user_guide.user_guide_security_groups
+#: model:ir.ui.menu,name:user_guide.menu_user_guide
+#: model:ir.ui.view,arch_db:user_guide.user_guide_view_form
+msgid "User Guide"
+msgstr "دليل الاستخدام"
+
+#. module: user_guide
+#: model:res.groups,name:user_guide.user_guide_group_manager
+msgid "User Guide Manager"
+msgstr "مدير نظام ادلة الاستخام"
+
+#. module: user_guide
+#: model:ir.ui.view,arch_db:user_guide.user_guide_view_form
+msgid "Video"
+msgstr "الفيديو"
+
+#. module: user_guide
+#: model:ir.model.fields,field_description:user_guide.field_user_guide_video_URL
+msgid "Video URL"
+msgstr "رابط الفيديو"
+
+#. module: user_guide
+#: model:ir.ui.view,arch_db:user_guide.user_guide_tree_view
+msgid "Watch Video"
+msgstr "مشاهدة الفيديو"
+
+#. module: user_guide
+#: model:ir.ui.view,arch_db:user_guide.user_guide_view_form
+msgid "YouTube video player"
+msgstr "YouTube video player"
+
+#. module: user_guide
+#: model:ir.ui.view,arch_db:user_guide.user_guide_category_form_view
+msgid "e.g. Category"
+msgstr "مثال : أدلة الموارد البشرية"
+
+#. module: user_guide
+#: model:ir.model,name:user_guide.model_user_guide_category
+msgid "user.guide.category"
+msgstr "التصنيف"
+
+#. module: user_guide
+#: model:ir.ui.menu,name:user_guide.menu_user_guide_category
+msgid "Categories"
+msgstr "التصنيف"
+

@@ -1,0 +1,91 @@
+<odoo>
+	<data>
+		
+
+		<record model="ir.rule" id="maknoon_contests_nomination_process_id">
+			<field name="name">maknoon contests </field>
+			<field name="model_id" ref="contests.model_nomination_process"/>
+			<field name="domain_force">
+				['&amp;','|',('contest.gender_type','=','male,female'),('contest.gender_type','in',(str(user.gender)).split(","))
+				,'&amp;',
+				'|',
+                '|',('candidate_hr.mosqtech_ids','in',user.mosque_ids.ids),('candidate_hr.department_id.id','in',user.department_ids.ids),
+                '|',('mosque','in',user.mosque_ids.ids),('mosque.center_department_id.id','in',user.department_ids.ids),
+                '|',('contest.place','=','organization_level'),'|','&amp;',('contest.place','=','mosque_level'),('contest.mosque_id.id','in',user.mosque_ids.ids),
+
+
+
+
+				'&amp;',('contest.place','=','center_level'),
+				'|',('contest.center_id.id','in',user.department_ids.ids),('contest.center_id.id','=',user.department_id.id)]
+
+			</field>
+
+		</record>
+<!--
+['&amp;',
+				'|',('contest.gender_type','=','male,female'),('contest.gender_type','in',(str(user.gender)).split(",")),
+				'&amp;',
+				'|',('mosque','in',user.mosque_ids.ids),('mosque.center_department_id.id','in',user.department_ids.ids),'&amp;',
+                '|',('candidate_hr.mosqtech_ids.ids','in',user.mosque_ids.ids),('candidate_hr.department_id.id','in',user.department_ids.ids),
+				'|','|',('contest.place','=','organization_level')
+				,'&amp;',('contest.place','=','mosque_level'),('contest.mosque_id.id','in',user.mosque_ids.ids),
+				
+				'&amp;',('contest.place','=','center_level'),
+				'|',('contest.center_id.id','in',user.department_ids.ids),('contest.center_id.id','in',user.department_id.id)]
+
+
+-->
+
+		<record model="ir.rule" id="org_cent_contest_preparation_rule">
+		<field name="name">org cent contest preparation rules</field>
+		<field name="model_id" ref="contests.model_contest_preparation"/>
+		<field name="domain_force">['&amp;',
+			                         '|',('gender_type','=','male,female'),
+			                             ('gender_type','in',(str(user.gender)).split(",")),
+			                             '|',('place','=','organization_level'),
+			                                '|',
+			                                   '&amp;',('place','=','mosque_level'),
+			                                       '|',('mosque_id','in',user.mosque_ids.ids),
+			                                           ('mosque_id.center_department_id','in',user.department_ids.ids),
+			                                   '&amp;',('center_id','in',user.department_ids.ids),
+			                                       ('place','=','center_level')]</field>
+		<field name="perm_read" eval="True"/>
+		    <field name="perm_write" eval="False"/>
+		    <field name="perm_unlink" eval="True"/>
+		    <field name="perm_create" eval="True"/>
+		</record>
+
+
+		<record id="org_cent_contest_preparation_rule_write" model="ir.rule">
+		    <field name="name">contest preparation rules write</field>
+		    <field ref="contests.model_contest_preparation" name="model_id"/>
+    		    <field name="groups" eval="[(4, ref('write_contest_preparation_group'))]"/>
+		   <field name="domain_force"> [('create_uid.id','=',user.id)]</field>
+		    <field name="perm_read" eval="False"/>
+		    <field name="perm_write" eval="True"/>
+		    <field name="perm_unlink" eval="False"/>
+		    <field name="perm_create" eval="False"/>
+		</record>
+
+		<record model="ir.rule" id="nomination_request_management_rule">
+		<field name="name">Nomination Request Management</field>
+		<field name="model_id" ref="contests.model_nomination_request_managment"/>
+		<field name="domain_force">['&amp;','|',('contest.gender_type','=','male,female'),('contest.gender_type','in',(str(user.gender)).split(",")),'|',('contest.place','=','organization_level'),'|','&amp;',('contest.place','=','mosque_level'),('contest.mosque_id.id','in',user.mosque_ids.ids),'&amp;',('contest.center_id.id','in',user.department_ids.ids),('contest.place','=','center_level')]</field>
+		</record>
+
+		<record model="ir.rule" id="contest_resault_management_rule">
+		<field name="name">Contest Resault Management</field>
+		<field name="model_id" ref="contests.model_result_managment"/>
+		<field name="domain_force">['&amp;','|',('contest.gender_type','=','male,female'),('contest.gender_type','in',(str(user.gender)).split(",")),'|',('contest.place','=','organization_level'),'|','&amp;',('contest.place','=','mosque_level'),('contest.mosque_id.id','in',user.mosque_ids.ids),'&amp;',('contest.center_id.id','in',user.department_ids.ids),('contest.place','=','center_level')]</field>
+		</record>
+
+		<record model="ir.rule" id="contest_calendar_management_rule">
+		<field name="name">Contest Contest Calendar</field>
+		<field name="model_id" ref="contests.model_contest_calendar"/>
+		<field name="domain_force">['&amp;','|',('name.gender_type','=','male,female'),('name.gender_type','in',(str(user.gender)).split(",")),'|',('name.place','=','organization_level'),'|','&amp;',('name.place','=','mosque_level'),('name.mosque_id.id','in',user.mosque_ids.ids),'&amp;',('name.center_id.id','in',user.department_ids.ids),('name.place','=','center_level')]</field>
+		</record>
+
+
+	</data>
+</odoo>

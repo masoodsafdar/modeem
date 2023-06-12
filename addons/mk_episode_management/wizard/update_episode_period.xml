@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <record id="period_form_wizard" model="ir.ui.view">
+            <field name="name">period form popup</field>
+            <field name="model">episode.update.periode.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Update employee">
+                    <sheet>
+                        <group>
+                            <field name='episode_id' readonly="1"/>
+                            <field name='updated_period'/>
+                        </group>
+                    </sheet>
+                    <footer>
+                        <button name="action_update" type="object" string="تغيير" class="oe_highlight"/>
+                        <button string="إلغاء" class="oe_link" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>
+

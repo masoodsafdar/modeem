@@ -1,0 +1,38 @@
+<odoo>
+    <data>
+	 	<record id="mk_branch_courses_form_view" model="ir.ui.view">
+	        <field name="name">Branch Courses Form View</field>
+	        <field name="model">mk.branch.courses</field>
+	        <field name="arch" type="xml">
+	            <form string = "Branch Courses">
+			  	   <sheet>
+			  	  		<group col="4">
+				  			<field name="num_branch"   required="1"/>
+				  			<field name="name"         required="1"/>
+				  			<field name="part_from_id" required="1" options="{'no_create': True,'no_open': True,}"/>
+				  			<field name="part_to_id"   required="1" options="{'no_create': True,'no_open': True,}"/>
+				  			<field name="order"        required="1"/>
+				  			<field name="age_range"    required="1"/>
+				  			<field name="age_id"       required="1" widget="many2many_tags" 
+				  			                           attrs="{'invisible':[('age_range','!=','limt')]}"
+				  			                           options="{'no_create': True, 'no_open': True}"/>
+			  			</group>
+			  		</sheet>
+			  	</form>
+			</field>
+		</record>
+		
+	    <record id="mk_branch_courses_tree_view" model="ir.ui.view">
+	        <field name="name">Branch Courses Tree View</field>
+	        <field name="model">mk.branch.courses</field>
+	        <field name="arch" type="xml">
+	            <tree delete="0" string="Branch Curses">
+	            	<field name="name"         required="1"/>
+		  			<field name="num_branch"   required="1"/>
+		  			<field name="part_from_id" required="1" options="{'no_create': True,'no_open': True,}"/>
+		  			<field name="part_to_id"   required="1" options="{'no_create': True,'no_open': True,}"/>
+	            </tree>
+	        </field>
+	    </record>
+    </data>  
+</odoo>

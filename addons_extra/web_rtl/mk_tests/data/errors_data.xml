@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+		<record id="test_error_1" model="mk.test.error">
+		    <field name="name">اللحن الجلي</field>
+		    <field name="code">galy</field>
+		    <field name="company_id">1</field>
+		    <field name="degree_deduct">1</field>
+
+		</record>
+
+		<record id="test_error_2" model="mk.test.error">
+		    <field name="name">اللحن الخفي</field>
+		    <field name="code">khafy</field>
+		    <field name="company_id">1</field>
+		    <field name="degree_deduct">1</field>
+
+		</record>
+
+		<record id="test_error_3" model="mk.test.error">
+		    <field name="name">لفظي</field>
+		    <field name="code">lafzy</field>
+		    <field name="company_id">1</field>
+		    <field name="degree_deduct">2</field>
+		    <field name="error_type">s</field>
+
+		</record>
+
+		<record id="test_error_4" model="mk.test.error">
+		    <field name="name">تجويد</field>
+		    <field name="code">Tjweed</field>
+		    <field name="company_id">1</field>
+		    <field name="degree_deduct">1.5</field>
+		    <field name="error_type">at</field>
+
+		</record>
+	</data>
+</odoo>

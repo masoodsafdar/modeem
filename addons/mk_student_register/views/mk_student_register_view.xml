@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<!-- Form View MK Student Register-->
+		<record id="view_student_reg_form" model="ir.ui.view">
+			<field name="name">view.student.register.form</field>
+			<field name="model">mk.student.register</field>
+			<field name="arch" type="xml">
+				<form string="Students" version="8.0">
+					<header>
+					    <button name="revise" string="Accept Request" type="workflow" states="draft"/>
+					    <button name="accept" string="Accept" type="workflow" states="revised"/>
+					    <button name="reject" string="Reject" type="workflow" states="revised"/>
+					    <field name="state" widget="statusbar"/>
+					</header>
+					<sheet>
+						<div name="title_name" class="oe_title">
+							<h1>
+                                <table>
+									<tr>
+										<td>
+											<field name="second_name" required="1" placeholder="Second Name" style="padding-right:10px"/>
+										</td>
+										<td>
+											<field name="third_name" required="1" placeholder="Third Name" style="padding-right:10px" />
+										</td>
+										<td>
+											<field name="forth_name" required="0" placeholder="Forth Name" style="padding-right:10px" />
+										</td>
+                                     </tr>
+								</table>
+							</h1>
+						</div>
+						
+						<notebook colspan="4">
+							<page string="Basic Info">
+								<group>
+									<field name="identity_no" attrs="{'required':[('no_identity','=', False)]}"/>
+									<field name="passport_no" attrs="{'invisible':[('no_identity','=',False)],
+									                                  'required': [('no_identity', '=', True)]}"/>
+									<field name="no_identity"/>
+								</group>
+								<group col="4">
+									<field name="mobile"/>
+									<field name="country_id" invisible="0"/>
+									<field name="nationality"/>
+									<field name="identity_no"/>
+									<field name="grade_id" options="{'no_create': True, 'no_open':True}"/>
+								</group>
+								
+								<group col="4">
+									<field name="email" />
+									<field name="job_id"  options="{'no_open':1,'no_create':1}"/>
+									<field name="gender" />
+								</group>
+                            </page>
+
+                            <page string="Address Detail">
+								<table>
+									<tr>
+										<td>
+										    <field name="city_id" required="True" options="{'no_create': True, 'no_open': True}"/>
+										</td>
+										<td>
+										    <field name="area_id" required="True" options="{'no_create': True, 'no_open': True}"/>
+										</td>
+										<td>
+										    <field name="district_id" options="{'no_create': True, 'no_open': True}"/>
+										</td>
+									</tr>
+								</table>
+							</page>
+
+							<page string="parent's children">
+							</page>
+							<page string="Banking accounts">
+							</page>
+						</notebook>
+					</sheet>
+				</form>
+			</field>
+        </record>
+
+        <record id="mk_student_reg_action" model="ir.actions.act_window">
+            <field name="name">Student</field>
+            <field name="res_model">mk.student.register</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+		<!-- Main Menue MK Master Data-->
+		<menuitem id="reg_main_menu" name="Register" parent="" sequence="7"/>
+
+		<!-- Menue View MK Master Data-->
+		<menuitem id="reg_view_menu" name="Register Student" parent="reg_main_menu" sequence="1"/>
+
+		<!-- Menue MK Center-->
+		<menuitem id="student_menu"          name="Student"      action="mk_student_reg_action"      parent="reg_view_menu" sequence="2" />
+        <menuitem id="link_student_menu"     name="Link Student" action="mk_link_student_action"     parent="reg_view_menu" sequence="2" />
+        <menuitem id="link_student_menu_new" name="Link Student" action="mk_link_student_action_new" parent="reg_view_menu" sequence="2" />
+	</data>
+</odoo>

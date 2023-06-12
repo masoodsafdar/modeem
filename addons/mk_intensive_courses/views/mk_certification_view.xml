@@ -1,0 +1,74 @@
+
+<odoo>
+    <data>
+    
+ 	<record id="mk_certification_form" model="ir.ui.view">
+        <field name="name">Certification Form </field>
+        <field name="model">mk.certification</field>
+        <field name="arch" type="xml">
+            <form string = "Certification">
+		  	   <sheet>
+		  	  		<group col="4">
+			  			<field name="course_id" required="1"/>
+                        <field name="type_course"/>
+			  			<field name="students_no" required="1"/>
+			  			<field name="date" required="1"/>
+		  			</group>
+		  			<notebook>
+		  				<page string="Students">
+		  					<field name="certificate_ids">
+		  						<tree editable="bottom">
+		  							<field name="student_id"/>
+		  							<field name="mosque_id"/>
+		  							<field name="state_certificate"/>
+		  							<field name="pass_test"/>
+		  						</tree>
+		  					</field>
+		  				</page>
+		  			</notebook>
+		  		</sheet>
+		  	</form>
+		</field>
+	</record>
+    <record id="mk_certification_tree" model="ir.ui.view">
+        <field name="name">Certification Tree</field>
+        <field name="model">mk.certification</field>
+        <field name="arch" type="xml">
+            <tree delete="0" string="Certification">
+            	<field name="course_id" required="1"/>
+			  	<field name="type_course" required="1"/>
+			  	<field name="date" required="1"/>
+            </tree>
+        </field>
+    </record>
+       
+	<record id="mk_certification_search_view" model="ir.ui.view">
+       <field name="name">certification search</field>
+   	   <field name="model">mk.certification</field>
+       <field name="arch" type="xml">
+	    	<search>
+	    		<field name="course_id"/> 
+	    		<field name="students_no"/> 
+	    		<field name="type_course"/> 
+	    		
+	    		<group expand="0" string="Group By">
+                    <filter name="course_id"    string="الاسم"         context="{'group_by': 'course_id'}"/>   
+                    <filter name="type_course"  string="نوع الدورة"   context="{'group_by': 'type_course'}"/>   
+               	</group>
+	    	</search>
+       </field>
+	</record>
+				       
+    <record id="mk_certification_action" model="ir.actions.act_window">
+        <field name="name">Certification</field>
+        <field name="res_model">mk.certification</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+	<menuitem name="Certification" id="certificate_menu" sequence="4" parent="mk_courses_eval_menu_in" groups="mk_intensive_courses.read_course_certificat,mk_intensive_courses.edit_course_certificat,mk_intensive_courses.write_course_certificat"
+		action="mk_certification_action"/>    
+
+    </data>  
+</odoo>

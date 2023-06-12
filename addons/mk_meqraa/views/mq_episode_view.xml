@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<!--	meqraa students internal transfer		-->
+		<record id="form_meqraa_student_internal_transfer" model="ir.ui.view">
+			<field name="name">form.student.intarnal.transfer</field>
+			<field name="model">student.internal.transfer</field>
+			<field name="arch" type="xml">
+				<form>
+					<group>
+						<field name="link_id" invisible="1"/>
+						<field name="mosq_id" invisible="1"/>
+						<field name="episode_id" options="{'no_create': True, 'no_open': True}" domain="[('is_episode_meqraa', '=', True),('state', 'in', ['draft', 'accept']),('study_class_id.is_default', '=', True)]"/>
+					</group>
+					<footer>
+						<button string="نقل" name="transfer_student" type="object" default_focus="1" class="oe_highlight"/>
+						<button string="الغاء" class="btn-primary" special="cancel"/>
+					</footer>
+				</form>
+			</field>
+		</record>
+
+		<record id="action_meqraa_student_internal_transfer" model="ir.actions.act_window">
+			<field name="name">نقل داخلي</field>
+			<field name="res_model">student.internal.transfer</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">form</field>
+			<field name="view_id" ref="form_meqraa_student_internal_transfer"/>
+			<field name="context">{'default_link_id': active_id}</field>
+			<field name="target">new</field>
+		</record>
+
+		<!--	meqraa episode  -->
+		<record id="mq_episode_search_view" model="ir.ui.view">
+            <field name="name">Episode Search View</field>
+            <field name="model">mk.episode</field>
+            <field name="arch" type="xml">
+                <search string="Episode ">
+                    <field name="name" string="Episode "/>
+                    <field name="academic_id"/>
+                    <field name="study_class_id"/>
+                    <field name="mosque_id"/>
+                    <field name="teacher_id"/>
+                    <field name="episode_type"/>
+                    
+                    <separator/>
+                    <filter name="for-men"   string="رجالي" domain="[('women_or_men','=','men')]"/>
+                    <filter name="for-women" string="نسائي" domain="[('women_or_men','=','women')]"/>
+                    <separator/>
+                    <filter name="subh"   string="الصبح"  domain="[('selected_period','=','subh')]"/>
+                    <filter name="zuhr"   string="الظهر"  domain="[('selected_period','=','zuhr')]"/>
+                    <filter name="aasr"   string="العصر"  domain="[('selected_period','=','aasr')]"/>
+                    <filter name="magreb" string="المغرب" domain="[('selected_period','=','magreb')]"/>
+                    <filter name="esha"   string="العشاء"  domain="[('selected_period','=','esha')]"/>
+                    <separator/>
+                    <separator/>
+                    <filter name="riwaya1" string="'رواية'حفص عن عاصم الكوفي"   domain="[('riwaya','=','riwaya1')]"/>
+                    <filter name="riwaya2" string="'رواية'قالون عن نافع المدني" domain="[('riwaya','=','riwaya2')]"/>
+                    <filter name="riwaya3" string="'رواية'ورش عن نافع المدني"   domain="[('riwaya','=','riwaya3')]"/>
+                    <separator/>
+                    <separator/>
+                    <filter name="draft"  string="مبدئي" domain="[('state','=','draft')]"/>
+                    <filter name="accept" string="مقبول" domain="[('state','=','accept')]"/>
+                    <filter name="done"   string="مجمد"  domain="[('state','=','done')]"/>
+                    <filter name="reject" string="مرفوض" domain="[('state','=','reject')]"/>
+                    <separator/>
+                    <filter name="unactive" string="Un Active" domain="[('active', '=',False)]"/>
+                    <group>
+	                    <filter name="academic_id"    string="العام الدراسي"    context="{'group_by': 'academic_id'}"/>
+	                    <filter name="study_class_id" string="الفصل الدراسي"    context="{'group_by': 'study_class_id'}"/>
+	                    <filter name="mosque_id"      string="المسجد"         context="{'group_by': 'mosque_id'}"/>
+	                    <filter name="teacher_id"     string="المعلم/ المعلمة"     context="{'group_by': 'teacher_id'}"/>
+	                    <filter name="episode_type"   string="نوع الحلقة"  context="{'group_by': 'episode_type'}"/>
+	                    <filter name="days_recitation" string="ايام التسميع"      context="{'group_by': 'days_recitation'}"/>
+	                    <filter name="riwaya"		   string="الرواية"           context="{'group_by': 'riwaya'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+        
+		<record id="mq_episode_tree_view" model="ir.ui.view">
+			<field name="name">Episode Tree View</field>
+               <field name="model">mk.episode</field>
+			<field name="arch" type="xml">
+				<tree string="الحلقات" delete="false">
+					<field name="name"/>
+					<field name="teacher_id"/>
+					<field name="riwaya"/>
+					<field name="days_recitation"/>
+					<field name="time_id"/>
+					<field name="women_or_men"/>
+				</tree>
+			</field>
+		</record>
+		
+		<record id="mq_episode_form_view" model="ir.ui.view">
+			<field name="name">Episode Form View Meqraa</field>
+			<field name="model">mk.episode</field>
+			<field name="arch" type="xml">
+				<form string="الحلقات">
+	                <header>
+						<button name="accept_validate" string="Validate" type="object" class="btn btn-sm oe_button" attrs="{'invisible':['|',('active','!=',True),('state', 'in',('accept','reject','done'))]}" groups="mk_meqraa.group_administration_meqraa"/>
+	                	<button name="reject_validate" string="reject"   type="object" class="btn btn-sm oe_button" attrs="{'invisible':['|',('active','!=',True),('state', 'in',('accept','reject','done'))]}" groups="mk_meqraa.group_administration_meqraa"/>
+	       				<button name="action_done" type="object" string="تجميد الحلقة" states="accept"/>
+	       				<button name="action_reopen" type="object" string="إعادة تفعيل الحلقة" states="done"/>
+	                	<field name="state" widget="statusbar" statusbar_visible="draft,accept,reject"/>
+	                </header>
+	                
+                   	<sheet>
+                        <div class="oe_button_box" name="button_box">
+<!--                           	<button name="toggle_active" type="object" groups="hr.group_hr_user" class="oe_stat_button" icon="fa-archive">-->
+<!--                               	<field name="active" widget="boolean_button" options='{"terminology": "archive"}'/>-->
+<!--                           	</button>-->
+                       	</div>
+                       	<group col="4">
+                            <h2><field name="name"  placeholder="Episode name" required="1"/></h2>
+                       	</group>
+                       	<group>
+                       		<group>
+                       			<field name="is_episode_meqraa" invisible="1"/>
+                       		</group>
+                       	</group>
+                       	<notebook>
+                           	<page string="episode Information">
+                               	<group>
+                               		<group>
+										<field name="active" invisible="1"/>
+                               			<field name="program_id" readonly="1" invisible="1"/>
+                               			<field name="teacher_id" options="{'no_open':1,'no_create':1}" attrs="{'readonly': ['|',('state','in',('reject','done')),('active','!=',True)]}" required="1"/>
+                                       	<field name="riwaya" required="1"/>
+                                       	<label for="women_or_men" style="font-weight: bold; width:200px"/>
+                                   		<field name="women_or_men" nolabel="1"  attrs="{'readonly': ['|',('state','in',('reject','done')),('active','!=',True)]}" widget="radio"/>
+                                   		<field name="days_recitation" required="1"/>
+                                   		<field name="time_id" required="1" attrs="{'readonly': ['|',('state','!=','draft'),('active','!=',True)]}"/>
+                                   	</group>
+                                   	<group>
+                                   		<field name="start_date" required="1" string="تاريخ البداية"  attrs="{'readonly': ['|',('state','in',('reject','done')),('active','!=',True)]}"/>
+                                   		<label for="expected_students"  style="font-weight: bold; width:200px"/>
+                                   		<field name="expected_students" nolabel="1" attrs="{'readonly': ['|',('state','in',('reject','done')),('active','!=',True)]}" readonly="0"/>
+                                   		<label for="current_students"  style="font-weight: bold; width:200px"/>
+                                   		<field name="current_students" nolabel="1" attrs="{'readonly': ['|',('state','in',('reject','done')),('active','!=',True)]}"/>
+                                   		<label for="unoccupied_no"     style="font-weight: bold; width:200px"/>
+                                   		<field name="unoccupied_no"    nolabel="1"  attrs="{'readonly': ['|',('state','in',('reject','done')),('active','!=',True)]}"/>
+                                   		<field name="error_register"   attrs="{'readonly': ['|',('state','in',('reject','done')),('active','!=',True)]}"/>
+                                   	</group>
+                               	</group>
+                   			</page>
+
+                   			<page string="work days" colspan="2">
+								<field name="episode_days" widget="many2many_checkboxes" options="{'no_open': True,'no_create': True}"/><!-- attrs="{'readonly': ['|',('state','in',('reject','done')),('active','!=',True)]}"/-->
+                   			</page>
+                   			<page string="Virtual room">
+		                   		<group>
+									<group>
+										<field name="virtual_room_id" options="{'no_open': True,'no_create': True}" attrs="{'readonly': ['|',('state','in',('reject','done')),('active','!=',True)]}"/>
+										<field name="room_day_ids" options="{'no_open': True,'no_create': True}" domain="[('id','in',episode_days)]" widget="many2many_checkboxes" attrs="{'readonly': ['|',('state','in',('reject','done')),('active','!=',True)]}"/>
+									</group>
+									<group>
+										<field name="time_from" attrs="{'readonly': ['|',('state','in',('reject','done')),('active','!=',True)]}"/>
+										<field name="time_to" attrs="{'readonly': ['|',('state','in',('reject','done')),('active','!=',True)]}"/>
+									</group>
+								</group>
+							</page>
+                   			<page string="Student List">
+		          				<group>
+		           				</group>
+		            			<field name="link_ids" string="accepted students">
+			              			<tree create="0" delete="0">
+			                			<field name="registeration_code"/>
+			                			<field name="student_id"/>
+			                			<field name="registeration_date"/>
+			                			<button name="%(mk_meqraa.action_meqraa_student_internal_transfer)d" string="نقل داخلي" type="action" groups="mk_meqraa.group_administration_meqraa"/>
+			                			<field name="action_done"/>
+			              			</tree>
+		            			</field>                               
+		        			</page>
+							<page string="جدولة الاختبارات">
+								<field name="day_schedule_test_ids" attrs="{'readonly': ['|',('state','in',('reject','done')),('active','!=',True)]}">
+									<tree>
+										<field name="date_test"/>
+										<field name="type_schedule"/>
+										<field name="period_schedule"/>
+										<field name="nbr_period"/>
+									</tree>
+									<form>
+										<group>
+											<group>
+												<field name="date_test" groups="mk_episode_management.edit_or_modify_episode"/>
+												<field name="type_schedule"   readonly="1"/>
+											</group>
+											<group>
+												<field name="period_schedule" readonly="1"/>
+												<field name="nbr_period"      readonly="1"/>
+											</group>
+										</group>
+									</form>
+									</field>
+		              		</page>
+               			</notebook>
+           			</sheet>
+					<div class="oe_chatter">
+						<field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+						<field name="message_ids" widget="mail_thread"/>
+					</div>
+				</form>
+			</field>
+			
+		</record>
+		
+		<record id="mq_episodes_action" model="ir.actions.act_window">
+			<field name="name">فترات الحلقات</field>
+			<field name="res_model">mk.episode</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+			<field name="view_ids" eval="[(5, 0, 0),
+					(0, 0, {'view_mode': 'tree', 'view_id': ref('mk_meqraa.mq_episode_tree_view')}),
+				    (0, 0, {'view_mode': 'form', 'view_id': ref('mk_meqraa.mq_episode_form_view')}),]"/>
+			<field name="domain">[('is_episode_meqraa','=', True)]</field>
+			<field name="context">{'default_is_episode_meqraa': True}</field>
+			<field name="search_view_id" ref="mk_meqraa.mq_episode_search_view" />
+		</record>
+
+		<!-- Quick AddMeqraa Student  -->
+        <record model="ir.ui.view" id="view_quick_add_meqraa_episode_tree">
+            <field name="name">quick.meqraa.episode.tree</field>
+            <field name="model">mk.episode</field>
+            <field name="arch" type="xml">
+                <tree delete="0" editable="top">
+                    <field name="is_episode_meqraa" invisible="1"/>
+                    <field name="name"            required="1"/>
+                    <field name="teacher_id"      required="1"/>
+                    <field name="riwaya"          required="1"/>
+                    <field name="women_or_men"    required="1"/>
+                    <field name="days_recitation" required="1"/>
+                    <field name="episode_days"    required="1" invisible="1"/>
+                    <field name="time_id"         required="1" options="{'no_create': 1, 'no_open':1}"/>
+					<field name="start_date"      required="1" string="تاريخ البداية"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="quick_add_meqraa_episode_action" model="ir.actions.act_window">
+            <field name="name">Quick Add Episode Student</field>
+            <field name="res_model">mk.episode</field>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="mk_meqraa.view_quick_add_meqraa_episode_tree"/>
+            <field name="context">{'is_episode_meqraa': True, 'default_is_episode_meqraa': True}</field>
+        </record>
+	</data>
+</odoo>
+

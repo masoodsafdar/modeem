@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	 <data>
+        <record id="virtual_room_tree_view" model="ir.ui.view">
+            <field name="name">Virtual room tree view</field>
+            <field name="model">mk.virtual_room</field>
+            <field name="arch" type="xml">
+                <tree delete="0" string="Virtual room">
+                	<field name="name" />
+                	<field name="type_room_id"/>
+                	<field name="room_objective"/>
+                	<field name="virtual_room_provider_id"/>
+                </tree>
+            </field>
+        </record>
+        
+	 	<record id="virtual_room_form_view" model="ir.ui.view">
+	          <field name="name">Virtual room form view</field>
+	          <field name="model">mk.virtual_room</field>
+	          <field name="arch" type="xml">
+	              <form string = "Virtual room">
+	              <header>
+					    <button name="action_confirm" string="Confirm" type="object" states="draft" class="oe_highlight"/>
+					    <button name="action_stopped" string="Stopped"   type="object" states="draft"/>
+					    <field name="state" widget="statusbar"/>
+					</header>
+					<sheet>
+						<group>
+							<group>
+								<field name="name"  	       attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+								<field name="type_room_id"     attrs="{'readonly': [('state', '!=', 'draft')]}" options="{'no_open':1,'no_create':1}"/>					
+			                	<field name="room_objective"   attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+			                	<field name="admin_link"       attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+			                	<field name="participant_link" attrs="{'readonly': [('state', '!=', 'draft')]}"/>								
+							</group> 
+							<group> 
+								<field name="virtual_room_subscription_id" attrs="{'readonly': [('state', '!=', 'draft')]}" options="{'no_open':1,'no_create':1}" string="الاشتراك"/>
+								<field name="mosque_id"                    attrs="{'readonly': [('state', '!=', 'draft')]}" options="{'no_open':1,'no_create':1}"/>
+			                	<field name="virtual_room_provider_id"     attrs="{'readonly': [('state', '!=', 'draft')]}" options="{'no_open':1,'no_create':1}"/>							
+								<field name="virtual_room_package_id"      attrs="{'readonly': [('state', '!=', 'draft')]}" options="{'no_open':1,'no_create':1}"/>
+								<field name="date_expiration"              attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+							</group> 
+						</group>
+						
+						
+					</sheet>                
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers" />
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+	              </form>
+	             </field>
+	         </record>
+	
+	        <record id="virtual_room_search_view" model="ir.ui.view">
+	            <field name="name">Virtual room search view</field>
+	            <field name="model">mk.virtual_room</field>
+	            <field name="arch" type="xml">
+	                <search string="Virtual room">
+	                    <field name="name"/>
+	                    <field name="virtual_room_provider_id"/>
+	                </search>
+	            </field>
+	        </record>
+	        
+	        <record id="action_virtual_room" model="ir.actions.act_window">
+	            <field name="name">Virtual room</field>
+	            <field name="res_model">mk.virtual_room</field>
+	            <field name="type">ir.actions.act_window</field> 
+	            <field name="view_mode">tree,form</field>
+	        </record>
+	
+	         <menuitem
+		         name="Virtual room"
+		         id="virtual_room_menu" 
+		         sequence="10" 
+		         parent="mk_virtual_room.virtual_room_basic_menu"
+		         action="action_virtual_room"/>
+
+
+    	<record id="episode_form_inherited_view" model="ir.ui.view">
+			<field name="name">Episode Form View</field>
+          	<field name="model">mk.episode</field>
+          	<field name="inherit_id" ref="mk_episode_management.mk_episode_form_view"/>
+      		<field name="arch" type="xml">
+		  	 <xpath expr='//page[4]' position='after'>
+					 <page string="Virtual room">
+						<group>
+							<group>
+								<field name="virtual_room_id" options="{'no_open': True,'no_create': True}" domain="[('mosque_id','=',mosque_id)]"                            attrs="{'readonly': ['|',('state','in',('reject','done')),('active','!=',True)]}"/>
+								<field name="room_day_ids"    options="{'no_open': True,'no_create': True}" domain="[('id','in',episode_days)]" widget="many2many_checkboxes" attrs="{'readonly': ['|',('state','in',('reject','done')),('active','!=',True)]}"/>
+							</group>
+							<group>
+								<field name="time_from" attrs="{'readonly': ['|',('state','in',('reject','done')),('active','!=',True)]}"/>
+								<field name="time_to"   attrs="{'readonly': ['|',('state','in',('reject','done')),('active','!=',True)]}"/>
+							</group>
+						</group>
+					</page>
+      			</xpath>
+			</field>
+		</record>
+	</data>
+</odoo>

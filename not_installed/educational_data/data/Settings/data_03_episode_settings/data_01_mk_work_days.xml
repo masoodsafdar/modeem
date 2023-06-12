@@ -1,0 +1,32 @@
+<odoo>
+    <data noupdate="1">
+        <record id="mk_work_days1" model="mk.work.days">
+            <field name="name">اﻷحد</field>
+            <field name="order">0</field>
+        </record>
+        <record id="mk_work_days2" model="mk.work.days">
+            <field name="name">اﻹثنين</field>
+            <field name="order">1</field>
+        </record>
+        <record id="mk_work_days3" model="mk.work.days">
+            <field name="name">الثلاثاء</field>
+            <field name="order">2</field>
+        </record>
+        <record id="mk_work_days4" model="mk.work.days">
+            <field name="name">اﻷربعاء</field>
+            <field name="order">3</field>
+        </record>
+        <record id="mk_work_days5" model="mk.work.days">
+            <field name="name">الخميس</field>
+            <field name="order">4</field>
+        </record>
+        <record id="mk_work_days6" model="mk.work.days">
+            <field name="name">الجمعة</field>
+            <field name="order">5</field>
+        </record>
+        <record id="mk_work_days7" model="mk.work.days">
+            <field name="name">السبت</field>
+            <field name="order">6</field>
+        </record>
+    </data>
+</odoo>

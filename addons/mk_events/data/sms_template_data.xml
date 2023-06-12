@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="1">
+		<record id="sms_template_event" model="mk.sms_template">
+		    <field name="name">تذكير</field>
+		    <field name="code">mk_send_reminder</field>
+		    <field name="sms_text">سيكون إجتماع val1 في يوم val2 عند الساعة val3</field>
+		</record>
+	</data>
+</openerp>

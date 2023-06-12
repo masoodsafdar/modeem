@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <report id="sale_order_report"
+            string="Sale Order report"
+            model="sale.order"
+            report_type="xlsx"
+            name="students_motivation.report_sale_order"
+            file="students_motivation.report_sale_order"/>
+</odoo>

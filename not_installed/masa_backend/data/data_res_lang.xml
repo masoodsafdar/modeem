@@ -1,0 +1,8 @@
+<odoo>
+    <data>
+        <record id="base.lang_ar_SY" model="res.lang">
+            <field name="active" eval="True"/>
+            <field name="direction">rtl</field>
+        </record>
+    </data>
+</odoo>

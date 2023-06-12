@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+
+<data noupdate="1">
+
+        <!-- Category Mk Open Programs Data -->
+        <record model="ir.module.category" id="module_category_open_programs">
+            <field name="name">MK open programs Data</field>
+            <field name="sequence">50</field>
+        </record>
+
+        <!-- Group Mk Open Programs  Data    -->
+
+        <record id="group_read_level_program" model="res.groups">
+            <field name="name">MK read level program</field>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+            <field name="category_id" ref="module_category_open_programs" />
+        </record>
+       <record id="group_read_level_program_close" model="res.groups">
+            <field name="name">MK read level program close</field>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+            <field name="category_id" ref="module_category_open_programs" />
+        </record>
+
+
+        <record id="group_Program_settings" model="res.groups">
+            <field name="name">MK Program settings</field>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+            <field name="category_id" ref="module_category_open_programs" />
+        </record>
+
+        <record id="group_create_open_program_association" model="res.groups">
+            <field name="name">MK create open program association</field>
+            <field name="implied_ids" eval="[(4, ref('group_read_level_program'))]"/>
+            <field name="category_id" ref="module_category_open_programs" />
+        </record>
+
+
+        <record id="group_create_close_program_association" model="res.groups">
+            <field name="name">MK create close program association</field>
+            <field name="implied_ids" eval="[(4, ref('group_read_level_program_close'))]"/>
+            <field name="category_id" ref="module_category_open_programs" />
+        </record>
+
+////////////////////////////////////////////////////////////////////
+        <record id="group_create_open_center_program" model="res.groups">
+            <field name="name">MK create open center program</field>
+            <field name="implied_ids" eval="[(4, ref('group_read_level_program'))]"/>
+            <field name="category_id" ref="module_category_open_programs" />
+        </record>
+//////////////////////////////////////////////////////////////////////////
+        <record id="group_create_close_center_program" model="res.groups">
+            <field name="name">MK create close center program</field>
+            <field name="implied_ids" eval="[(4, ref('group_read_level_program_close'))]"/>
+            <field name="category_id" ref="module_category_open_programs" />
+        </record>
+
+        <record id="group_create_open_program_mosque" model="res.groups">
+            <field name="name">MK create open program  mosque</field>
+            <field name="implied_ids" eval="[(4, ref('group_read_level_program'))]"/>
+            <field name="category_id" ref="module_category_open_programs" />
+        </record>
+
+        <record id="group_create_close_program_mosque" model="res.groups">
+            <field name="name">MK create close program  mosque</field>
+            <field name="implied_ids" eval="[(4, ref('group_read_level_program_close'))]"/>
+            <field name="category_id" ref="module_category_open_programs" />
+        </record>
+
+        <record id="group_edit_level_program" model="res.groups">
+            <field name="name">MK edit level program</field>
+            <field name="implied_ids" eval="[(4, ref('group_read_level_program'))]"/>
+            <field name="category_id" ref="module_category_open_programs" />
+        </record>
+
+        <record id="group_edit_level_program_close" model="res.groups">
+            <field name="name">MK edit level program close</field>
+            <field name="implied_ids" eval="[(4, ref('group_read_level_program_close'))]"/>
+            <field name="category_id" ref="module_category_open_programs" />
+        </record>
+
+
+
+        <record id="group_delete_program" model="res.groups">
+            <field name="name">MK delete</field>
+            <field name="implied_ids" eval="[(4, ref('group_read_level_program'))]"/>
+            <field name="category_id" ref="module_category_open_programs" />
+        </record>
+
+
+        <record id="group_delete_program_close" model="res.groups">
+            <field name="name">MK delete close</field>
+            <field name="implied_ids" eval="[(4, ref('group_read_level_program_close'))]"/>
+            <field name="category_id" ref="module_category_open_programs" />
+        </record>
+
+
+        <record id="group_activate_program" model="res.groups">
+            <field name="name">MK activate  program</field>
+            <field name="implied_ids" eval="[(4, ref('group_read_level_program'))]"/>
+            <field name="category_id" ref="module_category_open_programs" />
+        </record>
+
+        <record id="group_activate_program_close" model="res.groups">
+            <field name="name">MK activate  program close</field>
+            <field name="implied_ids" eval="[(4, ref('group_read_level_program_close'))]"/>
+            <field name="category_id" ref="module_category_open_programs" />
+        </record>
+
+     <!-- Mk Program Management Category -->//////////////////////////////////
+        <record model="ir.module.category" id="module_category_curriculum_open_selected">
+            <field name="name">Mk open or selected curriculum</field>
+            <field name="sequence">5</field>
+        </record>
+
+        <record id="read_curriculum_level" model="res.groups">
+            <field name="name">read on the curriculum level</field>
+            <field name="category_id" ref="module_category_curriculum_open_selected"/>
+        </record>
+        <record id="read_curriculum_level_close" model="res.groups">
+            <field name="name">read on close the curriculum level</field>
+            <field name="category_id" ref="module_category_curriculum_open_selected"/>
+        </record>
+
+        <record id="create_an_open_curriculum_association_level" model="res.groups">
+            <field name="name">create an open curriculum to association level</field>
+            <field name="implied_ids" eval="[(4, ref('read_curriculum_level'))]"/>
+            <field name="category_id" ref="module_category_curriculum_open_selected"/>
+        </record>
+
+        <record id="mk_episode_path_read_group" model="res.groups">
+            <field name="name"> Read episode path</field>
+            <field name="category_id" ref="module_category_curriculum_open_selected"/>
+        </record>
+
+         <record id="mk_episode_path_write_group" model="res.groups">
+            <field name="name"> Write on episode path</field>
+             <field name="implied_ids" eval="[(4, ref('mk_episode_path_read_group'))]"/>
+            <field name="category_id" ref="module_category_curriculum_open_selected"/>
+        </record>
+
+        <record id="create_an_close_curriculum_association_level" model="res.groups">
+            <field name="name">create an close curriculum to association level</field>
+            <field name="implied_ids" eval="[(4, ref('read_curriculum_level_close'))]"/>
+            <field name="category_id" ref="module_category_curriculum_open_selected"/>
+        </record>
+
+        <!--  select all program management group -->
+        <record id="select_all_programs_program_management" model="res.groups">
+            <field name="name">Select All programs</field>
+            <field name="implied_ids" eval="[(4, ref('group_Program_settings')),
+                (4, ref('group_create_open_program_association')),
+                (4, ref('group_create_open_center_program')),
+                (4, ref('group_create_open_program_mosque')),
+                (4, ref('group_edit_level_program')),
+                (4, ref('group_delete_program')),
+                (4, ref('group_activate_program')),
+		 (4, ref('group_read_level_program_close')),
+		 (4, ref('group_create_close_program_association')),
+		 (4, ref('group_create_close_center_program')),
+		 (4, ref('group_create_close_program_mosque')),
+		 (4, ref('group_edit_level_program_close')),
+		 (4, ref('group_delete_program_close')),
+		 (4, ref('mk_episode_path_read_group')),
+		 (4, ref('mk_episode_path_write_group')),
+		 (4, ref('group_activate_program_close'))]"/>
+            <field name="category_id" ref="module_category_open_programs" />
+        </record>
+
+//////////////////////////////////////////////////////////////////////////////////
+       <!-- <record id="create_an_open_curriculum_center_level" model="res.groups">
+            <field name="name">create an open curriculum to center level</field>
+            <field name="implied_ids" eval="[(4, ref('read_curriculum_level'))]"/>
+            <field name="category_id" ref="module_category_curriculum_open_selected"/>
+        </record> 
+///////////////////////////////////////////////////////////////////////////////////
+        <record id="create_an_close_curriculum_center_level" model="res.groups">
+            <field name="name">create an close curriculum to center level</field>
+            <field name="implied_ids" eval="[(4, ref('read_curriculum_level_close'))]"/>
+            <field name="category_id" ref="module_category_curriculum_open_selected"/>
+        </record>
+
+
+
+        <record id="create_an_open_curriculum_mosque_level" model="res.groups">
+            <field name="name">create an open program on the mosque level</field>
+            <field name="implied_ids" eval="[(4, ref('read_curriculum_level'))]"/>
+            <field name="category_id" ref="module_category_curriculum_open_selected"/>
+        </record>
+
+        <record id="create_an_close_curriculum_mosque_level" model="res.groups">
+            <field name="name">create an close program on the mosque level</field>
+            <field name="implied_ids" eval="[(4, ref('read_curriculum_level_close'))]"/>
+            <field name="category_id" ref="module_category_curriculum_open_selected"/>
+        </record>
+
+        <record id="create_an_selected_curriculum_association_level" model="res.groups">
+            <field name="name">create an selected curriculum to association level</field>
+            <field name="implied_ids" eval="[(4, ref('read_curriculum_level'))]"/>
+            <field name="category_id" ref="module_category_curriculum_open_selected"/>
+        </record>
+
+        <record id="create_an_selected_curriculum_association_level_close" model="res.groups">
+            <field name="name">create an  close selected curriculum to association level</field>
+            <field name="implied_ids" eval="[(4, ref('read_curriculum_level_close'))]"/>
+            <field name="category_id" ref="module_category_curriculum_open_selected"/>
+        </record>
+
+        <record id="create_an_selected_curriculum_center_level" model="res.groups">
+            <field name="name">create an selected curriculum to center level</field>
+            <field name="implied_ids" eval="[(4, ref('read_curriculum_level'))]"/>
+            <field name="category_id" ref="module_category_curriculum_open_selected"/>
+        </record>
+
+        <record id="create_an_selected_curriculum_center_level_close" model="res.groups">
+            <field name="name">create an  closeselected curriculum to center level</field>
+            <field name="implied_ids" eval="[(4, ref('read_curriculum_level_close'))]"/>
+            <field name="category_id" ref="module_category_curriculum_open_selected"/>
+        </record>
+
+        <record id="create_an_selected_curriculum_mosque_level" model="res.groups">
+            <field name="name">create an selected program on the mosque level</field>
+            <field name="implied_ids" eval="[(4, ref('read_curriculum_level'))]"/>
+            <field name="category_id" ref="module_category_curriculum_open_selected"/>
+        </record>
+
+        <record id="create_an_selected_curriculum_mosque_level_close" model="res.groups">
+            <field name="name">create an selected program  clsoe on the mosque level</field>
+            <field name="implied_ids" eval="[(4, ref('read_curriculum_level_close'))]"/>
+            <field name="category_id" ref="module_category_curriculum_open_selected"/>
+        </record>
+
+-->
+        <record id="update_curriculum_level" model="res.groups">
+            <field name="name">update on the curriculum level</field>
+            <field name="implied_ids" eval="[(4, ref('read_curriculum_level')),(4,ref('mk_episode_path_write_group'))]"/>
+            <field name="category_id" ref="module_category_curriculum_open_selected"/>
+        </record>
+
+        <record id="update_curriculum_level_close" model="res.groups">
+            <field name="name">update on the curriculum close level</field>
+            <field name="implied_ids" eval="[(4, ref('read_curriculum_level_close'))]"/>
+            <field name="category_id" ref="module_category_curriculum_open_selected"/>
+        </record>
+
+
+        <record id="delete" model="res.groups">
+            <field name="name">delete</field>
+            <field name="implied_ids" eval="[(4, ref('read_curriculum_level'))]"/>
+            <field name="category_id" ref="module_category_curriculum_open_selected"/>
+        </record>
+
+        <record id="delete_close" model="res.groups">
+            <field name="name">delete close</field>
+            <field name="implied_ids" eval="[(4, ref('read_curriculum_level_close'))]"/>
+            <field name="category_id" ref="module_category_curriculum_open_selected"/>
+        </record>
+
+        <!--  select all program management group
+(4, ref('create_an_selected_curriculum_association_level')),
+(4, ref('create_an_selected_curriculum_center_level')),
+(4, ref('create_an_selected_curriculum_mosque_level')),
+(4, ref('create_an_selected_curriculum_association_level_close')),
+(4, ref('create_an_selected_curriculum_mosque_level_close')),
+
+ -->
+        <record id="select_all_program_management_open_selected" model="res.groups">
+            <field name="name">Select All</field>
+<!--
+ (4, ref('create_an_open_curriculum_center_level')),
+ (4, ref('create_an_open_curriculum_mosque_level')),
+(4, ref('create_an_close_curriculum_center_level')),
+(4, ref('create_an_close_curriculum_mosque_level')),-->
+            <field name="implied_ids" eval="[               
+                (4, ref('create_an_open_curriculum_association_level')),
+                (4, ref('update_curriculum_level')),(4, ref('delete')),
+
+                (4, ref('create_an_close_curriculum_association_level')),
+                (4, ref('update_curriculum_level_close')),
+                (4, ref('delete_close')),(4, ref('delete'))]"/>
+            <field name="category_id" ref="module_category_curriculum_open_selected"/>
+        </record>
+
+
+    </data>
+</openerp>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

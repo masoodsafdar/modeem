@@ -1,0 +1,25 @@
+<odoo>
+    <data noupdate="1">
+        <record id="mk_hr_department1" model="hr.department">
+            <field name="manager_id" ref="hr_employee12"/>
+        </record>
+        <record id="mk_hr_department2" model="hr.department">
+            <field name="manager_id" ref="hr_employee31"/>
+        </record>
+        <record id="mk_hr_department3" model="hr.department">
+            <field name="manager_id" ref="hr_employee13"/>
+        </record>
+        <record id="mk_hr_department4" model="hr.department">
+            <field name="manager_id" ref="hr_employee32"/>
+        </record>
+        <record id="mk_hr_department5" model="hr.department">
+            <field name="manager_id" ref="hr_employee11"/>
+        </record>
+        <record id="mk_hr_department6" model="hr.department">
+            <field name="manager_id" ref="hr_employee15"/>
+        </record>
+        <record id="mk_hr_department7" model="hr.department">
+            <field name="manager_id" ref="hr_employee14"/>
+        </record>
+    </data>
+</odoo>

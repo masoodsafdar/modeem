@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <data>
+        <record id="mk_clearance_tree_view" model="ir.ui.view">
+			<field name="name">student clearance Tree View</field>
+            <field name="model">mk.clearance</field>
+            <field name="arch" type="xml">
+                <tree delete="0" string="student clearance" decoration-info="state in ['draft','request']" decoration-success="state in ['accept']">
+           			<field name="id_student"/>
+           			<field name="name_student"/>
+           			<field name="name_mosque"/>
+           			<field name="name_mosque_to"/>
+                	<field name="year"           options="{'no_open':1,'no_create':1}"/>
+                	<field name="study_class_id" options="{'no_open':1,'no_create':1}"/>
+                	<field name="date_request"/>
+                	<field name="state" string="الحالة"/>
+                </tree>
+            </field>
+        </record>
+            
+		<record model="ir.ui.view" id="edit_holiday_new">
+			<field name="name">Student clearance</field>
+            <field name="model">mk.clearance</field>
+            <field name="arch" type="xml">
+				<form string="Student clearance">
+					<header>
+						<button string="إرسال الطلب" name="action_request" states="draft"   type="object" groups="mk_student_managment.confirm_clearance_request" class="oe_highlight"/>
+                        
+                        <field name="state" widget="statusbar" statusbar_visible="draft,request,accept,reject" statusbar_colors='{"accept":"blue","reject":"red"}'/>
+                    </header>
+                    
+                	<sheet>
+                   		<group>
+                    		<group>
+								<field name="id_student"/>
+                    			<field name="name_student"/>
+                    			<field name="name_mosque"/>
+                    			<field name="mosque_to_id"   attrs="{'invisible': [('state','!=','draft')]}" options="{'no_create':1,'no_open':1}"/>
+                    			<field name="name_mosque_to" attrs="{'invisible': [('state','=','draft')]}"  required="1"/>
+                        	</group>
+                        	<group>
+                            	<field name="year"           options="{'no_open':1,'no_create':1}"/>
+                            	<field name="study_class_id" options="{'no_open':1,'no_create':1}" readonly="1"/>
+                            	<field name="date_request"   readonly="1"/>
+                            	<field name="student"        options="{'no_create':1,'no_open':1}" invisible="1"/>
+                            	<field name="mosque_id"      options="{'no_create':1,'no_open':1}" invisible="1"/>
+                            	<field name="user_id"        options="{'no_create':1,'no_open':1}" invisible="1"/>	                            	
+                        	</group>                    		
+                   		</group>                           
+                    </sheet>
+                    
+					<div class="oe_chatter">
+						<field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+						<field name="message_ids" widget="mail_thread"/>
+					</div>                    
+                </form>                 
+            </field>
+        </record>
+        
+		<record model="ir.ui.view" id="request_clearance_form">
+			<field name="name">عرض إخلاء طرف</field>
+            <field name="model">mk.clearance</field>
+			<field name="priority" eval="15"/>
+            <field name="arch" type="xml">
+				<form string="Student clearance" create="0" edit="0">
+					<header>
+						<button string="تأكيد" name="action_accept" states="request" type="object" groups="mk_student_managment.confirm_clearance_request" class="oe_highlight"/>                        
+                        <button string="رفض"   name="action_reject" states="request" type="object" groups="mk_student_managment.confirm_clearance_request"/>
+                        
+                        <field name="state" widget="statusbar" statusbar_visible="draft,request,accept,reject" statusbar_colors='{"accept":"blue","reject":"red"}'/>
+                    </header>
+                    
+                	<sheet>
+                   		<group>
+                    		<group>
+                    			<field name="id_student" readonly="1" required="1"/>
+                    			<field name="name_student"/>
+                    			<field name="name_mosque"/>
+                    			<field name="name_mosque_to"/>	                    				                    			
+                        	</group>
+                        	<group>
+                            	<field name="year"           options="{'no_open':1,'no_create':1}"/>
+                            	<field name="study_class_id" options="{'no_open':1,'no_create':1}"/>
+                            	<field name="date_request"   readonly="1"/>
+                            	<field name="student"        options="{'no_create':1,'no_open':1}" invisible="1"/>
+                            	<field name="mosque_id"      options="{'no_create':1,'no_open':1}" invisible="1"/>
+                            	<field name="mosque_to_id"   options="{'no_create':1,'no_open':1}" invisible="1"/>
+                            	<field name="user_id"        options="{'no_create':1,'no_open':1}" invisible="1"/>	                            	
+                        	</group>                    		
+                   		</group>
+                    </sheet>
+                    
+					<div class="oe_chatter">
+						<field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+						<field name="message_ids" widget="mail_thread"/>
+					</div>                    
+                </form>                 
+            </field>
+        </record>        
+		
+		<record id="mk_clearance_search_view" model="ir.ui.view">
+			<field name="name">clearance Search View</field>
+            <field name="model">mk.clearance</field>
+            <field name="arch" type="xml">
+				<search string="Student prepare">
+					<field name="id_student"/>
+           			<field name="name_student"/>
+           			<field name="name_mosque"/>
+           			               		 
+              	  	<field name="student"/>
+              	  	<field name="mosque_id"/> 
+              	  	<field name="mosque_to_id"/>
+              	  	<field name="year"/> 
+              	  	<field name="study_class_id"/>
+  			 
+	                 <filter string="مبدئي"       name="draft"   domain="[('state', '=','draft')]"/>
+	                 <filter string="إنتظار الرد" name="request" domain="[('state', '=','request')]"/>
+	                 <filter string="قبول"        name="accept"  domain="[('state', '=','accept')]"/>
+	                 <filter string="رفض"         name="reject"  domain="[('state', '=','reject')]"/>
+	                 
+	                 <group expand="0" string="Group By">
+		                     <filter name="state"          string="الحالة"              context="{'group_by': 'state'}"/>
+		                     <filter name="id_student"     string="رقم الهوية / الاقامة" context="{'group_by': 'name_student'}"/>
+		                     <filter name="name_student"   string="اسم الطالب"          context="{'group_by': 'name_student'}"/>
+		                     <filter name="name_mosque"    string="من المسجد"     		context="{'group_by': 'name_mosque'}"/>
+		                     <filter name="name_mosque_to" string="إلى المسجد"    		context="{'group_by': 'name_mosque_to'}"/>
+		                     <filter name="year"           string="العام الدراسي" 		context="{'group_by': 'year'}"/>
+		                     <filter name="study_class_id" string="الفصل الدراسي" 		context="{'group_by': 'study_class_id'}"/>
+		             </group>    
+				</search>
+            </field>
+        </record>
+        
+		<record id="mk_clearance_request_action" model="ir.actions.act_window">
+            <field name="name">طلبات إخلاء الطرف</field>
+            <field name="res_model">mk.clearance</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('user_id','=',uid),('is_change_admin_mosque','=',False)]</field>
+            <field name="context">{'form_view_ref': 'mk_student_managment.edit_holiday_new'}</field>
+        </record>
+
+		<menuitem name="طلبات إخلاء الطرف" id="mk_clearance_request_menu" sequence="8" parent="manage_student_menu" action="mk_clearance_request_action" groups="read_clearance_request,create_clearance_request,confirm_clearance_request,deny_clearance_request" />
+		
+		<record id="action_mk_clearance_request" model="ir.actions.act_window">
+            <field name="name">عروض إخلاء الطرف</field>
+            <field name="res_model">mk.clearance</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">['|',('user_id','!=',uid),('is_same_admin_mosque','=',True),('state','!=','draft')]</field>
+            <field name="context">{'form_view_ref': 'mk_student_managment.request_clearance_form'}</field>
+        </record>
+
+		<menuitem name="عروض إخلاء الطرف" id="menu_mk_clearance_request" sequence="8" parent="manage_student_menu" action="action_mk_clearance_request" groups="read_clearance_request,create_clearance_request,confirm_clearance_request,deny_clearance_request" />		
+
+    </data>  
+</odoo>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+<record id="res_config_settings_maqraa_form" model="ir.ui.view">
+		<field name="name">res.config.settings.maqraa.form</field>
+		<field name="model">res.config.settings</field>
+		<field name="inherit_id" ref="base.res_config_settings_view_form" />
+		<field name="arch" type="xml">
+			<xpath expr="//div[hasclass('settings')]" position="inside">
+				<div class="app_settings_block" data-string="Maqraa-CE"
+					string="Maqraa Configuration" data-key="maqraa_base"
+					id="maqraa_core_setting">
+					<div id="course_configuration">
+					<h2 id="Course Configuration">BBB Configuration</h2>
+					<div class="row mt16 o_settings_container"
+						title="Specify the url for integration bbb">
+						<div class="col-12 col-lg-6 o_setting_box">
+							<div class="o_setting_right_pane">
+								<label for="bigbluebutton_url"/>
+								<field name="bigbluebutton_url" widget="url"/>
+								<div class="text-muted">
+									Specify the url for integration bbb.
+								</div>
+							</div>
+						</div>
+					</div>
+	                    <div class="row mt16 o_settings_container"
+	                        title="Specify the secret for integration bbb">
+	                        <div class="col-12 col-lg-6 o_setting_box">
+	                            <div class="o_setting_right_pane">
+	                                <label for="bigbluebutton_secret" />
+	                                <field name="bigbluebutton_secret"/>
+	                                <div class="text-muted">
+	                                   Specify the secret for integration bbb
+	                                </div>
+	                            </div>
+	                        </div>
+	                    </div>
+					</div>                  
+				</div>
+			</xpath>
+		</field>
+	</record>
+
+	<record id="maqraa_base_config_settings_action"
+		model="ir.actions.act_window">
+		<field name="name">Settings</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">res.config.settings</field>
+		<field name="view_id" ref="res_config_settings_maqraa_form" />
+		<field name="view_mode">form</field>
+		<field name="target">inline</field>
+		<field name="context">{'module' : 'mk_meqraa'}</field>
+	</record>
+
+</odoo>

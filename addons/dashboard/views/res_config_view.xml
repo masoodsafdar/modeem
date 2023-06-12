@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record id="dashboard_config_settings" model="ir.ui.view">
+		<field name="name">Dashboard settings</field>
+		<field name="model">dashboard.settings</field>
+		<field name="arch" type="xml">
+			<form create="false" edit="true" string="Configure Car Sales"
+				class="oe_form_configuration" name="dashboard_settingsm">
+				<header>
+					<button name="%(dashboard_action_view)d" type="action"
+						string="Dashboard" class="btn btn-default fa fa-cog"/>
+				</header>
+				<sheet>
+					<separator string="Panels"/>
+					<div style="color: grey;">
+						<h4>Icon picker:</h4>
+						<input type="text" class="input1 input"/>
+					</div>
+					<field name="line_ids">
+						<tree editable="bottom">
+							<field name="name"/>
+							<field name="model_id"/>
+							<field name="type" required="1"/>
+							<field name="field_id"
+								domain="[('model_id','=',model_id),('ttype','in',['monetary','float','integer'])]"/>
+							<field name="filter"/>
+							<field name="color"/>
+							<field name="icon"/>
+							<field name="display"/>
+							<field name="groupby"/>
+							<field name="group_id" attrs="{'readonly':[('groupby','=',False)]}" domain="[('model_id','=',model_id),('ttype','=','many2one')]"/>
+						</tree>
+					</field>
+					<separator string="Charts"/>
+					<field name="chart_ids">
+						<tree editable="bottom">
+							<field name="sequence"/>
+							<field name="display_type"/>
+							<field name="name"/>
+							<field name="chart_model_id"/>
+							<field name="type" required="1"/>
+							<field name="chart_measure_field_id"
+								domain="[('model_id','=',chart_model_id),('ttype','in',['monetary','float','integer'])]"/>
+							<field name="chart_date_field_id"/>
+							<field name="filter"/>
+							<field name="display"/>
+						</tree>
+					</field>
+					<script src="/dashboard/static/src/js/simple-iconpicker.js"/>
+					<script src="/dashboard/static/src/js/custom.js"/>
+				</sheet>
+			</form>
+		</field>
+	</record>
+	<record id="action_dashboard_config" model="ir.actions.act_window">
+		<field name="name">Configure dashboard</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">dashboard.settings</field>
+		<field name="view_mode">form</field>
+		<field name="target">current</field>
+	</record>
+</odoo>

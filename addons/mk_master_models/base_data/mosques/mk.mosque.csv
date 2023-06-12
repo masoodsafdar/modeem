@@ -1,0 +1,8 @@
+id,name,center_department_id/id,city_id/id,area_id/id,district_id/id,latitude,longitude,categ_id/id
+10126,الحوامي - مجمع خيركم,mk_master_models.dep_106,mk_master_models.City_1,mk_master_models.area_1,mk_master_models.dis_199,0,0,mk_master_models.Cat_3
+10127,ابن منيع,mk_master_models.dep_106,mk_master_models.City_1,mk_master_models.area_1,mk_master_models.dis_199,0,0,mk_master_models.Cat_3
+10219,التيسير,mk_master_models.dep_106,mk_master_models.City_1,mk_master_models.area_1,mk_master_models.dis_198,0,0,mk_master_models.Cat_3
+10691,عبدالله البصير,mk_master_models.dep_106,mk_master_models.City_1,mk_master_models.area_1,mk_master_models.dis_77,0,0,mk_master_models.Cat_3
+11118,الصابرات مسائي,mk_master_models.dep_106,mk_master_models.City_1,mk_master_models.area_1,mk_master_models.dis_114,0,0,mk_master_models.Cat_4
+11471,زينب بنت علي مسائي,mk_master_models.dep_106,mk_master_models.City_1,mk_master_models.area_1,mk_master_models.dis_198,0,0,mk_master_models.Cat_4
+600627,السمو مسائي,mk_master_models.dep_106,mk_master_models.City_1,mk_master_models.area_1,mk_master_models.dis_77,0,0,mk_master_models.Cat_4

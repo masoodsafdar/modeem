@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<openerp>
+		<data>
+			<record id="contest_fields_form_view" model="ir.ui.view">
+			    <field name= "name">contest fields form</field>
+			    <field name= "model">mk.contenst.fields</field>
+			    <field name= "arch"  type="xml">
+					<form>
+						<sheet>
+							<group>
+								<group>
+									<field name="name" />
+								</group>
+							</group>
+							<notebook>
+								<page>
+									<field name="field_item_ids">
+										<tree editable="top">
+											<field name="name" />
+										</tree>
+									</field>
+								</page>
+							</notebook>
+						</sheet>
+					</form>
+			    </field>
+	      </record>    
+            
+       <record id="contests_fields_action" model="ir.actions.act_window">
+			<field name="name">contests fields action</field>
+            <field name="res_model">mk.contenst.fields</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+		</record>
+		
+        <menuitem
+              id="contests_fields_menu"
+              name="contests fields"
+              action="contests_fields_action"
+              parent="config_menu"
+              sequence="1"
+              groups='write_contest_fields_group'
+              
+         />	
+	 </data>
+</openerp>
+
+
+
+
+
+
+
+
+                
+          
+
+
+

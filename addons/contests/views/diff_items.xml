@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<openerp>
+		<data>
+		<record id="contest_diff_items_form_view" model="ir.ui.view">
+			    <field name= "name">contest diff items form</field>
+			    <field name= "model">contest.diff.items</field>
+			    <field name= "arch"  type="xml"> 
+			    	<form>
+			    	<sheet>
+			    		<group>
+			    			<group>
+			    				<field name="name"/>
+			    				<field name="contest_id" required='1'/>
+
+			    			</group>
+			    		</group>
+			    	</sheet>
+			   		</form>
+			    </field>
+		</record>    
+            
+        <record id="contests_diff_items_action" model="ir.actions.act_window">
+			<field name="name">contests diff items</field>
+            <field name="res_model">contest.diff.items</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+		</record>
+
+
+        <!--menuitem
+              id="contests_diff_items_menu"
+              name="contests diff items"
+              action="contests_diff_items_action"
+              parent="config_menu"
+              groups="read_contest_diff_items_group"
+              sequence="1"
+              
+         /-->	
+	 </data>
+</openerp>

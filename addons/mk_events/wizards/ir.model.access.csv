@@ -1,0 +1,12 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+event_registerations,access event registeration model,mk_events.model_event_registrations,base.group_user,1,1,1,1
+event_event_user,access mk_program_model,mk_events.model_event_event,base.group_user,1,1,1,1
+hr_employee_user,mk_test_appreciation_model,hr.model_hr_employee,base.group_user,1,0,0,0
+event_invite_user,access mk_program_model,mk_events.model_event_invite,base.group_user,1,1,1,1
+event_attendee_user,access mk_program_model,mk_events.model_event_attendee,base.group_user,1,1,1,1
+event_guest_user,access event_guest_model,mk_events.model_event_guest,base.group_user,1,1,1,1
+event_status_user,access model_event_status,mk_events.model_event_status,base.group_user,1,0,0,0
+event_type_user,Access model_event_type,mk_events.model_event_type,base.group_user,1,0,0,0
+event_type_mail_user,Access model_event_type_mail,event.model_event_type_mail,base.group_user,1,0,0,0
+mk_sms_template_event_user,Access model_mk_sms_template,mk_master_models.model_mk_sms_template,base.group_user,1,0,0,0
+hr_job_event_user,Access model_hr_job,mk_master_models.model_hr_job,base.group_user,1,0,0,0

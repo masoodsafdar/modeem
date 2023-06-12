@@ -1,0 +1,67 @@
+<odoo>
+    <data>
+    
+ 	<record id="mk_plan_share_form_view" model="ir.ui.view">
+          <field name="name">Plan Share Form View</field>
+          <field name="model">mk.plan.share</field>
+          <field name="arch" type="xml">
+              <form string = "Plan Share">
+		  <header>
+			<button name="do_confirm" string="Confirm" type="object" state="draft" class="oe_highlight"/>
+			<field name="state" widget="statusbar" statusbar_visible="draft,confirmed"/>
+		  </header>
+		  <sheet>
+			 <group>
+			 	<group>
+			 		<field name="mosque_id" required="1" options="{'no_create': True,'no_open': True,}"/>
+			 		<field name="plan_id"   required="1"/>
+			 	</group>
+			 	<group>
+			 		<field name="center_id" required="1" options="{'no_create': True,'no_open': True,}"/>
+			 		<field name="date"      required="1"/>
+			 	</group>
+			 </group>
+	  	</sheet>
+              </form>
+             </field>
+         </record>
+
+        <record id="mk_plan_share_tree_view" model="ir.ui.view">
+            <field name="name">Plan Share Tree View</field>
+            <field name="model">mk.plan.share</field>
+            <field name="arch" type="xml">
+                <tree delete="0" string="Plan Share">
+                	<field name="mosque_id" options="{'no_create': True,'no_open': True,}"/>
+	 				<field name="plan_id"   options="{'no_create': True,'no_open': True,}"/>
+	 				<field name="center_id" options="{'no_create': True,'no_open': True,}"/>
+	 				<field name="date"/>
+	 				<field name="state"/>
+                </tree>
+            </field>
+        </record>
+        
+        <record id="mk_plan_share_search_view" model="ir.ui.view">
+            <field name="name">Plan Share Search View</field>
+            <field name="model">mk.plan.share</field>
+            <field name="arch" type="xml">
+                <search string="Plan Share">
+
+                </search>
+            </field>
+        </record>
+        
+        <record id="mk_plan_share_action" model="ir.actions.act_window">
+            <field name="name">Plan Share</field>
+            <field name="res_model">mk.plan.share</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+            <field name="search_view_id" ref="mk_plan_share_search_view"/>
+        </record>
+
+	<!--menuitem name="Plan Share" id="mk_plan_share_menu" sequence="5" parent="mk_programs_menu" action="mk_plan_share_action"/-->    
+
+    </data>  
+</odoo>

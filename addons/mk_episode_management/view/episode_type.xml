@@ -1,0 +1,47 @@
+<odoo>
+    <data>
+        <record id="mk_episode_type_view_update" model="ir.ui.view">
+            <field name="model">mk.episode_type</field>
+            <field name="inherit_id" ref="mk_master_models.mk_episode_type_form_view"/>
+            <field name="arch" type="xml">
+                <field name="students_no" position="after">
+	                <field name="minimum"/>
+	                <field name="parts_no"/>
+                </field>
+                
+                <field name="active" position="before">
+	                <field name="type_categ_ids" widget="many2many_tags" string="المراحل الدراسية"/>
+                </field>  
+                
+				<xpath expr="//group[1]" position="after">
+                    <notebook>
+                        <page string="أعمال الحلقة" name="page_task">
+                            <field name="type_task_ids">
+                                <tree editable="bottom">
+                                    <field name="name"/>
+                                    <field name="active"/>
+                                    <field name="memorize"/>
+                                    <field name="minimum_audit"/>
+                                    <field name="maximum_audit"/>
+                                    <field name="reading"/>
+                                </tree>
+                            </field>
+                        </page> 
+                        
+                        <page string="الأداء">
+                            <field name="performance">
+                                <tree editable="top">
+                                    <field name="name"/>
+                                    <field name="min_degree"/>
+                                    <field name="max_degree"/>
+                                    <field name="rate"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </xpath>                          
+            </field>
+        </record>
+
+    </data>
+</odoo>

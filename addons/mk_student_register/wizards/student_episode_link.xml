@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <data>
+
+<record id="episode_students_link_wizerd" model="ir.ui.view">
+                <field name="name">episode student link</field>
+                <field name="model">episode.student.link</field>
+                <field name="arch" type="xml">
+                <form string="Link students at period">
+                        <group>
+                                <field name="students_ids">
+                                    <tree delete="1">
+                                    <field name="display_name" style="width:400px;"/>
+                                    <field name="mosque_id"/>
+                                    </tree>
+                                </field>
+                        <group>
+                            <field name="episode_id" readonly="1"/>
+                            <field name="flag" invisible="0"/> 
+                        </group>
+                    </group>
+
+                    <group attrs="{'invisible':[('flag','=',False)]}"> 
+                        <field name="program_type"/>
+                        <field name="episode_current_program" string="program name" domain="[('program_type', '=', program_type)]" options="{'no_create': 1, 'no_create_edit': 1}" widget="selection"/>
+                        
+                        <field name="almanhaj" options="{'no_create': 1, 'no_create_edit': 1}" widget="selection"/>
+                        <field name="is_tlawa" invisible="1"/>
+                        <field name="part_id" attrs="{'invisible':['|',('is_tlawa','=',False),
+                                                                       ('program_type','=','close')]}" widget="many2many_tags"
+                            					options="{'no_create': 1, 'no_open': 1}"/>
+                    </group>        
+
+                    <footer>
+                        <button name="ok" type="object" string="OK" class="oe_highlight"/>
+                        <button special="cancel" string="Cancel" class="oe_link"/>
+                    </footer>
+                </form>
+                </field>
+</record>
+
+
+<record id="episode_student_actoin" model="ir.actions.act_window">
+                <field name="name">link</field>
+                <field name="res_model">episode.student.link</field>
+                <field name="view_type">form</field>
+                <field name="view_mode">form</field>
+                <field name="view_id" ref="episode_students_link_wizerd"/>
+                <field name="target">new</field>
+</record>
+
+</data>
+</odoo>

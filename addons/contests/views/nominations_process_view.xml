@@ -1,0 +1,467 @@
+<odoo>
+    <data>
+    
+    	<!--======================================================
+    	                       Nomination students
+    	    ====================================================== -->
+    	    
+        <record id="nomination_student_tree_view" model="ir.ui.view">
+            <field name="name">nominations process Tree View</field>
+            <field name="model">nomination.process</field>
+            <field name="arch" type="xml">
+                <tree delete="0" string="طلبات ترشيح طلاب الجمعية" colors="red:state=='draft';blue:state=='accept'">
+			 		<field name="name"/>
+			 		<field name="mosque"/>
+			 		<field name="episode"/>
+			 		<field name="nomination_type"/>
+		        	<field name="nomation_date"/>
+		        	<field name="out_source"/>
+		        	<field name="contest"/>
+		        	<field name="state"/>
+		        </tree>
+            </field>
+        </record>
+
+ 		<record id="nomination_student_form_view" model="ir.ui.view">
+			<field name="name">nominations process form view</field>
+          	<field name="model">nomination.process</field>
+          	<field name="arch" type="xml">
+	          	<form string="طلب ترشيح الطالب">
+		        	<header>
+						<field  name="state" widget="statusbar" statusbar_visible="draft,accept_mosque,accept_center,initial_accept,accept"/>
+												
+						<button name="accept_mosque"  string="تصديق المسجد" type="object" states="draft"          groups="contests.accept_or_deny_mosque_group" class="oe_highlight"/>
+						<button name="reject_mosque"  string="رفض"          type="object" states="draft"          groups="contests.accept_or_deny_mosque_group"/>
+						
+						<button name="accept_center"  string="تصديق المركز" type="object" states="accept_mosque"  groups="contests.accept_reject_center_level_button_group" class="oe_highlight"/>
+						<button name="reject_center"  string="رفض"          type="object" states="accept_mosque"  groups="contests.accept_reject_center_level_button_group"/>
+												
+				    	<button name="initial_accept" string="ترشيح اولي "  type="object" states="accept_center"  groups="contests.accept_reject_organization_level_button_group" class="oe_highlight"/>
+		            	<button name="accept"         string="ترشيح نهائي"  type="object" states="initial_accept" groups="contests.accept_reject_organization_level_button_group" class="oe_highlight"/>
+		            	
+		            	<button name="act_draft"      string="إعادة تفعيل"  type="object" states="reject"         groups="contests.accept_reject_organization_level_button_group" class="oe_highlight"/>
+			     	</header>
+			     	
+			  		<sheet>
+			    		<group>
+				  			<group>				  			
+				  				<field name="nomation_date"/>
+								<field name="mosque" options="{'no_create': True, 'no_open': True}" required="1"/>
+								<field name="episode"           domain="[('mosque_id','=',mosque)]"   options="{'no_create': True, 'no_open': True}" required="1"/>
+								<field name="candidate_student" domain="[('episode_id','=',episode)]" options="{'no_create': True, 'no_open': True}" string="الطالب" required="1"/>
+				  				<field name="identity_num" required="1"/>
+				  				<field name="nationality" options="{'no_create': True, 'no_open': True}" required="1"/>
+				  				<field name="identity" widget="many2many_binary"/>
+								<field name="nomination_type" invisible="1"/>
+				  			</group>
+				  			<group>
+						  		<field name="student_phone" attrs="{'invisible':[('nomination_type','!=','student')]}" required="1"/>
+								<field name="parent_phone"  attrs="{'invisible':[('nomination_type','!=','student')]}"/>						  		
+						  		<field name="email" required="1"/>
+						  		<field name="birth_place"/>
+						  		<field name="birthdate" required="1"/>								
+								<label for="age"/>
+			                    <div>
+			                         <field name="age" class="oe_inline"/>
+			                         <span class="oe_inline"> سنة</span>
+			                    </div>
+			                    <field name="agree_terms"/>
+			 				</group>				  			
+			    		</group>
+
+			    		<group>
+			 				<group>
+			 					<field name="is_quran"/>
+			 					<field name="contest" domain="[('is_quran','=', is_quran)]" options="{'no_create': True, 'no_open': True}" required="1"/>
+			 				</group>
+				 			<group>
+					  			<field name="branch" attrs="{'invisible':[('is_quran','=',False)],'required':[('is_quran','=',True)]}" options="{'no_create': True, 'no_open': True}"/>
+					  			<field name="track"  attrs="{'invisible':[('is_quran','=',False)]}" readonly="1"/>
+					  		</group>
+			    		</group>
+			    		
+						<notebook>
+							<page string="المشاركات السابقة">
+								<field name="previous_contests">
+									<tree>
+										<field name="name"/>
+									</tree>
+								</field>
+							</page>
+						</notebook>
+		  	  		</sheet>
+	          	</form>
+			</field>
+		</record>
+				        
+        <record id="nomination_process_search_view" model="ir.ui.view">
+			<field name="name">nomination process search view</field>
+            <field name="model">nomination.process</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="mosque"/>
+                    <field name="episode"/>
+                    <field name="candidate_student"/>
+                    <field name="parent_phone"/>
+                    <field name="student_phone"/>
+                    <field name="email"/>
+                    <field name="identity_num"/>
+                    <field name="identity"/>
+                    <field name="birthdate"/>
+                    <field name="birth_place"/>
+                    <field name="nationality"/>
+                    <field name="age"/>
+                    <field name="contest"/>
+                    <field name="branch"/>
+                    
+                    <filter string="قراني"                name="is_quran"       domain="[('is_quran', '=',True)]"/>
+                    <separator/>
+                    <filter string="تعهد بصحة البيانات"   name="agree_terms"    domain="[('agree_terms', '=',True)]"/>
+                    <separator/>
+                    <filter string="تصاعدي"               name="up"             domain="[('track', '=','up')]"/>
+				    <filter string="تنازلي"               name="down"           domain="[('track', '=','down')]"/>
+				    <separator/>
+                    <filter string="طالب"                 name="student"        domain="[('nomination_type', '=','student')]"/>
+                    <filter string="محكم"                 name="ref"            domain="[('nomination_type', '=','ref')]"/>
+                    <filter string="اداري"                name="manager"        domain="[('nomination_type', '=','manager')]"/>
+				    
+					<group expand="0" string="Group By">
+	                    <filter name="mosque"            string="المسجد/ المدرسة" context="{'group_by': 'mosque'}"/> 
+	                    <filter name="episode"           string="حلقة"            context="{'group_by': 'episode'}"/>
+	                    <filter name="candidate_student" string="إسم الطالب"      context="{'group_by': 'candidate_student'}"/> 
+	                    <filter name="branch"            string="الفرع"           context="{'group_by': 'branch'}"/> 
+	                    <filter name="contest"           string="المسابقة"        context="{'group_by': 'contest'}"/>    
+                	</group>
+			 </search>
+            </field>
+        </record>
+        
+        <record id="action_nominations_student" model="ir.actions.act_window">
+            <field name="name">طلبات ترشيح طلاب الجمعية</field>
+            <field name="res_model">nomination.process</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('nomination_type','=','student'),('out_source','=',False)]</field>
+            <field name="context">{'form_view_ref': 'contests.nomination_student_form_view',
+                                   'tree_view_ref': 'contests.nomination_student_tree_view',
+                                   'default_nomination_type': 'student',
+                                   'default_out_source': False}</field>            
+        </record>
+
+        <menuitem id="nominations_process_menu" name="nominations process"     parent="contests"                 sequence="0"/>
+        <menuitem id="menu_nominations_student" name="طلبات ترشيح طلاب الجمعية" parent="nominations_process_menu" sequence="1" action="action_nominations_student"/>          
+        
+    	<!--======================================================
+    	               Nomination students out source
+    	    ====================================================== -->    
+    	    
+        <record id="nominations_student_outsource_tree_view" model="ir.ui.view">
+            <field name="name">nominations process Tree View</field>
+            <field name="model">nomination.process</field>
+            <field name="arch" type="xml">
+                <tree delete="0" string="طلبات ترشيح طلاب من خارج الجمعية" colors="red:state=='draft';blue:state=='accept'">
+			 		<field name="name"/>
+			 		<field name="ong_name"/>
+			 		<field name="mosque_outsource"/>
+			 		<field name="episode_outsource"/>
+			 		<field name="nomination_type"/>
+		        	<field name="nomation_date"/>
+		        	<field name="out_source"/>
+		        	<field name="contest"/>
+		        	<field name="state"/>
+		        </tree>
+            </field>
+        </record>    	    
+    
+ 		<record id="nominations_student_outsource_form_view" model="ir.ui.view">
+			<field name="name">nominations process out source form view</field>
+          	<field name="model">nomination.process</field>
+          	<field name="arch" type="xml">
+	          	<form string="طلب ترشيح الطالب">
+		        	<header>
+						<field  name="state" widget="statusbar" statusbar_visible="draft,accept_admin,accept,initial_accept"/>
+												
+						<button name="action_accept_admin" string="تصديق الإدارة" type="object" states="draft"          groups="contests.accept_reject_organization_level_button_group" class="oe_highlight"/>
+				    	<button name="initial_accept"      string="ترشيح اولي "  type="object" states="accept_admin"   groups="contests.accept_reject_organization_level_button_group" class="oe_highlight"/>
+		            	<button name="accept"              string="ترشيح نهائي"  type="object" states="initial_accept" groups="contests.accept_reject_organization_level_button_group" class="oe_highlight"/>
+		            	
+		            	<button name="reject"              string="رفض"          type="object" states="draft,accept_admin" groups="contests.accept_reject_organization_level_button_group"/>
+		            	<button name="act_draft"           string="إعادة تفعيل"  type="object" states="reject"             groups="contests.accept_reject_organization_level_button_group" class="oe_highlight"/>
+			     	</header>
+			     	
+			  		<sheet>
+			    		<group>
+				  			<group>				  			
+				  				<field name="nomation_date" string="التاريخ"/>
+				  				<field name="ong_name"            required="1"/>
+								<field name="mosque_outsource"    required="1"/>
+								<field name="episode_outsource"   required="1"/>
+								<field name="candidate_outsource" required="1" string="الطالب"/>
+				  				<field name="identity_num"        required="1"/>
+				  				<field name="nationality"         required="1" options="{'no_create': True, 'no_open': True}"/>
+				  				<field name="identity" widget="many2many_binary"/>				  				
+								<field name="nomination_type" invisible="1"/>
+				  			</group>
+				  			<group>
+						  		<field name="student_phone" attrs="{'invisible':[('nomination_type','!=','student')]}" required="1"/>
+								<field name="parent_phone"  attrs="{'invisible':[('nomination_type','!=','student')]}"/>						  		
+						  		<field name="email" required="1"/>	
+						  		<field name="birth_place"/>
+						  		<field name="birthdate" required="1"/>								
+								<label for="age"/>
+			                    <div>
+			                         <field name="age" class="oe_inline"/>
+			                         <span class="oe_inline"> سنة</span>
+			                    </div>
+			                    <field name="agree_terms"/>
+			 				</group>				  			
+			    		</group>
+
+			    		<group>
+			 				<group>
+			 					<field name="is_quran"/>
+			 					<field name="contest" domain="[('is_quran','=', is_quran)]" options="{'no_create': True, 'no_open': True}"/>
+			 				</group>
+				 			<group>
+					  			<field name="branch" attrs="{'invisible':[('is_quran','=',False)],'required':[('is_quran','=',True)]}" options="{'no_create': True, 'no_open': True}"/>
+					  			<field name="track"  attrs="{'invisible':[('is_quran','=',False)]}"/>
+					  		</group>
+			    		</group>
+			    								    		
+						<notebook>
+							<page string="المشاركات السابقة">
+								<field name="previous_contests">
+									<tree>
+										<field name="name" />
+									</tree>
+								</field>
+							</page>
+						</notebook>
+		  	  		</sheet>
+	          	</form>
+			</field>
+		</record>    
+
+        <record id="nominations_process_student_out_source_action" model="ir.actions.act_window">
+            <field name="name">طلبات ترشيح طلاب من خارج الجمعية</field>
+            <field name="res_model">nomination.process</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('nomination_type','=','student'),('out_source','=',True)]</field>
+            <field name="context">{'form_view_ref': 'contests.nominations_student_outsource_form_view',
+                                   'tree_view_ref': 'contests.nominations_student_outsource_tree_view',
+                                   'default_nomination_type': 'student',
+                                   'default_out_source': True}</field>            
+        </record>
+
+        <menuitem id="menu_nominations_student_outsource" name="طلبات ترشيح طلاب من خارج الجمعية" parent="nominations_process_menu" sequence="2" action="nominations_process_student_out_source_action"/>
+        
+    	<!--======================================================
+    	                       Nomination Refrees
+    	    ====================================================== --> 
+    	    
+        <record id="nominations_refree_tree_view" model="ir.ui.view">
+            <field name="name">nominations process Tree View</field>
+            <field name="model">nomination.process</field>
+            <field name="arch" type="xml">
+                <tree delete="0" string="طلبات ترشيح محكم من الجمعية" colors="red:state=='draft';blue:state=='accept'">
+			 		<field name="name" string="المحكم"/>
+			 		<field name="mosque"/>
+			 		<field name="nomination_type"/>
+		        	<field name="nomation_date"/>
+		        	<field name="out_source"/>
+		        	<field name="contest"/>
+		        	<field name="state"/>
+		        </tree>
+            </field>
+        </record>
+    
+ 		<record id="nominations_refree_form_view" model="ir.ui.view">
+			<field name="name">nominations process form view</field>
+          	<field name="model">nomination.process</field>
+          	<field name="arch" type="xml">
+	          	<form string="طلب ترشيح محكم">
+		        	<header>
+						<field  name="state" widget="statusbar" statusbar_visible="draft,accept_mosque,accept_center,initial_accept,accept"/>
+												
+						<button name="accept_mosque"  string="تصديق المسجد" type="object" states="draft"          groups="contests.accept_or_deny_mosque_group" class="oe_highlight"/>
+						<button name="reject_mosque"  string="رفض"          type="object" states="draft"          groups="contests.accept_or_deny_mosque_group"/>
+						
+						<button name="accept_center"  string="تصديق المركز" type="object" states="accept_mosque"  groups="contests.accept_reject_center_level_button_group" class="oe_highlight"/>
+						<button name="reject_center"  string="رفض"          type="object" states="accept_mosque"  groups="contests.accept_reject_center_level_button_group"/>
+												
+				    	<button name="initial_accept" string="ترشيح اولي "  type="object" states="accept_center"  groups="contests.accept_reject_organization_level_button_group" class="oe_highlight"/>
+		            	<button name="accept"         string="ترشيح نهائي"  type="object" states="initial_accept" groups="contests.accept_reject_organization_level_button_group" class="oe_highlight"/>
+		            	
+		            	<button name="act_draft"      string="إعادة تفعيل"  type="object" states="reject"         groups="contests.accept_reject_organization_level_button_group" class="oe_highlight"/>
+			     	</header>
+			     	
+			  		<sheet>
+			    		<group>
+				  			<group>
+				  				<field name="nomation_date"/>				  				
+				  				<field name="mosque"       required="1"/>
+				  				<field name="candidate_hr" required="1" string="المحكم"/>
+				  				<field name="identity_num" required="1"/>
+				  				<field name="nationality"  required="1" options="{'no_create': True, 'no_open': True}"/>
+				  				<field name="identity" widget="many2many_binary"/>
+								<field name="nomination_type" invisible="1"/>
+				  			</group>
+				  			<group>						  		
+						  		<field name="email" required="1"/>	
+						  		<field name="birth_place"/>
+						  		<field name="birthdate" required="1"/>								
+								<label for="age"/>
+			                    <div>
+			                         <field name="age" class="oe_inline"/>
+			                         <span class="oe_inline"> سنة</span>
+			                    </div>
+			                    <field name="degree" required="1" options="{'no_create': True, 'no_open': True}"/>
+			                    <field name="agree_terms"/>
+			 				</group>				  			
+			    		</group>
+
+			    		<group>
+			 				<group>
+			 					<field name="is_quran"/>
+			 					<field name="contest" required="1" domain="[('is_quran','=', is_quran)]" options="{'no_create': True, 'no_open': True}"/>
+			 				</group>
+				 			<group>
+					  		</group>
+			    		</group>
+			    		
+						<notebook>
+							<page string="المشاركات السابقة">
+								<field name="previous_contests">
+									<tree>
+										<field name="name"/>
+									</tree>
+								</field>
+							</page>
+						</notebook>
+		  	  		</sheet>
+	          	</form>
+			</field>
+		</record>        
+		
+        <record id="action_nominations_refree" model="ir.actions.act_window">
+            <field name="name">طلبات ترشيح محكم من الجمعية</field>
+            <field name="res_model">nomination.process</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('nomination_type','=','ref'),('out_source','=',False)]</field>
+            <field name="context">{'form_view_ref': 'contests.nominations_refree_form_view',
+                                   'tree_view_ref': 'contests.nominations_refree_tree_view',
+                                   'default_nomination_type': 'ref',
+                                   'default_out_source': False}</field>                                   
+                                               
+        </record>
+
+        <menuitem id="menu_nominations_refree" name="طلبات ترشيح محكم من الجمعية" parent="nominations_process_menu" sequence="3" action="action_nominations_refree"/>
+        
+    	<!--======================================================
+    	                  Nomination Refrees out source
+    	    ====================================================== -->    
+    	    
+        <record id="nominations_refree_outsource_tree_view" model="ir.ui.view">
+            <field name="name">nominations process Tree View</field>
+            <field name="model">nomination.process</field>
+            <field name="arch" type="xml">
+                <tree delete="0" string="طلبات ترشيح محكم من خارج الجمعية" colors="red:state=='draft';blue:state=='accept'">
+			 		<field name="name" string="المحكم"/>
+			 		<field name="ong_name"/>
+			 		<field name="mosque_outsource"/>
+			 		<field name="nomination_type"/>
+		        	<field name="nomation_date"/>
+		        	<field name="out_source"/>
+		        	<field name="contest"/>
+		        	<field name="state"/>
+		        </tree>
+            </field>
+        </record>    	    
+    
+ 		<record id="nominations_refree_outsource_form_view" model="ir.ui.view">
+			<field name="name">nominations process form view</field>
+          	<field name="model">nomination.process</field>
+          	<field name="arch" type="xml">
+	          	<form string="طلب ترشيح محكم">
+		        	<header>
+						<field  name="state" widget="statusbar" statusbar_visible="draft,accept_admin,initial_accept,accept"/>
+
+						<button name="action_accept_admin" string="تصديق الإدارة" type="object" states="draft"          groups="contests.accept_reject_organization_level_button_group" class="oe_highlight"/>
+				    	<button name="initial_accept"      string="ترشيح اولي "  type="object" states="accept_admin"   groups="contests.accept_reject_organization_level_button_group" class="oe_highlight"/>
+		            	<button name="accept"              string="ترشيح نهائي"  type="object" states="initial_accept" groups="contests.accept_reject_organization_level_button_group" class="oe_highlight"/>
+		            	
+		            	<button name="reject"              string="رفض"          type="object" states="draft,accept_admin" groups="contests.accept_reject_organization_level_button_group"/>
+		            	<button name="act_draft"           string="إعادة تفعيل"  type="object" states="reject"             groups="contests.accept_reject_organization_level_button_group" class="oe_highlight"/>
+			     	</header>
+			     	
+			  		<sheet>
+			    		<group>
+				  			<group>				  			
+				  				<field name="nomation_date"/>
+				  				<field name="ong_name"            required="1"/>
+				  				<field name="mosque_outsource"    required="1"/>
+				  				<field name="candidate_outsource" required="1" string="المحكم"/>
+				  				<field name="identity_num"        required="1"/>
+				  				<field name="nationality"         required="1" options="{'no_create': True, 'no_open': True}"/>
+				  				<field name="identity" widget="many2many_binary"/>				  				
+								<field name="nomination_type" invisible="1"/>
+				  			</group>
+				  			<group>						  		
+						  		<field name="email" required="1"/>
+						  		<field name="birth_place"/>
+						  		<field name="birthdate" required="1"/>
+								<label for="age"/>
+			                    <div>
+			                         <field name="age" class="oe_inline"/>
+			                         <span class="oe_inline"> سنة</span>
+			                    </div>
+			                    <field name="degree" options="{'no_create': True, 'no_open': True}"/>
+			                    <field name="agree_terms"/>
+			 				</group>				  			
+			    		</group>
+
+			    		<group>
+			 				<group>
+			 					<field name="is_quran"/>
+			 					<field name="contest" required="1" domain="[('is_quran','=', is_quran)]" options="{'no_create': True, 'no_open': True}"/>
+			 				</group>
+				 			<group>
+					  		</group>
+			    		</group>
+			    		
+						<notebook>
+							<page string="المشاركات السابقة">
+								<field name="previous_contests">
+									<tree>
+										<field name="name"/>
+									</tree>
+								</field>
+							</page>
+						</notebook>
+		  	  		</sheet>
+	          	</form>
+			</field>
+		</record>        
+		
+        <record id="action_nominations_refree_outsource" model="ir.actions.act_window">
+            <field name="name">طلبات ترشيح محكم من خارج الجمعية</field>
+            <field name="res_model">nomination.process</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('nomination_type','=','ref'),('out_source','=',True)]</field>
+            <field name="context">{'form_view_ref': 'contests.nominations_refree_outsource_form_view',
+                                   'tree_view_ref': 'contests.nominations_refree_outsource_tree_view',
+                                   'default_nomination_type': 'ref',
+                                   'default_out_source': True}</field>                                               
+        </record>
+
+        <menuitem id="menu_nominations_refree_outsource" name="طلبات ترشيح محكم من خارج الجمعية" parent="nominations_process_menu" sequence="4" action="action_nominations_refree_outsource"/>        		
+
+    </data>  
+</odoo>

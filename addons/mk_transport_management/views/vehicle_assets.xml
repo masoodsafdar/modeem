@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  <data>
+
+	<record id="vehicle_asset_form_view" model="ir.ui.view">
+		<field name="name">vehicle asset form</field>
+		<field name="model">mk.vehicle.asset</field>
+		<field name="arch" type="xml">
+			<form string = "vehicle asset">
+			   <sheet>
+			   	  <group>
+			   	  	<group><field name="name"  required="1"/></group>
+			  	
+			      </group>
+				</sheet>
+			</form>
+	    </field>
+	</record>
+
+	<record id="vehicle_asset_tree_view" model="ir.ui.view">
+		<field name="name">vehicle asset tree</field>
+		<field name="model">mk.vehicle.asset</field>
+		<field name="arch" type="xml">
+			<tree>
+			  <field name="name"/>
+	
+			</tree>
+		</field>
+	</record>
+
+	<record id="vehicle_asset_action" model="ir.actions.act_window">
+		<field name="name">vehicle asset</field>
+		<field name="res_model">mk.vehicle.asset</field>
+		<field name="view_type">form</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+
+	<menuitem
+       id="vehicle_asset_menu"
+       name="Vehicle asset"
+       action="vehicle_asset_action"
+       parent="transport_config_main_menu"
+       groups="vehicle_asset_manage"/>	
+  </data>
+</odoo>

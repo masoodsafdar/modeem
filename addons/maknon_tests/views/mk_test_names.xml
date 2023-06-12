@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<openerp>
+		<data>
+
+			<record id="test_names_form_view" model="ir.ui.view">
+			    <field name= "name"> </field>
+			    <field name= "model">mk.test.names</field>
+			    <field name= "arch"  type="xml"> 
+			         <form  create="1" delete="1" edit="1">
+			             <sheet>
+			             	<group>
+			             		<group>
+			             			<field name="name" required="1"/>
+			             			<field name="type_test"/>
+			             			<field name="parent_test" domain="[('test_group','=',test_group)]"/>
+			             		</group>			             	
+			             		<group>
+			             			<field name="academic_id"    options="{'no_open':1,'no_create':1}"/>
+			             			<field name="study_class_id" options="{'no_open':1,'no_create':1}"/>
+									<field name="test_group"/>
+									<field name="job_id" attrs="{'invisible':[('test_group','=','student')]}" widget="many2many_tags" options="{'no_open':1,'no_create':1}"/>			             			
+			             		</group>
+			             	</group>
+			             	
+			             	<notebook>
+			             		<page string="branches">
+			             			<field name="branches" readonly="1">
+			             				<tree>
+											<field name="name"/>
+											<field name="branch_group"/>
+											<field name="trackk"/>
+											<field name="from_surah" options="{'no_create': True,'no_open': True,}"/>
+											<field name="to_surah"   options="{'no_create': True,'no_open': True,}"/>
+											<field name="parts_num"/>
+											<field name="duration"/>
+											<field name="maximum_degree"/>
+											<field name="minumim_degree"/>
+			             				</tree>
+			             			</field>
+			             		</page>
+			             	</notebook>
+			             </sheet>
+						 <div class="oe_chatter">
+							<field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+							<field name="message_ids" widget="mail_thread"/>
+						</div>
+			         </form>
+			    </field>
+			 </record>
+
+			<record id="test_names_tree" model="ir.ui.view">
+			      <field name="name"> </field>
+			      <field name="model">mk.test.names</field>
+			      <field name="arch" type="xml">
+			        <tree>
+			        	<field name="academic_id"    options="{'no_open':1,'no_create':1}"/>
+						<field name="study_class_id" options="{'no_open':1,'no_create':1}"/>
+						<field name="name"/>
+						<field name="parent_test"/>
+						<field name="test_group"/>
+						<field name="type_test"/>
+				    </tree>
+			   </field>
+			 </record>
+        
+        <record id="mk_test_names_search_view" model="ir.ui.view">
+            <field name="name">test names Search View</field>
+            <field name="model">mk.test.names</field>
+            <field name="arch" type="xml">
+                <search>
+                	<field name="name"/>
+	                <field name="academic_id"/>
+	                <field name="study_class_id"/>
+	                <field name="parent_test"/>
+ 
+			        <filter string="الخاتمين"   name="final"       domain="[('type_test', '=','final')]"/>
+				    <filter string="الأجزاء"     name="parts"       domain="[('type_test', '=','parts')]"/>
+				    <filter string="مسابقات"    name="contest"     domain="[('type_test', '=','contest')]"/>
+				    <separator/>
+				    <filter string="طلاب"        name="student"     domain="[('test_group', '=','student')]"/>
+				    <filter string="الموظف"     name="employee"    domain="[('test_group', '=','employee')]"/>
+				    <separator/>
+                    <filter string="المسابقات"  name="is_contest"  domain="[('is_contest','=',True)]"/>
+				 
+                	<group expand="0" string="Group By">
+	                    <filter name="group_surah"   string="سورة"           context="{'group_by': 'surah_id'}"/> 
+	                    <filter name="group_surah"   string="الجزء"          context="{'group_by': 'part_id'}"/>
+	                    <filter name="group_job_id"  string="الوظيفة"        context="{'group_by': 'job_id'}"/>    
+                	</group>
+                </search>
+            </field>
+        </record>
+        
+			<record id="test_names_action" model="ir.actions.act_window">
+				<field name="name">Company Tests</field>
+				<field name="res_model">mk.test.names</field>
+				<field name="type">ir.actions.act_window</field>
+				<field name="view_type">form</field>
+				<field name="view_mode">tree,form</field>
+				<!--<field name="domain">[]</field>
+				<field name="context">{}</field>
+				<field name="search_view_id" ref="mk_contests_regulatoins_preparation_search_view"/> -->
+		    </record>
+
+		   <menuitem
+              id="test_names_setting"
+              name="Company Tests"
+              action="test_names_action"
+              parent="maknon_tests.test_processes_main_menu"
+              sequence="0"
+              groups="maknon_tests.group_types_tests_read,maknon_tests.group_assembly_tests_full"
+            />	
+
+</data>
+</openerp>

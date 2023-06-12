@@ -1,0 +1,39 @@
+<openerp>
+    <data>
+        <record id="mk_incentive_form_view" model="ir.ui.view">
+            <field name="name">incentive Form View</field>
+            <field name="model">mk.incentive</field>
+            <field name="arch" type="xml">
+                <form string="Incentive">
+                    <sheet>
+                            <group>
+                                <field name="name"/>
+                            </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="mk_incentive_tree_view" model="ir.ui.view">
+            <field name="name">incentive Tree View</field>
+            <field name="model">mk.incentive</field>
+            <field name="arch" type="xml">
+                <tree string="Incentive">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="mk_incentive_action" model="ir.actions.act_window">
+            <field name="name">Incentive</field>
+            <field name="res_model">mk.incentive</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+        </record>
+
+        <menuitem id="mk_incentives_menu" name="Incentives" parent="mk_productivity_configuration_menu" action="mk_incentive_action" sequence="1"/>
+
+    </data>
+</openerp>

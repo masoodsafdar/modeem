@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+
+<odoo>
+  <record id="student_prepare_report_form" model="ir.ui.view">
+    <field name="name">Student Prepare Report</field>
+    <field name="model">student.prepare.report</field>
+    <field name="arch" type="xml">
+      <form>
+        <group>
+            <field name="episode_id" invisible="1"/>
+            <field name="student_id" domain="[('episode_id', '=', episode_id)]" options="{'no_create': 1, 'no_create_edit': 1}"/>
+        </group>
+        <footer>
+          <button name="print_report" type="object" string="Print" class="oe_highlight"/>
+          <button string="Cancel" class="btn-secondary" special="cancel"/>
+        </footer>
+      </form>
+    </field>
+  </record>
+
+  <act_window name="تقرير تحضير الطالب"
+    id="student_prepare_report_action"
+    res_model="student.prepare.report"
+    src_model="mk.episode"
+    view_mode="form"
+    target="new"
+      context="{
+        'default_episode_id': active_id,
+        'form_view_ref': 'mk_student_managment.student_prepare_report_form'
+      }"
+  />
+
+</odoo>

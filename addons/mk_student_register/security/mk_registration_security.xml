@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- Category MK Master Data -->
+        <record model="ir.module.category" id="module_category_registration">
+            <field name="name">MK Student Registration</field>
+            <field name="sequence">52</field>
+        </record>
+
+        <!-- Group users MK Master Data -->
+        <record id="group_registration_admin" model="res.groups">
+            <field name="name">Registration administrator</field>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+            <field name="category_id" ref="module_category_registration" />
+        </record>
+
+        
+    </data>
+</odoo>
+
+        

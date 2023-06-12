@@ -1,0 +1,94 @@
+<odoo>
+    <data>
+ 	  <record id="mk_transport_management_form_view" model="ir.ui.view">
+           <field name="name">Transport Management Form View</field>
+           <field name="model">mk.transport.management</field>
+           <field name="arch" type="xml">
+              <form string = "Transport Management">
+	   	           <header>
+	   	             <button name="act_confirm" string="Confirm" type="object" states="draft,biding" class="oe_highlight" groups="mk_transport_management.accept_reject_transport_management"/>
+                     <button name="act_cancle" string="Cancle" type="object" states="draft,biding"  class="oe_highlight" groups="mk_transport_management.accept_reject_transport_management"/>
+                     <field name="state"  widget="statusbar" statusbar_visible="draft,confirm,cancle"/>
+	   	           </header>
+	   	           <sheet>
+	   	              <group>
+                        <group>
+	   	              	 <!--  <field name="student_id" required="1"/> 
+	   	              	   <field name="period" required="1"/>-->
+                         <field name="request_id" required="1"/>
+                          <field name="trans_period" />
+                       </group>
+                        <group>
+                            <field name="days_ids"  widget="many2many_tags"  required="1"/>
+                            <field name="transport_type" required="1"/>
+                         </group>
+	   	               </group>
+                       <notebook>
+                           <page string="Vehcile Details">
+                               <group>
+                                  <group>
+                                    <field name="vehicle_id" required="1"/>
+                                    <field name="driver_phone" required="1"/>
+                                   <!-- <field name="seates_no" required="1"/>-->
+                                   </group>
+                                   <group>
+                                      <field name="driver_id" required="1"/>
+                                      <field name="supervisor_id" required="1"/>
+                                    </group>
+                                </group>
+                               <!-- <h1><label string="Cansling Reason"/></h1>-->
+                                <field name="cancling_reason" attrs="{'invisible':[('state','!=','cancle')]}"/>
+                           </page>
+                           <page string="Payment">
+                                <group>
+                                    <group>
+                                        <field name="fees" required="1"/>
+                                       <!-- <field name="asset_id" required="1"/>-->
+                                    </group>
+                                    <group>
+                                        <field name="deduct"/>
+                                    </group>
+                                </group>
+                            </page>
+                       </notebook>
+	     	        </sheet>
+
+
+
+              </form>
+            </field>
+        </record>
+
+        <record id="mk_transport_management_tree_view" model="ir.ui.view">
+            <field name="name">Transport Management Tree View</field>
+            <field name="model">mk.transport.management</field>
+            <field name="arch" type="xml">
+                <tree delete="0" string="Transport Management">
+                	<field name="request_id"/> 
+                  <!--  <field name="period"/> -->
+                    <field name="state"/>	
+                </tree>
+            </field>
+        </record>
+        
+        <record id="mk_transport_management_search_view" model="ir.ui.view">
+            <field name="name">Transport Management Search View</field>
+            <field name="model">mk.transport.management</field>
+            <field name="arch" type="xml">
+                <search string="Transport Management">
+                    <field name="student_id"/>
+                </search>
+            </field>
+        </record>
+        
+        <record id="mk_transport_management_action" model="ir.actions.act_window">
+            <field name="name">Transport Management</field>
+            <field name="res_model">mk.transport.management</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+	<menuitem name="Transport Management" id="transport_management_menu" sequence = "2" 
+        parent="mk_transport_menu" action="mk_transport_management_action" groups="read_transportation_management,write_transportation_management,create_transportation_management"/> 
+    </data>  
+</odoo>

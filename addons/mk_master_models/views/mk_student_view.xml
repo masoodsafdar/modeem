@@ -1,0 +1,65 @@
+<odoo>
+    <data>
+    
+ 	<record id="mk_student_form_view" model="ir.ui.view">
+          <field name="name">Student Form View</field>
+          <field name="model">mk.student</field>
+          <field name="arch" type="xml">
+              <form string = "Student">
+		  <header>
+		    
+		  </header>
+		  <sheet>
+			  <group>
+			  	<group>
+			  		<field name="name" required="1"/>
+			  		<field name="episode_id" required="1"/>
+		  		</group>
+			  	<group>
+			  		<field name="center_department_id" domain="[('level_type','=','c')]"/>
+			  		<field name="mosque_department_id" domain="[('level_type','=','mc')]"/>
+				</group>
+		  	</group>
+	  	</sheet>
+              </form>
+             </field>
+         </record>
+
+        <record id="mk_student_tree_view" model="ir.ui.view">
+            <field name="name">Student Tree View</field>
+            <field name="model">mk.student</field>
+            <field name="arch" type="xml">
+                <tree delete="0" string="Student" editable="top">
+                	<field name="name" required="1"/>
+                	<field name="episode_id" required="1"/>
+                	<field name="center_department_id" domain="[('level_type','=','c')]"/>
+	  		<field name="mosque_department_id" domain="[('level_type','=','mc')]"/>
+                </tree>
+            </field>
+        </record>
+        
+        <record id="mk_student_search_view" model="ir.ui.view">
+            <field name="name">Student Search View</field>
+            <field name="model">mk.student</field>
+            <field name="arch" type="xml">
+                <search string="Student">
+                    <field name="name" string="Student" filter_domain="[('name','ilike', self)]"/>
+                </search>
+            </field>
+        </record>
+        
+        <record id="mk_student_action" model="ir.actions.act_window">
+            <field name="name">Student</field>
+            <field name="res_model">mk.student</field>
+            <field name="type">ir.actions.act_window</field>
+            <!-- <field name="view_type">form</field> -->
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+            <field name="search_view_id" ref="mk_student_search_view"/>
+        </record>
+
+	<menuitem name="Student" id="mk_student_menu" sequence="5" parent="mk_master_menu" action="mk_student_action"/>    
+
+    </data>  
+</odoo>

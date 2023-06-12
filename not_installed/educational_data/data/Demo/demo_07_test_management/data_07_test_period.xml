@@ -1,0 +1,29 @@
+<odoo>
+    <data noupdate="1">
+        <record model="test.period" id="test_period1">
+            <field name="name">الفجر</field>
+            <field name="total_hours">2</field>
+        </record>
+
+        <record model="test.period" id="test_period3">
+            <field name="name">الظهر</field>
+            <field name="total_hours">2</field>
+        </record>
+
+        <record model="test.period" id="test_period4">
+            <field name="name">العصر</field>
+            <field name="total_hours">3</field>
+        </record>
+
+        <record model="test.period" id="test_period5">
+            <field name="name">المغرب</field>
+            <field name="total_hours">1</field>
+        </record>
+
+        <record model="test.period" id="test_period6">
+            <field name="name">العشاء</field>
+            <field name="total_hours">3</field>
+        </record>
+
+    </data>
+</odoo>

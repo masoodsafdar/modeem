@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+        
+        <record id="view_users_form_inherit_website_support" model="ir.ui.view">
+            <field name="name">res.users.support.ticket.inherit</field>
+            <field name="model">res.users</field>
+            <field name="inherit_id" ref="base.view_users_form"/>
+            <field name="arch" type="xml">
+            </field>
+       </record>
+       
+   </data>
+</openerp>

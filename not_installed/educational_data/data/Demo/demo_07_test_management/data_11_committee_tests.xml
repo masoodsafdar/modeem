@@ -1,0 +1,8 @@
+<odoo>
+	<data noupdate="1">
+		<record model="committee.tests" id="committee_tests4">
+			<field name="name">اللجنة 1</field>
+			<field name="commitee_id" ref="mk_test_center_prepration4"/>
+		</record>
+	</data>  
+</odoo>

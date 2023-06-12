@@ -1,0 +1,2794 @@
+<odoo>
+    <data noupdate="1">
+        <record id="mk_subject_page24563" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah114"/>
+            <field name="to_surah" ref="mk_surah109"/>
+            <field name="order">1</field>
+            <field name="from_verse" ref="mk_surah_verses6231"/>
+            <field name="to_verse" ref="mk_surah_verses6213"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24564" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah108"/>
+            <field name="to_surah" ref="mk_surah103"/>
+            <field name="order">2</field>
+            <field name="from_verse" ref="mk_surah_verses6205"/>
+            <field name="to_verse" ref="mk_surah_verses6179"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24565" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah102"/>
+            <field name="to_surah" ref="mk_surah99"/>
+            <field name="order">3</field>
+            <field name="from_verse" ref="mk_surah_verses6169"/>
+            <field name="to_verse" ref="mk_surah_verses6146"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24566" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah98"/>
+            <field name="to_surah" ref="mk_surah95"/>
+            <field name="order">4</field>
+            <field name="from_verse" ref="mk_surah_verses6131"/>
+            <field name="to_verse" ref="mk_surah_verses6106"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24567" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah94"/>
+            <field name="to_surah" ref="mk_surah91"/>
+            <field name="order">5</field>
+            <field name="from_verse" ref="mk_surah_verses6091"/>
+            <field name="to_verse" ref="mk_surah_verses6058"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24568" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah90"/>
+            <field name="to_surah" ref="mk_surah89"/>
+            <field name="order">6</field>
+            <field name="from_verse" ref="mk_surah_verses6024"/>
+            <field name="to_verse" ref="mk_surah_verses6023"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24569" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah88"/>
+            <field name="to_surah" ref="mk_surah86"/>
+            <field name="order">7</field>
+            <field name="from_verse" ref="mk_surah_verses5968"/>
+            <field name="to_verse" ref="mk_surah_verses5948"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24570" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah85"/>
+            <field name="to_surah" ref="mk_surah84"/>
+            <field name="order">8</field>
+            <field name="from_verse" ref="mk_surah_verses5910"/>
+            <field name="to_verse" ref="mk_surah_verses5909"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24571" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah83"/>
+            <field name="to_surah" ref="mk_surah82"/>
+            <field name="order">9</field>
+            <field name="from_verse" ref="mk_surah_verses5849"/>
+            <field name="to_verse" ref="mk_surah_verses5848"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24572" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah81"/>
+            <field name="to_surah" ref="mk_surah80"/>
+            <field name="order">10</field>
+            <field name="from_verse" ref="mk_surah_verses5801"/>
+            <field name="to_verse" ref="mk_surah_verses5800"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24573" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah79"/>
+            <field name="to_surah" ref="mk_surah79"/>
+            <field name="order">11</field>
+            <field name="from_verse" ref="mk_surah_verses5713"/>
+            <field name="to_verse" ref="mk_surah_verses5758"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24574" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah78"/>
+            <field name="to_surah" ref="mk_surah78"/>
+            <field name="order">12</field>
+            <field name="from_verse" ref="mk_surah_verses5673"/>
+            <field name="to_verse" ref="mk_surah_verses5712"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24575" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah77"/>
+            <field name="to_surah" ref="mk_surah77"/>
+            <field name="order">13</field>
+            <field name="from_verse" ref="mk_surah_verses5623"/>
+            <field name="to_verse" ref="mk_surah_verses5672"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24576" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah76"/>
+            <field name="to_surah" ref="mk_surah76"/>
+            <field name="order">14</field>
+            <field name="from_verse" ref="mk_surah_verses5592"/>
+            <field name="to_verse" ref="mk_surah_verses5622"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24577" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah75"/>
+            <field name="to_surah" ref="mk_surah75"/>
+            <field name="order">15</field>
+            <field name="from_verse" ref="mk_surah_verses5552"/>
+            <field name="to_verse" ref="mk_surah_verses5591"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24578" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah74"/>
+            <field name="to_surah" ref="mk_surah74"/>
+            <field name="order">16</field>
+            <field name="from_verse" ref="mk_surah_verses5496"/>
+            <field name="to_verse" ref="mk_surah_verses5551"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24579" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah73"/>
+            <field name="to_surah" ref="mk_surah73"/>
+            <field name="order">17</field>
+            <field name="from_verse" ref="mk_surah_verses5476"/>
+            <field name="to_verse" ref="mk_surah_verses5495"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24580" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah72"/>
+            <field name="to_surah" ref="mk_surah72"/>
+            <field name="order">18</field>
+            <field name="from_verse" ref="mk_surah_verses5448"/>
+            <field name="to_verse" ref="mk_surah_verses5475"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24581" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah71"/>
+            <field name="to_surah" ref="mk_surah71"/>
+            <field name="order">19</field>
+            <field name="from_verse" ref="mk_surah_verses5420"/>
+            <field name="to_verse" ref="mk_surah_verses5447"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24582" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah70"/>
+            <field name="to_surah" ref="mk_surah70"/>
+            <field name="order">20</field>
+            <field name="from_verse" ref="mk_surah_verses5376"/>
+            <field name="to_verse" ref="mk_surah_verses5419"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24583" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah69"/>
+            <field name="to_surah" ref="mk_surah69"/>
+            <field name="order">21</field>
+            <field name="from_verse" ref="mk_surah_verses5324"/>
+            <field name="to_verse" ref="mk_surah_verses5375"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24584" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah68"/>
+            <field name="to_surah" ref="mk_surah68"/>
+            <field name="order">22</field>
+            <field name="from_verse" ref="mk_surah_verses5272"/>
+            <field name="to_verse" ref="mk_surah_verses5323"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24585" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah67"/>
+            <field name="to_surah" ref="mk_surah67"/>
+            <field name="order">23</field>
+            <field name="from_verse" ref="mk_surah_verses5242"/>
+            <field name="to_verse" ref="mk_surah_verses5271"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24586" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah66"/>
+            <field name="to_surah" ref="mk_surah66"/>
+            <field name="order">24</field>
+            <field name="from_verse" ref="mk_surah_verses5230"/>
+            <field name="to_verse" ref="mk_surah_verses5241"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24587" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah65"/>
+            <field name="to_surah" ref="mk_surah65"/>
+            <field name="order">25</field>
+            <field name="from_verse" ref="mk_surah_verses5218"/>
+            <field name="to_verse" ref="mk_surah_verses5229"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24588" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah64"/>
+            <field name="to_surah" ref="mk_surah64"/>
+            <field name="order">26</field>
+            <field name="from_verse" ref="mk_surah_verses5200"/>
+            <field name="to_verse" ref="mk_surah_verses5217"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24589" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah63"/>
+            <field name="to_surah" ref="mk_surah63"/>
+            <field name="order">27</field>
+            <field name="from_verse" ref="mk_surah_verses5189"/>
+            <field name="to_verse" ref="mk_surah_verses5199"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24590" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah62"/>
+            <field name="to_surah" ref="mk_surah62"/>
+            <field name="order">28</field>
+            <field name="from_verse" ref="mk_surah_verses5178"/>
+            <field name="to_verse" ref="mk_surah_verses5188"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24591" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah61"/>
+            <field name="to_surah" ref="mk_surah61"/>
+            <field name="order">29</field>
+            <field name="from_verse" ref="mk_surah_verses5164"/>
+            <field name="to_verse" ref="mk_surah_verses5177"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24592" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah60"/>
+            <field name="to_surah" ref="mk_surah60"/>
+            <field name="order">30</field>
+            <field name="from_verse" ref="mk_surah_verses5151"/>
+            <field name="to_verse" ref="mk_surah_verses5163"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24593" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah59"/>
+            <field name="to_surah" ref="mk_surah59"/>
+            <field name="order">31</field>
+            <field name="from_verse" ref="mk_surah_verses5127"/>
+            <field name="to_verse" ref="mk_surah_verses5135"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24594" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah59"/>
+            <field name="to_surah" ref="mk_surah59"/>
+            <field name="order">32</field>
+            <field name="from_verse" ref="mk_surah_verses5136"/>
+            <field name="to_verse" ref="mk_surah_verses5150"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24595" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah58"/>
+            <field name="to_surah" ref="mk_surah58"/>
+            <field name="order">33</field>
+            <field name="from_verse" ref="mk_surah_verses5105"/>
+            <field name="to_verse" ref="mk_surah_verses5115"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24596" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah58"/>
+            <field name="to_surah" ref="mk_surah58"/>
+            <field name="order">34</field>
+            <field name="from_verse" ref="mk_surah_verses5116"/>
+            <field name="to_verse" ref="mk_surah_verses5126"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24597" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah57"/>
+            <field name="to_surah" ref="mk_surah57"/>
+            <field name="order">35</field>
+            <field name="from_verse" ref="mk_surah_verses5076"/>
+            <field name="to_verse" ref="mk_surah_verses5093"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24598" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah57"/>
+            <field name="to_surah" ref="mk_surah57"/>
+            <field name="order">36</field>
+            <field name="from_verse" ref="mk_surah_verses5094"/>
+            <field name="to_verse" ref="mk_surah_verses5104"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24599" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah56"/>
+            <field name="to_surah" ref="mk_surah56"/>
+            <field name="order">37</field>
+            <field name="from_verse" ref="mk_surah_verses4980"/>
+            <field name="to_verse" ref="mk_surah_verses5029"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24600" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah56"/>
+            <field name="to_surah" ref="mk_surah56"/>
+            <field name="order">38</field>
+            <field name="from_verse" ref="mk_surah_verses5030"/>
+            <field name="to_verse" ref="mk_surah_verses5075"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24601" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah55"/>
+            <field name="to_surah" ref="mk_surah55"/>
+            <field name="order">39</field>
+            <field name="from_verse" ref="mk_surah_verses4902"/>
+            <field name="to_verse" ref="mk_surah_verses4941"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24602" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah55"/>
+            <field name="to_surah" ref="mk_surah55"/>
+            <field name="order">40</field>
+            <field name="from_verse" ref="mk_surah_verses4942"/>
+            <field name="to_verse" ref="mk_surah_verses4979"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24603" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah54"/>
+            <field name="to_surah" ref="mk_surah54"/>
+            <field name="order">41</field>
+            <field name="from_verse" ref="mk_surah_verses4847"/>
+            <field name="to_verse" ref="mk_surah_verses4873"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24604" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah54"/>
+            <field name="to_surah" ref="mk_surah54"/>
+            <field name="order">42</field>
+            <field name="from_verse" ref="mk_surah_verses4874"/>
+            <field name="to_verse" ref="mk_surah_verses4901"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24605" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah53"/>
+            <field name="to_surah" ref="mk_surah53"/>
+            <field name="order">43</field>
+            <field name="from_verse" ref="mk_surah_verses4785"/>
+            <field name="to_verse" ref="mk_surah_verses4846"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24606" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah52"/>
+            <field name="to_surah" ref="mk_surah52"/>
+            <field name="order">44</field>
+            <field name="from_verse" ref="mk_surah_verses4736"/>
+            <field name="to_verse" ref="mk_surah_verses4784"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24607" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah51"/>
+            <field name="to_surah" ref="mk_surah51"/>
+            <field name="order">45</field>
+            <field name="from_verse" ref="mk_surah_verses4676"/>
+            <field name="to_verse" ref="mk_surah_verses4705"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24608" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah51"/>
+            <field name="to_surah" ref="mk_surah51"/>
+            <field name="order">46</field>
+            <field name="from_verse" ref="mk_surah_verses4706"/>
+            <field name="to_verse" ref="mk_surah_verses4735"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24609" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah50"/>
+            <field name="to_surah" ref="mk_surah50"/>
+            <field name="order">47</field>
+            <field name="from_verse" ref="mk_surah_verses4631"/>
+            <field name="to_verse" ref="mk_surah_verses4665"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24610" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah50"/>
+            <field name="to_surah" ref="mk_surah49"/>
+            <field name="order">48</field>
+            <field name="from_verse" ref="mk_surah_verses4666"/>
+            <field name="to_verse" ref="mk_surah_verses4618"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24611" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah49"/>
+            <field name="to_surah" ref="mk_surah49"/>
+            <field name="order">49</field>
+            <field name="from_verse" ref="mk_surah_verses4619"/>
+            <field name="to_verse" ref="mk_surah_verses4630"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24612" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah48"/>
+            <field name="to_surah" ref="mk_surah48"/>
+            <field name="order">50</field>
+            <field name="from_verse" ref="mk_surah_verses4584"/>
+            <field name="to_verse" ref="mk_surah_verses4598"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24613" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah48"/>
+            <field name="to_surah" ref="mk_surah48"/>
+            <field name="order">51</field>
+            <field name="from_verse" ref="mk_surah_verses4599"/>
+            <field name="to_verse" ref="mk_surah_verses4612"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24614" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah47"/>
+            <field name="to_surah" ref="mk_surah47"/>
+            <field name="order">52</field>
+            <field name="from_verse" ref="mk_surah_verses4546"/>
+            <field name="to_verse" ref="mk_surah_verses4564"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24615" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah47"/>
+            <field name="to_surah" ref="mk_surah47"/>
+            <field name="order">53</field>
+            <field name="from_verse" ref="mk_surah_verses4565"/>
+            <field name="to_verse" ref="mk_surah_verses4583"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24616" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah46"/>
+            <field name="to_surah" ref="mk_surah46"/>
+            <field name="order">54</field>
+            <field name="from_verse" ref="mk_surah_verses4511"/>
+            <field name="to_verse" ref="mk_surah_verses4524"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24617" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah46"/>
+            <field name="to_surah" ref="mk_surah46"/>
+            <field name="order">55</field>
+            <field name="from_verse" ref="mk_surah_verses4525"/>
+            <field name="to_verse" ref="mk_surah_verses4535"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24618" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah46"/>
+            <field name="to_surah" ref="mk_surah46"/>
+            <field name="order">56</field>
+            <field name="from_verse" ref="mk_surah_verses4536"/>
+            <field name="to_verse" ref="mk_surah_verses4545"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24619" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah45"/>
+            <field name="to_surah" ref="mk_surah45"/>
+            <field name="order">57</field>
+            <field name="from_verse" ref="mk_surah_verses4474"/>
+            <field name="to_verse" ref="mk_surah_verses4495"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24620" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah45"/>
+            <field name="to_surah" ref="mk_surah45"/>
+            <field name="order">58</field>
+            <field name="from_verse" ref="mk_surah_verses4496"/>
+            <field name="to_verse" ref="mk_surah_verses4510"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24621" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah44"/>
+            <field name="to_surah" ref="mk_surah44"/>
+            <field name="order">59</field>
+            <field name="from_verse" ref="mk_surah_verses4415"/>
+            <field name="to_verse" ref="mk_surah_verses4453"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24622" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah44"/>
+            <field name="to_surah" ref="mk_surah43"/>
+            <field name="order">60</field>
+            <field name="from_verse" ref="mk_surah_verses4454"/>
+            <field name="to_verse" ref="mk_surah_verses4335"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24623" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah43"/>
+            <field name="to_surah" ref="mk_surah43"/>
+            <field name="order">61</field>
+            <field name="from_verse" ref="mk_surah_verses4336"/>
+            <field name="to_verse" ref="mk_surah_verses4358"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24624" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah43"/>
+            <field name="to_surah" ref="mk_surah43"/>
+            <field name="order">62</field>
+            <field name="from_verse" ref="mk_surah_verses4359"/>
+            <field name="to_verse" ref="mk_surah_verses4385"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24625" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah43"/>
+            <field name="to_surah" ref="mk_surah43"/>
+            <field name="order">63</field>
+            <field name="from_verse" ref="mk_surah_verses4386"/>
+            <field name="to_verse" ref="mk_surah_verses4414"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24626" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah42"/>
+            <field name="to_surah" ref="mk_surah42"/>
+            <field name="order">64</field>
+            <field name="from_verse" ref="mk_surah_verses4273"/>
+            <field name="to_verse" ref="mk_surah_verses4287"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24627" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah42"/>
+            <field name="to_surah" ref="mk_surah42"/>
+            <field name="order">65</field>
+            <field name="from_verse" ref="mk_surah_verses4288"/>
+            <field name="to_verse" ref="mk_surah_verses4303"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24628" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah42"/>
+            <field name="to_surah" ref="mk_surah42"/>
+            <field name="order">66</field>
+            <field name="from_verse" ref="mk_surah_verses4304"/>
+            <field name="to_verse" ref="mk_surah_verses4325"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24629" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah41"/>
+            <field name="to_surah" ref="mk_surah41"/>
+            <field name="order">67</field>
+            <field name="from_verse" ref="mk_surah_verses4219"/>
+            <field name="to_verse" ref="mk_surah_verses4238"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24630" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah41"/>
+            <field name="to_surah" ref="mk_surah41"/>
+            <field name="order">68</field>
+            <field name="from_verse" ref="mk_surah_verses4239"/>
+            <field name="to_verse" ref="mk_surah_verses4256"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24631" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah41"/>
+            <field name="to_surah" ref="mk_surah41"/>
+            <field name="order">69</field>
+            <field name="from_verse" ref="mk_surah_verses4257"/>
+            <field name="to_verse" ref="mk_surah_verses4272"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24632" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah40"/>
+            <field name="to_surah" ref="mk_surah40"/>
+            <field name="order">70</field>
+            <field name="from_verse" ref="mk_surah_verses4134"/>
+            <field name="to_verse" ref="mk_surah_verses4149"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24633" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah40"/>
+            <field name="to_surah" ref="mk_surah40"/>
+            <field name="order">71</field>
+            <field name="from_verse" ref="mk_surah_verses4150"/>
+            <field name="to_verse" ref="mk_surah_verses4166"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24634" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah40"/>
+            <field name="to_surah" ref="mk_surah40"/>
+            <field name="order">72</field>
+            <field name="from_verse" ref="mk_surah_verses4167"/>
+            <field name="to_verse" ref="mk_surah_verses4179"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24635" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah40"/>
+            <field name="to_surah" ref="mk_surah40"/>
+            <field name="order">73</field>
+            <field name="from_verse" ref="mk_surah_verses4180"/>
+            <field name="to_verse" ref="mk_surah_verses4199"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24636" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah40"/>
+            <field name="to_surah" ref="mk_surah40"/>
+            <field name="order">74</field>
+            <field name="from_verse" ref="mk_surah_verses4200"/>
+            <field name="to_verse" ref="mk_surah_verses4218"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24637" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah39"/>
+            <field name="to_surah" ref="mk_surah39"/>
+            <field name="order">75</field>
+            <field name="from_verse" ref="mk_surah_verses4059"/>
+            <field name="to_verse" ref="mk_surah_verses4068"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24638" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah39"/>
+            <field name="to_surah" ref="mk_surah39"/>
+            <field name="order">76</field>
+            <field name="from_verse" ref="mk_surah_verses4069"/>
+            <field name="to_verse" ref="mk_surah_verses4089"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24639" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah39"/>
+            <field name="to_surah" ref="mk_surah39"/>
+            <field name="order">77</field>
+            <field name="from_verse" ref="mk_surah_verses4090"/>
+            <field name="to_verse" ref="mk_surah_verses4106"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24640" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah39"/>
+            <field name="to_surah" ref="mk_surah39"/>
+            <field name="order">78</field>
+            <field name="from_verse" ref="mk_surah_verses4107"/>
+            <field name="to_verse" ref="mk_surah_verses4125"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24641" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah39"/>
+            <field name="to_surah" ref="mk_surah38"/>
+            <field name="order">79</field>
+            <field name="from_verse" ref="mk_surah_verses4126"/>
+            <field name="to_verse" ref="mk_surah_verses3986"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24642" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah38"/>
+            <field name="to_surah" ref="mk_surah38"/>
+            <field name="order">80</field>
+            <field name="from_verse" ref="mk_surah_verses3987"/>
+            <field name="to_verse" ref="mk_surah_verses4012"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24643" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah38"/>
+            <field name="to_surah" ref="mk_surah38"/>
+            <field name="order">81</field>
+            <field name="from_verse" ref="mk_surah_verses4013"/>
+            <field name="to_verse" ref="mk_surah_verses4058"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24644" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah37"/>
+            <field name="to_surah" ref="mk_surah37"/>
+            <field name="order">82</field>
+            <field name="from_verse" ref="mk_surah_verses3789"/>
+            <field name="to_verse" ref="mk_surah_verses3837"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24645" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah37"/>
+            <field name="to_surah" ref="mk_surah37"/>
+            <field name="order">83</field>
+            <field name="from_verse" ref="mk_surah_verses3838"/>
+            <field name="to_verse" ref="mk_surah_verses3870"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24646" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah37"/>
+            <field name="to_surah" ref="mk_surah37"/>
+            <field name="order">84</field>
+            <field name="from_verse" ref="mk_surah_verses3871"/>
+            <field name="to_verse" ref="mk_surah_verses3920"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24647" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah37"/>
+            <field name="to_surah" ref="mk_surah37"/>
+            <field name="order">85</field>
+            <field name="from_verse" ref="mk_surah_verses3921"/>
+            <field name="to_verse" ref="mk_surah_verses3970"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24648" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah36"/>
+            <field name="to_surah" ref="mk_surah36"/>
+            <field name="order">86</field>
+            <field name="from_verse" ref="mk_surah_verses3706"/>
+            <field name="to_verse" ref="mk_surah_verses3732"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24649" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah36"/>
+            <field name="to_surah" ref="mk_surah36"/>
+            <field name="order">87</field>
+            <field name="from_verse" ref="mk_surah_verses3733"/>
+            <field name="to_verse" ref="mk_surah_verses3759"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24650" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah36"/>
+            <field name="to_surah" ref="mk_surah36"/>
+            <field name="order">88</field>
+            <field name="from_verse" ref="mk_surah_verses3760"/>
+            <field name="to_verse" ref="mk_surah_verses3788"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24651" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah35"/>
+            <field name="to_surah" ref="mk_surah35"/>
+            <field name="order">89</field>
+            <field name="from_verse" ref="mk_surah_verses3661"/>
+            <field name="to_verse" ref="mk_surah_verses3674"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24652" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah35"/>
+            <field name="to_surah" ref="mk_surah35"/>
+            <field name="order">90</field>
+            <field name="from_verse" ref="mk_surah_verses3675"/>
+            <field name="to_verse" ref="mk_surah_verses3690"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24653" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah35"/>
+            <field name="to_surah" ref="mk_surah35"/>
+            <field name="order">91</field>
+            <field name="from_verse" ref="mk_surah_verses3691"/>
+            <field name="to_verse" ref="mk_surah_verses3705"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24654" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah34"/>
+            <field name="to_surah" ref="mk_surah34"/>
+            <field name="order">92</field>
+            <field name="from_verse" ref="mk_surah_verses3607"/>
+            <field name="to_verse" ref="mk_surah_verses3620"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24655" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah34"/>
+            <field name="to_surah" ref="mk_surah34"/>
+            <field name="order">93</field>
+            <field name="from_verse" ref="mk_surah_verses3621"/>
+            <field name="to_verse" ref="mk_surah_verses3637"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24656" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah34"/>
+            <field name="to_surah" ref="mk_surah34"/>
+            <field name="order">94</field>
+            <field name="from_verse" ref="mk_surah_verses3638"/>
+            <field name="to_verse" ref="mk_surah_verses3660"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24657" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah33"/>
+            <field name="to_surah" ref="mk_surah33"/>
+            <field name="order">95</field>
+            <field name="from_verse" ref="mk_surah_verses3534"/>
+            <field name="to_verse" ref="mk_surah_verses3548"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24658" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah33"/>
+            <field name="to_surah" ref="mk_surah33"/>
+            <field name="order">96</field>
+            <field name="from_verse" ref="mk_surah_verses3549"/>
+            <field name="to_verse" ref="mk_surah_verses3563"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24659" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah33"/>
+            <field name="to_surah" ref="mk_surah33"/>
+            <field name="order">97</field>
+            <field name="from_verse" ref="mk_surah_verses3564"/>
+            <field name="to_verse" ref="mk_surah_verses3576"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24660" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah33"/>
+            <field name="to_surah" ref="mk_surah33"/>
+            <field name="order">98</field>
+            <field name="from_verse" ref="mk_surah_verses3577"/>
+            <field name="to_verse" ref="mk_surah_verses3587"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24661" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah33"/>
+            <field name="to_surah" ref="mk_surah33"/>
+            <field name="order">99</field>
+            <field name="from_verse" ref="mk_surah_verses3588"/>
+            <field name="to_verse" ref="mk_surah_verses3606"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24662" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah32"/>
+            <field name="to_surah" ref="mk_surah32"/>
+            <field name="order">100</field>
+            <field name="from_verse" ref="mk_surah_verses3504"/>
+            <field name="to_verse" ref="mk_surah_verses3523"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24663" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah32"/>
+            <field name="to_surah" ref="mk_surah31"/>
+            <field name="order">101</field>
+            <field name="from_verse" ref="mk_surah_verses3524"/>
+            <field name="to_verse" ref="mk_surah_verses3480"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24664" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah31"/>
+            <field name="to_surah" ref="mk_surah31"/>
+            <field name="order">102</field>
+            <field name="from_verse" ref="mk_surah_verses3481"/>
+            <field name="to_verse" ref="mk_surah_verses3497"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24665" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah31"/>
+            <field name="to_surah" ref="mk_surah30"/>
+            <field name="order">103</field>
+            <field name="from_verse" ref="mk_surah_verses3498"/>
+            <field name="to_verse" ref="mk_surah_verses3416"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24666" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah30"/>
+            <field name="to_surah" ref="mk_surah30"/>
+            <field name="order">104</field>
+            <field name="from_verse" ref="mk_surah_verses3417"/>
+            <field name="to_verse" ref="mk_surah_verses3433"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24667" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah30"/>
+            <field name="to_surah" ref="mk_surah30"/>
+            <field name="order">105</field>
+            <field name="from_verse" ref="mk_surah_verses3434"/>
+            <field name="to_verse" ref="mk_surah_verses3450"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24668" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah30"/>
+            <field name="to_surah" ref="mk_surah30"/>
+            <field name="order">106</field>
+            <field name="from_verse" ref="mk_surah_verses3451"/>
+            <field name="to_verse" ref="mk_surah_verses3469"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24669" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah29"/>
+            <field name="to_surah" ref="mk_surah29"/>
+            <field name="order">107</field>
+            <field name="from_verse" ref="mk_surah_verses3341"/>
+            <field name="to_verse" ref="mk_surah_verses3355"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24670" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah29"/>
+            <field name="to_surah" ref="mk_surah29"/>
+            <field name="order">108</field>
+            <field name="from_verse" ref="mk_surah_verses3356"/>
+            <field name="to_verse" ref="mk_surah_verses3370"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24671" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah29"/>
+            <field name="to_surah" ref="mk_surah29"/>
+            <field name="order">109</field>
+            <field name="from_verse" ref="mk_surah_verses3371"/>
+            <field name="to_verse" ref="mk_surah_verses3385"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24672" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah29"/>
+            <field name="to_surah" ref="mk_surah29"/>
+            <field name="order">110</field>
+            <field name="from_verse" ref="mk_surah_verses3386"/>
+            <field name="to_verse" ref="mk_surah_verses3395"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24673" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah29"/>
+            <field name="to_surah" ref="mk_surah28"/>
+            <field name="order">111</field>
+            <field name="from_verse" ref="mk_surah_verses3396"/>
+            <field name="to_verse" ref="mk_surah_verses3257"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24674" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah28"/>
+            <field name="to_surah" ref="mk_surah28"/>
+            <field name="order">112</field>
+            <field name="from_verse" ref="mk_surah_verses3258"/>
+            <field name="to_verse" ref="mk_surah_verses3273"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24675" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah28"/>
+            <field name="to_surah" ref="mk_surah28"/>
+            <field name="order">113</field>
+            <field name="from_verse" ref="mk_surah_verses3274"/>
+            <field name="to_verse" ref="mk_surah_verses3287"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24676" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah28"/>
+            <field name="to_surah" ref="mk_surah28"/>
+            <field name="order">114</field>
+            <field name="from_verse" ref="mk_surah_verses3288"/>
+            <field name="to_verse" ref="mk_surah_verses3302"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24677" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah28"/>
+            <field name="to_surah" ref="mk_surah28"/>
+            <field name="order">115</field>
+            <field name="from_verse" ref="mk_surah_verses3303"/>
+            <field name="to_verse" ref="mk_surah_verses3322"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24678" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah28"/>
+            <field name="to_surah" ref="mk_surah28"/>
+            <field name="order">116</field>
+            <field name="from_verse" ref="mk_surah_verses3323"/>
+            <field name="to_verse" ref="mk_surah_verses3336"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24679" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah28"/>
+            <field name="to_surah" ref="mk_surah27"/>
+            <field name="order">117</field>
+            <field name="from_verse" ref="mk_surah_verses3337"/>
+            <field name="to_verse" ref="mk_surah_verses3178"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24680" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah27"/>
+            <field name="to_surah" ref="mk_surah27"/>
+            <field name="order">118</field>
+            <field name="from_verse" ref="mk_surah_verses3179"/>
+            <field name="to_verse" ref="mk_surah_verses3203"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24681" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah27"/>
+            <field name="to_surah" ref="mk_surah27"/>
+            <field name="order">119</field>
+            <field name="from_verse" ref="mk_surah_verses3204"/>
+            <field name="to_verse" ref="mk_surah_verses3225"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24682" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah27"/>
+            <field name="to_surah" ref="mk_surah27"/>
+            <field name="order">120</field>
+            <field name="from_verse" ref="mk_surah_verses3226"/>
+            <field name="to_verse" ref="mk_surah_verses3252"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24683" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah26"/>
+            <field name="to_surah" ref="mk_surah26"/>
+            <field name="order">121</field>
+            <field name="from_verse" ref="mk_surah_verses2933"/>
+            <field name="to_verse" ref="mk_surah_verses2971"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24684" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah26"/>
+            <field name="to_surah" ref="mk_surah26"/>
+            <field name="order">122</field>
+            <field name="from_verse" ref="mk_surah_verses2972"/>
+            <field name="to_verse" ref="mk_surah_verses3015"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24685" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah26"/>
+            <field name="to_surah" ref="mk_surah26"/>
+            <field name="order">123</field>
+            <field name="from_verse" ref="mk_surah_verses3016"/>
+            <field name="to_verse" ref="mk_surah_verses3068"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24686" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah26"/>
+            <field name="to_surah" ref="mk_surah26"/>
+            <field name="order">124</field>
+            <field name="from_verse" ref="mk_surah_verses3069"/>
+            <field name="to_verse" ref="mk_surah_verses3115"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24687" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah26"/>
+            <field name="to_surah" ref="mk_surah26"/>
+            <field name="order">125</field>
+            <field name="from_verse" ref="mk_surah_verses3116"/>
+            <field name="to_verse" ref="mk_surah_verses3159"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24688" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah25"/>
+            <field name="to_surah" ref="mk_surah25"/>
+            <field name="order">126</field>
+            <field name="from_verse" ref="mk_surah_verses2856"/>
+            <field name="to_verse" ref="mk_surah_verses2871"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24689" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah25"/>
+            <field name="to_surah" ref="mk_surah25"/>
+            <field name="order">127</field>
+            <field name="from_verse" ref="mk_surah_verses2872"/>
+            <field name="to_verse" ref="mk_surah_verses2887"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24690" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah25"/>
+            <field name="to_surah" ref="mk_surah25"/>
+            <field name="order">128</field>
+            <field name="from_verse" ref="mk_surah_verses2888"/>
+            <field name="to_verse" ref="mk_surah_verses2910"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24691" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah25"/>
+            <field name="to_surah" ref="mk_surah25"/>
+            <field name="order">129</field>
+            <field name="from_verse" ref="mk_surah_verses2911"/>
+            <field name="to_verse" ref="mk_surah_verses2932"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24692" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah24"/>
+            <field name="to_surah" ref="mk_surah24"/>
+            <field name="order">130</field>
+            <field name="from_verse" ref="mk_surah_verses2792"/>
+            <field name="to_verse" ref="mk_surah_verses2811"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24693" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah24"/>
+            <field name="to_surah" ref="mk_surah24"/>
+            <field name="order">131</field>
+            <field name="from_verse" ref="mk_surah_verses2812"/>
+            <field name="to_verse" ref="mk_surah_verses2822"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24694" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah24"/>
+            <field name="to_surah" ref="mk_surah24"/>
+            <field name="order">132</field>
+            <field name="from_verse" ref="mk_surah_verses2823"/>
+            <field name="to_verse" ref="mk_surah_verses2836"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24695" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah24"/>
+            <field name="to_surah" ref="mk_surah24"/>
+            <field name="order">133</field>
+            <field name="from_verse" ref="mk_surah_verses2837"/>
+            <field name="to_verse" ref="mk_surah_verses2849"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24696" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah24"/>
+            <field name="to_surah" ref="mk_surah24"/>
+            <field name="order">134</field>
+            <field name="from_verse" ref="mk_surah_verses2850"/>
+            <field name="to_verse" ref="mk_surah_verses2855"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24697" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah23"/>
+            <field name="to_surah" ref="mk_surah23"/>
+            <field name="order">135</field>
+            <field name="from_verse" ref="mk_surah_verses2674"/>
+            <field name="to_verse" ref="mk_surah_verses2700"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24698" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah23"/>
+            <field name="to_surah" ref="mk_surah23"/>
+            <field name="order">136</field>
+            <field name="from_verse" ref="mk_surah_verses2701"/>
+            <field name="to_verse" ref="mk_surah_verses2732"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24699" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah23"/>
+            <field name="to_surah" ref="mk_surah23"/>
+            <field name="order">137</field>
+            <field name="from_verse" ref="mk_surah_verses2733"/>
+            <field name="to_verse" ref="mk_surah_verses2762"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24700" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah23"/>
+            <field name="to_surah" ref="mk_surah23"/>
+            <field name="order">138</field>
+            <field name="from_verse" ref="mk_surah_verses2763"/>
+            <field name="to_verse" ref="mk_surah_verses2791"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24701" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah22"/>
+            <field name="to_surah" ref="mk_surah22"/>
+            <field name="order">139</field>
+            <field name="from_verse" ref="mk_surah_verses2596"/>
+            <field name="to_verse" ref="mk_surah_verses2610"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24702" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah22"/>
+            <field name="to_surah" ref="mk_surah22"/>
+            <field name="order">140</field>
+            <field name="from_verse" ref="mk_surah_verses2611"/>
+            <field name="to_verse" ref="mk_surah_verses2625"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24703" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah22"/>
+            <field name="to_surah" ref="mk_surah22"/>
+            <field name="order">141</field>
+            <field name="from_verse" ref="mk_surah_verses2626"/>
+            <field name="to_verse" ref="mk_surah_verses2641"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24704" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah22"/>
+            <field name="to_surah" ref="mk_surah22"/>
+            <field name="order">142</field>
+            <field name="from_verse" ref="mk_surah_verses2642"/>
+            <field name="to_verse" ref="mk_surah_verses2659"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24705" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah22"/>
+            <field name="to_surah" ref="mk_surah22"/>
+            <field name="order">143</field>
+            <field name="from_verse" ref="mk_surah_verses2660"/>
+            <field name="to_verse" ref="mk_surah_verses2673"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24706" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah21"/>
+            <field name="to_surah" ref="mk_surah21"/>
+            <field name="order">144</field>
+            <field name="from_verse" ref="mk_surah_verses2484"/>
+            <field name="to_verse" ref="mk_surah_verses2507"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24707" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah21"/>
+            <field name="to_surah" ref="mk_surah21"/>
+            <field name="order">145</field>
+            <field name="from_verse" ref="mk_surah_verses2508"/>
+            <field name="to_verse" ref="mk_surah_verses2527"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24708" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah21"/>
+            <field name="to_surah" ref="mk_surah21"/>
+            <field name="order">146</field>
+            <field name="from_verse" ref="mk_surah_verses2528"/>
+            <field name="to_verse" ref="mk_surah_verses2555"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24709" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah21"/>
+            <field name="to_surah" ref="mk_surah21"/>
+            <field name="order">147</field>
+            <field name="from_verse" ref="mk_surah_verses2556"/>
+            <field name="to_verse" ref="mk_surah_verses2573"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24710" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah21"/>
+            <field name="to_surah" ref="mk_surah21"/>
+            <field name="order">148</field>
+            <field name="from_verse" ref="mk_surah_verses2574"/>
+            <field name="to_verse" ref="mk_surah_verses2595"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24711" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah20"/>
+            <field name="to_surah" ref="mk_surah20"/>
+            <field name="order">149</field>
+            <field name="from_verse" ref="mk_surah_verses2349"/>
+            <field name="to_verse" ref="mk_surah_verses2385"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24712" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah20"/>
+            <field name="to_surah" ref="mk_surah20"/>
+            <field name="order">150</field>
+            <field name="from_verse" ref="mk_surah_verses2386"/>
+            <field name="to_verse" ref="mk_surah_verses2412"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24713" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah20"/>
+            <field name="to_surah" ref="mk_surah20"/>
+            <field name="order">151</field>
+            <field name="from_verse" ref="mk_surah_verses2413"/>
+            <field name="to_verse" ref="mk_surah_verses2435"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24714" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah20"/>
+            <field name="to_surah" ref="mk_surah20"/>
+            <field name="order">152</field>
+            <field name="from_verse" ref="mk_surah_verses2436"/>
+            <field name="to_verse" ref="mk_surah_verses2461"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24715" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah20"/>
+            <field name="to_surah" ref="mk_surah20"/>
+            <field name="order">153</field>
+            <field name="from_verse" ref="mk_surah_verses2462"/>
+            <field name="to_verse" ref="mk_surah_verses2483"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24716" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah19"/>
+            <field name="to_surah" ref="mk_surah19"/>
+            <field name="order">154</field>
+            <field name="from_verse" ref="mk_surah_verses2251"/>
+            <field name="to_verse" ref="mk_surah_verses2275"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24717" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah19"/>
+            <field name="to_surah" ref="mk_surah19"/>
+            <field name="order">155</field>
+            <field name="from_verse" ref="mk_surah_verses2276"/>
+            <field name="to_verse" ref="mk_surah_verses2301"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24718" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah19"/>
+            <field name="to_surah" ref="mk_surah19"/>
+            <field name="order">156</field>
+            <field name="from_verse" ref="mk_surah_verses2302"/>
+            <field name="to_verse" ref="mk_surah_verses2326"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24719" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah19"/>
+            <field name="to_surah" ref="mk_surah18"/>
+            <field name="order">157</field>
+            <field name="from_verse" ref="mk_surah_verses2327"/>
+            <field name="to_verse" ref="mk_surah_verses2146"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24720" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah18"/>
+            <field name="to_surah" ref="mk_surah18"/>
+            <field name="order">158</field>
+            <field name="from_verse" ref="mk_surah_verses2147"/>
+            <field name="to_verse" ref="mk_surah_verses2160"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24721" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah18"/>
+            <field name="to_surah" ref="mk_surah18"/>
+            <field name="order">159</field>
+            <field name="from_verse" ref="mk_surah_verses2161"/>
+            <field name="to_verse" ref="mk_surah_verses2174"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24722" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah18"/>
+            <field name="to_surah" ref="mk_surah18"/>
+            <field name="order">160</field>
+            <field name="from_verse" ref="mk_surah_verses2175"/>
+            <field name="to_verse" ref="mk_surah_verses2193"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24723" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah18"/>
+            <field name="to_surah" ref="mk_surah18"/>
+            <field name="order">161</field>
+            <field name="from_verse" ref="mk_surah_verses2194"/>
+            <field name="to_verse" ref="mk_surah_verses2214"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24724" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah18"/>
+            <field name="to_surah" ref="mk_surah18"/>
+            <field name="order">162</field>
+            <field name="from_verse" ref="mk_surah_verses2215"/>
+            <field name="to_verse" ref="mk_surah_verses2237"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24725" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah18"/>
+            <field name="to_surah" ref="mk_surah17"/>
+            <field name="order">163</field>
+            <field name="from_verse" ref="mk_surah_verses2238"/>
+            <field name="to_verse" ref="mk_surah_verses2036"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24726" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah17"/>
+            <field name="to_surah" ref="mk_surah17"/>
+            <field name="order">164</field>
+            <field name="from_verse" ref="mk_surah_verses2037"/>
+            <field name="to_verse" ref="mk_surah_verses2056"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24727" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah17"/>
+            <field name="to_surah" ref="mk_surah17"/>
+            <field name="order">165</field>
+            <field name="from_verse" ref="mk_surah_verses2057"/>
+            <field name="to_verse" ref="mk_surah_verses2078"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24728" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah17"/>
+            <field name="to_surah" ref="mk_surah17"/>
+            <field name="order">166</field>
+            <field name="from_verse" ref="mk_surah_verses2079"/>
+            <field name="to_verse" ref="mk_surah_verses2095"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24729" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah17"/>
+            <field name="to_surah" ref="mk_surah17"/>
+            <field name="order">167</field>
+            <field name="from_verse" ref="mk_surah_verses2096"/>
+            <field name="to_verse" ref="mk_surah_verses2115"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24730" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah17"/>
+            <field name="to_surah" ref="mk_surah17"/>
+            <field name="order">168</field>
+            <field name="from_verse" ref="mk_surah_verses2116"/>
+            <field name="to_verse" ref="mk_surah_verses2133"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24731" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah17"/>
+            <field name="to_surah" ref="mk_surah16"/>
+            <field name="order">169</field>
+            <field name="from_verse" ref="mk_surah_verses2134"/>
+            <field name="to_verse" ref="mk_surah_verses1915"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24732" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah16"/>
+            <field name="to_surah" ref="mk_surah16"/>
+            <field name="order">170</field>
+            <field name="from_verse" ref="mk_surah_verses1916"/>
+            <field name="to_verse" ref="mk_surah_verses1935"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24733" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah16"/>
+            <field name="to_surah" ref="mk_surah16"/>
+            <field name="order">171</field>
+            <field name="from_verse" ref="mk_surah_verses1936"/>
+            <field name="to_verse" ref="mk_surah_verses1955"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24734" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah16"/>
+            <field name="to_surah" ref="mk_surah16"/>
+            <field name="order">172</field>
+            <field name="from_verse" ref="mk_surah_verses1956"/>
+            <field name="to_verse" ref="mk_surah_verses1973"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24735" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah16"/>
+            <field name="to_surah" ref="mk_surah16"/>
+            <field name="order">173</field>
+            <field name="from_verse" ref="mk_surah_verses1974"/>
+            <field name="to_verse" ref="mk_surah_verses1988"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24736" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah16"/>
+            <field name="to_surah" ref="mk_surah16"/>
+            <field name="order">174</field>
+            <field name="from_verse" ref="mk_surah_verses1989"/>
+            <field name="to_verse" ref="mk_surah_verses2003"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24737" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah16"/>
+            <field name="to_surah" ref="mk_surah16"/>
+            <field name="order">175</field>
+            <field name="from_verse" ref="mk_surah_verses2004"/>
+            <field name="to_verse" ref="mk_surah_verses2019"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24738" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah16"/>
+            <field name="to_surah" ref="mk_surah15"/>
+            <field name="order">176</field>
+            <field name="from_verse" ref="mk_surah_verses2020"/>
+            <field name="to_verse" ref="mk_surah_verses1817"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24739" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah15"/>
+            <field name="to_surah" ref="mk_surah15"/>
+            <field name="order">177</field>
+            <field name="from_verse" ref="mk_surah_verses1818"/>
+            <field name="to_verse" ref="mk_surah_verses1853"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24740" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah15"/>
+            <field name="to_surah" ref="mk_surah15"/>
+            <field name="order">178</field>
+            <field name="from_verse" ref="mk_surah_verses1854"/>
+            <field name="to_verse" ref="mk_surah_verses1892"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24741" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah15"/>
+            <field name="to_surah" ref="mk_surah14"/>
+            <field name="order">179</field>
+            <field name="from_verse" ref="mk_surah_verses1893"/>
+            <field name="to_verse" ref="mk_surah_verses1758"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24742" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah14"/>
+            <field name="to_surah" ref="mk_surah14"/>
+            <field name="order">180</field>
+            <field name="from_verse" ref="mk_surah_verses1759"/>
+            <field name="to_verse" ref="mk_surah_verses1774"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24743" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah14"/>
+            <field name="to_surah" ref="mk_surah14"/>
+            <field name="order">181</field>
+            <field name="from_verse" ref="mk_surah_verses1775"/>
+            <field name="to_verse" ref="mk_surah_verses1792"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24744" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah14"/>
+            <field name="to_surah" ref="mk_surah13"/>
+            <field name="order">182</field>
+            <field name="from_verse" ref="mk_surah_verses1793"/>
+            <field name="to_verse" ref="mk_surah_verses1712"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24745" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah13"/>
+            <field name="to_surah" ref="mk_surah13"/>
+            <field name="order">183</field>
+            <field name="from_verse" ref="mk_surah_verses1713"/>
+            <field name="to_verse" ref="mk_surah_verses1725"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24746" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah13"/>
+            <field name="to_surah" ref="mk_surah13"/>
+            <field name="order">184</field>
+            <field name="from_verse" ref="mk_surah_verses1726"/>
+            <field name="to_verse" ref="mk_surah_verses1741"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24747" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah13"/>
+            <field name="to_surah" ref="mk_surah12"/>
+            <field name="order">185</field>
+            <field name="from_verse" ref="mk_surah_verses1742"/>
+            <field name="to_verse" ref="mk_surah_verses1602"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24748" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah12"/>
+            <field name="to_surah" ref="mk_surah12"/>
+            <field name="order">186</field>
+            <field name="from_verse" ref="mk_surah_verses1603"/>
+            <field name="to_verse" ref="mk_surah_verses1618"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24749" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah12"/>
+            <field name="to_surah" ref="mk_surah12"/>
+            <field name="order">187</field>
+            <field name="from_verse" ref="mk_surah_verses1619"/>
+            <field name="to_verse" ref="mk_surah_verses1633"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24750" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah12"/>
+            <field name="to_surah" ref="mk_surah12"/>
+            <field name="order">188</field>
+            <field name="from_verse" ref="mk_surah_verses1634"/>
+            <field name="to_verse" ref="mk_surah_verses1648"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24751" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah12"/>
+            <field name="to_surah" ref="mk_surah12"/>
+            <field name="order">189</field>
+            <field name="from_verse" ref="mk_surah_verses1649"/>
+            <field name="to_verse" ref="mk_surah_verses1665"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24752" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah12"/>
+            <field name="to_surah" ref="mk_surah12"/>
+            <field name="order">190</field>
+            <field name="from_verse" ref="mk_surah_verses1666"/>
+            <field name="to_verse" ref="mk_surah_verses1682"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24753" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah12"/>
+            <field name="to_surah" ref="mk_surah12"/>
+            <field name="order">191</field>
+            <field name="from_verse" ref="mk_surah_verses1683"/>
+            <field name="to_verse" ref="mk_surah_verses1699"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24754" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah12"/>
+            <field name="to_surah" ref="mk_surah11"/>
+            <field name="order">192</field>
+            <field name="from_verse" ref="mk_surah_verses1700"/>
+            <field name="to_verse" ref="mk_surah_verses1478"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24755" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah11"/>
+            <field name="to_surah" ref="mk_surah11"/>
+            <field name="order">193</field>
+            <field name="from_verse" ref="mk_surah_verses1479"/>
+            <field name="to_verse" ref="mk_surah_verses1492"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24756" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah11"/>
+            <field name="to_surah" ref="mk_surah11"/>
+            <field name="order">194</field>
+            <field name="from_verse" ref="mk_surah_verses1493"/>
+            <field name="to_verse" ref="mk_surah_verses1510"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24757" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah11"/>
+            <field name="to_surah" ref="mk_surah11"/>
+            <field name="order">195</field>
+            <field name="from_verse" ref="mk_surah_verses1511"/>
+            <field name="to_verse" ref="mk_surah_verses1526"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24758" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah11"/>
+            <field name="to_surah" ref="mk_surah11"/>
+            <field name="order">196</field>
+            <field name="from_verse" ref="mk_surah_verses1527"/>
+            <field name="to_verse" ref="mk_surah_verses1544"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24759" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah11"/>
+            <field name="to_surah" ref="mk_surah11"/>
+            <field name="order">197</field>
+            <field name="from_verse" ref="mk_surah_verses1545"/>
+            <field name="to_verse" ref="mk_surah_verses1561"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24760" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah11"/>
+            <field name="to_surah" ref="mk_surah11"/>
+            <field name="order">198</field>
+            <field name="from_verse" ref="mk_surah_verses1562"/>
+            <field name="to_verse" ref="mk_surah_verses1581"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24761" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah11"/>
+            <field name="to_surah" ref="mk_surah11"/>
+            <field name="order">199</field>
+            <field name="from_verse" ref="mk_surah_verses1582"/>
+            <field name="to_verse" ref="mk_surah_verses1596"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24762" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah10"/>
+            <field name="to_surah" ref="mk_surah10"/>
+            <field name="order">200</field>
+            <field name="from_verse" ref="mk_surah_verses1365"/>
+            <field name="to_verse" ref="mk_surah_verses1378"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24763" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah10"/>
+            <field name="to_surah" ref="mk_surah10"/>
+            <field name="order">201</field>
+            <field name="from_verse" ref="mk_surah_verses1379"/>
+            <field name="to_verse" ref="mk_surah_verses1389"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24764" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah10"/>
+            <field name="to_surah" ref="mk_surah10"/>
+            <field name="order">202</field>
+            <field name="from_verse" ref="mk_surah_verses1390"/>
+            <field name="to_verse" ref="mk_surah_verses1406"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24765" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah10"/>
+            <field name="to_surah" ref="mk_surah10"/>
+            <field name="order">203</field>
+            <field name="from_verse" ref="mk_surah_verses1407"/>
+            <field name="to_verse" ref="mk_surah_verses1425"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24766" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah10"/>
+            <field name="to_surah" ref="mk_surah10"/>
+            <field name="order">204</field>
+            <field name="from_verse" ref="mk_surah_verses1426"/>
+            <field name="to_verse" ref="mk_surah_verses1442"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24767" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah10"/>
+            <field name="to_surah" ref="mk_surah10"/>
+            <field name="order">205</field>
+            <field name="from_verse" ref="mk_surah_verses1443"/>
+            <field name="to_verse" ref="mk_surah_verses1461"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24768" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah10"/>
+            <field name="to_surah" ref="mk_surah9"/>
+            <field name="order">206</field>
+            <field name="from_verse" ref="mk_surah_verses1462"/>
+            <field name="to_verse" ref="mk_surah_verses1239"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24769" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah9"/>
+            <field name="to_surah" ref="mk_surah9"/>
+            <field name="order">207</field>
+            <field name="from_verse" ref="mk_surah_verses1240"/>
+            <field name="to_verse" ref="mk_surah_verses1251"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24770" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah9"/>
+            <field name="to_surah" ref="mk_surah9"/>
+            <field name="order">208</field>
+            <field name="from_verse" ref="mk_surah_verses1252"/>
+            <field name="to_verse" ref="mk_surah_verses1261"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24771" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah9"/>
+            <field name="to_surah" ref="mk_surah9"/>
+            <field name="order">209</field>
+            <field name="from_verse" ref="mk_surah_verses1262"/>
+            <field name="to_verse" ref="mk_surah_verses1271"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24772" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah9"/>
+            <field name="to_surah" ref="mk_surah9"/>
+            <field name="order">210</field>
+            <field name="from_verse" ref="mk_surah_verses1272"/>
+            <field name="to_verse" ref="mk_surah_verses1282"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24773" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah9"/>
+            <field name="to_surah" ref="mk_surah9"/>
+            <field name="order">211</field>
+            <field name="from_verse" ref="mk_surah_verses1283"/>
+            <field name="to_verse" ref="mk_surah_verses1296"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24774" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah9"/>
+            <field name="to_surah" ref="mk_surah9"/>
+            <field name="order">212</field>
+            <field name="from_verse" ref="mk_surah_verses1297"/>
+            <field name="to_verse" ref="mk_surah_verses1307"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24775" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah9"/>
+            <field name="to_surah" ref="mk_surah9"/>
+            <field name="order">213</field>
+            <field name="from_verse" ref="mk_surah_verses1308"/>
+            <field name="to_verse" ref="mk_surah_verses1321"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24776" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah9"/>
+            <field name="to_surah" ref="mk_surah9"/>
+            <field name="order">214</field>
+            <field name="from_verse" ref="mk_surah_verses1322"/>
+            <field name="to_verse" ref="mk_surah_verses1334"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24777" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah9"/>
+            <field name="to_surah" ref="mk_surah9"/>
+            <field name="order">215</field>
+            <field name="from_verse" ref="mk_surah_verses1335"/>
+            <field name="to_verse" ref="mk_surah_verses1346"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24778" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah9"/>
+            <field name="to_surah" ref="mk_surah9"/>
+            <field name="order">216</field>
+            <field name="from_verse" ref="mk_surah_verses1347"/>
+            <field name="to_verse" ref="mk_surah_verses1357"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24779" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah9"/>
+            <field name="to_surah" ref="mk_surah8"/>
+            <field name="order">217</field>
+            <field name="from_verse" ref="mk_surah_verses1358"/>
+            <field name="to_verse" ref="mk_surah_verses1168"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24780" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah8"/>
+            <field name="to_surah" ref="mk_surah8"/>
+            <field name="order">218</field>
+            <field name="from_verse" ref="mk_surah_verses1169"/>
+            <field name="to_verse" ref="mk_surah_verses1185"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24781" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah8"/>
+            <field name="to_surah" ref="mk_surah8"/>
+            <field name="order">219</field>
+            <field name="from_verse" ref="mk_surah_verses1186"/>
+            <field name="to_verse" ref="mk_surah_verses1200"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24782" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah8"/>
+            <field name="to_surah" ref="mk_surah8"/>
+            <field name="order">220</field>
+            <field name="from_verse" ref="mk_surah_verses1201"/>
+            <field name="to_verse" ref="mk_surah_verses1212"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24783" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah8"/>
+            <field name="to_surah" ref="mk_surah8"/>
+            <field name="order">221</field>
+            <field name="from_verse" ref="mk_surah_verses1213"/>
+            <field name="to_verse" ref="mk_surah_verses1229"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24784" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah8"/>
+            <field name="to_surah" ref="mk_surah7"/>
+            <field name="order">222</field>
+            <field name="from_verse" ref="mk_surah_verses1230"/>
+            <field name="to_verse" ref="mk_surah_verses965"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24785" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah7"/>
+            <field name="to_surah" ref="mk_surah7"/>
+            <field name="order">223</field>
+            <field name="from_verse" ref="mk_surah_verses966"/>
+            <field name="to_verse" ref="mk_surah_verses984"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24786" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah7"/>
+            <field name="to_surah" ref="mk_surah7"/>
+            <field name="order">224</field>
+            <field name="from_verse" ref="mk_surah_verses985"/>
+            <field name="to_verse" ref="mk_surah_verses997"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24787" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah7"/>
+            <field name="to_surah" ref="mk_surah7"/>
+            <field name="order">225</field>
+            <field name="from_verse" ref="mk_surah_verses998"/>
+            <field name="to_verse" ref="mk_surah_verses1011"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24788" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah7"/>
+            <field name="to_surah" ref="mk_surah7"/>
+            <field name="order">226</field>
+            <field name="from_verse" ref="mk_surah_verses1012"/>
+            <field name="to_verse" ref="mk_surah_verses1027"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24789" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah7"/>
+            <field name="to_surah" ref="mk_surah7"/>
+            <field name="order">227</field>
+            <field name="from_verse" ref="mk_surah_verses1028"/>
+            <field name="to_verse" ref="mk_surah_verses1041"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24790" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah7"/>
+            <field name="to_surah" ref="mk_surah7"/>
+            <field name="order">228</field>
+            <field name="from_verse" ref="mk_surah_verses1042"/>
+            <field name="to_verse" ref="mk_surah_verses1058"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24791" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah7"/>
+            <field name="to_surah" ref="mk_surah7"/>
+            <field name="order">229</field>
+            <field name="from_verse" ref="mk_surah_verses1059"/>
+            <field name="to_verse" ref="mk_surah_verses1084"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24792" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah7"/>
+            <field name="to_surah" ref="mk_surah7"/>
+            <field name="order">230</field>
+            <field name="from_verse" ref="mk_surah_verses1085"/>
+            <field name="to_verse" ref="mk_surah_verses1097"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24793" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah7"/>
+            <field name="to_surah" ref="mk_surah7"/>
+            <field name="order">231</field>
+            <field name="from_verse" ref="mk_surah_verses1098"/>
+            <field name="to_verse" ref="mk_surah_verses1109"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24794" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah7"/>
+            <field name="to_surah" ref="mk_surah7"/>
+            <field name="order">232</field>
+            <field name="from_verse" ref="mk_surah_verses1110"/>
+            <field name="to_verse" ref="mk_surah_verses1117"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24795" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah7"/>
+            <field name="to_surah" ref="mk_surah7"/>
+            <field name="order">233</field>
+            <field name="from_verse" ref="mk_surah_verses1118"/>
+            <field name="to_verse" ref="mk_surah_verses1132"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24796" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah7"/>
+            <field name="to_surah" ref="mk_surah7"/>
+            <field name="order">234</field>
+            <field name="from_verse" ref="mk_surah_verses1133"/>
+            <field name="to_verse" ref="mk_surah_verses1149"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24797" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah7"/>
+            <field name="to_surah" ref="mk_surah6"/>
+            <field name="order">235</field>
+            <field name="from_verse" ref="mk_surah_verses1150"/>
+            <field name="to_verse" ref="mk_surah_verses797"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24798" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah6"/>
+            <field name="to_surah" ref="mk_surah6"/>
+            <field name="order">236</field>
+            <field name="from_verse" ref="mk_surah_verses798"/>
+            <field name="to_verse" ref="mk_surah_verses816"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24799" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah6"/>
+            <field name="to_surah" ref="mk_surah6"/>
+            <field name="order">237</field>
+            <field name="from_verse" ref="mk_surah_verses817"/>
+            <field name="to_verse" ref="mk_surah_verses833"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24800" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah6"/>
+            <field name="to_surah" ref="mk_surah6"/>
+            <field name="order">238</field>
+            <field name="from_verse" ref="mk_surah_verses834"/>
+            <field name="to_verse" ref="mk_surah_verses848"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24801" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah6"/>
+            <field name="to_surah" ref="mk_surah6"/>
+            <field name="order">239</field>
+            <field name="from_verse" ref="mk_surah_verses849"/>
+            <field name="to_verse" ref="mk_surah_verses862"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24802" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah6"/>
+            <field name="to_surah" ref="mk_surah6"/>
+            <field name="order">240</field>
+            <field name="from_verse" ref="mk_surah_verses863"/>
+            <field name="to_verse" ref="mk_surah_verses879"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24803" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah6"/>
+            <field name="to_surah" ref="mk_surah6"/>
+            <field name="order">241</field>
+            <field name="from_verse" ref="mk_surah_verses880"/>
+            <field name="to_verse" ref="mk_surah_verses890"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24804" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah6"/>
+            <field name="to_surah" ref="mk_surah6"/>
+            <field name="order">242</field>
+            <field name="from_verse" ref="mk_surah_verses891"/>
+            <field name="to_verse" ref="mk_surah_verses907"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24805" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah6"/>
+            <field name="to_surah" ref="mk_surah6"/>
+            <field name="order">243</field>
+            <field name="from_verse" ref="mk_surah_verses908"/>
+            <field name="to_verse" ref="mk_surah_verses920"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24806" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah6"/>
+            <field name="to_surah" ref="mk_surah6"/>
+            <field name="order">244</field>
+            <field name="from_verse" ref="mk_surah_verses921"/>
+            <field name="to_verse" ref="mk_surah_verses931"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24807" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah6"/>
+            <field name="to_surah" ref="mk_surah6"/>
+            <field name="order">245</field>
+            <field name="from_verse" ref="mk_surah_verses932"/>
+            <field name="to_verse" ref="mk_surah_verses940"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24808" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah6"/>
+            <field name="to_surah" ref="mk_surah6"/>
+            <field name="order">246</field>
+            <field name="from_verse" ref="mk_surah_verses941"/>
+            <field name="to_verse" ref="mk_surah_verses954"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24809" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah5"/>
+            <field name="to_surah" ref="mk_surah5"/>
+            <field name="order">247</field>
+            <field name="from_verse" ref="mk_surah_verses670"/>
+            <field name="to_verse" ref="mk_surah_verses675"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24810" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah5"/>
+            <field name="to_surah" ref="mk_surah5"/>
+            <field name="order">248</field>
+            <field name="from_verse" ref="mk_surah_verses676"/>
+            <field name="to_verse" ref="mk_surah_verses684"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24811" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah5"/>
+            <field name="to_surah" ref="mk_surah5"/>
+            <field name="order">249</field>
+            <field name="from_verse" ref="mk_surah_verses685"/>
+            <field name="to_verse" ref="mk_surah_verses696"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24812" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah5"/>
+            <field name="to_surah" ref="mk_surah5"/>
+            <field name="order">250</field>
+            <field name="from_verse" ref="mk_surah_verses697"/>
+            <field name="to_verse" ref="mk_surah_verses707"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24813" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah5"/>
+            <field name="to_surah" ref="mk_surah5"/>
+            <field name="order">251</field>
+            <field name="from_verse" ref="mk_surah_verses708"/>
+            <field name="to_verse" ref="mk_surah_verses714"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24814" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah5"/>
+            <field name="to_surah" ref="mk_surah5"/>
+            <field name="order">252</field>
+            <field name="from_verse" ref="mk_surah_verses715"/>
+            <field name="to_verse" ref="mk_surah_verses726"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24815" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah5"/>
+            <field name="to_surah" ref="mk_surah5"/>
+            <field name="order">253</field>
+            <field name="from_verse" ref="mk_surah_verses727"/>
+            <field name="to_verse" ref="mk_surah_verses739"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24816" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah5"/>
+            <field name="to_surah" ref="mk_surah5"/>
+            <field name="order">254</field>
+            <field name="from_verse" ref="mk_surah_verses740"/>
+            <field name="to_verse" ref="mk_surah_verses751"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24817" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah5"/>
+            <field name="to_surah" ref="mk_surah5"/>
+            <field name="order">255</field>
+            <field name="from_verse" ref="mk_surah_verses752"/>
+            <field name="to_verse" ref="mk_surah_verses764"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24818" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah5"/>
+            <field name="to_surah" ref="mk_surah5"/>
+            <field name="order">256</field>
+            <field name="from_verse" ref="mk_surah_verses765"/>
+            <field name="to_verse" ref="mk_surah_verses777"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24819" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah5"/>
+            <field name="to_surah" ref="mk_surah5"/>
+            <field name="order">257</field>
+            <field name="from_verse" ref="mk_surah_verses778"/>
+            <field name="to_verse" ref="mk_surah_verses789"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24820" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah4"/>
+            <field name="to_surah" ref="mk_surah4"/>
+            <field name="order">258</field>
+            <field name="from_verse" ref="mk_surah_verses494"/>
+            <field name="to_verse" ref="mk_surah_verses504"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24821" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah4"/>
+            <field name="to_surah" ref="mk_surah4"/>
+            <field name="order">259</field>
+            <field name="from_verse" ref="mk_surah_verses505"/>
+            <field name="to_verse" ref="mk_surah_verses512"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24822" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah4"/>
+            <field name="to_surah" ref="mk_surah4"/>
+            <field name="order">260</field>
+            <field name="from_verse" ref="mk_surah_verses513"/>
+            <field name="to_verse" ref="mk_surah_verses519"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24823" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah4"/>
+            <field name="to_surah" ref="mk_surah4"/>
+            <field name="order">261</field>
+            <field name="from_verse" ref="mk_surah_verses520"/>
+            <field name="to_verse" ref="mk_surah_verses530"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24824" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah4"/>
+            <field name="to_surah" ref="mk_surah4"/>
+            <field name="order">262</field>
+            <field name="from_verse" ref="mk_surah_verses531"/>
+            <field name="to_verse" ref="mk_surah_verses544"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24825" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah4"/>
+            <field name="to_surah" ref="mk_surah4"/>
+            <field name="order">263</field>
+            <field name="from_verse" ref="mk_surah_verses545"/>
+            <field name="to_verse" ref="mk_surah_verses558"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24826" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah4"/>
+            <field name="to_surah" ref="mk_surah4"/>
+            <field name="order">264</field>
+            <field name="from_verse" ref="mk_surah_verses559"/>
+            <field name="to_verse" ref="mk_surah_verses572"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24827" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah4"/>
+            <field name="to_surah" ref="mk_surah4"/>
+            <field name="order">265</field>
+            <field name="from_verse" ref="mk_surah_verses573"/>
+            <field name="to_verse" ref="mk_surah_verses584"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24828" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah4"/>
+            <field name="to_surah" ref="mk_surah4"/>
+            <field name="order">266</field>
+            <field name="from_verse" ref="mk_surah_verses585"/>
+            <field name="to_verse" ref="mk_surah_verses594"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24829" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah4"/>
+            <field name="to_surah" ref="mk_surah4"/>
+            <field name="order">267</field>
+            <field name="from_verse" ref="mk_surah_verses595"/>
+            <field name="to_verse" ref="mk_surah_verses606"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24830" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah4"/>
+            <field name="to_surah" ref="mk_surah4"/>
+            <field name="order">268</field>
+            <field name="from_verse" ref="mk_surah_verses607"/>
+            <field name="to_verse" ref="mk_surah_verses620"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24831" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah4"/>
+            <field name="to_surah" ref="mk_surah4"/>
+            <field name="order">269</field>
+            <field name="from_verse" ref="mk_surah_verses621"/>
+            <field name="to_verse" ref="mk_surah_verses633"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24832" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah4"/>
+            <field name="to_surah" ref="mk_surah4"/>
+            <field name="order">270</field>
+            <field name="from_verse" ref="mk_surah_verses634"/>
+            <field name="to_verse" ref="mk_surah_verses647"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24833" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah4"/>
+            <field name="to_surah" ref="mk_surah4"/>
+            <field name="order">271</field>
+            <field name="from_verse" ref="mk_surah_verses648"/>
+            <field name="to_verse" ref="mk_surah_verses663"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24834" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah4"/>
+            <field name="to_surah" ref="mk_surah3"/>
+            <field name="order">272</field>
+            <field name="from_verse" ref="mk_surah_verses664"/>
+            <field name="to_verse" ref="mk_surah_verses300"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24835" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah3"/>
+            <field name="to_surah" ref="mk_surah3"/>
+            <field name="order">273</field>
+            <field name="from_verse" ref="mk_surah_verses301"/>
+            <field name="to_verse" ref="mk_surah_verses313"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24836" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah3"/>
+            <field name="to_surah" ref="mk_surah3"/>
+            <field name="order">274</field>
+            <field name="from_verse" ref="mk_surah_verses314"/>
+            <field name="to_verse" ref="mk_surah_verses328"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24837" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah3"/>
+            <field name="to_surah" ref="mk_surah3"/>
+            <field name="order">275</field>
+            <field name="from_verse" ref="mk_surah_verses329"/>
+            <field name="to_verse" ref="mk_surah_verses342"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24838" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah3"/>
+            <field name="to_surah" ref="mk_surah3"/>
+            <field name="order">276</field>
+            <field name="from_verse" ref="mk_surah_verses343"/>
+            <field name="to_verse" ref="mk_surah_verses359"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24839" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah3"/>
+            <field name="to_surah" ref="mk_surah3"/>
+            <field name="order">277</field>
+            <field name="from_verse" ref="mk_surah_verses360"/>
+            <field name="to_verse" ref="mk_surah_verses372"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24840" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah3"/>
+            <field name="to_surah" ref="mk_surah3"/>
+            <field name="order">278</field>
+            <field name="from_verse" ref="mk_surah_verses373"/>
+            <field name="to_verse" ref="mk_surah_verses388"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24841" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah3"/>
+            <field name="to_surah" ref="mk_surah3"/>
+            <field name="order">279</field>
+            <field name="from_verse" ref="mk_surah_verses389"/>
+            <field name="to_verse" ref="mk_surah_verses401"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24842" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah3"/>
+            <field name="to_surah" ref="mk_surah3"/>
+            <field name="order">280</field>
+            <field name="from_verse" ref="mk_surah_verses402"/>
+            <field name="to_verse" ref="mk_surah_verses414"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24843" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah3"/>
+            <field name="to_surah" ref="mk_surah3"/>
+            <field name="order">281</field>
+            <field name="from_verse" ref="mk_surah_verses415"/>
+            <field name="to_verse" ref="mk_surah_verses433"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24844" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah3"/>
+            <field name="to_surah" ref="mk_surah3"/>
+            <field name="order">282</field>
+            <field name="from_verse" ref="mk_surah_verses434"/>
+            <field name="to_verse" ref="mk_surah_verses446"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24845" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah3"/>
+            <field name="to_surah" ref="mk_surah3"/>
+            <field name="order">283</field>
+            <field name="from_verse" ref="mk_surah_verses447"/>
+            <field name="to_verse" ref="mk_surah_verses458"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24846" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah3"/>
+            <field name="to_surah" ref="mk_surah3"/>
+            <field name="order">284</field>
+            <field name="from_verse" ref="mk_surah_verses459"/>
+            <field name="to_verse" ref="mk_surah_verses473"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24847" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah3"/>
+            <field name="to_surah" ref="mk_surah3"/>
+            <field name="order">285</field>
+            <field name="from_verse" ref="mk_surah_verses474"/>
+            <field name="to_verse" ref="mk_surah_verses487"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24848" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah3"/>
+            <field name="to_surah" ref="mk_surah2"/>
+            <field name="order">286</field>
+            <field name="from_verse" ref="mk_surah_verses488"/>
+            <field name="to_verse" ref="mk_surah_verses19"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24849" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah2"/>
+            <field name="to_surah" ref="mk_surah2"/>
+            <field name="order">287</field>
+            <field name="from_verse" ref="mk_surah_verses20"/>
+            <field name="to_verse" ref="mk_surah_verses33"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24850" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah2"/>
+            <field name="to_surah" ref="mk_surah2"/>
+            <field name="order">288</field>
+            <field name="from_verse" ref="mk_surah_verses34"/>
+            <field name="to_verse" ref="mk_surah_verses47"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24851" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah2"/>
+            <field name="to_surah" ref="mk_surah2"/>
+            <field name="order">289</field>
+            <field name="from_verse" ref="mk_surah_verses48"/>
+            <field name="to_verse" ref="mk_surah_verses64"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24852" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah2"/>
+            <field name="to_surah" ref="mk_surah2"/>
+            <field name="order">290</field>
+            <field name="from_verse" ref="mk_surah_verses65"/>
+            <field name="to_verse" ref="mk_surah_verses76"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24853" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah2"/>
+            <field name="to_surah" ref="mk_surah2"/>
+            <field name="order">291</field>
+            <field name="from_verse" ref="mk_surah_verses77"/>
+            <field name="to_verse" ref="mk_surah_verses90"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24854" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah2"/>
+            <field name="to_surah" ref="mk_surah2"/>
+            <field name="order">292</field>
+            <field name="from_verse" ref="mk_surah_verses91"/>
+            <field name="to_verse" ref="mk_surah_verses100"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24855" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah2"/>
+            <field name="to_surah" ref="mk_surah2"/>
+            <field name="order">293</field>
+            <field name="from_verse" ref="mk_surah_verses101"/>
+            <field name="to_verse" ref="mk_surah_verses112"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24856" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah2"/>
+            <field name="to_surah" ref="mk_surah2"/>
+            <field name="order">294</field>
+            <field name="from_verse" ref="mk_surah_verses113"/>
+            <field name="to_verse" ref="mk_surah_verses126"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24857" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah2"/>
+            <field name="to_surah" ref="mk_surah2"/>
+            <field name="order">295</field>
+            <field name="from_verse" ref="mk_surah_verses127"/>
+            <field name="to_verse" ref="mk_surah_verses141"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24858" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah2"/>
+            <field name="to_surah" ref="mk_surah2"/>
+            <field name="order">296</field>
+            <field name="from_verse" ref="mk_surah_verses142"/>
+            <field name="to_verse" ref="mk_surah_verses152"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24859" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah2"/>
+            <field name="to_surah" ref="mk_surah2"/>
+            <field name="order">297</field>
+            <field name="from_verse" ref="mk_surah_verses153"/>
+            <field name="to_verse" ref="mk_surah_verses170"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24860" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah2"/>
+            <field name="to_surah" ref="mk_surah2"/>
+            <field name="order">298</field>
+            <field name="from_verse" ref="mk_surah_verses171"/>
+            <field name="to_verse" ref="mk_surah_verses183"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24861" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah2"/>
+            <field name="to_surah" ref="mk_surah2"/>
+            <field name="order">299</field>
+            <field name="from_verse" ref="mk_surah_verses184"/>
+            <field name="to_verse" ref="mk_surah_verses193"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24862" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah2"/>
+            <field name="to_surah" ref="mk_surah2"/>
+            <field name="order">300</field>
+            <field name="from_verse" ref="mk_surah_verses194"/>
+            <field name="to_verse" ref="mk_surah_verses203"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24863" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah2"/>
+            <field name="to_surah" ref="mk_surah2"/>
+            <field name="order">301</field>
+            <field name="from_verse" ref="mk_surah_verses204"/>
+            <field name="to_verse" ref="mk_surah_verses217"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24864" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah2"/>
+            <field name="to_surah" ref="mk_surah2"/>
+            <field name="order">302</field>
+            <field name="from_verse" ref="mk_surah_verses218"/>
+            <field name="to_verse" ref="mk_surah_verses226"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24865" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah2"/>
+            <field name="to_surah" ref="mk_surah2"/>
+            <field name="order">303</field>
+            <field name="from_verse" ref="mk_surah_verses227"/>
+            <field name="to_verse" ref="mk_surah_verses237"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24866" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah2"/>
+            <field name="to_surah" ref="mk_surah2"/>
+            <field name="order">304</field>
+            <field name="from_verse" ref="mk_surah_verses238"/>
+            <field name="to_verse" ref="mk_surah_verses244"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24867" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah2"/>
+            <field name="to_surah" ref="mk_surah2"/>
+            <field name="order">305</field>
+            <field name="from_verse" ref="mk_surah_verses245"/>
+            <field name="to_verse" ref="mk_surah_verses255"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24868" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah2"/>
+            <field name="to_surah" ref="mk_surah2"/>
+            <field name="order">306</field>
+            <field name="from_verse" ref="mk_surah_verses256"/>
+            <field name="to_verse" ref="mk_surah_verses263"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24869" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah2"/>
+            <field name="to_surah" ref="mk_surah2"/>
+            <field name="order">307</field>
+            <field name="from_verse" ref="mk_surah_verses264"/>
+            <field name="to_verse" ref="mk_surah_verses271"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24870" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah2"/>
+            <field name="to_surah" ref="mk_surah2"/>
+            <field name="order">308</field>
+            <field name="from_verse" ref="mk_surah_verses272"/>
+            <field name="to_verse" ref="mk_surah_verses281"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24871" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah2"/>
+            <field name="to_surah" ref="mk_surah2"/>
+            <field name="order">309</field>
+            <field name="from_verse" ref="mk_surah_verses282"/>
+            <field name="to_verse" ref="mk_surah_verses289"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_subject_page24872" model="mk.subject.page">
+            <field name="subject_page_id" ref="mk_memorize_method16"/>
+            <field name="from_surah" ref="mk_surah2"/>
+            <field name="to_surah" ref="mk_surah1"/>
+            <field name="order">310</field>
+            <field name="from_verse" ref="mk_surah_verses290"/>
+            <field name="to_verse" ref="mk_surah_verses7"/>
+            <field name="is_test" eval="False"/>
+        </record>
+    </data>
+</odoo>

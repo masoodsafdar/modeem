@@ -1,0 +1,61 @@
+<odoo>
+    <data>
+
+        <record id="mk_days_form_view" model="ir.ui.view">
+            <field name="name">days</field>
+            <field name="model">mk.work.days</field>
+            <field name="arch" type="xml">
+                <form string="Days">
+                    <sheet>
+                        <group>
+                            <field name="name" required="1"/>
+                            <field name="order" required="1"/>
+                            <field name="active"/>
+                        </group>
+
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+        <record id="mk_days_tree_view" model="ir.ui.view">
+            <field name="name">days Tree View</field>
+            <field name="model">mk.work.days</field>
+            <field name="arch" type="xml">
+                <tree delete="0" string="Days ">
+                    <field name="name"/>
+                    <field name="order" widget="handle"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="mk_work_days_search_view" model="ir.ui.view">
+            <field name="name">days Search View</field>
+            <field name="model">mk.work.days</field>
+            <field name="arch" type="xml">
+                <search string="Days">
+                    <field name="name"/>
+                    <filter domain="[('active','=',False)]" name="active" string="Un Active"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="mk_days_action" model="ir.actions.act_window">
+            <field name="name">Days</field>
+            <field name="res_model">mk.work.days</field>
+            <field name="type">ir.actions.act_window</field>
+            <!-- <field name="view_type">form</field> -->
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+            <field name="search_view_id" ref="mk_work_days_search_view"/>
+        </record>
+
+        <menuitem name="Days" id="mk_days_menu" sequence="9" parent="mk_episode_management_settings_menu"
+                  action="mk_days_action"/>
+
+    </data>
+</odoo>

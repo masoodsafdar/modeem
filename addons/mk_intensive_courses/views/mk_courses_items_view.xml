@@ -1,0 +1,59 @@
+
+<odoo>
+    <data>
+    
+ 	<record id="mk_courses__items_form_view" model="ir.ui.view">
+        <field name="name">Courses Items Form </field>
+        <field name="model">mk.courses.items</field>
+        <field name="arch" type="xml">
+            <form string = "Courses Items">
+		  	   <sheet>
+		  	  		<group col="4">
+			  			<field name="name" required="1"/>
+                        <field name="description"/>
+			  			<field name="type_courses_ids" required="1"/> 
+		  			</group>
+		  		</sheet>
+		  	</form>
+		</field>
+	</record>
+    <record id="mk_courses__items_tree_view" model="ir.ui.view">
+        <field name="name">Courses Items Tree</field>
+        <field name="model">mk.courses.items</field>
+        <field name="arch" type="xml">
+            <tree delete="0" string="Types Courses">
+            	<field name="name" required="1"/>
+			  	<field name="type_course" required="1"/>
+            </tree>
+        </field>
+    </record>
+
+	<record id="mk_courses_items_search_view" model="ir.ui.view">
+       <field name="name">mk courses items search</field>
+   	   <field name="model">mk.courses.items</field>
+       <field name="arch" type="xml">
+	    	<search>
+	    		<field name="name"/> 
+	    		<field name="type_courses_ids"/> 
+	    		
+	    		<group expand="0" string="Group By">
+	              <filter name="type_course_id"    string="نوع الدورة" context="{'group_by': 'type_courses_ids'}"/>    
+	           </group>
+	    	</search>
+       </field>
+	</record>
+			
+    <record id="mk_courses_items_action" model="ir.actions.act_window">
+        <field name="name">Courses Items </field>
+        <field name="res_model">mk.courses.items</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+	<menuitem name="Courses Items" id="courses_items_menu" sequence="2" parent="mk_courses_config_menu" groups="mk_intensive_courses.read_course_items,mk_intensive_courses.edit_course_items,mk_intensive_courses.write_course_items"
+		action="mk_courses_items_action"/>    
+<!-- groups="read_course_items,edit_course_items,write_course_items"/-->
+
+    </data>  
+</odoo>

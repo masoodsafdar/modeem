@@ -1,0 +1,124 @@
+<odoo>
+    <data noupdate="1">
+        <record id="mk_student_prepare_history1" model="mk.student.prepare.history">
+            <field name="preparation_id" ref="mk_student_prepare1"/>
+            <field name="date_start">2020-10-27</field>
+            <field name="type_subject">m</field>
+            <field name="qty_id" ref="mk_memorize_method1"/>
+            <field name="surah_from_id" ref="mk_surah1"/>
+            <field name="aya_from_id" ref="mk_surah_verses1"/>
+            <field name="direction">up</field>
+            <field name="start_point_id" ref="mk_subject_page6238"/>
+        </record>
+        <record id="mk_student_prepare_history2" model="mk.student.prepare.history">
+            <field name="preparation_id" ref="mk_student_prepare1"/>
+            <field name="date_start">2020-10-27</field>
+            <field name="type_subject">r</field>
+            <field name="qty_id" ref="mk_memorize_method1"/>
+            <field name="surah_from_id" ref="mk_surah1"/>
+            <field name="aya_from_id" ref="mk_surah_verses1"/>
+            <field name="direction">up</field>
+            <field name="start_point_id" ref="mk_subject_page6238"/>
+        </record>
+        <record id="mk_student_prepare_history3" model="mk.student.prepare.history">
+            <field name="preparation_id" ref="mk_student_prepare1"/>
+            <field name="date_start">2020-10-27</field>
+            <field name="type_subject">t</field>
+            <field name="qty_id" ref="mk_memorize_method1"/>
+            <field name="surah_from_id" ref="mk_surah1"/>
+            <field name="aya_from_id" ref="mk_surah_verses1"/>
+            <field name="direction">up</field>
+            <field name="start_point_id" ref="mk_subject_page6238"/>
+        </record>
+        <record id="mk_student_prepare_history4" model="mk.student.prepare.history">
+            <field name="preparation_id" ref="mk_student_prepare2"/>
+            <field name="date_start">2020-10-27</field>
+            <field name="type_subject">m</field>
+            <field name="qty_id" ref="mk_memorize_method1"/>
+            <field name="surah_from_id" ref="mk_surah1"/>
+            <field name="aya_from_id" ref="mk_surah_verses1"/>
+            <field name="direction">up</field>
+            <field name="start_point_id" ref="mk_subject_page6238"/>
+        </record>
+        <record id="mk_student_prepare_history5" model="mk.student.prepare.history">
+            <field name="preparation_id" ref="mk_student_prepare2"/>
+            <field name="date_start">2020-10-27</field>
+            <field name="type_subject">r</field>
+            <field name="qty_id" ref="mk_memorize_method1"/>
+            <field name="surah_from_id" ref="mk_surah1"/>
+            <field name="aya_from_id" ref="mk_surah_verses1"/>
+            <field name="direction">up</field>
+            <field name="start_point_id" ref="mk_subject_page6238"/>
+        </record>
+        <record id="mk_student_prepare_history6" model="mk.student.prepare.history">
+            <field name="preparation_id" ref="mk_student_prepare2"/>
+            <field name="date_start">2020-10-27</field>
+            <field name="type_subject">t</field>
+            <field name="qty_id" ref="mk_memorize_method1"/>
+            <field name="surah_from_id" ref="mk_surah1"/>
+            <field name="aya_from_id" ref="mk_surah_verses1"/>
+            <field name="direction">up</field>
+            <field name="start_point_id" ref="mk_subject_page6238"/>
+        </record>
+        <record id="mk_student_prepare_history7" model="mk.student.prepare.history">
+            <field name="preparation_id" ref="mk_student_prepare3"/>
+            <field name="date_start">2020-10-27</field>
+            <field name="type_subject">m</field>
+            <field name="qty_id" ref="mk_memorize_method10"/>
+            <field name="surah_from_id" ref="mk_surah2"/>
+            <field name="aya_from_id" ref="mk_surah_verses8"/>
+            <field name="direction">down</field>
+            <field name="start_point_id" ref="mk_subject_page21574"/>
+        </record>
+        <record id="mk_student_prepare_history8" model="mk.student.prepare.history">
+            <field name="preparation_id" ref="mk_student_prepare3"/>
+            <field name="date_start">2020-10-27</field>
+            <field name="type_subject">r</field>
+            <field name="qty_id" ref="mk_memorize_method10"/>
+            <field name="surah_from_id" ref="mk_surah2"/>
+            <field name="aya_from_id" ref="mk_surah_verses8"/>
+            <field name="direction">down</field>
+            <field name="start_point_id" ref="mk_subject_page21574"/>
+        </record>
+        <record id="mk_student_prepare_history9" model="mk.student.prepare.history">
+            <field name="preparation_id" ref="mk_student_prepare3"/>
+            <field name="date_start">2020-10-27</field>
+            <field name="type_subject">t</field>
+            <field name="qty_id" ref="mk_memorize_method10"/>
+            <field name="surah_from_id" ref="mk_surah2"/>
+            <field name="aya_from_id" ref="mk_surah_verses8"/>
+            <field name="direction">down</field>
+            <field name="start_point_id" ref="mk_subject_page21574"/>
+        </record>
+        <record id="mk_student_prepare_history10" model="mk.student.prepare.history">
+            <field name="preparation_id" ref="mk_student_prepare4"/>
+            <field name="date_start">2020-10-27</field>
+            <field name="type_subject">m</field>
+            <field name="qty_id" ref="mk_memorize_method10"/>
+            <field name="surah_from_id" ref="mk_surah2"/>
+            <field name="aya_from_id" ref="mk_surah_verses8"/>
+            <field name="direction">down</field>
+            <field name="start_point_id" ref="mk_subject_page21574"/>
+        </record>
+        <record id="mk_student_prepare_history11" model="mk.student.prepare.history">
+            <field name="preparation_id" ref="mk_student_prepare4"/>
+            <field name="date_start">2020-10-27</field>
+            <field name="type_subject">r</field>
+            <field name="qty_id" ref="mk_memorize_method10"/>
+            <field name="surah_from_id" ref="mk_surah2"/>
+            <field name="aya_from_id" ref="mk_surah_verses8"/>
+            <field name="direction">down</field>
+            <field name="start_point_id" ref="mk_subject_page21574"/>
+        </record>
+        <record id="mk_student_prepare_history12" model="mk.student.prepare.history">
+            <field name="preparation_id" ref="mk_student_prepare4"/>
+            <field name="date_start">2020-10-27</field>
+            <field name="type_subject">t</field>
+            <field name="qty_id" ref="mk_memorize_method10"/>
+            <field name="surah_from_id" ref="mk_surah2"/>
+            <field name="aya_from_id" ref="mk_surah_verses8"/>
+            <field name="direction">down</field>
+            <field name="start_point_id" ref="mk_subject_page21574"/>
+        </record>
+    </data>
+</odoo>

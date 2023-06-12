@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">	
+
+	<record model="edu.item" id="item1">	
+	<field name="name">عدد المعلمين المستفيدين من البرامج العلاجية</field>	
+	<field name="item_degree">8</field>	
+	<field name="item_description">حصر المعلمين الضعاف وإشراكهم في برامج علاجية</field>	
+	<field name="criterion" ref="educational_supervison.criterion1"/>	
+	<field name="item_type">date</field>
+	</record>
+	
+	<record model="edu.item" id="item2">	
+	<field name="name">عدد المعلمين المؤهلين على رخصة المعلم</field>	
+	<field name="item_degree">12</field>	
+	<field name="item_description">ترشيحهم ومتابعتهم حتى حصولهم على الرخصة</field>	
+	<field name="criterion" ref="educational_supervison.criterion1"/>	
+	<field name="item_type">date</field>
+	</record>
+	
+	<record model="edu.item" id="item3">	
+	<field name="name">عدد مشرفي المجمعات المؤهلين على رخصة مشرف</field>	
+	<field name="item_degree">8</field>	
+	<field name="item_description">ترشيحهم ومتابعتهم حتى حصولهم على الرخصة</field>	
+	<field name="criterion" ref="educational_supervison.criterion1"/>	
+	<field name="item_type">date</field>
+	</record>
+	
+	<record model="edu.item" id="item4">	
+	<field name="name">عدد معلمي المرحلة الابتدائية المؤهلين ( ناشئ)</field>	
+	<field name="item_degree">4</field>	
+	<field name="item_description">ترشيحهم ومتابعتهم حتى حصولهم على الرخصة</field>	
+	<field name="criterion" ref="educational_supervison.criterion1"/>	
+	<field name="item_type">date</field>
+	</record>
+	
+	<record model="edu.item" id="item5">	
+	<field name="name">عدد المعلمين المؤهلين لتعليم الصغار ( التبيان )</field>	
+	<field name="item_degree">4</field>	
+	<field name="item_description">ترشيحهم ومتابعتهم حتى حصولهم على الرخصة</field>	
+	<field name="criterion" ref="educational_supervison.criterion1"/>	
+	<field name="item_type">date</field>
+	</record>
+	
+	<record model="edu.item" id="item6">	
+	<field name="name">عدد المعلمين المؤهلين لتطبيق برامج التدبر</field>	
+	<field name="item_degree">4</field>	
+	<field name="item_description">ترشيحهم ومتابعتهم حتى حصولهم على الرخصة</field>	
+	<field name="criterion" ref="educational_supervison.criterion1"/>	
+	<field name="item_type">date</field>
+	</record>
+	
+	<record model="edu.item" id="item7">	
+	<field name="name">عدد المعلمين المتميزين المرشحين لتنفيذ برامج تعليمية نوعية مثل : ( رائدة - مقارئ - نور البيان - لغتي الممتعة ... )</field>	
+	<field name="item_degree">4</field>	
+	<field name="item_description">اكتشافهم والرفع بأسمائهم للمركز</field>	
+	<field name="criterion" ref="educational_supervison.criterion2"/>	
+	<field name="item_type">date</field>
+	</record>
+	
+	<record model="edu.item" id="item8">	
+	<field name="name">عدد المعلمين المتميزين المشاركين في تنفيذ برامج تربوية نوعية مثل : ( التدبر - جيل القرآن - روافد .... )</field>	
+	<field name="item_degree">4</field>	
+	<field name="item_description">تفعيل المعلمين المتميزين</field>	
+	<field name="criterion" ref="educational_supervison.criterion2"/>	
+	<field name="item_type">date</field>
+	</record>
+	
+	<record model="edu.item" id="item9">	
+	<field name="name">عدد المعلمين المشاركين في تقديم برامج تطويرية للمعلمين والطلاب (( دورات - ورش عمل - دروس نموذجية ))</field>	
+	<field name="item_degree">0</field>	
+	<field name="item_description">تفعيل المعلمين المتميزين</field>	
+	<field name="criterion" ref="educational_supervison.criterion2"/>	
+	<field name="item_type">date</field>
+	</record>
+	
+	<record model="edu.item" id="item10">	
+	<field name="name">عدد البرامج التعليمية والتربوية المقدمة للميدان</field>	
+	<field name="item_degree">4</field>	
+	<field name="item_description">يقدمها المشرف بنفسه</field>	
+	<field name="criterion" ref="educational_supervison.criterion3"/>	
+	<field name="item_type">visit</field>
+	</record>
+	
+	<record model="edu.item" id="item11">	
+	<field name="name">عدد البرامج التطويرية الإدارية المقدمة للميدان</field>	
+	<field name="item_degree">0</field>	
+	<field name="item_description">يقدمها المشرف بنفسه</field>	
+	<field name="criterion" ref="educational_supervison.criterion3"/>	
+	<field name="item_type">visit</field>
+	</record>
+	
+	<record model="edu.item" id="item12">	
+	<field name="name">عدد المساجد المطبقة لخطط تعليمية في الحفظ والمراجعة</field>	
+	<field name="item_degree">6</field>	
+	<field name="item_description">تفعيل المساجد في تطبيق الخطط التعليمية</field>	
+	<field name="criterion" ref="educational_supervison.criterion4"/>	
+	<field name="item_type">date</field>
+	</record>
+	
+	<record model="edu.item" id="item13">	
+	<field name="name">عدد المساجد المطبقة لبرنامج روافد التربوي</field>	
+	<field name="item_degree">6</field>	
+	<field name="item_description">تفعيل المساجد في تطبيق البرنامج</field>	
+	<field name="criterion" ref="educational_supervison.criterion4"/>	
+	<field name="item_type">date</field>
+	</record>
+	
+	<record model="edu.item" id="item14">	
+	<field name="name">عدد المساجد المطبقة لجيل القرآن</field>	
+	<field name="item_degree">4</field>	
+	<field name="item_description">تفعيل المساجد في تطبيق البرنامج</field>	
+	<field name="criterion" ref="educational_supervison.criterion4"/>	
+	<field name="item_type">date</field>
+	</record>
+	
+	<record model="edu.item" id="item15">	
+	<field name="name">عدد المساجد المطبقة لكان خلقه القرآن</field>	
+	<field name="item_degree">4</field>	
+	<field name="item_description">تفعيل المساجد في تطبيق البرنامج</field>	
+	<field name="criterion" ref="educational_supervison.criterion4"/>	
+	<field name="item_type">date</field>
+	</record>
+	
+	<record model="edu.item" id="item16">	
+	<field name="name">عدد المساجد المطبقة لبرنامج مجالس التدبر </field>	
+	<field name="item_degree">4</field>	
+	<field name="item_description">تفعيل المساجد في تطبيق البرنامج</field>	
+	<field name="criterion" ref="educational_supervison.criterion4"/>	
+	<field name="item_type">date</field>
+	</record>
+	
+	<record model="edu.item" id="item17">	
+	<field name="name">عدد المجتازين في الاختبارات ( الأجزاء )</field>	
+	<field name="item_degree">14</field>	
+	<field name="item_description">تحقيق مؤشر المركز</field>	
+	<field name="criterion" ref="educational_supervison.criterion5"/>	
+	<field name="item_type">date</field>
+	</record>
+	
+	<record model="edu.item" id="item18">	
+	<field name="name">عدد المجتازين في الاختبارات ( الخاتمين )</field>	
+	<field name="item_degree">14</field>	
+	<field name="item_description">تحقيق مؤشر المركز</field>	
+	<field name="criterion" ref="educational_supervison.criterion5"/>	
+	<field name="item_type">date</field>
+	</record>
+	
+	<record model="edu.item" id="item19">	
+	<field name="name">عدد الطلاب المشاركين في البرامج التربوية المعتمدة من الجمعية</field>	
+	<field name="item_degree">6</field>	
+	<field name="item_description">تحقيق مؤشر المركز</field>	
+	<field name="criterion" ref="educational_supervison.criterion5"/>	
+	<field name="item_type">date</field>
+	</record>
+	
+	<record model="edu.item" id="item20">	
+	<field name="name">عدد الحاصلين على إجازة من مقارئ المركز</field>	
+	<field name="item_degree">4</field>	
+	<field name="item_description">تحقيق مؤشر المركز</field>	
+	<field name="criterion" ref="educational_supervison.criterion5"/>	
+	<field name="item_type">date</field>
+	</record>
+	
+	<record model="edu.item" id="item21">	
+	<field name="name">عدد الطلاب المشاركين في برامج تصحيح التلاوة</field>	
+	<field name="item_degree">4</field>	
+	<field name="item_description">تحقيق مؤشر المركز</field>	
+	<field name="criterion" ref="educational_supervison.criterion5"/>	
+	<field name="item_type">date</field>
+	</record>
+	
+	<record model="edu.item" id="item22">	
+	<field name="name">	عدد المرشحين على مستوى المركز للدخول في تصفية المسابقات</field>	
+	<field name="item_degree">2</field>	
+	<field name="item_description">تحقيق مؤشر المركز</field>	
+	<field name="criterion" ref="educational_supervison.criterion5"/>	
+	<field name="item_type">date</field>
+	</record>
+	
+	<record model="edu.item" id="item23">	
+	<field name="name">عدد المجمعات القرآنية التي عقدت شراكات مع معاهد المعلمين</field>	
+	<field name="item_degree">3</field>	
+	<field name="item_description">	توقيع مجمعين قرآنيين شراكات مع معهد إعداد المعلمين</field>	
+	<field name="criterion" ref="educational_supervison.criterion6"/>	
+	<field name="item_type">date</field>
+	</record>
+	
+	<record model="edu.item" id="item24">	
+	<field name="name">نسبة المساجد المطبقة والمستوفية لبيانات برنامج تاج الالكتروني</field>	
+	<field name="item_degree">3</field>	
+	<field name="item_description">تحقيق نسبة 100% من المساجد المطبقة والمستوفية لبيانات برنامج تاج الالكتروني</field>	
+	<field name="criterion" ref="educational_supervison.criterion6"/>	
+	<field name="item_type">date</field>
+	</record>
+	
+	<record model="edu.item" id="item25">	
+	<field name="name">نسبة تصاريح المساجد المجددة من إجمالي التصاريح المنتهية</field>	
+	<field name="item_degree">2</field>	
+	<field name="item_description">تحقيق نسبة 100% من تصاريح المساجد المجددة من إجمالي التصاريح المنتهية</field>	
+	<field name="criterion" ref="educational_supervison.criterion6"/>	
+	<field name="item_type">date</field>
+	</record>
+	
+	<record model="edu.item" id="item26">	
+	<field name="name">نسبة التكاليف المجددة من إجمالي التكاليف المنتهية</field>	
+	<field name="item_degree">2</field>	
+	<field name="item_description">تحقيق نسبة 100% من التكاليف المجددة من إجمالي التكاليف المنتهية</field>	
+	<field name="criterion" ref="educational_supervison.criterion6"/>	
+	<field name="item_type">date</field>
+	</record>
+	
+	<record model="edu.item" id="item27">	
+	<field name="name">نسبة المجمعات والحلقات المحققة لمعايير التميز بدرجة لا تقل عن 85%</field>	
+	<field name="item_degree">2</field>	
+	<field name="item_description">	تحقيق 50% من المجمعات والحلقات لدرجة لا تقل عن 85% من معايير التميز </field>	
+	<field name="criterion" ref="educational_supervison.criterion6"/>	
+	<field name="item_type">date</field>
+	</record>
+	
+	<record model="edu.item" id="item28">	
+	<field name="name">نسبة الدورات الصيفية المحققة لمعايير التميز بدرجة لا تقل عن 85%</field>	
+	<field name="item_degree">2</field>	
+	<field name="item_description">تحقيق 70% من الدورات الصيفية لدرجة لا تقل عن 85% من معايير التميز </field>	
+	<field name="criterion" ref="educational_supervison.criterion6"/>	
+	<field name="item_type">date</field>
+	</record>
+	
+	<record model="edu.item" id="item29">	
+	<field name="name">نسبة الحلقات و المجمعات القرآنية الجديدة</field>	
+	<field name="item_degree">2</field>	
+	<field name="item_description">تحقيق مؤشر المركز</field>	
+	<field name="criterion" ref="educational_supervison.criterion6"/>	
+	<field name="item_type">date</field>
+	</record>
+	
+	<record model="edu.item" id="item30">	
+	<field name="name">عدد الخطط التفصيلية بأعمال المشرف</field>	
+	<field name="item_degree">4</field>	
+	<field name="item_description">خطة لكل فصل دراسي</field>	
+	<field name="criterion" ref="educational_supervison.criterion7"/>	
+	<field name="item_type">date</field>
+	</record>
+	
+	<record model="edu.item" id="item31">	
+	<field name="name">عدد التقارير الدورية المتعلقة بأعمال المشرف التربوي</field>	
+	<field name="item_degree">4</field>	
+	<field name="item_description">تقريران في الفصل الواحد</field>	
+	<field name="criterion" ref="educational_supervison.criterion7"/>	
+	<field name="item_type">date</field>
+	</record>
+	
+	<record model="edu.item" id="item32">	
+	<field name="name">عدد لقاءات الجمعية و المركز المهنية والاجتماعية التي شارك فيها </field>	
+	<field name="item_degree">4</field>	
+	<field name="item_description">حضور جميع اللقاءات المكلف بحضورها</field>	
+	<field name="criterion" ref="educational_supervison.criterion7"/>	
+	<field name="item_type">date</field>
+	</record>
+	
+	<record model="edu.item" id="item33">	
+	<field name="name">عدد الساعات المكتبية في المكتب</field>	
+	<field name="item_degree">4</field>	
+	<field name="item_description">بالتنسيق مع مركز الإشراف</field>	
+	<field name="criterion" ref="educational_supervison.criterion7"/>	
+	<field name="item_type">date</field>
+	</record>
+	
+	<record model="edu.item" id="item34">	
+	<field name="name">	عدد المجمعات والمساجد المطبقة لمقياس الجودة التعليمية والتربوية ( قمم المعرفة )</field>	
+	<field name="item_degree">4</field>	
+	<field name="item_description">متابعة المساجد في تعبئة الاسمارات و التواصل مع المعنيين عند وجود إشكالات</field>	
+	<field name="criterion" ref="educational_supervison.criterion8"/>	
+	<field name="item_type">date</field>
+	</record>
+	
+	<record model="edu.item" id="item35">	
+	<field name="name">عدد المجمعات والحلقات التي تم تقييمها في مسابقة معايير التميز </field>	
+	<field name="item_degree">4</field>	
+	<field name="item_description">	المشاركة في تقييم المساجد المشاركة</field>	
+	<field name="criterion" ref="educational_supervison.criterion8"/>	
+	<field name="item_type">date</field>
+	</record>
+	
+	<record model="edu.item" id="item36">	
+	<field name="name">عدد الدورات الصيفية التي تم تقييمها في مسابقة معايير التميز </field>	
+	<field name="item_degree">4</field>	
+	<field name="item_description">المشاركة في تقييم الدورات المشاركة</field>	
+	<field name="criterion" ref="educational_supervison.criterion8"/>	
+	<field name="item_type">date</field>
+	</record>
+	
+	<record model="edu.item" id="item37">	
+	<field name="name">نسبة تقويم أداء المعلمين</field>	
+	<field name="item_degree">4</field>	
+	<field name="item_description">تقويم جميع المعلمين التابعين له</field>	
+	<field name="criterion" ref="educational_supervison.criterion8"/>	
+	<field name="item_type">date</field>
+	</record>
+	
+	<record model="edu.item" id="item38">	
+	<field name="name">الحصول على رخصة مشرف</field>	
+	<field name="item_degree">4</field>	
+	<field name="item_description">الحصول على الرخصة</field>	
+	<field name="criterion" ref="educational_supervison.criterion9"/>	
+	<field name="item_type">date</field>
+	</record>
+	
+	<record model="edu.item" id="item39">	
+	<field name="name">الحصول على شهادة ممارس لمجالس التدبر</field>	
+	<field name="item_degree">4</field>	
+	<field name="item_description">الحصول على الشهادة</field>	
+	<field name="criterion" ref="educational_supervison.criterion9"/>	
+	<field name="item_type">date</field>
+	</record>
+	
+	<record model="edu.item" id="item40">	
+	<field name="name">	الحصول على شهادة الاشراف على برامج المرحلة الابتدائية ( ناشئ)</field>	
+	<field name="item_degree">2</field>	
+	<field name="item_description">الحصول على الشهادة</field>	
+	<field name="criterion" ref="educational_supervison.criterion9"/>	
+	<field name="item_type">date</field>
+	</record>
+	
+	<record model="edu.item" id="item41">	
+	<field name="name">	حضور اللقاء التعريفي بآلية تطبيق البرامج التربوية ( جيل ـ روافد )</field>	
+	<field name="item_degree">2</field>	
+	<field name="item_description">الحصول على شهادة الحضور</field>	
+	<field name="criterion" ref="educational_supervison.criterion9"/>	
+	<field name="item_type">date</field>
+	</record>
+	
+	<record model="edu.item" id="item42">	
+	<field name="name">الحصول على شهادة مشرف مجالس التدبر</field>	
+	<field name="item_degree">2</field>	
+	<field name="item_description">الحصول على الشهادة</field>	
+	<field name="criterion" ref="educational_supervison.criterion9"/>	
+	<field name="item_type">date</field>
+	</record>
+	
+	<record model="edu.item" id="item43">	
+	<field name="name">الحصول على شهادة مشرف تعليم الصغار التبيان</field>	
+	<field name="item_degree">2</field>	
+	<field name="item_description">الحصول على الشهادة</field>	
+	<field name="criterion" ref="educational_supervison.criterion9"/>	
+	<field name="item_type">date</field>
+	</record>
+	
+	<record model="edu.item" id="item44">	
+	<field name="name">الحلقات الرائدة</field>	
+	<field name="item_degree">2</field>	
+	<field name="item_description">متابعة الحلقات تعليميا و إدارياً</field>	
+	<field name="criterion" ref="educational_supervison.criterion10"/>	
+	<field name="item_type">date</field>
+	</record>
+	
+	<record model="edu.item" id="item45">	
+	<field name="name">المجمعات النموذجية</field>	
+	<field name="item_degree">2</field>	
+	<field name="item_description">متابعة الحلقات تعليميا و إدارياً</field>	
+	<field name="criterion" ref="educational_supervison.criterion10"/>	
+	<field name="item_type">date</field>
+	</record>
+	
+	<record model="edu.item" id="item46">	
+	<field name="name">البرامج الطلابية</field>	
+	<field name="item_degree">2</field>	
+	<field name="item_description">دعوة المجمعات القرآنية والمشاركة فيها</field>	
+	<field name="criterion" ref="educational_supervison.criterion10"/>	
+	<field name="item_type">date</field>
+	</record>
+	
+	<record model="edu.item" id="item47">	
+	<field name="name">الدورات الصيفية</field>	
+	<field name="item_degree">2</field>	
+	<field name="item_description">متابعة الدورات تعليميا و إدارياً</field>	
+	<field name="criterion" ref="educational_supervison.criterion10"/>	
+	<field name="item_type">date</field>
+	</record>
+	
+	<record model="edu.item" id="item48">	
+	<field name="name">دورات تصحيح التلاوة</field>	
+	<field name="item_degree">2</field>	
+	<field name="item_description">متابعة تنفيذ البرنامج</field>	
+	<field name="criterion" ref="educational_supervison.criterion10"/>	
+	<field name="item_type">date</field>
+	</record>
+	
+	<record model="edu.item" id="item49">	
+	<field name="name">ملتقيات متميزون</field>	
+	<field name="item_degree">2</field>	
+	<field name="item_description">متابعة تنفيذ البرنامج والمشاركة فيه</field>	
+	<field name="criterion" ref="educational_supervison.criterion10"/>	
+	<field name="item_type">date</field>
+	</record>
+	
+	<record model="edu.item" id="item50">	
+	<field name="name">حلقات خدمة المجتمع</field>	
+	<field name="item_degree">2</field>	
+	<field name="item_description">متابعة تنفيذ البرنامج</field>	
+	<field name="criterion" ref="educational_supervison.criterion10"/>	
+	<field name="item_type">date</field>
+	</record>
+	
+	<record model="edu.item" id="item51">	
+	<field name="name">أيام الهمة</field>	
+	<field name="item_degree">2</field>	
+	<field name="item_description">متابعة تنفيذ البرنامج</field>	
+	<field name="criterion" ref="educational_supervison.criterion10"/>	
+	<field name="item_type">date</field>
+	</record>
+
+</data>
+</odoo>

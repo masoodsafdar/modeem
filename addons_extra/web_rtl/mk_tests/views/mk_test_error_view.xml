@@ -1,0 +1,73 @@
+<odoo>
+    <data>
+
+        <record id="mk_test_error_form_view" model="ir.ui.view">
+            <field name="name">Test Error Form View</field>
+            <field name="model">mk.test.error</field>
+            <field name="arch" type="xml">
+                <form string="Test Error">
+                    <header>
+                    </header>
+                    <sheet>
+                        <group>
+                            <field name="company_id" required="1"/>
+                            <field name="error_type" required="1" widget="radio"/>
+                        </group>
+                        <group>
+                            <group>
+                                <field name="code"/>
+                                <field name="name" required="1"/>
+                                <field name="active"/>
+                            </group>
+                            <group>
+                                <field name="degree_deduct" required="1"/>
+                            </group>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="mk_test_error_tree_view" model="ir.ui.view">
+            <field name="name">Test Error Tree View</field>
+            <field name="model">mk.test.error</field>
+            <field name="arch" type="xml">
+                <tree string="Test Error">
+                    <field name="company_id" required="1"/>
+                    <field name="error_type" required="1"/>
+                    <field name="name" required="1"/>
+                    <field name="code"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="mk_test_error_search_view" model="ir.ui.view">
+            <field name="name">Test Error Search View</field>
+            <field name="model">mk.test.error</field>
+            <field name="arch" type="xml">
+                <search string="Test Error ">
+                    <field name="name" string="Test Appreciation" filter_domain="[('name','ilike', self)]"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="mk_test_error_action" model="ir.actions.act_window">
+            <field name="name">Test Error</field>
+            <field name="res_model">mk.test.error</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+            <field name="search_view_id" ref="mk_test_error_search_view"/>
+        </record>
+
+        <menuitem name="Test Error " id="mk_test_error_menu" sequence="5" parent="mk_tests_menu"
+                  action="mk_test_error_action"/>
+
+    </data>
+</odoo>

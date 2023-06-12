@@ -1,0 +1,16 @@
+<odoo>
+    <data>
+<!--        shaimaa this form in general sending is hashed-->
+<!--        <record id="form_gateway_config" model="ir.ui.view">-->
+<!--            <field name="name">gateway config form</field>-->
+<!--            <field name="model">mk.smsclient.config</field>-->
+<!--            <field name="inherit_id" ref="general_sending.form_gateway_config"/>-->
+<!--            <field name="arch" type="xml">-->
+<!--                <xpath expr="//field[@name='message']" position="after">-->
+<!--                    <field name="max_receiver"/>-->
+<!--                    <field name="response_success"/>-->
+<!--                </xpath>-->
+<!--            </field>-->
+<!--        </record>-->
+    </data>
+</odoo>

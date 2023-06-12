@@ -1,0 +1,70 @@
+<openerp>
+    <data>
+        <record id="mk_productivity_incentive_form_view" model="ir.ui.view">
+            <field name="name">productivity incentive Form View</field>
+            <field name="model">mk.productivity_incentive</field>
+            <field name="arch" type="xml">
+                <form string="Productivity incentive">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="type_episode_id" options="{'no_create': True,'no_open': True,}"/>
+                                <field name="type_mark"/>
+                            </group>
+                            <group>
+                                <field name="min_nbr_part"/>
+                                <field name="max_nbr_part"/>
+                                <field name="incentive_id"    options="{'no_create': True,'no_open': True,}"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="mk_productivity_incentive_tree_view" model="ir.ui.view">
+            <field name="name">productivity incentive Tree View</field>
+            <field name="model">mk.productivity_incentive</field>
+            <field name="arch" type="xml">
+                <tree string="Productivity incentive">
+                    <field name="min_nbr_part"/>
+                    <field name="max_nbr_part"/>
+                    <field name="type_mark"/>
+                    <field name="incentive_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="mk_productivity_incentive_search_view" model="ir.ui.view">
+            <field name="name">productivity incentive Search View</field>
+            <field name="model">mk.productivity_incentive</field>
+            <field name="arch" type="xml">
+                <search string="Productivity incentive">
+                    <field name="name"/>
+                    <field name="type_mark"/>
+                    <field name="incentive_id"/>
+                    <field name="type_episode_id"/>
+                    <group>
+                        <filter name="group_name"            string="Name"         context="{'group_by': 'name'}"/>
+                        <filter name="group_type_mark"       string="Mark"         context="{'group_by': 'type_mark'}"/>
+                        <filter name="group_incentive_id"    string="Incentive"    context="{'group_by': 'incentive_id'}"/>
+                        <filter name="group_type_episode_id" string="Type episode" context="{'group_by': 'type_episode_id'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record id="mk_productivity_incentive_action" model="ir.actions.act_window">
+            <field name="name">Productivity incentive</field>
+            <field name="res_model">mk.productivity_incentive</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{'search_default_group_type_episode_id': 1}</field>
+        </record>
+
+        <menuitem id="mk_productivity_incentives_menu" name="Incentives configuration" parent="mk_productivity_configuration_menu" action="mk_productivity_incentive_action" sequence="1"/>
+
+    </data>
+</openerp>

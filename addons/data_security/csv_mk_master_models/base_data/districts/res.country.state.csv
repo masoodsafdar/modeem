@@ -1,0 +1,339 @@
+id,area_id:id,district_id:id,name,country_id:id,enable
+dis_1,City_1,area_1,الروابي,base.sa,1
+dis_2,City_1,area_1,النسيم الشرقي,base.sa,1
+dis_3,City_1,area_1,السعادة,base.sa,1
+dis_4,City_1,area_1,الفيحاء,base.sa,1
+dis_5,City_1,area_1,النظيم,base.sa,1
+dis_6,City_1,area_1,السلام,base.sa,1
+dis_7,City_1,area_1,الزلفي,base.sa,1
+dis_8,City_1,area_1,الروضة,base.sa,1
+dis_9,City_1,area_1,الجزيرة,base.sa,1
+dis_10,City_1,area_1,القدس,base.sa,1
+dis_11,City_1,area_1,المنار,base.sa,1
+dis_12,City_1,area_1,الملك فيصل,base.sa,1
+dis_13,City_1,area_1,الحمرا,base.sa,1
+dis_14,City_1,area_1,غرناطة,base.sa,1
+dis_15,City_1,area_1,الأندلس,base.sa,1
+dis_16,City_1,area_1,العليا,base.sa,1
+dis_17,City_1,area_1,المحمدية,base.sa,1
+dis_18,City_1,area_1,المروج,base.sa,1
+dis_19,City_1,area_1,السليمانية,base.sa,1
+dis_20,City_1,area_1,المرسلات,base.sa,1
+dis_21,City_1,area_1,المصيف,base.sa,1
+dis_22,City_1,area_1,السويدي,base.sa,1
+dis_23,City_1,area_1,الشفا,base.sa,1
+dis_24,City_1,area_1,النسيم الغربي,base.sa,1
+dis_25,City_1,area_1,الربوة,base.sa,1
+dis_26,City_1,area_1,الملز,base.sa,1
+dis_27,City_1,area_1,الريان,base.sa,1
+dis_28,City_1,area_1,الورود,base.sa,1
+dis_29,City_1,area_1, البجيري(الدرعية),base.sa,1
+dis_30,City_1,area_1,احد,base.sa,1
+dis_31,City_1,area_1,اسكان قوات الامن الخاصة,base.sa,1
+dis_32,City_1,area_1,اشبيلية,base.sa,1
+dis_33,City_1,area_1,الازدهار,base.sa,1
+dis_34,City_1,area_1,اسكان طريق الخرج,base.sa,1
+dis_35,City_1,area_1,الامير عبدالله,base.sa,1
+dis_36,City_1,area_1,البديعة,base.sa,1
+dis_37,City_1,area_1,البرة,base.sa,1
+dis_38,City_1,area_1,البرية,base.sa,1
+dis_39,City_1,area_1,البويب,base.sa,1
+dis_40,City_1,area_1,البير,base.sa,1
+dis_41,City_1,area_1,التعاون,base.sa,1
+dis_42,City_1,area_1,الجبيلة,base.sa,1
+dis_43,City_1,area_1,الجرادية,base.sa,1
+dis_44,City_1,area_1,الجفير,base.sa,1
+dis_45,City_1,area_1,الجنادرية,base.sa,1
+dis_46,City_1,area_1,الحائر,base.sa,1
+dis_47,City_1,area_1,الحزم,base.sa,1
+dis_48,City_1,area_1,الخاتلة,base.sa,1
+dis_49,City_1,area_1,الخالدية,base.sa,1
+dis_50,City_1,area_1,الخالدية(الدرعية),base.sa,1
+dis_51,City_1,area_1,الخزامى,base.sa,1
+dis_52,City_1,area_1,الخليج,base.sa,1
+dis_53,City_1,area_1,الدار الخضراء,base.sa,1
+dis_54,City_1,area_1,الدارالبيضاء,base.sa,1
+dis_55,City_1,area_1,الدبيجة,base.sa,1
+dis_56,City_1,area_1,الدرعية,base.sa,1
+dis_57,City_1,area_1,الدرعية,base.sa,1
+dis_58,City_1,area_1,الدرعية الجديدة,base.sa,1
+dis_59,City_1,area_1,الدريهمية,base.sa,1
+dis_60,City_1,area_1,الدفاع,base.sa,1
+dis_61,City_1,area_1,الديرة,base.sa,1
+dis_62,City_1,area_1,الرائد,base.sa,1
+dis_63,City_1,area_1,الربيع,base.sa,1
+dis_64,City_1,area_1,الرحمانية,base.sa,1
+dis_65,City_1,area_1,الرفيعة,base.sa,1
+dis_66,City_1,area_1,الرماية,base.sa,1
+dis_67,City_1,area_1,الرمحية,base.sa,1
+dis_68,City_1,area_1,الروقية(الدرعية),base.sa,1
+dis_69,City_1,area_1,الرويضة بالمحمل,base.sa,1
+dis_70,City_1,area_1,الزهراء,base.sa,1
+dis_71,City_1,area_1,الزهرة,base.sa,1
+dis_72,City_1,area_1,السفارات,base.sa,1
+dis_73,City_1,area_1,السلي,base.sa,1
+dis_74,City_1,area_1,السويدي الغربي,base.sa,1
+dis_75,City_1,area_1,الشرفية,base.sa,1
+dis_76,City_1,area_1,الشميسي,base.sa,1
+dis_77,City_1,area_1,الصالحية,base.sa,1
+dis_78,City_1,area_1,الصحافة,base.sa,1
+dis_79,City_1,area_1,الصفا,base.sa,1
+dis_80,City_1,area_1,الصفرات,base.sa,1
+dis_81,City_1,area_1,الصناعية,base.sa,1
+dis_82,City_1,area_1,الضباط,base.sa,1
+dis_83,City_1,area_1,الطريف الجديد(الدرعية),base.sa,1
+dis_84,City_1,area_1,الطريف(الدرعية),base.sa,1
+dis_85,City_1,area_1,العبدلية,base.sa,1
+dis_86,City_1,area_1,العريجاء,base.sa,1
+dis_87,City_1,area_1,العريجاء الغربية,base.sa,1
+dis_88,City_1,area_1,العريجاء الوسطى,base.sa,1
+dis_89,City_1,area_1,العزيزية,base.sa,1
+dis_90,City_1,area_1,العقيق,base.sa,1
+dis_91,City_1,area_1,العماجية,base.sa,1
+dis_92,City_1,area_1,العمارية,base.sa,1
+dis_93,City_1,area_1,العمانية,base.sa,1
+dis_94,City_1,area_1,العمل,base.sa,1
+dis_95,City_1,area_1,العود,base.sa,1
+dis_96,City_1,area_1,العيطلية,base.sa,1
+dis_97,City_1,area_1,العيينة,base.sa,1
+dis_98,City_1,area_1,الغاط,base.sa,1
+dis_99,City_1,area_1,الغدير,base.sa,1
+dis_100,City_1,area_1,الغطغط,base.sa,1
+dis_101,City_1,area_1,الغيلانة,base.sa,1
+dis_102,City_1,area_1,الفاخرية,base.sa,1
+dis_103,City_1,area_1,الفاروق,base.sa,1
+dis_104,City_1,area_1,الفلاح,base.sa,1
+dis_105,City_1,area_1,الفواز,base.sa,1
+dis_106,City_1,area_1,الفوطة,base.sa,1
+dis_107,City_1,area_1,الفيصلية,base.sa,1
+dis_108,City_1,area_1,الفيصلية(الدرعية),base.sa,1
+dis_109,City_1,area_1,القادسية,base.sa,1
+dis_110,City_1,area_1,القيروان,base.sa,1
+dis_111,City_1,area_1,المؤتمرات,base.sa,1
+dis_112,City_1,area_1,المدينة الصناعية الجديدة,base.sa,1
+dis_113,City_1,area_1,المربع,base.sa,1
+dis_114,City_1,area_1,المرقب,base.sa,1
+dis_115,City_1,area_1,المروة,base.sa,1
+dis_116,City_1,area_1,المريج(الدرعية),base.sa,1
+dis_117,City_1,area_1,المزاحمية,base.sa,1
+dis_118,City_1,area_1,المزيرع,base.sa,1
+dis_119,City_1,area_1,المصانع,base.sa,1
+dis_120,City_1,area_1,المصفاة,base.sa,1
+dis_121,City_1,area_1,المعذر,base.sa,1
+dis_122,City_1,area_1,المعذر الشمالي,base.sa,1
+dis_123,City_1,area_1,المعيزلية,base.sa,1
+dis_124,City_1,area_1,المغرزات,base.sa,1
+dis_125,City_1,area_1,الملقا,base.sa,1
+dis_126,City_1,area_1,الملك عبدالعزيز,base.sa,1
+dis_127,City_1,area_1,الملك فهد,base.sa,1
+dis_128,City_1,area_1,المناخ,base.sa,1
+dis_129,City_1,area_1,المنصورة,base.sa,1
+dis_130,City_1,area_1,المونسية,base.sa,1
+dis_131,City_1,area_1,الناصرية,base.sa,1
+dis_132,City_1,area_1,النخيل,base.sa,1
+dis_133,City_1,area_1,الندى,base.sa,1
+dis_134,City_1,area_1,النرجس,base.sa,1
+dis_135,City_1,area_1,النزهة,base.sa,1
+dis_136,City_1,area_1,النفل,base.sa,1
+dis_137,City_1,area_1,النموذجية,base.sa,1
+dis_138,City_1,area_1,النهضة,base.sa,1
+dis_139,City_1,area_1,النور,base.sa,1
+dis_140,City_1,area_1,الهدا,base.sa,1
+dis_141,City_1,area_1,الواحة,base.sa,1
+dis_142,City_1,area_1,الوادي,base.sa,1
+dis_143,City_1,area_1,الوزارات,base.sa,1
+dis_144,City_1,area_1,الوشام,base.sa,1
+dis_145,City_1,area_1,الوشم,base.sa,1
+dis_146,City_1,area_1,اليرموك,base.sa,1
+dis_147,City_1,area_1,اليمامة,base.sa,1
+dis_148,City_1,area_1,ام الحمام الشرقية,base.sa,1
+dis_149,City_1,area_1,ام الحمام الغربية,base.sa,1
+dis_150,City_1,area_1,ام سليم,base.sa,1
+dis_151,City_1,area_1,بدر,base.sa,1
+dis_152,City_1,area_1,ثادق,base.sa,1
+dis_153,City_1,area_1,ثليم,base.sa,1
+dis_154,City_1,area_1,جا معة الاما م محمد بن سعود الاسلامية,base.sa,1
+dis_155,City_1,area_1,جا معة الملك سعود,base.sa,1
+dis_156,City_1,area_1,جبرة,base.sa,1
+dis_157,City_1,area_1,جرير,base.sa,1
+dis_158,City_1,area_1,جو,base.sa,1
+dis_159,City_1,area_1,حريملاء,base.sa,1
+dis_160,City_1,area_1,حطين,base.sa,1
+dis_161,City_1,area_1,حفر العتش,base.sa,1
+dis_162,City_1,area_1,حفيرة نساح,base.sa,1
+dis_163,City_1,area_1,حويرة نساح,base.sa,1
+dis_164,City_1,area_1,خشم العان,base.sa,1
+dis_165,City_1,area_1,ديراب,base.sa,1
+dis_166,City_1,area_1,رغبة,base.sa,1
+dis_167,City_1,area_1,رماح,base.sa,1
+dis_168,City_1,area_1,رويغب,base.sa,1
+dis_169,City_1,area_1,سدوس,base.sa,1
+dis_170,City_1,area_1,سلطانة,base.sa,1
+dis_171,City_1,area_1,سمحان(الدرعية),base.sa,1
+dis_172,City_1,area_1,شبرا,base.sa,1
+dis_173,City_1,area_1,شخيب,base.sa,1
+dis_174,City_1,area_1,شوية,base.sa,1
+dis_175,City_1,area_1,صلاح الدين,base.sa,1
+dis_176,City_1,area_1,صلبوخ,base.sa,1
+dis_177,City_1,area_1,صياح,base.sa,1
+dis_178,City_1,area_1,ضرماء,base.sa,1
+dis_179,City_1,area_1,طويق,base.sa,1
+dis_180,City_1,area_1,طيبة,base.sa,1
+dis_181,City_1,area_1,ظهرة البديعة,base.sa,1
+dis_182,City_1,area_1,ظهرة لبن,base.sa,1
+dis_183,City_1,area_1,ظهرة نمار,base.sa,1
+dis_184,City_1,area_1,عتيقة,base.sa,1
+dis_185,City_1,area_1,عرقة,base.sa,1
+dis_186,City_1,area_1,عكاظ,base.sa,1
+dis_187,City_1,area_1,عليشة,base.sa,1
+dis_188,City_1,area_1,غبيرة,base.sa,1
+dis_189,City_1,area_1,فرعة نساح,base.sa,1
+dis_190,City_1,area_1,قرطبة,base.sa,1
+dis_191,City_1,area_1,قصور المقبل,base.sa,1
+dis_192,City_1,area_1,كلية الملك عبدالعزيز الحربية,base.sa,1
+dis_193,City_1,area_1,لبن,base.sa,1
+dis_194,City_1,area_1,مشاش السهول,base.sa,1
+dis_195,City_1,area_1,معكال,base.sa,1
+dis_196,City_1,area_1,ملهم,base.sa,1
+dis_197,City_1,area_1,مليح,base.sa,1
+dis_198,City_1,area_1,منفوحة,base.sa,1
+dis_199,City_1,area_1,منفوحة الجديدة,base.sa,1
+dis_200,City_1,area_1,نمار,base.sa,1
+dis_201,City_1,area_1,هجرة الحسى,base.sa,1
+dis_202,City_1,area_1,هجرة السيباني,base.sa,1
+dis_203,City_1,area_1,هجرة العليا,base.sa,1
+dis_204,City_1,area_1,هجرة اللغف,base.sa,1
+dis_205,City_1,area_1,هجرة المشاعلة,base.sa,1
+dis_206,City_1,area_1,هجرة بوضة,base.sa,1
+dis_207,City_1,area_1,هجرة سعد,base.sa,1
+dis_208,City_1,area_1,هجرة سلطانة,base.sa,1
+dis_209,City_1,area_1,هجرة صدر عريدان,base.sa,1
+dis_210,City_1,area_1,هجرة غزيز,base.sa,1
+dis_211,City_1,area_1,هجرة لبن,base.sa,1
+dis_212,City_1,area_1,هيت,base.sa,1
+dis_213,City_1,area_1,وادي ذبية السد,base.sa,1
+dis_214,City_1,area_1,وادي لبن,base.sa,1
+dis_215,City_1,area_1,وادي وبير,base.sa,1
+dis_216,City_1,area_1,اسكان القوات البحرية,base.sa,1
+dis_217,City_1,area_1,الخزان,base.sa,1
+dis_218,City_1,area_1,الشميسي القديم,base.sa,1
+dis_219,City_1,area_1,الكلية الامنية,base.sa,1
+dis_220,City_1,area_1,خنشليلة,base.sa,1
+dis_221,City_1,area_1,المعذر الجنوبي,base.sa,1
+dis_222,City_1,area_1,الوادي,base.sa,1
+dis_223,City_1,area_1,مدينة الملك عبدالعزيز للتقنية,base.sa,1
+dis_224,City_1,area_1,الجبس,base.sa,1
+dis_225,City_1,area_1,زهرة البديعة,base.sa,1
+dis_226,City_1,area_1,الشعلان,base.sa,1
+dis_227,City_1,area_1,الصانع,base.sa,1
+dis_228,City_1,area_1,إسكان الحرس الوطني,base.sa,1
+dis_229,City_1,area_1,مطار الملك خالد,base.sa,1
+dis_230,City_1,area_1,البطحاء,base.sa,1
+dis_231,City_1,area_1,الطويلعة,base.sa,1
+dis_232,City_1,area_1,الدخل المحدود,base.sa,1
+dis_233,City_1,area_1,الياسمين,base.sa,1
+dis_234,City_1,area_1,القاعدة الجوية,base.sa,1
+dis_235,City_1,area_1,المطار ,base.sa,1
+dis_236,City_1,area_1,الاندلس ,base.sa,1
+dis_237,City_1,area_1,الجامعيين ,base.sa,1
+dis_238,City_1,area_1,الرفيعة,base.sa,1
+dis_239,City_1,area_1,الرفيعة,base.sa,1
+dis_240,City_1,area_1,البصيرة,base.sa,1
+dis_241,City_1,area_1,سلطانه,base.sa,1
+dis_242,City_1,area_1,الخليج,base.sa,1
+dis_243,City_1,area_1,الفلح,base.sa,1
+dis_244,City_1,area_1,الخماسين,base.sa,1
+dis_245,City_1,area_1,مخطط الخماسين,base.sa,1
+dis_246,City_1,area_1,النويعمة,base.sa,1
+dis_247,City_1,area_1,اللدام الشمالي,base.sa,1
+dis_248,City_1,area_1,اللدام الجنوبي ,base.sa,1
+dis_249,City_1,area_1,الفرعة,base.sa,1
+dis_250,City_1,area_1,الولامين,base.sa,1
+dis_251,City_1,area_1,مخطط الولامين,base.sa,1
+dis_252,City_1,area_1,الشرافاء,base.sa,1
+dis_253,City_1,area_1,الرويساء,base.sa,1
+dis_254,City_1,area_1,الجوبة,base.sa,1
+dis_255,City_1,area_1,المدينة العسكرية,base.sa,1
+dis_256,City_1,area_1,المستشفى العسكري,base.sa,1
+dis_257,City_1,area_1,المعتلاء,base.sa,1
+dis_258,City_1,area_1,مصدة,base.sa,1
+dis_259,City_1,area_1,الامير سلمان,base.sa,1
+dis_260,City_1,area_1,الملك فهد,base.sa,1
+dis_261,City_1,area_1,العزيزية,base.sa,1
+dis_262,City_1,area_1,الخالدية,base.sa,1
+dis_263,City_1,area_1,البجادية,base.sa,1
+dis_264,City_1,area_1,حي السلام,base.sa,1
+dis_265,City_1,area_1,الغروب,base.sa,1
+dis_266,City_1,area_1,العسكرية,base.sa,1
+dis_267,City_1,area_1,ملهم,base.sa,1
+dis_268,City_1,area_1,المخطط,base.sa,1
+dis_269,City_1,area_1,القصر,base.sa,1
+dis_270,City_1,area_1,الحزم,base.sa,1
+dis_271,City_1,area_1,الديرة القديمة,base.sa,1
+dis_272,City_1,area_1,القويع,base.sa,1
+dis_273,City_1,area_1,الفويلق,base.sa,1
+dis_274,City_1,area_1,الخالدية,base.sa,1
+dis_275,City_1,area_1,حلبان,base.sa,1
+dis_276,City_1,area_1,الخروعية,base.sa,1
+dis_277,City_1,area_1,الرويضة,base.sa,1
+dis_278,City_1,area_1,عنان,base.sa,1
+dis_279,City_1,area_1,أبو سليم,base.sa,1
+dis_280,City_1,area_1,الزهور,base.sa,1
+dis_281,City_1,area_1,قبيبان,base.sa,1
+dis_282,City_1,area_1,مزعل,base.sa,1
+dis_283,City_1,area_1,اللهدة,base.sa,1
+dis_284,City_1,area_1,الزهور,base.sa,1
+dis_285,City_1,area_1,الجفونية,base.sa,1
+dis_286,City_1,area_1,أبو سليم الغربي,base.sa,1
+dis_287,City_1,area_1,العفج,base.sa,1
+dis_288,City_1,area_1,المخطط,base.sa,1
+dis_289,City_1,area_1,عروى,base.sa,1
+dis_290,City_1,area_1,محيرقة,base.sa,1
+dis_291,City_1,area_1,نخيلان,base.sa,1
+dis_292,City_1,area_1,آل هديل,base.sa,1
+dis_293,City_1,area_1,البساتين,base.sa,1
+dis_294,City_1,area_1,صبحاء,base.sa,1
+dis_295,City_1,area_1,قبيبان,base.sa,1
+dis_296,City_1,area_1,طحى,base.sa,1
+dis_297,City_1,area_1,الفيحاء,base.sa,1
+dis_298,City_1,area_1,اليرموك,base.sa,1
+dis_299,City_1,area_1,المرقب,base.sa,1
+dis_300,City_1,area_1,المرقب بالمجمعة,base.sa,1
+dis_301,City_1,area_1,البصيرة بالمجمعة,base.sa,1
+dis_302,City_1,area_1,سلطانة بالمجمعة,base.sa,1
+dis_303,City_1,area_1,الخليج بالمجمعة,base.sa,1
+dis_304,City_1,area_1,السحيمي,base.sa,1
+dis_305,City_1,area_1,الفلح بالمجمعة,base.sa,1
+dis_306,City_1,area_1,وحدة سجن المجمعة,base.sa,1
+dis_307,City_1,area_1,المعتلاء,base.sa,1
+dis_308,City_1,area_1,الزويراء,base.sa,1
+dis_309,City_1,area_1,كمدة,base.sa,1
+dis_310,City_1,area_1,العزيزية,base.sa,1
+dis_311,City_1,area_1,ال تميم,base.sa,1
+dis_312,City_1,area_1,نزوى,base.sa,1
+dis_313,City_1,area_1,العياف,base.sa,1
+dis_314,City_1,area_1,الحراقين,base.sa,1
+dis_315,City_1,area_1,القويز,base.sa,1
+dis_316,City_1,area_1,القوز,base.sa,1
+dis_317,City_1,area_1,الخالدية,base.sa,1
+dis_318,City_1,area_1,الرمال,base.sa,1
+dis_319,City_1,area_1,كميت,base.sa,1
+dis_320,City_1,area_1,الديرة,base.sa,1
+dis_321,City_1,area_1,آل حمد,base.sa,1
+dis_322,City_1,area_1,الحصاة,base.sa,1
+dis_323,City_1,area_1,اسكان مطار الملك خالد,base.sa,1
+dis_324,City_1,area_1,أخرى,base.sa,1
+dis_325,City_1,area_1,الزاهر,base.sa,1
+dis_326,City_1,area_1,محطة القطار,base.sa,1
+dis_327,City_1,area_1,السهباء,base.sa,1
+dis_328,City_1,area_1,النغيق,base.sa,1
+dis_329,City_1,area_1,القاعية,base.sa,1
+dis_330,City_1,area_1,العقليه,base.sa,1
+dis_331,City_1,area_1,ليلى,base.sa,1
+dis_332,City_1,area_1,الدوائر,base.sa,1
+dis_333,City_1,area_1,البديع الشمالي,base.sa,1
+dis_334,City_1,area_1,مروان,base.sa,1
+dis_335,City_1,area_1,النذير,base.sa,1
+dis_336,City_1,area_1,المؤنسية,base.sa,1
+dis_337,City_1,area_1,العارض,base.sa,1
+dis_338,City_1,area_1,الأمانه,base.sa,1

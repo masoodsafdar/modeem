@@ -1,0 +1,28 @@
+<odoo>
+    <data>
+        <record model="report.paperformat" id="report_students_template_paperformat">
+            <field name="name">reports.template_paperformat</field>
+            <field name="default" eval="True"/>
+            <field name="format">A4</field>
+            <field name="page_height">0</field>
+            <field name="page_width">0</field>
+            <field name="orientation">Landscape</field>
+            <field name="margin_top">12</field>
+            <field name="margin_right">5</field>
+            <field name="margin_bottom">10</field>
+            <field name="margin_left">5</field>
+            <field name="header_line" eval="False"/>
+            <field name="header_spacing">30</field>
+            <field name="dpi">90</field>
+        </record>
+
+        <report id="students_report"
+        string="student report wizard"
+        model="student.report.wizard"
+        report_type="qweb-pdf" 
+        name="mk_student_register.report_students_template"
+        file="mk_student_register.report_students_template"
+        paperformat="mk_student_register.report_students_template_paperformat" />
+
+    </data>
+</odoo>

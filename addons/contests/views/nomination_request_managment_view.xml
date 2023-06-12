@@ -1,0 +1,287 @@
+<odoo>
+    <data>
+    
+ 		<record id="nomination_request_managment_form_view" model="ir.ui.view">
+        	<field name="name">nomination request managment form view</field>
+          	<field name="model">nomination.request.managment</field>
+          	<field name="arch" type="xml">
+          		<form string = "nomination request managment">
+		  			<header>
+						<!--<field name="state" widget="statusbar" statusbar_visible="draft,active"/>
+						<button name="act_draft" string="Set to Draft" type="object" states="active" class="oe_highlight"/>
+						<button name="act_active" string="Set to Active" type="object" states="draft" class="oe_highlight"/>-->
+		  			</header>
+
+		  			<sheet>
+		    			<group>
+			  				<group colspan="3" col="4">
+			  					<field name="nomination_type"/>
+			  					<field name="nomation_date"/>
+			  					<field name="contest"/>
+			  				</group>
+		    			</group>
+
+		     			<notebook>
+		     				<page string="candidaties student">
+		      					<field name="candidaties">
+		      						<tree>
+						      			<field name="name"/>
+						      			<field name="nomation_date"/>
+						      			<field name="student_phone"/>				
+						      			<field name='nationality'/>
+						      			 
+						      			<field name="out_source"/>
+						      			
+						      			<field name="ong_name"/>						      			
+						      			<field name="mosque_name"/>
+						      			<field name="episode_name"/>
+						      			
+						      			<field name="branch"/>
+						      			<field name="track"/> 
+				
+						      			<button name="accept_center" type="object" string="accept center" states="accept_mosque" groups="contests.accept_reject_center_level_button_group" class="oe_highlight"/>
+						      			<button name="reject"        type="object" string="reject"        states="accept_center" groups="contests.accept_reject_organization_level_button_group"/>
+						      			<button name="reject_center" type="object" string="reject center" states="accept_mosque" groups="contests.accept_reject_center_level_button_group"/>
+						      			
+						      			<field name="state"/>
+						      		</tree>
+						      		
+						          	<form>
+							        	<header>
+											<field  name="state" widget="statusbar" statusbar_visible="draft,initial_accept,accept"/>
+																	
+											<button name="accept_mosque"       string="تصديق المسجد" type="object" attrs="{'invisible': ['|',('state','!=','draft'),('out_source','=',True)]}"         groups="contests.accept_or_deny_mosque_group"                   class="oe_highlight"/>											
+											<button name="accept_center"       string="تصديق المركز" type="object" attrs="{'invisible': ['|',('state','!=','accept_mosque'),('out_source','=',True)]}" groups="contests.accept_reject_center_level_button_group"       class="oe_highlight"/>
+											<button name="action_accept_admin" string="تصديق الإدارة" type="object" attrs="{'invisible': ['|',('state','!=','draft'),('out_source','=',False)]}"        groups="contests.accept_reject_organization_level_button_group" class="oe_highlight"/>
+																	
+									    	<button name="initial_accept" string="ترشيح اولي "  type="object" states="accept_center"  groups="contests.accept_reject_organization_level_button_group" class="oe_highlight"/>
+							            	<button name="accept"         string="ترشيح نهائي"  type="object" states="initial_accept" groups="contests.accept_reject_organization_level_button_group" class="oe_highlight"/>
+							            	
+							            	<button name="reject"         string="رفض"          type="object" states="draft,accept_mosque,accept_center,accept_admin,accept_admin" groups="contests.accept_reject_organization_level_button_group"/>
+							            	<button name="act_draft"      string="إعادة تفعيل"  type="object" states="reject"         groups="contests.accept_reject_organization_level_button_group" class="oe_highlight"/>
+								     	</header>
+								     	
+								  		<sheet>
+								    		<group>
+									  			<group>				  			
+									  				<field name="nomation_date" readonly="1"/>
+									  				<field name="ong_name"      readonly="1"/>
+													<field name="mosque_name"   readonly="1"/>
+													<field name="episode_name"  readonly="1"/>
+													<field name="name"          readonly="1"/>
+									  				<field name="identity_num"  readonly="1"/>
+									  				<field name="nationality"   readonly="1"/>
+									  				<field name="identity"      readonly="1" widget="many2many_binary"/>
+									  				<field name="out_source"    readonly="1"/>
+													<field name="nomination_type" invisible="1"/>
+									  			</group>
+									  			<group>
+											  		<field name="student_phone" readonly="1"/>
+													<field name="parent_phone"  readonly="1"/>						  		
+											  		<field name="email"         readonly="1"/>
+											  		<field name="birth_place"   readonly="1"/>
+											  		<field name="birthdate"     readonly="1"/>								
+													<label for="age"/>
+								                    <div>
+								                         <field name="age" class="oe_inline"/>
+								                         <span class="oe_inline"> سنة</span>
+								                    </div>
+								                    <field name="agree_terms" readonly="1"/>
+								 				</group>				  			
+								    		</group>
+					
+								    		<group>
+								 				<group>
+								 					<field name="is_quran" readonly="1"/>
+								 					<field name="contest"  readonly="1"/>
+								 				</group>
+									 			<group>
+										  			<field name="branch" attrs="{'invisible':[('is_quran','=',False)]}" readonly="1"/>
+										  			<field name="track"  attrs="{'invisible':[('is_quran','=',False)]}" readonly="1"/>
+										  		</group>
+								    		</group>
+								    		
+											<notebook>
+												<page string="المشاركات السابقة">
+													<field name="previous_contests" readonly="1">
+														<tree>
+															<field name="name"/>
+														</tree>
+													</field>
+												</page>
+											</notebook>
+							  	  		</sheet>
+						          	</form>						      		
+		      					</field>
+		      					
+		      					<!--button name="accept_all_student" type="object" string="nominate all"/>
+							</page>
+							<page string="managers">
+								<field name="managers">
+									<tree>
+										<field name="candidate_hr"/>
+			  							<field name="nomation_date"/>
+									    <button name="accept" type="object" string="nominate" attrs="{'invisible':[('state','=','accept')]}"/>
+									    <button name="reject" type="object" string="reject"/>
+		      							<field name="state"/>
+			  						</tree>
+								</field-->
+								<!--button name="accept_all_managers" type="object" string="nominate all"/-->
+			 				</page>
+			 				
+			 				<page string="refree">
+								<field name="man">
+				   					<tree>
+										<field name="name" string="الإسم"/>
+						  			  	<field name="nomation_date"/>
+						  			  	<field name="out_source"/>
+						  			  	<field name="ong_name"/>
+					   				  	<button name="accept" type="object" string="nominate" attrs="{'invisible':[('state','in',['accept','reject'])]}"/>
+					   				  	<button name="reject" type="object" string="reject"   attrs="{'invisible':[('state','in',['accept','reject'])]}"/>
+					   				  	
+					      		      	<field name="state"/>
+						  	   		</tree>
+						  	   		
+						          	<form>
+							        	<header>
+											<field  name="state" widget="statusbar" statusbar_visible="draft,initial_accept,accept"/>
+
+											<button name="accept_mosque"       string="تصديق المسجد" type="object" attrs="{'invisible': ['|',('state','!=','draft'),('out_source','=',True)]}"         groups="contests.accept_or_deny_mosque_group"                   class="oe_highlight"/>											
+											<button name="accept_center"       string="تصديق المركز" type="object" attrs="{'invisible': ['|',('state','!=','accept_mosque'),('out_source','=',True)]}" groups="contests.accept_reject_center_level_button_group"       class="oe_highlight"/>
+											<button name="action_accept_admin" string="تصديق الإدارة" type="object" attrs="{'invisible': ['|',('state','!=','draft'),('out_source','=',False)]}"        groups="contests.accept_reject_organization_level_button_group" class="oe_highlight"/>
+																												
+									    	<button name="initial_accept" string="ترشيح اولي "  type="object" states="accept_center"  groups="contests.accept_reject_organization_level_button_group" class="oe_highlight"/>
+							            	<button name="accept"         string="ترشيح نهائي"  type="object" states="initial_accept" groups="contests.accept_reject_organization_level_button_group" class="oe_highlight"/>
+							            	
+							            	<button name="reject"         string="رفض"          type="object" states="draft,accept_mosque,accept_center,accept_admin,accept_admin" groups="contests.accept_reject_organization_level_button_group"/>
+							            	<button name="act_draft"      string="إعادة تفعيل"  type="object" states="reject"         groups="contests.accept_reject_organization_level_button_group" class="oe_highlight"/>
+								     	</header>
+								     	
+								  		<sheet>
+								    		<group>
+									  			<group>
+									  				<field name="nomation_date" readonly="1"/>
+									  				<field name="ong_name"      readonly="1"/>				  				
+									  				<field name="mosque_name"   readonly="1"/>
+									  				<field name="name"          readonly="1" string="المحكم"/>
+									  				<field name="identity_num"  readonly="1"/>
+									  				<field name="nationality"   readonly="1"/>
+									  				<field name="identity"      readonly="1" widget="many2many_binary"/>
+									  				<field name="out_source"    readonly="1"/>
+													<field name="nomination_type" invisible="1"/>
+									  			</group>
+									  			<group>						  		
+											  		<field name="email"       readonly="1"/>	
+											  		<field name="birth_place" readonly="1"/>
+											  		<field name="birthdate"   readonly="1"/>							
+													<label for="age"/>
+								                    <div>
+								                         <field name="age" class="oe_inline" readonly="1"/>
+								                         <span class="oe_inline"> سنة</span>
+								                    </div>
+								                    <field name="degree"      readonly="1"/>
+								                    <field name="agree_terms" readonly="1"/>
+								 				</group>				  			
+								    		</group>
+					
+								    		<group>
+								 				<group>
+								 					<field name="is_quran" readonly="1"/>
+								 					<field name="contest"  readonly="1"/>
+								 				</group>
+									 			<group>
+										  		</group>
+								    		</group>
+								    		
+											<notebook>
+												<page string="المشاركات السابقة">
+													<field name="previous_contests" readonly="1">
+														<tree>
+															<field name="name"/>
+														</tree>
+													</field>
+												</page>
+											</notebook>
+							  	  		</sheet>
+						          	</form>						  	   		
+								</field>
+						 		<button name="accept_all_managers" type="object" string="nominate all"/>
+							</page>
+
+							<page string="work plan">
+								<field name="work_plan_ids">
+									<tree editable="top">
+										<field name="day"/>
+							  			<field name="program_name"/>
+							  			<field name="date"/>
+							  			<field name="place"/>
+							  			<field name="attachment" widget="many2many_binary" string="attach file"/>
+						      			<field name="achived"/>
+						      			<field name="notice"/>
+									</tree>
+								</field>
+							</page>
+
+							<!--<page string="Results">
+									<field name="result_ids">
+										<tree editable="top">
+											<field name="student"/>
+			  								<field name="center"/>
+			  								<field name="mosque_id"/>
+                        					<field name="test_type"/> 
+                        					<field name="test_branches"/> 
+			  								<field name="degree" />
+		      								<field name="order"/>			  			
+										</tree>
+									</field>
+									<group>
+										<field name="notify" />
+									</group>
+								</page>-->
+		     			</notebook>
+	  	  			</sheet>
+          		</form>
+          	</field>
+    	</record>
+
+        <record id="nomination_request_managment_tree_view" model="ir.ui.view">
+        	<field name="name">nomination request managment Tree View</field>
+            <field name="model">nomination.request.managment</field>
+            <field name="arch" type="xml">
+                <tree delete="0" string="nomination request managment" colors="red:state=='draft';blue:state=='accept'">
+			  		<field name="nomination_type"/>
+			  		<field name="nomation_date"/>
+			  		<field name="contest"/>
+				</tree>
+            </field>
+        </record>
+        
+        <record id="mk_nomination_request_search_view" model="ir.ui.view">
+            <field name="name">reward items Search View</field>
+            <field name="model">nomination.request.managment</field>
+            <field name="arch" type="xml">
+                <search>
+                	<field name="nomination_type"/>
+                	<field name="contest"/>
+                	
+                	<group expand="0" string="Group By">
+	                    <filter name="contest"         string="المسابقة"    context="{'group_by': 'contest'}"/> 
+	                    <filter name="nomination_type" string="نوع الترشيح" context="{'group_by': 'nomination_type'}"/> 
+                	</group>
+                </search>
+            </field>
+        </record>
+        
+        <record id="nomination_request_managment_action" model="ir.actions.act_window">
+            <field name="name">nomination request managment programs</field>
+            <field name="res_model">nomination.request.managment</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="nomination_request_managment_menu" name="nomination request managment" action="nomination_request_managment_action" parent="contests"
+              		sequence="0" groups="read_nomination_request_management_group"/>	
+
+    </data>  
+</odoo>

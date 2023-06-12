@@ -1,0 +1,73 @@
+<odoo>
+    <data>
+		<record id="mk_episode_works_tree_view" model="ir.ui.view">
+        	<field name="name">episode works Tree View</field>
+          	<field name="model">mk.epsoide.works</field>
+          	<field name="arch" type="xml">
+            	<tree>		  
+	  				<field name="name"/>
+	  				<field name="type_episode_id"/>
+		            <field name="memorize"/>
+		            <field name="minimum_audit"/>
+		            <field name="maximum_audit"/>
+		            <field name="reading"/>
+				</tree>
+			</field>
+		</record>
+		    
+		<record id="mk_episode_works_form_view" model="ir.ui.view">
+        	<field name="name">episode works Form View</field>
+          	<field name="model">mk.epsoide.works</field>
+          	<field name="arch" type="xml">
+            	<form string="Episode type">		  
+		  			<sheet>
+		  				<gropu>
+			  	  			<group>			  
+				  				<field name="name" required="1"/>
+				  				<field name="type_episode_id" options="{'no_create':1,'no_open':1}"/>
+				   				<field name="active"/>
+				  			</group>
+	
+				   			<group string="Program Parts">
+					            <field name="memorize"/>
+					            <field name="minimum_audit"/>
+					            <field name="maximum_audit"/>
+					            <field name="reading"/>
+	         				</group>		  				
+		  				</gropu>
+	  				</sheet>
+					<div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+				</form>
+			</field>
+		</record>
+         
+        <record id="mk_episode_work_search_view" model="ir.ui.view">
+            <field name="name">Episode works Search View</field>
+            <field name="model">mk.epsoide.works</field>
+            <field name="arch" type="xml">
+                <search string="Episode works">
+               	    <field name="name"/>
+               	    <field name="type_episode_id"/>
+                    <filter name="active" string="Un Active" domain="[('active','=',False)]"/>
+                </search>
+            </field>
+        </record>
+        
+        <record id="mk_episode_work_action" model="ir.actions.act_window">
+            <field name="name">Episode works</field>
+            <field name="res_model">mk.epsoide.works</field>
+            <field name="type">ir.actions.act_window</field>
+            <!-- <field name="view_type">form</field> -->
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+            <field name="search_view_id" ref="mk_episode_work_search_view"/>
+        </record>
+
+         <menuitem name="Episode works" id="mk_episode_work_menu" sequence="9" parent="mk_episode_management_settings_menu" action="mk_episode_work_action"/>
+
+	</data>
+</odoo>

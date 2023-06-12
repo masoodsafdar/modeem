@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<openerp>
+		<data>
+			<record id="contest_preparation_form_view" model="ir.ui.view">
+			    <field name="name">contest preparation form</field>
+			    <field name="model">contest.preparation</field>
+			    <field name="arch" type="xml"> 
+			        <form string="contests preparation">
+						<header>
+							<button name="get_regulations" string="إدراج اللوائح" type="object" class="oe_highlight"/>
+						</header>
+			            <sheet>
+							<group>
+								<group>
+									<field name="contest_type"/>
+									<field name="is_quran"/>
+									<field name="target_grade"   widget="many2many_tags"/>
+									<field name="Target_age_cat" widget="many2many_tags"/>									
+								</group>
+								<group>
+									<field name="name"           attrs="{'invisible':[('is_quran','=',True)],'required':[('is_quran','=',False)]}"/>
+									<field name="test_id"        attrs="{'invisible':[('is_quran','=',False)],'required':[('is_quran','=',True)]}"/>
+									<field name='contest_fields' attrs="{'invisible':[('is_quran','=',True)],'required':[('is_quran','=',False)]}" widget="many2many_tags"/>
+									<field name="gender_type"/>
+								</group>
+							</group>
+									             		
+			             	<group>
+								<group>
+									<field name="date_start_reg" required="1"/>
+									<field name="date_end_reg"   required="1"/>
+								</group>
+								<group>
+									<field name="StartD"/>
+									<field name="endD"/>
+								</group>
+							</group>
+							
+                            <group>
+								<group>
+									<field name="place" required="1"/>
+							 		<field name="mosque_id" attrs="{'invisible': [('place', '!=', 'mosque_level')],'required':[('place','=','mosque_level')]}"/>
+							 		<field name="center_id" attrs="{'invisible': [('place', '!=', 'center_level')],'required':[('place','=','center_level')]}"/>									
+								</group>                            
+								<group>
+									<field name="brochure_active"/>
+									<field name="brochure" attrs="{'invisible':[('brochure_active','!=',True)],'required':[('brochure_active','=',True)]}" widget='image' class="oe_avatar"/>
+									<field name="attachment" widget="many2many_binary"/>
+								</group>
+							</group>
+                            
+							<group>
+								<field name="gools"/>
+							</group>
+							
+							<group>
+								<field name="conditions"/>
+							</group>
+							
+							<notebook>
+                            	<page string='بنود المفاضلة'>
+									<group>
+										<field name="diff_items">
+											<tree editable="top">
+												<field name="name" />
+											</tree>
+										</field>
+									</group>
+                            	</page>
+                            	<page string='الفروع' attrs="{'invisible':[('is_quran','!=',True)]}">
+                            		<field name="branches"/> 
+			                 	</page>
+                            </notebook> 
+                        </sheet>
+                    </form>
+                </field>
+            </record>
+
+        <record id="contest_preparation_search_view" model="ir.ui.view">
+            <field name="name">contest preparation Search View</field>
+            <field name="model">contest.preparation</field>
+            <field name="arch" type="xml">
+                <search> 
+                	<field name="contest_type"/>
+                	<field name="test_id"/>
+                	<field name="Target_age_cat"/>
+                	<field name="target_grade"/>
+                	<field name="place"/>
+                	<field name="mosque_id"/>
+                	<field name="contest_type"/>
+                	
+                	<filter name="male"          string="رجالي"         domain="[('gender_type', '=','male')]"/>
+				    <filter name="female"        string="نسائي"         domain="[('gender_type', '=','female')]"/>
+				    <filter name="male,female"   string="الكل"          domain="[('gender_type', '=','male,female')]"/>
+                	<separator/>
+                    <filter string="قرآنى"             name="is_quran"    domain="[('is_quran','=',True)]"/>
+                    
+                	<group expand="0" string="Group By">
+	                    <filter name="contest_type"        string="نوع المسابقة"      context="{'group_by': 'contest_type'}"/>  
+	                    <filter name="test_id"             string="اسم المسابقة"      context="{'group_by': 'test_id'}"/>
+	                    <filter name="place"               string="الجهة"             context="{'group_by': 'place'}"/>  
+	                    <filter name="mosque_id"           string="المسجد"            context="{'group_by': 'mosque_id'}"/>
+                	</group>
+                </search>
+            </field>
+        </record>
+        
+            <record id="contests_preparation_action" model="ir.actions.act_window">
+				<field name="name">contests preparations</field>
+				<field name="res_model">contest.preparation</field>
+				<field name="type">ir.actions.act_window</field>
+				<field name="view_type">form</field>
+				<field name="view_mode">tree,form</field>
+				<!--<field name="domain">[]</field>
+				<field name="context">{}</field>
+				<field name="search_view_id" ref="mk_contests_regulatoins_preparation_search_view"/> -->
+		    </record>
+
+		     <menuitem
+              id="contests_preparations_menu"
+              name="contests preparations"
+              action="contests_preparation_action"
+              parent="config_menu"
+              sequence="0"/>	
+
+
+	     </data>
+</openerp>

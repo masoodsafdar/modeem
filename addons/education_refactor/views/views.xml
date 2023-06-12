@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<odoo>
+		<data>
+			<record id="course_refactor_form_view" model="ir.ui.view">
+			    <field name= "name">refactor.courses</field>
+			    <field name= "model">refactor.courses</field>
+			    <field name= "arch"  type="xml"> 
+			         <form>
+			             <sheet>
+		             		<group>
+		             			<field name="surah_order"/>
+		             			<field name="part_order"/>
+		             			<field name="verse_original_order"/>
+		             			<field name="course_type"/>
+		             			<field name="course_id"/>
+		             			<field name="status"/>
+		             			<field name="test"/>
+		             			<field name="to_surah_order"/>
+		             			<field name="to_part_order"/>
+		             			<field name="to_verse_original_order"/>
+		             			<field name="to_course_type"/>
+		             			<field name="to_course_id"/>
+		             			<field name="to_status"/>
+		             			<field name="to_test"/>
+
+		             		</group>
+			             </sheet>
+			         </form>
+			    </field>
+			 </record>
+
+
+			 <record id="rcourses_tree" model="ir.ui.view">
+			      <field name="name">refactor.courses</field>
+			      <field name="model">refactor.courses</field>
+			      <field name="arch" type="xml">
+			        <tree>
+						<field name="surah_order"/>
+             			<field name="part_order"/>
+             			<field name="verse_original_order"/>
+             			<field name="course_type"/>
+             			<field name="course_id"/>
+             			<field name="status"/>
+				    </tree>
+			   </field>
+			 </record>
+
+			 <record id="courses_refactoring_action" model="ir.actions.act_window">
+				<field name="name">Refactoring</field>
+				<field name="res_model">refactor.courses</field>
+				<field name="type">ir.actions.act_window</field>
+				<field name="view_type">form</field>
+				<field name="view_mode">tree,form</field>
+		    </record>
+
+		   <menuitem
+              id="courses_menu"
+              name="Courses Refactoring"
+              action="courses_refactoring_action"
+              parent="main_menu_connection_wizard"
+              sequence="3"
+            />	
+
+
+
+		</data>
+	</odoo>

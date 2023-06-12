@@ -1,0 +1,17 @@
+.o_main th.o_list_header_datetime{
+    min-width: 128px ! important;
+}
+.o_main .o-search-options .searchview_extended_prop_value .o_datepicker {
+    width: -webkit-calc(100% - 55px) ! important;
+    width: calc(100% - 55px) ! important;
+}
+.o_main .o_form .o_form_field_datetime,
+.o_main .o_form .o_form_field_date,
+.o_list_field_datetime,
+.o_list_field_date,
+.bootstrap-datetimepicker-widget{
+    font-family: "Lato","Lucida Grande", Helvetica, Verdana, Arial;
+}
+.bootstrap-datetimepicker-widget .list-unstyled {
+    padding: 0px!important;
+}

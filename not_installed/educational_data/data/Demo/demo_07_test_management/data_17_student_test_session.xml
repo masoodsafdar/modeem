@@ -1,0 +1,33 @@
+<odoo>
+    <data noupdate="1">
+        <record model="student.test.session" id="student_test_session7">
+            <field name="academic_id" ref="mk_study_year1"/>
+            <field name="study_class_id" ref="mk_study_class1"/>
+            <field name="student_id" ref="mk_link1"/>
+            <field name="episode_id" ref="mk_episode01"/>
+            <field name="test_name" ref="mk_test_names2"/>
+            <field name="test_time" ref="center_time_table299"/>
+            <field name="branch" ref="mk_branches_master3"/>
+            <field name="branch_duration">30</field>
+            <field name="center_id" ref="mk_test_center_prepration4"/>
+            <field name="mosque_id" ref="mk_mosque1"/>
+            <field name="masjed_name">الإمام مالك بن أنس</field>
+            <field name="center_name">مركز إختبار الأجزاء طلاب[ مركز إشراف الوسط ][رجالي]</field>
+        </record>
+
+        <record model="student.test.session" id="student_test_session7">
+            <field name="academic_id" ref="mk_study_year1"/>
+            <field name="study_class_id" ref="mk_study_class1"/>
+            <field name="student_id" ref="mk_link2"/>
+            <field name="episode_id" ref="mk_episode01"/>
+            <field name="test_name" ref="mk_test_names2"/>
+            <field name="test_time" ref="center_time_table299"/>
+            <field name="branch" ref="mk_branches_master3"/>
+            <field name="branch_duration">30</field>
+            <field name="center_id" ref="mk_test_center_prepration4"/>
+            <field name="mosque_id" ref="mk_mosque1"/>
+            <field name="masjed_name">الإمام مالك بن أنس</field>
+            <field name="center_name">مركز إختبار الأجزاء طلاب[ مركز إشراف الوسط ][رجالي]</field>
+        </record>
+    </data>
+</odoo>

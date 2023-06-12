@@ -1,0 +1,35 @@
+<odoo>
+    <data noupdate="1">
+        <record id="mk_mosque_category1" model="mk.mosque.category">
+            <field name="name">مدرسة نسائية</field>
+            <field name="order_categ">4</field>
+            <field name="mosque_type">female</field>
+            <field name="active" eval="True"/>
+        </record>
+        <record id="mk_mosque_category2" model="mk.mosque.category">
+            <field name="name">مجمع تعليمي (عدة مساجد)</field>
+            <field name="order_categ">3</field>
+            <field name="mosque_type">male</field>
+            <field name="active" eval="True"/>
+        </record>
+        <record id="mk_mosque_category3" model="mk.mosque.category">
+            <field name="name">مدرسة فتيات</field>
+            <field name="order_categ">5</field>
+            <field name="mosque_type">female</field>
+            <field name="active" eval="True"/>
+        </record>
+        <record id="mk_mosque_category4" model="mk.mosque.category">
+            <field name="name">مجمع قرآني (أكثر من ٨٠ طالب)</field>
+            <field name="order_categ">2</field>
+            <field name="mosque_type">male</field>
+            <field name="active" eval="True"/>
+        </record>
+        <record id="mk_mosque_category5" model="mk.mosque.category">
+            <field name="name">حلقات اعتيادية</field>
+            <field name="order_categ">1</field>
+            <field name="mosque_type">male</field>
+            <field name="active" eval="True"/>
+        </record>
+
+    </data>
+</odoo>

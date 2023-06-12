@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <template id="report_tests_template">
+            <t t-call="web.html_container">
+                <t t-call="web.external_layout">
+                    <div class="page" style="font-family:Amiri">
+                        <style type="text/css">
+
+                            table, tbody,thead,td,th,tr {
+                            border: 1px solid #414141;
+                            }
+
+                            .table-condensed > thead > tr > th,
+                            .table-condensed > tbody > tr > td {
+                            vertical-align: bottom;
+
+                            border: 1px solid #414141;
+                            border-bottom: 1px solid #414141;
+                            border-top: 1px solid #414141;
+                            }
+
+
+                        </style>
+
+                        <div class="col-xs-12" t-if="report_type == 'detailed'">
+                            <div class="col-xs-12">
+                                <center>
+                                    <u>
+                                        <strong>
+                                            <h2>بيان بالناجحين فى اختبار الأجزاء</h2>
+                                        </strong>
+                                        <h4>
+                                            <strong></strong>
+                                        </h4>
+
+                                        <h4>
+                                            <span t-esc="center_name"/>
+                                        </h4>
+
+                                    </u>
+
+                                    <h4>
+                                        الفصل
+                                        <span t-esc="study_class_name"/>
+                                        لعام
+                                        <span t-esc="episode_academic_name"/>
+                                    </h4>
+
+                                </center>
+                            </div>
+                            <table class="table table-condensed table-bordered col-xs-12">
+                                <thead>
+                                    <th class="text-center">رقم الجوال</th>
+                                    <th style="vertical-align:middle;white-space: nowrap">اسم صاحب الحساب</th>
+                                    <th class="text-center">اسم البنك</th>
+                                    <th>الحساب البنكي</th>
+                                    <th class="text-center">المكافئات</th>
+                                    <th class="text-center">التقدير</th>
+                                    <th class="text-center">مجموع الدرجات</th>
+                                    <th colspan="2" class="text-center">المسار
+
+                                        <span>من سورة-</span>
+                                        <span>إلى سورة</span>
+
+                                    </th>
+
+                                    <!--th class="text-center">من سورة</th-->
+                                    <th class="text-center">الفرع</th>
+                                    <th class="text-center">الفترة</th>
+                                    <th style="vertical-align:middle;white-space: nowrap">المسجد/ المدرسة</th>
+                                    <th style="vertical-align:middle;white-space: nowrap">اسم المعلم/ المعلمة</th>
+                                    <th class="text-center">المسارات التعليمية للحلقة</th>
+                                    <th>الجنسية</th>
+                                    <th style="vertical-align:middle;white-space: nowrap">اسم الطالب/ الطالبة</th>
+                                    <th>رقم الهوية</th>
+
+                                    <th>م</th>
+                                </thead>
+                                <tbody>
+                                    <t t-set="i" t-value="1"/>
+                                    <t t-foreach="docs" t-as="c">
+                                        <tr>
+                                            <td>
+                                                <span t-esc="c['mobile']"/>
+                                            </td>
+                                            <td style="vertical-align:middle;white-space: nowrap">
+                                                <t t-foreach="c['bank_account_owner']" t-as="b">
+
+                                                    <span t-esc="b['account_owner_name']"/>
+
+                                                </t>
+                                            </td>
+                                            <td style="vertical-align:middle;white-space: nowrap">
+                                                <t t-foreach="c['bank_id']" t-as="b">
+
+                                                    <span t-esc="b['bank_id'].name"/>
+                                                </t>
+                                            </td>
+                                            <td>
+                                                <t t-foreach="c['bank_account']" t-as="b">
+
+                                                    <span t-esc="b['account_no']"/>
+
+                                                </t>
+                                            </td>
+                                            <td>
+                                                <t t-foreach="c['reward']" t-as="b">
+
+                                                    <span t-esc="b['reward_type']"/>
+
+
+                                                </t>
+                                            </td>
+
+                                            <td>
+                                                <span t-esc="c['appreciation']"/>
+                                            </td>
+                                            <td>
+                                                <span t-esc="c['final_degree']"/>
+                                            </td>
+
+                                            <td>
+                                                <span t-esc="c['to_surah']"/>
+                                            </td>
+                                            <td>
+                                                <span t-esc="c['from_surah']"/>
+                                            </td>
+                                            <td>
+                                                <span t-esc="c['branch']"/>
+                                            </td>
+                                            <td>
+                                                <span t-esc="c['periode']"/>
+                                            </td>
+                                            <td style="vertical-align:middle;white-space: nowrap">
+                                                <span t-esc="c['masjed_name']"/>
+                                            </td>
+                                            <td style="vertical-align:middle;white-space: nowrap">
+                                                <span t-esc="c['teacher']"/>
+                                            </td>
+
+
+                                            <td>
+                                                <span t-esc="c['episode']"/>
+                                            </td>
+                                            <td>
+                                                <span t-esc="c['nationality']"/>
+                                            </td>
+                                            <td style="vertical-align:middle;white-space: nowrap">
+                                                <span t-esc="c['student_name']"/>
+                                            </td>
+                                            <td class="text-center">
+                                                <span t-esc="c['student_id']"/>
+                                            </td>
+
+                                            <td class="text-center">
+                                                <span t-esc="c['num']"/>
+                                            </td>
+                                        </tr>
+                                        <t t-set="i" t-value="i+1"/>
+                                    </t>
+
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!--       REPORT TOTAL  -->
+                        <div class="col-xs-12" t-if="report_type == 'total'">
+                            <div class="col-xs-12">
+                                <center>
+                                    <u>
+                                        <strong>
+                                            <h2>
+                                                <t t-if="type_test_id">
+                                                    بيان بالناجحين في
+                                                    <span t-esc="type_test_name"/>
+                                                </t>
+                                                <t t-else="">
+                                                    بيان بالناجحين فى الاختبارات
+                                                </t>
+                                            </h2>
+                                        </strong>
+                                        <h4>
+                                            <strong>
+                                                <t t-if="branch_id">
+                                                    الفرع:
+                                                    <span t-esc="branch_name"/>
+                                                </t>
+                                            </strong>
+                                        </h4>
+                                        <h4>
+                                            <span t-esc="center_name"/>
+                                        </h4>
+                                        <h4>
+                                            <t t-if="type_filter == 'mosque'">
+                                                المسجد:
+                                                <span t-esc="mosque_id_name"/>
+                                            </t>
+                                        </h4>
+                                        <h4>
+                                            <t t-if="type_filter == 'supervisor'">
+                                                المشرف/المشرفة :
+                                                <span t-esc="supervisor_name"/>
+                                            </t>
+                                        </h4>
+                                        <t t-if="exam_study_class_id != false and exam_study_class_id != episode_study_class_id">
+                                        <h4>
+                                              الفصل الخاص بالحلقات :
+                                            <span t-esc="episode_study_class_name"/>
+                                            لعام
+                                            <span t-esc="episode_academic_name"/>
+                                        </h4>
+                                        <h4>
+                                            الفصل الخاص باختبارات :
+                                            <span t-esc="exam_study_class_name"/>
+                                            لعام
+                                            <span t-esc="exam_academic_name"/>
+                                        </h4>
+                                    </t>
+                                        <t t-else="">
+                                        <h4>
+                                            الفصل
+                                            <span t-esc="episode_study_class_name"/>
+                                            لعام
+                                            <span t-esc="episode_academic_name"/>
+                                        </h4>
+                                    </t>
+                                    </u>
+                                </center>
+                            </div>
+                            <div class="col-xs-12">
+                                <table class="table table-condensed table-bordered col-xs-12">
+                                    <thead>
+                                        <th class="text-center">نسبة النجاحين من العدد الكلي</th>
+                                        <th class="text-center">نسبة النجاحين من عدد المختبرين</th>
+                                        <th class="text-center">نسبة النجاحين من عدد المسجلين</th>
+                                        <th class="text-center">عدد الغائبين</th>
+                                        <th class="text-center">عدد الراسبين</th>
+                                        <th class="text-center">عدد الناجحين</th>
+                                        <th class="text-center">عدد المختبرين</th>
+                                        <th class="text-center">عدد المسجلين للاختبار</th>
+                                        <th class="text-center">عدد الطلاب الاجمالي</th>
+                                        <th class="text-center" t-if="type_filter != 'mosque'">عدد الحلقات المشاركة</th>
+                                        <th class="text-center" t-if="type_filter != 'mosque'">عدد الحلقات الكلي</th>
+                                        <th class="text-center" t-if="type_filter in ['episode_study_class','teacher']">
+                                            عدد المساجد المشاركة
+                                        </th>
+                                        <th class="text-center" t-if="type_filter in ['episode_study_class','teacher']">
+                                            عدد المساجد الكلي
+                                        </th>
+                                        <th class="text-center" t-if="type_filter == 'episode_study_class'">المركز</th>
+                                        <th class="text-center"
+                                            t-if="type_filter in ['center','category','gender_type','supervisor']">
+                                            المساجد
+                                        </th>
+                                        <th class="text-center" t-if="type_filter == 'mosque'">الحلقة/المعلم</th>
+                                        <th class="text-center" t-if="type_filter == 'teacher'">المعلم/ المعلمة</th>
+                                    </thead>
+
+                                    <tbody>
+                                        <t t-set="percentage_success_total_student_total" t-value="0"/>
+                                        <t t-set="percentage_test_success_total" t-value="0"/>
+                                        <t t-set="subsc_percentage_success_total" t-value="0"/>
+                                        <t t-set="nbr_test_absent_total" t-value="0"/>
+                                        <t t-set="nbr_test_fail_total" t-value="0"/>
+                                        <t t-set="nbr_test_success_total" t-value="0"/>
+                                        <t t-set="nbr_test_done_total" t-value="0"/>
+                                        <t t-set="nbr_student_session_total" t-value="0"/>
+                                        <t t-set="nbr_student_total" t-value="0"/>
+                                        <t t-set="nbr_episode_session_total" t-value="0"/>
+                                        <t t-set="nbr_episode_total" t-value="0"/>
+                                        <t t-set="nbr_mosque_session_total" t-value="0"/>
+                                        <t t-set="nbr_mosques_total" t-value="0"/>
+                                        <t t-set="count_doc" t-value="0"/>
+                                        <t t-foreach="docs" t-as="doc">
+                                            <t t-set="count_doc" t-value="count_doc + 1"/>
+                                            <tr>
+                                                <td class="text-center">
+                                                    <span t-esc="doc['percentage_success_total_student']"/>
+                                                    <t t-set="percentage_success_total_student_total"
+                                                       t-value="percentage_success_total_student_total + doc['percentage_success_total_student']"/>
+                                                </td>
+                                                <td class="text-center">
+                                                    <span t-esc="doc['percentage_test_success']"/>
+                                                    <t t-set="percentage_test_success_total"
+                                                       t-value="percentage_test_success_total + doc['percentage_test_success']"/>
+                                                </td>
+                                                <td class="text-center">
+                                                    <span t-esc="doc['subsc_percentage_success']"/>
+                                                    <t t-set="subsc_percentage_success_total"
+                                                       t-value="subsc_percentage_success_total + doc['subsc_percentage_success']"/>
+                                                </td>
+                                                <td class="text-center">
+                                                    <span t-esc="doc['nbr_test_absent']"/>
+                                                    <t t-set="nbr_test_absent_total"
+                                                       t-value="nbr_test_absent_total + doc['nbr_test_absent']"/>
+                                                </td>
+                                                <td class="text-center">
+                                                    <span t-esc="doc['nbr_test_fail']"/>
+                                                    <t t-set="nbr_test_fail_total"
+                                                       t-value="nbr_test_fail_total + doc['nbr_test_fail']"/>
+                                                </td>
+                                                <td class="text-center">
+                                                    <span t-esc="doc['nbr_test_success']"/>
+                                                    <t t-set="nbr_test_success_total"
+                                                       t-value="nbr_test_success_total + doc['nbr_test_success']"/>
+                                                </td>
+                                                <td class="text-center">
+                                                    <span t-esc="doc['nbr_test_done']"/>
+                                                    <t t-set="nbr_test_done_total"
+                                                       t-value="nbr_test_done_total + doc['nbr_test_done']"/>
+                                                </td>
+                                                <td class="text-center">
+                                                    <span t-esc="doc['nbr_student_session']"/>
+                                                    <t t-set="nbr_student_session_total"
+                                                       t-value="nbr_student_session_total + doc['nbr_student_session']"/>
+                                                </td>
+                                                <td class="text-center">
+                                                    <span t-esc="doc['nbr_student']"/>
+                                                    <t t-set="nbr_student_total"
+                                                       t-value="nbr_student_total + doc['nbr_student']"/>
+                                                </td>
+                                                <td class="text-center" t-if="type_filter != 'mosque'">
+                                                    <span t-esc="doc['nbr_episode_session']"/>
+                                                    <t t-set="nbr_episode_session_total"
+                                                       t-value="nbr_episode_session_total + doc['nbr_episode_session']"/>
+                                                </td>
+                                                <td class="text-center" t-if="type_filter != 'mosque'">
+                                                    <span t-esc="doc['nbr_episode']"/>
+                                                    <t t-set="nbr_episode_total"
+                                                       t-value="nbr_episode_total + doc['nbr_episode']"/>
+                                                </td>
+                                                <td class="text-center"
+                                                    t-if="type_filter in ['episode_study_class','teacher']">
+                                                    <span t-esc="doc['nbr_mosque_session']"/>
+                                                    <t t-set="nbr_mosque_session_total"
+                                                       t-value="nbr_mosque_session_total + doc['nbr_mosque_session']"/>
+                                                </td>
+                                                <td class="text-center"
+                                                    t-if="type_filter in ['episode_study_class','teacher']">
+                                                    <span t-esc="doc['nbr_mosques']"/>
+                                                    <t t-set="nbr_mosques_total"
+                                                       t-value="nbr_mosques_total + doc['nbr_mosques']"/>
+                                                </td>
+                                                <td class="text-center" t-if="type_filter == 'episode_study_class'">
+                                                    <span t-esc="doc['center']"/>
+                                                </td>
+                                                <td class="text-center"
+                                                    t-if="type_filter in ['center','category','gender_type','supervisor']">
+                                                    <span t-esc="doc['mosques']"/>
+                                                </td>
+                                                <td class="text-center" t-if="type_filter == 'mosque'">
+                                                    <span t-esc="doc['episode']"/>
+                                                </td>
+                                                <td class="text-center" t-if="type_filter == 'teacher'">
+                                                    <span t-esc="doc['teacher']"/>
+                                                </td>
+                                            </tr>
+                                        </t>
+                                        <tr>
+                                            <td class="text-center">
+                                                <span t-esc="round( (percentage_success_total_student_total / count_doc), 2) if count_doc!=0 else 0"/>
+                                            </td>
+                                            <td class="text-center">
+                                                <span t-esc="round( (percentage_test_success_total / count_doc), 2) if count_doc!=0 else 0"/>
+                                            </td>
+                                            <td class="text-center">
+                                                <span t-esc="round( (subsc_percentage_success_total / count_doc), 2) if count_doc!=0 else 0"/>
+                                            </td>
+                                            <td class="text-center">
+                                                <span t-esc="nbr_test_absent_total"/>
+                                            </td>
+                                            <td class="text-center">
+                                                <span t-esc="nbr_test_fail_total"/>
+                                            </td>
+                                            <td class="text-center">
+                                                <span t-esc="nbr_test_success_total"/>
+                                            </td>
+                                            <td class="text-center">
+                                                <span t-esc="nbr_test_done_total"/>
+                                            </td>
+                                            <td class="text-center">
+                                                <span t-esc="nbr_student_session_total"/>
+                                            </td>
+                                            <td class="text-center">
+                                                <span t-esc="nbr_student_total"/>
+                                            </td>
+                                            <td class="text-center" t-if="type_filter != 'mosque'">
+                                                <span t-esc="nbr_episode_session_total"/>
+                                            </td>
+                                            <td class="text-center" t-if="type_filter != 'mosque'">
+                                                <span t-esc="nbr_episode_total"/>
+                                            </td>
+                                            <td class="text-center"
+                                                t-if="type_filter in ['episode_study_class','teacher']">
+                                                <span t-esc="nbr_mosque_session_total"/>
+                                            </td>
+                                            <td class="text-center"
+                                                t-if="type_filter in ['episode_study_class','teacher','supervisor']">
+                                                <span t-esc="nbr_mosques_total"/>
+                                            </td>
+                                            <t t-if="type_filter == 'mosque'">
+                                                <td class="text-center">
+                                                    <span t-esc="nbr_episodes"/>
+                                                </td>
+                                            </t>
+                                             <t t-if="type_filter in ['center','gender_type','category','supervisor']">
+                                                <td class="text-center">
+                                                    <span t-esc="nbr_mosques"/>
+                                                </td>
+                                            </t>
+                                            <t t-else="">
+                                                <td class="text-center">
+
+                                                </td>
+                                            </t>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 footer">
+                            <div class="row text-center" style="border-top: 1px solid black;">
+                                <div class="col-xs-3 col-xs-offset-9 text-right">
+                                    <ul class="list-inline" style="margin-top:10px;">
+                                        <li>Page:</li>
+                                        <li>
+                                            <span class="page"/>
+                                        </li>
+                                        <li>/</li>
+                                        <li>
+                                            <span class="topage"/>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

@@ -1,0 +1,104 @@
+<odoo>
+  <data>
+    <template id="custom_internal_layout">
+        <!-- Multicompany -->
+
+        <div class="article">
+          <t t-raw="0" />
+        </div>
+    </template>
+     <template id="report_mosque_supervisor_template">
+      <t t-foreach="docs" t-as="o">
+        <t t-call="mk_episode_management.custom_internal_layout">
+                   <link rel="stylesheet" href="/mk_episode_management/static/src/font.css"/>
+                     <!--  <xpath expr="//div[@class='header o_background_header']" position="replace">
+                </xpath> -->
+
+                     <!--  <div class="footer">
+                        <div>
+
+                        </div>
+                    </div> -->
+
+          <div class="oe_structure"/>
+          <div class="row mt32 mb32">
+            <div class="page"  style="font-family: 'Neo Sans Arabic';">
+              
+                <!--h3 class="text-center" style="font-size:28px;">تصريح مؤقت</h3-->
+               
+                <p class="text-right" style="font-size:28px;font-family:Neo Sans Arabic" >
+                 <b> فضيلة وكيل الوزارة المساعد لشؤون الدعوة والإرشاد المشرف على الإدارة العامة للجمعيات الخيرية لتحفيظ القرآن الكريم سلمه الله </b>
+                </p>
+              <p class="text-right" style="font-size:28px;font-family:Neo Sans Arabic" align="right">
+                  <br>-:سلام عليكم ورحمة الله وبركاته   وبعد  </br>
+                </p>
+                <p class="text-center" style="font-size:28px;font-family:Neo Sans Arabic" align="left">
+                   <br>,,أسأل الله لكم مزيداً من العون والتوفيق </br>
+                 </p>
+                 <p class="text-right" style="font-size:28px;font-family:Neo Sans Arabic">
+                  <br> وبناءً على خطابكم رقم           ( <span t-field="  o.attach_no"/> ) في              <span t-field="o.hijri_start_date"/>  </br>
+                  <br>تجدون مرافقاً له بياناً بأسماء (<span t-field="o.no_supervisior"/>)   مرشحين للإشراف على حلقات في مدينة .الرياض.  لاطلاع , و من ثمَ التفضل بتزويدي بمرئياتكم   
+                  </br>
+
+
+</p>
+<p class="text-center" style="font-size:28px;font-family:Neo Sans Arabic">
+<br>,,, والله يحفظكم ويرعاكم  </br>
+</p>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<p class="text-left" style="font-size:28px;font-family:Neo Sans Arabic">
+                  <br>     رئيس الجمعية الخيرية لتحفيظ القرآن الكريم            </br>
+                </p>
+                <p class="text-left" style="font-size:28px;font-family:Neo Sans Arabic">
+                    <br>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;في منطقة الرياض</br>
+                </p>
+                <p class="text-left" style="font-size:28px;font-family:Neo Sans Arabic">
+                  <br>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;عبدالعزيز بن محمد النصار</br>
+                </p>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+ 
+<!--  -->
+                 <table  class="table-bordered" style="width: 90%;padding: 35px;margin: 35px;margin-bottom:0px;text-align:center">
+                                        <thead class="text-center">
+                                            <tr>
+                                                <td  style="text-align:center;">إسم المسجد</td>
+                                                <td  style="text-align:center;">رقم الهوية</td>
+                                                <td  style="text-align:center;">الإسم</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <t t-foreach="o.line_ids" t-as="value">
+                                                <tr>
+                                                   <td  style="text-align:right"><span t-esc="value.employee_id.mosque_id.name"/></td>
+                                                   <td style="text-align:center"><span t-esc="value.employee_id.identification_id"/></td>
+                                                   <td style="text-align:right"> <span t-esc="value.employee_id.name"/></td>
+                                                </tr>
+                                            </t>
+                                        </tbody>
+                                    </table>
+               
+           </div>
+
+        </div>
+
+      </t>
+    </t>
+  </template>
+  </data>
+</odoo>

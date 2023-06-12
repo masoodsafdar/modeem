@@ -1,0 +1,18 @@
+<odoo>
+	<data noupdate="1">
+		<record model="mk.virtual_room.subscription" id="virtual_room_subscription1">
+			<field name="mosque_id" ref="mk_mosque1"/>
+			<field name="virtual_room_provider_id" ref="virtual_room_provider1"/>
+			<field name="virtual_room_package_id" ref="virtual_room_provider_package1"/>
+			<field name="type_subscription_duration">two_months</field>
+			<field name="number_participant">50</field>
+			<field name="cost">200</field>
+			<field name="date_start">2020-10-20</field>
+			<field name="date_end">2020-12-20</field>
+			<field name="type_payment_method">from_account</field>
+			<field name="bank_id" ref="bank1"/>
+			<field name="number_account">55155122221</field>
+			<field name="state">confirm</field>
+		</record>
+	</data>  
+</odoo>

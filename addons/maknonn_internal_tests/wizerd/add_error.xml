@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <data>
+
+<record id="in_add_error_wizerd" model="ir.ui.view">
+                <field name="name"></field>
+                <field name="model">add.error.q</field>
+                <field name="arch" type="xml">
+                <form>
+                        <group>
+                                <group>
+                                    <field name="item"/>
+
+                                </group>
+                                        <group>
+                                <field name="value" string="error numbers" requierd="1"/>
+                                </group> 
+                                <group>
+                                <field name="question_id" readonly="1" invisible="0"/>
+
+                                </group>
+                 
+                                <group>
+                                    <field name="evaluation_item" readonly="1" invisible="1"/>                                    
+                                </group> 
+        
+                        </group>
+                        
+                    
+                    <footer>
+                        <button name="ok" type="object" string="OK" class="oe_highlight"/>
+                        <button special="cancel" string="Cancel" class="oe_link"/>
+                    </footer>
+                </form>
+                </field>
+</record>
+
+
+<record id="in_add_error_actoin" model="ir.actions.act_window">
+                <field name="name"></field>
+                <field name="res_model">add.error</field>
+                <field name="view_type">form</field>
+                <field name="view_mode">form</field>
+                <field name="view_id" ref="in_add_error_wizerd"/>
+                <field name="target">new</field>
+</record>
+
+</data>
+</odoo>

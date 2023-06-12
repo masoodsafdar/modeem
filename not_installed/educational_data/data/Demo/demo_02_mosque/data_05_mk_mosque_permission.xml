@@ -1,0 +1,33 @@
+<odoo>
+    <data noupdate="1">
+        <record id="mosque_permision1" model="mosque.permision">
+            <field name="type_process">new</field>
+            <field name="masjed_id" ref="mk_mosque1"/>
+            <field name="register_code">700</field>
+            <field name="categ_id" ref="mk_mosque_category2"/>
+            <field name="episode_value">ev</field>
+            <field name="episodes">حلقة عمر بن الخطاب</field>
+            <field name="date_request">2020-08-01</field>
+            <field name="center_id" ref="mk_hr_department7"/>
+            <field name="city_id" ref="mk_city1"/>
+            <field name="area_id" ref="mk_area1"/>
+            <field name="district_id" ref="mk_district1"/>
+            <field name="build_type" ref="mk_building_type1"/>
+            <field name="check_maneg_mosque" eval="True"/>
+            <field name="check_parking_mosque" eval="True"/>
+            <field name="permision_date">2020-08-30</field>
+            <field name="permision_end_date">2023-07-28</field>
+            <field name="hijri_permision_date">1442-01-11</field>
+            <field name="hijri_permision_end_date">1445-01-10</field>
+            <field name="attach_no">2155200547</field>
+            <field name="permision_type">pe</field>
+            <field name="mosque_type">1</field>
+            <field name="state">draft</field>
+            <field name="name">الإمام مالك بن أنس</field>
+            <field name="responsible_id"/>
+            <field name="remain">34</field>
+            <field name="test_select">test_slc</field>
+            <field name="is_valid" eval="True"/>
+        </record>
+    </data>
+</odoo>

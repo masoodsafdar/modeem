@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<data noupdate="1">
+
+		<record id="edu" model="ir.module.category">
+            <field name="name">EDU</field>
+            <field name="sequence">1</field>
+        </record>
+
+        <record id="group_create_edu_criterion" model="res.groups">
+            <field name="name">group_create_and_edite_edu_criterion</field>
+            <field name="category_id" eval="ref('edu')"/>
+            <field name="implied_ids" eval="[(4,ref('base.group_user'))]"/>
+        </record>
+
+        <record id="group_create_item" model="res.groups">
+            <field name="name">group_create_item</field>
+            <field name="category_id" eval="ref('edu')"/>
+            <field name="implied_ids" eval="[(4,ref('base.group_user'))]"/>
+        </record>
+
+        <record id="group_create_comapany_pointers" model="res.groups">
+            <field name="name">group_create_comapany_pointers</field>
+            <field name="category_id" eval="ref('edu')"/>
+            <field name="implied_ids" eval="[(4,ref('base.group_user'))]"/>
+        </record>
+
+        <record id="group_write_center_item" model="res.groups">
+            <field name="name">group_write_center_item</field>
+            <field name="category_id" eval="ref('edu')"/>
+            <field name="implied_ids" eval="[(4,ref('base.group_user'))]"/>
+        </record>
+
+        <record id="group_read_supervisor_item" model="res.groups">
+            <field name="name">group_read_supervisor_item</field>
+            <field name="category_id" eval="ref('edu')"/>
+            <field name="implied_ids" eval="[(4,ref('base.group_user'))]"/>
+        </record>
+
+        <record id="group_name_write_supervisor_item" model="res.groups">
+            <field name="name">group_name_write_supervisor_item</field>
+            <field name="category_id" eval="ref('edu')"/>
+            <field name="implied_ids" eval="[(4,ref('base.group_user')),(4,ref('group_read_supervisor_item'))]"/>
+        </record>
+
+        <record id="group_name_create_supervisor_item" model="res.groups">
+            <field name="name">group_name_create_supervisor_item</field>
+            <field name="category_id" eval="ref('edu')"/>
+            <field name="implied_ids" eval="[(4,ref('base.group_user')),(4,ref('group_name_write_supervisor_item'))]"/>
+        </record>
+        <record id="group_read_visits_managment" model="res.groups">
+            <field name="name">group_read_visits_managment</field>
+            <field name="category_id" eval="ref('edu')"/>
+            <field name="implied_ids" eval="[(4,ref('base.group_user'))]"/>
+        </record>
+        <record id="group_write_visits_managment" model="res.groups">
+            <field name="name">group_write_visits_managment</field>
+            <field name="category_id" eval="ref('edu')"/>
+            <field name="implied_ids" eval="[(4,ref('group_read_visits_managment')),(4,ref('base.group_user'))]"/>
+        </record>
+
+        <record id="select_all" model="res.groups">
+            <field name="name">Select All</field>
+
+            <field name="implied_ids" eval="[
+                (4, ref('group_create_edu_criterion')),
+                (4, ref('group_create_item')),
+                (4, ref('group_create_comapany_pointers')),
+                (4, ref('group_write_center_item')),
+                (4, ref('group_name_write_supervisor_item')),
+                (4, ref('group_name_create_supervisor_item')),
+                (4, ref('group_read_visits_managment')),
+		        (4, ref('group_write_visits_managment'))]"/>
+            <field name="category_id" ref="edu"/>
+        </record>
+
+<!--    -->
+
+<record id="group_read_item" model="res.groups">
+            <field name="name">group_read_item</field>
+            <field name="category_id" eval="ref('edu')"/>
+        </record>
+
+
+        <record id="group_edit_item" model="res.groups">
+            <field name="name">group_edit_item</field>
+            <field name="category_id" eval="ref('edu')"/>
+            <field name="implied_ids" eval="[(4,ref('group_read_item')),]"/>
+        </record>
+
+
+<record id="group_read_edu_criterion" model="res.groups">
+            <field name="name">group_read_edu_criterion</field>
+            <field name="category_id" eval="ref('edu')"/>
+            <field name="implied_ids" eval="[(4,ref('group_read_item'))]"/>
+        </record>
+<record id="group_edit_edu_criterion" model="res.groups">
+            <field name="name">group_edit_edu_criterion</field>
+            <field name="category_id" eval="ref('edu')"/>
+            <field name="implied_ids" eval="[(4,ref('group_create_item')),(4,ref('group_read_edu_criterion'))]"/>
+        </record>
+
+
+
+
+ <record id="group_read_edu_name" model="res.groups">
+            <field name="name">group_read_edu_name</field>
+            <field name="category_id" eval="ref('edu')"/>
+            <field name="implied_ids" eval="[(4,ref('base.group_user'))]"/>
+        </record>
+<record id="group_create_edu_name" model="res.groups">
+            <field name="name">group_create_edu_name</field>
+            <field name="category_id" eval="ref('edu')"/>
+            <field name="implied_ids" eval="[(4,ref('base.group_user'))]"/>
+        </record>
+<record id="group_edit_edu_name" model="res.groups">
+            <field name="name">group_edit_edu_name</field>
+            <field name="category_id" eval="ref('edu')"/>
+            <field name="implied_ids" eval="[(4,ref('base.group_user'))]"/>
+        </record>
+
+
+<record id="group_read_edu_field" model="res.groups">
+            <field name="name">group_read_edu_field</field>
+            <field name="category_id" eval="ref('edu')"/>
+            <field name="implied_ids" eval="[(4,ref('base.group_user'))]"/>
+        </record>
+<record id="group_write_edu_field" model="res.groups">
+            <field name="name">group_write_edu_field</field>
+            <field name="category_id" eval="ref('edu')"/>
+            <field name="implied_ids" eval="[(4,ref('base.group_user'))]"/>
+        </record>
+<record id="group_create_edu_field" model="res.groups">
+            <field name="name">group_create_edu_field</field>
+            <field name="category_id" eval="ref('edu')"/>
+            <field name="implied_ids" eval="[(4,ref('base.group_user'))]"/>
+        </record>
+
+
+<record id="group_read_edu_visit" model="res.groups">
+            <field name="name">group_read_edu_visit</field>
+            <field name="category_id" eval="ref('edu')"/>
+            <field name="implied_ids" eval="[(4,ref('base.group_user'))]"/>
+        </record>
+<record id="group_write_edu_visit" model="res.groups">
+            <field name="name">group_write_edu_visit</field>
+            <field name="category_id" eval="ref('edu')"/>
+            <field name="implied_ids" eval="[(4,ref('base.group_user'))]"/>
+        </record>
+<record id="group_create_edu_visit" model="res.groups">
+            <field name="name">group_create_edu_visit</field>
+            <field name="category_id" eval="ref('edu')"/>
+            <field name="implied_ids" eval="[(4,ref('base.group_user'))]"/>
+        </record>
+
+<record id="group_create_edu_approve" model="res.groups">
+            <field name="name">group_create_edu_approve</field>
+            <field name="category_id" eval="ref('edu')"/>
+            <field name="implied_ids" eval="[(4,ref('base.group_user'))]"/>
+        </record>
+<record id="group_edit_edu_approve" model="res.groups">
+            <field name="name">group_edit_edu_approve</field>
+            <field name="category_id" eval="ref('edu')"/>
+            <field name="implied_ids" eval="[(4,ref('base.group_user'))]"/>
+        </record>
+<record id="group_read_edu_approve" model="res.groups">
+            <field name="name">group_read_edu_approve</field>
+            <field name="category_id" eval="ref('edu')"/>
+            <field name="implied_ids" eval="[(4,ref('base.group_user'))]"/>
+        </record>
+
+
+<record id="group_read_comapany_pointers" model="res.groups">
+            <field name="name">group_read_comapany_pointers</field>
+            <field name="category_id" eval="ref('edu')"/>
+            <field name="implied_ids" eval="[(4,ref('base.group_user'))]"/>
+        </record>
+
+<record id="group_edit_comapany_pointers" model="res.groups">
+            <field name="name">group_edit_comapany_pointers</field>
+            <field name="category_id" eval="ref('edu')"/>
+            <field name="implied_ids" eval="[(4,ref('group_read_comapany_pointers'))]"/>
+        </record>
+
+<record id="group_distribute_comapany_pointers" model="res.groups">
+            <field name="name">group_distribute_comapany_pointers</field>
+            <field name="category_id" eval="ref('edu')"/>
+            <field name="implied_ids" eval="[(4,ref('group_read_comapany_pointers'))]"/>
+        </record>
+
+
+<record id="group_read_center_item" model="res.groups">
+            <field name="name">group_read_center_item</field>
+            <field name="category_id" eval="ref('edu')"/>
+            <field name="implied_ids" eval="[(4,ref('base.group_user'))]"/>
+        </record>
+
+<!--record id="group_create_center_item" model="res.groups">
+            <field name="name">group_create_center_item</field>
+            <field name="category_id" eval="ref('edu')"/>
+            <field name="implied_ids" eval="[(4,ref('group_read_center_item'))]"/>
+        </record-->
+
+
+<record id="group_name_distribute_supervisor_item" model="res.groups">
+            <field name="name">group_name_distribute_supervisor_item</field>
+            <field name="category_id" eval="ref('edu')"/>
+            <field name="implied_ids" eval="[(4,ref('group_read_center_item'))]"/>
+        </record>
+
+
+
+
+
+ 
+	
+</data>
+</odoo>

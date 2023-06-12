@@ -1,0 +1,9 @@
+<odoo>
+    <data noupdate="1">
+        <record id="mosque_eval1" model="mosque.eval">
+            <field name="start_date">2020-10-15</field>
+            <field name="end_date">2021-05-30</field>
+            <field name="eval_degree">10</field>
+        </record>
+    </data>
+</odoo>

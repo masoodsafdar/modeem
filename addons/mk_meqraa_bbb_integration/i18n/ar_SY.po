@@ -1,0 +1,461 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* mk_meqraa_bbb_integration
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-03-03 09:37+0000\n"
+"PO-Revision-Date: 2022-03-03 09:37+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: mk_meqraa_bbb_integration
+#: model:ir.ui.view,arch_db:mk_meqraa_bbb_integration.session_kanban_view
+msgid "<i class=\"fa fa-ellipsis-v\" role=\"img\" aria-label=\"Manage\" title=\"Manage\"/>"
+msgstr "<i class=\"fa fa-ellipsis-v\" role=\"img\" aria-label=\"Manage\" title=\"Manage\"/>"
+
+#. module: mk_meqraa_bbb_integration
+#: model:ir.ui.view,arch_db:mk_meqraa_bbb_integration.session_kanban_view
+msgid "<strong style=\"color:black\">From:</strong>"
+msgstr "<strong style=\"color:black\">من:</strong>"
+
+#. module: mk_meqraa_bbb_integration
+#: model:ir.ui.view,arch_db:mk_meqraa_bbb_integration.session_kanban_view
+msgid "<strong style=\"color:black\">To:</strong>"
+msgstr "<strong style=\"color:black\">الى:</strong>"
+
+#. module: mk_meqraa_bbb_integration
+#: selection:mq.session,status:0
+msgid "Active"
+msgstr "ساري"
+
+#. module: mk_meqraa_bbb_integration
+#: model:ir.model.fields,field_description:mk_meqraa_bbb_integration.field_mq_session_active
+msgid "Active"
+msgstr "مفعل"
+
+#. module: mk_meqraa_bbb_integration
+#: model:ir.ui.view,arch_db:mk_meqraa_bbb_integration.session_search_view
+msgid "Archived"
+msgstr "مؤرشف"
+
+#. module: mk_meqraa_bbb_integration
+#: model:ir.ui.view,arch_db:mk_meqraa_bbb_integration.mq_episode_form_inherit
+#: model:ir.ui.view,arch_db:mk_meqraa_bbb_integration.episode_form_view_inherited
+msgid "BBB Config"
+msgstr "اعدادات الBBB"
+
+#. module: mk_meqraa_bbb_integration
+#: model:ir.ui.view,arch_db:mk_meqraa_bbb_integration.res_config_settings_maqraa_form
+msgid "BBB Configuration"
+msgstr "اعدادات الربط مع الBBB"
+
+#. module: mk_meqraa_bbb_integration
+#: model:ir.model.fields,field_description:mk_meqraa_bbb_integration.field_mk_episode_id_bbb_room
+#: model:ir.model.fields,field_description:mk_meqraa_bbb_integration.field_mq_session_id_bbb_room
+msgid "BBB Room ID"
+msgstr "معرف الBBB"
+
+#. module: mk_meqraa_bbb_integration
+#: model:ir.ui.view,arch_db:mk_meqraa_bbb_integration.session_form_view
+msgid "BBB Session Info"
+msgstr "معلومات BBB"
+
+#. module: mk_meqraa_bbb_integration
+#: model:ir.model.fields,field_description:mk_meqraa_bbb_integration.field_mq_session_student_id_bbb_url_student
+msgid "BBB Url Student"
+msgstr "رابط الطالب"
+
+#. module: mk_meqraa_bbb_integration
+#: model:ir.model.fields,field_description:mk_meqraa_bbb_integration.field_mq_session_student_bbb_url_student_access_token
+msgid "BBB Url token"
+msgstr "BBB Url token"
+
+#. module: mk_meqraa_bbb_integration
+#: model:ir.model.fields,field_description:mk_meqraa_bbb_integration.field_res_config_settings_bigbluebutton_secret
+#: model:ir.model.fields,field_description:mk_meqraa_bbb_integration.field_website_support_settings_bigbluebutton_secret
+msgid "BigBlueButton Secret"
+msgstr "الباسوورد (كلمة السر)"
+
+#. module: mk_meqraa_bbb_integration
+#: model:ir.model.fields,field_description:mk_meqraa_bbb_integration.field_res_config_settings_bigbluebutton_url
+#: model:ir.model.fields,field_description:mk_meqraa_bbb_integration.field_website_support_settings_bigbluebutton_url
+msgid "BigBlueButton Url"
+msgstr "رابط سرفر الاجتماع"
+
+#. module: mk_meqraa_bbb_integration
+#: model:ir.ui.view,arch_db:mk_meqraa_bbb_integration.session_form_view
+msgid "Close Meeting"
+msgstr "غلق الاجتماع"
+
+#. module: mk_meqraa_bbb_integration
+#: model:ir.model.fields,field_description:mk_meqraa_bbb_integration.field_mq_session_color
+msgid "Color Index"
+msgstr "لون الرقم التسلسلى"
+
+#. module: mk_meqraa_bbb_integration
+#: model:ir.model.fields,field_description:mk_meqraa_bbb_integration.field_mk_episode_compute_session
+msgid "Compute Session"
+msgstr "Compute Session"
+
+#. module: mk_meqraa_bbb_integration
+#: code:addons/mk_meqraa_bbb_integration/models/mq_session.py:124
+#, python-format
+msgid "Could not get session, check bbb url and secret code"
+msgstr "لا يمكن فتح حصة اجتماع الرجاء التثبت من الرقم السري فالاعدادات"
+
+#. module: mk_meqraa_bbb_integration
+#: model:ir.model.fields,field_description:mk_meqraa_bbb_integration.field_mq_session_episode_id
+#: model:ir.ui.view,arch_db:mk_meqraa_bbb_integration.session_search_view
+msgid "Course"
+msgstr "نوع البرنامج"
+
+#. module: mk_meqraa_bbb_integration
+#: model:ir.model.fields,field_description:mk_meqraa_bbb_integration.field_mq_session_create_uid
+#: model:ir.model.fields,field_description:mk_meqraa_bbb_integration.field_mq_session_student_create_uid
+#: model:ir.model.fields,field_description:mk_meqraa_bbb_integration.field_update_time_create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: mk_meqraa_bbb_integration
+#: model:ir.model.fields,field_description:mk_meqraa_bbb_integration.field_mq_session_create_date
+#: model:ir.model.fields,field_description:mk_meqraa_bbb_integration.field_mq_session_student_create_date
+#: model:ir.model.fields,field_description:mk_meqraa_bbb_integration.field_update_time_create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: mk_meqraa_bbb_integration
+#: model:ir.model.fields,field_description:mk_meqraa_bbb_integration.field_mq_session_display_name
+#: model:ir.model.fields,field_description:mk_meqraa_bbb_integration.field_mq_session_student_display_name
+#: model:ir.model.fields,field_description:mk_meqraa_bbb_integration.field_update_time_display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: mk_meqraa_bbb_integration
+#: selection:mq.session,status:0
+msgid "Done"
+msgstr "تمت"
+
+#. module: mk_meqraa_bbb_integration
+#: model:ir.model.fields,field_description:mk_meqraa_bbb_integration.field_mq_session_duration
+msgid "Duration"
+msgstr "المدة"
+
+#. module: mk_meqraa_bbb_integration
+#: model:ir.ui.view,arch_db:mk_meqraa_bbb_integration.session_kanban_view
+msgid "Edit"
+msgstr "تحرير"
+
+#. module: mk_meqraa_bbb_integration
+#: model:ir.ui.menu,name:mk_meqraa_bbb_integration.menu_config
+msgid "Educational Settings"
+msgstr "اعدادات المقراة"
+
+#. module: mk_meqraa_bbb_integration
+#: model:ir.model.fields,field_description:mk_meqraa_bbb_integration.field_mq_session_end_datetime
+msgid "End Time"
+msgstr "توقيت النهاية"
+
+#. module: mk_meqraa_bbb_integration
+#: model:ir.model.fields,field_description:mk_meqraa_bbb_integration.field_update_time_episode_id
+msgid "Episode"
+msgstr "حلقة/ الفصل"
+
+#. module: mk_meqraa_bbb_integration
+#: selection:mq.session,status:0
+msgid "Error"
+msgstr "خطأ"
+
+#. module: mk_meqraa_bbb_integration
+#: model:ir.ui.view,arch_db:mk_meqraa_bbb_integration.session_search_view
+msgid "Group By..."
+msgstr "تجميع حسب.."
+
+#. module: mk_meqraa_bbb_integration
+#: model:ir.model.fields,field_description:mk_meqraa_bbb_integration.field_mk_episode_id_hook
+#: model:ir.model.fields,field_description:mk_meqraa_bbb_integration.field_mq_session_id_hook
+msgid "Hook ID"
+msgstr "Hook ID"
+
+#. module: mk_meqraa_bbb_integration
+#: model:ir.model.fields,field_description:mk_meqraa_bbb_integration.field_mq_session_id
+#: model:ir.model.fields,field_description:mk_meqraa_bbb_integration.field_mq_session_student_id
+#: model:ir.model.fields,field_description:mk_meqraa_bbb_integration.field_update_time_id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: mk_meqraa_bbb_integration
+#: model:ir.model.fields,field_description:mk_meqraa_bbb_integration.field_mq_session_id_internal_meeting
+msgid "Internal meeting ID"
+msgstr "المعرف الداخلي للاجتماع"
+
+#. module: mk_meqraa_bbb_integration
+#: model:ir.model.fields,field_description:mk_meqraa_bbb_integration.field_mq_session_url_internal_meeting
+msgid "Internal meeting URL"
+msgstr "الرابط الداخلي للاجتماع"
+
+#. module: mk_meqraa_bbb_integration
+#: model:ir.model.fields,field_description:mk_meqraa_bbb_integration.field_mq_session___last_update
+#: model:ir.model.fields,field_description:mk_meqraa_bbb_integration.field_mq_session_student___last_update
+#: model:ir.model.fields,field_description:mk_meqraa_bbb_integration.field_update_time___last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: mk_meqraa_bbb_integration
+#: model:ir.model.fields,field_description:mk_meqraa_bbb_integration.field_mq_session_student_write_uid
+#: model:ir.model.fields,field_description:mk_meqraa_bbb_integration.field_mq_session_write_uid
+#: model:ir.model.fields,field_description:mk_meqraa_bbb_integration.field_update_time_write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: mk_meqraa_bbb_integration
+#: model:ir.model.fields,field_description:mk_meqraa_bbb_integration.field_mq_session_student_write_date
+#: model:ir.model.fields,field_description:mk_meqraa_bbb_integration.field_mq_session_write_date
+#: model:ir.model.fields,field_description:mk_meqraa_bbb_integration.field_update_time_write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: mk_meqraa_bbb_integration
+#: model:ir.ui.view,arch_db:mk_meqraa_bbb_integration.session_logoutpage
+msgid "Logo"
+msgstr "الشعار"
+
+#. module: mk_meqraa_bbb_integration
+#: model:ir.model,name:mk_meqraa_bbb_integration.model_mk_listen_line
+msgid "MK Listen Lin"
+msgstr "MK Listen Lin"
+
+#. module: mk_meqraa_bbb_integration
+#: model:ir.ui.view,arch_db:mk_meqraa_bbb_integration.res_config_settings_maqraa_form
+msgid "Maqraa Configuration"
+msgstr "اعدادات المقرأة"
+
+#. module: mk_meqraa_bbb_integration
+#: model:ir.ui.view,arch_db:mk_meqraa_bbb_integration.session_search_view
+msgid "Month"
+msgstr "الشهر"
+
+#. module: mk_meqraa_bbb_integration
+#: model:ir.model.fields,field_description:mk_meqraa_bbb_integration.field_mq_session_name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: mk_meqraa_bbb_integration
+#: selection:mq.session,status:0
+msgid "Planned"
+msgstr "مخطط"
+
+#. module: mk_meqraa_bbb_integration
+#: code:addons/mk_meqraa_bbb_integration/models/mq_episode.py:92
+#: code:addons/mk_meqraa_bbb_integration/models/mq_episode.py:99
+#, python-format
+msgid "Please Check Your BBB configuration"
+msgstr "الرجاء التأكد من اعدادات الBBB!"
+
+#. module: mk_meqraa_bbb_integration
+#: code:addons/mk_meqraa_bbb_integration/models/mq_session.py:194
+#, python-format
+msgid "Please try again in a minute"
+msgstr "الرجاء التجربة بعد قليل او في وقت لاحق"
+
+#. module: mk_meqraa_bbb_integration
+#: model:ir.ui.view,arch_db:mk_meqraa_bbb_integration.session_form_view
+msgid "Re-Generate Meeting"
+msgstr "اعادة توليد اجتماع"
+
+#. module: mk_meqraa_bbb_integration
+#: model:ir.ui.view,arch_db:mk_meqraa_bbb_integration.mq_episode_form_inherit
+#: model:ir.ui.view,arch_db:mk_meqraa_bbb_integration.episode_form_view_inherited
+msgid "Re-Generate Room"
+msgstr "اعادة توليد غرفة bbb"
+
+#. module: mk_meqraa_bbb_integration
+#: model:ir.model,name:mk_meqraa_bbb_integration.model_mq_session
+#: model:ir.model.fields,field_description:mk_meqraa_bbb_integration.field_mk_listen_line_session_id
+#: model:ir.model.fields,field_description:mk_meqraa_bbb_integration.field_mq_session_student_session_id
+#: model:ir.ui.menu,name:mk_meqraa_bbb_integration.menu_session_main
+#: model:ir.ui.menu,name:mk_meqraa_bbb_integration.sub_menu_session
+#: model:ir.ui.view,arch_db:mk_meqraa_bbb_integration.mq_episode_form_inherit
+#: model:ir.ui.view,arch_db:mk_meqraa_bbb_integration.session_form_view
+#: model:ir.ui.view,arch_db:mk_meqraa_bbb_integration.episode_form_view_inherited
+msgid "Session"
+msgstr "الحصص"
+
+#. module: mk_meqraa_bbb_integration
+#: model:ir.ui.view,arch_db:mk_meqraa_bbb_integration.session_pivot_view
+msgid "Session Analysis"
+msgstr "الحصص"
+
+#. module: mk_meqraa_bbb_integration
+#: model:ir.model.fields,field_description:mk_meqraa_bbb_integration.field_mq_session_bbb_password_attandee
+msgid "Session Attandee Password"
+msgstr "Session Attandee Password"
+
+#. module: mk_meqraa_bbb_integration
+#: model:ir.ui.view,arch_db:mk_meqraa_bbb_integration.session_form_view
+msgid "Session Informations"
+msgstr "معلومات الحصة"
+
+#. module: mk_meqraa_bbb_integration
+#: model:ir.model.fields,field_description:mk_meqraa_bbb_integration.field_mq_session_bbb_password_moderator
+msgid "Session Moderator Password"
+msgstr "Session Moderator Password"
+
+#. module: mk_meqraa_bbb_integration
+#: model:ir.actions.act_window,name:mk_meqraa_bbb_integration.session_session_act
+#: model:ir.ui.view,arch_db:mk_meqraa_bbb_integration.session_calendar_view
+#: model:ir.ui.view,arch_db:mk_meqraa_bbb_integration.session_search_view
+#: model:ir.ui.view,arch_db:mk_meqraa_bbb_integration.session_tree_view
+msgid "Sessions"
+msgstr "الحصص"
+
+#. module: mk_meqraa_bbb_integration
+#: model:ir.actions.act_window,name:mk_meqraa_bbb_integration.maqraa_base_config_settings_action
+#: model:ir.ui.menu,name:mk_meqraa_bbb_integration.menu_settings_main
+msgid "Settings"
+msgstr "إعدادات"
+
+#. module: mk_meqraa_bbb_integration
+#: model:ir.ui.view,arch_db:mk_meqraa_bbb_integration.res_config_settings_maqraa_form
+msgid "Specify the secret for integration bbb"
+msgstr "حدد كلمة السر للربط"
+
+#. module: mk_meqraa_bbb_integration
+#: model:ir.ui.view,arch_db:mk_meqraa_bbb_integration.res_config_settings_maqraa_form
+msgid "Specify the url for integration bbb"
+msgstr "Specify the url for integration bbb"
+
+#. module: mk_meqraa_bbb_integration
+#: model:ir.ui.view,arch_db:mk_meqraa_bbb_integration.res_config_settings_maqraa_form
+msgid "Specify the url for integration bbb."
+msgstr "حدد عنوان URL للربط مع BBB."
+
+#. module: mk_meqraa_bbb_integration
+#: model:ir.ui.view,arch_db:mk_meqraa_bbb_integration.session_form_view
+msgid "Start & Join Meeting"
+msgstr "بدأ الاجتماع"
+
+#. module: mk_meqraa_bbb_integration
+#: model:ir.model.fields,field_description:mk_meqraa_bbb_integration.field_mq_session_start_datetime
+msgid "Start Time"
+msgstr "توقيت البداية"
+
+#. module: mk_meqraa_bbb_integration
+#: model:ir.model.fields,field_description:mk_meqraa_bbb_integration.field_mq_session_start_date
+msgid "Start date"
+msgstr "تاريخ اﻹصدار"
+
+#. module: mk_meqraa_bbb_integration
+#: model:ir.model.fields,field_description:mk_meqraa_bbb_integration.field_mq_session_status
+#: model:ir.ui.view,arch_db:mk_meqraa_bbb_integration.session_search_view
+msgid "Status"
+msgstr "الحالة "
+
+#. module: mk_meqraa_bbb_integration
+#: model:ir.model.fields,field_description:mk_meqraa_bbb_integration.field_mq_session_student_mk_link
+msgid "Student"
+msgstr "اسم الطالب"
+
+#. module: mk_meqraa_bbb_integration
+#: model:ir.ui.view,arch_db:mk_meqraa_bbb_integration.session_form_view
+msgid "Student List"
+msgstr "قائمة الطلاب"
+
+#. module: mk_meqraa_bbb_integration
+#: model:ir.model.fields,field_description:mk_meqraa_bbb_integration.field_mq_session_student_ids
+msgid "Student list"
+msgstr "قائمة الطلاب"
+
+#. module: mk_meqraa_bbb_integration
+#: model:ir.model.fields,field_description:mk_meqraa_bbb_integration.field_mq_session_teacher_id
+#: model:ir.ui.view,arch_db:mk_meqraa_bbb_integration.session_kanban_view
+#: model:ir.ui.view,arch_db:mk_meqraa_bbb_integration.session_search_view
+msgid "Teacher"
+msgstr "المعلم"
+
+#. module: mk_meqraa_bbb_integration
+#: model:ir.model.fields,field_description:mk_meqraa_bbb_integration.field_mq_session_time_session_id
+msgid "Time Session"
+msgstr "وقت الحصة"
+
+#. module: mk_meqraa_bbb_integration
+#: model:ir.ui.view,arch_db:mk_meqraa_bbb_integration.session_search_view
+msgid "Today"
+msgstr "اليوم"
+
+#. module: mk_meqraa_bbb_integration
+#: model:ir.ui.view,arch_db:mk_meqraa_bbb_integration.mq_episode_form_inherit
+msgid "Total Session"
+msgstr "مجموع الحصص"
+
+#. module: mk_meqraa_bbb_integration
+#: code:addons/mk_meqraa_bbb_integration/models/mq_session.py:104
+#, python-format
+msgid "Unable to close the meeting"
+msgstr "لا يمكنك غلق الاجتماع"
+
+#. module: mk_meqraa_bbb_integration
+#: model:ir.actions.act_window,name:mk_meqraa_bbb_integration.update_episode_time_action
+#: model:ir.model,name:mk_meqraa_bbb_integration.model_update_time
+#: model:ir.ui.view,arch_db:mk_meqraa_bbb_integration.mq_episode_form_inherit
+#: model:ir.ui.view,arch_db:mk_meqraa_bbb_integration.update_episode_time_wizard
+#: model:ir.ui.view,arch_db:mk_meqraa_bbb_integration.episode_form_view_inherited
+msgid "Update episode time"
+msgstr "تعديل الفترة"
+
+#. module: mk_meqraa_bbb_integration
+#: model:ir.ui.view,arch_db:mk_meqraa_bbb_integration.session_search_view
+msgid "Week"
+msgstr "الاسبوع"
+
+#. module: mk_meqraa_bbb_integration
+#: model:ir.model,name:mk_meqraa_bbb_integration.model_mk_episode
+msgid "mk.episode"
+msgstr "mk.episode"
+
+#. module: mk_meqraa_bbb_integration
+#: model:ir.model,name:mk_meqraa_bbb_integration.model_mq_session_student
+msgid "mq.session.student"
+msgstr "mq.session.student"
+
+#. module: mk_meqraa_bbb_integration
+#: model:ir.model,name:mk_meqraa_bbb_integration.model_res_config_settings
+msgid "res.config.settings"
+msgstr "الدقة.التكوين.إعدادات"
+
+#. module: mk_meqraa_bbb_integration
+#: model:res.groups,name:mk_meqraa_bbb_integration.config_meqraa_group
+msgid "اعدادات المقراة"
+msgstr "اعدادات المقراة"
+
+#. module: mk_meqraa_bbb_integration
+#: model:ir.ui.view,arch_db:mk_meqraa_bbb_integration.session_logoutpage
+msgid "الرجوع للصفحة الرئيسية"
+msgstr "الرجوع للصفحة الرئيسية"
+
+#. module: mk_meqraa_bbb_integration
+#: model:ir.ui.view,arch_db:mk_meqraa_bbb_integration.update_episode_time_wizard
+msgid "الغاء"
+msgstr "الغاء"
+
+#. module: mk_meqraa_bbb_integration
+#: model:ir.model.fields,field_description:mk_meqraa_bbb_integration.field_update_time_time_id
+msgid "الفترة"
+msgstr "الفترة"
+
+#. module: mk_meqraa_bbb_integration
+#: model:ir.ui.view,arch_db:mk_meqraa_bbb_integration.update_episode_time_wizard
+msgid "تعديل"
+msgstr "تعديل"
+
+#. module: mk_meqraa_bbb_integration
+#: model:ir.model.fields,field_description:mk_meqraa_bbb_integration.field_update_time_update_date
+msgid "Update Date"
+msgstr "تاريخ التعديل"
+

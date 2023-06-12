@@ -1,0 +1,14 @@
+<odoo>
+	<data noupdate="1">
+		<record model="mk.virtual_room" id="virtual_room1">
+			<field name="name">قاعة ابوبكر الصديق</field>
+			<field name="virtual_room_subscription_id" ref="virtual_room_subscription1"/>
+			<field name="type_room_id" ref="virtual_room_type1"/>
+			<field name="room_objective">تعليم القرآن تلاوة</field>
+			<field name="admin_link">https://us04web.zoom.us/j/72490364496?pwd=Q3RSZGV2RlFCWWcxL1lSOXB4b0cxZz09</field>
+			<field name="participant_link">https://us04web.zoom.us/j/72490364496?pwd=Q3RSZGV2RlFCWWcxL1lSOXB4b0cxZz09</field>
+			<field name="date_expiration">2020-12-20</field>
+			<field name="state">confirm</field>
+		</record>
+	</data>  
+</odoo>

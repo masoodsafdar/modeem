@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<openerp>
+		<data>
+			<record id="reward_items_form_view" model="ir.ui.view">
+			    <field name= "name">Reward items</field>
+			    <field name= "model">mk.reward.items</field>
+			    <field name= "arch"  type="xml"> 
+			         <form  create="1" delete="1" edit="1">
+			             <sheet>
+			             	<group>
+			             		<group>
+			             			<field name="branches" widget="many2many_tags"/>
+			             		</group>
+			             		<group>
+			             			<field name="reward_type" required="1"/>
+			             		</group>
+			             		<group>
+			             			<field name="appreciation" required="1"/>
+			             		</group>
+			             		<group>
+			             			<field name="age_fillter" required="1"/>
+			             		</group>
+			             		<group>
+			             			<field name="age_groups" widget="many2many_tags" attrs="{'invisible':[('age_fillter','=','open')],
+			             			                                                         'required':[('age_fillter','=','close')]}" options="{'no_create': True, 'no_open':True}"/>
+			             		</group>
+			             		<group>
+			             			<field name="amount" attrs="{'invisible':[('reward_type','=','certificate')]}"/>
+			             		</group>
+			             	</group>
+			             </sheet>
+						 <div class="oe_chatter">
+							<field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+							<field name="message_ids" widget="mail_thread"/>
+						</div>
+			         </form>
+			    </field>
+			 </record>
+
+
+			 <record id="reward_items_tree" model="ir.ui.view">
+			      <field name="name">passing items</field>
+			      <field name="model">mk.reward.items</field>
+			      <field name="arch" type="xml">
+			        <tree>
+						<field name="branches" required="1" widget="many2many_tags"/>
+						<field name="reward_type" required="1"/>
+						<field name="appreciation" required="1"/>
+						<field name="age_fillter" required="1"/>
+						<field name="age_groups"/>
+						<field name="amount"/>
+				    </tree>
+			   </field>
+			 </record>
+			 
+        <record id="mk_reward_items_search_view" model="ir.ui.view">
+            <field name="name">reward items Search View</field>
+            <field name="model">mk.reward.items</field>
+            <field name="arch" type="xml">
+                <search>
+                	<field name="branches"/>
+ 					
+ 					<filter string="مفتوح"                 name="open"                 domain="[('age_fillter', '=','open')]"/>
+				    <filter string="محدد"                  name="close"                domain="[('age_fillter', '=','close')]"/>
+				    <separator/>
+			        <filter string="شهادة"                 name="certificate"          domain="[('reward_type', '=','certificate')]"/>
+				    <filter string="شهادة + مبلغ مالي"     name="certificate_cash"     domain="[('reward_type', '=','acceptable')]"/> 
+				    <separator/>
+				    <filter string="راسب"                  name="fail"                 domain="[('appreciation', '=','fail')]"/>
+				    <filter string="مقبول"                 name="acceptable"           domain="[('appreciation', '=','acceptable')]"/>
+				    <filter string="جيد"                   name="acceptable"           domain="[('appreciation', '=','good')]"/>
+				    <filter string="جيد جدا"               name="v_good"               domain="[('appreciation', '=','v_good')]"/>
+				    <filter string="ممتاز"                 name="excellent"            domain="[('appreciation', '=','excellent')]"/>  
+                </search>
+            </field>
+        </record>
+        
+			 <record id="reward_items_action" model="ir.actions.act_window">
+				<field name="name">Reward items</field>
+				<field name="res_model">mk.reward.items</field>
+				<field name="type">ir.actions.act_window</field>
+				<field name="view_type">form</field>
+				<field name="view_mode">tree,form</field>
+				<!--<field name="domain">[]</field>
+				<field name="context">{}</field>
+				<field name="search_view_id" ref="mk_contests_regulatoins_preparation_search_view"/> -->
+		    </record>
+
+		   <menuitem
+              id="test_reward_items"
+              name="Reward Items"
+              action="reward_items_action"
+              parent="maknon_tests.test_processes_main_menu"
+              sequence="3"
+              groups="maknon_tests.group_reward_items_read,maknon_tests.group_assembly_tests_full"
+            />	
+
+
+
+		</data>
+	</openerp>

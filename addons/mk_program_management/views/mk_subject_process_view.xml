@@ -1,0 +1,84 @@
+<odoo>
+    <data>
+    
+ 	<record id="mk_subject_process_form_view" model="ir.ui.view">
+          <field name="name">Subjects Process Form View</field>
+          <field name="model">mk.subject.process</field>
+          <field name="arch" type="xml">
+              <form string = "Subjects Process">
+		  <header>
+			<button name="create_subjects" string="Create Subjects" type="object" class="oe_highlight"/>
+		  </header>
+		  <sheet>
+		    <group>
+		  	<group colspan="4" col="6">
+			  	<field name="company_id" invisible="1" options="{'no_open':1,'no_create':1}"/>
+		 		<field name="center_department_id" domain="[('level_type','=','c')]" options="{'no_open':1,'no_create':1}"/>
+		 		<field name="mosque_id" domain="[('center_department_id','=',center_department_id),
+		 		                                 ('center_department_id','!=',False)]" options="{'no_open':1,'no_create':1}"/>
+	 		</group>
+	 	      </group>
+		     <group>
+			  	<field name="program_id" domain="[('company_id','=',company_id),
+			  	                                  ('state','=','active')]" required="1" options="{'no_open':1,'no_create':1}"/>
+			  	<field name="approach_id" required="1" domain="[('state','=','active'),
+			  	                                                ('program_id','=',program_id)]" options="{'no_create': True,'no_open': True,}"/>
+			  	<field name="subject_no" required="1"/>
+			  	<field name="is_test"/>
+		      </group>
+	  	</sheet>
+              </form>
+             </field>
+         </record>
+
+        <record id="mk_subject_process_tree_view" model="ir.ui.view">
+            <field name="name">Subjects Process Tree View</field>
+            <field name="model">mk.subject.process</field>
+            <field name="arch" type="xml">
+                <tree delete="0" string="Subjects Process">
+                	<field name="company_id" invisible="1" options="{'no_open':1,'no_create':1}"/>
+	 				<field name="approach_id"              options="{'no_open':1,'no_create':1}"/>
+	 				<field name="subject_no"/>
+                </tree>
+            </field>
+        </record>
+        
+        <record id="mk_subject_process_search_view" model="ir.ui.view">
+            <field name="name">Subjects Process Search View</field>
+            <field name="model">mk.subject.process</field>
+            <field name="arch" type="xml">
+                <search string="Subjects Process">
+                </search>
+            </field>
+        </record>
+        
+        <record id="mk_subject_process_action" model="ir.actions.act_window">
+            <field name="name">Subjects Process</field>
+            <field name="res_model">mk.subject.process</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+	    <field name="target">new</field>
+	    <field name="view_id" ref="mk_subject_process_form_view"/>
+        </record>
+
+	<!--menuitem name="Subjects Process" id="mk_subject_process_configuration_menu" sequence="5" parent="mk_programs_menu" action="mk_subject_process_action"/-->
+
+        <record id="mk_subject_process_action_test" model="ir.actions.act_window">
+            <field name="name">Subjects Process</field>
+            <field name="res_model">mk.subject.process</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+	    <field name="target">current</field>
+	    <field name="search_view_id" ref="mk_subject_process_search_view"/>
+        </record>
+
+	<!--menuitem name="Subjects Process Log" id="mk_subject_process_configuration_menu_test" sequence="40" parent="mk_programs_menu" action="mk_subject_process_action_test"/-->    
+
+    </data>  
+</odoo>

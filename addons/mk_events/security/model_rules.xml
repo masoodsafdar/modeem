@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+
+      <!--record model="ir.rule" id="maknoon_event_id">
+            <field name="name">maknoon event </field>
+            <field name="model_id" ref="model_event_event"/>
+            <field name="domain_force">['|','|',
+                 '&amp;', ('place','=','inside'),'|',('mosque_id.id','in',user.mosque_ids.ids),('center_id.id','in',user.department_ids.ids),('place','=','outside'),('place','=','company')]</field>
+['&amp;', ('place','=','inside'),('mosque_id.id','in',user.mosque_ids.ids)]
+
+['|','|',
+                 '&', ('place','=','inside'),'|',('mosque_id.id','in',user.mosque_ids.ids),('center_id.id','in',user.department_ids.ids),('place','=','outside'),('place','=','company')]
+
+['|',('place','=','outside'),('place','=','company')]
+
+['&', ('place','=','inside'),'|',('mosque_id','in',user.mosque_ids.ids),('center_id','in',user.department_ids.ids)]
+
+['&', ('place','=','inside'),('mosque_id','in',user.mosque_ids.ids)]
+
+['&', ('place','=','inside'),('center_id','in',user.department_ids.ids)]
+      </record-->
+
+ <record model="ir.rule" id="new_event_event_rule">
+      <field name="name">new event rules</field>
+      <field name="model_id" ref="mk_events.model_event_event"/>
+      <field name="domain_force">[('create_uid','in',[user.id])]</field>
+      <field name="groups" eval="[(4, ref('read_events'))]"/>
+
+</record>
+
+      <!--
+
+<record model="ir.rule" id="event_registrations_rule">
+      <field name="name">event registrations rules</field>
+      <field name="model_id" ref="mk_events.model_event_registrations"/>
+      <field name="domain_force">['|',('invited.user_id.id','in',[user.id]),('is_creator','=',True)]</field>
+
+      <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+     
+
+
+
+</record>
+-->
+      <record model="ir.rule" id="event_registrations_rule">
+      <field name="name">event registrations rules</field>
+      <field name="model_id" ref="mk_events.model_event_registrations"/>
+      <field name="domain_force">[('invited.user_id.id','=',user.id)]</field>
+
+      <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+     
+
+      </record>
+
+
+   </data>
+</odoo>

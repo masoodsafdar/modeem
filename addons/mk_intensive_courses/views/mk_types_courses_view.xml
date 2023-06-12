@@ -1,0 +1,88 @@
+<odoo>
+    <data>
+    
+		<record id="mk_types_courses_form_view" model="ir.ui.view">
+			<field name="name">Types Courses Form </field>
+	        <field name="model">mk.types.courses</field>
+	        <field name="arch" type="xml">
+				<form string = "Type Courses">
+					<sheet>
+						<div class="oe_button_box" name="button_box">
+							<button name="toggle_active" type="object" class="oe_stat_button" icon="fa-archive">
+								<field name="active" widget="boolean_button" options='{"terminology": "archive"}'/>
+							</button>
+						</div>
+						<group>
+							<group>
+								<field name="number"         required="1"/>
+					  			<field name="name"           required="1"/>
+					  			<field name="academic_id"    required="1" options="{'no_create':1, 'no_open':1}"/>
+					  			<field name="study_class_id" required="1" options="{'no_create':1, 'no_open':1}" domain="[('study_year_id','=',academic_id)]"/>
+							</group>
+							
+							<group>
+					  			<field name="start_date"     required="1"/>
+					  			<field name="end_date"       required="1"/>
+<!--					  			<field name="test_str_date"  required="1"/>-->
+<!--					  			<field name="test_end_date"  required="1"/>-->
+					  			<field name="minimum_no_day" required="1"/>
+							</group>
+			  			</group>
+			  		</sheet>
+					 <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+			  	</form>
+			</field>
+		</record>
+	
+    	<record id="mk_types_courses_tree_view" model="ir.ui.view">
+        	<field name="name">Types Courses Tree View</field>
+        	<field name="model">mk.types.courses</field>
+        	<field name="arch" type="xml">
+            	<tree delete="0" string="Types Courses">
+            		<field name="number"/>
+	  				<field name="name"/>
+		  			<field name="academic_id"/>
+		  			<field name="study_class_id"/>	  				
+            	</tree>
+        	</field>
+    	</record>
+        
+        
+		<record id="mk_types_courses_search_view" model="ir.ui.view">
+	       <field name="name">mk.types.courses search</field>
+	   	   <field name="model">mk.types.courses</field>
+	       <field name="arch" type="xml">
+		    	<search>
+		    		<field name="name"/>
+		    		<field name="number"/> 
+		    		<field name="academic_id"/> 
+		    		<field name="study_class_id"/> 
+		    		<field name="active"/>
+
+					<filter name="active"   string="نشط"   domain="[('active','=',True)]"/>
+					<filter name="inactive" string="مؤرشف" domain="[('active','=',False)]"/>
+					<separator/>
+
+		    		<group expand="0" string="Group By">
+		                <filter name="academic_id"       string="العام الدراسي" context="{'group_by': 'academic_id'}"/>
+		                <filter name="study_class_id"    string="الفصل الدراسي" context="{'group_by': 'study_class_id'}"/>
+						<filter name="active"            string="نشط"           context="{'group_by': 'active'}"/>
+		           </group>
+		    	</search>
+	       </field>
+		</record>
+    	<record id="mk_types_courses_action" model="ir.actions.act_window">
+        	<field name="name">Types Courses </field>
+        	<field name="res_model">mk.types.courses</field>
+        	<field name="type">ir.actions.act_window</field>
+        	<field name="view_type">form</field>
+        	<field name="view_mode">tree,form</field>
+    	</record>
+
+		<menuitem name="Types Courses" id="types_courses_menu" sequence="2" parent="mk_courses_config_menu" groups="mk_intensive_courses.read_type_course,mk_intensive_courses.edit_type_course,mk_intensive_courses.write_type_course" action="mk_types_courses_action"/>    
+		<!-- groups="mk_intensive_courses.read_type_course,mk_intensive_courses.edit_type_course,mk_intensive_courses.write_type_course"/-->
+    </data>  
+</odoo>

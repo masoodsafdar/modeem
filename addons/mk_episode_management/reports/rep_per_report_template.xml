@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="report_reponsible_permision">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="web.internal_layout">
+                       <div width="100%" height="100%" style="position: absolute;">
+                                <t t-if="o.center_id.code != '4' or o.center_id.code != '5'">
+                                    <div t-field="o.center_id.signature" t-field-options='{"widget": "image"}'
+                                         style="float:left;  width : 12% ; height:12% ; top: 78em; left: 10em; position: relative; display: inline-block;"/>
+                                    <div t-field="o.center_id.test_center_admin"
+                                         style="font-family:neo sans arabic; font-size:18px; top: 64em;  position: relative;"/>
+                                </t>
+                                <t t-else="">
+                                    <div t-field="o.center_id.signature" t-field-options='{"widget": "image"}'
+                                         style="float:left;  width : 12% ; height:12% ; top: 78em; left: 10em; position: relative; display: inline-block;"/>
+                                    <div t-field="o.center_id.test_center_admin"
+                                         style="font-family:neo sans arabic; font-size:18px; top: 65em;  position: relative;"/>
+                                </t>
+                            <div t-field="o.background" t-field-options="{&quot;widget&quot;: &quot;image&quot;}" style=" position:absolute ;left: 0; top: 0px;z-index: -1;"/>
+                            <div t-field="o.body" style="padding-top:35%"/>
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

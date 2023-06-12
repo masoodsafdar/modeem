@@ -1,0 +1,78 @@
+<odoo>
+    <data>
+    
+ 	<record id="mk_test_center_form_view" model="ir.ui.view">
+          <field name="name">Test Center Form View</field>
+          <field name="model">mk.test.center</field>
+          <field name="arch" type="xml">
+              <form string = "Test Center">
+		  <header>
+		    
+		  </header>
+		  <sheet>
+		  	  <group>
+			  	<field name="company_id" required="1" options="{'no_create': 1, 'no_create_edit': 1}"/>
+			  </group>
+			  <group>
+			  	<group>
+				  	<field name="name" required="1"/>
+			  	</group>
+				<group>
+				</group>
+			</group>
+			<group colspan="6" col="4">
+				<label for="city" string="Center Location"/>
+		                    <div>
+		                        <field name="city_id" placeholder="City" class="oe_inline" required="1"/>
+		                        <field name="area_id" placeholder="Area" class="oe_inline" required="1"/>
+		                        <field name="district_id" placeholder="District " class="oe_inline" required="1"/>
+	                             </div>
+			  </group>
+			  <group colspan="6" col="4">
+	                             <label for="horizental_dimension" string="Map Dimension"/>
+		                    <div>
+		                        <field name="longitude" placeholder="longitude" class="oe_inline" required="1"/> * 
+		                        <field name="latitude" placeholder="latitude" class="oe_inline" required="1"/>
+	                             </div>
+			  </group>
+	  	</sheet>
+              </form>
+             </field>
+         </record>
+
+        <record id="mk_test_center_tree_view" model="ir.ui.view">
+            <field name="name">Test Center Tree View</field>
+            <field name="model">mk.test.center</field>
+            <field name="arch" type="xml">
+                <tree string="Test Center">
+                	<field name="company_id" required="1"/>
+                	<field name="name" required="1"/>
+                </tree>
+            </field>
+        </record>
+        
+        <record id="mk_test_center_search_view" model="ir.ui.view">
+            <field name="name">Test Center Search View</field>
+            <field name="model">mk.test.center</field>
+            <field name="arch" type="xml">
+                <search string="Test Center ">
+                    <field name="name" string="Test Center" filter_domain="[('name','ilike', self)]"/>
+                </search>
+            </field>
+        </record>
+        
+        <record id="mk_test_center_action" model="ir.actions.act_window">
+            <field name="name">Test Center </field>
+            <field name="res_model">mk.test.center</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+            <field name="search_view_id" ref="mk_test_center_search_view"/>
+        </record>
+
+	<menuitem name="Test Center " id="mk_test_center_menu" sequence="5" parent="mk_tests_menu" action="mk_test_center_action"/>    
+
+    </data>  
+</odoo>

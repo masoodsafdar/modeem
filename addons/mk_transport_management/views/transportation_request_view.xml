@@ -1,0 +1,58 @@
+<odoo>
+	<data>
+		<record id="transportation request_form_view" model="ir.ui.view">
+			<field name= "name">transportation request form</field>
+			<field name= "model">transportation.request</field>
+		  	<field name= "arch"  type="xml"> 
+				<form string="transportation request">
+			  		<header>
+			  			<button name="send_request"        string="Send Request"        type="object" states="draft"    class="oe_highlight" groups="mk_transport_management.send_transporation_request"/>
+                    	<button name="stop_transportation" string="stop transportation" type="object" states="approvel" class="oe_highlight" groups="mk_transport_management.group_stop_transportation"/>    
+                    	<field name="state"  widget="statusbar" statusbar_visible="draft,confirm,cancle"/>		
+                  	</header>
+                  	
+			      	<sheet>
+			      		<group>
+			         		<group>
+			           			<field name="student_id" required="1"/> 
+			            		<field name="transportation_days" widget="many2many_tags" required="1" options="{'no_create': True,'no_open': True,}"/>
+              	      			<field name="trans_period" required="1"/> 
+              	      		</group>
+
+					  		<group> 
+						  		<field name="transport_type"/>
+						  		<field name="latitude"/>
+						  		<field name="longitude"/> 
+						  		<field name="canceling_reason" attrs="{'invisible':[('state','!=','approvel')]}"/>  
+							</group>
+
+			          		<group>
+								<field name="payment_voucher" widget="many2many_binary" required="0" groups="mk_transport_management.payment_voucher"/>
+                      		</group>
+						</group>
+                    </sheet>
+                 </form>
+            </field>
+        </record>
+
+        <record id="transportation request_tree_view" model="ir.ui.view">
+			<field name= "name">transportation request tree</field>
+			<field name= "model">transportation.request</field>
+			<field name= "arch" type="xml"> 
+		  		<tree>
+		  			<field name="student_id"/>
+		  			<field name="state"/>
+		  		</tree>
+		  	</field>
+		</record>
+
+		<record id="transportation_request_action" model="ir.actions.act_window">
+			<field name="name">transportation request</field>
+			<field name="res_model">transportation.request</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+		<menuitem id="transportation_request_menu" name="Transation Request" parent="mk_transport_menu" action="transportation_request_action"/>
+    </data>
+</odoo>

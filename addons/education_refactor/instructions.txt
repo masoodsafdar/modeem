@@ -1,0 +1,11 @@
+--- import data 
+
+surah_order = fields.Integer('Surah order') --> surah ID
+part_order = fields.Integer('Part Order') --> part
+verse_original_order = fields.Integer('Verse Order') --> Verse
+course_id = fields.Integer('Course Number') --> رقم المقرر
+status = fields.Integer('Status') --> الحالة
+test = fields.Integer('Test') ---> اختبار
+
+
+Migrate courses menu to open wizard

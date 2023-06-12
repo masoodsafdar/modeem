@@ -1,0 +1,16 @@
+<odoo>
+    <data noupdate="1">
+        <record id="mk_link1" model="mk.link">
+            <field name="preparation_id" ref="mk_student_prepare1"/>
+        </record>
+        <record id="mk_link2" model="mk.link">
+            <field name="preparation_id" ref="mk_student_prepare2"/>
+        </record>
+        <record id="mk_link3" model="mk.link">
+            <field name="preparation_id" ref="mk_student_prepare3"/>
+        </record>
+        <record id="mk_link4" model="mk.link">
+            <field name="preparation_id" ref="mk_student_prepare4"/>
+        </record>
+    </data>
+</odoo>

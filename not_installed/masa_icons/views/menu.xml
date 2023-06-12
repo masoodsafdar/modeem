@@ -1,0 +1,36 @@
+<odoo>
+    <data>
+
+        <menuitem id="mk_student_register.maknoon_main_menu"            name="Maknoon"             web_icon="masa_icons,static/src/img/icones/icone_v9.png"/>
+        <menuitem id="mk_episode_management.mk_episode_management_menu" name="المساجد/المدارس"     web_icon="masa_icons,static/src/img/icones/icone_masjid_v2.png" sequence="10"/>
+        <menuitem id="mk_program_management.mk_programs_main_menu"      name="Programs Management" web_icon="masa_icons,static/src/img/icones/icone_episode.png"/>
+
+        <menuitem id="mk_master_models.mk_master_menu"         web_icon="masa_icons,static/src/img/icones/icone_cong.png"/>
+        <menuitem id="hr.menu_hr_root"                         web_icon="masa_icons,static/src/img/icones/emplye_icone.png"/>
+        <menuitem id="hr_recruitment.menu_hr_recruitment_root" web_icon="masa_icons,static/src/img/icones/hr_icone_recrutement.png"/>
+
+        <menuitem id="contacts.menu_contacts" web_icon="masa_icons,static/src/img/icones/icone_tel.png" name="Contacts"/>
+        <menuitem id="event.event_main_menu"  web_icon="masa_icons,static/src/img/icones/event_icone.png"/>
+
+        <menuitem id="hr_holidays.menu_hr_holidays_root" web_icon="masa_icons,static/src/img/icones/holidays_icone.png"/>
+        <menuitem id="base_user_role.access_rights"      web_icon="masa_icons,static/src/img/icones/icone_11.png"/>
+        <menuitem id="calendar.mail_menu_calendar"       web_icon="masa_icons,static/src/img/icones/calendar_icone.png"/>
+
+        <menuitem id="website_support.website_support_ticket_menu" web_icon="masa_icons,static/src/img/icones/support_icone.png"/>
+        <menuitem id="mail.mail_channel_menu_root_chat"            web_icon="masa_icons,static/src/img/icones/mail_icone.png"/>
+
+        <!-- menuitem id="maknon_tests.test_operation_main_menu" web_icon="masa_icons,static/src/img/icones/test2_icone.png"/-->
+        <menuitem id="maknon_tests.test_main_menu"           web_icon="masa_icons,static/src/img/icones/icone_test.png"/>
+
+        <menuitem id="base.menu_management"             web_icon="masa_icons,static/src/img/icones/icone_application.png"/>
+        <menuitem id="base.menu_administration"         web_icon="masa_icons,static/src/img/icones/icone_conf.png"/>
+        <menuitem id="utm.menu_link_tracker_root"       web_icon="masa_icons,static/src/img/icones/relier_icone.png"/>
+
+        <menuitem id="mk_user_guide.mk_user_guide_main_menu" web_icon="masa_icons,static/src/img/icones/icone_book.png"/>
+        <menuitem id="contests.contests"                     web_icon="masa_icons,static/src/img/icones/competition_icone.png"/>
+
+		<menuitem id="mk_virtual_room.virtual_room_basic_menu" web_icon="masa_icons,static/src/img/icones/icone_elarning.png"/>
+        <menuitem id="mk_student_register.sms_center"  parent="mk_student_managment.manage_student_menu"  name="مركز الرسائل"/>
+
+    </data>
+</odoo>

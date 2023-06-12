@@ -1,0 +1,411 @@
+<odoo>
+	<data noupdate="1">
+		<record model="center.time.table" id="center_time_table299">
+			<field name="center_name">مركز إختبار الأجزاء طلاب[ مركز إشراف الوسط ][رجالي]</field>
+			<field name="center_id" ref="mk_test_center_prepration4"/>
+			<field name="date">2020-12-03</field>
+			<field name="day">Thursday</field>
+			<field name="period_id" ref="test_period1"/>
+			<field name="full">0</field>
+			<field name="type_center">student</field>
+		</record>
+
+		<record model="center.time.table" id="center_time_table300">
+			<field name="center_name">مركز إختبار الأجزاء طلاب[ مركز إشراف الوسط ][رجالي]</field>
+			<field name="center_id" ref="mk_test_center_prepration4"/>
+			<field name="date">2020-12-03</field>
+			<field name="day">Thursday</field>
+			<field name="period_id" ref="test_period3"/>
+			<field name="full">0</field>
+			<field name="type_center">student</field>
+		</record>
+		<record model="center.time.table" id="center_time_table301">
+			<field name="center_name">مركز إختبار الأجزاء طلاب[ مركز إشراف الوسط ][رجالي]</field>
+			<field name="center_id" ref="mk_test_center_prepration4"/>
+			<field name="date">2020-12-03</field>
+			<field name="day">Thursday</field>
+			<field name="period_id" ref="test_period4"/>
+			<field name="full">0</field>
+			<field name="type_center">student</field>
+		</record>
+		<record model="center.time.table" id="center_time_table302">
+			<field name="center_name">مركز إختبار الأجزاء طلاب[ مركز إشراف الوسط ][رجالي]</field>
+			<field name="center_id" ref="mk_test_center_prepration4"/>
+			<field name="date">2020-12-03</field>
+			<field name="day">Thursday</field>
+			<field name="period_id" ref="test_period5"/>
+			<field name="full">0</field>
+			<field name="type_center">student</field>
+		</record>
+		<record model="center.time.table" id="center_time_table303">
+			<field name="center_name">مركز إختبار الأجزاء طلاب[ مركز إشراف الوسط ][رجالي]</field>
+			<field name="center_id" ref="mk_test_center_prepration4"/>
+			<field name="date">2020-12-03</field>
+			<field name="day">Thursday</field>
+			<field name="period_id" ref="test_period6"/>
+			<field name="full">0</field>
+			<field name="type_center">student</field>
+		</record>
+		<record model="center.time.table" id="center_time_table304">
+			<field name="center_name">مركز إختبار الأجزاء طلاب[ مركز إشراف الوسط ][رجالي]</field>
+			<field name="center_id" ref="mk_test_center_prepration4"/>
+			<field name="date">2020-12-07</field>
+			<field name="day">Monday</field>
+			<field name="period_id" ref="test_period1"/>
+			<field name="full">0</field>
+			<field name="type_center">student</field>
+		</record>
+		<record model="center.time.table" id="center_time_table305">
+			<field name="center_name">مركز إختبار الأجزاء طلاب[ مركز إشراف الوسط ][رجالي]</field>
+			<field name="center_id" ref="mk_test_center_prepration4"/>
+			<field name="date">2020-12-07</field>
+			<field name="day">Monday</field>
+			<field name="period_id" ref="test_period3"/>
+			<field name="full">0</field>
+			<field name="type_center">student</field>
+		</record>
+		<record model="center.time.table" id="center_time_table306">
+			<field name="center_name">مركز إختبار الأجزاء طلاب[ مركز إشراف الوسط ][رجالي]</field>
+			<field name="center_id" ref="mk_test_center_prepration4"/>
+			<field name="date">2020-12-07</field>
+			<field name="day">Monday</field>
+			<field name="period_id" ref="test_period4"/>
+			<field name="full">0</field>
+			<field name="type_center">student</field>
+		</record>
+		<record model="center.time.table" id="center_time_table307">
+			<field name="center_name">مركز إختبار الأجزاء طلاب[ مركز إشراف الوسط ][رجالي]</field>
+			<field name="center_id" ref="mk_test_center_prepration4"/>
+			<field name="date">2020-12-07</field>
+			<field name="day">Monday</field>
+			<field name="period_id" ref="test_period5"/>
+			<field name="full">0</field>
+			<field name="type_center">student</field>
+		</record>
+		<record model="center.time.table" id="center_time_table308">
+			<field name="center_name">مركز إختبار الأجزاء طلاب[ مركز إشراف الوسط ][رجالي]</field>
+			<field name="center_id" ref="mk_test_center_prepration4"/>
+			<field name="date">2020-12-07</field>
+			<field name="day">Monday</field>
+			<field name="period_id" ref="test_period6"/>
+			<field name="full">0</field>
+			<field name="type_center">student</field>
+		</record>
+		<record model="center.time.table" id="center_time_table309">
+			<field name="center_name">مركز إختبار الأجزاء طلاب[ مركز إشراف الوسط ][رجالي]</field>
+			<field name="center_id" ref="mk_test_center_prepration4"/>
+			<field name="date">2020-12-10</field>
+			<field name="day">Thursday</field>
+			<field name="period_id" ref="test_period1"/>
+			<field name="full">0</field>
+			<field name="type_center">student</field>
+		</record>
+		<record model="center.time.table" id="center_time_table310">
+			<field name="center_name">مركز إختبار الأجزاء طلاب[ مركز إشراف الوسط ][رجالي]</field>
+			<field name="center_id" ref="mk_test_center_prepration4"/>
+			<field name="date">2020-12-10</field>
+			<field name="day">Thursday</field>
+			<field name="period_id" ref="test_period3"/>
+			<field name="full">0</field>
+			<field name="type_center">student</field>
+		</record>
+		<record model="center.time.table" id="center_time_table311">
+			<field name="center_name">مركز إختبار الأجزاء طلاب[ مركز إشراف الوسط ][رجالي]</field>
+			<field name="center_id" ref="mk_test_center_prepration4"/>
+			<field name="date">2020-12-10</field>
+			<field name="day">Thursday</field>
+			<field name="period_id" ref="test_period4"/>
+			<field name="full">0</field>
+			<field name="type_center">student</field>
+		</record>
+		<record model="center.time.table" id="center_time_table312">
+			<field name="center_name">مركز إختبار الأجزاء طلاب[ مركز إشراف الوسط ][رجالي]</field>
+			<field name="center_id" ref="mk_test_center_prepration4"/>
+			<field name="date">2020-12-10</field>
+			<field name="day">Thursday</field>
+			<field name="period_id" ref="test_period5"/>
+			<field name="full">0</field>
+			<field name="type_center">student</field>
+		</record>
+		<record model="center.time.table" id="center_time_table313">
+			<field name="center_name">مركز إختبار الأجزاء طلاب[ مركز إشراف الوسط ][رجالي]</field>
+			<field name="center_id" ref="mk_test_center_prepration4"/>
+			<field name="date">2020-12-10</field>
+			<field name="day">Thursday</field>
+			<field name="period_id" ref="test_period6"/>
+			<field name="full">0</field>
+			<field name="type_center">student</field>
+		</record>
+		<record model="center.time.table" id="center_time_table314">
+			<field name="center_name">مركز إختبار الأجزاء طلاب[ مركز إشراف الوسط ][رجالي]</field>
+			<field name="center_id" ref="mk_test_center_prepration4"/>
+			<field name="date">2020-12-14</field>
+			<field name="day">Monday</field>
+			<field name="period_id" ref="test_period1"/>
+			<field name="full">0</field>
+			<field name="type_center">student</field>
+		</record>
+		<record model="center.time.table" id="center_time_table315">
+			<field name="center_name">مركز إختبار الأجزاء طلاب[ مركز إشراف الوسط ][رجالي]</field>
+			<field name="center_id" ref="mk_test_center_prepration4"/>
+			<field name="date">2020-12-14</field>
+			<field name="day">Monday</field>
+			<field name="period_id" ref="test_period3"/>
+			<field name="full">0</field>
+			<field name="type_center">student</field>
+			</record>
+		<record model="center.time.table" id="center_time_table316">
+			<field name="center_name">مركز إختبار الأجزاء طلاب[ مركز إشراف الوسط ][رجالي]</field>
+			<field name="center_id" ref="mk_test_center_prepration4"/>
+			<field name="date">2020-12-14</field>
+			<field name="day">Monday</field>
+			<field name="period_id" ref="test_period4"/>
+			<field name="full">0</field>
+			<field name="type_center">student</field>
+		</record>
+		<record model="center.time.table" id="center_time_table317">
+			<field name="center_name">مركز إختبار الأجزاء طلاب[ مركز إشراف الوسط ][رجالي]</field>
+			<field name="center_id" ref="mk_test_center_prepration4"/>
+			<field name="date">2020-12-14</field>
+			<field name="day">Monday</field>
+			<field name="period_id" ref="test_period5"/>
+			<field name="full">0</field>
+			<field name="type_center">student</field>
+		</record>
+		<record model="center.time.table" id="center_time_table318">
+			<field name="center_name">مركز إختبار الأجزاء طلاب[ مركز إشراف الوسط ][رجالي]</field>
+			<field name="center_id" ref="mk_test_center_prepration4"/>
+			<field name="date">2020-12-14</field>
+			<field name="day">Monday</field>
+			<field name="period_id" ref="test_period6"/>
+			<field name="full">0</field>
+			<field name="type_center">student</field>
+		</record>
+		<record model="center.time.table" id="center_time_table319">
+			<field name="center_name">مركز إختبار الأجزاء طلاب[ مركز إشراف الوسط ][رجالي]</field>
+			<field name="center_id" ref="mk_test_center_prepration4"/>
+			<field name="date">2020-12-17</field>
+			<field name="day">Thursday</field>
+			<field name="period_id" ref="test_period1"/>
+			<field name="full">0</field>
+			<field name="type_center">student</field>
+		</record>
+		<record model="center.time.table" id="center_time_table320">
+			<field name="center_name">مركز إختبار الأجزاء طلاب[ مركز إشراف الوسط ][رجالي]</field>
+			<field name="center_id" ref="mk_test_center_prepration4"/>
+			<field name="date">2020-12-17</field>
+			<field name="day">Thursday</field>
+			<field name="period_id" ref="test_period3"/>
+			<field name="full">0</field>
+			<field name="type_center">student</field>
+		</record>
+		<record model="center.time.table" id="center_time_table321">
+			<field name="center_name">مركز إختبار الأجزاء طلاب[ مركز إشراف الوسط ][رجالي]</field>
+			<field name="center_id" ref="mk_test_center_prepration4"/>
+			<field name="date">2020-12-17</field>
+			<field name="day">Thursday</field>
+			<field name="period_id" ref="test_period4"/>
+			<field name="full">0</field>
+			<field name="type_center">student</field>
+		</record>
+		<record model="center.time.table" id="center_time_table322">
+			<field name="center_name">مركز إختبار الأجزاء طلاب[ مركز إشراف الوسط ][رجالي]</field>
+			<field name="center_id" ref="mk_test_center_prepration4"/>
+			<field name="date">2020-12-17</field>
+			<field name="day">Thursday</field>
+			<field name="period_id" ref="test_period5"/>
+			<field name="full">0</field>
+			<field name="type_center">student</field>
+		</record>
+		<record model="center.time.table" id="center_time_table323">
+			<field name="center_name">مركز إختبار الأجزاء طلاب[ مركز إشراف الوسط ][رجالي]</field>
+			<field name="center_id" ref="mk_test_center_prepration4"/>
+			<field name="date">2020-12-17</field>
+			<field name="day">Thursday</field>
+			<field name="period_id" ref="test_period6"/>
+			<field name="full">0</field>
+			<field name="type_center">student</field>
+		</record>
+		<record model="center.time.table" id="center_time_table324">
+			<field name="center_name">مركز إختبار الأجزاء طلاب[ مركز إشراف الوسط ][رجالي]</field>
+			<field name="center_id" ref="mk_test_center_prepration4"/>
+			<field name="date">2020-12-21</field>
+			<field name="day">Monday</field>
+			<field name="period_id" ref="test_period1"/>
+			<field name="full">0</field>
+			<field name="type_center">student</field>
+		</record>
+		<record model="center.time.table" id="center_time_table325">
+			<field name="center_name">مركز إختبار الأجزاء طلاب[ مركز إشراف الوسط ][رجالي]</field>
+			<field name="center_id" ref="mk_test_center_prepration4"/>
+			<field name="date">2020-12-21</field>
+			<field name="day">Monday</field>
+			<field name="period_id" ref="test_period3"/>
+			<field name="full">0</field>
+			<field name="type_center">student</field>
+		</record>
+		<record model="center.time.table" id="center_time_table326">
+			<field name="center_name">مركز إختبار الأجزاء طلاب[ مركز إشراف الوسط ][رجالي]</field>
+			<field name="center_id" ref="mk_test_center_prepration4"/>
+			<field name="date">2020-12-21</field>
+			<field name="day">Monday</field>
+			<field name="period_id" ref="test_period4"/>
+			<field name="full">0</field>
+			<field name="type_center">student</field>
+		</record>
+		<record model="center.time.table" id="center_time_table327">
+			<field name="center_name">مركز إختبار الأجزاء طلاب[ مركز إشراف الوسط ][رجالي]</field>
+			<field name="center_id" ref="mk_test_center_prepration4"/>
+			<field name="date">2020-12-21</field>
+			<field name="day">Monday</field>
+			<field name="period_id" ref="test_period5"/>
+			<field name="full">0</field>
+			<field name="type_center">student</field>
+		</record>
+		<record model="center.time.table" id="center_time_table328">
+			<field name="center_name">مركز إختبار الأجزاء طلاب[ مركز إشراف الوسط ][رجالي]</field>
+			<field name="center_id" ref="mk_test_center_prepration4"/>
+			<field name="date">2020-12-21</field>
+			<field name="day">Monday</field>
+			<field name="period_id" ref="test_period6"/>
+			<field name="full">0</field>
+			<field name="type_center">student</field>
+		</record>
+		<record model="center.time.table" id="center_time_table329">
+			<field name="center_name">مركز إختبار الأجزاء طلاب[ مركز إشراف الوسط ][رجالي]</field>
+			<field name="center_id" ref="mk_test_center_prepration4"/>
+			<field name="date">2020-12-24</field>
+			<field name="day">Thursday</field>
+			<field name="period_id" ref="test_period1"/>
+			<field name="full">0</field>
+			<field name="type_center">student</field>
+		</record>
+		<record model="center.time.table" id="center_time_table330">
+			<field name="center_name">مركز إختبار الأجزاء طلاب[ مركز إشراف الوسط ][رجالي]</field>
+			<field name="center_id" ref="mk_test_center_prepration4"/>
+			<field name="date">2020-12-24</field>
+			<field name="day">Thursday</field>
+			<field name="period_id" ref="test_period3"/>
+			<field name="full">0</field>
+			<field name="type_center">student</field>
+		</record>
+		<record model="center.time.table" id="center_time_table331">
+			<field name="center_name">مركز إختبار الأجزاء طلاب[ مركز إشراف الوسط ][رجالي]</field>
+			<field name="center_id" ref="mk_test_center_prepration4"/>
+			<field name="date">2020-12-24</field>
+			<field name="day">Thursday</field>
+			<field name="period_id" ref="test_period4"/>
+			<field name="full">0</field>
+			<field name="type_center">student</field>
+		</record>
+		<record model="center.time.table" id="center_time_table332">
+			<field name="center_name">مركز إختبار الأجزاء طلاب[ مركز إشراف الوسط ][رجالي]</field>
+			<field name="center_id" ref="mk_test_center_prepration4"/>
+			<field name="date">2020-12-24</field>
+			<field name="day">Thursday</field>
+			<field name="period_id" ref="test_period5"/>
+			<field name="full">0</field>
+			<field name="type_center">student</field>
+		</record>
+		<record model="center.time.table" id="center_time_table333">
+			<field name="center_name">مركز إختبار الأجزاء طلاب[ مركز إشراف الوسط ][رجالي]</field>
+			<field name="center_id" ref="mk_test_center_prepration4"/>
+			<field name="date">2020-12-24</field>
+			<field name="day">Thursday</field>
+			<field name="period_id" ref="test_period6"/>
+			<field name="full">0</field>
+			<field name="type_center">student</field>
+		</record>
+		<record model="center.time.table" id="center_time_table334">
+			<field name="center_name">مركز إختبار الأجزاء طلاب[ مركز إشراف الوسط ][رجالي]</field>
+			<field name="center_id" ref="mk_test_center_prepration4"/>
+			<field name="date">2020-12-28</field>
+			<field name="day">Monday</field>
+			<field name="period_id" ref="test_period1"/>
+			<field name="full">0</field>
+			<field name="type_center">student</field>
+		</record>
+		<record model="center.time.table" id="center_time_table335">
+			<field name="center_name">مركز إختبار الأجزاء طلاب[ مركز إشراف الوسط ][رجالي]</field>
+			<field name="center_id" ref="mk_test_center_prepration4"/>
+			<field name="date">2020-12-28</field>
+			<field name="day">Monday</field>
+			<field name="period_id" ref="test_period3"/>
+			<field name="full">0</field>
+			<field name="type_center">student</field>
+		</record>
+		<record model="center.time.table" id="center_time_table336">
+			<field name="center_name">مركز إختبار الأجزاء طلاب[ مركز إشراف الوسط ][رجالي]</field>
+			<field name="center_id" ref="mk_test_center_prepration4"/>
+			<field name="date">2020-12-28</field>
+			<field name="day">Monday</field>
+			<field name="period_id" ref="test_period4"/>
+			<field name="full">0</field>
+			<field name="type_center">student</field>
+		</record>
+		<record model="center.time.table" id="center_time_table337">
+			<field name="center_name">مركز إختبار الأجزاء طلاب[ مركز إشراف الوسط ][رجالي]</field>
+			<field name="center_id" ref="mk_test_center_prepration4"/>
+			<field name="date">2020-12-28</field>
+			<field name="day">Monday</field>
+			<field name="period_id" ref="test_period5"/>
+			<field name="full">0</field>
+			<field name="type_center">student</field>
+		</record>
+		<record model="center.time.table" id="center_time_table338">
+			<field name="center_name">مركز إختبار الأجزاء طلاب[ مركز إشراف الوسط ][رجالي]</field>
+			<field name="center_id" ref="mk_test_center_prepration4"/>
+			<field name="date">2020-12-28</field>
+			<field name="day">Monday</field>
+			<field name="period_id" ref="test_period6"/>
+			<field name="full">0</field>
+			<field name="type_center">student</field>
+		</record>
+		<record model="center.time.table" id="center_time_table339">
+			<field name="center_name">مركز إختبار الأجزاء طلاب[ مركز إشراف الوسط ][رجالي]</field>
+			<field name="center_id" ref="mk_test_center_prepration4"/>
+			<field name="date">2020-12-31</field>
+			<field name="day">Thursday</field>
+			<field name="period_id" ref="test_period1"/>
+			<field name="full">0</field>
+			<field name="type_center">student</field>
+		</record>
+		<record model="center.time.table" id="center_time_table340">
+			<field name="center_name">مركز إختبار الأجزاء طلاب[ مركز إشراف الوسط ][رجالي]</field>
+			<field name="center_id" ref="mk_test_center_prepration4"/>
+			<field name="date">2020-12-31</field>
+			<field name="day">Thursday</field>
+			<field name="period_id" ref="test_period3"/>
+			<field name="full">0</field>
+			<field name="type_center">student</field>
+		</record>
+		<record model="center.time.table" id="center_time_table341">
+			<field name="center_name">مركز إختبار الأجزاء طلاب[ مركز إشراف الوسط ][رجالي]</field>
+			<field name="center_id" ref="mk_test_center_prepration4"/>
+			<field name="date">2020-12-31</field>
+			<field name="day">Thursday</field>
+			<field name="period_id" ref="test_period4"/>
+			<field name="full">0</field>
+			<field name="type_center">student</field>
+		</record>
+		<record model="center.time.table" id="center_time_table342">
+			<field name="center_name">مركز إختبار الأجزاء طلاب[ مركز إشراف الوسط ][رجالي]</field>
+			<field name="center_id" ref="mk_test_center_prepration4"/>
+			<field name="date">2020-12-31</field>
+			<field name="day">Thursday</field>
+			<field name="period_id" ref="test_period5"/>
+			<field name="full">0</field>
+			<field name="type_center">student</field>
+		</record>
+		<record model="center.time.table" id="center_time_table343">
+			<field name="center_name">مركز إختبار الأجزاء طلاب[ مركز إشراف الوسط ][رجالي]</field>
+			<field name="center_id" ref="mk_test_center_prepration4"/>
+			<field name="date">2020-12-31</field>
+			<field name="day">Thursday</field>
+			<field name="period_id" ref="test_period6"/>
+			<field name="full">0</field>
+			<field name="type_center">student</field>
+		</record>
+
+</data>  
+</odoo>

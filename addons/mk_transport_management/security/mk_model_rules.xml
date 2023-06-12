@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<!-- Record rules on transportation-->
+		<record model="ir.rule" id="maknoon_vehicle_transportation_id">
+		    <field name="name">maknoon Vehicle Transportation</field>
+		    <field name="model_id" ref="model_vehicle_records"/>
+		    <field name="domain_force">[
+		         '|',('mosque.id','in',user.mosque_ids.ids),('center_id.id','in',user.department_ids.ids)]</field>
+
+		</record>
+
+		<!-- Record rules on transportation-->
+		<record model="ir.rule" id="maknoon_transportation_request_id">
+		    <field name="name">maknoon Transportation Request</field>
+		    <field name="model_id" ref="model_transportation_request"/>
+		    <field name="domain_force">['|',('student_id.mosq_id.id','in',user.mosque_ids.ids),
+		    	('student_id.mosq_id.center_department_id.id','in',user.department_ids.ids)]
+		    </field>
+
+		</record>
+
+
+		<record model="ir.rule" id="driver_records_rule">
+            <field name="name">Driver Records</field>
+            <field name="model_id" ref="model_drivers_records"/>
+            <field name="domain_force">['|',('mosques','in',user.mosque_ids.ids),('center_id.id','in',user.department_ids.ids)]</field>
+
+      </record>
+
+
+       <!-- Record rules on mk transport management-->
+    <record model="ir.rule" id="mk_transport_management_rule">
+    <field name="name">transport management</field>
+    <field name="model_id" ref="model_mk_transport_management"/>
+    <field name="domain_force">
+    ['|',('request_id.student_id.mosq_id.id','in',user.mosque_ids.ids),('request_id.student_id.mosq_id.center_department_id.id','in',user.department_ids.ids)]
+    </field>
+    </record>
+
+      <!-- Record rules on apologize request -->
+      <record model="ir.rule" id="maknoon_apologize_request_id">
+            <field name="name"> Apologize Request </field>
+            <field name="model_id" ref="model_apology_request"/>
+            <field name="domain_force">['|',('student_id.mosq_id.id','in',user.mosque_ids.ids),
+        ('student_id.mosq_id.center_department_id.id','in',user.department_ids.ids)]
+            </field>
+
+      </record>
+
+	</data>
+</odoo>

@@ -1,0 +1,13 @@
+<odoo>
+    <data>
+
+	<menuitem name="Contests Management" id="contests_main_menu"/>    
+	
+	<menuitem name="Contests Management" id="contests_menu" parent="contests_main_menu"/>    
+
+	<menuitem  name="contests" id="contests"  sequence="0"/>     
+    
+    <menuitem name="Contests config" id="config_menu" parent="contests"/>    
+    
+    </data>  
+</odoo>

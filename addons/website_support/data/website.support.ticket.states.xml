@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="website_ticket_state_open" model="website.support.ticket.states">
+            <field name="name">مفتوح</field>
+            <field name="mail_template_id" ref="support_ticket_new"/>
+        </record>
+
+        <record id="website_ticket_state_staff_replied" model="website.support.ticket.states">
+            <field name="name">رد الموظفين</field>
+            <!--field name="mail_template_id" ref="support_ticket_reply_wrapper"/-->
+        </record>
+        <record id="website_ticket_state_customer_replied" model="website.support.ticket.states">
+            <field name="name">Customer Replied</field>
+        </record>
+
+
+        <record id="website_ticket_state_staff_closed" model="website.support.ticket.states">
+            <field name="name">الغاء بواسطه الموظفين</field>
+            <!--field name="mail_template_id" ref="support_ticket_error"/-->
+
+        </record>
+        
+    </data>     
+</odoo>
+
+        

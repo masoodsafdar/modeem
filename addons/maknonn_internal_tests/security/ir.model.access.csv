@@ -1,0 +1,9 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+admin_internal_episode,access episodes,model_episode_internal_test,mk_users.mk_admin,1,1,1,1
+admin_test_session,mk_student_prepare,model_episode_student_test_session,mk_users.mk_admin,1,1,1,1
+cm_test_session,mk_test_appreciation_modelc,model_episode_student_test_session,mk_users.admin_center,1,0,0,0
+cm_internal_epsiode_test,access mk_episode_type,model_episode_internal_test,mk_users.admin_center,1,0,0,0
+mm_internal_epsiode_test,access mk_episode_type,model_episode_internal_test,mk_users.mk_mosque_admins,1,1,1,1
+mm_test_session,mk_student_prepare,model_episode_student_test_session,mk_users.mk_mosque_admins,1,0,0,0
+ms_test_session,mk_student_prepare,model_episode_student_test_session,mk_users.mosque_users,1,0,0,0
+ms_internal_epsiode_test,access mk_episode_type,model_episode_internal_test,mk_users.mosque_users,1,1,1,1

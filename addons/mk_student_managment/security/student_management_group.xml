@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <data noupdate="1">
+
+        <!-- Category MK Student Management -->
+        <record model="ir.module.category" id="module_category_student_management">
+            <field name="name">Student Management</field>
+            <field name="sequence">4</field>
+        </record>
+
+        <record id="edite_student_presence" model="res.groups">
+            <field name="name">انشاء و تعديل الحضور</field>
+            <field name="category_id" ref="module_category_student_management"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <!--record model="ir.module.category" id="maknoon_configration">
+            <field name="name">إعدادات الجمعية</field>
+            <field name="sequence">4</field>
+        </record>
+
+        <record id="association_settings" model="res.groups">
+            <field name="name">Association configuration</field>
+            <field name="category_id" ref="maknoon_configration"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record-->
+
+
+        <record id="student_external_transfer_read" model="res.groups">
+            <field name="name">Student external transfer read</field>
+            <field name="category_id" ref="module_category_student_management"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+
+
+        <record id="student_external_transfer_record_create" model="res.groups">
+            <field name="name">student external transfer record create</field>
+            <field name="implied_ids" eval="[(4, ref('student_external_transfer_read'))]"/>
+            <field name="category_id" ref="module_category_student_management"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+
+
+        <record id="student_external_transfer_update" model="res.groups">
+            <field name="name">Update external transfer for students</field>
+            <field name="implied_ids" eval="[(4, ref('student_external_transfer_read'))]"/>
+            <field name="category_id" ref="module_category_student_management"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+
+
+        <record id="confirm_or_deny_student_external_transfer" model="res.groups">
+            <field name="name">confirm or deny student external transfer</field>
+            <field name="implied_ids" eval="[(4, ref('student_external_transfer_read'))]"/>
+            <field name="category_id" ref="module_category_student_management"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>          
+
+
+        <record id="student_prepare_read" model="res.groups">
+            <field name="name">Student Prepare read</field>
+            <field name="category_id" ref="module_category_student_management"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+
+        <record id="episode_search_student_transfer" model="res.groups">
+            <field name="name">Student episode search transfer</field>
+            <field name="category_id" ref="module_category_student_management"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+
+        </record>
+
+        <record id="student_absence_read" model="res.groups">
+            <field name="name">Student absence read</field>
+            <field name="category_id" ref="module_category_student_management"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+
+        <record id="create_student_absence" model="res.groups">
+            <field name="name">Create student absence</field>
+            <field name="implied_ids" eval="[(4, ref('student_absence_read'))]"/>
+            <field name="category_id" ref="module_category_student_management"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+
+        <record id="read_clearance_request" model="res.groups">
+            <field name="name">Read clearance request</field>
+            <field name="category_id" ref="module_category_student_management"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+
+        <record id="create_clearance_request" model="res.groups">
+            <field name="name">Create clearance request</field>
+            <field name="implied_ids" eval="[(4, ref('read_clearance_request'))]"/>
+            <field name="category_id" ref="module_category_student_management"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+
+        <record id="confirm_clearance_request" model="res.groups">
+            <field name="name">Confirm clearance request</field>
+            <field name="implied_ids" eval="[(4, ref('read_clearance_request'))]"/>
+            <field name="category_id" ref="module_category_student_management"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+
+        <record id="deny_clearance_request" model="res.groups">
+            <field name="name">Deny clearance request</field>
+            <field name="implied_ids" eval="[(4, ref('read_clearance_request'))]"/>
+            <field name="category_id" ref="module_category_student_management"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+
+        <record id="read_student_behavior_and_comments" model="res.groups">
+            <field name="name">Read student behavior and comments</field>
+            <field name="category_id" ref="module_category_student_management"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+
+        <record id="create_comments_and_behaviors" model="res.groups">
+            <field name="name">Create comments and behaviors</field>
+            <field name="implied_ids" eval="[(4, ref('read_student_behavior_and_comments'))]"/>
+            <field name="category_id" ref="module_category_student_management"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+
+        <!-- group of select all -->
+          <record id="select_all_student_management_groups" model="res.groups">
+            <field name="name">Select  All</field>
+            <field name="implied_ids" eval="[(4, ref('student_external_transfer_read')),
+              (4, ref('student_external_transfer_record_create')),
+              (4, ref('student_external_transfer_update')),
+              (4, ref('confirm_or_deny_student_external_transfer')),
+              (4, ref('student_prepare_read')),
+              (4, ref('episode_search_student_transfer')),
+              (4, ref('student_absence_read')),
+              (4, ref('create_student_absence')),
+              (4, ref('read_clearance_request')),
+              (4, ref('create_clearance_request')),
+              (4, ref('confirm_clearance_request')),
+              (4, ref('deny_clearance_request')),
+              (4, ref('read_student_behavior_and_comments')),
+              (4, ref('create_comments_and_behaviors'))]"/>
+            <field name="category_id" ref="module_category_student_management"/>
+          </record>
+    
+        <!-- Group users MK Master Data -->
+        <!--record id="group_students_supervisor" model="res.groups">
+            <field name="name">Students supervisor</field>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+            <field name="category_id" ref="module_category_student" />
+        </record>
+
+         <record id="group_students_teacher" model="res.groups">
+            <field name="name">Students teacher</field>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+            <field name="category_id" ref="module_category_student" />
+        </record-->
+
+
+    </data>
+</odoo>

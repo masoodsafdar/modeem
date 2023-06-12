@@ -1,0 +1,68 @@
+<odoo>
+  <data>
+   
+   <record model="ir.ui.view" id="mk_comments_and_behavior_form">
+    <field name="name">mk.comments.and.behavior form</field>
+    <field name="model">mk.comments.behavior.students</field>
+    <field name="arch" type="xml">
+
+    <form string="Comments and behavior">
+
+    <sheet>
+  <group>
+    <group col="4" colspan="2">
+    <field name="teacher" options="{'no_create': 1, 'no_create_edit': 1}"/>
+    <field name="date"/>
+    <field name="masjed"/>
+    </group>
+    <group col="4" colspan="2" >
+      <field name="episode" options="{'no_create': 1, 'no_create_edit': 1}"/>
+      <label for="period_id" string="Episode Period"/>
+      <div string="Episode Period">
+      <field name="period_id"/>
+      <field name="Period"/>
+      <field name="period_time"/>
+      </div>
+    </group>
+    </group>
+    <notebook>
+    <page string="students">
+      <field name="student_ids">
+      <tree editable="bottom">
+          <field name="student"  options="{'no_create': 1, 'no_create_edit': 1}"/>
+          <field name="comment_id"  options="{'no_create': 1, 'no_create_edit': 1}"/>
+          <field name="punishment_id" options="{'no_create': 1, 'no_create_edit': 1}"/>
+      </tree>
+    </field>
+      </page>
+      </notebook>
+       
+    </sheet>
+    </form>
+    </field>
+    </record>
+    
+    <record model="ir.ui.view" id="mk_comments_and_behavior_tree">
+    <field name="name">mk.comments.and.behavior tree</field>
+    <field name="model">mk.comments.behavior.students</field>
+    <field name="arch" type="xml">
+    <tree>
+    <field name="date"/>
+    <field name="episode"/>
+    <field name="masjed"/>
+    </tree>
+    </field>
+  </record>
+
+    <record id="action_mk_comments_and_behavior" model="ir.actions.act_window">
+      <field name="name">Comments and Behavior</field>
+      <field name="res_model">mk.comments.behavior.students</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+     <menuitem id="mk_comments_and_behavior_menu" name="Comments and Behavior" parent="manage_student_menu" 
+      action="action_mk_comments_and_behavior" groups="read_student_behavior_and_comments,create_comments_and_behaviors"/>
+
+
+</data>
+</odoo>

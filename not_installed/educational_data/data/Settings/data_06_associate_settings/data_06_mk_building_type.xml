@@ -1,0 +1,40 @@
+<odoo>
+    <data noupdate="1">
+        <record id="mk_building_type1" model="mk.building.type">
+            <field name="name">مسجد</field>
+            <field name="active" eval="True"/>
+        </record>
+        <record id="mk_building_type2" model="mk.building.type">
+            <field name="name">مبني تابع للمسجد</field>
+            <field name="active" eval="True"/>
+        </record>
+        <record id="mk_building_type3" model="mk.building.type">
+            <field name="name">مبني تابع للجامع</field>
+            <field name="active" eval="True"/>
+        </record>
+        <record id="mk_building_type4" model="mk.building.type">
+            <field name="name">مبني مستأجر</field>
+            <field name="active" eval="True"/>
+        </record>
+        <record id="mk_building_type5" model="mk.building.type">
+            <field name="name">مبني وقف للجمعية</field>
+            <field name="active" eval="True"/>
+        </record>
+        <record id="mk_building_type6" model="mk.building.type">
+            <field name="name">مبني متبرع به</field>
+            <field name="active" eval="True"/>
+        </record>
+        <record id="mk_building_type7" model="mk.building.type">
+            <field name="name">ملك</field>
+            <field name="active" eval="True"/>
+        </record>
+        <record id="mk_building_type8" model="mk.building.type">
+            <field name="name">مدرسة</field>
+            <field name="active" eval="True"/>
+        </record>
+        <record id="mk_building_type9" model="mk.building.type">
+            <field name="name">جامع</field>
+            <field name="active" eval="True"/>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+<data noupdate="1">
+
+    <!-- Category MK Master Data -->
+    <record model="ir.module.category" id="module_category_master">
+        <field name="name">MK Master Data</field>
+        <field name="sequence">50</field>
+    </record>
+
+    <!-- Group users MK Master Data    -->
+    <record id="group_users_master" model="res.groups">
+        <field name="name">MK Master Users</field>
+        <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        <field name="category_id" ref="module_category_master" />
+    </record>
+
+   <record model="ir.module.category" id="module_category_center">
+        <field name="name">MK center</field>
+        <field name="sequence">50</field>
+   </record>
+
+   <record id="group_Create_center" model="res.groups">
+        <field name="name"> Create center </field>
+        <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        <field name="category_id" ref="module_category_center" />
+   </record>
+
+   <record id="group_read_center" model="res.groups">
+        <field name="name"> read center</field>
+        <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        <field name="category_id" ref="module_category_center" />
+   </record>
+
+    <record id="group_Edit_center" model="res.groups">
+        <field name="name">Edit center</field>
+        <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        <field name="category_id" ref="module_category_center" />
+    </record>
+
+         <!-- Group Select All center-->
+    <record id="groups_center_select_all" model="res.groups">
+        <field name="name">Select All</field>
+        <field name="implied_ids" eval="[(4, ref('group_Create_center')),
+          (4, ref('group_read_center')),(4, ref('group_Edit_center'))]"/>
+        <field name="category_id" ref="module_category_center" />
+    </record>
+
+   <record model="ir.module.category" id="module_category_Employee">
+        <field name="name">MK Employee </field>
+        <field name="sequence">50</field>
+   </record>
+
+    <record id="group_read_employee" model="res.groups">
+        <field name="name">read employee</field>
+        <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        <field name="category_id" ref="module_category_Employee" />
+    </record>
+
+    <record id="group_read_employee_admins" model="res.groups">
+        <field name="name">read Admins</field>
+        <field name="implied_ids" eval="[(4, ref('group_read_employee'))]"/>
+        <field name="category_id" ref="module_category_Employee" />
+    </record>
+
+    <record id="group_read_employee_edu_sup" model="res.groups">
+        <field name="name">read educational supervisors</field>
+        <field name="implied_ids" eval="[(4, ref('group_read_employee'))]"/>
+        <field name="category_id" ref="module_category_Employee" />
+    </record>
+
+    <record id="group_read_employee_center" model="res.groups">
+        <field name="name">read center</field>
+        <field name="implied_ids" eval="[(4, ref('group_read_employee'))]"/>
+        <field name="category_id" ref="module_category_Employee" />
+    </record>
+
+    <record id="group_read_employee_center_assistant" model="res.groups">
+        <field name="name">no name</field>
+        <field name="implied_ids" eval="[(4, ref('group_read_employee'))]"/>
+        <field name="category_id" ref="module_category_Employee" />
+    </record>
+
+    <record id="group_Create_employee" model="res.groups">
+        <field name="name">Create employee</field>
+        <field name="implied_ids" eval="[(4, ref('group_read_employee'))]"/>
+        <field name="category_id" ref="module_category_Employee" />
+    </record>
+
+    <record id="group_Edit_employee" model="res.groups">
+        <field name="name">Edit  employee</field>
+        <field name="implied_ids" eval="[(4, ref('group_read_employee'))]"/>
+        <field name="category_id" ref="module_category_Employee" />
+    </record>
+
+    <record id="group_Send_password_employee" model="res.groups">
+        <field name="name"> Send password  employee</field>
+        <field name="implied_ids" eval="[(4, ref('group_read_employee'))]"/>
+        <field name="category_id" ref="module_category_Employee" />
+    </record>
+
+    <record id="group_change_job_hr" model="res.groups">
+        <field name="name">Change job</field>
+        <field name="implied_ids" eval="[(4, ref('group_read_employee'))]"/>
+        <field name="category_id" ref="module_category_Employee" />
+    </record>
+
+    <record id="group_Acceptance_employee" model="res.groups">
+        <field name="name"> Acceptance employee</field>
+        <field name="implied_ids" eval="[(4, ref('group_Edit_employee'))]"/>
+        <field name="category_id" ref="module_category_Employee" />
+    </record>
+
+    <record id="group_Not_activated_employee" model="res.groups">
+        <field name="name"> Not activated employee</field>
+        <field name="implied_ids" eval="[(4, ref('group_Edit_employee'))]"/>
+        <field name="category_id" ref="module_category_Employee" />
+    </record>
+        
+    <record id="add_mosques_for_employee_group" model="res.groups">
+        <field name="name"> Add mosques for employee</field>
+        <field name="implied_ids" eval="[(4, ref('group_read_employee'))]"/>
+        <field name="category_id" ref="module_category_Employee" />
+    </record>
+
+    <record id="archive_employee_group" model="res.groups">
+        <field name="name"> Archive employee</field>
+        <field name="implied_ids" eval="[(4, ref('group_read_employee'))]"/>
+        <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        <field name="category_id" ref="module_category_Employee"/>
+    </record>
+
+    <!-- group of select all -->
+    <record id="select_all_employee_management_groups" model="res.groups">
+        <field name="name">Select  All</field>
+        <field name="implied_ids" eval="[(4, ref('group_read_employee')),
+                                          (4, ref('group_read_employee_admins')),
+                                          (4,ref('group_read_employee_center_assistant')),
+                                          (4, ref('group_read_employee_edu_sup')),
+                                          (4, ref('group_read_employee_center')),
+                                          (4, ref('group_Create_employee')),
+                                          (4, ref('group_Edit_employee')),
+                                          (4, ref('group_Send_password_employee')),
+                                          (4, ref('group_change_job_hr')),
+                                          (4, ref('group_Acceptance_employee')),
+                                          (4, ref('group_Not_activated_employee')),
+                                          (4, ref('add_mosques_for_employee_group'))]"/>
+        <field name="category_id" ref="module_category_Employee"/>
+    </record>
+
+        <!-- Category MK study class -->
+    <record model="ir.module.category" id="module_category_study_class">
+        <field name="name">MK study class</field>
+        <field name="sequence">70</field>
+    </record>
+
+        <!-- group Edit study class -->
+    <record id="group_study_class_edit" model="res.groups">
+      <field name="name">Edit study class</field>
+      <field name="users" eval="[(4, ref('base.user_root'))]"/>
+      <field name="category_id" ref="module_category_study_class"/>
+    </record>
+    </data>
+</odoo>
+
+        

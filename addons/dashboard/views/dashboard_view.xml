@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+	<record model="ir.ui.view" id="dashboard_kanban_view">
+			<field name="name">Dashboard</field>
+			<field name="model">dashboard.dashboard</field>
+			<field name="type">kanban</field>
+			<field name="arch" type="xml">
+				<kanban create="false">
+					<field name="field_list"/>
+					<field name="chart_list"/>
+					<templates>
+						<t t-name="kanban-box">
+							<div class="o_kanban_view o_kanban_ungrouped o_kanban_record own">
+								<div class="row col-xs-12">
+									<button id="refresh"
+										class="btn btn-default btn-setting pull-right btn-dadhboard">
+										<i class="fa fa-refresh"></i>
+										Refresh
+									</button>
+									<button name="action_setting" type="object"
+										groups="dashboard.dashboard_manager" class="btn btn-default btn-setting pull-right ">
+										<i class="fa fa-cog"></i>
+										customize
+									</button>
+								</div>
+								<div class="row col-xs-12">
+									<div t-foreach="record.field_list.selection" class="col-lg-3 col-md-6"
+										t-as="field">
+										<div t-att-class="'panel panel-'+field[2]">
+											<div class="panel-heading">
+												<div class="row">
+													<div class="col-xs-3">
+														<i t-att-class="'fa fa-5x '+field[3]"></i>
+													</div>
+													<div class="col-xs-9 text-right">
+														<div class="huge">
+															<span>
+																<t t-esc="field[0]"/>
+															</span>
+														</div>
+														<div>
+															<span>
+																<h4>
+																	<t t-esc="field[1]"/>
+																</h4>
+															</span>
+														</div>
+													</div>
+												</div>
+											</div>
+											<!-- <button name="view_details" type="object" t-att-context="'{action:' +field[4]+'}'"       
+												class="detail col-xs-12"> -->
+												<a type="object" name="view_details" t-att-data-context="`{'action_id':`+field[4]+`,'active_ids':[`+field[5]+`]}`" >
+												<div class="panel-footer">
+													<span class="pull-left">View Details</span>
+													<span class="pull-right">
+														<i class="fa fa-arrow-circle-right"></i>
+													</span>
+													<div class="clearfix"></div>
+												</div>
+											</a>
+										</div>
+									</div>
+								</div>
+								<!-- /.row -->
+								<div class="row col-xs-12">
+									<div t-foreach="record.chart_list.selection" t-as="chart"
+										class="col-lg-6 col-xs-12">
+										<t t-if="chart[2]==1">
+											<div class="panel panel-default">
+												<div class="panel-heading">
+													<i class="fa fa-bar-chart-o fa-fw"></i>
+													<t t-esc="chart[1]"/>
+												</div>
+												<div class="panel-body">
+													<div t-att-id="'morris-area-chart'+chart[0]"></div>
+												</div>
+											</div>
+										</t>
+										<t t-if="chart[2]==2">
+											<div class="panel panel-primary">
+												<div class="panel-heading">
+													<h3 class="panel-title">
+														<i class="fa fa-long-arrow-right"></i>
+														<t t-esc="chart[1]"/>
+													</h3>
+												</div>
+												<div class="panel-body">
+													<div t-att-id="'morris-bar-chart'+chart[0]"></div>
+												</div>
+											</div>
+										</t>
+									</div>
+								</div>
+							<script src="/dashboard/static/src/js/morris.js"/>
+							<script src="/dashboard/static/src/js/morrisdata.js"/>
+						</div>
+					</t>
+				</templates>
+			</kanban>
+		</field>
+	</record>
+	<record id="dashboard_action_view" model="ir.actions.act_window">
+		<field name="name">Dashboard</field>
+		<field name="res_model">dashboard.dashboard</field>
+		<field name="view_type">form</field>
+		<field name="view_mode">kanban</field>
+	</record>
+	<menuitem id="dashboard_root" name="Dashboard" sequence="0"
+		web_icon="dashboard,static/description/icon.png"/>
+	<menuitem id="dashboard_menu" name="Dashboard" parent="dashboard_root"
+		action="dashboard_action_view" sequence="1"/>
+</odoo>

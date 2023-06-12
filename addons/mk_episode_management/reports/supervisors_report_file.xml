@@ -1,0 +1,30 @@
+<odoo>
+<data>
+    <record model="report.paperformat" id="paperformat_supervisors_report">
+        <field name="name">paperformat supervisors report</field>
+        <field name="default" eval="True"/>
+        <field name="format">A4</field>
+        <field name="page_width">0</field>
+        <field name="page_width">0</field>
+        <field name="orientation">Portrait</field>
+        <field name="margin_top">30</field>
+        <field name="margin_right">5</field>
+        <field name="margin_bottom">10</field>
+        <field name="margin_left">5</field>
+        <field name="header_line" eval="False"/>
+        <field name="header_spacing">20</field>
+        <field name="dpi">90</field>
+    </record>
+
+		<report
+        id="report_mosque_supervisors"
+        string="تقارير مشرفي المساجد"
+        model="mosque.supervisor"
+        report_type="qweb-pdf"
+        name="mk_episode_management.report_mosque_supervisor_template"
+        file="mk_episode_management.report_mosque_supervisor_template"
+        paperformat="paperformat_supervisors_report"
+        
+    />
+</data>
+</odoo>

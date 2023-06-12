@@ -1,0 +1,551 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!--  edu.item  -->
+        <record id="edu_item_tree_view" model="ir.ui.view">
+        <field name="name">edu.item.tree</field>
+        <field name="model">edu.item</field>
+            <field name="arch" type="xml">
+                <tree delete="0">
+                    <field name="name"/>
+                    <field name="item_description"/>
+                    <field name="item_degree" sum="Total"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="edu_item_form_view" model="ir.ui.view">
+            <field name="name">edu.item.form</field>
+            <field name="model">edu.item</field>
+            <field name="arch" type="xml">
+                <form delete="0">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name" required="1"/>
+                                <field name="type_item" required="1"/>
+                            </group>
+                            <group>
+                                <field name="need_approve"/>
+                                <field name="type_approval"/>
+                                <field name="item_degree"/>
+                                <field name="item_description"/>
+                                <field name="criterion_id" options="{'no_open': '0', 'no_create': '0'}" required="1"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="edu_item__search_view" model="ir.ui.view">
+	       <field name="name">edu.item.search</field>
+	   	   <field name="model">edu.item</field>
+	       <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="item_degree"/>
+                <field name="item_description"/>
+
+                <filter name="is_quran" string="قرآنى" domain="[('need_approve','=',True)]"/>
+                <separator/>
+                <filter name="visit" string="زيارة"         domain="[('type_item', '=','visit')]"/>
+                <filter name="date"  string="تاريخ الانجاز"  domain="[('type_item', '=','date')]"/>
+
+                <group expand="0" string="Group By">
+                    <filter name="criterion" string="المعيار" context="{'group_by': 'criterion_id'}"/>
+                </group>
+            </search>
+	       </field>
+		</record>
+
+    <!--  edu.criterion  -->
+        <record id="edu_criterion_tree_view" model="ir.ui.view">
+            <field name="name">edu.criterion.tree</field>
+            <field name="model">edu.criterion</field>
+                <field name="arch" type="xml">
+                    <tree delete="0">
+                        <field name="name" string="criterion_name"/>
+                        <field name="criterion_number"/>
+                        <field name="criterion_weight" sum='Total' type="measure"/>
+                    </tree>
+            </field>
+        </record>
+
+        <record id="edu_criterion_form_view" model="ir.ui.view">
+            <field name="name">edu.criterion.form</field>
+            <field name="model">edu.criterion</field>
+            <field name="arch" type="xml">
+                <form delete="0">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="criterion_number" required="1"/>
+                                <field name="field_id" options="{'no_open': '0', 'no_create': '0'}"/>
+                            </group>
+                            <group>
+                                <field name="name" required="1"/>
+                                <field name="criterion_weight" readonly="1" widget="Percent"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="البنود">
+                                <field name="item_ids" readonly="1">
+                                    <tree>
+                                        <field name="item_description"/>
+                                        <field name="name"/>
+                                        <field name="item_degree" sum='Total'/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+		<record id="edu_criterion_search_view" model="ir.ui.view">
+	       <field name="name">edu.criterion.search</field>
+	   	   <field name="model">edu.criterion</field>
+	       <field name="arch" type="xml">
+		    	<search>
+		    		<field name="name"/>
+		    		<field name="criterion_number"/>
+		    		<field name="criterion_weight"/>
+
+				    <group expand="0" string="Group By">
+	                    <filter name="field" string="المجال" context="{'group_by': 'field_id'}"/>
+                	</group>
+		    	</search>
+	       </field>
+		</record>
+
+    <!--  comapany.pointers  -->
+        <record id="item_serial" model="ir.sequence">
+          <field name="name">item serial</field>
+          <field name="code">parent.item.serial</field>
+          <field name="padding">4</field>
+          <field name="prefix">1</field>
+          <field name="company_id" eval="False"/>
+      </record>
+
+        <record id="item_distrbuted_tree" model="ir.ui.view">
+            <field name="name">items.managment.tree</field>
+            <field name="model">comapany.pointers</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="date_start"/>
+                    <field name="date_end"/>
+                    <field name="total_items"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="item_distrbuted_form" model="ir.ui.view">
+            <field name="name">items.managment.form</field>
+            <field name="model">comapany.pointers</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <header>
+                        </header>
+                        <group>
+                            <group>
+                                <field name="date_start" required="1"/>
+                                <field name="type_evaluation" required="1"/>
+                            </group>
+                            <group>
+                                <field name="date_end" required="1"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="items">
+                                <field name="parent_line_ids">
+                                    <tree editable="bottom">
+                                        <field name="code" readonly="1"/>
+                                        <field name="item_field_id"    options="{'no_open': '0', 'no_create': '0'}" required="1"/>
+                                        <field name="item_crateria_id" options="{'no_open': '0', 'no_create': '0'}" required="1"/>
+                                        <field name="item_id"          options="{'no_open': '0', 'no_create': '0'}" required="1"/>
+                                        <field name="item_degree"  required="1"/>
+                                        <field name="item_type"       required="1"/>
+                                        <field name="is_need_approve" required="1"/>
+                                        <field name="distribuation_method" required="1"/>
+                                        <field name="gender" required="1"/>
+                                        <field name="indicator_level" required="1"/>
+                                        <field name="center_required_pointers" sum="Total" required="1"/>
+                                        <field name="done_pointers"            sum="Total" readonly="1"/>
+                                        <field name="state" string="status" readonly="1"/>
+                                        <field name="select_all_centers" />
+                                        <field name="center_ids" required="1" widget="many2many_tags" options="{'no_open': '0', 'no_create': '0'}"/>
+                                        <field name="flag" invisible="1"/>
+                                        <button name="assgin_one" type="object"
+                                                string="distribute" attrs="{'invisible':[('state','!=','new')]}"
+                                                groups="educational_supervison.group_distribute_comapany_pointers"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+    <!--  center.item  -->
+        <record id="item_distrbuted_center_tree" model="ir.ui.view">
+            <field name="name">center item managment</field>
+            <field name="model">center.item</field>
+            <field name="arch" type="xml">
+                <tree delete="0" create="0">
+                    <field name="code" readonly="1"/>
+                    <field name="center_id"/>
+                    <field name="item_field_id"/>
+                    <field name="item_crateria_id"/>
+                    <field name="item_id"/>
+                    <field name="is_need_approve"/>
+                    <field name="item_description" invisible="1"/>
+                    <field name="is_need_approve"/>
+                    <field name="distribuation_method"/>
+                    <field name="gender" string="رجالي/نسائي"/>
+                    <field name="done_pointers"/>
+                    <field name="assigned_item_number"/>
+                    <field name="state" string="status" readonly="1"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="item_distrbuted_center_form" model="ir.ui.view">
+            <field name="name">center item managment</field>
+            <field name="model">center.item</field>
+            <field name="arch" type="xml">
+                <form create="0" delete="0">
+                    <sheet>
+                        <header>
+                            <field name="state" widget="statusbar"/>
+                            <button name="sup_assign" type="object"  string="distribute"  attrs="{'invisible':[('state','!=','new')]}" groups="educational_supervison.group_name_distribute_supervisor_item"/>
+                        </header>
+                        <group>
+                            <group>
+                                <field name="code"             readonly="1"/>
+                                <field name="item_field_id"       readonly="1" options="{'no_open': '0', 'no_create': '0'}"/>
+                                <field name="item_description" readonly="1"/>
+                                <field name="item_degree"      readonly="1"/>
+                                <field name="is_need_approve"     readonly="1"/>
+                                <field name="center_id"        readonly="1" options="{'no_open': '0', 'no_create': '0'}"/>
+                            </group>
+                            <group>
+                                <field name="item_id"             readonly="1" options="{'no_open': '0', 'no_create': '0'}"/>
+                                <field name="item_crateria_id"    readonly="1" options="{'no_open': '0', 'no_create': '0'}"/>
+                                <field name="item_type"        readonly="1"/>
+                                <field name="distribuation_method"     readonly="1" />
+                                <field name="gender"                readonly="1"/>
+                                <field name="center_required_pointers" readonly="1"/>
+                                <field name="parent_item_id"  invisible="1"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="supervisors" >
+                                <field name="line_ids">
+                                    <tree editable="bottom">
+                                        <field name="supervisor_id" required="1" options="{'no_open': '0', 'no_create': '0'}"/>
+                                        <field name="required_pointer" required="1"/>
+                                        <field name="don_pointer" required="1"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="mk_center_item_search_view" model="ir.ui.view">
+        <field name="name">center item search</field>
+        <field name="model">center.item</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="code"/>
+                <field name="total_supervisors"/>
+                <field name="item_field_id"/>
+                <field name="item_crateria_id"/>
+                <field name="item_id"/>
+                <field name="item_degree"/>
+                <field name="item_description"/>
+                <field name="done_pointers"/>
+                <field name="assigned_item_number"/>
+                <field name="center_id"/>
+                <field name="parent_item_id"/>
+                <field name="center_required_pointers"/>
+                <field name="sup_count"/>
+
+                <separator/>
+                <filter name="need_approve"  string="يحتاج إلى توثيق"    	  domain="[('is_need_approve','=',True)]"/>
+                <separator/>
+                <filter name="visit"         string="زيارة"             	  domain="[('item_type', '=','visit')]"/>
+                <filter name="date"          string="تاريخ الانجاز"      	  domain="[('item_type', '=','date')]"/>
+                <separator/>
+                <filter name="all"           string="توصيل لكل"          	  domain="[('distribuation_method', '=','all')]"/>
+                <filter name="internal"      string="توصيل داخلي"        	  domain="[('distribuation_method', '=','internal')]"/>
+                <separator/>
+                <filter name="men"           string="رجالي"              	  domain="[('gender', '=','men')]"/>
+                <filter name="women"         string="نسائي"                   domain="[('gender', '=','women')]"/>
+                <filter name="men_women"     string="الكل"                    domain="[('gender', '=','men_women')]"/>
+                <separator/>
+                <filter name="new"           string="مبدئي"                   domain="[('state', '=','new')]"/>
+                <filter name="done"          string="تم التوزيع على المشرفين" domain="[('state', '=','done')]"/>
+                <filter name="distribuated"  string="تمت الزيارة"             domain="[('state', '=','done')]"/>
+
+                <group expand="0" string="Group By">
+                    <filter name="item_field"        string="المجال"            context="{'group_by': 'item_field_id'}"/>
+                    <filter name="item_crateria"     string="المعيار"           context="{'group_by': 'item_crateria_id'}"/>
+                    <filter name="item"              string="البنود"            context="{'group_by': 'item_id'}"/>
+                    <filter name="center_id"         string="المركز"            context="{'group_by': 'center_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!--  supervisor.item  -->
+        <record id="supervisor_item_managment_tree" model="ir.ui.view">
+            <field name="name">supervisor item managment</field>
+            <field name="model">supervisor.item</field>
+            <field name="arch" type="xml">
+                <tree create="0" delete="0" >
+                    <field name="code"  attrs="{'invisible':[('permision_requests','!=',False)]}"/>
+                    <field name="center_parent_id" invisible="1" />
+                    <field name="item_crateria_id" readonly="1"/>
+                    <field name="field_id" readonly="1"/>
+                    <field name="supervisor_id" />
+                    <field name="item_id" readonly="1"/>
+                    <field name="masjed_id"/>
+                    <field name="item_degree"          attrs="{'invisible':[('permision_requests','!=',False)]}" readonly="1"/>
+                    <field name="sup_required_pointer" attrs="{'invisible':[('permision_requests','!=',False)]}" readonly="1"/>
+                    <field name="deserved_degree"      attrs="{'invisible':[('permision_requests','!=',False)]}"/>
+                    <field name="item_done_percent"    attrs="{'invisible':[('permision_requests','!=',False)]}"/>
+                    <field name="crateria_done_degree" attrs="{'invisible':[('permision_requests','!=',False)]}"/>
+                    <field name="is_need_approve"         attrs="{'invisible':[('permision_requests','!=',False)]}" readonly="1"/>
+                    <field name="state" string="الحالة"/>
+                    <field name="permision_requests" invisible="1"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="supervisor_item_managment_form" model="ir.ui.view">
+            <field name="name">supervisor item managment</field>
+            <field name="model">supervisor.item</field>
+            <field name="arch" type="xml">
+                <form create="0" delete="0">
+                    <header>
+                        <field name="state" widget="statusbar" readonly="1"/>
+                        <button name="done" string="تمت الزيارة" type="object" attrs="{'invisible':[('state','!=','new')]}"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="code" readonly="1" options="{'no_create': True, 'no_open': True}"/>
+                                <field name="item_id" readonly="1" options="{'no_create': True, 'no_open': True}"/>
+                                <field name="item_type" readonly="1"/>
+                                <field name="field_id" readonly="1" options="{'no_create': True, 'no_open': True}"/>
+                                <field name="item_done_percent"/>
+                                <field name="gender" readonly="1" string="رجالي/نسائي"/>
+                            </group>
+                            <group>
+                                <field name="item_degree" readonly="1" attrs="{'invisible':[('item_type','=','visit')]}"/>
+                                <field name="item_description" readonly="1"/>
+                                <field name="is_need_approve" readonly="1"/>
+                                <field name="supervisor_id" options="{'no_create': True, 'no_open': True}" readonly="1"/>
+                                <field name="superv_mosqus_ids" invisible="1"/>
+                                <field name="masjed_id" attrs="{'readonly':[('state','!=','new')]}" options="{'no_create': True, 'no_open': True}" domain="[('id', 'in', superv_mosqus_ids)]" required="1"/>
+                                <field name="mosq_category" required="1" attrs="{'readonly':[('state','!=','new')]}"/>
+                            </group>
+                            <group>
+                                <field name="study_class_id" readonly="1" options="{'no_create': True, 'no_open': True}"/>
+                            </group>
+                            <group>
+                                <field name="evaluation_method" invisible="1"/>
+                                <field name="evaluation_type" attrs="{'readonly':[('state','!=','draft')]}" invisible="1"/>
+                                <field name="sup_required_pointer" readonly="1"/>
+                                <field name="done_pointers" attrs="{'invisible':[('evaluation_method','=','multiple_choice')],'readonly':[('state','!=','new')], 'required':[('evaluation_method','=','grade_input')]}"/>
+                                <field name="evaluation_status" attrs="{'invisible':[('evaluation_method','=','grade_input')], 'readonly':[('state','!=','new')], 'required':[('evaluation_method','=','multiple_choice')]}"/>
+                            </group>
+                        </group>
+                        <group>
+                            <field name="supervisor_notes" attrs="{'readonly':[('state','!=','new')]}"/>
+                            <field name="mosque_notes" attrs="{'readonly':[('state','!=','new')]}"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="mk_supervisor_item_search_view" model="ir.ui.view">
+            <field name="name">supervisor item search</field>
+            <field name="model">supervisor.item</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="code"/>
+                    <field name="criterion_weight"/>
+                    <field name="field_id"/>
+                    <field name="item_crateria_id"/>
+                    <field name="item_id"/>
+                    <field name="item_degree"/>
+                    <field name="item_description"/>
+                    <field name="done_pointers"/>
+                    <field name="center_id"/>
+                    <field name="center_parent_id"/>
+                    <field name="deserved_degree"/>
+                    <field name="item_done_percent"/>
+                    <field name="crateria_done_degree"/>
+                    <field name="sup_required_pointer"/>
+                    <field name="mosque_permision_id"/>
+                    <field name="student_no"/>
+                    <field name="masjed_id"/>
+
+                    <separator/>
+                    <filter name="need_approve"        string="يحتاج إلى توثيق"    domain="[('is_need_approve','=',True)]"/>
+                    <separator/>
+                    <filter name="permision_requests"  string="طلب الإذن"           domain="[('permision_requests','=',True)]"/>
+                    <separator/>
+                    <filter name="visit"               string="زيارة"              domain="[('item_type', '=','visit')]"/>
+                    <filter name="date"                string="تاريخ الانجاز"       domain="[('item_type', '=','date')]"/>
+                    <separator/>
+                    <filter name="accept"              string="قبول"               domain="[('supervisor_decision', '=','accept')]"/>
+                    <filter name="reject"              string="رفض"                domain="[('supervisor_decision', '=','reject')]"/>
+                    <separator/>
+                    <filter name="men"                 string="رجالي"              domain="[('gender', '=','men')]"/>
+                    <filter name="women"               string="نسائي"              domain="[('gender', '=','women')]"/>
+                    <filter name="men_women"           string="الكل"               domain="[('gender', '=','men_women')]"/>
+                    <separator/>
+                    <filter name="new"                 string="مبدئي"              domain="[('state', '=','new')]"/>
+                    <filter name="done"               string="تمت الزيارة"        domain="[('state', '=','done')]"/>
+
+                    <group expand="0" string="Group By">
+                        <filter name="item_field"        string="المجال"            context="{'group_by': 'field_id'}"/>
+                        <filter name="item_crateria"     string="المعيار"           context="{'group_by': 'item_crateria_id'}"/>
+                        <filter name="item"              string="البنود"            context="{'group_by': 'item_id'}"/>
+                        <filter name="center"            string="المركز"            context="{'group_by': 'center_id'}"/>
+                        <filter name="supervisor_id"        string="المشرف"         context="{'group_by': 'supervisor_id'}"/>
+                        <filter name="masjed_id"         string="المسجد"            context="{'group_by': 'masjed_id'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record id="view_evaluation_items_tree" model="ir.ui.view">
+        <field name="name">supervisor item managment</field>
+        <field name="model">supervisor.item</field>
+        <field name="arch" type="xml">
+            <tree delete="false" create="false" edit="false" >
+                <field name="code"  attrs="{'invisible':[('permision_requests','!=',False)]}"/>
+                <field name="center_parent_id" invisible="1" />
+                <field name="item_crateria_id" readonly="1"/>
+                <field name="field_id" readonly="1"/>
+                <field name="supervisor_id" />
+                <field name="item_id" readonly="1"/>
+                <field name="masjed_id"/>
+                <field name="item_degree"          attrs="{'invisible':[('permision_requests','!=',False)]}" readonly="1"/>
+                <field name="sup_required_pointer" attrs="{'invisible':[('permision_requests','!=',False)]}" readonly="1"/>
+                <field name="deserved_degree"      attrs="{'invisible':[('permision_requests','!=',False)]}"/>
+                <field name="item_done_percent"    attrs="{'invisible':[('permision_requests','!=',False)]}"/>
+                <field name="crateria_done_degree" attrs="{'invisible':[('permision_requests','!=',False)]}"/>
+                <field name="is_need_approve"      attrs="{'invisible':[('permision_requests','!=',False)]}" readonly="1"/>
+                <field name="state" string="الحالة"/>
+                <field name="permision_requests" invisible="1"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- visits.managment   -->
+        <record id="visit_managment_tree" model="ir.ui.view">
+            <field name="name">visit item managment</field>
+            <field name="model">visits.managment</field>
+            <field name="arch" type="xml">
+                <tree delete="0" create="1" editable="top">
+                     <field name="visit_id"   required="1" options="{'no_open': '0', 'no_create': '0'}" attrs="{'readonly': [('state', '=', 'done')]}"/>
+                     <field name="visit_date" required="1" attrs="{'readonly': [('state', '=', 'done')]}"/>
+                    <field name="supervisor_item_id" required="1" string="التقييم" options="{'no_open': '0', 'no_create': '0'}" attrs="{'readonly': [('state', '=', 'done')]}"/>
+                    <field name="item_id" options="{'no_open': '0', 'no_create': '0'}"  string="البند" attrs="{'readonly': [('state', '=', 'done')]}"/>
+                    <field name="masjed_id" required="1"       options="{'no_open': '0', 'no_create': '0'}" attrs="{'readonly': [('state', '=', 'done')]}"/>
+                    <field name="supervisor_id" string="n sup" options="{'no_open': '0', 'no_create': '0'}" attrs="{'readonly': [('state', '=', 'done')]}"/>
+                    <field name="notes" attrs="{'readonly': [('state', '=', 'done')]}"/>
+                    <field name="state" readonly="1" string="status"/>
+                    <button name="accept" type="object" string="done visit" attrs="{'invisible': [('state', '=', 'done')]}"/>
+                </tree>
+            </field>
+        </record>
+
+    <!-- actions   -->
+    <act_window  id="master_crateria"
+                 name="crateria"
+                 res_model="edu.criterion"
+                 view_mode="tree,form"/>
+
+    <act_window  id="master_item_action"
+                name="Items"
+                res_model="edu.item"
+                view_mode="tree,form"/>
+
+    <act_window  id="action_item"
+                name="Items managment"
+                res_model="comapany.pointers"
+                view_mode="tree,form"/>
+
+    <act_window id="action_item_center"
+                name="supervisors distribuation"
+                res_model="center.item"
+                view_mode="tree,form"/>
+
+    <act_window id="supervisor_item_managment_action"
+                name="supervisor Items managment"
+                res_model="supervisor.item"
+                view_mode="tree,form"/>
+
+    <act_window id="action_evaluation_items"
+                name="تقييم البنود للمسجد/المدرس"
+                res_model="supervisor.item"
+                view_mode="tree,form"
+                context="{'form_view_ref': 'educational_supervison.view_evaluation_items_form',
+                          'tree_view_ref': 'educational_supervison.view_evaluation_items_tree'}"/>
+
+    <act_window id="visits_managment_action"
+                name="visits managment"
+                res_model="visits.managment"
+                view_mode="tree"/>
+
+    <!--  menuitems  -->
+    <menuitem name="اﻹﺷﺮاﻑ اﻟﺘﺮﺑﻮﻱ" id="educational_supervison.menu_supervision" parent="educational_supervison.menu_root"/>
+
+    <menuitem name="المعايير"  id="educational_supervison.master_crateria_menn"
+              parent="educational_supervison.menu_supervision"
+              action="educational_supervison.master_crateria"
+              sequence="0" groups="educational_supervison.group_read_edu_criterion" />
+
+    <menuitem name="بنود الإشراف"  id="master_item_menu"
+              parent="educational_supervison.menu_supervision"
+              action="educational_supervison.master_item_action"
+              sequence="1" groups="educational_supervison.group_read_item"/>
+
+    <menuitem name="إدارة المؤشرات والبنود"  id="educational_supervison.menu_pointer_management"
+              parent="educational_supervison.menu_supervision"
+              action="educational_supervison.action_item"
+              groups="educational_supervison.group_read_comapany_pointers"/>
+
+    <menuitem name="توزيع المؤشرات علي المشرفين" id="educational_supervison.menu_mosque"
+              parent="educational_supervison.menu_supervision" action="educational_supervison.action_item_center"
+              groups="educational_supervison.group_read_supervisor_item,educational_supervison.group_read_center_item" />
+
+    <menuitem name="تقييم البنود للمشرفين" id="sup_items_managment"
+              parent="educational_supervison.menu_supervision"
+              action="educational_supervison.supervisor_item_managment_action"
+              groups="educational_supervison.group_read_supervisor_item,educational_supervison.group_name_write_supervisor_item" />
+
+    <menuitem name="تقييم البنود للمسجد/المدرسة" id="menu_evaluation_items_form"
+              parent="educational_supervison.menu_supervision"
+              action="educational_supervison.action_evaluation_items"
+              groups="educational_supervison.group_read_supervisor_item" />
+
+    <menuitem name="أدارة الزيارات" id="visits_managment"
+              parent="educational_supervison.menu_supervision"
+              action="educational_supervison.visits_managment_action"
+              groups="educational_supervison.group_read_visits_managment" />
+
+</odoo>

@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+    	 <record id="transport_management_access_categ" model="ir.module.category">
+            <field name="name">Transport Management</field>
+          </record>
+
+          <!-- group of transport management -->
+          <record id="vehicle_types_manage" model="res.groups">
+            <field name="name">Vehicle Type Management</field>
+            <field name="category_id" ref="transport_management_access_categ"/>
+          </record> 
+          
+           <!-- group of events status management -->
+          <record id="vehicle_asset_manage" model="res.groups">
+            <field name="name">Vehicle asset Management</field>
+            <field name="category_id" ref="transport_management_access_categ"/>
+          </record>
+          
+          <!-- group of read vehicle -->
+          <record id="read_vehicles" model="res.groups">
+               <field name="name">Read Vehicles</field>
+               <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+               <field name="users" eval="[(4, ref('base.user_root'))]"/>
+               <field name="category_id" ref="transport_management_access_categ"/>
+          </record> 
+
+          <!-- Update or Modify Vehicles group -->
+          <record id="write_vehicles" model="res.groups">
+               <field name="name">Update or Modify Vehicles</field>
+               <field name="implied_ids" eval="[(4, ref('read_vehicles'))]"/>
+               <field name="users" eval="[(4, ref('base.user_root'))]"/>
+               <field name="category_id" ref="transport_management_access_categ"/>
+          </record>
+
+          <!-- group of transport write management -->
+          <record id="create_vehicles" model="res.groups">
+               <field name="name">Create Vehicles</field>
+               <field name="implied_ids" eval="[(4, ref('read_vehicles'))]"/>
+               <field name="users" eval="[(4, ref('base.user_root'))]"/>
+               <field name="category_id" ref="transport_management_access_categ"/>
+          </record>
+
+          <!-- group of read transport Request -->
+          <record id="read_transportation_request" model="res.groups">
+               <field name="name">Read Transportation Request</field>
+		           <field name="implied_ids" eval="[(4,ref('mk_student_register.confirm_student_placement_to_episode_read'))]"/>
+               <field name="users" eval="[(4, ref('base.user_root'))]"/>
+               <field name="category_id" ref="transport_management_access_categ"/>
+          </record>
+
+          <!-- group of write transport Request -->
+          <record id="write_transportation_request" model="res.groups">
+               <field name="name">Update Transportation Request</field>
+               <field name="implied_ids" eval="[(4, ref('read_transportation_request'))]"/>
+               <field name="users" eval="[(4, ref('base.user_root'))]"/>
+               <field name="category_id" ref="transport_management_access_categ"/>
+          </record>
+
+          <!-- group of create transport Request -->
+          <record id="create_transportation_request" model="res.groups">
+               <field name="name">Create Transportation Request</field>
+               <field name="implied_ids" eval="[(4, ref('read_transportation_request'))]"/>
+               <field name="users" eval="[(4, ref('base.user_root'))]"/>
+               <field name="category_id" ref="transport_management_access_categ"/>
+          </record>
+
+          <!-- group of read apologize Request -->
+          <record id="read_apologize_request" model="res.groups">
+               <field name="name">Read Apologize Request</field>
+               <field name="implied_ids" eval="[(4,ref('mk_student_register.confirm_student_placement_to_episode_read'))]"/>
+               <field name="users" eval="[(4, ref('base.user_root'))]"/>
+               <field name="category_id" ref="transport_management_access_categ"/>
+          </record>
+
+          <!-- group of create apologize Request -->
+          <record id="create_apologize_request" model="res.groups">
+               <field name="name"> create apologize request </field>
+               <field name="implied_ids" eval="[(4, ref('read_apologize_request'))]"/>
+               <field name="users" eval="[(4, ref('base.user_root'))]"/>
+               <field name="category_id" ref="transport_management_access_categ"/>
+          </record>
+
+          <!-- group of write apologize Request -->
+          <record id="write_apologize_request" model="res.groups">
+               <field name="name"> modify apologize request </field>
+               <field name="implied_ids" eval="[(4, ref('read_apologize_request'))]"/>
+               <field name="users" eval="[(4, ref('base.user_root'))]"/>
+               <field name="category_id" ref="transport_management_access_categ"/>
+          </record>
+
+
+          
+
+          <!-- inherite group of student placement for episode >
+          <record id="confirm_student_placement_to_episode_read" model="res.groups">
+               <field name="name">Create Transportation Request</field>
+               <field name="implied_ids" eval="[(4, ref('read_transportation_request'))]"/>
+               <field name="users" eval="[(4, ref('base.user_root'))]"/>
+               <field name="category_id" ref="transport_management_access_categ"/>
+          </record-->
+
+
+	       <!-- group of events status management -->
+          <record id="read_driver" model="res.groups">
+            <field name="name">Read Driver</field>
+            <field name="category_id" ref="transport_management_access_categ"/>
+          </record>
+
+           <!-- group of write driver -->
+          <record id="write_driver" model="res.groups">
+            <field name="name">Write Driver</field>
+            <field name="category_id" ref="transport_management_access_categ"/>
+          </record>
+
+           <!-- group of create driver -->
+          <record id="create_driver" model="res.groups">
+            <field name="name">Create Driver</field>
+            <field name="category_id" ref="transport_management_access_categ"/>
+          </record> 
+
+           <!-- group of read transporation management -->
+          <record id="read_transportation_management" model="res.groups">
+            <field name="name">Read Transporation Management</field>
+            <field name="implied_ids" eval="[(4, ref('read_transportation_request'))]"/>
+            <field name="category_id" ref="transport_management_access_categ"/>
+            
+          </record> 
+
+           <!-- group of write transporation management -->
+          <record id="write_transportation_management" model="res.groups">
+            <field name="name">Write Transporation Management</field>
+             <field name="implied_ids" eval="[(4, ref('read_transportation_management'))]"/>
+            <field name="category_id" ref="transport_management_access_categ"/>
+          </record> 
+
+          <!-- group of create transporation management -->
+          <record id="create_transportation_management" model="res.groups">
+            <field name="name">Create Transporation Management</field>
+             <field name="implied_ids" eval="[(4, ref('read_transportation_management'))]"/>
+            <field name="category_id" ref="transport_management_access_categ"/>
+          </record> 
+
+           <!-- group of read attendance -->
+
+          <record id="trans_read_attendance" model="res.groups">
+            <field name="name">read attendance1</field>
+            <field name="category_id" ref="transport_management_access_categ"/>
+        <field name="implied_ids" eval="[(4, ref('read_transportation_management')),(4, ref('read_transportation_request'))]"/>
+
+          </record> 
+
+        
+
+     <record id="trans_writee_attendance" model="res.groups">
+            <field name="name">write attendance</field>
+            <field name="implied_ids" eval="[(4, ref('trans_read_attendance'))]"/>
+            <field name="category_id" ref="transport_management_access_categ"/>
+          </record> 
+
+     <!-- group of create attendance -->
+     <record id="trans_createe_attendance" model="res.groups">
+            <field name="name">create attendance</field>
+            <field name="implied_ids" eval="[(4, ref('trans_read_attendance')),(4, ref('read_transportation_management'))]"/>
+            <field name="category_id" ref="transport_management_access_categ"/>
+          </record>
+
+      <!-- group of accept reject transport management -->
+     <record id="accept_reject_transport_management" model="res.groups">
+          <field name="name">Accept Reject Transport Management</field>
+          <field name="implied_ids" eval="[(4, ref('read_transportation_management'))]"/>
+          <field name="users" eval="[(4, ref('base.user_root'))]"/>
+          <field name="category_id" ref="transport_management_access_categ"/>
+    </record>       
+
+
+      <!-- group of payment voucher -->
+     <record id="payment_voucher" model="res.groups">
+          <field name="name">payment voucher</field>
+          <field name="implied_ids" eval="[(4, ref('read_transportation_request'))]"/>
+          <field name="users" eval="[(4, ref('base.user_root'))]"/>
+          <field name="category_id" ref="transport_management_access_categ"/>
+    </record> 
+
+
+          <!-- group of Transporation Request button -->
+          <record id="send_transporation_request" model="res.groups">
+            <field name="name">Send Transporation Request</field>
+            <field name="category_id" ref="transport_management_access_categ"/>
+          <field name="implied_ids" eval="[(4, ref('read_transportation_request'))]"/>
+          </record> 
+
+         <!-- group of accept/translation buttons -->
+          <record id="accept_reject_attendance" model="res.groups">
+            <field name="name">Accept/Reject Attendance</field>
+            <field name="category_id" ref="transport_management_access_categ"/>
+            <field name="implied_ids" eval="[(4, ref('trans_read_attendance'))]"/>
+          </record> 
+
+          <!-- group of stop transportation button -->
+          <record id="group_stop_transportation" model="res.groups">
+            <field name="name">stop transportation</field>
+            <field name="category_id" ref="transport_management_access_categ"/>
+          <field name="implied_ids" eval="[(4, ref('read_transportation_request'))]"/>
+          </record> 
+
+    
+
+    </data>
+</odoo>

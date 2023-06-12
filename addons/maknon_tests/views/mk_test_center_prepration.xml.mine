@@ -1,0 +1,224 @@
+<odoo>
+    <data>
+    
+ 	<record id="mk_test_center_prep_form_view" model="ir.ui.view">
+          <field name="name">Test Center Configuration Form View</field>
+          <field name="model">mk.test.center.prepration</field>
+          <field name="arch" type="xml">
+              <form string = "Test Center Configuration">
+		  <header>
+		    <button string="Genarate timetable" name="genrate_time_table" type="object"
+		    	attrs="{'invisible':['|','|',('center_group','!=','student'),('flag','=',True),('visible_for_user','=',False)]}" groups="maknon_tests.create_tests_time_tables"/>
+		  </header>
+		  <sheet>
+		  	<field name="company_id" required="1" invisible="1"/>
+			  <group colspan="6" col="4">
+
+				  	<field name="center_id" required="1"  options="{'no_create':1,'no_edit':1,'no_open':1}" attrs="{'readonly':[('visible_for_user','=',False)]}" domain="[('test_group','=',center_group)]"/>
+				  	
+				  	<field name="website_registeration" attrs="{'readonly':[('visible_for_user','=',False)]}"/>
+				  	<field name="center_group" invisible="1"/>
+			</group>
+
+				<field name="center_info" attrs="{'invisible':[('center_id','=',False)]}"/>
+			  <group>
+			  	<field name="flag" invisible="1"/>
+			  </group>
+			  <group>
+			  	<field name="visible_for_user" invisible="0"/>
+			  	<field name="academic_id" invisible="1"/>
+				<field name="study_class_id" invisible="1"/>
+			  	<field name="main_center" invisible="1"/>
+			  </group>
+
+			<group  col="6" >
+				<field name="department_ids" widget="many2many_tags" domain="[('level_type','=','c')]" colspan="5"   options="{'no_create':True,'no_edit':True}" invisible="1"/>
+			  </group>
+			  <group col="6">
+			  	<field name="test_names" widget="many2many_tags" colspan="5" options="{'no_create':True,'no_edit':True}" invisible="1"/>
+			  </group>
+			  <group>
+			  	<group>
+			  		<field name="all_branches" invisible="1"/>
+			  	</group>
+			  	<group>
+			  		<field name="branches_ids" widget="many2many_tags" attrs="{'invisible':[('all_branches','=',True)],'required':[('all_branches','=',False)]}" invisible="1"/>
+			  	</group>
+			  </group>
+			   <notebook>
+
+			  	 <page string="Committee Test" >
+                    <field name="committee_test_ids" attrs="{'readonly':[('visible_for_user','=',False)]}"
+                        context="{'default_center_id':center_id}">
+                        <tree editable="bottom">
+                            <field name="center_id" invisible="0"/>
+                            <field name="examiner_employee_id" required="1" options="{'no_create_edit':True}"/>
+                            <field name="departemnt_examiner_id" readonly="True"/>
+                            <field name="mosque_examiner_ids" widget="many2many_tags" readonly="True"/>
+                            <field name="active"/>
+                        </tree>
+                    </field>
+                </page>
+
+
+                <page string="Test Center Config">
+                	<separator string="Tests Periods" attrs="{'invisible':[('center_group','!=','student')]}"/>
+
+						<field name="periods_ids" attrs="{'invisible':[('center_group','!=','student')],'readonly':[('visible_for_user','=',False)]}">
+							<tree create="true" edit="true">
+								<field name="name"/>
+								<field name="total_hours" sum="total hours"/>
+							</tree>
+						</field> 
+			  		<separator string="Days" attrs="{'invisible':[('center_group','!=','student')]}"/>
+				  		<group col="8" colspan="2" attrs="{'invisible':[('center_group','!=','student')]}">
+				  			<field name="sunday" attrs="{'readonly':[('visible_for_user','=',False)]}"/>
+						  	<field name="monday" attrs="{'readonly':[('visible_for_user','=',False)]}"/>
+						  	<field name="tuesday" attrs="{'readonly':[('visible_for_user','=',False)]}"/>
+						  	<field name="wednesday" attrs="{'readonly':[('visible_for_user','=',False)]}"/>
+						  	<field name="thursday" attrs="{'readonly':[('visible_for_user','=',False)]}"/>
+						  	<field name="friday" attrs="{'readonly':[('visible_for_user','=',False)]}"/>
+						  	<field name="saturday" attrs="{'readonly':[('visible_for_user','=',False)]}"/>	  	
+				  		</group>  	
+			  		<separator string="Tests Registeration"/>
+			  		<group colspan="6" col="4">
+						<field name="registeration_start_date" required="1" attrs="{'readonly':[('visible_for_user','=',False)]}"/>
+						<field name="registeration_end_date" required="1" attrs="{'readonly':[('visible_for_user','=',False)]}"/>
+			  		</group>
+			  		<separator string="Exams Periods"/>
+			  		<group colspan="6" col="4">
+						<field name="exam_start_date" required="1" attrs="{'readonly':[('visible_for_user','=',False)]}"/>
+						<field name="exam_end_date" required="1" attrs="{'readonly':[('visible_for_user','=',False)]}"/>
+			  		</group>
+                </page>
+                <page string="exam location" attrs="{'invisible':[('center_id','=',False)]}">
+                <group>	
+                <field name="place_options" required="1" attrs="{'readonly':[('visible_for_user','=',False)]}"/>
+                </group>
+                <group>
+                <field name="internal_place" string="المسجد" options="{'no_open':1,'no_create':1,'no_edit':1}" attrs="{'invisible':[('place_options','!=','in')],'required':[(
+                    'place_options','=','in')],'readonly':[('visible_for_user','=',False)]}"/>
+                
+                </group>    
+                <group>
+                <field name="latitude" string="العرض" attrs="{'readonly':[('visible_for_user','=',False)]}"/>
+                </group>
+                <group>
+                <field name="longtitude" string="الطول" attrs="{'readonly':[('visible_for_user','=',False)]}"/>
+                </group>
+                <group>
+                <field name="out_disc" string="وصف الموقع" attrs="{'invisible':[('place_options','!=','out')],'required':[(
+                    'place_options','=','out')],'readonly':[('visible_for_user','=',False)]}"/>
+                
+             <field name="place_description" string="وصف الموقع" attrs="{'invisible':[('place_options','=','out')],'readonly':[('visible_for_user','=',False)]}"/>
+                </group>
+                
+                <group>
+
+            </group>
+
+                	
+
+                </page>
+			  </notebook>
+	  		</sheet>
+           </form>
+        </field>
+        </record>
+
+        <record id="mk_test_center_prep_tree_view" model="ir.ui.view">
+            <field name="name">Test Center Configuration Tree View</field>
+            <field name="model">mk.test.center.prepration</field>
+            <field name="arch" type="xml">
+                <tree string="Test Center Configuration"  delete="0" decoration-danger="visible_for_user==True">
+                	<!--<field name="company_id" required="1"/>
+                	<field name="study_year_id" required="1"/>-->
+                	<field name="visible_for_user" invisible="1"/>
+                	<field name="center_id" required="1"/>
+                                        <field name="place_options"/>
+                	<field name="website_registeration"/>
+                	<field name="test_names" widget="many2many_tags"/>
+                	<field name="exam_start_date" required="1"/>
+					<field name="exam_end_date" required="1"/>
+					<field name="registeration_start_date" required="1"/>
+					<field name="registeration_end_date" required="1"/>
+				</tree>
+            </field>
+        </record>
+        <!--
+        <record id="mk_test_center_config_search_view" model="ir.ui.view">
+            <field name="name">Test Center Configuration Search View</field>
+            <field name="model">mk.test.center.config</field>
+            <field name="arch" type="xml">
+                <search string="Test Center Configuration ">
+                </search>
+            </field>
+        </record>-->
+        
+			<record id="center_prepare_test_search_view" model="ir.ui.view">
+            <field name="name">cennter prepare search</field>
+            <field name="model">mk.test.center.prepration</field>
+            <field name="arch" type="xml">
+                <search string="center prepare">
+
+                    <filter string="تم اعداد جدول الاختبار" domain="[('flag','=',True)]"/>
+                    
+
+
+                    <field name="center_id"/>
+                    <filter name="group_center" string="مركز الاختبار"
+                            context="{'group_by': 'center_id'}"/>
+
+                     <field name="main_center"/>
+                    <filter name="group_main_center" string="مركز الاختبار الرئيسي"
+                            context="{'group_by': 'main_center'}"/>
+                            
+                </search>
+            </field>
+        </record>
+
+        <record id="mk_test_center_prep_action" model="ir.actions.act_window">
+            <field name="name">Test Center Configuration </field>
+            <field name="res_model">mk.test.center.prepration</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('center_group','=','student')]</field>
+            <field name="context">{'default_center_group':'student'}</field>
+            <!--<field name="search_view_id" ref="mk_test_center_config_search_view"/>
+        	-->
+        </record>
+
+	<menuitem 
+		name="Test Center Configuration " 
+		id="mk_test_center_prep_menu" 
+		sequence="1" 
+		parent="test_operation_main_menu" 
+		action="mk_test_center_prep_action"
+
+		/>    
+
+
+        <record id="mk_test_teacher_center_prep_action" model="ir.actions.act_window">
+            <field name="name">Test Center Configuration </field>
+            <field name="res_model">mk.test.center.prepration</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('center_group','=','employee')]</field>
+            <field name="context">{'default_center_group':'employee'}</field>
+            <!--<field name="search_view_id" ref="mk_test_center_config_search_view"/>
+        	-->
+        </record>
+
+	<menuitem 
+		name="Teacher Test Center Configuration " 
+		id="mk_test_techer_center_prep_menu" 
+		sequence="0" 
+		parent="test_techers_operation_main_menu" 
+		action="mk_test_teacher_center_prep_action"
+/>    
+
+
+    </data>  
+</odoo>

@@ -1,0 +1,13 @@
+<openerp>
+    <data>
+        <menuitem id="mk_productivity_root_menu"
+                  name="Productivity management"
+                  web_icon="mk_productivity,static/description/icon.png"
+                  sequence="10"/>
+
+        <menuitem id="mk_productivity_configuration_menu"
+                  name="Productivity configuration"
+                  parent="mk_productivity_root_menu"
+                  sequence="3"/>
+    </data>
+</openerp>

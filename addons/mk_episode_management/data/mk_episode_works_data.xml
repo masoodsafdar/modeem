@@ -1,0 +1,245 @@
+<odoo>
+    <data noupdate="1">
+        <record id="mk_epsoide_works1" model="mk.epsoide.works">
+            <field name="name">التبيان</field>
+            <field name="active" eval="True"/>
+            <field name="type_episode_id" ref="episode_type1"/>
+            <field name="memorize" eval="True"/>
+            <field name="minimum_audit" eval="True"/>
+            <field name="maximum_audit" eval="True"/>
+            <field name="reading" eval="True"/>
+        </record>
+        <record id="mk_epsoide_works2" model="mk.epsoide.works">
+            <field name="name">نور البيان</field>
+            <field name="active" eval="True"/>
+            <field name="type_episode_id" ref="episode_type1"/>
+            <field name="memorize" eval="True"/>
+            <field name="minimum_audit" eval="True"/>
+            <field name="maximum_audit" eval="True"/>
+            <field name="reading" eval="True"/>
+        </record>
+        <record id="mk_epsoide_works3" model="mk.epsoide.works">
+            <field name="name">النورانية</field>
+            <field name="active" eval="True"/>
+            <field name="type_episode_id" ref="episode_type1"/>
+            <field name="memorize" eval="True"/>
+            <field name="minimum_audit" eval="True"/>
+            <field name="maximum_audit" eval="True"/>
+            <field name="reading" eval="True"/>
+        </record>
+
+
+        <record id="mk_epsoide_works4" model="mk.epsoide.works">
+            <field name="name">ختم في سنة</field>
+            <field name="active" eval="True"/>
+            <field name="type_episode_id" ref="episode_type2"/>
+            <field name="memorize" eval="True"/>
+            <field name="minimum_audit" eval="True"/>
+            <field name="maximum_audit" eval="True"/>
+            <field name="reading" eval="True"/>
+        </record>
+        <record id="mk_epsoide_works5" model="mk.epsoide.works">
+            <field name="name">ختم في سنتين</field>
+            <field name="active" eval="True"/>
+            <field name="type_episode_id" ref="episode_type2"/>
+            <field name="memorize" eval="True"/>
+            <field name="minimum_audit" eval="True"/>
+            <field name="maximum_audit" eval="True"/>
+            <field name="reading" eval="True"/>
+        </record>
+        <record id="mk_epsoide_works6" model="mk.epsoide.works">
+            <field name="name">ختم في ثلاث سنوات</field>
+            <field name="active" eval="True"/>
+            <field name="type_episode_id" ref="episode_type2"/>
+            <field name="memorize" eval="True"/>
+            <field name="minimum_audit" eval="True"/>
+            <field name="maximum_audit" eval="True"/>
+            <field name="reading" eval="True"/>
+        </record>
+        <record id="mk_epsoide_works7" model="mk.epsoide.works">
+            <field name="name">ختم في أربع سنوات</field>
+            <field name="active" eval="True"/>
+            <field name="type_episode_id" ref="episode_type2"/>
+            <field name="memorize" eval="True"/>
+            <field name="minimum_audit" eval="True"/>
+            <field name="maximum_audit" eval="True"/>
+            <field name="reading" eval="True"/>
+        </record>
+        <record id="mk_epsoide_works8" model="mk.epsoide.works">
+            <field name="name">مراجعة أجزاء</field>
+            <field name="active" eval="True"/>
+            <field name="type_episode_id" ref="episode_type2"/>
+            <field name="memorize" eval="True"/>
+            <field name="minimum_audit" eval="True"/>
+            <field name="maximum_audit" eval="True"/>
+            <field name="reading" eval="True"/>
+        </record>
+        <record id="mk_epsoide_works9" model="mk.epsoide.works">
+            <field name="name">مراجعة خاتمات</field>
+            <field name="active" eval="True"/>
+            <field name="type_episode_id" ref="episode_type2"/>
+            <field name="memorize" eval="True"/>
+            <field name="minimum_audit" eval="True"/>
+            <field name="maximum_audit" eval="True"/>
+            <field name="reading" eval="True"/>
+        </record>
+        <record id="mk_epsoide_works10" model="mk.epsoide.works">
+            <field name="name">حلقات زائدة</field>
+            <field name="active" eval="True"/>
+            <field name="type_episode_id" ref="episode_type2"/>
+            <field name="memorize" eval="True"/>
+            <field name="minimum_audit" eval="True"/>
+            <field name="maximum_audit" eval="True"/>
+            <field name="reading" eval="True"/>
+        </record>
+        <record id="mk_epsoide_works11" model="mk.epsoide.works">
+            <field name="name">حلقة جامعي مبتدئ</field>
+            <field name="active" eval="True"/>
+            <field name="type_episode_id" ref="episode_type2"/>
+            <field name="memorize" eval="True"/>
+            <field name="minimum_audit" eval="True"/>
+            <field name="maximum_audit" eval="True"/>
+            <field name="reading" eval="True"/>
+        </record>
+        <record id="mk_epsoide_works12" model="mk.epsoide.works">
+            <field name="name">حلقة جامعي متقدم</field>
+            <field name="active" eval="True"/>
+            <field name="type_episode_id" ref="episode_type2"/>
+            <field name="memorize" eval="True"/>
+            <field name="minimum_audit" eval="True"/>
+            <field name="maximum_audit" eval="True"/>
+            <field name="reading" eval="True"/>
+        </record>
+        <record id="mk_epsoide_works13" model="mk.epsoide.works">
+            <field name="name">حلقات معين</field>
+            <field name="active" eval="True"/>
+            <field name="type_episode_id" ref="episode_type2"/>
+            <field name="memorize" eval="True"/>
+            <field name="minimum_audit" eval="True"/>
+            <field name="maximum_audit" eval="True"/>
+            <field name="reading" eval="True"/>
+        </record>
+        <record id="mk_epsoide_works14" model="mk.epsoide.works">
+            <field name="name">حلقات إتمام</field>
+            <field name="active" eval="True"/>
+            <field name="type_episode_id" ref="episode_type2"/>
+            <field name="memorize" eval="True"/>
+            <field name="minimum_audit" eval="True"/>
+            <field name="maximum_audit" eval="True"/>
+            <field name="reading" eval="True"/>
+        </record>
+        <record id="mk_epsoide_works15" model="mk.epsoide.works">
+            <field name="name">تلقين (مستوى مبتدئ)</field>
+            <field name="active" eval="True"/>
+            <field name="type_episode_id" ref="episode_type2"/>
+            <field name="memorize" eval="True"/>
+            <field name="minimum_audit" eval="True"/>
+            <field name="maximum_audit" eval="True"/>
+            <field name="reading" eval="True"/>
+        </record>
+        <record id="mk_epsoide_works16" model="mk.epsoide.works">
+            <field name="name">تلقين (مستوى متقدم)</field>
+            <field name="active" eval="True"/>
+            <field name="type_episode_id" ref="episode_type2"/>
+            <field name="memorize" eval="True"/>
+            <field name="minimum_audit" eval="True"/>
+            <field name="maximum_audit" eval="True"/>
+            <field name="reading" eval="True"/>
+        </record>
+        <record id="mk_epsoide_works17" model="mk.epsoide.works">
+            <field name="name">حلقات يوم في أسبوع</field>
+            <field name="active" eval="True"/>
+            <field name="type_episode_id" ref="episode_type2"/>
+            <field name="memorize" eval="True"/>
+            <field name="minimum_audit" eval="True"/>
+            <field name="maximum_audit" eval="True"/>
+            <field name="reading" eval="True"/>
+        </record>
+        <record id="mk_epsoide_works18" model="mk.epsoide.works">
+            <field name="name">حلقة إبتدائي</field>
+            <field name="active" eval="True"/>
+            <field name="type_episode_id" ref="episode_type2"/>
+            <field name="memorize" eval="True"/>
+            <field name="minimum_audit" eval="True"/>
+            <field name="maximum_audit" eval="True"/>
+            <field name="reading" eval="True"/>
+        </record>
+        <record id="mk_epsoide_works19" model="mk.epsoide.works">
+            <field name="name">حلقة متوسط</field>
+            <field name="active" eval="True"/>
+            <field name="type_episode_id" ref="episode_type2"/>
+            <field name="memorize" eval="True"/>
+            <field name="minimum_audit" eval="True"/>
+            <field name="maximum_audit" eval="True"/>
+            <field name="reading" eval="True"/>
+        </record>
+        <record id="mk_epsoide_works20" model="mk.epsoide.works">
+            <field name="name">حلقة ثانوي</field>
+            <field name="active" eval="True"/>
+            <field name="type_episode_id" ref="episode_type2"/>
+            <field name="memorize" eval="True"/>
+            <field name="minimum_audit" eval="True"/>
+            <field name="maximum_audit" eval="True"/>
+            <field name="reading" eval="True"/>
+        </record>
+        <record id="mk_epsoide_works21" model="mk.epsoide.works">
+            <field name="name">حلقة ناشئة (متوسط-ثانوي)</field>
+            <field name="active" eval="True"/>
+            <field name="type_episode_id" ref="episode_type2"/>
+            <field name="memorize" eval="True"/>
+            <field name="minimum_audit" eval="True"/>
+            <field name="maximum_audit" eval="True"/>
+            <field name="reading" eval="True"/>
+        </record>
+        <record id="mk_epsoide_works22" model="mk.epsoide.works">
+            <field name="name">الرياحين</field>
+            <field name="active" eval="True"/>
+            <field name="type_episode_id" ref="episode_type2"/>
+            <field name="memorize" eval="True"/>
+            <field name="minimum_audit" eval="True"/>
+            <field name="maximum_audit" eval="True"/>
+            <field name="reading" eval="True"/>
+        </record>
+
+
+        <record id="mk_epsoide_works23" model="mk.epsoide.works">
+            <field name="name">تصحيح تلاوة</field>
+            <field name="active" eval="True"/>
+            <field name="type_episode_id" ref="episode_type3"/>
+            <field name="memorize" eval="True"/>
+            <field name="minimum_audit" eval="True"/>
+            <field name="maximum_audit" eval="True"/>
+            <field name="reading" eval="True"/>
+        </record>
+        <record id="mk_epsoide_works24" model="mk.epsoide.works">
+            <field name="name">عرض القران (ختمتي)</field>
+            <field name="active" eval="True"/>
+            <field name="type_episode_id" ref="episode_type3"/>
+            <field name="memorize" eval="True"/>
+            <field name="minimum_audit" eval="True"/>
+            <field name="maximum_audit" eval="True"/>
+            <field name="reading" eval="True"/>
+        </record>
+
+
+        <record id="mk_epsoide_works25" model="mk.epsoide.works">
+            <field name="name">أصول قراءات</field>
+            <field name="active" eval="True"/>
+            <field name="type_episode_id" ref="episode_type4"/>
+            <field name="memorize" eval="True"/>
+            <field name="minimum_audit" eval="True"/>
+            <field name="maximum_audit" eval="True"/>
+            <field name="reading" eval="True"/>
+        </record>
+        <record id="mk_epsoide_works26" model="mk.epsoide.works">
+            <field name="name">اجازات</field>
+            <field name="active" eval="True"/>
+            <field name="type_episode_id" ref="episode_type4"/>
+            <field name="memorize" eval="True"/>
+            <field name="minimum_audit" eval="True"/>
+            <field name="maximum_audit" eval="True"/>
+            <field name="reading" eval="True"/>
+        </record>
+
+    </data>
+</odoo>

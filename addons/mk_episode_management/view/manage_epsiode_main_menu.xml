@@ -1,0 +1,22 @@
+<odoo>
+	<data>
+
+    	<!--======================================================
+    	                         Episode Master
+    	    ====================================================== -->
+    	    
+        <record id="mk_episode_master_action" model="ir.actions.act_window">
+            <field name="name">Episode setting </field>
+            <field name="res_model">mk.episode.master</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="binding_view_types">form</field>
+            <field name="view_mode">kanban,tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{'search_default_ep_active':1}</field>
+            <field name="search_view_id" ref="mk_episode_search_master_view"/>
+        </record> 
+
+    	<menuitem id="mk_episode_master_menu" name="Episode setting" parent="mk_episode_management_menu_title" sequence="0" action="mk_episode_master_action" groups="episode_creation,edit_or_modify_episode,read_episode,accept_deny_inactivate,students_activate,students_placement_to_episode,episode_settings"/>
+    	
+	</data>
+</odoo>

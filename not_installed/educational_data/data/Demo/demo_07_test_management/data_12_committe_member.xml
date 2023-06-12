@@ -1,0 +1,24 @@
+<odoo>
+	<data noupdate="1">
+		<record model="committe.member" id="committe_member7">
+			<field name="committe_id" ref="committee_tests4"/>
+			<field name="center_id" ref="mk_test_center_prepration4"/>
+			<field name="main_member">0</field>
+			<field name="member_id" ref="hr_employee12"/>
+		</record>
+
+		<record model="committe.member" id="committe_member8">
+			<field name="committe_id" ref="committee_tests4"/>
+			<field name="center_id" ref="mk_test_center_prepration4"/>
+			<field name="main_member">1</field>
+			<field name="member_id" ref="hr_employee9"/>
+		</record>
+
+		<record model="committe.member" id="committe_member9">
+			<field name="committe_id" ref="committee_tests4"/>
+			<field name="center_id" ref="mk_test_center_prepration4"/>
+			<field name="main_member">0</field>
+			<field name="member_id" ref="hr_employee14"/>
+		</record>
+	</data>  
+</odoo>

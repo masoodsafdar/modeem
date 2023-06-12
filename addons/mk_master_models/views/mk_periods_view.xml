@@ -1,0 +1,95 @@
+<odoo>
+    <data>
+
+        <record id="mk_periods_form_view" model="ir.ui.view">
+            <field name="name">PeriodsForm View</field>
+            <field name="model">mk.periods</field>
+            <field name="arch" type="xml">
+                <form string="Periods" create="false">
+                    <header>
+
+                    </header>
+                    <sheet>
+                        <group>
+                            <field name="company_id" required="1" options="{'no_open':1,'no_create':1}"
+                                   string="الجمعية"/>
+                            <field name="name" invisible="1"/>
+                        </group>
+                        <group col="6" colspan="2">
+                            <group>
+                                <field name="subh_period"/>
+                                <field name="zuhr_period"/>
+                                <field name="aasr_period"/>
+                                <field name="magrib_period"/>
+                                <field name="esha_period"/>
+                            </group>
+                            <group>
+                                <field name="subh_period_from" widget="float_time"
+                                       attrs="{'readonly':[('subh_period','!=',True)],'required':[('subh_period','=',True)]}"/>
+                                <field name="zuhr_period_from" widget="float_time"
+                                       attrs="{'readonly':[('zuhr_period','!=',True)],'required':[('zuhr_period','=',True)]}"/>
+                                <field name="aasr_period_from" widget="float_time"
+                                       attrs="{'readonly':[('aasr_period','!=',True)],'required':[('aasr_period','=',True)]}"/>
+                                <field name="magrib_period_from" widget="float_time"
+                                       attrs="{'readonly':[('magrib_period','!=',True)],'required':[('magrib_period','=',True)]}"/>
+                                <field name="esha_period_from" widget="float_time"
+                                       attrs="{'readonly':[('esha_period','!=',True)],'required':[('esha_period','=',True)]}"/>
+                            </group>
+                            <group>
+                                <field name="subh_period_to" widget="float_time"
+                                       attrs="{'readonly':[('subh_period','!=',True)],'required':[('subh_period','=',True)]}"/>
+                                <field name="zuhr_period_to" widget="float_time"
+                                       attrs="{'readonly':[('zuhr_period','!=',True)],'required':[('zuhr_period','=',True)]}"/>
+                                <field name="aasr_period_to" widget="float_time"
+                                       attrs="{'readonly':[('aasr_period','!=',True)],'required':[('aasr_period','=',True)]}"/>
+                                <field name="magrib_period_to" widget="float_time"
+                                       attrs="{'readonly':[('magrib_period','!=',True)],'required':[('magrib_period','=',True)]}"/>
+                                <field name="esha_period_to" widget="float_time"
+                                       attrs="{'readonly':[('esha_period','!=',True)],'required':[('esha_period','=',True)]}"/>
+                            </group>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="mk_periods_tree_view" model="ir.ui.view">
+            <field name="name">PeriodsTree View</field>
+            <field name="model">mk.periods</field>
+            <field name="arch" type="xml">
+                <tree delete="0" string="Periods" create="false">
+                    <field name="company_id" required="1" options="{'no_open':1,'no_create':1}"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="mk_periods_search_view" model="ir.ui.view">
+            <field name="name">PeriodsSearch View</field>
+            <field name="model">mk.periods</field>
+            <field name="arch" type="xml">
+                <search string="Periods">
+
+                </search>
+            </field>
+        </record>
+
+        <record id="mk_periods_action" model="ir.actions.act_window">
+            <field name="name">Periods</field>
+            <field name="res_model">mk.periods</field>
+            <field name="type">ir.actions.act_window</field>
+            <!-- <field name="view_type">form</field> -->
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+            <field name="search_view_id" ref="mk_periods_search_view"/>
+        </record>
+
+        <menuitem name="Periods" id="mk_periods_menu" sequence="5" parent="mk_associate_management_settings_menu"
+                  action="mk_periods_action"/>
+
+    </data>
+</odoo>

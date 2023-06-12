@@ -1,0 +1,2 @@
+id,femail,name,program_purpose,code,company_id/id,center_department_id/id,mosque_id/id,is_previous_program,reading,memorize,mail,minimum_audit,maximum_audit,is_required,active,is_change,is_share
+mk_programs_1,True,برنامج1,memorize_quran,pr1,base.main_company,data_security.dep_103,data_security.5404,False,True,True,True,True,True,True,True,True,True

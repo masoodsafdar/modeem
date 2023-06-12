@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record id="vehicle_records_form_view" model="ir.ui.view">
+			<field name= "name">mk.transport.management records form</field>
+			<field name= "model">vehicle.records</field>
+			<field name= "arch"  type="xml"> 
+				<form string="vehicle records">
+					<sheet>
+						<group>
+							<group>
+				       	  	 	<field name="Vehicle_Type"  required="1"/>
+								<field name="model"         required="1"/>
+								<field name="insurance"     required="1"/>
+								<field name="superviser_id" required="1" options="{'no_create': True,'no_open': True,}"/>
+								<field name="no_of_seats"   required="1" attrs="{'readonly': [('vehicle_created', '=', True)]}"/>
+								<field name="center_id"     required="1" domain="[('level_type','=','c')]" options="{'no_create': True,'no_open': True,}"/>
+								<field name="Property"      required="1"/>
+								<field name="work_days"     required="1" attrs="{'readonly': [('vehicle_created', '=', True)]}" widget="many2many_tags"
+								                                         options="{'no_create': True,'no_open': True,}"/>
+							</group>
+							<group >
+				       	  	 	<field name="vehicle_created"    invisible="1"/>
+				       	  	 	<field name="serial_no"          required="1"/>
+								<field name="form_exp_date"      required="1"/>
+								<field name="insurance_exp_date" required="1"/>
+								<field name="mosque"             required="1" domain="[('center_department_id','=',center_id),
+								                                                       ('center_department_id','!=',False)]"/>
+								<field name="responsible"        required="1"/>
+								<field name="driver"             required="1"/>
+								<field name="rent_info"/>
+							</group>
+						</group>
+						
+						<group>
+							<group string="الفترات" colspan="4">			          
+								<field name="work_period_subh"   attrs="{'readonly': [('vehicle_created', '=', True)], 'required':1}"/> 
+								<field name="work_period_zuhr"   attrs="{'readonly': [('vehicle_created', '=', True)], 'required':1}"/> 
+								<field name="work_period_aasr"   attrs="{'readonly': [('vehicle_created', '=', True)], 'required':1}"/> 
+								<field name="work_period_magrib" attrs="{'readonly': [('vehicle_created', '=', True)], 'required':1}"/> 
+								<field name="work_period_esha"   attrs="{'readonly': [('vehicle_created', '=', True)], 'required':1}"/> 
+			           		</group>
+							<group>
+			           		</group>
+			       		</group>			       	  	
+                    </sheet>
+                </form>
+			</field>
+		</record>
+
+		<record id="vehicle_records_tree_view" model="ir.ui.view">
+			<field name= "name">vehicle records tree</field>
+			<field name= "model">vehicle.records</field>
+			<field name= "arch"  type="xml"> 
+				<tree>
+		      		<field name="Vehicle_Type"/>
+		      		<field name="driver"/>
+		      	</tree>
+		   	</field>
+		</record>
+
+		<record id="vehicle_records_action" model="ir.actions.act_window">
+			<field name="name">vehicle records</field>
+			<field name="res_model">vehicle.records</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+	    </record>
+
+	    <menuitem id="vehicle_records_menu" name="Vechil Record" action="vehicle_records_action" parent="transport_config_menu" sequence="1"/>
+    </data>
+</odoo>

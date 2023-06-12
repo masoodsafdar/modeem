@@ -1,0 +1,21 @@
+<odoo>
+    <template id="renew_episode_openning_permition_reprt">
+      <t t-foreach="docs" t-as="o">
+        <t t-call="web.external_layout">
+          <div class="oe_structure"/>
+          <div class="row mt32 mb32">
+            <div class="page">
+                <p class="text-right" style="font-size:20px;">
+                  <br> ...الحمدلله والصلاة والسلام على رسول الله </br>
+                   <br>:أما بعد</br>
+                   <br> فإن (<span t-field="o.center_department_id"/>)  التابع لجمعية مكنون لتحفيظ القرآن الكريم في منطقة الرياض </br>
+                  <br>وبناء على الصلاحية المخولة له قررت تجديد التصريح رقم (<span t-field="o.attach_no"/>)</br>
+                  <br> لمسجد/لمدرسة: (<span t-field="o.name"/>) لتحفيظ القرآن الكريم بحي (<span t-field="o.district_id"/>)</br>
+                  <h5 class="text-center" style="font-size:20px;">,,,هذا ونسأل الله التوفيق والإعانة والسداد</h5>
+                </p>
+           </div>
+        </div>
+      </t>
+    </t>
+  </template>
+</odoo>

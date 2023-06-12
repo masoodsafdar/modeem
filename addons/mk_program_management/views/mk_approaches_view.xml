@@ -1,0 +1,324 @@
+<odoo>
+	<data>
+
+        <record id="mk_approaches_tree_view" model="ir.ui.view">
+            <field name="name">Approaches Configuration Tree View</field>
+            <field name="model">mk.approaches</field>
+            <field name="arch" type="xml">
+                <tree delete="0" string="Approaches Configuration" colors="red:state=='draft';blue:state=='active'">
+                	<field name="company_id" invisible="1" options="{'no_open':1,'no_create':1}"/>
+            		<field name="name"/>
+            		<field name="program_id"               options="{'no_open':1,'no_create':1}"/>
+					<field name="program_type"/>
+					<field name="subject_id" invisible="1" options="{'no_open':1,'no_create':1}"/>
+					<field name="is_test"    invisible="1"/>
+	 				<field name="state"/>
+                </tree>
+            </field>
+        </record>
+            
+ 		<record id="mk_approaches_form_view" model="ir.ui.view">
+        	<field name="name">Approaches Configuration Form View</field>
+          	<field name="model">mk.approaches</field>
+          	<field name="arch" type="xml">
+            	<form string = "Approaches Configuration">
+		  			<!--header>
+						<button name="act_draft" string="Set to Draft" type="object" states="active" class="oe_highlight"/>
+						<button name="act_active" string="Set to Active" type="object" states="draft" class="oe_highlight"/>
+						<field name="state" widget="statusbar" statusbar_visible="draft,active"/>
+		  			</header-->
+		  			<sheet>
+						<div class="oe_button_box" name="button_box">
+                            <button name="toggle_active" type="object" class="oe_stat_button" icon="fa-archive">
+                                <field name="active" widget="boolean_button" options='{"terminology": "archive"}'/>
+                            </button>
+						</div>
+		    			<group>
+		  					<group colspan="2" col="6">
+			  					<field name="company_id"                                             options="{'no_open':1,'no_create':1}" invisible="1"/>
+		 						<field name="center_department_id" domain="[('level_type','=','c')]" options="{'no_open':1,'no_create':1}" invisible="1"/>
+		 						<field name="mosque_id"            domain="[('center_department_id','=',center_department_id),
+		 		                                            				('center_department_id','!=',False)]" invisible="1"/>
+	 						</group>
+	 	      			</group>
+
+	 	      			<group>
+	 	      				<group col="2" colspan="4">
+			  					<field name="program_id" domain="[('state','=','active'),
+			  					                                  ('program_type','=',program_type)]" required="1"       options="{'no_create_edit': True, 'no_create':True}"/>
+			  					<field name="program_type" readonly="1"/>
+			  				</group>
+							<field name="subject_id" required="0" domain="[('type_method','=','subject')]" invisible="1" options="{'no_create': True,'no_open': True,}"/>
+							<field name="is_test"         invisible="1"/>
+							<field name="program_purpose" invisible="1"/>
+	          			</group>
+
+		      			<group>
+		 					<field name="name" required="1"/>
+	 	      			</group>
+
+	 	      			<group string="Program info" attrs="{'invisible':[('program_id','=',False)]}">
+	 	      				<group string="Program info">
+	 	      					<line>
+			 						<label for="minimum_audit"/>
+			 						<field name="minimum_audit" readonly="1"/>
+
+			 						<label for="maximum_audit" />
+			 						<field name="maximum_audit" readonly="1"/>
+
+			 						<label for="reading"/>
+				 					<field name="reading" readonly="1"/>
+
+									<label for="memorize"/>
+									<field name="memorize" readonly="1"/>
+			 					</line>
+							</group>
+			 				<br></br>
+			 				<group>
+			 				</group>
+			 			</group>
+
+	              		<notebook>
+		              		<page string="Configurations">
+		              			<group colspan="2" col="4">
+									<field name="age_category_ids" widget="many2many_checkboxes" options="{'no_open':1,'no_create':1}"/>
+									<field name="job_ids"          widget="many2many_tags"       options="{'no_open':1,'no_create':1}"/>
+									<field name="stage_ids"        widget="many2many_tags"       options="{'no_create': True, 'no_open':True}"/>
+									<field name="active"/>
+					  			</group>
+		              		</page>
+
+		              		<page string="Degrees">
+			      				<group colspan="2" col="8" string="الحضور">
+			      					<field name="preparation_degree"        string="درجة الحضور"/>
+									<field name="late_deduct"               string="الخصم على التأخير"/>
+									<field name="excused_absence_deduct"    string="الخصم على الغياب بعذر"/>
+									<field name="no_excused_absence_deduct" string="الخصم على الغياب بدون عذر"/>
+					  			</group>
+					  			<group colspan="2" col="8" string="السلوك">
+ 									<group colspan="2" col="2">
+ 										<field name="behavior_degree"/>
+ 									</group>
+ 									<group colspan="2" col="6">
+ 									</group>
+					  			</group>
+		              		</page>
+
+							<page string="المسارات">
+								<field name="path_ids" readonly="1">
+									<tree>
+										<field name="name"/>
+									</tree>
+								</field>
+							</page>
+		              	
+		              		<page string="Lessons setting">
+		              			<group colspan="4" col="8">
+									<label string=""/>
+									<label for="lessons_minimum_audit"   string="Lessons"/>
+									<label for="quantity_minimum_audit"  string="Quantity"/>
+									<label for="deduct_qty_small_review" string="مقدار الخصم"/>
+									<label for="memorize_minimum_audit"  string="درجة جودة الحفظ"/>
+									<label for="deduct_memor_sml_review" string="مقدار الخصم"/>
+									<label for="mastering_minimum_audit" string="درجة التجويد"/>
+									<label for="deduct_tjwd_sml_review"  string="مقدار الخصم"/>
+
+									<label string="Minimum Audit" attrs="{'invisible':[('minimum_audit','=',False)]}"/>
+									<field name="lessons_minimum_audit"   nolabel="1" attrs="{'invisible':[('minimum_audit','=',False)]}"/>
+									<field name="quantity_minimum_audit"  nolabel="1" attrs="{'invisible':[('minimum_audit','=',False)]}"/>
+									<field name="deduct_qty_small_review" nolabel="1" attrs="{'invisible':[('minimum_audit','=',False)]}"/>
+									<field name="memorize_minimum_audit"  nolabel="1" attrs="{'invisible':[('minimum_audit','=',False)]}"/>
+									<field name="deduct_memor_sml_review" nolabel="1" attrs="{'invisible':[('minimum_audit','=',False)]}"/>
+									<field name="mastering_minimum_audit" nolabel="1" attrs="{'invisible':[('minimum_audit','=',False)]}"/>
+									<field name="deduct_tjwd_sml_review"  nolabel="1" attrs="{'invisible':[('minimum_audit','=',False)]}"/>
+
+									<label string="Maximum Audit" attrs="{'invisible':[('maximum_audit','=',False)]}"/>
+									<field name="lessons_maximum_audit"   nolabel="1" attrs="{'invisible':[('maximum_audit','=',False)]}"/>
+									<field name="quantity_maximum_audit"  nolabel="1" attrs="{'invisible':[('maximum_audit','=',False)]}"/>
+									<field name="deduct_qty_big_review"   nolabel="1" attrs="{'invisible':[('maximum_audit','=',False)]}"/>
+									<field name="memorize_maximum_audit"  nolabel="1" attrs="{'invisible':[('maximum_audit','=',False)]}"/>
+									<field name="deduct_memor_big_review" nolabel="1" attrs="{'invisible':[('maximum_audit','=',False)]}"/>
+									<field name="mastering_maximum_audit" nolabel="1" attrs="{'invisible':[('maximum_audit','=',False)]}"/>
+									<field name="deduct_tjwd_big_review"  nolabel="1" attrs="{'invisible':[('maximum_audit','=',False)]}"/>
+
+									<label string="Reading" attrs="{'invisible':[('reading','=',False)]}"/>
+									<field name="lessons_reading"      nolabel="1" attrs="{'invisible':[('reading','=',False)]}"/>
+									<field name="quantity_reading"     nolabel="1" attrs="{'invisible':[('reading','=',False)]}"/>
+									<field name="deduct_qty_reading"   nolabel="1" attrs="{'invisible':[('reading','=',False)]}"/>
+									<field name="memorize_reading"     nolabel="1" attrs="{'invisible':[('reading','=',False)]}"/>
+									<field name="deduct_memor_reading" nolabel="1" attrs="{'invisible':[('reading','=',False)]}"/>
+									<field name="mastering_reading"    nolabel="1" attrs="{'invisible':[('reading','=',False)]}"/>
+									<field name="deduct_tjwd_reading"  nolabel="1" attrs="{'invisible':[('reading','=',False)]}"/>
+
+									<label string="الحفظ" attrs="{'invisible':[('memorize','=',False)]}"/>
+									<field name="lessons_memorize"      nolabel="1" attrs="{'invisible':[('memorize','=',False)]}"/>
+									<field name="quantity_memorize"     nolabel="1" attrs="{'invisible':[('memorize','=',False)]}"/>
+									<field name="deduct_qty_memorize"   nolabel="1" attrs="{'invisible':[('memorize','=',False)]}"/>
+									<field name="memorize_degree"       nolabel="1" attrs="{'invisible':[('memorize','=',False)]}"/>
+									<field name="deduct_memor_memorize" nolabel="1" attrs="{'invisible':[('memorize','=',False)]}"/>
+									<field name="mastering_memorize"    nolabel="1" attrs="{'invisible':[('memorize','=',False)]}"/>
+									<field name="deduct_tjwd_memorize"  nolabel="1" attrs="{'invisible':[('memorize','=',False)]}"/>
+					  			</group>
+		              		</page>
+
+		              		<page string="القياس والتقييم">
+		              			<group colspan="4" col="5">
+									<label string=""/>
+									<label for="test_degree"       string="درجة الإختبار"/>
+									<label for="nbr_question_test" string="عدد الأسئلة"/>
+									<label for="qty_question_test" string="مقدار السؤال"/>
+									<label for="deduction_test"    string="مقدار الخصم"/>
+
+									<label string="الإختبارات الدورية"/>
+									<field name="test_degree"       nolabel="1"/>
+									<field name="nbr_question_test" nolabel="1"/>
+									<field name="qty_question_test" nolabel="1"/>
+									<field name="deduction_test"    nolabel="1"/>
+
+									<label string="الإختبارات الفصلية"/>
+									<field name="exam_degree"       nolabel="1"/>
+									<field name="nbr_question_exam" nolabel="1"/>
+									<field name="qty_question_exam" nolabel="1"/>
+									<field name="deduction_exam"    nolabel="1"/>
+								</group>
+		              		</page>
+
+							<page string="Parts" attrs="{'invisible':[('program_type','!=','open')]}">
+		              			<group>
+									<field name="part_ids" widget="many2many_tags" options="{'no_create': True,'no_open': True,}"/>
+								</group>
+		              		</page>
+
+							<page string="Surah" invisible="1">
+		      					<group colspan="2" col="4">
+									<field name="surah_ids" options="{'no_create': True,'no_open': True,}"/>
+								</group>
+		              		</page>
+
+		            		<page string="Listening" attrs="{'invisible':[('program_type','!=','close')]}">
+		            			<field name="listen_ids" context="{'default_type_follow':'listen'}">
+		            				<tree editable="bottom" >
+		            					<field name="order"/>
+		            					<field name="from_surah"  required="1" options="{'no_create':True,'no_open':True}"/>
+		            					<field name="from_aya"    required="1" options="{'no_create':True,'no_open':True}" domain="[('surah_id','=',from_surah)]"/>
+		            					<field name="to_surah"    required="1" options="{'no_create':True,'no_open':True}"/>
+		            					<field name="to_aya"      required="1" options="{'no_create':True,'no_open':True}" domain="[('surah_id','=',to_surah)]"/>
+		            					<field name="type_follow" required="1" invisible="1"/>
+									</tree>
+								</field>
+		            		</page>
+
+		            		<page string="Small Reviews" attrs="{'invisible':['|',('minimum_audit','=',False),('program_type','!=','close')]}">
+		            			<field name="small_reviews_ids" context="{'default_type_follow':'review_small'}" >
+		            				<tree editable="bottom" >
+		            					<field name="order"/>
+		            					<field name="from_surah"  required="1" options="{'no_create':True,'no_open':True}"/>
+		            					<field name="from_aya"    required="1" options="{'no_create':True,'no_open':True}" domain="[('surah_id','=',from_surah)]"/>
+		            					<field name="to_surah"    required="1" options="{'no_create':True,'no_open':True}"/>
+		            					<field name="to_aya"      required="1" options="{'no_create':True,'no_open':True}" domain="[('surah_id','=',to_surah)]"/>
+		            					<field name="type_follow" required="1" invisible="1"/>
+									</tree>
+								</field>
+		            		</page>
+
+		            		<page string="Big Reviews" attrs="{'invisible':['|',('maximum_audit','=',False),('program_type','!=','close')]}">
+		            			<field name="big_review_ids" context="{'default_type_follow':'review_big'}">
+		            				<tree editable="bottom" >
+		            					<field name="order"/>
+		            					<field name="from_surah"  required="1" options="{'no_create':True ,'no_open':True}"/>
+		            					<field name="from_aya"    required="1" options="{'no_create':True,'no_open':True}" domain="[('surah_id','=',from_surah)]"/>
+		            					<field name="to_surah"    required="1" options="{'no_create':True,'no_open':True}"/>
+		            					<field name="to_aya"      required="1" options="{'no_create':True,'no_open':True}" domain="[('surah_id','=',to_surah)]"/>
+		            					<field name="type_follow" required="1" invisible="1"/>
+									</tree>
+								</field>
+		            		</page>
+
+		            		<page string="Tlawa" attrs="{'invisible':['|',('reading','=',False),('program_type','!=','close')]}">
+		            			<field name="tlawa_ids" context="{'default_type_follow':'tlawa'}">
+		            				<tree editable="bottom" >
+		            					<field name="order"/>
+		            					<field name="from_surah"  required="1" options="{'no_create':True ,'no_open':True}"/>
+		            					<field name="from_aya"    required="1" options="{'no_create':True,'no_open':True}" domain="[('surah_id','=',from_surah)]"/>
+		            					<field name="to_surah"    required="1" options="{'no_create':True,'no_open':True}"/>
+		            					<field name="to_aya"      required="1" options="{'no_create':True,'no_open':True}" domain="[('surah_id','=',to_surah)]"/>
+		            					<field name="type_follow" required="1" invisible="1"/>
+									</tree>
+								</field>
+		            		</page>
+	              		</notebook>
+	  				</sheet>
+					<div class="oe_chatter">
+						<field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+						<field name="message_ids" widget="mail_thread"/>
+					</div>
+				</form>
+			</field>
+		</record>
+
+        <record id="mk_approaches_search_view" model="ir.ui.view">
+            <field name="name">Approaches Configuration Search View</field>
+            <field name="model">mk.approaches</field>
+            <field name="arch" type="xml">
+                <search string="Approaches Configuration">
+					 <field name="name"         string="Approaches Configuration"/>
+					 <field name="program_type" string="نوع البرنامج"/>
+					 <field name="program_id"   string="البرنامج"/>
+					 <field name="stage_ids"    string="المرحلة المستهدفة"/>
+					 <field name="job_ids"      string="الفئات المستهدفة"/>
+
+	                 <filter string="درجة الحفظ"  name="is_memorize"    domain="[('memorize', '=',True)]"/>
+	                 <filter string="Active"  name="active"    domain="[('active', '=',True)]"/>
+	                 <separator/>
+	                 <filter string="مراجعة صغرى" name="is_min_review"  domain="[('minimum_audit', '=',True)]"/>
+	                 <separator/>
+	                 <filter string="مراجعة كبرى" name="is_max_review"  domain="[('maximum_audit', '=',True)]"/>
+	                 <separator/>
+	                 <filter string="تلاوة"        name="is_reading"     domain="[('reading', '=',True)]"/>
+	                 <separator/>
+	                 <filter string="مبدئي"      name="is_draft"        domain="[('state', '=','draft')]"/>
+	                 <separator/>
+	                 <filter string="نشط"        name="is_active"       domain="[('reading', '=','active')]"/>
+	                 <separator/>
+                     <filter string="Un active"   name="un active"      domain="[('active','=',False)]"/>
+
+                      <group expand="0" string="Group By">
+		                     <filter name="program_type"  string="نوع البرنامج"  context="{'group_by': 'program_type'}"/>
+		                     <filter name="program_id"    string="البرنامج" 	 context="{'group_by': 'program_id'}"/>
+		                     <filter name="groupby_state" string="الحالة"         context="{'group_by':'state'}"/>
+		                     <filter name="active" string="Active"         context="{'group_by':'active'}"/>
+		             </group>
+                </search>
+            </field>
+        </record>
+        
+        <record id="open_mk_approaches_action" model="ir.actions.act_window">
+            <field name="name">المناهج المفتوحة</field>
+            <field name="res_model">mk.approaches</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('program_type','=','open')]</field>
+            <field name="context">{'default_program_type':'open'}</field>
+            <field name="search_view_id" ref="mk_approaches_search_view"/>
+        </record>
+
+<!--        <record id="close_mk_approaches_action" model="ir.actions.act_window">-->
+<!--            <field name="name">المناهج المحددة</field>-->
+<!--            <field name="res_model">mk.approaches</field>-->
+<!--            <field name="type">ir.actions.act_window</field>-->
+<!--            <field name="view_type">form</field>-->
+<!--            <field name="view_mode">tree,form</field>-->
+<!--            <field name="domain">[('program_type','=','close')]</field>-->
+<!--            <field name="context">{'default_program_type':'close'}</field>-->
+<!--            <field name="search_view_id" ref="mk_approaches_search_view"/>-->
+<!--        </record>-->
+
+		<menuitem name="إعدادات المناهج"               id="mk_approaches_configuration_menu" sequence="5" parent="mk_programs_main_menu" /> 
+  		<menuitem name="المناهج المفتوحة" id="mk_opened_approaches_menu"        sequence="5" parent="mk_approaches_configuration_menu" action="open_mk_approaches_action"/>
+		<!--groups="mk_program_management.read_curriculum_level,mk_program_management.create_an_open_curriculum_association_level,mk_program_management.update_curriculum_level,mk_program_management.delete"/> -->
+
+<!--		<menuitem name="المناهج المحددة" id="mk_closed_approaches_menu" sequence="5" parent="mk_approaches_configuration_menu" action="close_mk_approaches_action"/>-->
+		<!--groups="mk_program_management.read_curriculum_level_close,mk_program_management.create_an_close_curriculum_association_level,mk_program_management.update_curriculum_level_close,mk_program_management.delete_close"/>-->
+    </data>
+</odoo>

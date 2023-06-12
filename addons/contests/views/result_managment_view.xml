@@ -1,0 +1,90 @@
+<odoo>
+    <data>
+ 
+ 	<record id="result_managment_view_form_view" model="ir.ui.view">
+          <field name="name">result managment form view</field>
+          <field name="model">result.managment</field>
+          <field name="arch" type="xml">
+          <form string = "result managment">
+				  <header>
+					<!--<field name="state" widget="statusbar" statusbar_visible="draft,active"/>
+					<button name="act_draft" string="Set to Draft" type="object" states="active" class="oe_highlight"/>
+					<button name="act_active" string="Set to Active" type="object" states="draft" class="oe_highlight"/>
+					-->
+				  </header>
+				  <sheet>
+				    <group>
+					  	<group colspan="3" col="4">
+					  		<field name="date"/>
+					  		<field name="contest"/>
+					  	</group>
+				    </group>
+
+					    <notebook>
+							<page string="Results">
+								<field name="result_ids">
+									<tree editable="top">
+										<field name="student" />
+										<field name="student_phone" />
+										<field name="center" />
+										<field name="mosque_id" />
+										<field name="test_type" />
+										<field name="test_branches" />
+										<field name="degree" />
+										<field name="order" />
+										<field name="nomination_request" invisible="1" />
+									</tree>
+								</field>
+								<group>
+									<!--<field name="notify" /> -->
+								</group>
+							</page>
+						</notebook>
+			  	  </sheet>
+          </form>
+          </field>
+    </record>
+
+        <record id="result_managment_view_tree_view" model="ir.ui.view">
+            <field name="name">result managment Tree View</field>
+            <field name="model">result.managment</field>
+            <field name="arch" type="xml">
+                <tree delete="0" string="result managment" colors="red:state=='draft';blue:state=='accept'">
+			  		<field name="date"/>
+			  		<field name="contest"/>
+				</tree>
+            </field>
+        </record>
+        
+        <record id="result_managment_search_view" model="ir.ui.view">
+            <field name="name">result managment Search View</field>
+            <field name="model">result.managment</field>
+            <field name="arch" type="xml">
+                <search> 
+                	<field name="contest"/>
+                	
+                	<group expand="0" string="Group By">
+	                    <filter name="contest"           string="المسابقة"      context="{'group_by': 'contest'}"/>  
+                	</group>
+                </search>
+            </field>
+        </record>
+        
+        <record id="result_managment_view_action" model="ir.actions.act_window">
+            <field name="name">result managment programs</field>
+            <field name="res_model">result.managment</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem
+              id="result_managment_view_menu"
+              name="result managment"
+              action="result_managment_view_action"
+              parent="contests"
+              sequence="0"
+              groups="read_result_management_group"/>	
+
+    </data>  
+</odoo>

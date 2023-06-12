@@ -1,0 +1,27 @@
+    @font-face {
+
+            font-family: Neo Sans Arabic;
+
+            src: url('/mk_intensive_courses/static/src/AL-Mohanad Bold.ttf') format('opentype');
+
+            src: url('/mk_intensive_courses/static/src/NeoSansArabic.ttf') format('opentype');
+
+     }
+      table {
+                            border-collapse: collapse;
+
+                            }
+
+                        table{
+                             border: 1px solid black;
+                            }
+                        td{
+                            border: 1px solid black;
+                            padding: 5px 5px 5px 5px;
+                        }
+                        th{
+                            border: 1px solid black;
+                            padding: 5px 5px 5px 5px;
+                        }
+
+

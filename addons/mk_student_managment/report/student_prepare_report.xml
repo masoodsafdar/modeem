@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<odoo>
+  <data>
+    <report id="student_prepare_report"
+    string="تقرير تحضير الطالب"
+    model="student.prepare.report"
+    report_type="qweb-pdf"
+    file="تقرير تحضير الطالب"
+    name="mk_student_managment.student_prepare_report_template" 
+    />
+  </data>
+</odoo>    

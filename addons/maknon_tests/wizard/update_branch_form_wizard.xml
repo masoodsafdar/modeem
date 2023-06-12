@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <record id="branch_form_wizard" model="ir.ui.view">
+            <field name="name">branch form </field>
+            <field name="model">update.branch.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Update branch">
+                    <sheet>
+                        <group>
+                            <field name='branch' options="{'no_open':1,'no_create':1}"/>
+                            <field name='session_id' invisible="1"/>
+                        </group>
+                    </sheet>
+                    <footer>
+                        <button name="update_branch_action" type="object" string="تأكيد" class="oe_highlight"/>
+                        <button string="إلغاء" class="oe_link" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,15 @@
+<odoo>
+    <data >
+        <record id="mk_study_year1" model="mk.study.year">
+            <field name="name">العام الدراسي 1442 هـ</field>
+            <field name="order">1</field>
+            <field name="fiscal_year">2020/2021</field>
+            <field name="start_date">2020-08-30</field>
+            <field name="islamic_start_date">2020-08-30</field>
+            <field name="end_date">2021-08-08</field>
+            <field name="islamic_end_date">2021-08-08</field>
+            <field name="active" eval="True"/>
+            <field name="is_default" eval="True"/>
+        </record>
+    </data>
+</odoo>

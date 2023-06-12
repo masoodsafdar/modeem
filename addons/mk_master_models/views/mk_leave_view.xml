@@ -1,0 +1,55 @@
+<odoo>
+    <data>
+    
+ 	<record id="mk_leave_form_view" model="ir.ui.view">
+          <field name="name">Leave Form View</field>
+          <field name="model">mk.leave</field>
+          <field name="arch" type="xml">
+              <form string= "Leave">
+		  <header>
+		    
+		  </header>
+		  <sheet>
+			  <group>
+			  	<field name="name" required="1"/>
+			  </group>
+	  	</sheet>
+              </form>
+             </field>
+         </record>
+
+        <record id="mk_leave_tree_view" model="ir.ui.view">
+            <field name="name">Leave Tree View</field>
+            <field name="model">mk.leave</field>
+            <field name="arch" type="xml">
+                <tree delete="0" string="Leave" editable="Top">
+                	<field name="name" required="1"/>
+                </tree>
+            </field>
+        </record>
+        
+        <record id="mk_leave_search_view" model="ir.ui.view">
+            <field name="name">Leave Search View</field>
+            <field name="model">mk.leave</field>
+            <field name="arch" type="xml">
+                <search string="Leave">
+                    <field name="name" string="Leave" filter_domain="[('name','ilike', self)]"/>
+                </search>
+            </field>
+        </record>
+        
+        <record id="mk_leave_action" model="ir.actions.act_window">
+            <field name="name">Leave </field>
+            <field name="res_model">mk.leave</field>
+            <field name="type">ir.actions.act_window</field>
+            <!-- <field name="view_type">form</field> -->
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+            <field name="search_view_id" ref="mk_leave_search_view"/>
+        </record>
+
+	<!--<menuitem name="Leave" id="mk_leave_menu" sequence="5" parent="mk_master_menu" action="mk_leave_action"/>-->
+
+    </data>  
+</odoo>

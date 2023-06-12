@@ -1,0 +1,46 @@
+<odoo>
+    <data noupdate="1">
+        <record id="mk_program1" model="mk.programs">
+            <field name="company_id" ref="base.main_company"/>
+            <field name="center_department_id" ref="mk_hr_department7"/>
+            <field name="mosque_id" ref="mk_mosque1"/>
+            <field name="name">برنامج ( حفظ ، مراجعة صغرى ، مراجعة كبرى, تلاوة )</field>
+            <field name="state">active</field>
+            <field name="memorize" eval="True"/>
+            <field name="mail" eval="True"/>
+            <field name="femail" eval="True"/>
+            <field name="experience_years">3</field>
+            <field name="minimum_audit" eval="True"/>
+            <field name="maximum_audit" eval="True"/>
+            <field name="reading" eval="True"/>
+            <field name="is_previous_program" eval="False"/>
+            <field name="is_required" eval="True"/>
+            <field name="program_type">open</field>
+            <field name="recruitment_ids" eval="[(4, ref('hr_recruitment.degree_bachelor')),
+                                                 (4, ref('hr_recruitment.degree_licenced')),
+                                                 (4, ref('hr_recruitment.degree_bac5'))]"/>
+            <field name="specialization_ids" eval="[(4, ref('educational_data.mk_specializations1'))]"/>
+        </record>
+        <record id="mk_program2" model="mk.programs">
+            <field name="company_id" ref="base.main_company"/>
+            <field name="center_department_id" ref="mk_hr_department7"/>
+            <field name="mosque_id" ref="mk_mosque1"/>
+            <field name="name">اقرأ وارتق</field>
+            <field name="state">active</field>
+            <field name="memorize" eval="True"/>
+            <field name="mail" eval="True"/>
+            <field name="femail" eval="True"/>
+            <field name="experience_years">2</field>
+            <field name="minimum_audit" eval="False"/>
+            <field name="maximum_audit" eval="False"/>
+            <field name="reading" eval="False"/>
+            <field name="is_previous_program" eval="False"/>
+            <field name="is_required" eval="True"/>
+            <field name="program_type">close</field>
+            <field name="recruitment_ids" eval="[(4, ref('hr_recruitment.degree_bachelor')),
+                                                 (4, ref('hr_recruitment.degree_licenced')),
+                                                 (4, ref('hr_recruitment.degree_bac5'))]"/>
+            <field name="specialization_ids" eval="[(4, ref('educational_data.mk_specializations1'))]"/>
+        </record>
+    </data>
+</odoo>

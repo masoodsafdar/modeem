@@ -1,0 +1,34 @@
+<odoo>
+    <data noupdate="1">
+        <record id="website_support_ticket_subcategory1" model="website.support.ticket.subcategory">
+            <field name="name">عدم القدرة على الدخول/ التسجيل في النظام</field>
+            <field name="parent_category_id" ref="website_support.website_support_tech_support"/>
+        </record>
+        <record id="website_support_ticket_subcategory2" model="website.support.ticket.subcategory">
+            <field name="name">ادارة الموظفين</field>
+            <field name="parent_category_id" ref="website_support.website_support_tech_support"/>
+        </record>
+        <record id="website_support_ticket_subcategory3" model="website.support.ticket.subcategory">
+            <field name="name">شكاوي ومقترحات</field>
+            <field name="parent_category_id" ref="website_support.website_support_tech_support"/>
+        </record>
+        <record id="website_support_ticket_subcategory4" model="website.support.ticket.subcategory">
+            <field name="name">"ادارة المساجد/
+                المدارس"
+            </field>
+            <field name="parent_category_id" ref="website_support.website_support_tech_support"/>
+        </record>
+        <record id="website_support_ticket_subcategory5" model="website.support.ticket.subcategory">
+            <field name="name">ادارة الطلاب</field>
+            <field name="parent_category_id" ref="website_support.website_support_tech_support"/>
+        </record>
+        <record id="website_support_ticket_subcategory6" model="website.support.ticket.subcategory">
+            <field name="name">البرامج والمناهج</field>
+            <field name="parent_category_id" ref="website_support.website_support_tech_support"/>
+        </record>
+        <record id="website_support_ticket_subcategory7" model="website.support.ticket.subcategory">
+            <field name="name">ادارة الاختبارت</field>
+            <field name="parent_category_id" ref="website_support.website_support_tech_support"/>
+        </record>
+    </data>
+</odoo>

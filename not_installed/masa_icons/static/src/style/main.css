@@ -1,0 +1,457 @@
+.o_web_client .openerp .oe_appsbar .oe_apps .oe_app img {
+    width: 101px;
+    height: 92px;
+    border-radius: 6px;
+     box-shadow: 0 14px 28px rgba(0,0,0,0.25);
+
+}
+.navbar-inverse{
+
+background-image:url('/masa_icons/static/src/img/slidebar.png')!important;
+height:10%;
+background-color: #1b465e !important;
+}
+.o_web_client .openerp .oe_appsbar{
+       background: url(/masa_icons/static/src/img/bg_masa.jpg);
+    width: 100%;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+}
+.o_web_client .openerp .oe_appsbar .oe_apps .oe_app .oe_app_caption {
+    font-size: 1.3em;
+    color: #746d64;
+    font-weight: 700;
+
+    }
+	.o_web_client .openerp .oe_appsbar .oe_apps .oe_app .oe_app_caption:hover {
+
+    color: #28465a !important;
+
+
+    }
+
+.o_web_client > .o_main .o_main_content .o_control_panel {
+    background-color: #ffffff !important;
+        background: white !important;
+}
+.btn-primary {
+    color: #ffffff;
+    background-color: #325d79 !important;
+    border-color: #325d79;}
+
+    .btn-primary:hover{
+    background-color: #b18f6e !important;
+    }
+    .o_web_client .openerp .oe_appsbar .oe_apps .oe_app .oe_app_caption {
+    width: 100%;
+}
+.oe_app {
+    text-align: center;
+}
+.o_list_view thead {
+    background-color: #325d79 !important;
+    color: #ffff;
+}
+.navbar {
+    position: relative;
+    min-height: 64px;
+    margin-bottom: 3px;
+    border: 1px solid transparent;
+}
+.o_kanban_view .o_kanban_record, .o_kanban_view .o_kanban_quick_create {
+    padding: 8px 8px;
+    border: 1px solid #ffffff;
+    /* background-color: white; */
+}
+.oe_super {
+    border-radius: 5px !important;
+    border: 1px !important;
+    height: 49px !important;
+    width: 78px !important;
+    text-align: center !important;
+    float: left !important;
+   /* margin-left: 5px !important;*/
+    background-image: url(/masa_icons/static/src/img/icones/icone1.png) !important;
+    top: 13px;
+}
+
+   .oe_counter {
+    FONT-WEIGHT: 200;
+    margin-top: -87px !important;
+    left: 28px!important;
+    background: #274559 !important;
+    border-color: #ffffff !important;
+    border: 2px solid #ffffff !important;
+    color: white !important;
+    padding: 0em -27.7em !important;
+    font-size: 0.9em !important;
+    padding-top: -2px !important;
+    padding-right: 9px !important;
+    padding-bottom: 1px !important;
+    padding-left: 13px !important;
+    border-radius: 16px !important;
+    opacity: 0.8 !important;
+    float: right!important;
+    width: 8% !important;
+    float: right;
+    right: 44px;
+}
+.oe_supervisor{
+
+ border-radius: 5px !important;
+    border: 1px !important;
+    height: 92px !important;
+    width: 78px !important;
+    text-align: center !important;
+    float: left !important;
+   /* margin-left: 15px !important;*/
+    background-image: url(/masa_icons/static/src/img/icones/supervisor_icone.png) !important;
+    top: 13px;
+    background-repeat:no-repeat;
+
+}
+.oe_episodes {
+    border-radius: 5px !important;
+    border: 1px !important;
+    height: 49px !important;
+    width: 78px !important;
+    text-align: center !important;
+    float: left !important;
+   /* margin-left: 5px !important;*/
+    background: url(/masa_icons/static/src/img/icones/episode_icone.png) no-repeat center !important;
+    color: #1a4438 !important;
+}
+.oe_teacher {
+    border-radius: 5px !important;
+    border: 1px !important;
+    height: 49px !important;
+    width: 78px !important;
+    text-align: center !important;
+    float: left !important;
+   /* margin-left: 5px !important;*/
+    background: url(/masa_icons/static/src/img/icones/teacher_icone.png) no-repeat center !important;
+    color: #1a4438 !important;
+}
+@media (max-width: 767px){
+.oe_kanban_global_click.o_kanban_record{
+
+    max-width: 400px;
+
+}}
+@media (max-width: 767px){
+.o_kanban_view.o_kanban_ungrouped .o_kanban_record {
+    margin: 4px 8px !important;
+
+    }}
+    .mosque_info_text{
+    color:gray;
+    text-align:justify;
+
+
+    }
+    .oe_icone_all {
+    width: 60px !important;
+    margin: 5px;
+}
+.text_count{
+margin-right:-2px;
+
+}
+.oe_icon {
+    height: 82px;
+    width: 89px;}
+/*
+@media (min-width:360px)and(max-width:1366px){
+.oe_kanban_global_click .o_kanban_record{
+width:91%;
+height:95%;}}
+
+@media (device-height : 568px)
+   and (device-width : 320px)
+   and (-webkit-min-device-pixel-ratio: 2){
+.oe_kanban_details {
+    width: 80% !important;
+}
+}
+@media (device-height : 1024px)
+   and (device-width : 768px)
+   and (-webkit-min-device-pixel-ratio: 2){
+.oe_kanban_details {
+    width: 34% !important;
+}
+}
+@media (device-height : 1366px)
+   and (device-width : 1024px)
+   and (-webkit-min-device-pixel-ratio: 2){
+.oe_kanban_details {
+    width: 36% !important;
+}
+}
+@media (device-height : 653px)
+   and (device-width : 280px)
+   and (-webkit-min-device-pixel-ratio: 2){
+.oe_kanban_details {
+    width: 84% !important;
+}
+}
+@media (device-height : 653px)
+   and (device-width : 280px)
+   and (-webkit-min-device-pixel-ratio: 2){
+.oe_kanban_global_click .o_kanban_record {
+    width: 98% !important;
+}
+}
+@media (min-width:1337px) and (max-width:1377px){
+.oe_kanban_details {
+    width: 52% !important;
+}
+}
+@media (min-width:931px) and (max-width:1061px){
+.oe_kanban_details {
+    width: 45% !important;
+}
+}
+@media (min-width:274px) and (max-width:348px){
+.oe_kanban_details {
+    width: 61% !important;
+}
+}*/
+@media (device-height : 640px)
+   and (device-width : 360px)
+   and (-webkit-min-device-pixel-ratio: 2){
+.oe_kanban_details2 {
+    width: 74% !important;
+}
+}
+@media (device-height : 568px)
+   and (device-width : 320px)
+   and (-webkit-min-device-pixel-ratio: 2){
+.oe_kanban_global_click.o_kanban_record {
+    width: 95% !important;
+    height:298px !important;
+}
+.oe_icon.bg2_photo{
+margin-right: -69px !important;
+    margin-top: 66px !important;
+}
+}
+@media (device-height : 568px)
+   and (device-width : 320px)
+   and (-webkit-min-device-pixel-ratio: 2){
+.oe_kanban_details2{
+    margin-right: -7px !important;
+    width: 89% !important;
+}
+}
+@media (device-height : 667px)
+   and (device-width : 375px)
+   and (-webkit-min-device-pixel-ratio: 2){
+.oe_kanban_details2{
+       margin-right: 10px !important;
+}
+}
+@media (device-height : 812px)
+   and (device-width : 375px)
+   and (-webkit-min-device-pixel-ratio: 2){
+.oe_kanban_details2{
+       margin-right: 12px !important;
+}
+}
+@media (device-height : 1024px)
+   and (device-width : 768px)
+   and (-webkit-min-device-pixel-ratio: 2){
+.oe_kanban_details2{
+       margin-top: 22px !important;
+    margin-right: 1px !important;
+    width: 30% !important;
+}
+}
+@media (device-height : 1366px)
+   and (device-width : 1024px)
+   and (-webkit-min-device-pixel-ratio: 2){
+.oe_kanban_details2{
+
+    width: 43% !important;
+}
+}
+@media (device-height : 653px)
+   and (device-width : 280px)
+   and (-webkit-min-device-pixel-ratio: 2){
+.oe_kanban_details2{
+    margin-right: 27px !important;
+    width: 106% !important;
+}
+.oe_kanban_global_click.o_kanban_record{
+width: 92% !important;
+height:310px !important;
+
+}
+.oe_icon.bg_maghreb_photo {
+    margin-right: 32px !important;
+    margin-top: 67px !important;
+}
+.oe_icon.bg2_photo {
+    margin-right: -124px !important;
+    margin-top: 70px !important;
+}
+}
+@media (min-width:1683px) and (max-width:2679px){
+.oe_kanban_details2{
+
+    width: 49% !important;
+}}
+@media (min-width:1535px) and (max-width:1671px){
+.oe_kanban_details2{
+
+    width: 44% !important;
+}}
+@media (min-width:1029px) and (max-width:1257px){
+.oe_kanban_details2{
+
+    width: 44% !important;
+}}
+
+@media (min-width:661px) and (max-width:841px){
+.oe_kanban_details2{
+
+    width: 22% !important;
+}}
+@media (min-width:489px) and (max-width:822px){
+.oe_kanban_details2{
+
+    width: 33% !important;
+}}
+@media (min-width:489px) and (max-width:767px){
+.oe_kanban_details2{
+
+    width: 60% !important;
+}}
+/*@media (min-width:280px) and (max-width:405px){
+.oe_kanban_details{
+    margin-right: 27px !important;
+    width: 70% !important;
+}
+.oe_kanban_global_click.o_kanban_record{
+width: 92% !important;
+height:310px !important;
+
+}
+.oe_icon.bg_maghreb_photo {
+    margin-right: 32px !important;
+    margin-top: 67px !important;
+}
+.oe_icon.bg2_photo {
+    margin-right: -124px !important;
+    margin-top: 70px !important;
+}
+}}*/
+/*@media (min-width:2041px) and (max-width:2085px){
+.oe_kanban_details {
+    width: 53% !important;
+}
+@media (min-width:1562px) and (max-width:1671px){
+.oe_kanban_details {
+    width: 52% !important;
+}
+@media (min-width:1065px) and (max-width:1257px){
+.oe_kanban_details {
+    width: 51% !important;
+}
+@media (min-width:768px) and (max-width:843px){
+.oe_kanban_details {
+    width: 35% !important;
+}}*/
+.bg_photo{
+background-image:url('/masa_icons/static/src/img/icones/iconeview2/bg_hala9at.png') !important;
+width:50px;
+height:50px;
+
+}
+.bg2_photo{
+background-image:url('/masa_icons/static/src/img/icones/iconeview2/desactivehala9at.png') !important;
+width:50px;
+height:50px;
+
+}
+.bg_maghreb_photo{
+background-image:url('/masa_icons/static/src/img/icones/iconeview2/bg_hala9at.png') !important;
+width:50px;
+height:50px;
+
+}
+.bg_maghreb_a_photo{
+background-image:url('/masa_icons/static/src/img/icones/iconeview2/desactivehala9at.png') !important;
+width:50px;
+height:50px;
+
+}
+.bg_aser_photo{
+background-image:url('/masa_icons/static/src/img/icones/iconeview2/bg_hala9at.png') !important;
+width:50px;
+height:50px;
+
+}
+.bg_aser_a_photo{
+background-image:url('/masa_icons/static/src/img/icones/iconeview2/desactivehala9at.png') !important;
+width:50px;
+height:50px;
+
+}
+.bg_dhoher_photo{
+background-image:url('/masa_icons/static/src/img/icones/iconeview2/bg_hala9at.png') !important;
+width:50px;
+height:50px;
+
+}
+.bg_dhoher_a_photo{
+background-image:url('/masa_icons/static/src/img/icones/iconeview2/desactivehala9at.png') !important;
+width:50px;
+height:50px;
+
+
+}
+.bg_sobeh_photo{
+background-image:url('/masa_icons/static/src/img/icones/iconeview2/bg_hala9at.png') !important;
+width:50px;
+height:50px;
+
+}
+.bg_sobeh_a_photo{
+background-image:url('/masa_icons/static/src/img/icones/iconeview2/desactivehala9at.png') !important;
+width:50px;
+height:50px;
+
+}
+.fa-plus:before {
+    content: "\f067";
+    margin-right: -2px;
+}
+.h_counter{
+    FONT-WEIGHT: 200;
+    margin-top: -82px !important;
+    left: 28px!important;
+    background: #dc8746 !important;
+    border-color: #ffffff !important;
+    border: 2px solid #ffffff !important;
+    color: white !important;
+    padding: 0em -27.7em !important;
+    font-size: 0.9em !important;
+    padding-top: -2px !important;
+    padding-right: 9px !important;
+    padding-bottom: 1px !important;
+    padding-left: 13px !important;
+    border-radius: 16px !important;
+    opacity: 0.8 !important;
+    float: right!important;
+    width: 8% !important;
+    float: right;
+    right: 44px;
+
+}
+
+.o_web_client > .o_main .o_main_content .o_content{
+
+background-image: url('/masa_icons/static/src/img/bgg.png') !important;
+background-size:100% 100%;
+}

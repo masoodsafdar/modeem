@@ -1,0 +1,551 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* students_motivation
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-01-20 19:58+0000\n"
+"PO-Revision-Date: 2019-01-20 19:58+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: students_motivation
+#: model:ir.actions.act_window,name:students_motivation.action_add_markdown_action
+msgid "Add Markdown points"
+msgstr "إضافة - خصم الدرجات"
+
+#. module: students_motivation
+#: model:ir.ui.menu,name:students_motivation.menu_add_markdown_points
+msgid "Add/Markdown students points"
+msgstr "إضافة - خصم درجات الطلاب"
+
+#. module: students_motivation
+#: model:ir.ui.view,arch_db:students_motivation.sale_order_view_form
+msgid "Approve"
+msgstr "موافقه"
+
+#. module: students_motivation
+#: model:ir.model.fields,field_description:students_motivation.field_product_product_available_quantity
+#: model:ir.model.fields,field_description:students_motivation.field_product_template_available_quantity
+msgid "Available Quantity"
+msgstr "الكمية المتوفره"
+
+#. module: students_motivation
+#: code:addons/students_motivation/models/custom_prize_product.py:16
+#, python-format
+msgid "Available quantity cannot be less than zero"
+msgstr "الكمية المتوفرة لايمكن ان تكون اقل من الصفر"
+
+#. module: students_motivation
+#: selection:add.markdown.points,state:0
+#: model:ir.ui.view,arch_db:students_motivation.add_markdown_points_view_form
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: students_motivation
+#: model:ir.model.fields,field_description:students_motivation.field_product_template_code
+msgid "Code"
+msgstr "كود الجائزه"
+
+#. module: students_motivation
+#: model:ir.ui.menu,name:students_motivation.menu_motivate_configuration
+msgid "Configurations"
+msgstr "الإعدادات"
+
+#. module: students_motivation
+#: model:ir.ui.view,arch_db:students_motivation.add_markdown_points_view_form
+msgid "Confirm"
+msgstr "تأكيد"
+
+#. module: students_motivation
+#: selection:add.markdown.points,state:0
+msgid "Confirmed"
+msgstr "تم التأكيد"
+
+#. module: students_motivation
+#: model:ir.model.fields,field_description:students_motivation.field_add_markdown_points_create_uid
+#: model:ir.model.fields,field_description:students_motivation.field_points_lines_create_uid
+#: model:ir.model.fields,field_description:students_motivation.field_standard_items_create_uid
+#: model:ir.model.fields,field_description:students_motivation.field_student_items_create_uid
+#: model:ir.model.fields,field_description:students_motivation.field_student_points_create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: students_motivation
+#: model:ir.model.fields,field_description:students_motivation.field_add_markdown_points_create_date
+#: model:ir.model.fields,field_description:students_motivation.field_points_lines_create_date
+#: model:ir.model.fields,field_description:students_motivation.field_standard_items_create_date
+#: model:ir.model.fields,field_description:students_motivation.field_student_items_create_date
+#: model:ir.model.fields,field_description:students_motivation.field_student_points_create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: students_motivation
+#: model:ir.model.fields,field_description:students_motivation.field_points_lines_current_stu_item_points
+msgid "Current Standard Item Points"
+msgstr "نقاط البند الحالية"
+
+#. module: students_motivation
+#: model:ir.model.fields,field_description:students_motivation.field_add_markdown_points_date
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: students_motivation
+#: model:ir.model.fields,field_description:students_motivation.field_add_markdown_points_display_name
+#: model:ir.model.fields,field_description:students_motivation.field_points_lines_display_name
+#: model:ir.model.fields,field_description:students_motivation.field_standard_items_display_name
+#: model:ir.model.fields,field_description:students_motivation.field_student_items_display_name
+#: model:ir.model.fields,field_description:students_motivation.field_student_points_display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: students_motivation
+#: selection:add.markdown.points,state:0
+msgid "Draft"
+msgstr "مبدئي"
+
+#. module: students_motivation
+#: model:ir.model.fields,field_description:students_motivation.field_points_lines_episode_id
+msgid "Episode"
+msgstr "حلقة/ الفصل"
+
+#. module: students_motivation
+#: model:ir.ui.view,arch_db:students_motivation.sale_order_view_form
+msgid "Has Delivred"
+msgstr "تم التسليم"
+
+#. module: students_motivation
+#: model:ir.model.fields,field_description:students_motivation.field_standard_items_points
+msgid "High point"
+msgstr " اعلى نقطة يمكن الحصول عليها"
+
+#. module: students_motivation
+#: model:ir.model.fields,field_description:students_motivation.field_add_markdown_points_id
+#: model:ir.model.fields,field_description:students_motivation.field_points_lines_id
+#: model:ir.model.fields,field_description:students_motivation.field_standard_items_id
+#: model:ir.model.fields,field_description:students_motivation.field_student_items_id
+#: model:ir.model.fields,field_description:students_motivation.field_student_points_id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: students_motivation
+#: model:ir.model.fields,field_description:students_motivation.field_standard_items_active_bool
+msgid "Item Active"
+msgstr "اتاحية البند"
+
+#. module: students_motivation
+#: model:ir.model.fields,field_description:students_motivation.field_points_lines_item_points
+msgid "Item Points"
+msgstr "نقاط البند"
+
+#. module: students_motivation
+#: code:addons/students_motivation/models/motivation_configuration.py:16
+#, python-format
+msgid "Item Points cannot be zero or less"
+msgstr "نقاط البند لايمكن ان تكون صفراً او اقل"
+
+#. module: students_motivation
+#: model:ir.model.fields,field_description:students_motivation.field_add_markdown_points___last_update
+#: model:ir.model.fields,field_description:students_motivation.field_points_lines___last_update
+#: model:ir.model.fields,field_description:students_motivation.field_standard_items___last_update
+#: model:ir.model.fields,field_description:students_motivation.field_student_items___last_update
+#: model:ir.model.fields,field_description:students_motivation.field_student_points___last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: students_motivation
+#: model:ir.model.fields,field_description:students_motivation.field_add_markdown_points_write_uid
+#: model:ir.model.fields,field_description:students_motivation.field_points_lines_write_uid
+#: model:ir.model.fields,field_description:students_motivation.field_standard_items_write_uid
+#: model:ir.model.fields,field_description:students_motivation.field_student_items_write_uid
+#: model:ir.model.fields,field_description:students_motivation.field_student_points_write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: students_motivation
+#: model:ir.model.fields,field_description:students_motivation.field_add_markdown_points_write_date
+#: model:ir.model.fields,field_description:students_motivation.field_points_lines_write_date
+#: model:ir.model.fields,field_description:students_motivation.field_standard_items_write_date
+#: model:ir.model.fields,field_description:students_motivation.field_student_items_write_date
+#: model:ir.model.fields,field_description:students_motivation.field_student_points_write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: students_motivation
+#: model:ir.model.fields,field_description:students_motivation.field_sale_order_mosques_ids
+msgid "Mosques"
+msgstr "المساجد"
+
+#. module: students_motivation
+#: model:ir.ui.menu,name:students_motivation.menu_motivation_root
+msgid "Motivation"
+msgstr "التحفيز"
+
+#. module: students_motivation
+#: model:ir.actions.act_window,name:students_motivation.action_motivate_order_action
+msgid "Motivation Order"
+msgstr "طلب التحفيز"
+
+#. module: students_motivation
+#: model:ir.model.fields,field_description:students_motivation.field_add_markdown_points_name
+#: model:ir.model.fields,field_description:students_motivation.field_standard_items_name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: students_motivation
+#: model:ir.model.fields,field_description:students_motivation.field_points_lines_new_item_points
+msgid "New Item Points"
+msgstr "نقاط البند الجديده"
+
+#. module: students_motivation
+#: model:ir.ui.view,arch_db:students_motivation.sale_order_view_form
+msgid "Order Lines"
+msgstr "الجوائز المطلوبة"
+
+#. module: students_motivation
+#: model:ir.ui.view,arch_db:students_motivation.sale_order_view_form
+msgid "Ordered Quantity"
+msgstr "الكميات المطلوبة"
+
+#. module: students_motivation
+#: code:addons/students_motivation/models/custom_sale_order.py:57
+#, python-format
+msgid "Please Specify Refuse reason"
+msgstr "من فضلك قم بتحديد سبب الرفض"
+
+#. module: students_motivation
+#: model:ir.model.fields,field_description:students_motivation.field_student_items_point
+#: model:ir.ui.view,arch_db:students_motivation.product_tem_tree_view
+#: model:ir.ui.view,arch_db:students_motivation.products_tem_view_form
+msgid "Points"
+msgstr "النقاط"
+
+#. module: students_motivation
+#: model:ir.model.fields,field_description:students_motivation.field_add_markdown_points_points_ids
+msgid "Points Lines"
+msgstr "تفاصيلبنود النقاط"
+
+#. module: students_motivation
+#: code:addons/students_motivation/models/add_markdown_points.py:122
+#, python-format
+msgid "Points cannot be greater than standard item points"
+msgstr "النقاط المعطاه لايمكن ان تكون اكبر من الحد الأعلى لنقاط البند المعين"
+
+#. module: students_motivation
+#: code:addons/students_motivation/models/add_markdown_points.py:125
+#, python-format
+msgid "Points cannot be less than zero"
+msgstr "النقاط لا يمكن ان تكون اقل من الصفر"
+
+#. module: students_motivation
+#: model:ir.model.fields,field_description:students_motivation.field_points_lines_p_id
+msgid "Points id"
+msgstr "Points id"
+
+#. module: students_motivation
+#: model:ir.model.fields,field_description:students_motivation.field_sale_order_has_delivered
+msgid "Prize Has Delivered"
+msgstr "تم تسليم الجائزه"
+
+#. module: students_motivation
+#: model:ir.ui.view,arch_db:students_motivation.sale_order_view_form
+msgid "Prize"
+msgstr "الجائزة"
+
+#. module: students_motivation
+#: code:addons/students_motivation/models/custom_prize_product.py:19
+#, python-format
+msgid "Prize Points cannot be zero or less "
+msgstr "نقاط الجائزه لايمكن ان تكون صفراً او اقل"
+
+#. module: students_motivation
+#: model:ir.ui.view,arch_db:students_motivation.products_tem_view_form
+msgid "Prize name"
+msgstr "اسم الجائزة"
+
+#. module: students_motivation
+#: model:ir.actions.act_window,name:students_motivation.action_product_temp
+#: model:ir.ui.menu,name:students_motivation.menu_product_motiv
+msgid "Prizes"
+msgstr "الجوائز"
+
+#. module: students_motivation
+#: model:ir.model,name:students_motivation.model_product_template
+msgid "Product Template"
+msgstr "قالب المنتج"
+
+#. module: students_motivation
+#: model:ir.ui.view,arch_db:students_motivation.products_tem_view_form
+msgid "Puplish/un-Puplish"
+msgstr "عرض| إخفاء في المتجر"
+
+#. module: students_motivation
+#: model:ir.model.fields,field_description:students_motivation.field_product_product_publish_prize
+#: model:ir.model.fields,field_description:students_motivation.field_product_template_publish_prize
+msgid "Puplished On store"
+msgstr "متاح في المتجر"
+
+#. module: students_motivation
+#: model:ir.model,name:students_motivation.model_sale_order
+msgid "Quotation"
+msgstr "التسعيرة"
+
+#. module: students_motivation
+#: model:ir.ui.view,arch_db:students_motivation.sale_order_view_form
+msgid "Refuse"
+msgstr "رفض"
+
+#. module: students_motivation
+#: model:ir.model.fields,field_description:students_motivation.field_sale_order_refuse_reason
+msgid "Refuse Reason"
+msgstr "سبب الرفض"
+
+#. module: students_motivation
+#: model:ir.ui.view,arch_db:students_motivation.sale_order_view_form
+msgid "Refuse Reasons"
+msgstr "اسباب الرفض"
+
+#. module: students_motivation
+#: model:ir.model,name:students_motivation.model_sale_order_line
+msgid "Sales Order Line"
+msgstr "سطر أمر المبيعات"
+
+#. module: students_motivation
+#: model:ir.ui.view,arch_db:students_motivation.add_markdown_points_view_form
+#: model:ir.ui.view,arch_db:students_motivation.sale_order_view_form
+msgid "Set To Draft"
+msgstr "إعادة لمبدئي"
+
+#. module: students_motivation
+#: model:ir.model.fields,field_description:students_motivation.field_points_lines_standard_item_id
+#: model:ir.model.fields,field_description:students_motivation.field_student_items_item_id
+msgid "Standard Item"
+msgstr "البند"
+
+#. module: students_motivation
+#: model:ir.actions.act_window,name:students_motivation.action_standard_items_action
+#: model:ir.ui.menu,name:students_motivation.menu_standard_items
+msgid "Standard Items"
+msgstr "بنود التحفيز"
+
+#. module: students_motivation
+#: model:ir.model.fields,field_description:students_motivation.field_add_markdown_points_state
+msgid "Status"
+msgstr "الحالة "
+
+#. module: students_motivation
+#: model:ir.model.fields,field_description:students_motivation.field_points_lines_student_id
+#: model:ir.model.fields,field_description:students_motivation.field_sale_order_student_id
+#: model:ir.model.fields,field_description:students_motivation.field_sale_order_wizard_student_id
+#: model:ir.model.fields,field_description:students_motivation.field_student_items_stu_point_id
+#: model:ir.model.fields,field_description:students_motivation.field_student_items_student_id
+#: model:ir.model.fields,field_description:students_motivation.field_student_points_name
+msgid "Student"
+msgstr "اسم الطالب"
+
+#. module: students_motivation
+#: model:ir.model.fields,field_description:students_motivation.field_student_points_items_ids
+msgid "Student Items"
+msgstr "بنود الطالب"
+
+#. module: students_motivation
+#: model:ir.actions.act_window,name:students_motivation.action_students_points_action
+#: model:ir.ui.menu,name:students_motivation.menu_students_points
+msgid "Students Points"
+msgstr "نقاط الطلاب"
+
+#. module: students_motivation
+#: model:ir.model.fields,field_description:students_motivation.field_points_lines_stu_total_points
+#: model:ir.model.fields,field_description:students_motivation.field_sale_order_line_total_points
+#: model:ir.model.fields,field_description:students_motivation.field_student_points_total_points
+msgid "Total Points"
+msgstr "اجمالي النقاط"
+
+#. module: students_motivation
+#: model:ir.model.fields,field_description:students_motivation.field_sale_order_total_prize_points
+msgid "Total Prize Points"
+msgstr "اجمالي نقاط الجوائز"
+
+#. module: students_motivation
+#: model:ir.module.category,name:students_motivation.motivation_management
+msgid "Motivation management"
+msgstr "إدارة التحفيز"
+
+#. module: students_motivation
+#: model:res.groups,name:students_motivation.motivation_request_management
+msgid "Motivation request management"
+msgstr "إدارة طلبات التحفيز"
+
+#. module: students_motivation
+#: model:res.groups,name:students_motivation.accept_refuse_motivation_request
+msgid "Accept/refuse motivation request"
+msgstr "قبول/رفض طلبات التحفيز"
+
+#. module: students_motivation
+#: model:res.groups,name:students_motivation.deliver_motivation_request
+msgid "Deliver motivation request"
+msgstr " تسليم طلبات التحفيز"
+
+#. module: students_motivation
+#: model:res.groups,name:students_motivation.read_markdown_points
+msgid "Read markdown points"
+msgstr "القراءة والإطلاع على خصم درجات الطلاب"
+
+#. module: students_motivation
+#: model:res.groups,name:students_motivation.create_write_markdown_points
+msgid "Creat/write markdown points"
+msgstr "إنشاء و تعديل على خصم درجات الطلاب"
+
+#. module: students_motivation
+#: model:res.groups,name:students_motivation.delete_markdown_points
+msgid "Delete markdown points"
+msgstr "حذف خصم درجات الطلاب"
+
+#. module: students_motivation
+#: model:res.groups,name:students_motivation.confirm_markdown_points
+msgid "Confirm markdown points"
+msgstr "قبول خصم درجات الطلاب"
+
+#. module: students_motivation
+#: model:res.groups,name:students_motivation.read_students_points
+msgid "Read students points"
+msgstr "القراءة والإطلاع على نقاط الطلاب"
+
+#. module: students_motivation
+#: model:res.groups,name:students_motivation.create_write_students_points
+msgid "Creat/write students points"
+msgstr "إنشاء و تعديل على نقاط الطلاب"
+
+#. module: students_motivation
+#: model:res.groups,name:students_motivation.delete_students_points
+msgid "Delete students points"
+msgstr "حذف نقاط الطلاب"
+
+#. module: students_motivation
+#: model:res.groups,name:students_motivation.product_template_management
+msgid "Product template management"
+msgstr "إدارة الجوائز"
+
+#. module: students_motivation
+#: model:res.groups,name:students_motivation.read_standard_items
+msgid "Read standard items"
+msgstr "القراءة والإطلاع على بنود التحفيز"
+
+#. module: students_motivation
+#: model:res.groups,name:students_motivation.create_write_standard_items
+msgid "Creat/write standard items"
+msgstr "إنشاء و تعديل على بنود التحفيز"
+
+#. module: students_motivation
+#: model:res.groups,name:students_motivation.delete_standard_items
+msgid "Delete standard items"
+msgstr "حذف بنود التحفيز"
+
+#. module: students_motivation
+#: model:ir.ui.menu,name:students_motivation.menu_motivate_order
+#: model:ir.ui.menu,name:students_motivation.menu_motivate_order_root
+msgid "Motivation Orders"
+msgstr "طلبات التحفيز"
+
+#. module: students_motivation
+#: model:ir.ui.menu,name:students_motivation.sale_order_wizard_menu
+msgid "Sale Order Report"
+msgstr "تقرير طلبات التحفيز"
+
+#. module: students_motivation
+#: model:ir.model.fields,field_description:students_motivation.field_sale_order_wizard_study_class_id
+msgid "Study class"
+msgstr "الفصل الدراسي"
+
+#. module: students_motivation
+#: model:ir.model.fields,field_description:students_motivation.field_sale_order_wizard_study_year_id
+msgid "Study year"
+msgstr "العام الدراسي"
+
+#. module: students_motivation
+#: model:ir.model.fields,field_description:students_motivation.field_sale_order_wizard_center_id
+msgid "center"
+msgstr "المركز"
+
+#. module: students_motivation
+#: model:ir.model.fields,field_description:students_motivation.field_sale_order_wizard_gender_type
+msgid "Gender Type"
+msgstr "الجنس"
+
+#. module: students_motivation
+#: selection:sale.order.wizard,gender_type:0
+msgid "Male"
+msgstr "رجالي"
+
+#. module: students_motivation
+#: selection:sale.order.wizard,gender_type:0
+msgid "Female"
+msgstr "نسائي"
+
+#. module: students_motivation
+#: model:ir.model.fields,field_description:students_motivation.field_sale_order_wizard_mosque_category_id
+msgid "Mosque Category"
+msgstr "تصنيف المسجد/المدرسة"
+
+#. module: students_motivation
+#: model:ir.model.fields,field_description:students_motivation.field_sale_order_mosque_id
+#: model:ir.model.fields,field_description:students_motivation.field_sale_order_wizard_mosque_id
+#: selection:sale.order.wizard,type_filter:0
+msgid "Mosque"
+msgstr "المسجد"
+
+#. module: students_motivation
+#: model:ir.ui.view,arch_db:students_motivation.sale_order_wizard_form
+msgid "Print"
+msgstr "طباعة"
+
+#. module: students_motivation
+#: model:ir.ui.view,arch_db:students_motivation.sale_order_wizard_form
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: students_motivation
+#: model:ir.ui.menu,name:students_motivation.sale_order_wizard_menu
+msgid "Sale Order Report"
+msgstr "تقرير طلبات التحفيز"
+
+#. module: students_motivation
+#: model:ir.actions.report,name:students_motivation.sale_order_report
+msgid "Sale Order report"
+msgstr "تقرير طلبات التحفيز"
+
+#. module: students_motivation
+#: model:ir.actions.act_window,name:students_motivation.action_sale_order_wizard
+msgid "sale order Report"
+msgstr "تقرير طلبات التحفيز"
+
+#. module: students_motivation
+#: model:ir.model,name:students_motivation.model_add_markdown_points
+msgid "add.markdown.points"
+msgstr "add.markdown.points"
+
+#. module: students_motivation
+#: model:ir.model,name:students_motivation.model_points_lines
+msgid "points.lines"
+msgstr "points.lines"
+
+#. module: students_motivation
+#: model:ir.model,name:students_motivation.model_standard_items
+msgid "standard.items"
+msgstr "standard.items"
+
+#. module: students_motivation
+#: model:ir.model,name:students_motivation.model_student_items
+msgid "student.items"
+msgstr "student.items"
+
+#. module: students_motivation
+#: model:ir.model,name:students_motivation.model_student_points
+msgid "student.points"
+msgstr "student.points"

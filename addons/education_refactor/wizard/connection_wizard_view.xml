@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record id="connection_wizard_view_form" model="ir.ui.view">
+		<field name="name">update.wizard.form</field>
+		<field name="model">update.wizard</field>
+		<field name="arch" type="xml">
+			<form string="Student Migration">
+				<p class="oe_grey">Once you click on "Download" local data was updated with data from the server</p>
+				<footer>
+					<button name="get_employee_data" string="Employee Data" type="object" default_focus="1" class="oe_highlight" />
+					<button name="get_student_data" string="Student Data" type="object" class="oe_highlight" />
+					<button string="Cancel" class="btn-default" special="cancel"/>
+				</footer>
+			</form>
+		</field>
+	</record>
+
+	<record id="action_connection_wizard" model="ir.actions.act_window">
+        <field name="name">Remove Duplicate Data</field>
+        <field name="res_model">update.wizard</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="connection_wizard_view_form"/>
+        <field name="target">new</field>
+    </record>
+
+    <menuitem id="menu_connection_wizard" name="Refactoring" sequence="20" />
+    <menuitem id="main_menu_connection_wizard" name="Update Data" parent="menu_connection_wizard"/>
+
+    <menuitem id="sub_menu_connection_wizard" name="Data Refactoring" parent="main_menu_connection_wizard" action="action_connection_wizard"/>
+
+
+    <record id="courses_type_wizard_view_form" model="ir.ui.view">
+		<field name="name">courses.wizard.form</field>
+		<field name="model">courses.wizard</field>
+		<field name="arch" type="xml">
+			<form string="Add Course Type">
+				<group>
+					<group>
+						<field name="couser_type_id" options="{'no_create': True}"/>
+					</group>
+				</group>
+				<p class="oe_grey"></p>
+				<footer>
+					<button name="process_add" string="Add Course ID" type="object" default_focus="1" class="oe_highlight" />
+					<button string="Cancel" class="btn-default" special="cancel"/>
+				</footer>
+			</form>
+		</field>
+	</record>
+
+	<record id="action_migrate_wizard" model="ir.actions.act_window">
+        <field name="name">Course Refactor</field>
+        <field name="res_model">courses.wizard</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="courses_type_wizard_view_form"/>
+        <field name="target">new</field>
+    </record>
+
+	<menuitem
+              id="action_courses_migration_wizard"
+              name="Add Course Type"
+              action="action_migrate_wizard"
+              parent="main_menu_connection_wizard"
+              sequence="3"
+            />
+
+    <record id="add_part_wizard_view_form" model="ir.ui.view">
+		<field name="name">part.part.form</field>
+		<field name="model">part.part</field>
+		<field name="arch" type="xml">
+			<form string="Add Part">
+				<group col="4">
+					<field name="part_id"  options="{'no_create': True,'no_open': True,}"/>
+				</group>
+				<p class="oe_grey"></p>
+				<footer>
+					<button name="process_add" string="Add" type="object" default_focus="1" class="oe_highlight" />
+					<button string="Cancel" class="btn-default" special="cancel"/>
+				</footer>
+			</form>
+		</field>
+	</record>
+	<act_window id="action_add_part_wizard" name="Set Part" res_model="part.part" src_model="mk.surah.verses" view_mode="form" multi="True" target="new" key2="client_action_multi" />
+</odoo>

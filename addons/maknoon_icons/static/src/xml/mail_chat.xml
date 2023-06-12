@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<templates xml:space="preserve">
+    <t t-name="mail.chat.MessagingMenu">
+        <t t-jquery=".o_mail_navbar_item" t-operation="replace">
+              <li class="o_mail_navbar_item">
+                <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" title="Conversations" href="#">
+                    <i class="fa fa-comments"/>
+                    <span class="o_notification_counter badge"/>
+                </a>
+                  <ul class="o_mail_navbar_dropdown dropdown-menu" role="menu">
+                <li t-if="widget.isMobile" id="o_messaging_class_id">
+                    <div class="o_mail_navbar_mobile_header">
+                        <button type="button" class="btn btn-default btn-sm o_new_message"> New message </button>
+                    </div>
+                </li>
+                      <li t-if="!widget.isMobile" class="o_mail_navbar_dropdown_top" id="o_messaging_class_id">
+                    <div>
+                        <button type="button" class="btn btn-sm o_filter_button active"> All </button>
+                        <button type="button" class="btn btn-sm o_filter_button" data-filter='chat'> Chat </button>
+                        <button type="button" class="btn btn-sm o_filter_button"
+                                data-filter='channels'> Channels </button>
+                    </div>
+                          <button type="button" class="btn btn-sm o_new_message"> New message </button>
+                </li>
+                      <li class="o_mail_navbar_dropdown_channels"/>
+                      <li t-if="widget.isMobile">
+                    <div class="o_mail_mobile_tabs">
+                        <div class="o_mail_mobile_tab o_filter_button active">
+                            <span class="fa fa-envelope"/>
+                            <span class="o_tab_title">All</span>
+                        </div>
+                        <div class="o_mail_mobile_tab o_filter_button" data-filter='chat'>
+                            <span class="fa fa-user"/>
+                            <span class="o_tab_title">Chat</span>
+                        </div>
+                        <div class="o_mail_mobile_tab o_filter_button" id="o_messaging_class_id" data-filter='channels'>
+                            <span class="fa fa-users"/>
+                            <span class="o_tab_title">Channels</span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </li>
+        </t>
+    </t>
+
+    <t t-name="mail.chat.ChannelPreview">
+        <t t-jquery=".o_mail_channel_preview" t-operation="replace">
+            <div t-attf-class="o_mail_channel_preview #{channel.unread_counter ? 'o_channel_unread' : 'o_channel_read'}"
+             t-att-data-channel_id="channel.id" t-att-data-res_id="channel.res_id" t-att-data-res_model="channel.model">
+            <div t-attf-class="o_mail_channel_image #{channel.model? 'o_mail_channel_app' : ''}">
+                <img class="o_mail_channel_image" t-att-src="channel.image_src"/>
+                <i t-if="channel.status === 'online'" class="o_mail_user_status o_user_online fa fa-circle" title="Online"/>
+                <i t-if="channel.status === 'away'" class="o_mail_user_status o_user_idle fa fa-circle" title="Idle"/>
+            </div>
+            <div class="o_channel_info">
+                <div class="o_channel_title">
+                    <span class="o_channel_name">
+                        <t t-esc="channel.name"/>
+                    </span>
+                    <span class="o_channel_counter">
+                        <t t-if="channel.unread_counter">&amp;nbsp;(<t t-esc="channel.unread_counter"/>)</t>
+                    </span>
+                    <span class="o_last_message_date"> <t t-esc="channel.last_message_date"/> </span>
+                </div>
+                <div t-if="channel.last_message" class="o_last_message_preview">
+                    <t t-if="channel.last_message.is_author">
+                        <span class="fa fa-mail-reply"/> You:
+                    </t>
+                    <t t-else="">
+                        <t t-esc="channel.last_message.displayed_author"/>:
+                    </t>
+                    <t t-raw="channel.last_message_preview"/>
+                </div>
+            </div>
+            </div>
+        </t>
+    </t>
+</templates>
+

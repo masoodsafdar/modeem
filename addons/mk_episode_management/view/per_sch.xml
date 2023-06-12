@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="ir_cron_get_per_notify" model="ir.cron">
+            <field name="name">Permision Schedular</field>
+            <field name="interval_number">24</field>
+            <field name="interval_type">hours</field>
+            <field name="numbercall">-1</field>
+            <field eval="True" name="doall"/>
+            <field ref="base.user_root" name="user_id"/>
+            <field name="state">code</field>
+            <field ref="mk_master_models.model_mk_mosque" name="model_id"/>
+            <field  name="code">model.permision_schedular()</field>
+            <!-- <field eval="'()'" name="args"/> -->
+        </record>
+    </data>
+</odoo>

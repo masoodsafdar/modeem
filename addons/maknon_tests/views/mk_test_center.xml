@@ -1,0 +1,119 @@
+<odoo>
+    <data>
+    
+ 		<record id="test_center_form_view" model="ir.ui.view">
+			<field name="name">Test Center Form View</field>
+          	<field name="model">mak.test.center</field>
+          	<field name="arch" type="xml">
+				<form string = "Test Center">
+		  			<header>		    
+		  			</header>
+		  				<sheet>
+			  				<group>
+			  					<group>
+            						<field name="display_name" string="center name" invisible="1"/>
+				  					<field name="name" required="1" attrs="{'readonly':[('editable','=',False)]}"/>
+			  	  					<field name="editable" invisible="1"/>
+            						<field name="active"/>
+          						</group>
+								<group>
+   									<field name="main_company" attrs="{'readonly':[('editable','=',False)]}"/> 
+   									<field name="center_id"    attrs="{'readonly':[('editable','=',False)],'invisible':[('main_company','=',True)],
+                                    								'required':[('main_company','=',False)]}" options="{'no_create':1,'no_open':1}"/>
+								</group>
+        						<group>
+          							<field name="academic_id"    attrs="{'readonly':[('editable','=',False)]}" options="{'no_open':1,'no_create':1}"/>
+          							<field name="study_class_id" attrs="{'readonly':[('editable','=',False)]}" options="{'no_open':1,'no_create':1}"/>
+        						</group>
+								<group>
+									<field name="department_ids" widget="many2many_tags" required="1" attrs="{'readonly':[('editable','=',False)]}" options="{'no_create':1,'no_edit':1,'no_open':1}"/>
+								</group>
+
+								<group>
+  									<field name="test_group"   attrs="{'readonly':[('editable','=',False)]}"/>
+  									<field name="test_names" required="1" widget="many2many_tags" domain="[('test_group','=',test_group),('study_class_id', '=', study_class_id)]" attrs="{'readonly':[('editable','=',False)]}" options="{'no_create':1,'no_edit':1,'no_open':1}"/>
+  									<field name="all_branches" attrs="{'readonly':[('editable','=',False)]}"/>
+  									<field name="branches_ids" attrs="{'invisible':[('all_branches','=',True)],'required':[('all_branches','=',False)]}" widget="many2many_tags"/> 
+								</group>
+
+								<group>
+									<field name="registeration_start_date" required="1" attrs="{'readonly':[('editable','=',False)]}"/>
+									<field name="registeration_end_date"   required="1" attrs="{'readonly':[('editable','=',False)]}"/>
+								</group>
+
+								<group>
+									<field name="exam_start_date" required="1" attrs="{'readonly':[('editable','=',False)]}"/>
+									<field name="exam_end_date"   required="1" attrs="{'readonly':[('editable','=',False)]}"/>
+								</group>
+								
+								<group>
+									<field name="gender" attrs="{'readonly':[('editable','=',False)]}" required="1"/>
+								</group>
+							</group>              
+	  					</sheet>
+						<div class="oe_chatter">
+							<field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+							<field name="message_ids"          widget="mail_thread"/>
+						</div>
+              		</form>
+             </field>
+         </record>
+
+        <record id="test_center_tree_view" model="ir.ui.view">
+            <field name="name">Test Center Tree View</field>
+            <field name="model">mak.test.center</field>
+            <field name="arch" type="xml">
+                <tree delete="0" string="Test Center" decoration-bf="editable==True" decoration-muted="editable==False">
+                    <field name="editable" invisible="1"/>
+                    <field name="display_name" string="center name"/>
+                    <field name="test_group" />
+                    <field name="gender" />
+                    <field name="center_id"    string="لامركز الرئيسي" options="{'no_create': True,'no_open': True,}"/>
+					<field name="registeration_start_date"/>
+					<field name="registeration_end_date"/>
+					<field name="exam_start_date"/>
+					<field name="exam_end_date"/>
+                </tree>
+            </field>
+        </record>
+        
+        <record id="test_center_search_view" model="ir.ui.view">
+            <field name="name">Test Center Search View</field>
+            <field name="model">mak.test.center</field>
+            <field name="arch" type="xml">
+                <search string="Test Center ">
+                    <field name="name" string="Test Center"/>
+                    <field name="academic_id"/>
+                    <field name="study_class_id"/>
+                    <field name="department_ids"/>
+                    <field name="test_names"/>
+                    
+                    <filter string="مركز رئيسي"    name="main_company" domain="[('main_company', '=',True)]"/>
+                    <separator/>
+                    <filter string="كل الفروع المتاحة" name="all_branches" domain="[('all_branches', '=',True)]"/>
+                    <separator/>
+                    <filter string="مفعل"        name="active"       domain="[('active', '=',True)]"/>
+                    <filter string="مؤرشف"      name="unactive"     domain="[('active', '=',False)]"/>
+                    <separator/>
+                    <filter string="رجالي"        name="male"         domain="[('gender', '=','male')]"/>
+                    <filter string="نسائي"         name="female"       domain="[('gender', '=','female')]"/>
+                </search>
+            </field>
+        </record>
+        
+        <record id="test_center_action" model="ir.actions.act_window">
+            <field name="name">Test Center </field>
+            <field name="res_model">mak.test.center</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+            <field name="search_view_id" ref="test_center_search_view"/>
+        </record>
+
+        <menuitem id="test_center_setting" name="Test center" action="test_center_action" parent="maknon_tests.test_processes_main_menu" sequence="4"
+                  groups="maknon_tests.group_mak_test_center_read,maknon_tests.group_assembly_tests_full"/>  
+
+    </data>  
+</odoo>

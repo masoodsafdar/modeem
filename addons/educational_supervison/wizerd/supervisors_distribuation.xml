@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <data>
+
+<record id="multiple_assgin_supervisors_wizerd" model="ir.ui.view">
+                <field name="name"> sup</field>
+                <field name="model">sup.assign</field>
+                <field name="arch" type="xml">
+                <form >
+                        <group col="4" colspan="4">
+                            <field name="required_of_pointers" requierd="1"/>
+                            <field name="distribuation_method" readonly="1"/>
+                            <field name="supervisors" domain="[('department_id','=',active_id.center_parent),('category','=','edu_supervisor')]" widget="many2many_tags" attrs="{'invisible':[('distribuation_method','=','all')]}"/>
+                           <field name="item" readonly="1" invisible="1"/>
+                                                </group>
+                    <footer>
+                    <button name="yes" type="object" string="yes" class="oe_highlight"/>
+                    <button string="no" class="oe_link" special="cancel"/>
+    
+
+        </footer>
+                </form>
+                </field>
+            </record>
+
+
+<record id="multiple_assgin_sup_actoinn" model="ir.actions.act_window">
+                <field name="name"> </field>
+                <field name="res_model">sup.assign</field>
+                <field name="view_type">form</field>
+                <field name="view_mode">form</field>
+                <field name="view_id" ref="multiple_assgin_supervisors_wizerd"/>
+                <field name="target">new</field>
+</record>
+<record id="one_assgin_supervisors_wizerd" model="ir.ui.view">
+                <field name="name"> sup</field>
+                <field name="model">one.sup.assign</field>
+                <field name="arch" type="xml">
+                <form >
+                        <group col="4" colspan="4">
+                            <field name="supervisors" domain="[('department_id','=',active_id.center_parent),('category','=','edu_supervisor')]" widget="many2many_tags" attrs="{'invisible':[('distribuation_method','=','all')]}"/>
+                            <field name="required_of_pointers" requierd="1"/>
+                            <field name="distribuation_method" readonly="1"/>
+                           <field name="item" readonly="1" invisible="1"/>
+                        </group>
+                    <footer>
+                    <button name="yes" type="object" string="yes" class="oe_highlight"/>
+                    <button string="no" class="oe_link" special="cancel"/>
+    
+
+        </footer>
+                </form>
+                </field>
+            </record>
+
+
+<record id="one_assgin_sup_actoin" model="ir.actions.act_window">
+                <field name="name"> </field>
+                <field name="res_model">one.sup.assign</field>
+                <field name="view_type">form</field>
+                <field name="view_mode">form</field>
+                <field name="view_id" ref="one_assgin_supervisors_wizerd"/>
+                <field name="target">new</field>
+</record>
+
+</data>
+</odoo>

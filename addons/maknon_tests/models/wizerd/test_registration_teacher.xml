@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <data>
+		<record id="test_registration_teacher_from" model="ir.ui.view">
+			<field name="name"/>
+			<field name="model">test.register.teacher</field>
+			<field name="arch" type="xml">
+				<form>
+			        <script>
+			            $(document).ready(function(){
+			                $('.modal-dialog').css({'width': '85%', 'height': '100%'});
+			                $('.modal-content').css({'height': '100%'});
+			                $('.modal-body').css({'height': '100%'});
+			            });
+			        </script>
+			        				
+					<group>
+						<group>
+							<field name="avalible_minutes" readonly="1" string="السعة الاستعابية / الدقائق"/>                                                                     
+						</group> 
+						
+						<group>
+							<field name="masjed"  string="المسجد" required="1" options="{'no_create':True,'no_open':True}"/>
+							<!-- field name="episode" string="الحلقة" required="1" options="{'no_create':True,'no_open':True}" domain="[('mosque_id','=',masjed)]"/-->
+						</group>
+						
+						<group>
+							<field name="avalible_teacher" invisible="1"/>
+						</group>
+						
+						<group>
+							<field name="total_minutes"   invisible="1" readonly="1"/>
+							<field name="test_session_id" invisible="1"/>
+							<field name="center_tests"    invisible="1"/>
+						</group>
+
+					</group>
+                    <field name="set_b" invisible="1"/>
+                        
+                    <button string=" " icon="fa-plus" name="show" type="object" attrs="{'invisible':[('set_b','=',True)]}"/>
+                    <label for="set_b" string="إضافة المزيد من المعلمين" attrs="{'invisible':[('set_b','=',True)]}"/>
+
+                    <button string=" " icon="fa-minus" name="hide1" type="object" attrs="{'invisible':[('set_b','=',False)]}"/>
+                    <label for="set_b"  string="إخفاء" attrs="{'invisible':[('set_b','=',False)]}"/>
+
+                    <field name="teacher_ids" domain="[('mosqtech_ids','in',[masjed]),('category','=','teacher')]" attrs="{'invisible':[('set_b','=',False)]}">
+						<tree>
+                        	<field name="name"/>
+                        	<field name="department_id"/>
+							<field name="mosqtech_ids"/>
+                        </tree>
+                    </field>
+                    
+	      			<group colspan="2" col="6" attrs="{'invisible': [('set_b','=',False)]}" string="إعدادات موحدة">
+	                    <field name="test_name" options="{'no_open':1,'no_create':1}" string="نوع الاختبار" domain="[('id','in',center_tests)]"/>
+	                    <field name="trackk"/>
+	                    <field name="branch"    options="{'no_open':1,'no_create':1}" string="الفرع"       domain="[('test_name','=',test_name), ('trackk','=',trackk)]"/>
+			  		</group>                    
+                            
+					<span style="margin-right:300px;">
+						<button name="set_branch" type="object" string="إختار الفرع" attrs="{'invisible':[('set_b','=',False)]}" icon="fa-arrow-down"/>
+					</span>
+								
+					<br></br><br></br><br></br>
+							
+ 					<field name="reg_teacher_ids" attrs="{'invisible':[('hide','=',0)]}" required="1"  context="{'default_avalible_minutes':avalible_minutes,'group_by':'teacher_id'}">
+						<tree editable="bottom" edit="true" create="false" decoration-danger="flag==False">
+							<field name="teacher_id" required="1" options="{'no_create':True,'no_open':True}"/>                                           
+							<field name="avalible_minutes" invisible="1"/>
+                            <field name="center_tests"     invisible="1"/>
+                            <field name="test_name"        required="1" options="{'no_open':1,'no_create':1}"             string="نوع الاختبار" domain="[('id','in',center_tests)]"/>
+                            <field name="trackk"/>
+                            <field name="branch"           required="1" options="{'no_open':1,'no_create':1,'no_edit':1}" string="الفرع"       domain="[('test_name','=',test_name), ('trackk','=',trackk)]"/>
+                            <field name="branch_duration" string="مدة الفرع"/>                                            
+                            <field name="massege" string="                     "/>
+                            <field name="flag"           invisible="1"/>
+                            <field name="academic_id"    invisible="1" options="{'no_open':1,'no_create':1}"/>
+                            <field name="study_class_id" invisible="1" options="{'no_open':1,'no_create':1}"/>
+						</tree>
+		    		</field>
+
+                    <group>
+						<field name="counter" string="عدد المعلمون المستوفين للشروط"/>  
+						<field name="hide" invisible="1"/>
+					</group>
+							
+                    <footer>
+                        <button name="ok" type="object" string="OK" class="oe_highlight"/>
+                        <button special="cancel" string="Cancel" class="oe_link"/>
+                    </footer>
+				</form>
+			</field>
+		</record>
+
+		<record id="action_test_registration_teacher" model="ir.actions.act_window">
+	        <field name="name"/>
+	        <field name="res_model">test.register.teacher</field>
+	        <field name="view_type">form</field>
+	        <field name="view_mode">form</field>
+	        <field name="view_id" ref="test_registration_teacher_from"/>
+	        <field name="target">new</field>
+		</record>
+
+	</data>
+</odoo>

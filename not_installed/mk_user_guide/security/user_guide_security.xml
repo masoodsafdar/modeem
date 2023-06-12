@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data noupdate="1">
+            <!-- user guide category -->
+    	 <record id="user_guide_category" model="ir.module.category">
+            <field name="name">User guide Management</field>
+          </record>
+
+          <!-- group of Update or Modify user guide -->
+          <record id="write_user_guide" model="res.groups">
+               <field name="name">Update or Modify User guide</field>
+               <field name="users" eval="[(4, ref('base.user_root'))]"/>
+               <field name="category_id" ref="user_guide_category"/>
+          </record>
+
+          <!-- group of Create user guide -->
+          <record id="create_user_guide" model="res.groups">
+               <field name="name">Create User guide</field>
+               <field name="users" eval="[(4, ref('base.user_root'))]"/>
+               <field name="category_id" ref="user_guide_category"/>
+          </record>
+
+          <!-- group of Delete user guide -->
+          <record id="delete_user_guide" model="res.groups">
+               <field name="name">Delete User guide</field>
+               <field name="users" eval="[(4, ref('base.user_root'))]"/>
+               <field name="category_id" ref="user_guide_category"/>
+          </record>
+
+    </data>
+</odoo>

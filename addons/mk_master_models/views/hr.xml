@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+		<record model="ir.ui.view" id="view_employee_search">
+        	<field name="name">hr.employee.search.inherit</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_filter"/>
+            <field name="arch" type="xml">
+                <group position="inside">
+                	<filter name="Not updated"    string="Not updated" domain="[('write_date','=',False)]"/>
+                    <filter name="group_category" string="Category"    domain="[]" context="{'group_by':'category'}"/>
+                    <filter name="accepted"       string="accepted"    domain="[('state','=','accept')]"/>
+                    <filter name="draft"          string="draft"       domain="[('state','=','draft')]"/>
+                    <filter name="draft"          string="accepted"    domain="[('state','=','draft')]"/>
+                </group>
+
+                <search position="inside">
+                    <field name="registeration_code"/>
+                </search>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_employee_form_inherit">
+        	<field name="name">hr.employee.form.inherit</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">               
+                <xpath expr="//div[@class='oe_title']" position="replace">
+                </xpath>
+                
+                <field name="parent_id" position="replace">
+                </field>
+                
+                <field name="coach_id" position="replace">
+                </field>
+                
+                <field name="resource_calendar_id" position="replace">
+                </field>
+               
+                <field name="image" position="after">
+                    <group colspan="4">
+                        <field name="identification_id"  style="width:50%;"/>
+                        <field name="name"               style="width:50%;" required="True"/>
+                        <field name="registeration_code" style="width:50%;"/>
+                    </group>
+                </field>
+                
+                <field name="department_id" position="before">
+                	<field name="category2"             attrs="{'readonly':  [('state','=','accept')]}" string="cattegory" required="1"/>                
+                	<field name="center_admin_category" attrs="{'invisible': [('category','!=','center_admin')],'readonly': [('state','=','accept')]}"/>
+                    <field name="category"              options="{'no_create': 1,'no_open': 1}"       readonly="0" required="1" invisible="1"/>                       
+                </field>
+                
+                <field name="mobile_phone" position="after">
+                    <field name="kin_phone" class="oe_phone"/>                       
+                </field>
+                
+               	<xpath expr="//field[@name='mobile_phone']" position="replace">
+                    <field name="mobile_phone" class="oe_phone"/>        
+                </xpath>
+                
+    			<xpath expr="//field[@name='job_id']" position="attributes">
+        			<attribute name="required">True</attribute>
+					<attribute name="invisible">True</attribute>
+        		</xpath>
+        		
+    			<xpath expr="//field[@name='gender']" position="attributes">
+        			<attribute name="required">True</attribute>
+        		</xpath>
+        		
+    			<xpath expr="//field[@name='marital']" position="attributes">
+        			<attribute name="required">True</attribute>
+        		</xpath>
+        		
+    			<xpath expr="//field[@name='work_phone']" position="replace">        
+        			<field name="work_phone" class="oe_phone"/>
+        		</xpath>
+        		
+                <field name="address_id" position="replace">       
+                </field>
+
+            	<field name="work_phone" position="after">
+                	<field name="recruit_ids" widget="many2many_tags" required="1"/>
+					<field name="job_id" options="{'no_open':1,'no_create':1}"/>
+            	</field>
+            	
+              	<field name="department_id" position="after">
+                	<field name="mosque_id" required="0" invisible="1" options="{'no_open':1,'no_create':1}"/>
+                </field>
+
+                <field name="department_id" position="after">
+                   <field name="mosqtech_ids" widget="many2many_tags" domain="[('center_department_id','=',department_id)]" attrs="{'invisible':['|',('category','in',['edu_supervisor','center_admin'])], 'required':[('category','not in',['edu_supervisor','center_admin']),('state','!=','accept')],'readonly':[('state','=','accept')]}"/>                         
+                </field>
+
+                <field name="department_id" position="replace">
+                    <field name="department_id" attrs="{'invisible':[('category2','=',False)], 'readonly':[('state','=','accept')],'required':[(('state','!=','accept'))]}"/>
+                </field>
+                
+                <field name="work_email" position="replace">
+                	<field name="work_email" attrs="{'required':[('category','!=','teacher')]}"/>
+                </field>
+                
+                <page name="hr_settings" position="after">
+                    <page name="salary_settings" string="Salary Settings" attrs="{'invisible':[('category','=','edu_supervisor')]}" >
+                        <group>
+                            <group string="Salary" name="active_group">
+                                <field name="salary"/>
+                                <field name="salary_donor" />
+                                <field name="contract_type" />
+                            </group>
+                        </group>
+                    </page>
+
+                    <page string="saved parts" attrs="{'invisible':[('category','=','edu_supervisor')]}">
+                    	<field name="part_ids" options="{'no_create': True,'no_open': True,}"/>
+                    </page>
+                </page>                
+			</field>
+        </record>
+
+        <record model="ir.ui.view" id="view_employee1_form_inherit">
+            <field name="name">hr.employee.form.inherit</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+            	<xpath expr="/form/*" position="before">
+            		<header>
+                    	<button name="accept"      string="Validate"      attrs="{'invisible':[('state', 'in',('accept','reject'))]}" type="object" class="btn btn-sm oe_button"/>                     
+                    	<button name="reject"      string="reject"        attrs="{'invisible':[('state', 'in',('accept','reject'))]}" type="object" class="btn btn-sm oe_button"/>
+                		<button name="draft"       string="Set to draft"  attrs="{'invisible':[('state', 'in',('draft'))]}"           type="object" class="oe_highlight"/>                 		
+                 		<button name="send_passwd" string="send password" attrs="{'invisible':[('state', 'in',('draft','reject'))]}"  type="object"/>
+            
+                 		<button name="%(add_employee_mosque_actoin)d" string="add mosques for employee" type="action" context="{'default_employee_id':active_id,'default_department_id':department_id, 'default_category':category2}" attrs="{'invisible':['|',('state','in',('draft')),('category','=','center_admin')]}"/>
+
+            			<field name="state" widget="statusbar" statusbar_visible="draft,accept,reject"/>
+            		</header>            
+        		</xpath>
+        		
+            	<xpath expr="//notebook/page[2]/group/group[2]" position="replace">
+                	<group string="Contact Information" invisible="1">
+                	</group>
+            	</xpath>
+
+            	<xpath expr="//notebook/page[2]/group/group[@name='work_permit']" position="replace">
+                	<group string="Work Permit" name="work_permit" invisible="1">
+                        <field name="visa_no"/>
+                        <field name="permit_no"/>
+                        <field name="visa_expire"/>
+                    </group>
+            	</xpath>
+            	
+            	<xpath expr="//notebook/page[3]" position="replace">
+                	<page name="hr_settings" string="HR Settings" groups="hr.group_hr_user">
+	                    <group>
+                        	<group string='Status' name="active_group">
+                            	<field name="company_id" groups="base.group_multi_company" options="{'no_open':1,'no_create':1}"/>
+                            	<field name="user_id" string="Related User"/>
+                        	</group>
+                    	</group>
+                	</page>
+                	
+                	<page string="mosques" attrs="{'invisible':[('category', '!=','edu_supervisor')]}" >
+                    	<field name="mosque_sup"/>
+                	</page>
+            	</xpath>
+            	
+            	<xpath expr="//notebook/page[2]/group/group[1]" position="replace">
+                	<group string="Citizenship &amp; Other Information" invisible="1">
+                	</group>
+                	<group string="citizenship">
+                    	<field name="country_id"  options="{'no_create': 1, 'no_open':1}" required="True"/>
+                    	<field name="issue_identity" />
+                    	<field name="identity_expire" />
+                	</group>
+            	</xpath>
+
+				<xpath expr="//notebook/page[2]" position="attributes">
+               		<attribute name="groups">mk_users.mk_mosque_admins,mk_users.mk_admin,mk_users.mosque_users,mk_users.admin_center,mk_users.male_admin,mk_users.female_admin,mk_users.male_admin_center,mk_users.female_admin_center"</attribute>
+				</xpath>
+				
+				<xpath expr="//notebook/page[1]" position="attributes">
+               		<attribute name="groups">mk_users.mk_mosque_admins,mk_users.mk_admin,mk_users.mosque_users,mk_users.admin_center,mk_users.male_admin,mk_users.female_admin,mk_users.male_admin_center,mk_users.female_admin_center"</attribute>
+ 				</xpath>
+ 				
+            	<field name="category_ids" position="replace">
+                    <field name="category_ids" widget="many2many_tags" options="{'color_field': 'color', 'no_create_edit':  True}" placeholder="e.g. Part Time" groups="hr.group_hr_user" invisible="1"/>
+                    </field>
+            </field>
+    	</record>
+
+    	<record id="open_view_employee_list_my_admin" model="ir.actions.act_window">
+            <field name="name">Mosques Admins</field>
+            <field name="res_model">hr.employee</field>
+            <!-- <field name="view_type">form</field> -->
+            <field name="view_mode">kanban,tree,form</field>
+            <field name="domain">[('category','=','admin')]</field>
+            <field name="context">{'default_category':'admin','default_category2':'admin'}</field>
+            <field name="view_id" eval="False"/>
+            <field name="search_view_id" ref="hr.view_employee_filter"/>
+    	</record>
+
+    	<record id="open_view_employee_list_my_super" model="ir.actions.act_window">
+            <field name="name">Mosque's Supervisors</field>
+            <field name="res_model">hr.employee</field>
+            <!-- <field name="view_type">form</field> -->
+            <field name="view_mode">kanban,tree,form</field>
+            <field name="domain">[('category','=','supervisor')]</field>
+            <field name="context">{'default_category':'supervisor','default_category2':'supervisor'}</field>
+            <field name="view_id" eval="False"/>
+            <field name="search_view_id" ref="hr.view_employee_filter"/>
+    	</record>
+
+    	<record id="open_view_employee_list_my_teac" model="ir.actions.act_window">
+            <field name="name">Mosque's Teachers</field>
+            <field name="res_model">hr.employee</field>
+            <!-- <field name="view_type">form</field> -->
+            <field name="view_mode">kanban,tree,form</field>
+            <field name="domain">[('category','=','teacher')]</field>
+            <field name="context">{'default_category':'teacher','default_category2':'teacher'}</field>
+            <field name="view_id" eval="False"/>
+            <field name="search_view_id" ref="hr.view_employee_filter"/>
+    	</record>
+        
+    	<record id="open_view_employee_list_my_center" model="ir.actions.act_window">
+            <field name="name">Center Admins</field>
+            <field name="res_model">hr.employee</field>
+            <!-- <field name="view_type">form</field> -->
+            <field name="view_mode">kanban,tree,form</field>
+            <field name="domain">[('category','=','center_admin')]</field>
+            <field name="context">{'default_category':'center_admin','default_category2':'center_admin'}</field>
+            <field name="view_id" eval="False"/>
+            <field name="search_view_id" ref="hr.view_employee_filter"/>
+    	</record>
+
+    	<record id="open_view_employee_list_educational_supervisor" model="ir.actions.act_window">
+            <field name="name">Education supervisors</field>
+            <field name="res_model">hr.employee</field>
+            <!-- <field name="view_type">form</field> -->
+            <field name="view_mode">kanban,tree,form</field>
+            <field name="domain">[('category','=','edu_supervisor')]</field>
+            <field name="context">{'default_category':'edu_supervisor','default_category2':'edu_supervisor'}</field>
+            <field name="view_id" eval="False"/>
+            <field name="search_view_id" ref="hr.view_employee_filter"/>
+    	</record>
+
+     	<record id="open_view_employee_list_service" model="ir.actions.act_window">
+            <field name="name">service</field>
+            <field name="res_model">hr.employee</field>
+            <!-- <field name="view_type">form</field> -->
+            <field name="view_mode">kanban,tree,form</field>
+            <field name="domain">[('category','=','others')]</field>
+            <field name="context">{'default_category':'others','default_category2':'others'}</field>
+            <field name="view_id" eval="False"/>
+           <!-- <field name="search_view_id" ref="hr.view_employee_filter"/>-->
+    	</record>
+
+		<menuitem id="menu_open_center"  name="Center Admins"           action="open_view_employee_list_my_center"              parent="hr.menu_open_view_employee_list_my" sequence="0" groups="mk_users.mk_admin,mk_users.male_admin,mk_users.female_admin,mk_users.male_admin_center,mk_users.female_admin_center"/>  
+		<menuitem id="menu_open_edu_sup" name="Educational supervisors" action="open_view_employee_list_educational_supervisor" parent="hr.menu_open_view_employee_list_my" sequence="1" groups="mk_users.mk_admin,mk_users.admin_center,mk_users.male_admin,mk_users.female_admin,mk_users.male_admin_center,mk_users.female_admin_center"/>
+		<menuitem id="menu_open_admins"  name="Mosques Admins"          action="open_view_employee_list_my_admin"               parent="hr.menu_open_view_employee_list_my" sequence="2" groups="mk_users.mk_admin,mk_users.admin_center,mk_users.male_admin,mk_users.female_admin,mk_users.male_admin_center,mk_users.female_admin_center"/>  
+		<menuitem id="menu_open_superv"  name="Mosque's Supervisors"    action="open_view_employee_list_my_super"               parent="hr.menu_open_view_employee_list_my" sequence="3" groups="mk_users.mk_mosque_admins,mk_users.mk_admin,mk_users.admin_center,mk_users.male_admin,mk_users.female_admin,mk_users.male_admin_center,mk_users.female_admin_center"/>  
+		<menuitem id="menu_open_teacher" name="Mosque's Teachers"       action="open_view_employee_list_my_teac"                parent="hr.menu_open_view_employee_list_my" sequence="4" groups="mk_users.mk_mosque_admins,mk_users.mk_admin,mk_users.mosque_users,mk_users.admin_center,mk_users.male_admin,mk_users.female_admin,mk_users.male_admin_center,mk_users.female_admin_center"/>
+		<menuitem id="menu_open_service" name="service"                 action="open_view_employee_list_service"                parent="hr.menu_open_view_employee_list_my" sequence="5" groups="mk_users.mk_mosque_admins,mk_users.mk_admin,mk_users.mosque_users,mk_users.admin_center,mk_users.male_admin,mk_users.female_admin,mk_users.male_admin_center,mk_users.female_admin_center"/>
+
+        <record model='ir.ui.menu' id='hr.menu_open_view_employee_list_my'>
+            <field name='action' eval="False"/>
+        </record>
+
+        <menuitem id="hr.menu_hr_main" name="Human Resources" parent="hr.menu_hr_root" sequence="101"/>
+
+    </data>
+</odoo>

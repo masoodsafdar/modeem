@@ -1,0 +1,183 @@
+<?xml version="1.0"?>
+<odoo>
+    	<record id="mk_mosque_inherit_kanban_view" model="ir.ui.view">
+			<field name="name">Mosque kanban View</field>
+			<field name="model">mk.mosque</field>
+            <field name="inherit_id" ref="mk_episode_management.mk_mosque_kanban_view"/>
+			<field name="arch" type="xml">
+				<xpath expr="//kanban" position="replace">
+
+                <kanban class="o_mk_parent_kanban">
+                    <field name="id"/>
+                    <field name="name"/>
+                     <field name="mosque_info"/>
+                    <!--  <field name="responsible_id"/>-->
+                    <templates>
+                        <t t-name="kanban-box">
+<!--
+                            <t t-if="record.responsible_id.raw_value">
+-->
+                                <div class="oe_kanban_global_click" style="width:auto;box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);border-radius: 6px;">
+                                    <span>
+                                        <img t-att-src="kanban_image('mk.mosque', 'image_medium', record.id.raw_value)" class="oe_kanban_image" style="width:80px;height:80px; display: block;
+  margin: 1em auto;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-border-radius: 99em;
+  -moz-border-radius: 99em;
+  border-radius: -99em;
+
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);"/>
+                                        <center>
+                                        <span style="font-size:16px;text-align:center;color:##af481f">
+                                            <b>
+                                                <field name="name"/>
+                                            </b>
+                                        </span>
+                                        <br/>
+                                             <span class="mosque_info_text">
+
+                                          <field name="mosque_info"/>
+                                    </span>
+
+
+                                        </center>
+                                    </span>
+
+
+                                    <div class="#">
+                                    </div>
+
+
+                                    <div class="oe_kanban_details"
+                                         style="text-align:center;padding-bottom:5px;clear:both;vertical-align: right;margin-top:43px;">
+                                       <center>
+                                        <a type="object" name="open_other">
+
+                                            <div class=" oe_icone_all oe_super">
+                                                <br></br>
+
+                                                <br></br>
+                                                <span style="color: #746d64;">الإداريين</span>
+                                                <span class="oe_counter">
+                                                    <b><field name="others_emp_number"/></b>
+                                                </span>
+                                            </div>
+                                        </a>
+
+                                        <a type="object" name="open_episods">
+                                            <div class=" oe_icone_all oe_episodes">
+                                                <br></br>
+                                                <br></br>
+                                                <span style="color: #746d64;">الحلقات</span>
+                                                <span class="oe_counter"><b><field name="episodes_number"/></b></span>
+                                            </div>
+                                        </a>
+
+                                        <a type="object" name="open_teacher">
+                                            <div class=" oe_icone_all oe_teacher">
+                                                <br></br>
+                                                <br></br>
+                                                <span style="color: #746d64;">المعلمين</span>
+                                                <span class="oe_counter"><b><field name="teachers_number"/></b></span>
+                                            </div>
+                                        </a>
+                                        <t t-if="student_number &gt; 0">
+                                            <a type="object" name="open_students">
+                                                <div class="oe_masjed_icon">
+                                                    <br></br>
+                                                    <br></br>
+                                                    <span style="color: #746d64;">الطلاب</span>
+                                                    <span class="oe_counter badge-pill"><b><field name="student_number"/></b></span>
+                                                </div>
+                                            </a>
+                                        </t>
+                                        <a type="object" name="open_super">
+                                            <div class=" oe_icone_all oe_supervisor">
+                                                <br></br>
+                                                <br></br>
+                                                <span style="color: #746d64;">المشرفين</span>
+                                                <span class="oe_counter"><b  class="text_count"><field name="supervisors_no"/></b></span>
+                                            </div>
+                                        </a>
+                                         </center>
+                                    </div>
+
+    </div>
+
+                           <!-- </t>
+
+                            <t t-else="">
+                                <div class="oe_kanban_global_click"
+                                     style="width:420px;height:181px; background-color: #aad9c5;color: #fff;">
+                                    <span>
+                                        <img t-att-src="kanban_image('mk.mosque', 'image_medium', record.id.raw_value)" class="oe_kanban_image" style="width:50px;height:50px;"/>
+                                        <span style="font-size:16px;color:##af481f"><b><field name="name"/></b></span>
+                                    </span>
+
+                                    <div class="#" style="border-top:1px #4a8448 solid;margin-top:10px;">
+                                    </div>
+
+                                    <div class="oe_kanban_details"
+                                         style="text-align:right;padding-bottom:5px;clear:both;vertical-align: right;margin-top:10px;">
+                                        <a type="object" name="open_other">
+                                            <div class="oe_super">
+                                                <br></br>
+                                                <br></br>
+                                                <span style="color:white"><b>الإداريين</b></span>
+                                                <span class="oe_counter"><b><field name="others_emp_number"/></b></span>
+                                            </div>
+                                        </a>
+
+                                        <a type="object" name="open_episods">
+                                            <div class="oe_episodes">
+                                                <br></br>
+                                                <br></br>
+                                                <span style="color:white"><b>الحلقات</b></span>
+                                                <span class="oe_counter"><b><field name="episodes_number"/></b></span>
+                                            </div>
+                                        </a>
+
+                                        <a type="object" name="open_teacher">
+                                            <div class="oe_teacher">
+                                                <br></br>
+                                                <br></br>
+                                                <span style="color:white"><b>المعلمين</b></span>
+                                                <span class="oe_counter"><b><field name="teachers_number"/></b></span>
+                                            </div>
+                                        </a>
+                                        <t t-if="student_number &gt; 0">
+                                            <a type="object" name="open_student">
+                                                <div class="oe_masjed_icon">
+                                                    <br></br>
+                                                    <br></br>
+                                                    <span style="color:white"><b>الطلاب</b></span>
+                                                    <span class="oe_counter"><b><field name="student_number"/></b></span>
+                                                </div>
+                                            </a>
+                                        </t>
+                                        <a type="object" name="open_super">
+                                            <div class="oe_super">
+                                                <br></br>
+                                                <br></br>
+                                                <span style="color:white"><b>المشرفين</b></span>
+                                                <span class="oe_counter"><b><field name="supervisors_no"/></b></span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </t>-->
+                        </t>
+                    </templates>
+                </kanban>
+
+
+
+                </xpath>
+			</field>
+		</record>
+
+
+</odoo>

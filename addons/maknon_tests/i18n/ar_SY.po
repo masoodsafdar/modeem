@@ -1,0 +1,3294 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* maknon_tests
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-01-19 21:38+0000\n"
+"PO-Revision-Date: 2020-01-19 21:38+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: maknon_tests
+#: model:ir.module.category,name:maknon_tests.module_category_Student_tests
+msgid " Maknoon Student tests Setting"
+msgstr " اختبارات الطلاب"
+
+#. module: maknon_tests
+#: model:ir.module.category,name:maknon_tests.module_category_assembly_tests1
+msgid " Maknoon Test Setting"
+msgstr " إعدادات الاختبارات"
+
+#. module: maknon_tests
+#: model:ir.module.category,name:maknon_tests.module_category_test_period
+msgid " Test Setting /   Test Period  "
+msgstr " إعدادات الاختبارات /   الفترات  "
+
+#. module: maknon_tests
+#: model:ir.module.category,name:maknon_tests.module_category_employee_items
+msgid " Test Setting /  Employee Items "
+msgstr " إعدادات الاختبارات /  المحاور "
+
+#. module: maknon_tests
+#: model:ir.module.category,name:maknon_tests.module_category_evaluation_items
+msgid " Test Setting /  Evaluation Items  "
+msgstr " إعدادات الاختبارات /  بنود القياس والتقويم  "
+
+#. module: maknon_tests
+#: model:ir.module.category,name:maknon_tests.module_category_mak_test_center
+msgid " Test Setting /  Mak Test Center "
+msgstr " إعدادات الاختبارات /  تعريف مراكز الاختبار "
+
+#. module: maknon_tests
+#: model:ir.module.category,name:maknon_tests.module_category_reward_items
+msgid " Test Setting / Reward Items "
+msgstr " إعدادات الاختبارات / المكافئات "
+
+#. module: maknon_tests
+#: model:ir.module.category,name:maknon_tests.module_category_branches_master
+msgid " Test Setting / Test Branches  "
+msgstr " إعدادات الاختبارات / فروع الإختبارات "
+
+#. module: maknon_tests
+#: model:ir.module.category,name:maknon_tests.module_category_types_tests
+msgid " Test Setting / Types Tests "
+msgstr " إعدادات الاختبارات / انواع الاختبارات "
+
+#. module: maknon_tests
+#: model:res.groups,name:maknon_tests.group_employee_items_archives
+msgid " employee items archives"
+msgstr "ارشفة المحاور"
+
+#. module: maknon_tests
+#: model:res.groups,name:maknon_tests.group_employee_items_create
+msgid " employee items create"
+msgstr "انشاء المحاور"
+
+#. module: maknon_tests
+#: model:res.groups,name:maknon_tests.group_employee_items_delete
+msgid " employee items delete"
+msgstr "حذف المحاور"
+
+#. module: maknon_tests
+#: model:res.groups,name:maknon_tests.group_employee_items_edit
+msgid " employee items edit"
+msgstr "الكتابة او التعديل علي المحاور"
+
+#. module: maknon_tests
+#: model:res.groups,name:maknon_tests.group_employee_items_read
+msgid " employee items read"
+msgstr "القراءة او الإطلاع علي المحاور"
+
+#. module: maknon_tests
+#: model:res.groups,name:maknon_tests.group_mak_test_center_read
+msgid " mak test center  read"
+msgstr "القراءة او الإطلاع علي مراكز الاختبارات"
+
+#. module: maknon_tests
+#: model:res.groups,name:maknon_tests.group_mak_test_center_archives
+msgid " mak test center archives"
+msgstr " ارشفة مراكز الاختبارات"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_student_test_session_force_degree
+#: model:ir.model.fields,field_description:maknon_tests.field_student_test_session_force_degree
+#: model:ir.model.fields,field_description:maknon_tests.field_update_degree_force_degree
+msgid "Force degree"
+msgstr "الدرجة المعدلة"
+
+#. module: maknon_tests
+#: model:ir.actions.act_window,name:maknon_tests.update_degree_wizard
+#: model:ir.model,name:maknon_tests.model_update_degree
+#: model:ir.ui.view,arch_db:maknon_tests.student_test_session_form_view
+#: model:ir.ui.view,arch_db:maknon_tests.update_degree_form
+msgid "Update degree"
+msgstr " تعديل الدرجة"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.update_degree_form
+msgid "Update"
+msgstr "تحديث"
+
+#. module: maknon_tests
+#: model:res.groups,name:maknon_tests.update_test_degree
+msgid "Update test degree"
+msgstr "تعديل درجة الإختبار"
+
+#. module: maknon_tests
+#: model:res.groups,name:maknon_tests.group_mak_test_center_create
+msgid " mak test center create"
+msgstr "انشاء مراكز الاختبارات"
+
+#. module: maknon_tests
+#: model:res.groups,name:maknon_tests.group_mak_test_center_delete
+msgid " mak test center delete"
+msgstr " حذف مراكز الاختبارات"
+
+#. module: maknon_tests
+#: model:res.groups,name:maknon_tests.group_mak_test_center_edit
+msgid " mak test center edit"
+msgstr "الكتابة او التعديل علي مراكز الاختبارات"
+
+#. module: maknon_tests
+#: model:res.groups,name:maknon_tests.group_test_period_archives
+msgid " test period archives"
+msgstr "ارشفة فترة الاختبار"
+
+#. module: maknon_tests
+#: model:res.groups,name:maknon_tests.group_test_period_create
+msgid " test period create"
+msgstr "انشاء فترة الاختبار"
+
+#. module: maknon_tests
+#: model:res.groups,name:maknon_tests.group_test_period_delete
+msgid " test period delete"
+msgstr "حذف فترة الاختبار"
+
+#. module: maknon_tests
+#: model:res.groups,name:maknon_tests.group_test_period_edit
+msgid " test period edit"
+msgstr "الكتابة او التعديل علي فترة الاختبار"
+
+#. module: maknon_tests
+#: model:res.groups,name:maknon_tests.group_test_period_read
+msgid " test period read"
+msgstr "القراءة او الإطلاع علي  فترة الاختبار"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_mak_test_center_main_company
+msgid " تحديد الادارة العامة كمركز رئيسي"
+msgstr " تحديد الادارة العامة كمركز رئيسي"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_mak_test_center_all_branches
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_test_center_prepration_all_branches
+msgid "ALL branches"
+msgstr "كل الفروع المتاحة"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_tests_sesstion_wizard_academic_id
+msgid "Academic"
+msgstr "العام الدراسي"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_mak_test_center_academic_id
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_test_center_prepration_academic_id
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_test_names_academic_id
+#: model:ir.model.fields,field_description:maknon_tests.field_select_students_academic_id
+#: model:ir.model.fields,field_description:maknon_tests.field_student_test_session_academic_id
+#: model:ir.model.fields,field_description:maknon_tests.field_test_register_academic_id
+msgid "Academic Year"
+msgstr "العام الدراسي"
+
+#. module: maknon_tests
+#: selection:employee.test.session,appreciation:0
+#: selection:mk.passing.items,appreciation:0
+#: selection:mk.reward.items,appreciation:0
+#: selection:student.test.session,appreciation:0
+msgid "Acceptable"
+msgstr "مقبول"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_branches_master_active
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_test_center_prepration_active
+#: model:ir.model.fields,field_description:maknon_tests.field_student_test_session_active
+msgid "Active"
+msgstr "نشط"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.committe_migration_wizard_view_form
+msgid "Add"
+msgstr "تأكيد"
+
+
+#. module: maknon_tests
+#: model:ir.actions.server,name:maknon_tests.action_student_migration_wizard
+msgid "Add Committee Member"
+msgstr "إسناد لجنة الإختبار"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.committe_migration_wizard_view_form
+msgid "Add Committee"
+msgstr "إسناد لجنة الإختبار"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_branches_master_age_fillter
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_reward_items_age_fillter
+msgid "Age Fillter"
+msgstr "الفئة العمرية"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_branches_master_age_groups
+msgid "Age groups"
+msgstr "الفئات العمرية"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_reward_items_age_groups
+msgid "Age gruops"
+msgstr "الفئات العمرية"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_discount_item_amount
+msgid "Amount"
+msgstr "الخصم"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_test_center_prepration_periods_ids
+msgid "Available Periods"
+msgstr "الفترات المتاحة"
+
+#. module: maknon_tests
+#: selection:test.questions,follow_type:0
+msgid "Big Review"
+msgstr "Big Review"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_employee_test_session_branch
+#: model:ir.model.fields,field_description:maknon_tests.field_select_students_branch
+#: model:ir.model.fields,field_description:maknon_tests.field_student_test_session_branch
+#: model:ir.model.fields,field_description:maknon_tests.field_test_register_branch
+msgid "Branch"
+msgstr "الفرع"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_branches_master_branch_group
+msgid "Branch Group"
+msgstr "الفئة المستهدفة"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_branches_master_duration
+msgid "Branch duration"
+msgstr "مدة الاختبار /دقائق"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_branches_master_name
+msgid "Branch name"
+msgstr "اسم الفرع"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_mak_test_center_branches_ids
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_passing_items_branches
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_test_center_prepration_branches_ids
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_test_names_branches
+msgid "Branches"
+msgstr "فروع المسابقات"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.re_search_view
+msgid "By  Episode"
+msgstr "الحلقة"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.add_teacher_wizerd
+#: model:ir.ui.view,arch_db:maknon_tests.committe_migration_wizard_view_form
+#: model:ir.ui.view,arch_db:maknon_tests.previous_class_test_registration_wizerd
+#: model:ir.ui.view,arch_db:maknon_tests.test_registration_wizerd
+#: model:ir.ui.view,arch_db:maknon_tests.test_session_wizard_form
+#: model:ir.ui.view,arch_db:maknon_tests.update_degree_form
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_mak_test_center_name
+msgid "Center Name"
+msgstr "اسم المركز"
+
+#. module: maknon_tests
+#: model:ir.actions.act_window,name:maknon_tests.center_time_tables_action
+msgid "Center Time Table"
+msgstr "جدول الاختبارات"
+
+#. module: maknon_tests
+#: selection:mk.reward.items,reward_type:0
+msgid "Certificate"
+msgstr "شهادة"
+
+#. module: maknon_tests
+#: selection:mk.reward.items,reward_type:0
+msgid "Certificate + Cash"
+msgstr "شهادة + مبلغ مالي"
+
+#. module: maknon_tests
+#: selection:mk.branches.master,age_fillter:0
+#: selection:mk.reward.items,age_fillter:0
+msgid "Close"
+msgstr "محدد"
+
+#. module: maknon_tests
+#: model:ir.model,name:maknon_tests.model_add_comittee_wizard
+msgid "Committe Addition Wizard"
+msgstr "معالج إضافة لجنة"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_add_comittee_wizard_committee_id
+msgid "Committee Member"
+msgstr "لجنة الإختبار"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_test_center_prepration_committee_test_ids
+msgid "Committee test"
+msgstr "لجان الاختبار"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_committee_tests_commitee_id
+msgid "Committee_id"
+msgstr "Committee_id"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_mak_test_center_company_id
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_test_center_prepration_company_id
+msgid "Company"
+msgstr "الشركة"
+
+#. module: maknon_tests
+#: model:ir.actions.act_window,name:maknon_tests.test_names_action
+#: model:ir.ui.menu,name:maknon_tests.test_names_setting
+msgid "Company Tests"
+msgstr "انواع الاختبارات"
+
+#. module: maknon_tests
+#: model:res.groups,name:maknon_tests.create_student_test_session
+msgid "Create Student Test Session"
+msgstr "تسجيل الطلاب"
+
+#. module: maknon_tests
+#: model:res.groups,name:maknon_tests.create_teacher_test_session
+msgid "Create Teacher Test Session"
+msgstr "تسجيل المعلمين للفروع"
+
+#. module: maknon_tests
+#: model:res.groups,name:maknon_tests.create_teachers_tests_centers
+msgid "Create Teachers Tests Centers"
+msgstr "إعداد مراكز الاختبار"
+
+#. module: maknon_tests
+#: model:res.groups,name:maknon_tests.create_tests_centers
+msgid "Create Test Centers"
+msgstr "إعداد مركز الاختبار"
+
+#. module: maknon_tests
+#: model:res.groups,name:maknon_tests.create_tests_time_tables
+msgid "Create Tests Time Tables"
+msgstr "توليد جدول الإختبار"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_add_comittee_wizard_create_uid
+#: model:ir.model.fields,field_description:maknon_tests.field_add_error_create_uid
+#: model:ir.model.fields,field_description:maknon_tests.field_add_error_line_create_uid
+#: model:ir.model.fields,field_description:maknon_tests.field_add_teacher_create_uid
+#: model:ir.model.fields,field_description:maknon_tests.field_center_time_table_create_uid
+#: model:ir.model.fields,field_description:maknon_tests.field_committe_member_create_uid
+#: model:ir.model.fields,field_description:maknon_tests.field_committee_tests_create_uid
+#: model:ir.model.fields,field_description:maknon_tests.field_employee_item_quastion_create_uid
+#: model:ir.model.fields,field_description:maknon_tests.field_employee_items_create_uid
+#: model:ir.model.fields,field_description:maknon_tests.field_employee_test_session_create_uid
+#: model:ir.model.fields,field_description:maknon_tests.field_mak_test_center_create_uid
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_branches_master_create_uid
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_discount_item_create_uid
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_evaluation_items_create_uid
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_passing_items_create_uid
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_reward_items_create_uid
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_test_center_prepration_create_uid
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_test_names_create_uid
+#: model:ir.model.fields,field_description:maknon_tests.field_question_error_create_uid
+#: model:ir.model.fields,field_description:maknon_tests.field_select_students_create_uid
+#: model:ir.model.fields,field_description:maknon_tests.field_student_test_session_create_uid
+#: model:ir.model.fields,field_description:maknon_tests.field_test_period_create_uid
+#: model:ir.model.fields,field_description:maknon_tests.field_test_questions_create_uid
+#: model:ir.model.fields,field_description:maknon_tests.field_test_register_create_uid
+#: model:ir.model.fields,field_description:maknon_tests.field_tests_sesstion_wizard_create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_add_comittee_wizard_create_date
+#: model:ir.model.fields,field_description:maknon_tests.field_add_error_create_date
+#: model:ir.model.fields,field_description:maknon_tests.field_add_error_line_create_date
+#: model:ir.model.fields,field_description:maknon_tests.field_add_teacher_create_date
+#: model:ir.model.fields,field_description:maknon_tests.field_center_time_table_create_date
+#: model:ir.model.fields,field_description:maknon_tests.field_committe_member_create_date
+#: model:ir.model.fields,field_description:maknon_tests.field_committee_tests_create_date
+#: model:ir.model.fields,field_description:maknon_tests.field_employee_item_quastion_create_date
+#: model:ir.model.fields,field_description:maknon_tests.field_employee_items_create_date
+#: model:ir.model.fields,field_description:maknon_tests.field_employee_test_session_create_date
+#: model:ir.model.fields,field_description:maknon_tests.field_mak_test_center_create_date
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_branches_master_create_date
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_discount_item_create_date
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_evaluation_items_create_date
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_passing_items_create_date
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_reward_items_create_date
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_test_center_prepration_create_date
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_test_names_create_date
+#: model:ir.model.fields,field_description:maknon_tests.field_question_error_create_date
+#: model:ir.model.fields,field_description:maknon_tests.field_select_students_create_date
+#: model:ir.model.fields,field_description:maknon_tests.field_student_test_session_create_date
+#: model:ir.model.fields,field_description:maknon_tests.field_test_period_create_date
+#: model:ir.model.fields,field_description:maknon_tests.field_test_questions_create_date
+#: model:ir.model.fields,field_description:maknon_tests.field_test_register_create_date
+#: model:ir.model.fields,field_description:maknon_tests.field_tests_sesstion_wizard_create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_center_time_table_date
+#: model:ir.model.fields,field_description:maknon_tests.field_employee_test_session_date
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_training_courses_date
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: maknon_tests
+#: model:ir.model.fields,help:maknon_tests.field_center_time_table_date
+msgid "Date within center tests duration"
+msgstr "Date within center tests duration"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_center_time_table_day
+msgid "Day"
+msgstr "اليوم"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.mk_test_center_prep_form_view
+msgid "Days"
+msgstr "الأيام"
+
+#. module: maknon_tests
+#: model:ir.model.fields,help:maknon_tests.field_center_time_table_day
+msgid "Days available at center"
+msgstr "الايام المتاحة"
+
+#. module: maknon_tests
+#: model:res.groups,name:maknon_tests.delete_student_test_session
+msgid "Delete Student Test Session"
+msgstr "حذف جلسة اختبار طالب"
+
+#. module: maknon_tests
+#: model:res.groups,name:maknon_tests.delete_teacher_test_session
+msgid "Delete Teacher Test Session"
+msgstr "حذف جلسة اختبار المعلم"
+
+#. module: maknon_tests
+#: model:res.groups,name:maknon_tests.delete_teachers_tests_centers
+msgid "Delete Teachers Tests Centers"
+msgstr "حذف مراكز الاختبار"
+
+#. module: maknon_tests
+#: model:res.groups,name:maknon_tests.delete_tests_time_tables
+msgid "Delete Test Time Tables"
+msgstr "حذف جدول الاختبار"
+
+#. module: maknon_tests
+#: model:res.groups,name:maknon_tests.delete_tests_centers
+msgid "Delete Tests Centers"
+msgstr "حذف مركز الاختبار"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_mak_test_center_department_ids
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_test_center_prepration_department_ids
+msgid "Departments"
+msgstr "مراكز الاشراف التابعة  للمستخدم"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_employee_item_quastion_deserved_degree
+msgid "Deserved Degree"
+msgstr "Deserved Degree"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_employee_test_session_degree
+#: model:ir.model.fields,field_description:maknon_tests.field_student_test_session_degree
+msgid "Deserved degree"
+msgstr "الدرجة المستحقة"
+
+#. module: maknon_tests
+#: selection:tests.sesstion.wizard,report_type:0
+msgid "Detailed"
+msgstr "تفصيلي"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.evaluation_items_form_view
+msgid "Discount Items"
+msgstr "تفاصيل الخصم"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_add_comittee_wizard_display_name
+#: model:ir.model.fields,field_description:maknon_tests.field_add_error_display_name
+#: model:ir.model.fields,field_description:maknon_tests.field_add_error_line_display_name
+#: model:ir.model.fields,field_description:maknon_tests.field_add_teacher_display_name
+#: model:ir.model.fields,field_description:maknon_tests.field_center_time_table_display_name
+#: model:ir.model.fields,field_description:maknon_tests.field_committe_member_display_name
+#: model:ir.model.fields,field_description:maknon_tests.field_committee_tests_display_name
+#: model:ir.model.fields,field_description:maknon_tests.field_employee_item_quastion_display_name
+#: model:ir.model.fields,field_description:maknon_tests.field_employee_items_display_name
+#: model:ir.model.fields,field_description:maknon_tests.field_employee_test_session_display_name
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_branches_master_display_name
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_discount_item_display_name
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_evaluation_items_display_name
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_passing_items_display_name
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_reward_items_display_name
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_test_center_prepration_display_name
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_test_names_display_name
+#: model:ir.model.fields,field_description:maknon_tests.field_question_error_display_name
+#: model:ir.model.fields,field_description:maknon_tests.field_report_maknon_tests_report_tests_template_display_name
+#: model:ir.model.fields,field_description:maknon_tests.field_select_students_display_name
+#: model:ir.model.fields,field_description:maknon_tests.field_student_test_session_display_name
+#: model:ir.model.fields,field_description:maknon_tests.field_test_period_display_name
+#: model:ir.model.fields,field_description:maknon_tests.field_test_questions_display_name
+#: model:ir.model.fields,field_description:maknon_tests.field_test_register_display_name
+#: model:ir.model.fields,field_description:maknon_tests.field_tests_sesstion_wizard_display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: maknon_tests
+#: selection:employee.test.session,state:0
+#: selection:student.test.session,state:0
+#: selection:test.questions,state:0
+msgid "Done test"
+msgstr "تم الاختبار"
+
+#. module: maknon_tests
+#: selection:employee.test.session,state:0
+#: selection:student.test.session,state:0
+#: selection:test.questions,state:0
+msgid "Draft"
+msgstr "مبدئي"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_test_questions_emp_session_id
+msgid "Emp session"
+msgstr "جلسة إختبار معلم"
+
+#. module: maknon_tests
+#: model:ir.model,name:maknon_tests.model_hr_employee
+#: selection:mak.test.center,test_group:0
+#: selection:mk.branches.master,branch_group:0
+#: selection:mk.test.center.prepration,center_group:0
+#: selection:mk.test.names,test_group:0
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_employee_test_session_items_question
+msgid "Employee Item"
+msgstr "المحاور"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_branches_master_employee_items
+#: model:ir.ui.menu,name:maknon_tests.test_employee_items
+#: model:ir.ui.view,arch_db:maknon_tests.employee_test_session_form_view
+msgid "Employee Items"
+msgstr "المحاور"
+
+#. module: maknon_tests
+#: model:ir.actions.act_window,name:maknon_tests.emp_test_session_action
+#: model:ir.actions.act_window,name:maknon_tests.my_emp_test_session_action
+#: model:ir.ui.menu,name:maknon_tests.employee_test_session_menu
+msgid "Employee Test Session"
+msgstr "تسجيل المعلمين"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_test_register_episode
+msgid "Episode"
+msgstr "حلقة/ الفصل"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_question_error_value
+msgid "Error numbers"
+msgstr "Error numbers"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_add_error_line_value
+#: model:ir.model.fields,field_description:maknon_tests.field_add_error_value
+msgid "Error value"
+msgstr "قيمة الخصم"
+
+#. module: maknon_tests
+#: model:ir.ui.menu,name:maknon_tests.test_evaluation_items
+msgid "Evaluation Items"
+msgstr "القياس والتقويم"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.test_branche_form_view
+msgid "Evaluation items"
+msgstr "القياس والتقويم"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_mak_test_center_exam_end_date
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_test_center_prepration_exam_end_date
+msgid "Exam End Date"
+msgstr "تاريخ نهاية الاختبارات"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.employee_test_session_form_view
+#: model:ir.ui.view,arch_db:maknon_tests.student_test_session_form_view
+msgid "Exam Result"
+msgstr "نتيجة الاختبار"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_mak_test_center_exam_start_date
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_test_center_prepration_exam_start_date
+msgid "Exam Start Date"
+msgstr "تاريخ بداية الاختبارات"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.employee_test_session_form_view
+#: model:ir.ui.view,arch_db:maknon_tests.student_test_session_form_view
+msgid "Exam questions"
+msgstr "اسئلة الاختبار"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_employee_test_session_emp_id
+msgid "Examiner Name"
+msgstr "الممتحن"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_committee_tests_examiner_employee_id
+msgid "Examinner"
+msgstr "اسم المُمْتَحِن"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.mk_test_center_prep_form_view
+msgid "Exams Periods"
+msgstr "فترة الاختبارات"
+
+#. module: maknon_tests
+#: selection:employee.test.session,appreciation:0
+#: selection:mk.passing.items,appreciation:0
+#: selection:mk.reward.items,appreciation:0
+#: selection:student.test.session,appreciation:0
+msgid "Excellent"
+msgstr "ممتاز"
+
+#. module: maknon_tests
+#: selection:employee.test.session,appreciation:0
+#: selection:mk.passing.items,appreciation:0
+#: selection:mk.reward.items,appreciation:0
+#: selection:student.test.session,appreciation:0
+msgid "Fail"
+msgstr "غير مجتاز/ة"
+
+#. module: maknon_tests
+#: selection:center.time.table,day:0
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_test_center_prepration_friday
+msgid "Friday"
+msgstr "الجمعه"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_test_questions_from_aya
+msgid "From Aya"
+msgstr "من آية"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_passing_items_from_degree
+msgid "From Degree"
+msgstr "من الدرجة"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_test_questions_from_surah
+msgid "From Sura"
+msgstr "من سورة"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.mk_test_center_prep_form_view
+msgid "Genarate timetable"
+msgstr "اعداد جدول الاختبار"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_mak_test_center_gender
+msgid "Gender"
+msgstr "الجنس"
+
+#. module: maknon_tests
+#: model:res.groups,name:maknon_tests.general_manager
+msgid "Genral Manager"
+msgstr "مدير عام الاختبارت"
+
+#. module: maknon_tests
+#: selection:employee.test.session,appreciation:0
+#: selection:mk.passing.items,appreciation:0
+#: selection:mk.reward.items,appreciation:0
+#: selection:student.test.session,appreciation:0
+msgid "Good"
+msgstr "جيد"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_add_comittee_wizard_id
+#: model:ir.model.fields,field_description:maknon_tests.field_add_error_id
+#: model:ir.model.fields,field_description:maknon_tests.field_add_error_line_id
+#: model:ir.model.fields,field_description:maknon_tests.field_add_teacher_id
+#: model:ir.model.fields,field_description:maknon_tests.field_center_time_table_id
+#: model:ir.model.fields,field_description:maknon_tests.field_committe_member_id
+#: model:ir.model.fields,field_description:maknon_tests.field_committee_tests_id
+#: model:ir.model.fields,field_description:maknon_tests.field_employee_item_quastion_id
+#: model:ir.model.fields,field_description:maknon_tests.field_employee_items_id
+#: model:ir.model.fields,field_description:maknon_tests.field_employee_test_session_id
+#: model:ir.model.fields,field_description:maknon_tests.field_mak_test_center_id
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_branches_master_id
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_discount_item_id
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_evaluation_items_id
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_passing_items_id
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_reward_items_id
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_test_center_prepration_id
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_test_names_id
+#: model:ir.model.fields,field_description:maknon_tests.field_question_error_id
+#: model:ir.model.fields,field_description:maknon_tests.field_report_maknon_tests_report_tests_template_id
+#: model:ir.model.fields,field_description:maknon_tests.field_select_students_id
+#: model:ir.model.fields,field_description:maknon_tests.field_student_test_session_id
+#: model:ir.model.fields,field_description:maknon_tests.field_test_period_id
+#: model:ir.model.fields,field_description:maknon_tests.field_test_questions_id
+#: model:ir.model.fields,field_description:maknon_tests.field_test_register_id
+#: model:ir.model.fields,field_description:maknon_tests.field_tests_sesstion_wizard_id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_add_error_item
+#: model:ir.model.fields,field_description:maknon_tests.field_add_error_line_item
+#: model:ir.model.fields,field_description:maknon_tests.field_question_error_item
+msgid "Item"
+msgstr "البنود"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_branches_master_job_id
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_test_names_job_id
+msgid "Job"
+msgstr "الوظيفة"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_add_comittee_wizard___last_update
+#: model:ir.model.fields,field_description:maknon_tests.field_add_error___last_update
+#: model:ir.model.fields,field_description:maknon_tests.field_add_error_line___last_update
+#: model:ir.model.fields,field_description:maknon_tests.field_add_teacher___last_update
+#: model:ir.model.fields,field_description:maknon_tests.field_center_time_table___last_update
+#: model:ir.model.fields,field_description:maknon_tests.field_committe_member___last_update
+#: model:ir.model.fields,field_description:maknon_tests.field_committee_tests___last_update
+#: model:ir.model.fields,field_description:maknon_tests.field_employee_item_quastion___last_update
+#: model:ir.model.fields,field_description:maknon_tests.field_employee_items___last_update
+#: model:ir.model.fields,field_description:maknon_tests.field_employee_test_session___last_update
+#: model:ir.model.fields,field_description:maknon_tests.field_mak_test_center___last_update
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_branches_master___last_update
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_discount_item___last_update
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_evaluation_items___last_update
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_passing_items___last_update
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_reward_items___last_update
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_test_center_prepration___last_update
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_test_names___last_update
+#: model:ir.model.fields,field_description:maknon_tests.field_question_error___last_update
+#: model:ir.model.fields,field_description:maknon_tests.field_report_maknon_tests_report_tests_template___last_update
+#: model:ir.model.fields,field_description:maknon_tests.field_select_students___last_update
+#: model:ir.model.fields,field_description:maknon_tests.field_student_test_session___last_update
+#: model:ir.model.fields,field_description:maknon_tests.field_test_period___last_update
+#: model:ir.model.fields,field_description:maknon_tests.field_test_questions___last_update
+#: model:ir.model.fields,field_description:maknon_tests.field_test_register___last_update
+#: model:ir.model.fields,field_description:maknon_tests.field_tests_sesstion_wizard___last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_add_comittee_wizard_write_uid
+#: model:ir.model.fields,field_description:maknon_tests.field_add_error_line_write_uid
+#: model:ir.model.fields,field_description:maknon_tests.field_add_error_write_uid
+#: model:ir.model.fields,field_description:maknon_tests.field_add_teacher_write_uid
+#: model:ir.model.fields,field_description:maknon_tests.field_center_time_table_write_uid
+#: model:ir.model.fields,field_description:maknon_tests.field_committe_member_write_uid
+#: model:ir.model.fields,field_description:maknon_tests.field_committee_tests_write_uid
+#: model:ir.model.fields,field_description:maknon_tests.field_employee_item_quastion_write_uid
+#: model:ir.model.fields,field_description:maknon_tests.field_employee_items_write_uid
+#: model:ir.model.fields,field_description:maknon_tests.field_employee_test_session_write_uid
+#: model:ir.model.fields,field_description:maknon_tests.field_mak_test_center_write_uid
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_branches_master_write_uid
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_discount_item_write_uid
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_evaluation_items_write_uid
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_passing_items_write_uid
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_reward_items_write_uid
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_test_center_prepration_write_uid
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_test_names_write_uid
+#: model:ir.model.fields,field_description:maknon_tests.field_question_error_write_uid
+#: model:ir.model.fields,field_description:maknon_tests.field_select_students_write_uid
+#: model:ir.model.fields,field_description:maknon_tests.field_student_test_session_write_uid
+#: model:ir.model.fields,field_description:maknon_tests.field_test_period_write_uid
+#: model:ir.model.fields,field_description:maknon_tests.field_test_questions_write_uid
+#: model:ir.model.fields,field_description:maknon_tests.field_test_register_write_uid
+#: model:ir.model.fields,field_description:maknon_tests.field_tests_sesstion_wizard_write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_add_comittee_wizard_write_date
+#: model:ir.model.fields,field_description:maknon_tests.field_add_error_line_write_date
+#: model:ir.model.fields,field_description:maknon_tests.field_add_error_write_date
+#: model:ir.model.fields,field_description:maknon_tests.field_add_teacher_write_date
+#: model:ir.model.fields,field_description:maknon_tests.field_center_time_table_write_date
+#: model:ir.model.fields,field_description:maknon_tests.field_committe_member_write_date
+#: model:ir.model.fields,field_description:maknon_tests.field_committee_tests_write_date
+#: model:ir.model.fields,field_description:maknon_tests.field_employee_item_quastion_write_date
+#: model:ir.model.fields,field_description:maknon_tests.field_employee_items_write_date
+#: model:ir.model.fields,field_description:maknon_tests.field_employee_test_session_write_date
+#: model:ir.model.fields,field_description:maknon_tests.field_mak_test_center_write_date
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_branches_master_write_date
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_discount_item_write_date
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_evaluation_items_write_date
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_passing_items_write_date
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_reward_items_write_date
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_test_center_prepration_write_date
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_test_names_write_date
+#: model:ir.model.fields,field_description:maknon_tests.field_question_error_write_date
+#: model:ir.model.fields,field_description:maknon_tests.field_select_students_write_date
+#: model:ir.model.fields,field_description:maknon_tests.field_student_test_session_write_date
+#: model:ir.model.fields,field_description:maknon_tests.field_test_period_write_date
+#: model:ir.model.fields,field_description:maknon_tests.field_test_questions_write_date
+#: model:ir.model.fields,field_description:maknon_tests.field_test_register_write_date
+#: model:ir.model.fields,field_description:maknon_tests.field_tests_sesstion_wizard_write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: maknon_tests
+#: selection:mk.branches.master,quations_method:0
+msgid "Lines Number"
+msgstr "عدد الاسطر"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_branches_master_lines_per_part
+msgid "Lines per Part"
+msgstr "عدد الاسطر"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_center_time_table_list_of_examiners
+#: model:ir.ui.view,arch_db:maknon_tests.center_time_table_form_view
+msgid "List of Examiners"
+msgstr "قائمة الممتحنين"
+
+#. module: maknon_tests
+#: selection:test.questions,follow_type:0
+msgid "Listening"
+msgstr "الإستماع"
+
+#. module: maknon_tests
+#: model:res.groups,name:maknon_tests.group_types_tests_archives
+msgid "MK types tests archivess"
+msgstr "ارشفة انواع الاختبارات"
+
+#. module: maknon_tests
+#: model:res.groups,name:maknon_tests.group_types_tests_create
+msgid "MK types tests create"
+msgstr "انشاء انواع الاختبارات"
+
+#. module: maknon_tests
+#: model:res.groups,name:maknon_tests.group_types_tests_delete
+msgid "MK types tests delete"
+msgstr "حذف انواع الاختبارات"
+
+#. module: maknon_tests
+#: model:res.groups,name:maknon_tests.group_types_tests_edit
+msgid "MK types tests edit"
+msgstr "التعديل علي انواع الاختبارات"
+
+#. module: maknon_tests
+#: model:res.groups,name:maknon_tests.group_types_tests_read
+msgid "MK types tests read"
+msgstr "قراء انواع الاختبارات"
+
+#. module: maknon_tests
+#: model:ir.ui.menu,name:maknon_tests.test_processes_main_menu
+msgid "Maknoon Tests"
+msgstr "اعدادات الاختبارات"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_test_register_masjed
+msgid "Masjed"
+msgstr "المسجد/المدرسة"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_employee_test_session_maximum_degree
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_branches_master_maximum_degree
+#: model:ir.model.fields,field_description:maknon_tests.field_student_test_session_maximum_degree
+msgid "Maximum degree"
+msgstr "اعلي معدل"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_committe_member_member_id
+msgid "Member"
+msgstr "عضو لجنة"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_branches_master_minumim_degree
+msgid "Minum degree"
+msgstr "الدرجة الدنيا"
+
+#. module: maknon_tests
+#: selection:center.time.table,day:0
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_test_center_prepration_monday
+msgid "Monday"
+msgstr "الإثنين"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_tests_sesstion_wizard_mosque_id
+msgid "Mosque"
+msgstr "المسجد"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_committee_tests_name
+#: model:ir.model.fields,field_description:maknon_tests.field_employee_items_name
+#: model:ir.model.fields,field_description:maknon_tests.field_mak_test_center_display_name
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_discount_item_name
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_evaluation_items_name
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_test_center_prepration_name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.add_teacher_wizerd
+#: model:ir.ui.view,arch_db:maknon_tests.previous_class_test_registration_wizerd
+#: model:ir.ui.view,arch_db:maknon_tests.test_registration_wizerd
+msgid "OK"
+msgstr "تأكيد"
+
+#. module: maknon_tests
+#: selection:mk.branches.master,age_fillter:0
+#: selection:mk.reward.items,age_fillter:0
+msgid "Open"
+msgstr "مفتوح"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.report_tests_template
+msgid "Page:"
+msgstr "الصفحة:"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_test_names_parent_test
+msgid "Parent Test"
+msgstr "الاختبار السابق"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_branches_master_parts_num
+msgid "Parts No"
+msgstr "المقدار (عدد الاجزاء)"
+
+#. module: maknon_tests
+#: model:ir.ui.menu,name:maknon_tests.test_passing_items
+msgid "Pasing Items"
+msgstr "الاجتياز"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_test_period_name
+msgid "Period name"
+msgstr "اسم الفتره"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.test_session_wizard_form
+msgid "Print"
+msgstr "طباعة"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_branches_master_quations_method
+msgid "Quation method"
+msgstr "طريقة الاسئلة"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_branches_master_qu_number_per_part
+msgid "Question no per part"
+msgstr "عدد الاسئلة للجزء الواحد"
+
+#. module: maknon_tests
+#: model:res.groups,name:maknon_tests.read_student_test_session
+msgid "Read Student Test Session"
+msgstr "قراءة جلسة اختبار الطالب"
+
+#. module: maknon_tests
+#: model:res.groups,name:maknon_tests.read_teacher_test_session
+msgid "Read Teacher Test Session"
+msgstr "قراءة جلسة الاختبار"
+
+#. module: maknon_tests
+#: model:res.groups,name:maknon_tests.read_teachers_tests_centers
+msgid "Read Teachers Tests Centers"
+msgstr "قراءة مركز الاختبار"
+
+#. module: maknon_tests
+#: model:res.groups,name:maknon_tests.read_tests_centers
+msgid "Read Test Centers"
+msgstr "قراءة مركز الاختبار"
+
+#. module: maknon_tests
+#: model:res.groups,name:maknon_tests.read_tests_time_tables
+msgid "Read Test Time Tables"
+msgstr "قراءة جدول الاختبار"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_mak_test_center_registeration_end_date
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_test_center_prepration_registeration_end_date
+msgid "Registeration End Date"
+msgstr "تاريخ نهاية التسجيل"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_mak_test_center_registeration_start_date
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_test_center_prepration_registeration_start_date
+msgid "Registeration Start Date"
+msgstr "تاريخ بداية التسجيل"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_test_center_prepration_website_registeration
+msgid "Registeration by Website"
+msgstr "التسجيل عن طريق الموقع"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_tests_sesstion_wizard_report_type
+msgid "Report Type"
+msgstr "نوع التقرير"
+
+#. module: maknon_tests
+#: model:ir.ui.menu,name:maknon_tests.test_reward_items
+msgid "Reward Items"
+msgstr "المكافئات"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_reward_items_reward_type
+msgid "Reward Type"
+msgstr "نوع المكافئة"
+
+#. module: maknon_tests
+#: model:ir.actions.act_window,name:maknon_tests.reward_items_action
+#: model:ir.ui.view,arch_db:maknon_tests.test_branche_form_view
+msgid "Reward items"
+msgstr "المكافئات"
+
+#. module: maknon_tests
+#: selection:center.time.table,day:0
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_test_center_prepration_saturday
+msgid "Saturday"
+msgstr "السبت"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_add_teacher_session_id
+msgid "Session id"
+msgstr "رقم الجلسة"
+
+#. module: maknon_tests
+#: selection:mk.test.center.prepration,center_group:0
+msgid "Student"
+msgstr "طلاب"
+
+#. module: maknon_tests
+#: model:ir.actions.act_window,name:maknon_tests.open_my_test_sessions
+#: model:ir.actions.act_window,name:maknon_tests.st_test_session_action
+msgid "Student Test Session"
+msgstr "جلسة اختبار الطالب"
+
+#. module: maknon_tests
+#: model:res.groups,name:maknon_tests.student_test_session_archive
+msgid "Student Test Session Archive"
+msgstr "ارشفة جلسة اختبار الطالب"
+
+#. module: maknon_tests
+#: selection:mak.test.center,test_group:0
+#: selection:mk.branches.master,branch_group:0
+#: selection:mk.test.names,test_group:0
+msgid "Students"
+msgstr "طلاب"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_tests_sesstion_wizard_study_class_id
+msgid "Study Class"
+msgstr "الفصل الدراسي"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_mak_test_center_study_class_id
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_test_center_prepration_study_class_id
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_test_names_study_class_id
+#: model:ir.model.fields,field_description:maknon_tests.field_select_students_study_class_id
+#: model:ir.model.fields,field_description:maknon_tests.field_student_test_session_study_class_id
+#: model:ir.model.fields,field_description:maknon_tests.field_test_register_study_class_id
+msgid "Study class"
+msgstr "الفصل الدراسي"
+
+#. module: maknon_tests
+#: selection:mk.branches.master,quations_method:0
+msgid "Subject"
+msgstr "المقرر"
+
+#. module: maknon_tests
+#: selection:center.time.table,day:0
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_test_center_prepration_sunday
+msgid "Sunday"
+msgstr "اﻷحد"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_add_error_surah
+#: model:ir.model.fields,field_description:maknon_tests.field_question_error_surah
+msgid "Surah"
+msgstr "سورة"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_add_teacher_teacher
+#: model:ir.model.fields,field_description:maknon_tests.field_employee_test_session_teacher
+#: model:ir.model.fields,field_description:maknon_tests.field_student_test_session_teacher
+#: model:ir.model.fields,field_description:maknon_tests.field_test_register_teacher
+#: model:ir.model.fields,field_description:maknon_tests.field_tests_sesstion_wizard_teacher_id
+msgid "Teacher"
+msgstr "المعلم/ المعلمة"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.student_test_session_form_view
+#: model:ir.ui.view,arch_db:maknon_tests.session_search_view
+msgid "Episode Teacher"
+msgstr "معلم/معلمة الحلقة"
+
+
+#. module: maknon_tests
+#: model:ir.ui.menu,name:maknon_tests.mk_test_techer_center_prep_menu
+msgid "Teacher Test Center Configuration "
+msgstr " مراكز الاختبار"
+
+#. module: maknon_tests
+#: model:ir.module.category,name:maknon_tests.module_category_test_category_emp
+msgid "Test / Employee Tests"
+msgstr "الاحتبارات /المعلمين"
+
+#. module: maknon_tests
+#: model:ir.module.category,name:maknon_tests.module_category_test_category
+msgid "Test / Student Test"
+msgstr "الاختبارات / الطلاب"
+
+#. module: maknon_tests
+#: model:ir.ui.menu,name:maknon_tests.test_branches_setting
+msgid "Test Branches"
+msgstr "فروع الاختبارات"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_committe_member_center_id
+#: model:ir.model.fields,field_description:maknon_tests.field_mak_test_center_center_id
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_test_center_prepration_center_id
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_test_center_prepration_main_center
+#: model:ir.ui.view,arch_db:maknon_tests.test_center_form_view
+#: model:ir.ui.view,arch_db:maknon_tests.test_center_search_view
+#: model:ir.ui.view,arch_db:maknon_tests.test_center_tree_view
+msgid "Test Center"
+msgstr "مركز الاختبار"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_tests_sesstion_wizard_center_id
+msgid "center"
+msgstr "مركز الاشراف"
+
+#. module: maknon_tests
+#: model:ir.actions.act_window,name:maknon_tests.test_center_action
+msgid "Test Center "
+msgstr "تعريف مراكز الاختبارات "
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.mk_test_center_prep_form_view
+msgid "Test Center Config"
+msgstr "اعدادات الاختبارات"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.mk_test_center_prep_form_view
+#: model:ir.ui.view,arch_db:maknon_tests.mk_test_center_prep_tree_view
+msgid "Test Center Configuration"
+msgstr "اعداد مراكز الاختبارات"
+
+#. module: maknon_tests
+#: model:ir.actions.act_window,name:maknon_tests.mk_test_center_prep_action
+#: model:ir.actions.act_window,name:maknon_tests.mk_test_teacher_center_prep_action
+#: model:ir.ui.menu,name:maknon_tests.mk_test_center_prep_menu
+msgid "Test Center Configuration "
+msgstr "اعداد مراكز الاختبارات "
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_mak_test_center_test_group
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_test_names_test_group
+msgid "Test Group"
+msgstr "الفئة المستهدفة"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_employee_test_session_test_name
+#: model:ir.model.fields,field_description:maknon_tests.field_select_students_test_name
+#: model:ir.model.fields,field_description:maknon_tests.field_student_test_session_test_name
+#: model:ir.model.fields,field_description:maknon_tests.field_test_register_test_name
+msgid "Test Name"
+msgstr "نوع الاختبار"
+
+#. module: maknon_tests
+#: model:ir.actions.act_window,name:maknon_tests.test_periods_action
+msgid "Test Period"
+msgstr "فترة الاختبار"
+
+#. module: maknon_tests
+#: model:ir.ui.menu,name:maknon_tests.test_period_menu
+msgid "Test Periods"
+msgstr "فترات الاختبارات"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.test_session_wizard_form
+msgid "Test Session Report"
+msgstr "تقرير  جلسات الإختبار"
+
+#. module: maknon_tests
+#: model:ir.ui.menu,name:maknon_tests.my_employee_test_session_menu
+msgid "Test Sessions"
+msgstr "جلسة اختبار معلم"
+
+#. module: maknon_tests
+#: model:ir.ui.menu,name:maknon_tests.action_tests_session_wizard_menu
+msgid "Test Sesstion Report"
+msgstr "تقرير جلسات الإختبار"
+
+#. module: maknon_tests
+#: model:ir.module.category,name:maknon_tests.module_category_passing_items
+msgid "Test Setting /  Passing Items  "
+msgstr "إعداد الإختبارات / عناصر النجاح  "
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_student_test_session_test_time
+#: model:ir.model.fields,field_description:maknon_tests.field_test_register_test_time
+msgid "Test Time"
+msgstr "زمن الاختبار"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_center_time_table_center_id
+#: model:ir.model.fields,field_description:maknon_tests.field_employee_test_session_center_id
+#: model:ir.model.fields,field_description:maknon_tests.field_tests_sesstion_wizard_center_id
+#: model:ir.ui.menu,name:maknon_tests.test_center_setting
+msgid "Test center"
+msgstr "مركز الاختبار"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_tests_sesstion_wizard_center_id
+msgid "Test center"
+msgstr "مركز الاشراف"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_student_test_session_center_id
+#: model:ir.ui.menu,name:maknon_tests.test_center_setting
+msgid "Test center"
+msgstr "مقر الاختبار"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_test_names_name
+msgid "Test term"
+msgstr "فترة الإختبار"
+
+#. module: maknon_tests
+#: model:res.groups,name:maknon_tests.tests_centers_archive
+msgid "Tests Centers Archive"
+msgstr "ارشفة مراكز الاختبارات"
+
+#. module: maknon_tests
+#: model:ir.module.category,name:maknon_tests.maknoon_test_management
+msgid "Tests Managment"
+msgstr "اختبارت الجمعية / مكنون"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_mak_test_center_test_names
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_test_center_prepration_test_names
+msgid "Tests Names"
+msgstr "انواع الاختبارات"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.mk_test_center_prep_form_view
+msgid "Tests Periods"
+msgstr "فترة الاختبار"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.mk_test_center_prep_form_view
+msgid "Tests Registeration"
+msgstr "التسجيل للاختبارات"
+
+#. module: maknon_tests
+#: model:res.groups,name:maknon_tests.tests_time_tables_archive
+msgid "Tests Time Tables Archive"
+msgstr "ارشفة جداول الاختبارت"
+
+#. module: maknon_tests
+#: model:ir.ui.menu,name:maknon_tests.reqistration_main_menu
+msgid "Tests reqistration_menu"
+msgstr "اعداد مراكز الاختبار والتسجيل"
+
+#. module: maknon_tests
+#: model:ir.ui.menu,name:maknon_tests.test_setting_main_menu
+msgid "Tests setting"
+msgstr "اعدادات الاختبارت"
+
+#. module: maknon_tests
+#: model:ir.ui.menu,name:maknon_tests.test_operation_main_menu
+msgid "Tests student operations"
+msgstr "اختبارات الطلاب"
+
+#. module: maknon_tests
+#: model:ir.ui.menu,name:maknon_tests.test_techers_operation_main_menu
+msgid "Tests teachers operations"
+msgstr "اختبارات المعلمين"
+
+#. module: maknon_tests
+#: selection:center.time.table,day:0
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_test_center_prepration_thursday
+msgid "Thursday"
+msgstr "الخميس"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_test_center_prepration_timetable_ids
+msgid "TimeTable"
+msgstr "جدول الاختبار"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_test_questions_to_aya
+msgid "To Aya"
+msgstr "إلى آية"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_test_questions_to_surah
+msgid "To Sura"
+msgstr "إلى سورة"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_test_period_total_hours
+msgid "Total Hours"
+msgstr "عدد الساعات"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_evaluation_items_total
+msgid "Total degree"
+msgstr "الدرجة"
+
+#. module: maknon_tests
+#: selection:tests.sesstion.wizard,report_type:0
+msgid "Totals"
+msgstr "إجمالي"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_branches_master_trackk
+msgid "Track"
+msgstr "المسار"
+
+#. module: maknon_tests
+#: selection:center.time.table,day:0
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_test_center_prepration_tuesday
+msgid "Tuesday"
+msgstr "الثلاثاء"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_test_questions_follow_type
+msgid "Type of Follow"
+msgstr "نوع المتابعة"
+
+#. module: maknon_tests
+#: selection:mk.branches.master,trackk:0
+msgid "Up"
+msgstr "تصاعدي"
+
+#. module: maknon_tests
+#: model:res.groups,name:maknon_tests.update_student_test_session
+msgid "Update Student Test Session"
+msgstr "تعديل جلسة الاحتبار"
+
+#. module: maknon_tests
+#: model:res.groups,name:maknon_tests.update_teacher_test_session
+msgid "Update Teacher Test Session"
+msgstr "تعديل جلسة اختبار المعلم"
+
+#. module: maknon_tests
+#: model:res.groups,name:maknon_tests.update_teachers_tests_centers
+msgid "Update Teachers Tests Centers"
+msgstr "تعديل مرز الاختبار"
+
+#. module: maknon_tests
+#: model:res.groups,name:maknon_tests.update_tests_centers
+msgid "Update Test Centers"
+msgstr "اعديل مراكز الاختبار"
+
+#. module: maknon_tests
+#: model:res.groups,name:maknon_tests.update_tests_time_tables
+msgid "Update Test Time Tables"
+msgstr "تعديل جدول الاختبار"
+
+#. module: maknon_tests
+#: model:ir.module.category,description:maknon_tests.maknoon_test_management
+msgid "User access level for this module"
+msgstr "User access level for this module"
+
+#. module: maknon_tests
+#: selection:employee.test.session,appreciation:0
+#: selection:mk.passing.items,appreciation:0
+#: selection:mk.reward.items,appreciation:0
+#: selection:student.test.session,appreciation:0
+msgid "Very good"
+msgstr "جيد جدا"
+
+#. module: maknon_tests
+#: selection:center.time.table,day:0
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_test_center_prepration_wednesday
+msgid "Wednesday"
+msgstr "اﻷربعاء"
+
+#. module: maknon_tests
+#: selection:employee.test.session,state:0
+#: selection:student.test.session,state:0
+#: selection:test.questions,state:0
+msgid "absent"
+msgstr "غياب"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_center_time_table_active
+#: model:ir.model.fields,field_description:maknon_tests.field_committee_tests_active
+#: model:ir.model.fields,field_description:maknon_tests.field_mak_test_center_active
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_evaluation_items_active
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_passing_items_active
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_reward_items_active
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_test_names_active
+#: model:ir.model.fields,field_description:maknon_tests.field_test_period_active
+msgid "active"
+msgstr "active"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.employee_test_session_form_view
+#: model:ir.ui.view,arch_db:maknon_tests.student_test_session_form_view
+msgid "add error"
+msgstr "إضافة خصم"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.center_time_table_form_view
+#: model:ir.ui.view,arch_db:maknon_tests.center_time_table_tree_view
+msgid "Student test registration"
+msgstr "تسجيل الطلاب"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.center_time_table_form_view
+#: model:ir.ui.view,arch_db:maknon_tests.center_time_table_tree_view
+msgid "Teacher test registration"
+msgstr "تسجيل المعلمين"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_test_register_set_b
+msgid "add more student"
+msgstr "إضافة طلاب"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.employee_test_session__tree_view
+#: model:ir.ui.view,arch_db:maknon_tests.student_test_session__tree_view
+msgid "add teacher"
+msgstr "اختار المعلم/ المعملة"
+
+#. module: maknon_tests
+#: model:ir.model,name:maknon_tests.model_add_error
+msgid "add.error"
+msgstr "add.error"
+
+#. module: maknon_tests
+#: model:ir.model,name:maknon_tests.model_add_error_line
+msgid "add.error.line"
+msgstr "add.error.line"
+
+#. module: maknon_tests
+#: model:ir.model,name:maknon_tests.model_add_teacher
+msgid "add.teacher"
+msgstr "add.teacher"
+
+#. module: maknon_tests
+#: model:ir.model,name:maknon_tests.model_addd_teacher
+msgid "addd.teacher"
+msgstr "addd.teacher"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_select_students_flag
+msgid "agree"
+msgstr "agree"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_discount_item_allowed_discount
+msgid "allowed discount"
+msgstr "allowed discount"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_reward_items_amount
+msgid "amount"
+msgstr "المبلغ"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_employee_test_session_appreciation
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_passing_items_appreciation
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_reward_items_appreciation
+#: model:ir.model.fields,field_description:maknon_tests.field_student_test_session_appreciation
+msgid "appreciation"
+msgstr "التقدير"
+
+#. module: maknon_tests
+#: model:ir.module.category,name:maknon_tests.module_category_archives_category
+msgid "archives"
+msgstr "أرشفة"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_employee_test_session_avalible_teacher
+#: model:ir.model.fields,field_description:maknon_tests.field_student_test_session_avalible_teacher
+#: model:ir.model.fields,field_description:maknon_tests.field_test_register_avalible_teacher
+msgid "available"
+msgstr "متاح"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_select_students_branch_duration
+#: model:ir.model.fields,field_description:maknon_tests.field_student_test_session_branch_duration
+#: model:ir.model.fields,field_description:maknon_tests.field_test_register_branch_duration
+msgid "branch duration"
+msgstr "مدة الاختبار"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_student_test_session_branch_order
+#: model:ir.ui.view,arch_db:maknon_tests.test_branche_form_view
+#: model:ir.ui.view,arch_db:maknon_tests.test_branches_tree
+msgid "branch order"
+msgstr "ترتيب الفرع"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_employee_items_branches
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_evaluation_items_branches
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_reward_items_branches
+#: model:ir.ui.view,arch_db:maknon_tests.test_names_form_view
+msgid "branches"
+msgstr "الفروع"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.passing_items_tree
+msgid "branches list"
+msgstr "الفروع"
+
+#. module: maknon_tests
+#: selection:employee.test.session,state:0
+msgid "cancel"
+msgstr "ملغي"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.employee_test_session_form_view
+#: model:ir.ui.view,arch_db:maknon_tests.student_test_session_form_view
+msgid "cancel session"
+msgstr "إالغاء"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.center_time_table_form_view
+msgid "capacity /hours"
+msgstr "عدد الساعات /الفترة"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_center_time_table_total_minutes
+#: model:ir.ui.view,arch_db:maknon_tests.center_time_table_form_view
+#: model:ir.ui.view,arch_db:maknon_tests.center_time_table_tree_view
+msgid "capacity/minutes"
+msgstr "عدد الدقائق/الفتره"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_test_center_prepration_center_group
+msgid "center exam group"
+msgstr "center exam group"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_center_time_table_gender
+msgid "center gender"
+msgstr "نوع المركز"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_test_center_prepration_center_info
+msgid "center information"
+msgstr "معلومات المركز"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_center_time_table_center_name
+#: model:ir.model.fields,field_description:maknon_tests.field_student_test_session_center_name
+#: model:ir.ui.view,arch_db:maknon_tests.test_center_form_view
+#: model:ir.ui.view,arch_db:maknon_tests.test_center_tree_view
+msgid "center name"
+msgstr "اسم المركز"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.center_prepare_test_search_view
+msgid "center prepare"
+msgstr "center prepare"
+
+#. module: maknon_tests
+#: model:ir.model,name:maknon_tests.model_center_time_table
+msgid "center.time.table"
+msgstr "center.time.table"
+
+#. module: maknon_tests
+#: model:ir.ui.menu,name:maknon_tests.center_time_tables_menu
+msgid "centers tests Timetables"
+msgstr "جداول الإختبارات"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_test_center_prepration_center_code
+msgid "code"
+msgstr "رقم البند"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_committe_member_committe_id
+msgid "commitee_id"
+msgstr "اللجنة"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_add_teacher_committe_id
+#: model:ir.model.fields,field_description:maknon_tests.field_employee_test_session_committe_id
+#: model:ir.model.fields,field_description:maknon_tests.field_student_test_session_committe_id
+msgid "committe"
+msgstr "لجنة اختبار"
+
+#. module: maknon_tests
+#: model:ir.model,name:maknon_tests.model_committe_member
+msgid "committe.member"
+msgstr "committe.member"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_center_time_table_committee_no
+msgid "committee No."
+msgstr "عدد اللجان"
+
+#. module: maknon_tests
+#: model:ir.model,name:maknon_tests.model_committee_tests
+msgid "committee.tests"
+msgstr "committee.tests"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_link_company_tests
+#: model:ir.ui.view,arch_db:maknon_tests.view_student_link_form_inherit
+msgid "company tests"
+msgstr "اختبارات الجمعية"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_branches_master_contsets
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_branches_master_general
+msgid "contests"
+msgstr "مسابقات"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_student_test_session_controller_flag
+msgid "controller"
+msgstr "controller"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_branches_master_courses
+msgid "courses"
+msgstr "دورات مكثفة"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_add_error_line_dis_all
+msgid "disc all"
+msgstr "disc all"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_add_error_line_amount
+msgid "discount amount"
+msgstr "discount amount"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_evaluation_items_discount_items
+msgid "discount items"
+msgstr "تفاصيل الخصم"
+
+#. module: maknon_tests
+#: selection:mk.branches.master,trackk:0
+msgid "down"
+msgstr "تنازلي"
+
+#. module: maknon_tests
+#: selection:add.error,mode:0
+msgid "edit"
+msgstr "edit"
+
+#. module: maknon_tests
+#: selection:add.teacher,s_type:0
+msgid "emp"
+msgstr "موظفين"
+
+#. module: maknon_tests
+#: model:res.groups,name:maknon_tests.emp_session_exiaminer
+msgid "emp session examiner"
+msgstr "عضو لجنة اختبار"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_employee_item_quastion_item
+msgid "employee item"
+msgstr "المحاور"
+
+#. module: maknon_tests
+#: model:ir.actions.act_window,name:maknon_tests.employee_items_action
+#: model:ir.ui.view,arch_db:maknon_tests.test_branche_form_view
+msgid "employee items"
+msgstr "المحاور"
+
+#. module: maknon_tests
+#: model:ir.model,name:maknon_tests.model_employee_item_quastion
+msgid "employee.item.quastion"
+msgstr "employee.item.quastion"
+
+#. module: maknon_tests
+#: model:ir.model,name:maknon_tests.model_employee_items
+msgid "employee.items"
+msgstr "employee.items"
+
+#. module: maknon_tests
+#: model:ir.model,name:maknon_tests.model_employee_test_session
+msgid "employee.test.session"
+msgstr "employee.test.session"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.employee_test_session_form_view
+#: model:ir.ui.view,arch_db:maknon_tests.student_test_session_form_view
+msgid "end session"
+msgstr "انهاء الجلسة"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_test_questions_error_details
+msgid "error detials"
+msgstr "تفاصيل الخصم"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_add_error_line_evaluation_item_id
+msgid "ev id"
+msgstr "ev id"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_branches_master_evaluation_items
+msgid "evaluation"
+msgstr "المعايير"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_add_error_evaluation_item
+#: model:ir.model.fields,field_description:maknon_tests.field_add_error_line_evaluation_item
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_discount_item_evaluation_item
+#: model:ir.model.fields,field_description:maknon_tests.field_question_error_evaluation_item
+msgid "evaluation item"
+msgstr "القياس والتقويم"
+
+#. module: maknon_tests
+#: model:ir.actions.act_window,name:maknon_tests.evaluation_items_action
+msgid "evaluation items"
+msgstr "القياس والتقويم"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_student_test_session_done_date
+msgid "exam done at"
+msgstr "زمن الانتهاء"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_employee_test_session_duration
+#: model:ir.model.fields,field_description:maknon_tests.field_student_test_session_duration
+msgid "exam duration"
+msgstr "مدة الاختبار"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.mk_test_center_prep_form_view
+msgid "exam location"
+msgstr "موقع الاختبار"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_test_center_prepration_place_options
+msgid "exam place"
+msgstr "مقر الاختبار"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_student_test_session_start_date
+msgid "exam start at"
+msgstr "زمن البداية"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_test_center_prepration_flag
+msgid "flag"
+msgstr "إختيار"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_branches_master_from_aya
+msgid "from aya"
+msgstr "من الآية"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_branches_master_from_surah
+msgid "from surah"
+msgstr "من"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_center_time_table_full
+msgid "full"
+msgstr "full"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_evaluation_items_part_discount
+msgid "full discount"
+msgstr "full discount"
+
+#. module: maknon_tests
+#: model:res.groups,name:maknon_tests.group_assembly_tests_full
+msgid "full priviliges "
+msgstr "كامل الصلاحيات "
+
+#. module: maknon_tests
+#: model:res.groups,name:maknon_tests.group_Student_tests_full
+msgid "full priviliges Student tests "
+msgstr "كامل الصلاحيات "
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_student_test_session_is_pass
+msgid "is pass"
+msgstr "is pass"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_add_error_line_item_id
+msgid "item id"
+msgstr "item id"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_test_center_prepration_latitude
+msgid "latitude"
+msgstr "خط العرض"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_add_error_line_wi
+#: model:ir.model.fields,field_description:maknon_tests.field_add_error_lines
+msgid "lines"
+msgstr "lines"
+
+#. module: maknon_tests
+#: model:ir.model,name:maknon_tests.model_mk_link
+msgid "link students to stages"
+msgstr "ربط الطلاب/الطالبات بالحلقات"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_test_center_prepration_longtitude
+msgid "longtitude"
+msgstr "خط الطول"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_committe_member_main_member
+msgid "main member"
+msgstr "عضو اللجنة الرئيسي"
+
+#. module: maknon_tests
+#: model:ir.model,name:maknon_tests.model_mak_test_center
+msgid "mak.test.center"
+msgstr "mak.test.center"
+
+#. module: maknon_tests
+#: model:ir.ui.menu,name:maknon_tests.test_main_menu
+msgid "maknoon Tests"
+msgstr "إختبارات الجمعية"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_student_test_session_masjed_name
+msgid "masjed"
+msgstr "المسجد/المدرسة"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_add_error_line_maximum
+msgid "maximum discount amount"
+msgstr "maximum discount amount"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_committee_tests_members_ids
+msgid "members list"
+msgstr "members list"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_test_center_prepration_committe_number
+msgid "members number"
+msgstr "members number"
+
+#. module: maknon_tests
+#: model:res.groups,name:maknon_tests.group_tests_branches_archives
+msgid "mk branches master archives"
+msgstr "أرشفة فروع الاختبارات"
+
+#. module: maknon_tests
+#: model:res.groups,name:maknon_tests.group_tests_branches_create
+msgid "mk branches master create"
+msgstr "إنشاء فروع اختبارات"
+
+#. module: maknon_tests
+#: model:res.groups,name:maknon_tests.group_tests_branches_delete
+msgid "mk branches master delete"
+msgstr "حذف فروع الاختبارات"
+
+#. module: maknon_tests
+#: model:res.groups,name:maknon_tests.group_tests_branches_edit
+msgid "mk branches master edit"
+msgstr "الكتابة او التعديل علي فروع الاختبارات"
+
+#. module: maknon_tests
+#: model:res.groups,name:maknon_tests.group_tests_branches_read
+msgid "mk branches master read"
+msgstr "القراءة او الإطلاع علي فروع الاختبارات"
+
+#. module: maknon_tests
+#: model:res.groups,name:maknon_tests.group_evaluation_items_archives
+msgid "mk evaluation items archives"
+msgstr "ارشفة القياس والتقويم"
+
+#. module: maknon_tests
+#: model:res.groups,name:maknon_tests.group_evaluation_items_create
+msgid "mk evaluation items create"
+msgstr "انشاء القياس والتقويم"
+
+#. module: maknon_tests
+#: model:res.groups,name:maknon_tests.group_evaluation_items_delete
+msgid "mk evaluation items delete"
+msgstr "حذف القياس والتقويم"
+
+#. module: maknon_tests
+#: model:res.groups,name:maknon_tests.group_evaluation_items_edit
+msgid "mk evaluation items edit"
+msgstr " الكتابة او التعديل علي القياس والتقويم"
+
+#. module: maknon_tests
+#: model:res.groups,name:maknon_tests.group_evaluation_items_read
+msgid "mk evaluation items read"
+msgstr "القراءة او الإطلاع علي القياس والتقويم"
+
+#. module: maknon_tests
+#: model:res.groups,name:maknon_tests.group_passing_items_archives
+msgid "mk passing items archives"
+msgstr "ارشفة الاجتياز"
+
+#. module: maknon_tests
+#: model:res.groups,name:maknon_tests.group_passing_items_create
+msgid "mk passing items create"
+msgstr "إنشاء الاجتياز"
+
+#. module: maknon_tests
+#: model:res.groups,name:maknon_tests.group_passing_items_delete
+msgid "mk passing items delete"
+msgstr "حذف الاجتياز"
+
+#. module: maknon_tests
+#: model:res.groups,name:maknon_tests.group_passing_items_edit
+msgid "mk passing items edit"
+msgstr "الكتابة او التعديل علي الاجتياز"
+
+#. module: maknon_tests
+#: model:res.groups,name:maknon_tests.group_passing_items_read
+msgid "mk passing items read"
+msgstr "  القراءة او الإطلاع علي الاجتياز"
+
+#. module: maknon_tests
+#: model:res.groups,name:maknon_tests.group_reward_items_read
+msgid "mk reward items  read"
+msgstr "القراءة او الإطلاع علي المكافئات "
+
+#. module: maknon_tests
+#: model:res.groups,name:maknon_tests.group_reward_items_archives
+msgid "mk reward items archives"
+msgstr "ارشفة المكافئات"
+
+#. module: maknon_tests
+#: model:res.groups,name:maknon_tests.group_reward_items_create
+msgid "mk reward items create"
+msgstr "إنشاء المكافئات"
+
+#. module: maknon_tests
+#: model:res.groups,name:maknon_tests.group_reward_items_delete
+msgid "mk reward items delete"
+msgstr "حذف المكافئات"
+
+#. module: maknon_tests
+#: model:res.groups,name:maknon_tests.group_reward_items_edit
+msgid "mk reward items edit"
+msgstr " الكتابة او التعديل علي المكافئات "
+
+#. module: maknon_tests
+#: model:ir.model,name:maknon_tests.model_mk_branches_master
+msgid "mk.branches.master"
+msgstr "mk.branches.master"
+
+#. module: maknon_tests
+#: model:ir.model,name:maknon_tests.model_mk_discount_item
+msgid "mk.discount.item"
+msgstr "mk.discount.item"
+
+#. module: maknon_tests
+#: model:ir.model,name:maknon_tests.model_mk_evaluation_items
+msgid "mk.evaluation.items"
+msgstr "mk.evaluation.items"
+
+#. module: maknon_tests
+#: model:ir.model,name:maknon_tests.model_mk_passing_items
+msgid "mk.passing.items"
+msgstr "mk.passing.items"
+
+#. module: maknon_tests
+#: model:ir.model,name:maknon_tests.model_mk_reward_items
+msgid "mk.reward.items"
+msgstr "mk.reward.items"
+
+#. module: maknon_tests
+#: model:ir.model,name:maknon_tests.model_mk_test_center_prepration
+msgid "mk.test.center.prepration"
+msgstr "mk.test.center.prepration"
+
+#. module: maknon_tests
+#: model:ir.model,name:maknon_tests.model_mk_test_names
+msgid "mk.test.names"
+msgstr "mk.test.names"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_add_error_mode
+msgid "mode"
+msgstr "mode"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_branches_master_order
+msgid "order"
+msgstr "ترتيب المقرر"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_committe_member_outsource
+msgid "outsource"
+msgstr "outsource"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_branches_master_parent_branch
+msgid "parent branch"
+msgstr "الفرع السابق"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_branches_master_parts_ids
+msgid "parts"
+msgstr "الاجزاء"
+
+#. module: maknon_tests
+#: model:ir.actions.act_window,name:maknon_tests.passing_items_action
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_branches_master_passing_items
+#: model:ir.ui.view,arch_db:maknon_tests.test_branche_form_view
+msgid "passing items"
+msgstr "الاجتياز"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_center_time_table_period_id
+msgid "period"
+msgstr "الفترة"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_test_center_prepration_out_disc
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_test_center_prepration_place_description
+msgid "place discribtion"
+msgstr "place discribtion"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_branches_master_preliminary
+msgid "preliminary"
+msgstr "تمهيدي"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_add_error_line_question_id
+#: model:ir.model.fields,field_description:maknon_tests.field_add_error_question_id
+#: model:ir.model.fields,field_description:maknon_tests.field_question_error_question_id
+msgid "question"
+msgstr "السؤال"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_test_questions_text
+msgid "question text"
+msgstr "المقطع"
+
+#. module: maknon_tests
+#: model:ir.model,name:maknon_tests.model_question_error
+msgid "question.error"
+msgstr "question.error"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.test_committe_form_view
+msgid "re"
+msgstr "re"
+
+#. module: maknon_tests
+#: selection:add.error,mode:0
+msgid "read"
+msgstr "read"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.student_test_session__tree_view
+msgid "registerd by"
+msgstr "سجل بواسطة"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_center_time_table_avalible_minutes
+#: model:ir.model.fields,field_description:maknon_tests.field_center_time_table_used_minites
+#: model:ir.model.fields,field_description:maknon_tests.field_select_students_avalible_minutes
+#: model:ir.model.fields,field_description:maknon_tests.field_test_register_avalible_minutes
+#: model:ir.model.fields,field_description:maknon_tests.field_test_register_counter
+#: model:ir.model.fields,field_description:maknon_tests.field_test_register_hide
+msgid "remaining minutes"
+msgstr "الدقائق المتبقية"
+
+#. module: maknon_tests
+#: model:ir.model,name:maknon_tests.model_report_maknon_tests_report_tests_template
+msgid "report.maknon_tests.report_tests_template"
+msgstr "report.maknon_tests.report_tests_template"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_branches_master_reward_items
+msgid "reward"
+msgstr "مكافئة"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_branches_master_round_frag
+msgid "round"
+msgstr "round"
+
+#. module: maknon_tests
+#: model:res.groups,name:maknon_tests.select_exiaminer_emp_session
+msgid "select emp exiaminer Session"
+msgstr "تحديد لجانة الاخبتار لجلسة الاختبار"
+
+#. module: maknon_tests
+#: model:res.groups,name:maknon_tests.select_exiaminer_session
+msgid "select exiaminer Session"
+msgstr "اسناد لجنة لجلسة الاختبار"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_test_center_prepration_internal_place
+msgid "select mosque"
+msgstr "select mosque"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_branches_master_select_parts
+msgid "select part"
+msgstr "select part"
+
+#. module: maknon_tests
+#: model:ir.model.fields,help:maknon_tests.field_center_time_table_period_id
+msgid "select period from avalible periods at center"
+msgstr "select period from avalible periods at center"
+
+#. module: maknon_tests
+#: model:ir.model,name:maknon_tests.model_select_student
+msgid "select.student"
+msgstr "select.student"
+
+#. module: maknon_tests
+#: model:ir.model,name:maknon_tests.model_select_students
+msgid "select.students"
+msgstr "select.students"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_add_error_session_id
+#: model:ir.model.fields,field_description:maknon_tests.field_employee_item_quastion_session_id
+#: model:ir.model.fields,field_description:maknon_tests.field_test_questions_session_id
+#: model:ir.ui.view,arch_db:maknon_tests.emp_search_view
+#: model:ir.ui.view,arch_db:maknon_tests.session_search_view
+msgid "session"
+msgstr "جلسة اختبار"
+
+#. module: maknon_tests
+#: model:res.groups,name:maknon_tests.session_exiaminer
+msgid "session examiner"
+msgstr "عضو لجنة اختبار"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_employee_test_session_test_question
+#: model:ir.model.fields,field_description:maknon_tests.field_student_test_session_test_question
+msgid "session questions"
+msgstr "اسئلة الاختبار"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_center_time_table_visible_for_user
+#: model:ir.model.fields,field_description:maknon_tests.field_employee_test_session_editable
+#: model:ir.model.fields,field_description:maknon_tests.field_mak_test_center_editable
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_test_center_prepration_visible_for_user
+#: model:ir.model.fields,field_description:maknon_tests.field_student_test_session_editable
+#: model:ir.model.fields,field_description:maknon_tests.field_student_test_session_flag
+msgid "show"
+msgstr "show"
+
+#. module: maknon_tests
+#: selection:add.teacher,s_type:0
+msgid "st"
+msgstr "st"
+
+#. module: maknon_tests
+#: selection:employee.test.session,state:0
+#: selection:student.test.session,state:0
+#: selection:test.questions,state:0
+msgid "start"
+msgstr "بدء الاختبار"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.employee_test_session_form_view
+#: model:ir.ui.view,arch_db:maknon_tests.student_test_session_form_view
+msgid "start session"
+msgstr "التحقق وبدء الاختبار"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_employee_test_session_state
+#: model:ir.model.fields,field_description:maknon_tests.field_student_test_session_state
+#: model:ir.model.fields,field_description:maknon_tests.field_test_questions_state
+msgid "status"
+msgstr "الحالة"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_select_students_student_id
+#: model:ir.model.fields,field_description:maknon_tests.field_student_test_session_student_id
+msgid "student"
+msgstr "الطالب"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_test_register_students_list
+msgid "student list"
+msgstr "قائمة الطلاب"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_student_test_session_student_name
+msgid "student name"
+msgstr "اسم الطالب"
+
+#. module: maknon_tests
+#: model:ir.model,name:maknon_tests.model_student_test_session
+msgid "student.test.session"
+msgstr "student.test.session"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.re_search_view
+msgid "student_id"
+msgstr "الطالب"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_test_register_student_id
+msgid "students"
+msgstr "قائمة الطلاب/الطالبات"
+
+#. module: maknon_tests
+#: model:ir.ui.menu,name:maknon_tests.student_test_session_menu
+msgid "students list"
+msgstr "إسناد لجان الاختبار"
+
+#. module: maknon_tests
+#: model:ir.ui.menu,name:maknon_tests.my_student_test_session_menu
+msgid "students test session"
+msgstr "جلسة اختبار الطالب"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_branches_master_subject_id
+msgid "subject"
+msgstr "المقرر"
+
+#. module: maknon_tests
+#: model:ir.actions.act_window,name:maknon_tests.test_branches_action
+msgid "test Branches"
+msgstr "فروع الاختبارات"
+
+#. module: maknon_tests
+#: model:res.groups,name:maknon_tests.test_center_manger
+msgid "test center manager"
+msgstr "مدير مركز /عضو لجنة اختبار"
+
+#. module: maknon_tests
+#: model:res.groups,name:maknon_tests.test_mosque_manger
+msgid "test mosque manager"
+msgstr "مسئول مسجد /عضو لجنة اختبار"
+
+#. module: maknon_tests
+#: model:res.groups,name:maknon_tests.test_mosque_supervisor
+msgid "test mosque supervisor"
+msgstr "مشرف مسجد/عضو لجنة اختبار"
+
+#. module: maknon_tests
+#: model:ir.actions.act_window,name:maknon_tests.action_test_session_wizard
+msgid "test session Report"
+msgstr "بيان اجزاء الطلاب"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_branches_master_test_name
+msgid "test term"
+msgstr "نوع الاختبار"
+
+#. module: maknon_tests
+#: model:res.groups,name:maknon_tests.test_unit_employee
+msgid "test unit employee"
+msgstr "معلم /عضو لجنة اختبار"
+
+#. module: maknon_tests
+#: model:ir.model,name:maknon_tests.model_test_period
+msgid "test.period"
+msgstr "test.period"
+
+#. module: maknon_tests
+#: model:ir.model,name:maknon_tests.model_test_questions
+msgid "test.questions"
+msgstr "test.questions"
+
+#. module: maknon_tests
+#: model:ir.model,name:maknon_tests.model_test_register
+msgid "test.register"
+msgstr "test.register"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_select_students_center_tests
+msgid "tests"
+msgstr "tests"
+
+#. module: maknon_tests
+#: model:ir.actions.report,name:maknon_tests.test_report
+msgid "tests sesstion report"
+msgstr "تقرير جلسات الاختبار"
+
+#. module: maknon_tests
+#: model:ir.model,name:maknon_tests.model_tests_sesstion_wizard
+msgid "tests.sesstion.wizard"
+msgstr "tests.sesstion.wizard"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.timetable_view
+msgid "timeble"
+msgstr "timeble"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_passing_items_to_degree
+msgid "to Degree"
+msgstr "الي الدرجة"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_branches_master_to_aya
+msgid "to aya"
+msgstr "to aya"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_branches_master_to_surah
+msgid "to surah"
+msgstr "الي"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.center_time_table_form_view
+msgid "total"
+msgstr "total"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_employee_items_total
+msgid "total degree"
+msgstr "total degree"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_center_time_table_total_hours
+#: model:ir.ui.view,arch_db:maknon_tests.mk_test_center_prep_form_view
+msgid "total hours"
+msgstr "عدد الساعات"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_test_register_total_minutes
+msgid "total minutes"
+msgstr "الدقائق الكلية"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_add_teacher_s_type
+msgid "type"
+msgstr "type"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_employee_test_session_user_id
+msgid "user_id"
+msgstr "user_id"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_student_test_session_user_id
+msgid "users"
+msgstr "users"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_add_error_aya
+#: model:ir.model.fields,field_description:maknon_tests.field_question_error_aya
+msgid "verses"
+msgstr "verses"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.employee_test_session_form_view
+msgid "view details"
+msgstr "تفاصيل الخصم"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_test_center_prepration_committee_assign_type
+msgid "Committee assign type"
+msgstr "كيفية الإسناد"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_tests_sesstion_wizard_report_name
+msgid "Report name"
+msgstr "إسم التقرير"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.test_session_wizard_form
+msgid "Print Other reports"
+msgstr "طباعة تقارير أخرى"
+
+#. module: maknon_tests
+#: selection:tests.sesstion.wizard,report_name:0
+msgid "Subscribed student tests report"
+msgstr "تقرير المسجلين في الاختبارات"
+
+#. module: maknon_tests
+#: selection:tests.sesstion.wizard,report_name:0
+msgid "Passed student tests report"
+msgstr "تقرير المجتازون في الاختبارات"
+
+#. module: maknon_tests
+#: selection:tests.sesstion.wizard,report_name:0
+msgid "Center tests report"
+msgstr "تقرير مراكز الاختبارات "
+
+#. module: maknon_tests
+#: selection:mk.test.center.prepration,committee_assign_type:0
+msgid "All committee assign"
+msgstr "إسناد لجميع اللجان"
+
+#. module: maknon_tests
+#: selection:mk.test.center.prepration,committee_assign_type:0
+msgid "Supervisor assign"
+msgstr "إسناد للمشرف التربوي"
+
+#. module: maknon_tests
+#: selection:mk.test.center.prepration,committee_assign_type:0
+msgid "Manual assign"
+msgstr "إسناد يدوي"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_select_students_wi
+msgid "wiz"
+msgstr "wiz"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.test_registration_wizerd
+msgid "إختار الفرع"
+msgstr "إختار الفرع"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.previous_class_test_registration_wizerd
+#: model:ir.ui.view,arch_db:maknon_tests.test_registration_teacher_from
+#: model:ir.ui.view,arch_db:maknon_tests.test_registration_wizerd
+msgid "إخفاء"
+msgstr "إخفاء"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.student_test_session_form_view
+msgid "إرجاع الي مبدئي"
+msgstr "إرجاع الي مبدئي"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.previous_class_test_registration_wizerd
+#: model:ir.ui.view,arch_db:maknon_tests.test_registration_wizerd
+msgid "إضافة المزيد من الطلاب"
+msgstr "إضافة المزيد من الطلاب"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.test_branche_form_view
+msgid "إعدادات الاسئلة"
+msgstr "إعدادات الاسئلة"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.add_error_wizerd
+msgid "إغلاق"
+msgstr "إغلاق"
+
+#. module: maknon_tests
+#: selection:student.test.session,state:0
+msgid "إلغاء"
+msgstr "إلغاء"
+
+#. module: maknon_tests
+#: selection:student.test.session,state:0
+msgid "إيقاف"
+msgstr "إيقاف"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.report_tests_template
+msgid "اسم البنك"
+msgstr "اسم البنك"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.report_tests_template
+msgid "اسم الطالب/ الطالبة"
+msgstr "اسم الطالب/ الطالبة"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.test_committe_form_view
+msgid "اسم اللجنة"
+msgstr "اسم اللجنة"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.report_tests_template
+msgid "اسم المعلم/ المعلمة"
+msgstr "اسم المعلم/ المعلمة"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.report_tests_template
+msgid "اسم صاحب الحساب"
+msgstr "اسم صاحب الحساب"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.test_committe_form_view
+msgid "اعضاء اللجنة"
+msgstr "اعضاء اللجنة"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.timetable_view
+msgid "التاريخ"
+msgstr "التاريخ"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.report_tests_template
+msgid "التقدير"
+msgstr "التقدير"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.report_tests_template
+msgid "الجنسية"
+msgstr "الجنسية"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.report_tests_template
+msgid "الحساب البنكي"
+msgstr "الحساب البنكي"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_student_test_session_episode_id
+#: model:ir.model.fields,field_description:maknon_tests.field_teacher_test_subscription_episode_id
+#: model:ir.ui.view,arch_db:maknon_tests.previous_class_test_registration_wizerd
+#: model:ir.ui.view,arch_db:maknon_tests.session_search_view
+#: model:ir.ui.view,arch_db:maknon_tests.teacher_test_register_from
+#: model:ir.ui.view,arch_db:maknon_tests.test_registration_wizerd
+msgid "الحلقة"
+msgstr "الحلقة"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.previous_class_test_registration_wizerd
+#: model:ir.ui.view,arch_db:maknon_tests.teacher_test_register_from
+#: model:ir.ui.view,arch_db:maknon_tests.test_registration_teacher_from
+#: model:ir.ui.view,arch_db:maknon_tests.test_registration_wizerd
+msgid "السعة الاستعابية / الدقائق"
+msgstr "السعة الاستعابية / الدقائق"
+
+#. module: maknon_tests
+#: code:addons/maknon_tests/models/mk_test_center.py:73
+#, python-format
+msgid "الرجاء ادخال تاريخ بداية تسجيل حديث"
+msgstr "الرجاء ادخال تاريخ بداية تسجيل حديث"
+
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.my_student_test_session__tree_view
+#: model:ir.ui.view,arch_db:maknon_tests.student_test_session__tree_view
+msgid "الطالب"
+msgstr "الطالب"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_course_student_branch_id
+#: model:ir.model.fields,field_description:maknon_tests.field_teacher_test_subscription_branch_id
+#: model:ir.model.fields,field_description:maknon_tests.field_update_branch_wizard_branch
+#: model:ir.ui.view,arch_db:maknon_tests.emp_search_view
+#: model:ir.ui.view,arch_db:maknon_tests.previous_class_test_registration_wizerd
+#: model:ir.ui.view,arch_db:maknon_tests.report_tests_template
+#: model:ir.ui.view,arch_db:maknon_tests.session_search_view
+#: model:ir.ui.view,arch_db:maknon_tests.teacher_test_register_from
+#: model:ir.ui.view,arch_db:maknon_tests.test_registration_teacher_from
+#: model:ir.ui.view,arch_db:maknon_tests.test_registration_wizerd
+msgid "الفرع"
+msgstr "الفرع"
+
+#. module: maknon_tests
+#: code:addons/maknon_tests/models/employee_test_sessions.py:91
+#: code:addons/maknon_tests/models/employee_test_sessions.py:95
+#, python-format
+msgid "الطالب لم يجلس في الفرع  "
+msgstr "الطالب لم يجلس في الفرع  "
+
+#. module: maknon_tests
+#: code:addons/maknon_tests/models/employee_test_sessions.py:86
+#, python-format
+msgid "الطالب لم يجلس لاخنبار  "
+msgstr "الطالب لم يجلس لاخنبار  "
+
+#. module: maknon_tests
+#: code:addons/maknon_tests/models/wizerd/single.py:168
+#, python-format
+msgid "الطالب نجح في الفروع وهي فروع شاملة لهذا الفرع"
+msgstr "الطالب نجح في الفروع وهي فروع شاملة لهذا الفرع"
+
+#. module: maknon_tests
+#: code:addons/maknon_tests/models/wizerd/single.py:137
+#, python-format
+msgid "الطالب نجح في هذا الفرع مسبقا"
+msgstr "الطالب نجح في هذا الفرع مسبقا"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.mk_test_center_prep_form_view
+msgid "الطول"
+msgstr "الطول"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.report_tests_template
+msgid "العدد الكلي"
+msgstr "العدد الكلي"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.mk_test_center_prep_form_view
+msgid "العرض"
+msgstr "العرض"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_question_error_member
+#: model:ir.model.fields,field_description:maknon_tests.field_question_error_user_id
+#: model:ir.ui.view,arch_db:maknon_tests.test_committe_form_view
+#: model:ir.ui.view,arch_db:maknon_tests.test_mistake_tree
+msgid "العضو"
+msgstr "العضو"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.report_tests_template
+msgid "الفترة"
+msgstr "الفترة"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.timetable_view
+msgid "الفتره"
+msgstr "الفتره"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_teacher_test_subscription_mosque_id
+#: model:ir.ui.view,arch_db:maknon_tests.mk_test_center_prep_form_view
+#: model:ir.ui.view,arch_db:maknon_tests.previous_class_test_registration_wizerd
+#: model:ir.ui.view,arch_db:maknon_tests.session_search_view
+#: model:ir.ui.view,arch_db:maknon_tests.student_test_session__tree_view
+#: model:ir.ui.view,arch_db:maknon_tests.student_test_session_form_view
+#: model:ir.ui.view,arch_db:maknon_tests.student_test_session_results_tree_view
+#: model:ir.ui.view,arch_db:maknon_tests.test_registration_teacher_from
+#: model:ir.ui.view,arch_db:maknon_tests.test_registration_wizerd
+msgid "المسجد"
+msgstr "المسجد"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.previous_class_test_registration_wizerd
+#: model:ir.ui.view,arch_db:maknon_tests.teacher_test_register_from
+#: model:ir.ui.view,arch_db:maknon_tests.test_registration_wizerd
+msgid "عدد الطلاب المستوفين للشروط"
+msgstr "عدد الطلاب المستوفين للشروط"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.report_tests_template
+msgid "الفصل"
+msgstr "الفصل"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.previous_class_test_registration_wizerd
+#: model:ir.ui.view,arch_db:maknon_tests.teacher_test_register_from
+#: model:ir.ui.view,arch_db:maknon_tests.test_registration_wizerd
+msgid "للتحقق"
+msgstr "للتحقق"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.report_tests_template
+msgid "المسار\n"
+"                \n"
+"                                        <span>من سورة-</span>\n"
+"                                        <span>إلى سورة</span>"
+msgstr "المسار\n"
+"                \n"
+"                                        <span>من سورة-</span>\n"
+"                                        <span>إلى سورة</span>"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.report_tests_template
+msgid "المسارات التعليمية للحلقة"
+msgstr "المسارات التعليمية للحلقة"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.report_tests_template
+msgid "المسجد/ المدرسة"
+msgstr "المسجد/ المدرسة"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.report_tests_template
+msgid "المعلم :"
+msgstr "المعلم :"
+
+#. module: maknon_tests
+#: code:addons/maknon_tests/models/wizerd/add_teacher.py:67
+#, python-format
+msgid "المعلم <<  >> هو معلم للطالب وهو احد اعضاء اللجنة "
+msgstr "المعلم <<  >> هو معلم للطالب وهو احد اعضاء اللجنة "
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.add_error_wizerd
+msgid "المعيار النهائي"
+msgstr "المعيار النهائي"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.report_tests_template
+msgid "المكافئات"
+msgstr "المكافئات"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.test_branche_form_view
+msgid "الي اية"
+msgstr "الي اية"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.timetable_view
+msgid "اليوم"
+msgstr "اليوم"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.add_error_wizerd
+msgid "بند الخصم"
+msgstr "بند الخصم"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.add_error_wizerd
+msgid "بند القياس والتقويم"
+msgstr "بند القياس والتقويم"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.report_tests_template
+msgid "بيان بالناجحين فى اختبار الأجزاء"
+msgstr "بيان بالناجحين فى اختبار الأجزاء"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.test_branche_form_view
+msgid "تحديد النطاق بالاجزاء"
+msgstr "تحديد النطاق بالاجزاء"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.test_committe_form_view
+msgid "تحديد كعضو رئيسي"
+msgstr "تحديد كعضو رئيسي"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.add_error_wizerd
+msgid "تفاصيل الاخطاء"
+msgstr "تفاصيل الاخطاء"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.center_prepare_test_search_view
+msgid "تم اعداد جدول الاختبار"
+msgstr "تم اعداد جدول الاختبار"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.emp_search_view
+#: model:ir.ui.view,arch_db:maknon_tests.session_search_view
+msgid "تم الاختبار"
+msgstr "تم الاختبار"
+
+#. module: maknon_tests
+#: code:addons/maknon_tests/models/wizerd/single.py:139
+#, python-format
+msgid "تم تسجيل الطالب في هذا الفرع سابقا"
+msgstr "تم تسجيل الطالب في هذا الفرع سابقا"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.emp_search_view
+#: model:ir.ui.view,arch_db:maknon_tests.session_search_view
+msgid "جاري الاختبار"
+msgstr "جاري الاختبار"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.test_branche_form_view
+msgid "جبر الكسر لاعلي"
+msgstr "جبر الكسر لاعلي"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.add_error_wizerd
+msgid "حفظ التعديل"
+msgstr "حفظ التعديل"
+
+#. module: maknon_tests
+#: selection:mk.test.center.prepration,place_options:0
+msgid "خارج المركز"
+msgstr "خارج المركز"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.evaluation_items_form_view
+msgid "خصم جزئي"
+msgstr "خصم جزئي"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_test_questions_set_fail
+#: model:ir.ui.view,arch_db:maknon_tests.student_test_session_form_view
+msgid "خصم درجة السؤال"
+msgstr "خصم درجة السؤال"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.add_error_wizerd
+msgid "خصم كامل"
+msgstr "خصم كامل"
+
+#. module: maknon_tests
+#: selection:mk.test.center.prepration,place_options:0
+msgid "داخل المركز"
+msgstr "داخل المركز"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.session_search_view
+msgid "دون لجنة اختبار"
+msgstr "دون لجنة اختبار"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.student_test_session__tree_view
+msgid "رئيس اللجنة"
+msgstr "رئيس اللجنة"
+
+#. module: maknon_tests
+#: selection:center.time.table,gender:0
+#: model:ir.ui.view,arch_db:maknon_tests.center_prepare_test_search_view
+#: model:ir.ui.view,arch_db:maknon_tests.timetable_view
+#: selection:mak.test.center,gender:0
+msgid "رجالي"
+msgstr "رجالي"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.report_tests_template
+msgid "رقم الجوال"
+msgstr "رقم الجوال"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.report_tests_template
+msgid "رقم الهوية"
+msgstr "رقم الهوية"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.session_search_view
+msgid "زمن الاختبار"
+msgstr "زمن الاختبار"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.session_search_view
+msgid "طلاب قمت انت بتسجيلهم"
+msgstr "طلاب قمت انت بتسجيلهم"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.emp_search_view
+msgid "طلاب قمت بتسجيبهم"
+msgstr "طلاب قمت بتسجيبهم"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.add_error_wizerd
+#: model:ir.ui.view,arch_db:maknon_tests.test_mistake_tree
+msgid "عدد الاخطاء"
+msgstr "عدد الاخطاء"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.test_branche_form_view
+msgid "عدد الاسئلة"
+msgstr "عدد الاسئلة"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.report_tests_template
+msgid "عدد الراسبين"
+msgstr "عدد الراسبين"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.report_tests_template
+msgid "عدد الناجحين"
+msgstr "عدد الناجحين"
+
+#. module: maknon_tests
+#: code:addons/maknon_tests/models/center_time_table.py:44
+#, python-format
+msgid "عذرا ! لايمكنك ارشفة  "
+msgstr "عذرا ! لايمكنك ارشفة  "
+
+#. module: maknon_tests
+#: code:addons/maknon_tests/models/student_test_session.py:47
+#, python-format
+msgid "عذرا ! لايمكنك ارشفة  هذه الجلسة"
+msgstr "عذرا ! لايمكنك ارشفة  هذه الجلسة"
+
+#. module: maknon_tests
+#: code:addons/maknon_tests/models/mk_test_center_prepration.py:68
+#, python-format
+msgid "عذرا ! لايمكنك ارشفة جدول اختبار تابع لمركز مستهدف"
+msgstr "عذرا ! لايمكنك ارشفة جدول اختبار تابع لمركز مستهدف"
+
+#. module: maknon_tests
+#: code:addons/maknon_tests/models/wizerd/add_teacher.py:76
+#, python-format
+msgid "عذرا , يجب تحديد العضو الرئيسي للجنة اولا من اعدادات المركز"
+msgstr "عذرا , يجب تحديد العضو الرئيسي للجنة اولا من اعدادات المركز"
+
+#. module: maknon_tests
+#: code:addons/maknon_tests/models/mk_test_center_prepration.py:277
+#, python-format
+msgid "عذرا , يجب تحديد الفترات المتاحة"
+msgstr "عذرا , يجب تحديد الفترات المتاحة"
+
+#. module: maknon_tests
+#: code:addons/maknon_tests/models/mk_test_center_prepration.py:274
+#, python-format
+msgid "عذرا , يجب تحديد ايام الاختبارات"
+msgstr "عذرا , يجب تحديد ايام الاختبارات"
+
+#. module: maknon_tests
+#: code:addons/maknon_tests/models/mk_test_center_prepration.py:271
+#, python-format
+msgid "عذرا , يجب تحديد لجان الاختبار اولا"
+msgstr "عذرا , يجب تحديد لجان الاختبار اولا"
+
+#. module: maknon_tests
+#: code:addons/maknon_tests/models/center_time_table.py:47
+#, python-format
+msgid "عذرا لايمكنك الغاء ارشفة  "
+msgstr "عذرا لايمكنك الغاء ارشفة  "
+
+#. module: maknon_tests
+#: code:addons/maknon_tests/models/mk_test_center_prepration.py:71
+#, python-format
+msgid "عذرا لايمكنك الغاء ارشفة جدول اختبار تابع لمركز مستهدف "
+msgstr "عذرا لايمكنك الغاء ارشفة جدول اختبار تابع لمركز مستهدف "
+
+#. module: maknon_tests
+#: code:addons/maknon_tests/models/student_test_session.py:50
+#, python-format
+msgid "عذرا لايمكنك الغاء ارشفة هذه الجلسة"
+msgstr "عذرا لايمكنك الغاء ارشفة هذه الجلسة"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_add_error_member
+msgid "عضو اللجنة"
+msgstr "عضو اللجنة"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.employee_test_session__tree_view
+#: model:ir.ui.view,arch_db:maknon_tests.student_test_session_form_view
+msgid "عضو اللجنة الرئيسي"
+msgstr "عضو اللجنة الرئيسي"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.test_committe_form_view
+msgid "عضو خارجي"
+msgstr "عضو خارجي"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.employee_test_session_form_view
+#: model:ir.ui.view,arch_db:maknon_tests.my_employee_test_session__tree_view
+msgid "عضو لجنة الاختبار"
+msgstr "عضو لجنة الاختبار"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.employee_test_session_form_view
+msgid "عضو لجنة الاختبار الرئيسي"
+msgstr "عضو لجنة الاختبار الرئيسي"
+
+#. module: maknon_tests
+#: code:addons/maknon_tests/models/mk_test_center.py:79
+#: code:addons/maknon_tests/models/mk_test_center_prepration.py:253
+#, python-format
+msgid "عفوا , تاريخ نهاية التسجيل لايمكن ان يكون سابق لتاريخ بداية التسجيل"
+msgstr "عفوا , تاريخ نهاية التسجيل لايمكن ان يكون سابق لتاريخ بداية التسجيل"
+
+#. module: maknon_tests
+#: code:addons/maknon_tests/wizard/add_committe_wizard.py:32
+#, python-format
+msgid "عفوا , عضو اللجنة الرئيسي غير مربوط بمستخدم"
+msgstr "عفوا , عضو اللجنة الرئيسي غير مربوط بمستخدم"
+
+#. module: maknon_tests
+#: code:addons/maknon_tests/models/center_time_table.py:34
+#: code:addons/maknon_tests/models/mk_test_center.py:40
+#, python-format
+msgid "عفوا , لاتمتلك صلاحية حذف مركز مستهدف"
+msgstr "عفوا , لاتمتلك صلاحية حذف مركز مستهدف"
+
+#. module: maknon_tests
+#: code:addons/maknon_tests/models/mk_test_center.py:82
+#: code:addons/maknon_tests/models/mk_test_center_prepration.py:256
+#, python-format
+msgid "عفوا , لايمكن ان يستمر التسجيل لما بعد نهاية الاختبارات"
+msgstr "عفوا , لايمكن ان يستمر التسجيل لما بعد نهاية الاختبارات"
+
+#. module: maknon_tests
+#: code:addons/maknon_tests/models/student_test_session.py:36
+#, python-format
+msgid "عفوا , لايمكنك حذف هذه الجلسة"
+msgstr "عفوا , لايمكنك حذف هذه الجلسة"
+
+#. module: maknon_tests
+#: code:addons/maknon_tests/wizard/add_committe_wizard.py:37
+#, python-format
+msgid "عفوا , يجب تحديد العضو الرئيسي للجنة اولا من اعدادات المركز"
+msgstr "عفوا , يجب تحديد العضو الرئيسي للجنة اولا من اعدادات المركز"
+
+#. module: maknon_tests
+#: code:addons/maknon_tests/models/mk_test_center.py:76
+#: code:addons/maknon_tests/models/mk_test_center_prepration.py:250
+#, python-format
+msgid "عفوا ,, تاريخ بداية الاختبارات ان يكون سابق لتاريخ التسجيل"
+msgstr "عفوا ,, تاريخ بداية الاختبارات ان يكون سابق لتاريخ التسجيل"
+
+#. module: maknon_tests
+#: code:addons/maknon_tests/models/mk_test_center_prepration.py:36
+#, python-format
+msgid "عفوا ,لايمكنك حذف جدول تابع لمركز اختبار مستهدف"
+msgstr "عفوا ,لايمكنك حذف جدول تابع لمركز اختبار مستهدف"
+
+#. module: maknon_tests
+#: code:addons/maknon_tests/models/wizerd/single.py:102
+#: code:addons/maknon_tests/models/wizerd/single.py:111
+#, python-format
+msgid "عفوا الطالب لم يكمل اختبار فروع  وهو  متطلب"
+msgstr "عفوا الطالب لم يكمل اختبار فروع  وهو  متطلب"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.student_test_session_form_view
+msgid "غياب"
+msgstr "غياب"
+
+#. module: maknon_tests
+#: selection:mk.test.center.prepration,place_options:0
+msgid "في مقر المركز"
+msgstr "في مقر المركز"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.add_error_wizerd
+msgid "قيمة الخطأ"
+msgstr "قيمة الخطأ"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.test_center_tree_view
+msgid "لامركز الرئيسي"
+msgstr "لامركز الرئيسي"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.mk_test_center_prep_form_view
+msgid "لجان الاختبار"
+msgstr "لجان الاختبار"
+
+#. module: maknon_tests
+#: model:ir.actions.act_window,name:maknon_tests.open_center_committes
+msgid "لجان الاختبار "
+msgstr "لجان الاختبار "
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.session_search_view
+msgid "لجنة الإختبار"
+msgstr "لجنة الإختبار"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.add_teacher_wizerd
+#: model:ir.ui.view,arch_db:maknon_tests.employee_test_session__tree_view
+#: model:ir.ui.view,arch_db:maknon_tests.employee_test_session_form_view
+#: model:ir.ui.view,arch_db:maknon_tests.student_test_session__tree_view
+#: model:ir.ui.view,arch_db:maknon_tests.student_test_session_form_view
+msgid "لجنة الاختبار"
+msgstr "لجنة الاختبار"
+
+#. module: maknon_tests
+#: selection:mk.test.center.prepration,place_options:0
+msgid "لجنة متحركة"
+msgstr "لجنة متحركة"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.report_tests_template
+msgid "لعام"
+msgstr "لعام"
+
+#. module: maknon_tests
+#: code:addons/maknon_tests/models/student_test_session.py:198
+#, python-format
+msgid "لم يتمكن النظام من توليد اسئلة لهذا الفرع الرجاء مراجعة اعدادات الاسئلة المتعلقة بهذا الفرع"
+msgstr "لم يتمكن النظام من توليد اسئلة لهذا الفرع الرجاء مراجعة اعدادات الاسئلة المتعلقة بهذا الفرع"
+
+#. module: maknon_tests
+#: code:addons/maknon_tests/models/student_test_session.py:227
+#: code:addons/maknon_tests/models/student_test_session.py:229
+#, python-format
+msgid "لم يتمكن النظام من توليد اسئلة لهذا الفرع الرجاء مراجعة اعدادات الفرع"
+msgstr "لم يتمكن النظام من توليد اسئلة لهذا الفرع الرجاء مراجعة اعدادات الفرع"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.emp_search_view
+#: model:ir.ui.view,arch_db:maknon_tests.session_search_view
+msgid "مبدئي"
+msgstr "مبدئي"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.report_tests_template
+msgid "مجموع الدرجات"
+msgstr "مجموع الدرجات"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.test_registration_wizerd
+msgid "مدة الفرع"
+msgstr "مدة الفرع"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_tests_sesstion_wizard_mosque_category_id
+msgid "Mosque Category"
+msgstr "تصنيف المسجد / المدرسة"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.center_prepare_test_search_view
+#: model:ir.ui.view,arch_db:maknon_tests.emp_search_view
+#: model:ir.ui.view,arch_db:maknon_tests.session_search_view
+#: model:ir.ui.view,arch_db:maknon_tests.test_committe_form_view
+#: model:ir.ui.view,arch_db:maknon_tests.timetable_view
+msgid "مركز الاختبار"
+msgstr "مركز الاختبار"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.center_prepare_test_search_view
+msgid "مركز الاختبار الرئيسي"
+msgstr "مركز الاختبار الرئيسي"
+
+#. module: maknon_tests
+#: code:addons/maknon_tests/models/wizerd/single.py:154
+#, python-format
+msgid "مسار الطالب  [  ] غير مسموح له بتغيير المسار"
+msgstr "مسار الطالب  [  ] غير مسموح له بتغيير المسار"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_hr_employee_outsource
+msgid "معلم مؤقت"
+msgstr "معلم مؤقت"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.evaluation_items_form_view
+msgid "معيار الدرجة النهائي"
+msgstr "معيار الدرجة النهائي"
+
+#. module: maknon_tests
+#: selection:mk.test.center.prepration,place_options:0
+msgid "مقر الجمعية"
+msgstr "مقر الجمعية"
+
+#. module: maknon_tests
+#: selection:mk.test.center.prepration,place_options:0
+msgid "مكتب الإشراف النسائي"
+msgstr "مكتب الإشراف النسائي"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.test_branche_form_view
+msgid "من الاية"
+msgstr "من الاية"
+
+#. module: maknon_tests
+#: selection:center.time.table,gender:0
+#: model:ir.ui.view,arch_db:maknon_tests.center_prepare_test_search_view
+#: model:ir.ui.view,arch_db:maknon_tests.timetable_view
+#: selection:mak.test.center,gender:0
+msgid "نسائي"
+msgstr "نسائي"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.test_registration_wizerd
+msgid "نوع الاختبار"
+msgstr "نوع الاختبار"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.mk_test_center_prep_form_view
+msgid "وصف الموقع"
+msgstr "وصف الموقع"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.add_teacher_wizerd
+#: model:ir.ui.view,arch_db:maknon_tests.committe_migration_wizard_view_form
+msgid "يتم اختيار المعلم من ضمن قائمة لجان الاختبار بواسطة المركز الرئيسي للاختبار"
+msgstr "يتم اختيار المعلم من ضمن قائمة لجان الاختبار بواسطة المركز الرئيسي للاختبار"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_tests_sesstion_wizard_gender_type
+msgid "Gender Type"
+msgstr "الجنس"
+
+#. module: maknon_tests
+#: selection:tests.sesstion.wizard,gender_type:0
+msgid "Female"
+msgstr "أنثى"
+
+#. module: maknon_tests
+#: selection:tests.sesstion.wizard,gender_type:0
+msgid "Male"
+msgstr "ذكر"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_tests_sesstion_wizard_is_test_session
+msgid "Show only shared episodes"
+msgstr "إظهار الحلقات المشاركة فقط"
+
+#. module: maknon_tests
+#: model:res.groups,name:maknon_tests.print_parts_certification
+msgid "Print Parts Certification"
+msgstr "طباعة شهادة أجزاء"
+
+#. module: maknon_tests
+#: model:ir.ui.view,arch_db:maknon_tests.student_test_session_form_view
+msgid "Print parts Certificate"
+msgstr "طباعة شهادة أجزاء"
+
+#. module: maknon_tests
+#: model:res.groups,name:maknon_tests.read_student_test_session_supervisor_mosq
+msgid "Read Student Test Session supervisor Mosq"
+msgstr "قراءة جلسة اختبار الطالب لمشرفي/مديرات المساجد "
+
+#. module: maknon_tests
+#: model:res.groups,name:maknon_tests.read_student_test_session_center_admin
+msgid "Read Student Test Session Center admin"
+msgstr "قراءة جلسة اختبار الطالب لمديري/مساعدي المراكز "
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_mk_training_courses_course
+msgid "Course"
+msgstr "إسم الدورة"
+
+#. module: maknon_tests
+#: model:ir.actions.act_window,name:maknon_tests.st_test_session_results_action
+msgid "Students Test Session results"
+msgstr "نتائج الاختبارات"
+
+#. module: maknon_tests
+#: model:ir.ui.menu,name:maknon_tests.student_test_session_result_menu
+msgid "students Test Session results"
+msgstr "نتائج الاختبارات"
+
+#. module: maknon_tests
+#: code:addons/maknon_tests/wizard/add_committe_wizard.py:46
+#, python-format
+msgid "Selected student test sessions must have same center."
+msgstr "جلسات الاختبار المحددة ليست تابعة لنفس مقر الاختبار"
+
+#. module: maknon_tests
+#: code:addons/maknon_tests/models/student_test_session.py:980
+#, python-format
+msgid "Assign committee"
+msgstr "إسناد لجنة الإختبار"
+
+#. module: maknon_tests
+#: code:addons/maknon_tests/models/student_test_session.py:977
+#, python-format
+msgid "You are not allowed to do this operation."
+msgstr "عذرا لا يمكنك اجراء هذه العملية"
+
+#. module: maknon_tests
+#: code:addons/maknon_tests/models/mk_test_center_prepration.py:506
+#, python-format
+msgid "You cannot set committe member whithout user"
+msgstr "لا يمكنك إضافة عضو لجنة ليس لديه مستخدم"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_student_test_session_start_date_filter
+msgid "Start date filter"
+msgstr "فلتر زمن البدء"
+
+#. module: maknon_tests
+#: model:ir.model.fields,field_description:maknon_tests.field_student_test_session_done_date_filter
+msgid "Done date filter"
+msgstr "فلتر زمن الانتهاء"
+
+#. module: maknon_tests
+#: model:ir.actions.report,name:maknon_tests.final_test_certificate_report_id
+msgid "Final test certificate"
+msgstr "شهادة الخاتمين"
+
+#. module: maknon_tests
+#: model:res.groups,name:maknon_tests.create_previous_class_student_test_session
+msgid "Create Previous Student Test Session"
+msgstr "انشاء جلسات اختبار لفصول سابقة"
+
+#. module: maknon_tests
+#: model:ir.ui.menu,name:maknon_tests.previous_center_time_tables_menu
+msgid "Previous centers tests Timetables"
+msgstr " جداول اختبار الفصول سابقة"
+
+#. module: maknon_tests
+#: model:ir.actions.act_window,name:maknon_tests.previous_center_time_tables_action
+msgid "Previous class Center Time Table"
+msgstr "جداول اختبار الفصول سابقة"

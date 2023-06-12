@@ -1,0 +1,914 @@
+id,identity_no,name,second_name,third_name,fourth_name,country_id/id,birthdate,gender,grade_id/id,is_student,city_id/id,district_id/id,mobile
+100274,1060973466,لطيفه نافع الحربي,null,null,,base.sa,2007-1-1,Female,data_security.Grade_1,1,data_security.City_1,data_security.dis_146,966503796171
+100278,2253088955,إيمان مصطفى محمد,null,null,,base.sa,2000-1-1,Female,data_security.Grade_2,1,data_security.City_1,data_security.dis_14,966598287066
+100285,2178819972,عبدالرحمن عبدالغني محمد النحراوي,null,null,,base.sa,2000-1-1,Male,data_security.Grade_3,1,data_security.City_1,data_security.dis_4,966501412053
+100303,1111615579,محمد إبراهيم محمد الشبانات,null,null,,base.sa,2003-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_4,966542385688
+100311,2211472648,عبدالرحمن قاسم علي السفياني,null,null,,base.sa,1999-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_4,966551111345
+100331,2063685545,مريم مختار علي الانصاري ,null,null,,base.sa,2000-1-1,Female,data_security.Grade_6,1,data_security.City_1,data_security.dis_54,966501831175
+100354,454666666666,محمود أحمد رياض الشيخ,null,null,,base.sa,2001-1-1,Male,data_security.Grade_7,1,data_security.City_1,data_security.dis_74,966504258782
+100358,1030410599,جمالات عبدالعليم محمد خليفه,null,null,,base.sa,1999-1-1,Female,data_security.Grade_3,1,data_security.City_1,data_security.dis_25,966552052020
+100388,1072627357,هيا محمد الدوسري,null,null,,base.sa,1996-1-1,Female,data_security.Grade_1,1,data_security.City_1,data_security.dis_9,966559261596
+100400,1027461035,حصه سليم الشمري,null,null,,base.sa,1996-1-1,Female,data_security.Grade_2,1,data_security.City_1,data_security.dis_9,966565559900
+100414,1095178115,مهرة سعد ناصر,null,null,,base.sa,1998-1-1,Female,data_security.Grade_3,1,data_security.City_1,data_security.dis_198,966562345669
+100428,2185020019,نورا عيد محمد لملوم عمر,null,null,,base.sa,1989-1-1,Female,data_security.Grade_4,1,data_security.City_1,data_security.dis_181,966583594646
+110530,2195041427,عبدالرحمن أشرف عبدالحميد محمد,null,null,,base.sa,1697-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_138,966504425209
+100480,2074403326,مريم عمر جيبر,null,null,,base.sa,1697-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_49,966507979472
+100496,2323417978,امينة بسام لطفي ظاهر,null,null,,base.sa,1697-1-1,Female,data_security.Grade_6,1,data_security.City_1,data_security.dis_172,966580108156
+100504,10799126464,بيان يوسف سليمان العتيق ,null,null,,base.sa,1805-1-1,Female,data_security.Grade_1,1,data_security.City_1,data_security.dis_89,966503462627
+100517,1025215359,سلمى سليمان سعود البقعاوي,null,null,,base.sa,1990-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_52,966551166676
+100521,2184288641,سارة فقير محمد اكبر,null,null,,base.sa,2005-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_26,966583269752
+100523,2206481505,اصفياء مختصر موتاسار احمد,null,null,,base.sa,1993-1-1,Female,data_security.Grade_6,1,data_security.City_1,data_security.dis_26,966508385400
+100489,1135589909,فريال سالم عمر باحمط,null,null,,base.sa,1993-1-1,Female,data_security.Grade_7,1,data_security.City_1,data_security.dis_89,966554120533
+100491,1063915027,لولوة صالح عبدالله القناص ,null,null,,base.sa,1994-1-1,Female,data_security.Grade_3,1,data_security.City_1,data_security.dis_89,966555920992
+100509,2100014014,رؤى العميد سعيد الدندشي ,null,null,,base.sa,1998-1-1,Female,data_security.Grade_4,1,data_security.City_1,data_security.dis_89,966552672451
+100511,2147652651,مروه مصطفى عبدالقادر الغريب ,null,null,,base.sa,2000-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_89,966551691042
+100513,20640117300,نسيبه صالح عبدالسلام القادري,null,null,,base.sa,1999-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_172,966535989009
+100520,2234533079,هدى عبدالجليل الصطيف,null,null,,base.sa,2001-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_52,966563785690
+100525,2208901344,بشرى صادق مير شاه,null,null,,base.sa,2001-1-1,Female,data_security.Grade_6,1,data_security.City_1,data_security.dis_26,966503275199
+100526,2166703757,مريم اشرف زاهد ابراهيم,null,null,,base.sa,2001-1-1,Female,data_security.Grade_7,1,data_security.City_1,data_security.dis_26,966503265145
+100533,555555555555,نورة محمد عبد الغفار,null,null,,base.sa,1996-1-1,Male,data_security.Grade_3,1,data_security.City_1,data_security.dis_26,966505497192
+100545,2310665498,أماني أحمد سالم بابقي,null,null,,base.sa,1995-1-1,Female,data_security.Grade_1,1,data_security.City_1,data_security.dis_89,966535865750
+100549,1124572270,نسرين تيسير جبران الملحاوي,null,null,,base.sa,1996-1-1,Female,data_security.Grade_2,1,data_security.City_1,data_security.dis_54,966553182824
+100551,1145187926,ألاء محمد حسين العامودي,null,null,,base.sa,1998-1-1,Female,data_security.Grade_3,1,data_security.City_1,data_security.dis_89,966552273220
+100556,2202520314,سجى عدنان عيسى ريان,null,null,,base.sa,2002-1-1,Female,data_security.Grade_4,1,data_security.City_1,data_security.dis_89,966559794555
+100558,2131621610,ريم عبدالقادر عثمان,null,null,,base.sa,2002-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_43,966534881767
+100562,2181562493,ساره سيد انور سيد,null,null,,base.sa,2000-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_26,966507808444
+100563,2297467579,ماهام بهوتو زاهد ميان بهوتو,null,null,,base.sa,2002-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_26,966540359507
+100567,2164041960,عائشة علي سناور علي,null,null,,base.sa,1995-1-1,Female,data_security.Grade_6,1,data_security.City_1,data_security.dis_26,966500606849
+100571,2231565132,فاطمة بنت محمد اشرف اشرف,null,null,,base.sa,1996-1-1,Female,data_security.Grade_7,1,data_security.City_1,data_security.dis_26,966502249569
+100574,2176773170,سارة منصور احمد منصور,null,null,,base.sa,1995-1-1,Female,data_security.Grade_3,1,data_security.City_1,data_security.dis_26,966509762934
+100576,2169136120,امبر نديم اصغر علي,null,null,,base.sa,1998-1-1,Female,data_security.Grade_1,1,data_security.City_1,data_security.dis_26,966507855121
+100591,2289937209,أميرة السيد عبد العال المندوه,null,null,,base.sa,1987-1-1,Female,data_security.Grade_2,1,data_security.City_1,data_security.dis_9,966545272969
+100594,1064364712,نوال سعيد فواز الزهراني,null,null,,base.sa,1996-1-1,Female,data_security.Grade_3,1,data_security.City_1,data_security.dis_9,966541610287
+100596,2135155006,وسام محمود محمد الفرارجي,null,null,,base.sa,2001-1-1,Female,data_security.Grade_4,1,data_security.City_1,data_security.dis_9,966507651425
+100565,2180560167,زينة محمد حسين عبد الغني,null,null,,base.sa,1997-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_26,966558157530
+100573,2297737609,مريم رانا محمد محبوب,null,null,,base.sa,1987-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_26,966558467375
+100584,2165473881,امنة خان محمد اكبر,null,null,,base.sa,1992-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_26,966509648035
+100585,2157213295,سبا شودر راشد احمد,null,null,,base.sa,1697-1-1,Female,data_security.Grade_6,1,data_security.City_1,data_security.dis_26,966502291092
+100587,2160811077,سميرة شاهد شيخ محمد,null,null,,base.sa,1697-1-1,Female,data_security.Grade_7,1,data_security.City_1,data_security.dis_26,966554423116
+100605,1047964034,لولوة صالح عبد الله الدرويش,null,null,,base.sa,1989-1-1,Female,data_security.Grade_3,1,data_security.City_1,data_security.dis_9,966506810888
+100608,1006801813,لطيفة عبدالرحمن السبهان,null,null,,base.sa,1991-1-1,Female,data_security.Grade_1,1,data_security.City_1,data_security.dis_9,966505292932
+100612,2135998876,زهراء أبو بكر حامد آدم,null,null,,base.sa,1994-1-1,Female,data_security.Grade_2,1,data_security.City_1,data_security.dis_9,966531346941
+100613,1129756407,سطام حسن علي الشهري,null,null,,base.sa,1997-1-1,Male,data_security.Grade_3,1,data_security.City_1,data_security.dis_105,966552666838
+100627,3962484121,عبد الرحمن أحمد الحسين,null,null,,base.sa,1994-1-1,Female,data_security.Grade_4,1,data_security.City_1,data_security.dis_200,966535294771
+100632,1112925894,شهد خالد عبدالله الفضلي,null,null,,base.sa,1995-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_172,966507380885
+100636,2199798642,محمد سالم محمد محسن,null,null,,base.sa,1994-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_77,966506995797
+100640,2322141397,أسماء حسن مجلي,null,null,,base.sa,1991-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_172,966552994047
+100642,1130407933,الوليد عبدالملك إسحاق خياط,null,null,,base.sa,1994-1-1,Male,data_security.Grade_6,1,data_security.City_1,data_security.dis_23,966581000413
+100644,1109527745,أسيل مشعان الدوسري,null,null,,base.sa,1995-1-1,Female,data_security.Grade_7,1,data_security.City_1,data_security.dis_22,966555235510
+100645,2224832739,محمد عماد الدين شريف عباس,null,null,,base.sa,1991-1-1,Male,data_security.Grade_3,1,data_security.City_1,data_security.dis_77,966562714435
+100649,1566342129,نايف صالح الزغيبي,null,null,,base.sa,1994-1-1,Male,data_security.Grade_1,1,data_security.City_1,data_security.dis_1,966566556565
+100575,2211838830,حافظة خليفي حسن تجمل,null,null,,base.sa,1997-1-1,Female,data_security.Grade_2,1,data_security.City_1,data_security.dis_26,966507780802
+100577,2192379879,يسرى آصف احمد خان,null,null,,base.sa,1998-1-1,Female,data_security.Grade_3,1,data_security.City_1,data_security.dis_26,966507908827
+100583,2183536677,مريم عبد اللطيف محمد حسين,null,null,,base.sa,1998-1-1,Female,data_security.Grade_4,1,data_security.City_1,data_security.dis_26,966507992275
+100593,2172612844,نورس ناصف حسين مصيلحي,null,null,,base.sa,1998-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_9,966503304184
+100607,2330847951,هبه طلبه عبد اللطيف طه,null,null,,base.sa,1994-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_9,966580882785
+100610,1011467188,رزنة علي محمد القحطاني,null,null,,base.sa,1997-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_9,966508452242
+100629,2252452889,نبيل عبد الحنيف عبد الحميد شيخ,null,null,,base.sa,1996-1-1,Male,data_security.Grade_6,1,data_security.City_1,data_security.dis_77,966550416620
+100634,1112540487,عبد الله عادل باجسير,null,null,,base.sa,1997-1-1,Female,data_security.Grade_7,1,data_security.City_1,data_security.dis_200,966506404917
+100650,2247695394,إبراهيم علاء إبراهيم صقر,null,null,,base.sa,1997-1-1,Male,data_security.Grade_3,1,data_security.City_1,data_security.dis_151,966507431663
+100652,2294364746,مصطفى نجيب أنور أبو صالحة,null,null,,base.sa,2001-1-1,Male,data_security.Grade_1,1,data_security.City_1,data_security.dis_151,966505479177
+100655,1115906032,عبد الرحمن سعد آل مبارك,null,null,,base.sa,1590-1-1,Male,data_security.Grade_2,1,data_security.City_1,data_security.dis_172,966558055630
+100658,1099972034,ريما مساعد الحربي,null,null,,base.sa,2000-1-1,Female,data_security.Grade_3,1,data_security.City_1,data_security.dis_142,966500448886
+100606,1004139448,عصماء عبد المحسن عبد الله الطريقي,null,null,,base.sa,2000-1-1,Female,data_security.Grade_4,1,data_security.City_1,data_security.dis_9,966506213020
+100614,1006207391,عبدالرحمن محمد علي الحدادي,null,null,,base.sa,2001-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_105,966554045928
+100624,1109907301,عبد الرحمن محمد سليمان العبد المنعم ,null,null,,base.sa,2000-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_79,966553233635
+100626,2217866504,هادي فاروق بهمات,null,null,,base.sa,2003-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_25,966508295412
+100633,2185735038,عبد الله مبارك بن الشيبه,null,null,,base.sa,2002-1-1,Male,data_security.Grade_6,1,data_security.City_1,data_security.dis_77,966557767419
+100639,2163667039,عمر سالم عمر باحميد,null,null,,base.sa,1999-1-1,Male,data_security.Grade_7,1,data_security.City_1,data_security.dis_77,966563879038
+100660,1091574283,روان عبدالله الفضلي,null,null,,base.sa,2000-1-1,Female,data_security.Grade_3,1,data_security.City_1,data_security.dis_200,966506467273
+100661,1126692506,خالد إبراهيم العبيدان ,null,null,,base.sa,2003-1-1,Female,data_security.Grade_2,1,data_security.City_1,data_security.dis_1,966505260202
+100671,1110255476,يوسف صالح التويجري,null,null,,base.sa,1994-1-1,Male,data_security.Grade_4,1,data_security.City_1,data_security.dis_1,966507885492
+100673,1111871207,نايف عبدالعزيز الرشود,null,null,,base.sa,2001-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_1,966509180901
+100682,1116914647,صالح منصور السماري,null,null,,base.sa,2002-1-1,Female,data_security.Grade_6,1,data_security.City_1,data_security.dis_1,966554242382
+100692,1119068771,عبدالرحمن عبدالكريم الحميدان,null,null,,base.sa,1998-1-1,Male,data_security.Grade_7,1,data_security.City_1,data_security.dis_1,966505419837
+100695,1125871481,سارة أحمد العصفور,null,null,,base.sa,1991-1-1,Female,data_security.Grade_3,1,data_security.City_1,data_security.dis_172,966549283256
+123737,1139038697,سعد عبد الله محمد بكر,null,null,,base.sa,1995-1-1,Male,data_security.Grade_1,1,data_security.City_1,data_security.dis_127,966555223302
+100656,1123827154,فيصل سعد آل مبارك,null,null,,base.sa,1998-1-1,Male,data_security.Grade_2,1,data_security.City_1,data_security.dis_172,966558055130
+100698,2217333836,خليل مصطفى خلف,null,null,,base.sa,1995-1-1,Male,data_security.Grade_3,1,data_security.City_1,data_security.dis_1,966504435681
+100699,1036643474,حصة عبدالعزيز محمد العبدالسلام,null,null,,base.sa,1996-1-1,Female,data_security.Grade_4,1,data_security.City_1,data_security.dis_47,966506511803
+100705,1119530192,أسامة محمد العبد المنعم ,null,null,,base.sa,1993-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_1,966554400567
+100721,1157417849,العنود عبدالله على الجلاب,null,null,,base.sa,1995-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_63,966504458994
+100730,2351359456,محمد محمود حسن علي,null,null,,base.sa,1994-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_89,966597911072
+100736,999999999999,عبد الكريم محمد عبد الكريم,null,null,,base.sa,1997-1-1,Male,data_security.Grade_6,1,data_security.City_1,data_security.dis_89,966567464760
+100749,2230115954,صالح درويش عبد الكريم إبراهيم,null,null,,base.sa,1998-1-1,Male,data_security.Grade_7,1,data_security.City_1,data_security.dis_127,966545560770
+164086,1083576692,بشري سعيد خبزان الغامدي,null,null,,base.sa,2001-1-1,Female,data_security.Grade_3,1,data_security.City_1,data_security.dis_12,966555650062
+164103,1124626621,سعود علي ظافري,null,null,,base.sa,2000-1-1,Male,data_security.Grade_1,1,data_security.City_1,data_security.dis_147,966556412958
+164107,1130371550,سلطان ابرهيم السيف,null,null,,base.sa,1999-1-1,Male,data_security.Grade_2,1,data_security.City_1,data_security.dis_8,966554002033
+164110,2191991062,يوسف عبد الرحيم شاه نذير,null,null,,base.sa,2000-1-1,Male,data_security.Grade_3,1,data_security.City_1,data_security.dis_147,966502009055
+164111,1151931878,وليد منصور أبو خنجر,null,null,,base.sa,2002-1-1,Male,data_security.Grade_4,1,data_security.City_1,data_security.dis_22,966546333222
+164112,1131207639,عبدالرحمن بن سليمان الفراج,null,null,,base.sa,1998-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_8,966505449144
+164125,2133461398,بدر احمد بكر موسى علي,null,null,,base.sa,1996-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_8,966531499285
+164135,1124998228,احمد بن سلطان الجاسر,null,null,,base.sa,1993-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_8,966508227788
+164797,1126938750,عبدالسلام ابراهيم الزبن,null,null,,base.sa,1996-1-1,Male,data_security.Grade_6,1,data_security.City_1,data_security.dis_25,966505463563
+164804,1119412433,حمد فهد الموسى,null,null,,base.sa,2000-1-1,Male,data_security.Grade_7,1,data_security.City_1,data_security.dis_25,966554448095
+164170,1112007420,عبدالمجيد ناصر علي الحارثي,null,null,,base.sa,1996-1-1,Male,data_security.Grade_3,1,data_security.City_1,data_security.dis_4,966552488488
+164203,1101486551,فهد ياسر الهويشل ,null,null,,base.sa,1998-1-1,Male,data_security.Grade_4,1,data_security.City_1,data_security.dis_151,966535563134
+164221,1122199654,فيصل سالم القحطاني,null,null,,base.sa,1996-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_179,966503821920
+164232,1126271046,البراء علي حسن الشهري,null,null,,base.sa,1999-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_179,966556772707
+164261,2194567299,مازن ياسر كمال,null,null,,base.sa,1997-1-1,Male,data_security.Grade_6,1,data_security.City_1,data_security.dis_157,966501674975
+164302,2284787344,فارس فيصل حنيفة,null,null,,base.sa,1997-1-1,Male,data_security.Grade_7,1,data_security.City_1,data_security.dis_157,966544694462
+164335,2289206779,ابوبكر بشير عبدالماجد عمر,null,null,,base.sa,2002-1-1,Male,data_security.Grade_1,1,data_security.City_1,data_security.dis_22,966500409016
+164357,1107858472,رائد محمد راشد الحركان ,null,null,,base.sa,2003-1-1,Male,data_security.Grade_3,1,data_security.City_1,data_security.dis_22,966504205899
+164367,2300947146,صالح مختار محسن الشرماني,null,null,,base.sa,2001-1-1,Male,data_security.Grade_4,1,data_security.City_1,data_security.dis_94,966563098193
+164386,1135417374,الوليد خالد عبدالرحمن العبد السلام ,null,null,,base.sa,2000-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_22,966542366609
+164387,1137859888,عبدالعزيز مبارك عبدالله التميمي ,null,null,,base.sa,2000-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_22,966505215821
+164177,1063581118,عبدالعزيز يحيى عبدالله هزازي,null,null,,base.sa,1995-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_184,966556740034
+164236,2280417608,عبدالله محمد نور حاج حسين,null,null,,base.sa,2003-1-1,Male,data_security.Grade_3,1,data_security.City_1,data_security.dis_179,966532708196
+164259,2328547704,مصلح محمد النقيب,null,null,,base.sa,2001-1-1,Male,data_security.Grade_1,1,data_security.City_1,data_security.dis_157,966506412178
+164288,2199980554,أمة مقسط مشهود,null,null,,base.sa,1956-1-1,Female,data_security.Grade_2,1,data_security.City_1,data_security.dis_1,966551279472
+164291,1032561803,مطرى فايح الحارثي ,null,null,,base.sa,1942-1-1,Female,data_security.Grade_3,1,data_security.City_1,data_security.dis_151,966533530980
+164303,2237689159,عبد الله رزاق,null,null,,base.sa,1947-1-1,Male,data_security.Grade_4,1,data_security.City_1,data_security.dis_157,966559522379
+164309,2216098646,علي خالد محمد,null,null,,base.sa,1956-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_157,966502143498
+164317,1110775606,صالح عبداللطيف حمد الناصر ,null,null,,base.sa,1941-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_181,966537541165
+169171,1144270251,عبدالله محمد عبدالله المعيقل,null,null,,base.sa,2031-1-1,Male,data_security.Grade_6,1,data_security.City_1,data_security.dis_4,966554115255
+164375,1114959552,عبدالله سعد عبدالله القعود ,null,null,,base.sa,1967-1-1,Male,data_security.Grade_7,1,data_security.City_1,data_security.dis_22,966551055510
+164376,1113203937,محمد عبد الرحمن محمد السويلم ,null,null,,base.sa,1960-1-1,Male,data_security.Grade_3,1,data_security.City_1,data_security.dis_22,966505110545
+164205,1122799131,عبدالعزيز محمد عبدالله العثمان,null,null,,base.sa,1953-1-1,Male,data_security.Grade_3,1,data_security.City_1,data_security.dis_74,966551422522
+164213,2185482672,باسمه احمد عمر باسلمان,null,null,,base.sa,2014-1-1,Female,data_security.Grade_4,1,data_security.City_1,data_security.dis_89,966500891196
+164238,1150033494,محمد علي محمد الشهراني,null,null,,base.sa,2014-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_179,966505291082
+164241,1114890773,صالح عوض مفرح القحطاني,null,null,,base.sa,2014-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_179,966505213474
+164265,2281084026,محمد عبدالله صغير,null,null,,base.sa,1975-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_157,966504165703
+164271,2215533114,عبدالرحمن محمود بسيوني,null,null,,base.sa,1984-1-1,Male,data_security.Grade_6,1,data_security.City_1,data_security.dis_157,966538516513
+164274,1058947951,تغريد عبدالرحمن مقحم المقحم,null,null,,base.sa,1965-1-1,Female,data_security.Grade_7,1,data_security.City_1,data_security.dis_1,966556298088
+164275,2298239134,نادية مقيم عبدالله جان,null,null,,base.sa,1997-1-1,Female,data_security.Grade_3,1,data_security.City_1,data_security.dis_1,966541469298
+164287,2138952813,أماني محمد محمد برغلة,null,null,,base.sa,1996-1-1,Female,data_security.Grade_1,1,data_security.City_1,data_security.dis_1,966502861797
+164295,1132941434,شيماء حسن علي الحارثي,null,null,,base.sa,2002-1-1,Female,data_security.Grade_2,1,data_security.City_1,data_security.dis_66,966545907683
+164299,2101114334,محمد حسن عبدالجواد حسن,null,null,,base.sa,2002-1-1,Male,data_security.Grade_3,1,data_security.City_1,data_security.dis_157,966504251396
+164300,2274959119,حيدر نديم امير نديم,null,null,,base.sa,2002-1-1,Male,data_security.Grade_4,1,data_security.City_1,data_security.dis_157,966502973895
+164342,1107887364,حسان سعود عبدالعزيز الشتري,null,null,,base.sa,1994-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_22,966555242838
+164383,1129418602,مشاري محمد ناصر آل ثنيان,null,null,,base.sa,1995-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_22,966555426667
+164176,1125600724,محمد عبدالله السعدي,null,null,,base.sa,1996-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_179,966503408005
+164187,2218264303,محمد ابراهيم يوسف العينية,null,null,,base.sa,1995-1-1,Male,data_security.Grade_6,1,data_security.City_1,data_security.dis_2,966546786061
+164244,1148689969,عبدالمجيد نواف خالد العتيبي,null,null,,base.sa,1996-1-1,Male,data_security.Grade_7,1,data_security.City_1,data_security.dis_179,966506444503
+164247,2238357756,حمزة عبدالحميد السيسي,null,null,,base.sa,1992-1-1,Male,data_security.Grade_3,1,data_security.City_1,data_security.dis_25,966504376035
+164296,2286671330,طشة عبدالله حسين ,null,null,,base.sa,1991-1-1,Female,data_security.Grade_1,1,data_security.City_1,data_security.dis_151,966552914696
+164306,2266495973,محمد صادق نعيم,null,null,,base.sa,1993-1-1,Male,data_security.Grade_2,1,data_security.City_1,data_security.dis_157,966507064654
+164318,1112276827,طلال امين عبدالعزيزالعوشن ,null,null,,base.sa,1992-1-1,Male,data_security.Grade_3,1,data_security.City_1,data_security.dis_181,966553730136
+164322,1132857424,عبدالملك داود سعد الداود ,null,null,,base.sa,1992-1-1,Male,data_security.Grade_4,1,data_security.City_1,data_security.dis_22,966555218802
+164377,1117020378,اسامة سعد رشيد الخثلان,null,null,,base.sa,1995-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_22,966547699663
+164379,1117852861,عمر عبدالعزيز عبدالله الزعاقي,null,null,,base.sa,1998-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_22,966504464342
+164403,2255741981,حسن صديق محمد علي عبد الرشيد,null,null,,base.sa,1993-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_198,966506191692
+164405,2046712929,مؤمنة عبد الفتاح الخالدي,null,null,,base.sa,1991-1-1,Female,data_security.Grade_6,1,data_security.City_1,data_security.dis_36,966558028712
+164406,1039355837,ناريمان محمد عبد الرحمن اليعقوب,null,null,,base.sa,1991-1-1,Female,data_security.Grade_7,1,data_security.City_1,data_security.dis_175,966505277089
+164269,2177830094,زياد عادل الصعيدي,null,null,,base.sa,1991-1-1,Male,data_security.Grade_3,1,data_security.City_1,data_security.dis_157,966564071362
+164285,2154305631,إسلام كمال عبدالحافظ أحمد,null,null,,base.sa,1991-1-1,Female,data_security.Grade_1,1,data_security.City_1,data_security.dis_1,966559451203
+164298,1073416321,جواهر سلمان يحيى المالكي,null,null,,base.sa,1991-1-1,Female,data_security.Grade_2,1,data_security.City_1,data_security.dis_66,966551161202
+164304,2109888319,محمد فيصل حواجة,null,null,,base.sa,1991-1-1,Male,data_security.Grade_3,1,data_security.City_1,data_security.dis_157,966502131761
+164332,1126983988,عبدالله محمد عبدالعزيز الماجد,null,null,,base.sa,1996-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_22,966569522926
+169168,1135879268,محمد سليمان الناصر,null,null,,base.sa,1995-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_4,966557997977
+164382,1134207396,فراس عبد الاله حسن عتين,null,null,,base.sa,1992-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_22,966506256163
+164427,1098506148,عمر حمد عبد العزيز الدهيشي,null,null,,base.sa,1993-1-1,Male,data_security.Grade_6,1,data_security.City_1,data_security.dis_74,966567330654
+164437,1109247583,مها هلال عبد الحميد المطيري ,null,null,,base.sa,1993-1-1,Female,data_security.Grade_7,1,data_security.City_1,data_security.dis_2,966533611721
+164441,1144206842,وعد بخيت علي الغامدي ,null,null,,base.sa,1994-1-1,Female,data_security.Grade_3,1,data_security.City_1,data_security.dis_2,966530224829
+168113,1126557196,عبد الله خالد الهليل,null,null,,base.sa,1994-1-1,Male,data_security.Grade_2,1,data_security.City_1,data_security.dis_25,966541560570
+164450,2240119954,شيماء خالد حمود الغدير ,null,null,,base.sa,1992-1-1,Female,data_security.Grade_3,1,data_security.City_1,data_security.dis_2,966553743673
+164493,2176079602,نور رمزي محمد فارس ,null,null,,base.sa,1993-1-1,Female,data_security.Grade_6,1,data_security.City_1,data_security.dis_175,966503480493
+164495,2197169887,سحر العفيفي رمضان البيومي,null,null,,base.sa,1993-1-1,Female,data_security.Grade_7,1,data_security.City_1,data_security.dis_18,966542904999
+164497,2185681364,خالد محمد الحمادي,null,null,,base.sa,1991-1-1,Male,data_security.Grade_3,1,data_security.City_1,data_security.dis_22,966541224556
+164505,1137068001,ابراهيم عبدالله المخيلب,null,null,,base.sa,1992-1-1,Male,data_security.Grade_1,1,data_security.City_1,data_security.dis_172,966554244471
+164512,2333028740,هاجر بنت عبدالعزيز أحمد سمران,null,null,,base.sa,1990-1-1,Female,data_security.Grade_2,1,data_security.City_1,data_security.dis_24,966532891042
+164517,1141102044,ريان فيصل النمران,null,null,,base.sa,1991-1-1,Male,data_security.Grade_3,1,data_security.City_1,data_security.dis_22,966555233643
+164518,2245153128,رانيا بنت عبدالقادر محمد عبدالقادر,null,null,,base.sa,1991-1-1,Female,data_security.Grade_4,1,data_security.City_1,data_security.dis_24,966502394386
+164521,1120179104,عبد الله محمد الشمراني,null,null,,base.sa,1992-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_8,966555277768
+164524,1122467259,فهد بدر الحقباني,null,null,,base.sa,1993-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_8,966555405513
+164526,2155126143,منيرة عثمان زين العابدين شريف,null,null,,base.sa,1995-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_1,966531566391
+164527,1114435264,عبد الرحمن عماد العسكر,null,null,,base.sa,1996-1-1,Male,data_security.Grade_6,1,data_security.City_1,data_security.dis_8,966505492820
+164528,1114324617,عبد الملك عبد الله العليان,null,null,,base.sa,1995-1-1,Male,data_security.Grade_7,1,data_security.City_1,data_security.dis_8,966554415472
+164390,1136268370,اسامة عبدالله سليمان الماجد,null,null,,base.sa,1994-1-1,Male,data_security.Grade_3,1,data_security.City_1,data_security.dis_22,966555209438
+164407,2227875669,حنين محمد حسن المزروع,null,null,,base.sa,1996-1-1,Female,data_security.Grade_1,1,data_security.City_1,data_security.dis_233,966567873939
+164412,1090250802,عبدالإله عوض ملهي عسيري,null,null,,base.sa,1992-1-1,Male,data_security.Grade_2,1,data_security.City_1,data_security.dis_74,966553206642
+164415,1119453171,أحمد إبراهيم عبدالله المشعان,null,null,,base.sa,1999-1-1,Male,data_security.Grade_3,1,data_security.City_1,data_security.dis_74,966566481622
+164416,2308858832,برلنتي علي الفراماوي حبيب أحمد,null,null,,base.sa,1995-1-1,Female,data_security.Grade_4,1,data_security.City_1,data_security.dis_19,966541209842
+164420,1136955653,مهند ماجد عبدالله السيف,null,null,,base.sa,1994-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_74,966554046000
+164424,1079882336,فراس عبدالرحمن الرماح,null,null,,base.sa,1998-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_74,966506099987
+164429,2345126755,عبدالمحمود علي عيسى أحمد,null,null,,base.sa,2000-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_74,966504102556
+164432,1007554290,شيماء فاضل حسين المطلك ,null,null,,base.sa,1995-1-1,Female,data_security.Grade_6,1,data_security.City_1,data_security.dis_2,966502811428
+164435,2322797123,ريم محمد موسى الأسطل ,null,null,,base.sa,1995-1-1,Female,data_security.Grade_7,1,data_security.City_1,data_security.dis_2,966553195721
+164445,1127497103,أميره أحمد غياض العنزي ,null,null,,base.sa,1996-1-1,Female,data_security.Grade_1,1,data_security.City_1,data_security.dis_2,966551840636
+164451,1132697655,عبدالملك إبراهيم السلوم,null,null,,base.sa,1995-1-1,Male,data_security.Grade_2,1,data_security.City_1,data_security.dis_74,966555260891
+164464,2266942941,أحمد عبدالواحد الشاعري,null,null,,base.sa,1996-1-1,Male,data_security.Grade_4,1,data_security.City_1,data_security.dis_1,966536605459
+376531,2226683783,مرام عبدالنور علي الحبري,null,null,,base.sa,1994-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_89,966530100833
+376542,1154964314,انوار مبارك العتيبي,null,null,,base.sa,1996-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_109,966557790506
+376564,1159655891,ساره برجس السهلي,null,null,,base.sa,1995-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_109,966561574641
+376568,2203171489,سعاد ابراهيم الامين,null,null,,base.sa,1993-1-1,Female,data_security.Grade_6,1,data_security.City_1,data_security.dis_4,966504058323
+376583,1155552001,دانة سعيد حسين الشهري,null,null,,base.sa,1996-1-1,Female,data_security.Grade_7,1,data_security.City_1,data_security.dis_179,966555997410
+376588,1073527028,مها محمد شمراخ,null,null,,base.sa,2007-1-1,Female,data_security.Grade_3,1,data_security.City_1,data_security.dis_89,966506455799
+376616,1075674752,مها عبدالله الجهني,null,null,,base.sa,1996-1-1,Female,data_security.Grade_1,1,data_security.City_1,data_security.dis_109,966560077203
+376630,200003849458,هناء بنت محسن صالح,null,null,,base.sa,2000-1-1,Female,data_security.Grade_2,1,data_security.City_1,data_security.dis_27,966553693127
+376644,1088379670,هدي عطيه يحي ,null,null,,base.sa,1998-1-1,Female,data_security.Grade_3,1,data_security.City_1,data_security.dis_43,966502868351
+376515,1011106273,بدريه عبدالله الحربي,null,null,,base.sa,1995-1-1,Female,data_security.Grade_4,1,data_security.City_1,data_security.dis_109,966508425383
+376529,1139287724,أبرار فايز زيمه العويني,null,null,,base.sa,1999-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_89,966502273188
+376567,1025613355,منى فهد علي اليوسف,null,null,,base.sa,1994-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_4,966503418552
+376601,1144299599,اسيل معيض المطيري,null,null,,base.sa,1997-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_109,966558712471
+376609,1136634837,نورة فهد راشد القعود ,null,null,,base.sa,1999-1-1,Female,data_security.Grade_6,1,data_security.City_1,data_security.dis_226,966568884140
+376613,2391775984,نجلاء كامل ابراهيم حميده,null,null,,base.sa,1995-1-1,Female,data_security.Grade_7,1,data_security.City_1,data_security.dis_226,966590521550
+376629,1028267837,مؤيد هلال أحمد زويزر,null,null,,base.sa,1997-1-1,Male,data_security.Grade_3,1,data_security.City_1,data_security.dis_74,966504506462
+426366,2258145867,ايناس مصطفى احمد عبدالحميد,null,null,,base.sa,1997-1-1,Female,data_security.Grade_1,1,data_security.City_1,data_security.dis_52,966597927070
+376647,2062976085,سميحة احمد محمد باحميد,null,null,,base.sa,1997-1-1,Female,data_security.Grade_2,1,data_security.City_1,data_security.dis_114,966554819307
+376683,2165782562,هناء خليل راشد ,null,null,,base.sa,1995-1-1,Female,data_security.Grade_3,1,data_security.City_1,data_security.dis_43,966502103660
+376686,2183202064,رشا سامي موسي نوح ,null,null,,base.sa,1998-1-1,Female,data_security.Grade_4,1,data_security.City_1,data_security.dis_43,966551390493
+376697,2144229222,نعيمه محمد وادي,null,null,,base.sa,1998-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_43,966563674551
+376711,2224919064,موضي يوسف محمد,null,null,,base.sa,1999-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_149,966509117509
+376716,1050495686,أحمدية شوعي هزازي حارثس,null,null,,base.sa,1999-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_179,966509373254
+376717,1039765886,مريم حسن مجرشي,null,null,,base.sa,2000-1-1,Female,data_security.Grade_6,1,data_security.City_1,data_security.dis_179,966551216080
+376718,1000398337,حصة علي حمد السعيد,null,null,,base.sa,1994-1-1,Female,data_security.Grade_7,1,data_security.City_1,data_security.dis_179,966566939863
+376736,1050866498,مطره ظافر محمد الاسمري,null,null,,base.sa,1999-1-1,Female,data_security.Grade_3,1,data_security.City_1,data_security.dis_179,966556525951
+376745,2194112096,سماح محمد أحمد,null,null,,base.sa,1997-1-1,Female,data_security.Grade_1,1,data_security.City_1,data_security.dis_147,966537629601
+376755,2327788523,نوال زين العابدين احمد العوض,null,null,,base.sa,1997-1-1,Female,data_security.Grade_2,1,data_security.City_1,data_security.dis_88,966500771628
+376666,1145709570,فارس مهذل هزاع القحطاني,null,null,,base.sa,1998-1-1,Male,data_security.Grade_3,1,data_security.City_1,data_security.dis_86,966555288617
+376667,2273786042,عامر عادل مقبل البدر,null,null,,base.sa,1999-1-1,Male,data_security.Grade_4,1,data_security.City_1,data_security.dis_86,966556082847
+376668,2401035387,ابراهيم محمد علي جادالله ,null,null,,base.sa,2000-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_86,966537194023
+376691,1141899508,بسام علي القرني,null,null,,base.sa,1997-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_86,966502154066
+376695,2319728917,سمية محمد جمعة محمد,null,null,,base.sa,1999-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_43,966541075881
+376698,2226403075,عبد الرحمن عبد الله مشحم,null,null,,base.sa,1998-1-1,Male,data_security.Grade_6,1,data_security.City_1,data_security.dis_95,966530160480
+376720,1023731902,نورة محمد الغامدي,null,null,,base.sa,2000-1-1,Female,data_security.Grade_7,1,data_security.City_1,data_security.dis_179,966555737312
+376722,1062507981,رجساء ناصر الدوسري,null,null,,base.sa,2001-1-1,Female,data_security.Grade_3,1,data_security.City_1,data_security.dis_179,966506557490
+376724,1024573774,معيضة علي الشهري,null,null,,base.sa,2000-1-1,Female,data_security.Grade_1,1,data_security.City_1,data_security.dis_179,966554621545
+376725,1052029475,سليمة سلمان سلوم المطيري,null,null,,base.sa,2000-1-1,Female,data_security.Grade_2,1,data_security.City_1,data_security.dis_179,966509004149
+376727,1065461632,خضراء عمر محمد المالكي,null,null,,base.sa,2000-1-1,Female,data_security.Grade_3,1,data_security.City_1,data_security.dis_179,966555562311
+376728,1001882370,ليلى عبده يحيى ابو طويل,null,null,,base.sa,1999-1-1,Female,data_security.Grade_4,1,data_security.City_1,data_security.dis_179,966545817546
+376739,1019038817,جمعه يحيى مباركي,null,null,,base.sa,1998-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_179,966506448874
+376751,1040053744,سلوى سعد ذاكر الربي,null,null,,base.sa,2001-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_179,966506105071
+376759,2297493815,أمل حسين علي ,null,null,,base.sa,1990-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_147,966549790635
+376768,1138721996,سارة عبدالعزيز الحمد,null,null,,base.sa,1993-1-1,Female,data_security.Grade_6,1,data_security.City_1,data_security.dis_23,966506260544
+376770,2225988969,رماز خلف الله عوض,null,null,,base.sa,2004-1-1,Female,data_security.Grade_7,1,data_security.City_1,data_security.dis_23,966593213705
+376677,1111224281,باسل نايف الجهني ,null,null,,base.sa,2002-1-1,Male,data_security.Grade_3,1,data_security.City_1,data_security.dis_216,966508945926
+376713,1055606592,شيخه سليمان عبدالرزاق,null,null,,base.sa,1998-1-1,Female,data_security.Grade_1,1,data_security.City_1,data_security.dis_109,966507494549
+376735,1043951837,عذابه ناصر القحطاني,null,null,,base.sa,2001-1-1,Female,data_security.Grade_2,1,data_security.City_1,data_security.dis_179,966551630310
+376766,1156816314,ريما منصور العصيمي,null,null,,base.sa,1949-1-1,Female,data_security.Grade_3,1,data_security.City_1,data_security.dis_193,966555057187
+376767,1126874229,بتول محمد الغليس ,null,null,,base.sa,1956-1-1,Female,data_security.Grade_4,1,data_security.City_1,data_security.dis_23,966504242561
+376771,2122330398,نبيلة عمر الحليبي,null,null,,base.sa,1942-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_23,966535291892
+376775,2245104688,وهيبه محمود شيخ ادريس ,null,null,,base.sa,1975-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_43,966500808551
+376776,2208841326,دينا يوسف عثمان,null,null,,base.sa,1948-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_43,966502955248
+376778,2235443823,بيان كامل الهوساوي,null,null,,base.sa,1995-1-1,Female,data_security.Grade_6,1,data_security.City_1,data_security.dis_43,966500365242
+376782,1127722690,وسن حمدان العمري,null,null,,base.sa,1996-1-1,Female,data_security.Grade_3,1,data_security.City_1,data_security.dis_179,966501996827
+376783,1150211405,فهد بندر الملبس ,null,null,,base.sa,1992-1-1,Female,data_security.Grade_1,1,data_security.City_1,data_security.dis_179,966504245874
+376785,2229675737,د/مسره طه أحمدعبدالله,null,null,,base.sa,2011-1-1,Female,data_security.Grade_2,1,data_security.City_1,data_security.dis_88,966569121314
+376786,1151261458,احمد سعود احمد مشبري,null,null,,base.sa,1995-1-1,Female,data_security.Grade_3,1,data_security.City_1,data_security.dis_179,966558100733
+376796,1108139625,حنين داود فتيني احمد الخواري,null,null,,base.sa,1995-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_107,966544405178
+376799,1037344528,اسماء محمد الموسى,null,null,,base.sa,1997-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_17,966555286106
+376801,2205215417,ميمونة محمد سعيد شبلوط,null,null,,base.sa,1992-1-1,Female,data_security.Grade_6,1,data_security.City_1,data_security.dis_25,966557032897
+380916,2035939509,حواء إبراهيم رمضان,null,null,,base.sa,1993-1-1,Female,data_security.Grade_7,1,data_security.City_1,data_security.dis_200,966534275355
+376731,1433872085,محمد نجيب عمر عبدالله ,null,null,,base.sa,2000-1-1,Male,data_security.Grade_3,1,data_security.City_1,data_security.dis_79,952647815654
+376756,2268634520,خالد نعمان حسن,null,null,,base.sa,1991-1-1,Male,data_security.Grade_1,1,data_security.City_1,data_security.dis_138,966551101221
+376810,2246602151,وعد ياسين يوسف البسيط,null,null,,base.sa,1994-1-1,Female,data_security.Grade_2,1,data_security.City_1,data_security.dis_79,966502521861
+376814,2187710096,إيمان محمد أحمد عبده,null,null,,base.sa,1999-1-1,Female,data_security.Grade_3,1,data_security.City_1,data_security.dis_24,966533664650
+376817,1152566491,راشد محمد عبده الهزازي,null,null,,base.sa,2001-1-1,Female,data_security.Grade_4,1,data_security.City_1,data_security.dis_179,966558121152
+376819,2367207038,رنيم ابراهيم عبدالله المشجري,null,null,,base.sa,1999-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_179,966539133351
+376821,2332770813,ريتاج محمد نور ,null,null,,base.sa,1994-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_179,966530485158
+376822,1151096003,ريوف عبدالرحمن البيشي,null,null,,base.sa,1993-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_179,966506402548
+376841,1122975970,عبد الله محمد الحربي,null,null,,base.sa,1992-1-1,Male,data_security.Grade_6,1,data_security.City_1,data_security.dis_179,966549334220
+376844,2381219472,طاهر عبدالرحمن محمد,null,null,,base.sa,1993-1-1,Male,data_security.Grade_3,1,data_security.City_1,data_security.dis_142,966534591048
+376845,1150798963,يارا زايد عسيري,null,null,,base.sa,1957-1-1,Female,data_security.Grade_1,1,data_security.City_1,data_security.dis_179,966559327086
+376858,2053543233,رغد عبدالله محمد غالب,null,null,,base.sa,2000-1-1,Female,data_security.Grade_2,1,data_security.City_1,data_security.dis_114,966555139318
+376859,2340976907,أماني محمد اسماعيل,null,null,,base.sa,1962-1-1,Female,data_security.Grade_3,1,data_security.City_1,data_security.dis_114,966549015114
+376860,1150358248,نايف علي عميش عكفه,null,null,,base.sa,1992-1-1,Female,data_security.Grade_4,1,data_security.City_1,data_security.dis_179,966556795330
+376861,1065626655,ليلى بركوت عمر الناشري,null,null,,base.sa,2002-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_179,966559784407
+376772,1000800951,مي عبدالكريم الرويشد,null,null,,base.sa,1998-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_23,966506254505
+376787,2255176501,ماجده أحمد حسن سمك,null,null,,base.sa,1999-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_88,966554821202
+376792,2284480478,عبدالرحمن اشرف الحريري,null,null,,base.sa,1999-1-1,Male,data_security.Grade_6,1,data_security.City_1,data_security.dis_25,966504772190
+376793,1151836523,ميسم حسن مرعي الاسمري,null,null,,base.sa,2002-1-1,Female,data_security.Grade_7,1,data_security.City_1,data_security.dis_179,966553355036
+376854,1155582636,صالحه خالد السبيعي,null,null,,base.sa,2001-1-1,Female,data_security.Grade_3,1,data_security.City_1,data_security.dis_179,966507475342
+376863,1038097737,بدرية مساعد موسى العصيمي,null,null,,base.sa,2001-1-1,Female,data_security.Grade_1,1,data_security.City_1,data_security.dis_79,966503150608
+376864,1031859232,وحشه احمد محمد,null,null,,base.sa,2001-1-1,Female,data_security.Grade_2,1,data_security.City_1,data_security.dis_179,966504270687
+376870,1009950468,جمعه يحيى محمد عاتي,null,null,,base.sa,2000-1-1,Female,data_security.Grade_3,1,data_security.City_1,data_security.dis_179,966506211929
+376885,2184083844,زهره ابراهيم الجمعه ديكو,null,null,,base.sa,1998-1-1,Female,data_security.Grade_4,1,data_security.City_1,data_security.dis_199,966562347125
+376886,2146635889,تقوي محمد الحسن ,null,null,,base.sa,1998-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_43,966599847566
+376887,2233475132,عايده محمد ابراهيم ,null,null,,base.sa,1998-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_43,966541589925
+376912,1116623016,سعيد حسن أحمد الزهراني,null,null,,base.sa,2000-1-1,Male,data_security.Grade_6,1,data_security.City_1,data_security.dis_86,966533541140
+376913,2143364202,إيمان محمد علي فضل,null,null,,base.sa,1999-1-1,Female,data_security.Grade_7,1,data_security.City_1,data_security.dis_114,966501551462
+376914,2193892813,عوالي عالم على ,null,null,,base.sa,2000-1-1,Female,data_security.Grade_3,1,data_security.City_1,data_security.dis_114,966543070548
+376915,1112661192,صالح عادل الصانع,null,null,,base.sa,1997-1-1,Male,data_security.Grade_1,1,data_security.City_1,data_security.dis_15,966504197117
+376943,2213860618,روضان مبروك مبروك النهدي ,null,null,,base.sa,1996-1-1,Male,data_security.Grade_3,1,data_security.City_1,data_security.dis_54,966504214572
+376946,2260571050,ديالا بنت فؤاد بن زاهد جبري,null,null,,base.sa,2000-1-1,Female,data_security.Grade_4,1,data_security.City_1,data_security.dis_16,966553297755
+442055,3701299426,حمزة أحمد محمد قطاش,null,null,,base.sa,1997-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_113,966534401500
+376803,2219798523,ندى عبده البناء ,null,null,,base.sa,1989-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_89,966537894773
+376848,1159111077,ولايف علي محمد البارقي,null,null,,base.sa,1996-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_179,966567977336
+376852,1150700878,ربى محمد الشهري,null,null,,base.sa,1991-1-1,Female,data_security.Grade_6,1,data_security.City_1,data_security.dis_179,966509126626
+376857,1152113427,حلا مسفر الشمراني,null,null,,base.sa,1994-1-1,Female,data_security.Grade_7,1,data_security.City_1,data_security.dis_179,966509092028
+376866,2232523379,أميرة الصادق احمد سميح,null,null,,base.sa,1995-1-1,Female,data_security.Grade_3,1,data_security.City_1,data_security.dis_179,966502686146
+376867,1060309257,عزيزة أحمد مهدي المالكي,null,null,,base.sa,1999-1-1,Female,data_security.Grade_1,1,data_security.City_1,data_security.dis_179,966552998807
+376869,1097419640,نوف حمد المرداس الدوسري,null,null,,base.sa,1984-1-1,Female,data_security.Grade_2,1,data_security.City_1,data_security.dis_23,966590025266
+376888,2353367325,اسماء  علي اسماعيل  عبد المقصود,null,null,,base.sa,2002-1-1,Female,data_security.Grade_3,1,data_security.City_1,data_security.dis_43,966531360920
+376894,1103070221,زهره بركات عبدالله ,null,null,,base.sa,1994-1-1,Female,data_security.Grade_4,1,data_security.City_1,data_security.dis_43,966501235570
+376924,2198680429,ورود بنت بهاء الدين السباعي,null,null,,base.sa,1997-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_26,966501121541
+376959,2332343306,علياء خالد عبدالتواب,null,null,,base.sa,2345-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_127,966542043310
+376964,2204734095,عبير توفيق عثمان,null,null,,base.sa,2067-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_17,966531187434
+371574,1030062622,ليلى عيسى عبدالرحمن العيسى,null,null,,base.sa,1995-1-1,Female,data_security.Grade_6,1,data_security.City_1,data_security.dis_179,966562223806
+428160,2206987535,أسامة محمد ادريس,null,null,,base.sa,1997-1-1,Male,data_security.Grade_7,1,data_security.City_1,data_security.dis_1,966543234737
+371576,1067376242,نورة عيد منشط القحطاني ,null,null,,base.sa,1990-1-1,Female,data_security.Grade_3,1,data_security.City_1,data_security.dis_179,966551234700
+371580,1057057323,جوزاء مسفر القحطاني,null,null,,base.sa,1795-1-1,Female,data_security.Grade_2,1,data_security.City_1,data_security.dis_179,966554430383
+371583,1126118296,فرحانه محمد محمد جلاب,null,null,,base.sa,1796-1-1,Female,data_security.Grade_3,1,data_security.City_1,data_security.dis_179,966536772768
+371584,2264064722,سارة عمير ناصر سيد,null,null,,base.sa,1718-1-1,Female,data_security.Grade_4,1,data_security.City_1,data_security.dis_179,966507313251
+371593,1078781513,ندى صالح علي الزهراني,null,null,,base.sa,1717-1-1,Female,data_security.Grade_6,1,data_security.City_1,data_security.dis_179,966550344502
+371594,2302685595,لين معاذ محمد عبدالقادر,null,null,,base.sa,1717-1-1,Female,data_security.Grade_7,1,data_security.City_1,data_security.dis_179,966536778746
+371599,2156188068,احلام احمد مصطفى قشوم,null,null,,base.sa,1993-1-1,Female,data_security.Grade_1,1,data_security.City_1,data_security.dis_89,966557720011
+371602,2359997117,اشراق عبدالله عمر الجرو,null,null,,base.sa,1966-1-1,Female,data_security.Grade_2,1,data_security.City_1,data_security.dis_89,966557397523
+371615,216414200800,سلوى محمد ياسين سميطة ,null,null,,base.sa,1989-1-1,Female,data_security.Grade_4,1,data_security.City_1,data_security.dis_147,966580996759
+401708,2312994532,عيشه أحمد صالح بفلح,null,null,,base.sa,1988-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_188,966599906167
+371617,2009451671,سمية احمد البدري,null,null,,base.sa,1972-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_89,966503502648
+371618,2084665542,محمد عمر الدين ,null,null,,base.sa,1985-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_148,966559085952
+371619,2378724849,سعد مسعود محمد أكرم محمد,null,null,,base.sa,1995-1-1,Male,data_security.Grade_6,1,data_security.City_1,data_security.dis_148,966558260886
+371622,2185149230,بلال سعيد محمد,null,null,,base.sa,1995-1-1,Male,data_security.Grade_7,1,data_security.City_1,data_security.dis_148,966504413417
+371623,1126690971,نايف علي المطيري,null,null,,base.sa,1995-1-1,Male,data_security.Grade_3,1,data_security.City_1,data_security.dis_179,966564778067
+365443,1119522314,فهد مبارك السيف,null,null,,base.sa,1998-1-1,Male,data_security.Grade_1,1,data_security.City_1,data_security.dis_15,966544455456
+365473,2198374999,محمد ياسر عوض,null,null,,base.sa,1986-1-1,Male,data_security.Grade_2,1,data_security.City_1,data_security.dis_74,966534827151
+365522,2286033218,إبراهيم برقيبه محمود موسى ,null,null,,base.sa,1975-1-1,Male,data_security.Grade_3,1,data_security.City_1,data_security.dis_151,966548453261
+365526,1143076501,هيا جعفر عبدالله السبيعي,null,null,,base.sa,1973-1-1,Female,data_security.Grade_4,1,data_security.City_1,data_security.dis_151,966503245957
+365530,2369187600,عبدالهادي محمد عيسى موسى,null,null,,base.sa,1958-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_54,966549460372
+365545,1102699509,فهد بن عبدالرحمن بن إبراهيم البرادي,null,null,,base.sa,1983-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_25,966553000067
+365577,2194381071,عبدالمجيد أحمد باجابر,null,null,,base.sa,1975-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_147,966599537909
+365590,1124574177,لين احمد محمد الشارخ,null,null,,base.sa,1975-1-1,Female,data_security.Grade_7,1,data_security.City_1,data_security.dis_32,966504242202
+365593,1109425445,ضويا خالد سعيد الشهراني,null,null,,base.sa,1973-1-1,Female,data_security.Grade_3,1,data_security.City_1,data_security.dis_9,966505198982
+365623,2194221525,خالد بن علاء الدين بن مرتضى,null,null,,base.sa,1978-1-1,Male,data_security.Grade_1,1,data_security.City_1,data_security.dis_22,966509425363
+365626,2287220046,علي صالح السعدون,null,null,,base.sa,1978-1-1,Male,data_security.Grade_2,1,data_security.City_1,data_security.dis_3,966590999425
+365343,1045032701,صالحة بنت فواز المالكي,null,null,,base.sa,1971-1-1,Female,data_security.Grade_3,1,data_security.City_1,data_security.dis_3,966503692414
+365344,2240794590,مصطفى أنور إسماعيل صالح,null,null,,base.sa,2001-1-1,Male,data_security.Grade_4,1,data_security.City_1,data_security.dis_170,966541856421
+368515,2207768553,عدي علي طراد,null,null,,base.sa,1997-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_49,966555600230
+146105,1043079563,وضحاء حمود شرف العتيبي,null,null,,base.sa,1998-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_24,966551340192
+124782,1116086123,خالد رياض علي الغامدي,null,null,,base.sa,1996-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_25,966500000987
+124766,2228173866,عبدالله محمد اسعد السعيد,null,null,,base.sa,1996-1-1,Male,data_security.Grade_6,1,data_security.City_1,data_security.dis_25,966557659990
+365631,1136411814,محمد بن عبد العزيز العمر ,null,null,,base.sa,1991-1-1,Male,data_security.Grade_7,1,data_security.City_1,data_security.dis_22,966500855295
+365634,1141040970,فهد بن أحمد الحسين,null,null,,base.sa,1992-1-1,Male,data_security.Grade_3,1,data_security.City_1,data_security.dis_22,966548845502
+365635,1128794581,ريم أيمن عبدالعزيزسروجي,null,null,,base.sa,1992-1-1,Female,data_security.Grade_1,1,data_security.City_1,data_security.dis_32,966549303407
+365169,1065588400,مطيعة سعد سرهيد الاحمري,null,null,,base.sa,1987-1-1,Female,data_security.Grade_2,1,data_security.City_1,data_security.dis_182,966563356022
+453763,2224851325,محمد سليمان محمد نسمان,null,null,,base.sa,1971-1-1,Male,data_security.Grade_3,1,data_security.City_1,data_security.dis_182,966533032816
+365235,2271103240,أمينة أحمد عبدالسلام,null,null,,base.sa,1951-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_24,966558347500
+365255,2357161336,عمر علي عبد الرحمن يوسف,null,null,,base.sa,1948-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_199,966549984331
+453766,2372605077,رحاب محمد عبدالعظيم,null,null,,base.sa,1969-1-1,Female,data_security.Grade_6,1,data_security.City_1,data_security.dis_52,966597149035
+365287,1087173652,سراء سالم محمد الشهري,null,null,,base.sa,1947-1-1,Female,data_security.Grade_7,1,data_security.City_1,data_security.dis_88,966557652653
+365290,1088763099,تهاني سليمان محمد الشمري,null,null,,base.sa,1961-1-1,Female,data_security.Grade_3,1,data_security.City_1,data_security.dis_88,966503560884
+365297,1140768837,ليان عبدالله الجديعي,null,null,,base.sa,1991-1-1,Female,data_security.Grade_1,1,data_security.City_1,data_security.dis_151,966532325873
+365299,2301057002,فجر سعيد يسلم مسلم,null,null,,base.sa,1953-1-1,Female,data_security.Grade_2,1,data_security.City_1,data_security.dis_151,966598898176
+365306,1156327023,شيخه دهام سعد بن دهام,null,null,,base.sa,1958-1-1,Female,data_security.Grade_3,1,data_security.City_1,data_security.dis_151,966565120454
+365307,2313762904,حنين سامح سيد ,null,null,,base.sa,1962-1-1,Female,data_security.Grade_4,1,data_security.City_1,data_security.dis_151,966555392316
+365350,2199109923,سمية بنت محمد الشيخ النجار,null,null,,base.sa,1942-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_3,966544960339
+365352,2182549473,إسراء بنت يحيى صالح سرور,null,null,,base.sa,1994-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_4,966505522049
+365353,2267091631,فاطمه محمد نور علي,null,null,,base.sa,1965-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_36,966566337025
+365379,1062850019,نوره عبدالله الماضي,null,null,,base.sa,1994-1-1,Female,data_security.Grade_6,1,data_security.City_1,data_security.dis_21,966533981580
+365391,2353049949,لبابة أول تيكا ,null,null,,base.sa,1995-1-1,Female,data_security.Grade_7,1,data_security.City_1,data_security.dis_109,966570028163
+365404,2305506871,عوضيه علي عبدالله عسكر,null,null,,base.sa,1994-1-1,Female,data_security.Grade_3,1,data_security.City_1,data_security.dis_8,966552045526
+365507,2235161607,يحيى زكريا علي يوسف,null,null,,base.sa,1948-1-1,Male,data_security.Grade_1,1,data_security.City_1,data_security.dis_147,966503526960
+365551,2267232938,تالا عمر محمد شريح,null,null,,base.sa,1953-1-1,Female,data_security.Grade_2,1,data_security.City_1,data_security.dis_151,966500558765
+365563,1107529669,علي بن عبدالرحمن بن علي الخليفي,null,null,,base.sa,1960-1-1,Male,data_security.Grade_3,1,data_security.City_1,data_security.dis_25,966503494991
+365570,2294396359,ابرار محمد عبدالهادي الباسطي,null,null,,base.sa,1948-1-1,Female,data_security.Grade_4,1,data_security.City_1,data_security.dis_151,966548575800
+365585,2263570273,مازن حسام الدين مهران,null,null,,base.sa,1966-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_151,966530071477
+365592,2213040013,اسماعيل عمر الدين احمد,null,null,,base.sa,1962-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_28,966565544912
+114316,2163558501,عبدالله بن حافظ عبدالحليم عبدالغني,null,null,,base.sa,1998-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_25,966508243694
+365073,1128681176,فخر فهد القحطاني,null,null,,base.sa,1998-1-1,Female,data_security.Grade_6,1,data_security.City_1,data_security.dis_87,966556598765
+365083,1076928389,منى بنت عبد الرحمن حميد الشايع,null,null,,base.sa,1997-1-1,Female,data_security.Grade_7,1,data_security.City_1,data_security.dis_4,966551545557
+365106,2326732415,ايمان السيد غنيم,null,null,,base.sa,2000-1-1,Female,data_security.Grade_3,1,data_security.City_1,data_security.dis_3,966546652989
+365135,2291505275,البراء محمد عبد المحسن,null,null,,base.sa,1999-1-1,Male,data_security.Grade_1,1,data_security.City_1,data_security.dis_23,966543460196
+365138,1139243453,ريان عبدالرحمن عبدالله الحمداني,null,null,,base.sa,1999-1-1,Male,data_security.Grade_2,1,data_security.City_1,data_security.dis_23,966551393900
+365147,2110557309,الياس موسى أحمد سوقي,null,null,,base.sa,2003-1-1,Male,data_security.Grade_3,1,data_security.City_1,data_security.dis_61,966569303538
+365221,2138293309,محسن خالد اليزيدي,null,null,,base.sa,1996-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_89,966546948833
+365237,2390474944,الاء صادق المسوري,null,null,,base.sa,2001-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_24,966537681025
+365249,2200184212,معاذ أحمد إسماعيل حروب,null,null,,base.sa,2001-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_199,966509888360
+365071,2215648995,عوض محمد حمد,null,null,,base.sa,2001-1-1,Male,data_security.Grade_6,1,data_security.City_1,data_security.dis_226,966559357113
+365096,1130208539,عفاف عطيه الحارثي,null,null,,base.sa,2001-1-1,Female,data_security.Grade_7,1,data_security.City_1,data_security.dis_179,966503441592
+365112,1106102468,مزنه حمد محمد السند,null,null,,base.sa,2001-1-1,Female,data_security.Grade_3,1,data_security.City_1,data_security.dis_124,966554686800
+365116,2364442174,عبدالله محمد ضيف الله ,null,null,,base.sa,2001-1-1,Male,data_security.Grade_1,1,data_security.City_1,data_security.dis_89,966563799242
+365295,2327960825,اجلال تامر محمد سليمان,null,null,,base.sa,2003-1-1,Female,data_security.Grade_2,1,data_security.City_1,data_security.dis_151,966565678312
+365296,1130216797,ساره سعد سعد بن عيد,null,null,,base.sa,2001-1-1,Female,data_security.Grade_3,1,data_security.City_1,data_security.dis_151,966542089555
+365300,1086609099,مم حسن هادي مرير,null,null,,base.sa,1995-1-1,Female,data_security.Grade_4,1,data_security.City_1,data_security.dis_88,966507690233
+365303,1155936311,دره عبدالحكيم بن دوخي,null,null,,base.sa,1997-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_151,966560309962
+365304,2311461228,علا عمرو محمد مصطفى,null,null,,base.sa,1999-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_151,966549943603
+365309,2322717972,فرح بسام احمد الشلبي,null,null,,base.sa,1996-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_151,966535848176
+365355,1021035694,نزال بنت عبدالعزيز إبراهيم المعارك,null,null,,base.sa,1966-1-1,Female,data_security.Grade_6,1,data_security.City_1,data_security.dis_4,966504293267
+365481,2337244392,مجاهد عوض أبوبكر ,null,null,,base.sa,1973-1-1,Male,data_security.Grade_7,1,data_security.City_1,data_security.dis_47,966538402936
+365532,1071524266,هليله عبدالله المظيبري ,null,null,,base.sa,1989-1-1,Female,data_security.Grade_3,1,data_security.City_1,data_security.dis_182,966555171523
+365537,2200294011,السيد ناصر عطية,null,null,,base.sa,1977-1-1,Male,data_security.Grade_1,1,data_security.City_1,data_security.dis_54,966509808215
+365543,2291201586,عبدالرحمن طه الحميدي,null,null,,base.sa,1977-1-1,Male,data_security.Grade_2,1,data_security.City_1,data_security.dis_54,966505955629
+365544,1141094589,محمد فايز الفايز,null,null,,base.sa,1980-1-1,Male,data_security.Grade_3,1,data_security.City_1,data_security.dis_74,966554411430
+365107,1097385940,غادة محمد علي الدخيل,null,null,,base.sa,1982-1-1,Female,data_security.Grade_4,1,data_security.City_1,data_security.dis_124,966505150465
+365111,2335094153,مروه النذير محمد,null,null,,base.sa,1977-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_179,966556468326
+365195,2203530908,عبدالعزيز عبدالرحمن العبادي,null,null,,base.sa,1977-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_27,966500930201
+365200,1114501867,عبدالله مبارك اللويمي,null,null,,base.sa,1970-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_9,966551812683
+365208,1140509645,رند علي احمد الجار الله,null,null,,base.sa,1972-1-1,Female,data_security.Grade_6,1,data_security.City_1,data_security.dis_4,966555573030
+365210,2295567750,أيهم برهان كريم,null,null,,base.sa,1973-1-1,Male,data_security.Grade_7,1,data_security.City_1,data_security.dis_233,966565082449
+365230,1159591211,رسيل عوض الحربي,null,null,,base.sa,1984-1-1,Female,data_security.Grade_3,1,data_security.City_1,data_security.dis_24,966536178239
+365277,4171994934,أسماء عمر محمد شرهان,null,null,,base.sa,1971-1-1,Female,data_security.Grade_1,1,data_security.City_1,data_security.dis_151,966553352407
+365471,2399016597,محمد حسن إبراهيم سيد,null,null,,base.sa,1963-1-1,Male,data_security.Grade_2,1,data_security.City_1,data_security.dis_188,966540977150
+365485,1135987772,نورة تركي راشد بن دوخي,null,null,,base.sa,1983-1-1,Female,data_security.Grade_3,1,data_security.City_1,data_security.dis_151,966556441366
+365494,2333424121,هلا بنت أحمد البلاصي,null,null,,base.sa,1967-1-1,Female,data_security.Grade_4,1,data_security.City_1,data_security.dis_4,966566595468
+365523,1152940316,طلال عبد العزيز البليهي,null,null,,base.sa,1983-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_151,966505205721
+365554,2143113336,عبدالرحمن عبدالعزيز عبدالله ,null,null,,base.sa,1981-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_87,966555635562
+365558,2273056610,عمر عبد الله راجح,null,null,,base.sa,1986-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_78,966503444797
+365566,2388672251,جنى احمد ممدوح الشريف,null,null,,base.sa,1989-1-1,Female,data_security.Grade_6,1,data_security.City_1,data_security.dis_151,966503041795
+365571,1132975572,ريما عباس محمد الحربي ,null,null,,base.sa,1983-1-1,Female,data_security.Grade_7,1,data_security.City_1,data_security.dis_32,966555666856
+365572,4144710060,عائشه عبدالرقيب الرصاص,null,null,,base.sa,1983-1-1,Female,data_security.Grade_3,1,data_security.City_1,data_security.dis_4,966503293386
+365574,2376294860,عبدالأعلى أحمد السيد طه,null,null,,base.sa,1986-1-1,Male,data_security.Grade_1,1,data_security.City_1,data_security.dis_151,966569382622
+365584,2215161635,محمد محمود عبدالله الفرحان,null,null,,base.sa,1990-1-1,Male,data_security.Grade_2,1,data_security.City_1,data_security.dis_6,966531062186
+365586,2368197691,سانتيه مصلمسو بيفا ,null,null,,base.sa,1992-1-1,Female,data_security.Grade_3,1,data_security.City_1,data_security.dis_182,966505242103
+365587,2370925238,عبدالرحمن محمد إبراهيم أحمد,null,null,,base.sa,1984-1-1,Male,data_security.Grade_4,1,data_security.City_1,data_security.dis_151,966506788567
+365588,1110185665,عمر محمد زيد العليوة,null,null,,base.sa,1981-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_151,966557739206
+365589,2223494911,عبدالله عبدالرحيم أبوبكر,null,null,,base.sa,1989-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_43,966565557800
+365399,110561959591,احمد حفني . . ,null,null,,base.sa,1983-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_28,966555228806
+365413,1006149957,شاهه جزاء ماثل الحربي ,null,null,,base.sa,1978-1-1,Female,data_security.Grade_6,1,data_security.City_1,data_security.dis_146,966556516663
+365533,1138946494,خالد أحمد الزهراني,null,null,,base.sa,1975-1-1,Male,data_security.Grade_7,1,data_security.City_1,data_security.dis_23,966559932078
+278815,1117463925,عبدالمحسن عادي زايد المطيري,null,null,,base.sa,1978-1-1,Male,data_security.Grade_3,1,data_security.City_1,data_security.dis_193,966504426409
+366593,1141553345,ديما عبدالله أحمد المسرحي,null,null,,base.sa,1977-1-1,Female,data_security.Grade_1,1,data_security.City_1,data_security.dis_21,966555103220
+366662,2177639982,شيماء محمد محمود يوسف,null,null,,base.sa,1984-1-1,Female,data_security.Grade_2,1,data_security.City_1,data_security.dis_151,966500841675
+366668,4157266380,ملاك علي عبدالله,null,null,,base.sa,1985-1-1,Female,data_security.Grade_3,1,data_security.City_1,data_security.dis_151,966558004282
+366633,2177908429,علي عبدالقادر الهذيلي,null,null,,base.sa,1991-1-1,Male,data_security.Grade_4,1,data_security.City_1,data_security.dis_179,966556424697
+366637,2231479300,عبدالمجيد أبوبكر صالح,null,null,,base.sa,1985-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_188,966538873040
+366715,1057894220,مطيفه عبدالله عقلا الحربي,null,null,,base.sa,2004-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_52,966559554704
+366717,1006976417,منيره محمد سعد ناجم,null,null,,base.sa,1977-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_52,966504483103
+366730,1036680161,مريم حمود خمبس ال شامان,null,null,,base.sa,1989-1-1,Female,data_security.Grade_6,1,data_security.City_1,data_security.dis_151,966533026362
+366731,2264780020,رزان اكرم عرقسوسي,null,null,,base.sa,1986-1-1,Female,data_security.Grade_7,1,data_security.City_1,data_security.dis_151,966508557551
+366761,2292447089,حازم عماد إمام محمود,null,null,,base.sa,1993-1-1,Male,data_security.Grade_3,1,data_security.City_1,data_security.dis_199,966509855933
+366845,1032924308,وجدان عبدالله العمري,null,null,,base.sa,1994-1-1,Female,data_security.Grade_1,1,data_security.City_1,data_security.dis_52,966567172692
+366858,21646365807,نادية احمد بركات,null,null,,base.sa,1993-1-1,Female,data_security.Grade_2,1,data_security.City_1,data_security.dis_115,966508064827
+366970,1113516155,عمر صالح العميرة,null,null,,base.sa,1993-1-1,Male,data_security.Grade_4,1,data_security.City_1,data_security.dis_23,966546159676
+366972,2349891909,أمينة خالد طه عبدالفضيل,null,null,,base.sa,1993-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_24,966544546912
+366991,2354840270,معاذ رائد اليافعي ,null,null,,base.sa,1990-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_22,966502123108
+367011,1132695568,راكان سليمان الهذلي,null,null,,base.sa,1994-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_11,966535999066
+367069,1135008819,رهف بنت فيصل عبد الله الدهيش ,null,null,,base.sa,1996-1-1,Female,data_security.Grade_6,1,data_security.City_1,data_security.dis_4,966554040403
+367070,1165020635,أسماء خالد بن عبدالله بن محمد العريني السبيعي,null,null,,base.sa,1995-1-1,Female,data_security.Grade_7,1,data_security.City_1,data_security.dis_24,966555226807
+367102,1111983845,علي عبدالله الحربي,null,null,,base.sa,1997-1-1,Male,data_security.Grade_1,1,data_security.City_1,data_security.dis_228,966550909227
+134599,1118697299,عبدالعزيز محمد عبدالله الرشود,null,null,,base.sa,2000-1-1,Male,data_security.Grade_2,1,data_security.City_1,data_security.dis_47,966505296906
+134603,1124063809,سيف محمد حدادي,null,null,,base.sa,1999-1-1,Male,data_security.Grade_3,1,data_security.City_1,data_security.dis_47,966555606760
+134609,11111111222,عبدالعزيز بن بدر بن رشيد,null,null,,base.sa,1997-1-1,Male,data_security.Grade_4,1,data_security.City_1,data_security.dis_193,966599962846
+134612,11248217500,عبدالله بن فيصل الصعب,null,null,,base.sa,1995-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_193,966555870881
+134615,1097003923,فيصل يوسف ناصر الصالح,null,null,,base.sa,1994-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_193,966505238375
+134627,2262217041,إبراهيم ياسين إدريس,null,null,,base.sa,2003-1-1,Male,data_security.Grade_7,1,data_security.City_1,data_security.dis_148,966558610056
+134638,2236625337,فارس أحمد عمر حسن,null,null,,base.sa,2000-1-1,Male,data_security.Grade_3,1,data_security.City_1,data_security.dis_148,966563639131
+134643,10382085609,فهد محمد التميمي,null,null,,base.sa,1999-1-1,Male,data_security.Grade_1,1,data_security.City_1,data_security.dis_193,966504246020
+134647,22222222222,زيد علي آل عثمان,null,null,,base.sa,2000-1-1,Male,data_security.Grade_2,1,data_security.City_1,data_security.dis_193,966507111885
+134649,1112113400,فيصل عبد الله العسلان,null,null,,base.sa,2000-1-1,Male,data_security.Grade_3,1,data_security.City_1,data_security.dis_193,966505233770
+134653,4444444444,سعود فواز صالح التميمي,null,null,,base.sa,1998-1-1,Male,data_security.Grade_4,1,data_security.City_1,data_security.dis_193,966555215643
+134660,1016880021,نورة علي يحيى الزهراني,null,null,,base.sa,2000-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_89,966580608555
+158826,1154572323,أسامه عبدالله أحمد الأحمري,null,null,,base.sa,1998-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_193,966598555570
+134662,2231661725,آدم محمد آدم,null,null,,base.sa,1997-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_148,966506431918
+134668,2366830269,أحمد عبدالله أحمد السخيلة,null,null,,base.sa,2000-1-1,Male,data_security.Grade_6,1,data_security.City_1,data_security.dis_148,966548282624
+134673,1114347758,بدر بن فهد ابراهيم الشعلان,null,null,,base.sa,1996-1-1,Male,data_security.Grade_7,1,data_security.City_1,data_security.dis_193,966504122439
+134675,1135048138,محمد ناصر الشهري,null,null,,base.sa,1999-1-1,Male,data_security.Grade_3,1,data_security.City_1,data_security.dis_193,966555231558
+134683,2167083134,إبراهيم عبدالسلام محمد الهلالي,null,null,,base.sa,1999-1-1,Male,data_security.Grade_1,1,data_security.City_1,data_security.dis_186,966507892442
+134688,1119148987,احمد محمد العبدالله,null,null,,base.sa,2000-1-1,Male,data_security.Grade_2,1,data_security.City_1,data_security.dis_193,966505223665
+134703,1101180659,عبدالله سعود محمد الشهري,null,null,,base.sa,2000-1-1,Male,data_security.Grade_3,1,data_security.City_1,data_security.dis_193,966538411125
+134708,2164985471,مرجانة محمد عمر محمد,null,null,,base.sa,2001-1-1,Female,data_security.Grade_4,1,data_security.City_1,data_security.dis_89,966557126551
+134711,1005578008,فاطمة سعد محمد القرني,null,null,,base.sa,2002-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_129,966554252578
+134721,2237441924,ذكرى احمد عبدالعزيز سيف,null,null,,base.sa,1998-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_4,966534595683
+134726,1120411218,نايف عبدالله عبدالعزيز السهلي,null,null,,base.sa,2000-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_74,966506400607
+134764,1115873216,فايز رياض فايز الاحمري,null,null,,base.sa,2000-1-1,Male,data_security.Grade_6,1,data_security.City_1,data_security.dis_36,966504160190
+134768,2298948957,بدر داود محمد ادريس,null,null,,base.sa,1998-1-1,Male,data_security.Grade_7,1,data_security.City_1,data_security.dis_36,966536365010
+134789,1061544845,محمد نايف ابراهيم العتيبي,null,null,,base.sa,1999-1-1,Male,data_security.Grade_3,1,data_security.City_1,data_security.dis_36,966505468882
+134793,1099164988,عبدالله بن محمد الشهري,null,null,,base.sa,2000-1-1,Male,data_security.Grade_1,1,data_security.City_1,data_security.dis_143,966583333907
+134794,1132372325,محمد سعود محمد العريفي,null,null,,base.sa,1997-1-1,Male,data_security.Grade_2,1,data_security.City_1,data_security.dis_74,966550653999
+134680,1055165177,محمد بن عبدالرحمن بن طالب,null,null,,base.sa,1996-1-1,Male,data_security.Grade_3,1,data_security.City_1,data_security.dis_193,966505224266
+134693,2297569440,عبد العليم محمد سعيد,null,null,,base.sa,2000-1-1,Male,data_security.Grade_4,1,data_security.City_1,data_security.dis_148,966500149691
+134701,1066899798,فيصل محمد المسلط,null,null,,base.sa,1986-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_193,966501666477
+134705,1109581072,عبدالله نايف عبدالله الحمادي,null,null,,base.sa,1991-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_193,966558211128
+134825,2143728869,عبير منصور احمد عبدالله,null,null,,base.sa,1984-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_77,966559848889
+134835,1148498502,سعود عبدالرحمن سعود العريفي,null,null,,base.sa,2004-1-1,Male,data_security.Grade_6,1,data_security.City_1,data_security.dis_74,966550111127
+134845,1129960876,اسامه سعود سعود العريفي,null,null,,base.sa,2004-1-1,Male,data_security.Grade_7,1,data_security.City_1,data_security.dis_74,966508856505
+134846,1090830512,نوره محمد العجلان,null,null,,base.sa,2005-1-1,Female,data_security.Grade_3,1,data_security.City_1,data_security.dis_18,966563366361
+134873,1152643894,ارياف ناصر محمد الاكلبي,null,null,,base.sa,2003-1-1,Female,data_security.Grade_1,1,data_security.City_1,data_security.dis_66,966531532342
+134877,1151294913,وجود قاسم صالح عسيري,null,null,,base.sa,2004-1-1,Female,data_security.Grade_2,1,data_security.City_1,data_security.dis_66,966552422196
+134881,2133226122,مها عبدالرحمن باكوبن,null,null,,base.sa,2002-1-1,Female,data_security.Grade_4,1,data_security.City_1,data_security.dis_153,966532879582
+134886,1150389516,اسيل فايز ناصر الاسمري,null,null,,base.sa,2003-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_66,966500424693
+134889,1142631371,لميس مرزوق مبارك العلوي,null,null,,base.sa,2004-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_66,966506681061
+134899,1145765588,ميال احمد بهلول العامري,null,null,,base.sa,2003-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_66,966501622595
+134901,1021422041,بانه رشيد فهيد البتال,null,null,,base.sa,2004-1-1,Female,data_security.Grade_6,1,data_security.City_1,data_security.dis_66,966553582033
+134797,2228615684,علاء علي حسن,null,null,,base.sa,2003-1-1,Male,data_security.Grade_7,1,data_security.City_1,data_security.dis_143,966552419085
+203490,1029107875,غصينه عبدالرحمن سيف القحطاني ,null,null,,base.sa,2003-1-1,Female,data_security.Grade_3,1,data_security.City_1,data_security.dis_130,966506219090
+134851,1104687270,دانية أحمد عبد العزيزالمقبل,null,null,,base.sa,2004-1-1,Female,data_security.Grade_1,1,data_security.City_1,data_security.dis_18,966564169735
+134911,144325798630,سالم عبدالله بامسعود,null,null,,base.sa,2002-1-1,Male,data_security.Grade_2,1,data_security.City_1,data_security.dis_89,966502228966
+134915,2154127019,أحمد عمر الحمادي,null,null,,base.sa,2004-1-1,Male,data_security.Grade_3,1,data_security.City_1,data_security.dis_89,966500312624
+134933,2331892261,هبة محمد إسماعيل,null,null,,base.sa,2003-1-1,Female,data_security.Grade_4,1,data_security.City_1,data_security.dis_34,966548141396
+134934,2023748599,معالي الزبير محجوب,null,null,,base.sa,2003-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_34,966509875703
+134935,2350300634,إنعام سعيد علي عبدالله,null,null,,base.sa,2004-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_34,966537631465
+134936,2079722985,فاطمة عبدالله العوض أحمد,null,null,,base.sa,2004-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_34,966501112548
+134937,2263246965,مؤيد عادل عبد الفتاح,null,null,,base.sa,1988-1-1,Male,data_security.Grade_6,1,data_security.City_1,data_security.dis_143,966502459925
+134784,1089600454,يزيد محمد عبدالله السحيم,null,null,,base.sa,1988-1-1,Male,data_security.Grade_1,1,data_security.City_1,data_security.dis_36,966554441704
+135210,1110452933,مرام عبدالله محمد العباد,null,null,,base.sa,2003-1-1,Female,data_security.Grade_2,1,data_security.City_1,data_security.dis_63,966545452267
+134941,2238314229,مريم عيظة بالطيف,null,null,,base.sa,2010-1-1,Female,data_security.Grade_3,1,data_security.City_1,data_security.dis_129,966506276194
+134952,2283434989,مقداد محمد عمر شير ,null,null,,base.sa,2000-1-1,Male,data_security.Grade_4,1,data_security.City_1,data_security.dis_199,966502269043
+134967,2214618940,هديل أحمد صالح برمان,null,null,,base.sa,1990-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_129,966506231653
+134981,2196185710,صالح عبدالوهاب حقوص,null,null,,base.sa,2007-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_148,966536518847
+134985,2180224337,أسامة عبد الله فرج عبد الله ,null,null,,base.sa,1997-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_199,966531611035
+141935,2198856870,عبدالإله عمر بادقيل,null,null,,base.sa,1998-1-1,Male,data_security.Grade_6,1,data_security.City_1,data_security.dis_153,966533768324
+134888,1149959544,ريتال عون محمد الشهراني,null,null,,base.sa,1998-1-1,Female,data_security.Grade_3,1,data_security.City_1,data_security.dis_66,966566596762
+134946,2234649263,أحمد عبدالعظيم البشير,null,null,,base.sa,2003-1-1,Male,data_security.Grade_1,1,data_security.City_1,data_security.dis_143,966505742696
+134989,2018586129,عبد اللطيف عمر اللافوزا لوني ,null,null,,base.sa,2006-1-1,Male,data_security.Grade_3,1,data_security.City_1,data_security.dis_199,966504181446
+134990,2362013142,اسامة أحمد محمد علي,null,null,,base.sa,1999-1-1,Male,data_security.Grade_4,1,data_security.City_1,data_security.dis_199,966543623312
+134992,2257470704,عمرو رضا إسماعيل محمد,null,null,,base.sa,2006-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_199,966543368070
+134995,2255236313,عبد الرحمن مهني بعيزق عبد رب الرسول ,null,null,,base.sa,2005-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_199,966503238406
+135012,2175636113,علاء اشرف محمود محمد ,null,null,,base.sa,2004-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_199,966531250023
+184659,2172752178,عبدالعظيم عبدالمنعم عبدالعظيم دياب,null,null,,base.sa,1999-1-1,Male,data_security.Grade_6,1,data_security.City_1,data_security.dis_172,966551578856
+134811,2354027027,حذيفة يوسف منير المنجد,null,null,,base.sa,2005-1-1,Male,data_security.Grade_7,1,data_security.City_1,data_security.dis_74,966530162657
+134849,1084969502,غادة عبدالرحمن الخميس,null,null,,base.sa,2004-1-1,Female,data_security.Grade_3,1,data_security.City_1,data_security.dis_18,966555470061
+134855,1097317836,روان عبدالحكيم العوين,null,null,,base.sa,2005-1-1,Female,data_security.Grade_1,1,data_security.City_1,data_security.dis_18,966560522100
+134943,2372121232,أحمد خضر عبدالله,null,null,,base.sa,2003-1-1,Male,data_security.Grade_2,1,data_security.City_1,data_security.dis_143,966502964912
+134960,1234567891,شيماء صالح موسى الخلاقي,null,null,,base.sa,2002-1-1,Female,data_security.Grade_3,1,data_security.City_1,data_security.dis_129,966558408976
+134964,2330727724,خالد عيسى قوري,null,null,,base.sa,2004-1-1,Male,data_security.Grade_4,1,data_security.City_1,data_security.dis_199,966581445584
+593028,2237216722,رغد غازي حسن راشد,null,null,,base.sa,2000-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_184,966504244405
+593031,1032699512,أسامة إبراهيم عثمان هوساوي,null,null,,base.sa,2003-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_184,966580888779
+593032,2119628028,ندى عبود سعيد الهلابي,null,null,,base.sa,2001-1-1,Female,data_security.Grade_6,1,data_security.City_1,data_security.dis_184,966556993070
+593035,2087617292,سميرة كرمه عيد باغيث,null,null,,base.sa,2001-1-1,Female,data_security.Grade_7,1,data_security.City_1,data_security.dis_184,966567377042
+593042,2054832304,عفاف صالح هادي,null,null,,base.sa,2004-1-1,Female,data_security.Grade_1,1,data_security.City_1,data_security.dis_184,966563441951
+593043,2429155530,مرام حسن عبده الجلال,null,null,,base.sa,2003-1-1,Female,data_security.Grade_2,1,data_security.City_1,data_security.dis_184,966530351842
+593045,2352252403,الشيماء حاتم عبدالله عوض,null,null,,base.sa,2004-1-1,Female,data_security.Grade_3,1,data_security.City_1,data_security.dis_336,966595522723
+593050,1141326510,ديم بشير منهي العنزي,null,null,,base.sa,2002-1-1,Female,data_security.Grade_4,1,data_security.City_1,data_security.dis_5,966530089730
+593051,4282279217,فاطمة فاضل عجاج المحمد,null,null,,base.sa,2002-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_5,966535746668
+593052,2218364822,ازهار هاشم ادم محمد,null,null,,base.sa,2002-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_184,966553593587
+593059,2368327777,أمة العليم احمد حمود الكامل ,null,null,,base.sa,2004-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_186,966552198048
+593060,2248288272,عائشة أحمد خاف الفلجي,null,null,,base.sa,2002-1-1,Female,data_security.Grade_6,1,data_security.City_1,data_security.dis_5,966500944205
+593066,1160749956,معاذ عبد الرحمن الحامد,null,null,,base.sa,2001-1-1,Female,data_security.Grade_7,1,data_security.City_1,data_security.dis_186,966538842165
+593070,2206963676,عبدالرحمن صالح فراره,null,null,,base.sa,2001-1-1,Male,data_security.Grade_3,1,data_security.City_1,data_security.dis_129,966501483856
+593071,1010763512,شعيع عواض بريكان المطيري,null,null,,base.sa,2002-1-1,Female,data_security.Grade_1,1,data_security.City_1,data_security.dis_336,966506283968
+593072,2135205934,فاطمة يوسف محمد,null,null,,base.sa,2001-1-1,Female,data_security.Grade_2,1,data_security.City_1,data_security.dis_198,966569424889
+593077,2163265511,محمد علي سالم المنصوري,null,null,,base.sa,2001-1-1,Male,data_security.Grade_3,1,data_security.City_1,data_security.dis_184,966503246962
+593079,2398739835,مشاعل محمد سعيد هارون,null,null,,base.sa,2001-1-1,Female,data_security.Grade_4,1,data_security.City_1,data_security.dis_184,966594494304
+593086,1150519377,نوت صالح الشمري,null,null,,base.sa,2000-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_190,966506119082
+593087,1152612477,أرين فؤاد الزهراني,null,null,,base.sa,2006-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_190,966542214214
+593026,1076445475,الاربد عائش الحسن العديني,null,null,,base.sa,2000-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_184,966545094795
+593029,1112245772,مريم موسى احمد العبد الله,null,null,,base.sa,2004-1-1,Female,data_security.Grade_6,1,data_security.City_1,data_security.dis_184,966506508827
+593037,1141458982,أجوان سعيد علي الاحمري,null,null,,base.sa,1995-1-1,Female,data_security.Grade_7,1,data_security.City_1,data_security.dis_130,966541416655
+593041,9683714548,صفية علي محمد ,null,null,,base.sa,1990-1-1,Female,data_security.Grade_3,1,data_security.City_1,data_security.dis_184,966550199495
+593047,1139939563,آرام ظافر قحاص الاحمري,null,null,,base.sa,1989-1-1,Female,data_security.Grade_1,1,data_security.City_1,data_security.dis_336,966559896668
+593053,1141245488,لجين صالح عقلا العنزي,null,null,,base.sa,1996-1-1,Female,data_security.Grade_2,1,data_security.City_1,data_security.dis_5,966505289077
+593057,1149518423,لولوه نادر الحميدي الحربي,null,null,,base.sa,1995-1-1,Female,data_security.Grade_3,1,data_security.City_1,data_security.dis_5,966500169951
+593058,1146187149,شهد براك فايز العنزي,null,null,,base.sa,1995-1-1,Female,data_security.Grade_4,1,data_security.City_1,data_security.dis_5,966566752342
+593064,1162972481,فجر عبدالمجيد  حميد العتيبي,null,null,,base.sa,1995-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_190,966555468012
+593067,1001347887,قمراء سعود عبيلان الحربي,null,null,,base.sa,1996-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_336,966503185936
+593074,1032654384,حصة محسن شرعان المطيري,null,null,,base.sa,1996-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_284,966565466013
+593075,1042238186,صندله عطيه محمد الغامدي,null,null,,base.sa,1999-1-1,Female,data_security.Grade_6,1,data_security.City_1,data_security.dis_284,966590842720
+593083,2405509528,الطيب الصديق محمد الأمين,null,null,,base.sa,1990-1-1,Male,data_security.Grade_7,1,data_security.City_1,data_security.dis_188,966553892572
+593084,2256203080,يمنى ياسر سعيد ,null,null,,base.sa,1989-1-1,Female,data_security.Grade_3,1,data_security.City_1,data_security.dis_11,966507230529
+593092,1152261960,حور أحمد البقمي,null,null,,base.sa,1994-1-1,Female,data_security.Grade_1,1,data_security.City_1,data_security.dis_190,966503137862
+593096,2326777634,ترتيل عابد محمد,null,null,,base.sa,1995-1-1,Female,data_security.Grade_2,1,data_security.City_1,data_security.dis_190,966502072156
+593111,1157239094,ريوف محمد الشامي ,null,null,,base.sa,1991-1-1,Female,data_security.Grade_4,1,data_security.City_1,data_security.dis_190,966506444253
+593113,1155380650,سارة طلال المهنا ,null,null,,base.sa,1992-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_190,966592218077
+593120,2286949470,فاطمة اسماعيل مراد,null,null,,base.sa,1995-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_190,966535436258
+593121,1128841986,مشعل أحمد عبده حمزي,null,null,,base.sa,1995-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_54,966506466429
+593124,2225359575,عبدالإله يوسف أحمد سالم همامي,null,null,,base.sa,1994-1-1,Male,data_security.Grade_6,1,data_security.City_1,data_security.dis_188,966502255553
+593126,1061315139,سجوا مبخون الدوسري ,null,null,,base.sa,1995-1-1,Female,data_security.Grade_7,1,data_security.City_1,data_security.dis_130,966559659463
+593127,1163579657,عبدالرحمن وليد الشهري,null,null,,base.sa,1994-1-1,Female,data_security.Grade_3,1,data_security.City_1,data_security.dis_109,966502436295
+593131,1163678988,علاء علي الشهري,null,null,,base.sa,1995-1-1,Female,data_security.Grade_1,1,data_security.City_1,data_security.dis_109,966537233324
+593039,2436981662,اروى محمد ابراهيم القاضي,null,null,,base.sa,1994-1-1,Female,data_security.Grade_2,1,data_security.City_1,data_security.dis_184,966561148984
+593116,2301318040,زهرة وادود جواري,null,null,,base.sa,1994-1-1,Female,data_security.Grade_3,1,data_security.City_1,data_security.dis_190,966551639051
+593179,2344789579,مرام أحمد علي ,null,null,,base.sa,1994-1-1,Female,data_security.Grade_4,1,data_security.City_1,data_security.dis_130,966599477381
+593134,1164739045,مشعل عيد العتيبي,null,null,,base.sa,1994-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_109,966558582314
+593136,2310054537,يمنى عبد القادر عبد الحميد الشيخ,null,null,,base.sa,1994-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_36,966509528207
+593140,1159781705,ريماس احمد القرني,null,null,,base.sa,1996-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_109,966532239945
+593158,2387884063,سمية سعيد مستقيم خان,null,null,,base.sa,1996-1-1,Female,data_security.Grade_6,1,data_security.City_1,data_security.dis_36,966533937145
+593191,2204762260,صباح موسى محمد,null,null,,base.sa,1978-1-1,Female,data_security.Grade_3,1,data_security.City_1,data_security.dis_36,966532286522
+593192,1023553306,عائشة عبد الرحمن الشهراني,null,null,,base.sa,1992-1-1,Female,data_security.Grade_1,1,data_security.City_1,data_security.dis_8,966564966214
+593200,2153948167,رهف محمد نذير الغميان,null,null,,base.sa,1992-1-1,Female,data_security.Grade_2,1,data_security.City_1,data_security.dis_52,966537283655
+593201,1094179551,عزيزة مريبد العتيبي ,null,null,,base.sa,1984-1-1,Female,data_security.Grade_3,1,data_security.City_1,data_security.dis_130,966500628898
+593203,2410869941,حمزه طه محمد علي محمد ,null,null,,base.sa,1975-1-1,Male,data_security.Grade_4,1,data_security.City_1,data_security.dis_182,966565303667
+593204,2228011850,اسراء عبدالناصر قرا,null,null,,base.sa,1988-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_6,966501796173
+593206,2363388584,مها كمال الدين سعيد ,null,null,,base.sa,1977-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_130,966534269923
+593208,2276131329,عائشة عبد العزيز علي,null,null,,base.sa,1997-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_36,966532853005
+593209,2158601985,عائشة سيد علام جلال,null,null,,base.sa,1998-1-1,Female,data_security.Grade_6,1,data_security.City_1,data_security.dis_52,966569937465
+593213,2224903050,مصطفى أحمد موسى ,null,null,,base.sa,1998-1-1,Male,data_security.Grade_7,1,data_security.City_1,data_security.dis_24,966507451203
+593217,1000229797,منال عبدالرحمن المهيزع,null,null,,base.sa,1998-1-1,Female,data_security.Grade_3,1,data_security.City_1,data_security.dis_36,966503484774
+593221,1170364002,حنين نايف الحربي,null,null,,base.sa,1998-1-1,Female,data_security.Grade_1,1,data_security.City_1,data_security.dis_109,966533516167
+593223,1146632664,أريج عبد الله مبروك علي,null,null,,base.sa,2001-1-1,Female,data_security.Grade_2,1,data_security.City_1,data_security.dis_36,966554569451
+593224,4039911807,محمد طه احمد,null,null,,base.sa,2001-1-1,Female,data_security.Grade_3,1,data_security.City_1,data_security.dis_109,966509799185
+593225,1163807421,نايف سعيد العصيمي,null,null,,base.sa,2000-1-1,Female,data_security.Grade_4,1,data_security.City_1,data_security.dis_109,966533294033
+593228,1089224925,ريم سالم الحربي ,null,null,,base.sa,2000-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_130,966566340454
+593229,2205197342,يوسف إقبال عبدالرحمن ,null,null,,base.sa,1994-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_24,966500472425
+593090,2190558722,عاصم عبدالحافظ مثنى حسين اليافعي,null,null,,base.sa,1997-1-1,Male,data_security.Grade_6,1,data_security.City_1,data_security.dis_188,966504250765
+623820,1040368308,مها عبد العزيز الحسن ,null,null,,base.sa,1996-1-1,Female,data_security.Grade_7,1,data_security.City_1,data_security.dis_90,966537872041
+593095,2290407770,مريم محمد محفوظ حافظ,null,null,,base.sa,1996-1-1,Female,data_security.Grade_3,1,data_security.City_1,data_security.dis_190,966553093009
+593232,1161273667,لورين محمد الشهري,null,null,,base.sa,1994-1-1,Female,data_security.Grade_1,1,data_security.City_1,data_security.dis_109,966550585025
+593233,1163003716,عبداللطيف فيصل حميد المطيري ,null,null,,base.sa,1993-1-1,Female,data_security.Grade_2,1,data_security.City_1,data_security.dis_336,966551353300
+593234,1165268580,فهد ناصر السبيعي,null,null,,base.sa,2004-1-1,Female,data_security.Grade_3,1,data_security.City_1,data_security.dis_109,966557766737
+593236,1160457634,تيلاد مرعي القحطاني,null,null,,base.sa,2003-1-1,Female,data_security.Grade_4,1,data_security.City_1,data_security.dis_109,966559222012
+593239,1162620460,تركي هذال العنزي,null,null,,base.sa,2002-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_109,966509587274
+593243,2348637568,ملاك معاذ فيصل احمد ,null,null,,base.sa,2002-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_138,966582817497
+593245,2392160897,أسامة السيد محمود عبدالغني,null,null,,base.sa,2004-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_157,966509242425
+593247,1160210561,شوق بدر مرزوق العتيبي ,null,null,,base.sa,2003-1-1,Female,data_security.Grade_6,1,data_security.City_1,data_security.dis_336,966553000954
+593250,2022932160,امال باسم فيصل الجوابرة,null,null,,base.sa,2003-1-1,Female,data_security.Grade_7,1,data_security.City_1,data_security.dis_36,966539258641
+593251,1162822835,الود حسين مسفر الهاجري ,null,null,,base.sa,2004-1-1,Female,data_security.Grade_3,1,data_security.City_1,data_security.dis_284,966551559075
+593252,2135824569,وسام عبدالعزيز سليمان الحلو,null,null,,base.sa,2003-1-1,Female,data_security.Grade_1,1,data_security.City_1,data_security.dis_52,966566443015
+593253,1170266280,ريتال عبدالله العتيبي,null,null,,base.sa,1999-1-1,Female,data_security.Grade_2,1,data_security.City_1,data_security.dis_109,966540993177
+593258,1161829187,اياد أحمد علي العسيري ,null,null,,base.sa,1999-1-1,Female,data_security.Grade_3,1,data_security.City_1,data_security.dis_336,966559945512
+593260,1004412431,حنان سليمان العتيق,null,null,,base.sa,1997-1-1,Female,data_security.Grade_4,1,data_security.City_1,data_security.dis_3,966500505394
+593262,2433980469,اسماعيا علي احمد عامر,null,null,,base.sa,1998-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_157,966500322614
+593263,1119606067,أثير مفرح فريح المطيري,null,null,,base.sa,1998-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_52,966558658557
+593265,2283598858,ياسمين صالح بن صالح الضيعه,null,null,,base.sa,1997-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_36,966542004580
+593268,2376360463,آلاء قاسم حردان العقيدات,null,null,,base.sa,1996-1-1,Female,data_security.Grade_6,1,data_security.City_1,data_security.dis_26,966558005680
+593272,1144441266,سارة  علي سعيد القرني,null,null,,base.sa,1997-1-1,Female,data_security.Grade_7,1,data_security.City_1,data_security.dis_36,966500556463
+593274,2194880858,منى عيظة سعيد بامدحج,null,null,,base.sa,1999-1-1,Female,data_security.Grade_1,1,data_security.City_1,data_security.dis_89,966564549948
+593276,2345576728,نسرين ابراهيم الشيخ,null,null,,base.sa,1991-1-1,Female,data_security.Grade_2,1,data_security.City_1,data_security.dis_26,966545598280
+593277,1104122203,نوره عبيد مبارك الدوسري ,null,null,,base.sa,1993-1-1,Female,data_security.Grade_3,1,data_security.City_1,data_security.dis_130,966559955003
+610723,2208869434,مليون مبخوت ناصر البطين,null,null,,base.sa,1992-1-1,Female,data_security.Grade_4,1,data_security.City_1,data_security.dis_89,966554298487
+593101,1122732512,معاذ غازي عمر محمد باقازي,null,null,,base.sa,1993-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_188,966507229797
+593214,1101601407,نورة محمد داموك الغويري,null,null,,base.sa,1994-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_52,966533666856
+593280,2221653708,ذكرى أحمد علي العوقلي ,null,null,,base.sa,1992-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_89,966554592261
+593284,2355221249,كوثر محمد آدم صالح  ,null,null,,base.sa,1992-1-1,Female,data_security.Grade_6,1,data_security.City_1,data_security.dis_36,966551881031
+593285,1070811532,مريم محمد محمد اللغبي,null,null,,base.sa,1992-1-1,Female,data_security.Grade_7,1,data_security.City_1,data_security.dis_3,966534173922
+593288,2375656549,صفاء ابراهيم حسن الخولي,null,null,,base.sa,1992-1-1,Female,data_security.Grade_3,1,data_security.City_1,data_security.dis_26,966504174252
+593299,1052559703,عائشة عبد الرحمن عبد الكريم البراق,null,null,,base.sa,1993-1-1,Female,data_security.Grade_1,1,data_security.City_1,data_security.dis_74,966555772624
+593300,1008433938,ليلى دخيل زيد الغانم ,null,null,,base.sa,1992-1-1,Female,data_security.Grade_2,1,data_security.City_1,data_security.dis_74,966530055994
+593301,2280665676,ليان محمد عبد الماجد ,null,null,,base.sa,1993-1-1,Female,data_security.Grade_3,1,data_security.City_1,data_security.dis_149,966536692040
+593303,2135579528,إبتسام أحمد حسين,null,null,,base.sa,1992-1-1,Female,data_security.Grade_4,1,data_security.City_1,data_security.dis_200,966553699916
+593306,1064172396,سعاد عبد الرحمن احمد بن سعيد ,null,null,,base.sa,1993-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_74,966508032046
+593307,1118821899,ابتسام علي حسن العقيدي,null,null,,base.sa,1994-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_74,966506998663
+593308,1040994632,نورة ابراهيم عبد الله الشريدي,null,null,,base.sa,1994-1-1,Female,data_security.Grade_6,1,data_security.City_1,data_security.dis_74,966590397444
+593309,4025924707,نبيله محمد نبيل اليافي,null,null,,base.sa,1995-1-1,Female,data_security.Grade_7,1,data_security.City_1,data_security.dis_26,966500227645
+593310,2404841880,شيماء سعيد محمد,null,null,,base.sa,1994-1-1,Female,data_security.Grade_3,1,data_security.City_1,data_security.dis_200,966547074290
+593311,1026651164,زينب جنيدل محمد الجنيدل,null,null,,base.sa,1997-1-1,Female,data_security.Grade_1,1,data_security.City_1,data_security.dis_74,966530003131
+593312,2336764895,نوره عبد الكمال أحمد برهان,null,null,,base.sa,1995-1-1,Female,data_security.Grade_2,1,data_security.City_1,data_security.dis_149,966500952795
+593317,2310343179,سلمى محمود شبل هنداوي,null,null,,base.sa,1996-1-1,Female,data_security.Grade_3,1,data_security.City_1,data_security.dis_149,966569499205
+593321,1080755604,فاطمة معيض القرني,null,null,,base.sa,1997-1-1,Female,data_security.Grade_4,1,data_security.City_1,data_security.dis_284,966559780898
+593322,1023155359,ريمية عبدالرحمن العتيبي,null,null,,base.sa,1993-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_284,966509281788
+593324,2264600947,دعاء ياسين مصطفى,null,null,,base.sa,1993-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_177,966506091441
+593325,1096160807,افراح سعود المطيري,null,null,,base.sa,1997-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_284,966504591609
+593099,2242277321,عبدالعزيز محمد المبشر عبدالعزيز,null,null,,base.sa,2000-1-1,Male,data_security.Grade_6,1,data_security.City_1,data_security.dis_188,966505653874
+593104,2277045593,عبدالرحمن سعيد عمر باحميد,null,null,,base.sa,1993-1-1,Male,data_security.Grade_7,1,data_security.City_1,data_security.dis_188,966552602360
+593106,2266033428,عبدالله هيكل عبدالوهاب أحمد,null,null,,base.sa,1995-1-1,Male,data_security.Grade_3,1,data_security.City_1,data_security.dis_188,966591888315
+593108,2428743245,آية فراس توفيق,null,null,,base.sa,1993-1-1,Female,data_security.Grade_1,1,data_security.City_1,data_security.dis_190,966539401931
+593143,1161028947,سلمان تركي الشمري,null,null,,base.sa,1997-1-1,Female,data_security.Grade_2,1,data_security.City_1,data_security.dis_109,966530838744
+593160,1033211994,شريفة عبد الله المطيري ,null,null,,base.sa,2006-1-1,Female,data_security.Grade_3,1,data_security.City_1,data_security.dis_130,966583955777
+593166,2241190822,رولى موسى الحسين,null,null,,base.sa,1997-1-1,Female,data_security.Grade_4,1,data_security.City_1,data_security.dis_143,966506927645
+593175,1005064793,منيرة عثمان منصور الناصر ,null,null,,base.sa,1999-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_179,966500631709
+593176,1144833488,حنين سمير علي الموسطي,null,null,,base.sa,2003-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_36,966501414309
+593178,2296911023,نسمه محمد عوض أحمد ,null,null,,base.sa,1998-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_130,966564844035
+593181,2042065683,مهند علي محمد الحاج,null,null,,base.sa,2004-1-1,Male,data_security.Grade_7,1,data_security.City_1,data_security.dis_182,966540541514
+593196,2098971605,سلوى أحمد سالم با جويبر,null,null,,base.sa,2005-1-1,Female,data_security.Grade_3,1,data_security.City_1,data_security.dis_89,966559559679
+593261,2205831734,وفاء محمود محمود الصالح,null,null,,base.sa,1995-1-1,Female,data_security.Grade_1,1,data_security.City_1,data_security.dis_3,966554781924
+593264,1042955821,حصة عبيد محمد الحربي,null,null,,base.sa,1996-1-1,Female,data_security.Grade_2,1,data_security.City_1,data_security.dis_3,966556603236
+593294,2181435948,مها خالد احمد العمري,null,null,,base.sa,1998-1-1,Female,data_security.Grade_3,1,data_security.City_1,data_security.dis_74,966530431112
+593298,1159239001,فلاح عبدالله القحطاني,null,null,,base.sa,1996-1-1,Female,data_security.Grade_4,1,data_security.City_1,data_security.dis_109,966530803473
+593305,1019109873,حصة صالح ابراهيم الدلقان ,null,null,,base.sa,1998-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_74,966504145403
+593314,2263548741,رغد سالم أحمد الهلالي ,null,null,,base.sa,1998-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_148,966567939628
+593330,2250706526,وهبيه محمد عبده الحاج ,null,null,,base.sa,1997-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_182,966593054841
+593334,2137036782,فاطمة مصطفى العباس,null,null,,base.sa,1998-1-1,Female,data_security.Grade_6,1,data_security.City_1,data_security.dis_43,966538890764
+593335,2432759005,آلاء بسام محمد مسلم ,null,null,,base.sa,2001-1-1,Female,data_security.Grade_7,1,data_security.City_1,data_security.dis_74,966501994397
+593336,1025822329,فاطمة علي محمد القرني,null,null,,base.sa,1999-1-1,Female,data_security.Grade_3,1,data_security.City_1,data_security.dis_74,966500167576
+593337,1039891393,فاطمة عوض عويض المطيري,null,null,,base.sa,2000-1-1,Female,data_security.Grade_1,1,data_security.City_1,data_security.dis_74,966553424075
+593112,1158738714,رزان ابراهيم السويداني ,null,null,,base.sa,1996-1-1,Female,data_security.Grade_4,1,data_security.City_1,data_security.dis_190,966507050810
+593114,2308771845,منال ادان فهد,null,null,,base.sa,1994-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_190,966536362150
+593115,1144913140,لينا عبدالرحمن القاسم,null,null,,base.sa,1997-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_190,966504468506
+593119,1148653379,أمل ظافر ال معدي,null,null,,base.sa,1997-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_190,966553351661
+593125,1021195951,منيرة عبد الله القعير ,null,null,,base.sa,1997-1-1,Female,data_security.Grade_6,1,data_security.City_1,data_security.dis_130,966505725524
+593135,1162409260,سعيد موسى الاسمري,null,null,,base.sa,1996-1-1,Female,data_security.Grade_7,1,data_security.City_1,data_security.dis_109,966559013653
+593145,1161923097,مشاري عبدالله الحربي,null,null,,base.sa,1997-1-1,Female,data_security.Grade_3,1,data_security.City_1,data_security.dis_109,966504290879
+593146,2331077178,منال أحمد لطف عبدالقوي,null,null,,base.sa,2000-1-1,Female,data_security.Grade_1,1,data_security.City_1,data_security.dis_143,966553777532
+593153,2080923036,ماسة خالد علوش,null,null,,base.sa,1999-1-1,Female,data_security.Grade_2,1,data_security.City_1,data_security.dis_36,966507848367
+593154,1405008457,معالي بنت ياسر محمود عودة,null,null,,base.sa,1999-1-1,Female,data_security.Grade_3,1,data_security.City_1,data_security.dis_27,966534713991
+593159,1162145062,نورا متعب السبيعي,null,null,,base.sa,1996-1-1,Female,data_security.Grade_4,1,data_security.City_1,data_security.dis_109,966554771178
+593168,1142860608,ريناد عبد الرحمن شريفي,null,null,,base.sa,1995-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_36,966551226706
+593169,1083628758,أماني سعيد الشهراني ,null,null,,base.sa,1994-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_130,966542355444
+593207,1027183878,شريفة فارس رجب الزهراني,null,null,,base.sa,2001-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_52,966505128350
+593215,1169923917,مريم أحمد يحيى واصلي,null,null,,base.sa,2000-1-1,Female,data_security.Grade_6,1,data_security.City_1,data_security.dis_36,966537401413
+593242,1170137598,تركي سعد الدوسري,null,null,,base.sa,2001-1-1,Female,data_security.Grade_7,1,data_security.City_1,data_security.dis_109,966507999528
+593244,1162079923,لتين غارم سلطان العمري ,null,null,,base.sa,2002-1-1,Female,data_security.Grade_3,1,data_security.City_1,data_security.dis_284,966550285222
+593266,2317893762,إيمان محمد منصور الغدراء,null,null,,base.sa,1968-1-1,Female,data_security.Grade_1,1,data_security.City_1,data_security.dis_3,966506249660
+593269,2270945302,شيماء ختمي جمال علي,null,null,,base.sa,1976-1-1,Female,data_security.Grade_2,1,data_security.City_1,data_security.dis_36,966509038926
+593271,2240440707,هاله حامد محمد علي,null,null,,base.sa,1980-1-1,Female,data_security.Grade_3,1,data_security.City_1,data_security.dis_26,966506385657
+593281,2259274666,نورة محمد عمر أبكر,null,null,,base.sa,1988-1-1,Female,data_security.Grade_4,1,data_security.City_1,data_security.dis_36,966557492441
+593282,2225231626,رغده اسعد الاحمر,null,null,,base.sa,1967-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_26,966557626148
+593283,1096189939,هاجر سعد راشد المواش,null,null,,base.sa,1979-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_74,966504412488
+593289,1090056555,شهد خالد عبدالرحمن المحارب,null,null,,base.sa,1986-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_133,966555448657
+593291,2182226064,ريم عبد المنعم جابر,null,null,,base.sa,1977-1-1,Female,data_security.Grade_6,1,data_security.City_1,data_security.dis_26,966560242963
+593295,2209799648,هبة ابراهيم عمر ,null,null,,base.sa,1978-1-1,Female,data_security.Grade_7,1,data_security.City_1,data_security.dis_26,966502837494
+593313,1030825119,عبد الله عبد الرحمن عبد الله المهوس,null,null,,base.sa,1963-1-1,Male,data_security.Grade_3,1,data_security.City_1,data_security.dis_149,966504205084
+593347,2246063842,ساجدة عبدالصمد شرف الله,null,null,,base.sa,1991-1-1,Female,data_security.Grade_1,1,data_security.City_1,data_security.dis_43,966500216815
+593349,1090460476,عبدالجكيم عبدالرحمن الدوسري,null,null,,base.sa,1985-1-1,Male,data_security.Grade_2,1,data_security.City_1,data_security.dis_47,966508036596
+593350,1144752563,مودة محمد علي كعبي,null,null,,base.sa,1980-1-1,Female,data_security.Grade_3,1,data_security.City_1,data_security.dis_43,966504530245
+593351,3897150953,اسامة عبود الاحمد,null,null,,base.sa,1982-1-1,Male,data_security.Grade_4,1,data_security.City_1,data_security.dis_47,966537401747
+593117,1147597338,جنى جمال الغامدي,null,null,,base.sa,1967-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_190,966504130016
+593118,1147214207,دينا سعيد القحطاني,null,null,,base.sa,1981-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_190,966556191944
+593171,1143387585,ألما بنت عبد الله السويلم,null,null,,base.sa,1980-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_27,966505048101
+593184,3794569958,عمران عماد الدين حصاد حمد,null,null,,base.sa,1976-1-1,Male,data_security.Grade_6,1,data_security.City_1,data_security.dis_182,966532852514
+593189,2270376656,ايمان الفاتح صالح عزت,null,null,,base.sa,1962-1-1,Female,data_security.Grade_7,1,data_security.City_1,data_security.dis_52,966505518437
+593190,1010024626,تهاني صالح عبدالله العريني,null,null,,base.sa,1993-1-1,Female,data_security.Grade_3,1,data_security.City_1,data_security.dis_52,966505595903
+593193,2304058403,حنان حسني ابراهيم عبدالسلام,null,null,,base.sa,1994-1-1,Female,data_security.Grade_1,1,data_security.City_1,data_security.dis_52,966545984731
+593202,2254252592,شوق سمير احمد هنيه,null,null,,base.sa,2003-1-1,Female,data_security.Grade_2,1,data_security.City_1,data_security.dis_52,966535744384
+593210,2041339363,رحاب عبدالرحمن حسن السادحي,null,null,,base.sa,2001-1-1,Female,data_security.Grade_3,1,data_security.City_1,data_security.dis_36,966535969048
+593220,2148954643,نجوى محروس محمد بارشيد,null,null,,base.sa,2002-1-1,Female,data_security.Grade_4,1,data_security.City_1,data_security.dis_52,966530088136
+623828,1044183893,زهره علي الصغير البارقي ,null,null,,base.sa,1998-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_9,966501713254
+593275,4126963083,مروان مزيد علي,null,null,,base.sa,1999-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_130,966549859840
+593287,1029855606,أسماء مبارك العصيمي,null,null,,base.sa,2004-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_4,966500040474
+593342,2125634291,فريدة ياسين أحمد دابلة,null,null,,base.sa,1998-1-1,Female,data_security.Grade_6,1,data_security.City_1,data_security.dis_90,966535396229
+593344,1165760990,سعد محمد الحمدان,null,null,,base.sa,1998-1-1,Male,data_security.Grade_7,1,data_security.City_1,data_security.dis_47,966503212221
+593353,2247376045,ايه محمد شاكر عبدالرحيم,null,null,,base.sa,1996-1-1,Female,data_security.Grade_3,1,data_security.City_1,data_security.dis_187,966500000000
+593355,1164932756,فخر عبد الله ابراهيم العثمان ,null,null,,base.sa,2004-1-1,Female,data_security.Grade_1,1,data_security.City_1,data_security.dis_74,966551044405
+593358,1160417604,احمد فيصل احمد البيطار,null,null,,base.sa,1998-1-1,Female,data_security.Grade_2,1,data_security.City_1,data_security.dis_74,966533334865
+593359,1164100800,ابراهيم حسين عبد الله الصايغ,null,null,,base.sa,2001-1-1,Female,data_security.Grade_3,1,data_security.City_1,data_security.dis_74,966560002103
+593362,2181481173,نوره يحيى هادي الكميم,null,null,,base.sa,2002-1-1,Female,data_security.Grade_4,1,data_security.City_1,data_security.dis_149,966551896502
+593363,1148264185,مريم أحمد محمد حامدي,null,null,,base.sa,1994-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_43,966509901569
+593364,2165530011,مباركه حمو حميد رحاوي,null,null,,base.sa,1996-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_149,966502056167
+593370,2259327357,رناد عبدالله الصلاحي,null,null,,base.sa,1997-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_43,966531888017
+593372,2189161827,ستهم عزت طه,null,null,,base.sa,1995-1-1,Female,data_security.Grade_6,1,data_security.City_1,data_security.dis_36,966581311752
+128847,2183685466,علي رائد الرنتيسي ,null,null,,base.sa,1995-1-1,Male,data_security.Grade_7,1,data_security.City_1,data_security.dis_187,966500136116
+128861,1053771497,عزة طاهر عبدالله عريبي ,null,null,,base.sa,1995-1-1,Female,data_security.Grade_3,1,data_security.City_1,data_security.dis_47,966530936471
+128871,2173721578,محمد عبدالعزيز فتحي السيد ,null,null,,base.sa,1968-1-1,Male,data_security.Grade_1,1,data_security.City_1,data_security.dis_136,966505155020
+128876,2233414925,حسن محمد حسن صواف,null,null,,base.sa,1993-1-1,Male,data_security.Grade_2,1,data_security.City_1,data_security.dis_149,966530001695
+128881,1121348914,خالد عبدالله الجعفر,null,null,,base.sa,1983-1-1,Male,data_security.Grade_3,1,data_security.City_1,data_security.dis_36,966507596599
+128890,1148143975,صالح أحمد المشاري ,null,null,,base.sa,2001-1-1,Female,data_security.Grade_4,1,data_security.City_1,data_security.dis_142,966555123236
+128906,1026951630,فاطمة العلي الشمسان,null,null,,base.sa,1994-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_181,966555428680
+128908,1118198181,منار بنت دخيل عبد الرمن الفنيسان ,null,null,,base.sa,1993-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_4,966505214986
+128912,2206036440,رغد بنت أحمد سليم أبو سنيمة,null,null,,base.sa,2001-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_4,966504387919
+128918,1125775450,ليان بنت راجحي عبد العزيز الراجحي,null,null,,base.sa,1997-1-1,Female,data_security.Grade_6,1,data_security.City_1,data_security.dis_4,966542006080
+128938,1023456788,ريحان بن سالم الريحان,null,null,,base.sa,1995-1-1,Male,data_security.Grade_7,1,data_security.City_1,data_security.dis_89,966598155515
+128974,1124726447,احمد علي احمد البارقي ,null,null,,base.sa,2003-1-1,Male,data_security.Grade_3,1,data_security.City_1,data_security.dis_179,966555471883
+128869,2357463377,دعا جابر سعيد,null,null,,base.sa,1995-1-1,Female,data_security.Grade_1,1,data_security.City_1,data_security.dis_142,966549094960
+128870,2173721545,أحمد عبدالعزيز فتحي السيد ,null,null,,base.sa,1994-1-1,Male,data_security.Grade_2,1,data_security.City_1,data_security.dis_136,966501207700
+128874,2341621825,نرمين أحمد العسال ,null,null,,base.sa,1994-1-1,Female,data_security.Grade_3,1,data_security.City_1,data_security.dis_142,966593344524
+128892,1140154525,حور بنت محمد عبد العزيز الغيث,null,null,,base.sa,1995-1-1,Female,data_security.Grade_4,1,data_security.City_1,data_security.dis_4,966540651111
+128903,1123699678,عبدالله ناصر الشيبان,null,null,,base.sa,1995-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_125,966564424940
+128905,1125767473,فاطمة بنت عبد الرحمن عبد الله العصيمي ,null,null,,base.sa,1995-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_4,966554900095
+128911,1004846463,دليل بنت عبدالرحمن محمد المقبل,null,null,,base.sa,1996-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_36,966503269996
+128916,2148876432,سعد ابراهيم سعد,null,null,,base.sa,1999-1-1,Male,data_security.Grade_6,1,data_security.City_1,data_security.dis_107,966561988170
+128952,2068702246,ندى احمد الادريس,null,null,,base.sa,1995-1-1,Female,data_security.Grade_7,1,data_security.City_1,data_security.dis_23,966502146631
+128994,1019136728,جمعه حسين  محمد والبي الحارثي,null,null,,base.sa,1996-1-1,Female,data_security.Grade_3,1,data_security.City_1,data_security.dis_88,966551838525
+128995,2194993530,نجوى عبد القادر احمد السلطان,null,null,,base.sa,1995-1-1,Female,data_security.Grade_1,1,data_security.City_1,data_security.dis_88,966532332991
+128914,1128978002,كادي بنت عبد المحسن سنيد الحربي,null,null,,base.sa,1995-1-1,Female,data_security.Grade_2,1,data_security.City_1,data_security.dis_4,966504567022
+129001,2219983125,جبير عبدالله محمد,null,null,,base.sa,1994-1-1,Male,data_security.Grade_3,1,data_security.City_1,data_security.dis_86,966535867209
+129003,2228537086,عمر بلال عبداللطيف,null,null,,base.sa,1977-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_86,966551813929
+129008,2216420543,أحمد عبدالباقي محمد,null,null,,base.sa,2004-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_43,966557434160
+129010,2171604917,عمرو عوض ساتى,null,null,,base.sa,2003-1-1,Male,data_security.Grade_6,1,data_security.City_1,data_security.dis_43,966538607667
+129018,1106722166,عبدالعزيز سليمان الفيفي,null,null,,base.sa,1999-1-1,Male,data_security.Grade_3,1,data_security.City_1,data_security.dis_289,966557761122
+129031,1066929348,فلحاء مهجع العنزي,null,null,,base.sa,1986-1-1,Female,data_security.Grade_4,1,data_security.City_1,data_security.dis_2,966559524932
+129035,1122334897,غدير فهد محمد الرشيدي ,null,null,,base.sa,1999-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_151,966534735620
+128985,2184203681,عهود محمد عداد نصر الله ,null,null,,base.sa,1966-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_24,966538582216
+128986,2184947055,حسنة محمود أحمد,null,null,,base.sa,1999-1-1,Female,data_security.Grade_6,1,data_security.City_1,data_security.dis_188,966533087619
+129005,2278213752,عبدالله عبد الغفور,null,null,,base.sa,1999-1-1,Male,data_security.Grade_7,1,data_security.City_1,data_security.dis_86,966556050484
+129016,1118324894,فيصل مزيد قيسي,null,null,,base.sa,1999-1-1,Male,data_security.Grade_3,1,data_security.City_1,data_security.dis_289,966530005757
+129063,2052724644,احمد علي حسن زربي,null,null,,base.sa,1998-1-1,Male,data_security.Grade_2,1,data_security.City_1,data_security.dis_107,966551339819
+129064,2269603829,عبدالرحمن محمد المولود هارون,null,null,,base.sa,1998-1-1,Male,data_security.Grade_3,1,data_security.City_1,data_security.dis_147,966567687257
+129069,2102654692,نرمين أحمد شعث,null,null,,base.sa,1992-1-1,Female,data_security.Grade_4,1,data_security.City_1,data_security.dis_43,966503274749
+129077,2278055914,سالم عايش جبران,null,null,,base.sa,1998-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_107,966563613486
+129033,1111279723,ريناد محمد العتيبي ,null,null,,base.sa,1982-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_151,966535344694
+129057,1028827804,سارة بنت محمد حبيش الخرجي,null,null,,base.sa,1986-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_4,966595550025
+129062,1088580913,سميه بنت عبد المحسن أحمد الجار الله ,null,null,,base.sa,1998-1-1,Female,data_security.Grade_6,1,data_security.City_1,data_security.dis_4,966503461617
+129086,1131207449,حمد احمد عبدالله,null,null,,base.sa,1998-1-1,Male,data_security.Grade_7,1,data_security.City_1,data_security.dis_107,966559859882
+129087,1054012404,فاطمة عبد الرحمن التويجري,null,null,,base.sa,1963-1-1,Female,data_security.Grade_3,1,data_security.City_1,data_security.dis_142,966504178018
+129095,2187190919,منى حامد العلي,null,null,,base.sa,1998-1-1,Female,data_security.Grade_1,1,data_security.City_1,data_security.dis_181,966561020313
+129114,1124812908,ريان عبدالرحمن الحازمي,null,null,,base.sa,1973-1-1,Male,data_security.Grade_2,1,data_security.City_1,data_security.dis_74,966562012102
+129131,2178983512,سالم جابر النقيب,null,null,,base.sa,1997-1-1,Male,data_security.Grade_3,1,data_security.City_1,data_security.dis_142,966503333698
+129048,2275825699,مشاري احمد يحي ظبيري,null,null,,base.sa,1974-1-1,Male,data_security.Grade_4,1,data_security.City_1,data_security.dis_107,966545559290
+129067,100000000014,عبدالرحمن مفضي كديران الظفيري,null,null,,base.sa,1997-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_5,966507053345
+129071,1081639393,هند بنت هليل بويتل الحربي,null,null,,base.sa,1997-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_4,966534507379
+129082,2147235317,احمد يوسف عايش ,null,null,,base.sa,1992-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_107,966597632045
+129084,1027734142,ريمية سعد العتيبي ,null,null,,base.sa,1998-1-1,Female,data_security.Grade_6,1,data_security.City_1,data_security.dis_142,966562630015
+129090,2311227280,رواد ابراهيم هارب دبش ,null,null,,base.sa,1997-1-1,Male,data_security.Grade_7,1,data_security.City_1,data_security.dis_107,966541037943
+129108,2222938967,عبدالله محمد راضي مبارك,null,null,,base.sa,1997-1-1,Male,data_security.Grade_3,1,data_security.City_1,data_security.dis_149,966501239550
+129109,1106832957,سعد صلاح المزروع,null,null,,base.sa,1997-1-1,Male,data_security.Grade_1,1,data_security.City_1,data_security.dis_62,966504339335
+129089,2334022072,نجلاء بنت شوقي محمد حمدان ,null,null,,base.sa,1996-1-1,Female,data_security.Grade_2,1,data_security.City_1,data_security.dis_4,966594002394
+129091,1040407338,الجوهرة محمد عبدالرحمن المحارب ,null,null,,base.sa,1997-1-1,Female,data_security.Grade_3,1,data_security.City_1,data_security.dis_181,966501896036
+129096,2349480927,ساره عمر محمد ابراهيم,null,null,,base.sa,1997-1-1,Female,data_security.Grade_4,1,data_security.City_1,data_security.dis_43,966530332397
+129099,1011704366,الانوار صدوع المطيري,null,null,,base.sa,1974-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_142,966541269275
+129113,1044514998,فاطمة محمد الحمزاوي,null,null,,base.sa,1985-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_142,966552398530
+129132,1107389429,عبدالمجيد إبراهيم الميمن,null,null,,base.sa,1981-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_190,966555138743
+129181,2226025696,عبدالله ماجد أحمد الاشقر,null,null,,base.sa,2000-1-1,Male,data_security.Grade_6,1,data_security.City_1,data_security.dis_78,966555256384
+129190,1115596353,فهد إبراهيم القاسم,null,null,,base.sa,1999-1-1,Male,data_security.Grade_7,1,data_security.City_1,data_security.dis_78,966508533556
+129192,2174771754,عبدالرحمن قدير خان,null,null,,base.sa,2002-1-1,Male,data_security.Grade_3,1,data_security.City_1,data_security.dis_36,966500283846
+129193,2209386685,أحمد محمد حماش ,null,null,,base.sa,1998-1-1,Male,data_security.Grade_1,1,data_security.City_1,data_security.dis_49,966503483689
+129205,1048553646,عتيقه حمد سريع الدوسري,null,null,,base.sa,2002-1-1,Female,data_security.Grade_2,1,data_security.City_1,data_security.dis_88,966553446687
+129206,1066983683,جواهر إبراهيم سعود التميمي,null,null,,base.sa,2000-1-1,Female,data_security.Grade_3,1,data_security.City_1,data_security.dis_47,966500915679
+129242,1035140787,لطيفه بنت عبدالرحمن بن عبدالله بن غدير,null,null,,base.sa,2000-1-1,Female,data_security.Grade_4,1,data_security.City_1,data_security.dis_182,966556236006
+129263,2068454582,نعمات كرم الله عبدالقادر ,null,null,,base.sa,2000-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_188,966582990002
+112824,1000360600,نوال عبد الله مبارك الجوير,null,null,,base.sa,1999-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_8,966503273391
+112828,1113638611,عبدالله ناصر سعد الدوس,null,null,,base.sa,2002-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_36,966504449913
+112831,1106638701,ناصر عبدالله ناصر الزهير,null,null,,base.sa,2001-1-1,Male,data_security.Grade_6,1,data_security.City_1,data_security.dis_36,966504204201
+112835,1110632393,عبدالعزيز بند سعد المضحي,null,null,,base.sa,1997-1-1,Male,data_security.Grade_7,1,data_security.City_1,data_security.dis_36,966504469426
+112849,1114337379,فهد عبدالله سليمان السماري,null,null,,base.sa,1996-1-1,Male,data_security.Grade_3,1,data_security.City_1,data_security.dis_36,966554010401
+184673,2246305037,عبدالرحمن عثمان عبدالرحمن محمد,null,null,,base.sa,1996-1-1,Male,data_security.Grade_1,1,data_security.City_1,data_security.dis_88,966501295462
+112870,1113840167,عبدالعزيز سعيد القحطاني ,null,null,,base.sa,1995-1-1,Male,data_security.Grade_2,1,data_security.City_1,data_security.dis_31,966555288366
+112869,1130924150,اياد محمد العريفج,null,null,,base.sa,1966-1-1,Male,data_security.Grade_4,1,data_security.City_1,data_security.dis_31,966503108061
+112887,1146574098,عبدالرجمن أحمد عبدالله قشاشة,null,null,,base.sa,1972-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_36,966500743286
+112891,2260416767,شهد طارق محمد نصر,null,null,,base.sa,1976-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_36,966551520410
+112898,2289106250,سلمى أحمد محمد زهران,null,null,,base.sa,1979-1-1,Female,data_security.Grade_6,1,data_security.City_1,data_security.dis_36,966532043312
+112900,1144072582,ليان سعيد مزيد قشيشي,null,null,,base.sa,1997-1-1,Female,data_security.Grade_7,1,data_security.City_1,data_security.dis_36,966550039941
+112902,2283278600,عمرو طارق عثمان سليمان,null,null,,base.sa,1999-1-1,Female,data_security.Grade_3,1,data_security.City_1,data_security.dis_36,966562889088
+112906,1116146786,محمد عبدالعزيز محمد العتيبي ,null,null,,base.sa,1995-1-1,Male,data_security.Grade_1,1,data_security.City_1,data_security.dis_31,966550222001
+112909,1130373333,ماجد حسين أحمد سفياني,null,null,,base.sa,2001-1-1,Male,data_security.Grade_2,1,data_security.City_1,data_security.dis_86,966590967890
+112881,1065015545,خالد حسن محمد السبعي,null,null,,base.sa,1999-1-1,Male,data_security.Grade_3,1,data_security.City_1,data_security.dis_86,966500469211
+112883,1124050665,عبدالإله مهدي عقيلي ,null,null,,base.sa,1999-1-1,Male,data_security.Grade_4,1,data_security.City_1,data_security.dis_31,966554898907
+112886,1143786365,سلطان داحش ابراهيم ,null,null,,base.sa,1999-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_36,966500470655
+112889,2286514910,رواسن ياسر صالح محمد ,null,null,,base.sa,2000-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_36,966501612061
+112894,2338920149,خالد وليد علي الجراشي,null,null,,base.sa,1999-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_36,966558038960
+112920,2238603886,محد عاصم رشاد,null,null,,base.sa,1999-1-1,Male,data_security.Grade_6,1,data_security.City_1,data_security.dis_156,966500172823
+112925,10896288110,محمد ناصر محمد الصالح ,null,null,,base.sa,2001-1-1,Male,data_security.Grade_3,1,data_security.City_1,data_security.dis_149,966545454173
+112940,1112182850,عبدالله عبدالرحمن محمد السريبي,null,null,,base.sa,2001-1-1,Male,data_security.Grade_1,1,data_security.City_1,data_security.dis_74,966535800070
+112941,1122553701,محمد أحمد بن إبراهيم,null,null,,base.sa,2002-1-1,Male,data_security.Grade_2,1,data_security.City_1,data_security.dis_74,966555204383
+112942,1132081249,عبدالرحمن بدر ريحان الريحان,null,null,,base.sa,1976-1-1,Male,data_security.Grade_3,1,data_security.City_1,data_security.dis_88,966504226133
+112946,2333573935,زياد محمد لطفي ,null,null,,base.sa,1980-1-1,Male,data_security.Grade_4,1,data_security.City_1,data_security.dis_74,966563126311
+112948,1128883608,سعود بن عبدالله المطيري,null,null,,base.sa,1960-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_74,966505474505
+112949,1148722711,سلطان بن حماد الحماد,null,null,,base.sa,1978-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_74,966563346309
+441275,1136166830,أحمد حكمت محمد فرحات,null,null,,base.sa,1992-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_23,966559224621
+112904,1125075745,فواز محمد حسين المباركي ,null,null,,base.sa,1992-1-1,Male,data_security.Grade_6,1,data_security.City_1,data_security.dis_31,966556012986
+112912,1129533814,علي حسين ناصر معشي,null,null,,base.sa,2002-1-1,Male,data_security.Grade_7,1,data_security.City_1,data_security.dis_86,966551222213
+112943,1000000666,سعد بن خالد الدوسري,null,null,,base.sa,2002-1-1,Male,data_security.Grade_3,1,data_security.City_1,data_security.dis_74,966504257869
+112945,1135745576,بدران بن سليمان بن منيع,null,null,,base.sa,2005-1-1,Male,data_security.Grade_1,1,data_security.City_1,data_security.dis_74,966504487416
+112953,2175303094,عبدالرحمن محمد حسين علي,null,null,,base.sa,1979-1-1,Male,data_security.Grade_2,1,data_security.City_1,data_security.dis_74,966503451020
+112923,2257810412,ياسر جمال يوسف,null,null,,base.sa,1974-1-1,Male,data_security.Grade_3,1,data_security.City_1,data_security.dis_156,966505271954
+113013,1141638278,وسن محمد محزري,null,null,,base.sa,1965-1-1,Female,data_security.Grade_4,1,data_security.City_1,data_security.dis_147,966506190788
+112917,2331650289,محمد علي عثمان عبدالقوي,null,null,,base.sa,1985-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_156,966508165267
+112921,2356998811,محمد محسن محمد زعرب,null,null,,base.sa,1981-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_156,966552146464
+113049,1130934522,بندر خالد العتيبي,null,null,,base.sa,1975-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_74,966546653356
+112958,7478777777,عاصم محمد سليمان,null,null,,base.sa,1972-1-1,Male,data_security.Grade_6,1,data_security.City_1,data_security.dis_74,966507036515
+113050,1040799846,فهم   عروان الهاجري,null,null,,base.sa,1977-1-1,Male,data_security.Grade_7,1,data_security.City_1,data_security.dis_74,966500005480
+113051,1138539489,ابراهيم ناصر السنيدي,null,null,,base.sa,2002-1-1,Male,data_security.Grade_3,1,data_security.City_1,data_security.dis_74,966503576243
+113054,1125035111,فهد فيصل الربيعان,null,null,,base.sa,2002-1-1,Male,data_security.Grade_2,1,data_security.City_1,data_security.dis_74,966536400113
+113056,2175905880,عبدالمعز طارق صالح ,null,null,,base.sa,2002-1-1,Male,data_security.Grade_3,1,data_security.City_1,data_security.dis_188,966500405195
+113059,1136702824,نواف شاهر المطيري,null,null,,base.sa,2002-1-1,Male,data_security.Grade_4,1,data_security.City_1,data_security.dis_87,966537467699
+113064,2265691978,عبدالله محمد جابر مفتاح ,null,null,,base.sa,1994-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_188,966550001294
+113067,2054871569,مروج عمار صالح,null,null,,base.sa,2001-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_49,966553790261
+113072,2250710650,زياد ناصر يسلم فهيد,null,null,,base.sa,2003-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_188,966554833710
+113075,2302102625,عمر عارف محمد صالح  ,null,null,,base.sa,2000-1-1,Female,data_security.Grade_6,1,data_security.City_1,data_security.dis_49,966505545362
+113077,2085213654,سعود اسماعيل حكمي,null,null,,base.sa,1997-1-1,Female,data_security.Grade_7,1,data_security.City_1,data_security.dis_49,966530932228
+113098,1115738138,خالد أسد حسن عناب,null,null,,base.sa,1976-1-1,Male,data_security.Grade_3,1,data_security.City_1,data_security.dis_86,966501792487
+113100,1137184352,نايف تركي حمود الكثيري,null,null,,base.sa,1979-1-1,Male,data_security.Grade_1,1,data_security.City_1,data_security.dis_86,966555235682
+113083,2239165695,فهد ناصر عبدالله حنتوش,null,null,,base.sa,1977-1-1,Male,data_security.Grade_2,1,data_security.City_1,data_security.dis_220,966557405853
+113111,1131168740,مزيد يحي حسن مجمعي,null,null,,base.sa,1991-1-1,Male,data_security.Grade_3,1,data_security.City_1,data_security.dis_86,966530299024
+113114,2207019544,سمية خالد الطيب,null,null,,base.sa,1984-1-1,Female,data_security.Grade_4,1,data_security.City_1,data_security.dis_77,966531240336
+113142,1159492642,عبدالمحسن مشعان عبدالعزيز الهاجري,null,null,,base.sa,1989-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_74,966553577723
+111969,2335839094,هنا حنفي محمود زاد ,null,null,,base.sa,1984-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_23,966599489667
+112078,2159718333,صفاء محمد لؤي الزعيم,null,null,,base.sa,1959-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_25,966507432001
+112097,2277035339,هالة صلاح الدين سيد,null,null,,base.sa,1995-1-1,Female,data_security.Grade_6,1,data_security.City_1,data_security.dis_26,966564902656
+112104,2109432720,مودة عدنان أحمد البيطار,null,null,,base.sa,1998-1-1,Female,data_security.Grade_7,1,data_security.City_1,data_security.dis_26,966540210980
+112105,1136028683,إبراهيم درويش عبدالله العيسى ,null,null,,base.sa,2000-1-1,Male,data_security.Grade_3,1,data_security.City_1,data_security.dis_88,966506107095
+112106,200001000000,الوليد هشام إسماعيل عابد ,null,null,,base.sa,1980-1-1,Male,data_security.Grade_1,1,data_security.City_1,data_security.dis_88,966502284207
+112107,1138697642,حسام خضر غرم الله الغامدي  ,null,null,,base.sa,1984-1-1,Male,data_security.Grade_2,1,data_security.City_1,data_security.dis_88,966559416729
+112109,1138596984,زياد  صالح حامد آل كثيم  ,null,null,,base.sa,1950-1-1,Male,data_security.Grade_3,1,data_security.City_1,data_security.dis_88,966554741411
+112111,1041410471,عبدالرحمن يحيى أحمد بهكلي   ,null,null,,base.sa,1984-1-1,Male,data_security.Grade_4,1,data_security.City_1,data_security.dis_88,966584848710
+112118,2342754369,يوسف إدريس محمد إدريس   ,null,null,,base.sa,1987-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_88,966501334001
+112126,1003379086,نورة عبدالعزيز حمد الزبيدي,null,null,,base.sa,1982-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_23,966504177759
+112131,1065854679,نوف عبدالرحمن سعد الحسين ,null,null,,base.sa,1976-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_23,966532283334
+112144,2222195824,سليم عبدالله الكندي,null,null,,base.sa,1983-1-1,Male,data_security.Grade_6,1,data_security.City_1,data_security.dis_184,966565656335
+112145,2331350013,رشيد نور كعبة كلكو,null,null,,base.sa,1969-1-1,Male,data_security.Grade_7,1,data_security.City_1,data_security.dis_172,966552347453
+112150,2010579566,سمية صالح عبدالسلام القادري,null,null,,base.sa,1983-1-1,Male,data_security.Grade_3,1,data_security.City_1,data_security.dis_23,966597888269
+112151,201057000000,الشيماء صالح عبدالسلام القادري,null,null,,base.sa,1975-1-1,Male,data_security.Grade_1,1,data_security.City_1,data_security.dis_23,966594582368
+112156,2148025790,حسن محمد علي حسين,null,null,,base.sa,1975-1-1,Male,data_security.Grade_2,1,data_security.City_1,data_security.dis_172,966595237329
+112158,1086051339,مشعل راشد حمد الدريس,null,null,,base.sa,1984-1-1,Male,data_security.Grade_3,1,data_security.City_1,data_security.dis_172,966544799766
+112160,1085650560,فيصل فهد عبدالله العرجاني,null,null,,base.sa,1992-1-1,Male,data_security.Grade_4,1,data_security.City_1,data_security.dis_311,966592223666
+112163,2031517143,جميل صالح رضوان الوصابي,null,null,,base.sa,1991-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_184,966532852776
+112165,2010579551,سلمى صالح عبدالسلام القادري,null,null,,base.sa,1973-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_200,966531059322
+112166,2294246281,عبدالعزيز أحمد إبراهيم فرحات,null,null,,base.sa,1979-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_36,966531219329
+112052,5666666667,مصطفى علي ماهر عتريس محمود ,null,null,,base.sa,1990-1-1,Male,data_security.Grade_6,1,data_security.City_1,data_security.dis_36,966556837583
+112114,2266007588,عمرو أحمد راشد محمد   ,null,null,,base.sa,1990-1-1,Male,data_security.Grade_7,1,data_security.City_1,data_security.dis_88,966552757061
+112117,1134837176,ياسر عبدالحكيم علي الزهراني   ,null,null,,base.sa,1985-1-1,Male,data_security.Grade_3,1,data_security.City_1,data_security.dis_88,966507172015
+112125,1055584633,مها عبدالله علي الدوسري,null,null,,base.sa,1985-1-1,Female,data_security.Grade_1,1,data_security.City_1,data_security.dis_23,966549224048
+112147,1004107080,عائشة حسن منصور الفيفي,null,null,,base.sa,1988-1-1,Male,data_security.Grade_2,1,data_security.City_1,data_security.dis_65,966556281197
+112176,2172758662,عمر بن عبد الله باحميدان,null,null,,base.sa,1991-1-1,Male,data_security.Grade_3,1,data_security.City_1,data_security.dis_129,966504493863
+112180,2321858181,أبو عاقله محمد علي ,null,null,,base.sa,1983-1-1,Male,data_security.Grade_4,1,data_security.City_1,data_security.dis_172,966546229058
+112181,1054116973,سلطان جازي الجهمي,null,null,,base.sa,1984-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_32,966536021322
+112182,1064113200,فيصل مفرج عمر العويقله,null,null,,base.sa,1982-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_22,966580280018
+112184,2357538990,علي موسى علي آدم,null,null,,base.sa,1990-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_184,966502842877
+112187,966532902314,إبراهيم سليمان علي الحامد,null,null,,base.sa,1983-1-1,Male,data_security.Grade_6,1,data_security.City_1,data_security.dis_172,966532902314
+112191,1106507641,صالح بن أحمد باصحيح,null,null,,base.sa,1987-1-1,Male,data_security.Grade_7,1,data_security.City_1,data_security.dis_129,966506251538
+112195,2161952136,عمر سالم برهوم,null,null,,base.sa,1984-1-1,Male,data_security.Grade_3,1,data_security.City_1,data_security.dis_129,966533068286
+112196,2043893961,ريان ظافر الشهري,null,null,,base.sa,1990-1-1,Male,data_security.Grade_1,1,data_security.City_1,data_security.dis_129,966555555555
+112221,1102867155,أنفال صالح عبدالله المحسن,null,null,,base.sa,1987-1-1,Female,data_security.Grade_2,1,data_security.City_1,data_security.dis_4,966555229404
+112108,2555555555,ريان أحمد إسماعيل عابد  ,null,null,,base.sa,1989-1-1,Male,data_security.Grade_3,1,data_security.City_1,data_security.dis_88,966502778420
+112113,1138241565,عمر حسن جمعان الزهراني   ,null,null,,base.sa,1991-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_88,966598085800
+112146,2010579569,محمد صالح عبدالسلام القادري,null,null,,base.sa,1982-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_200,966509721056
+112162,1109187284,سعيده منصور حسن الفيفي,null,null,,base.sa,1976-1-1,Male,data_security.Grade_6,1,data_security.City_1,data_security.dis_33,966538607527
+112164,20557034843,نسيبه صالح عبدالسلام القادري,null,null,,base.sa,1976-1-1,Male,data_security.Grade_7,1,data_security.City_1,data_security.dis_172,966506551857
+112239,2110874969,خولة حسن عبدالله الادور ,null,null,,base.sa,1979-1-1,Female,data_security.Grade_3,1,data_security.City_1,data_security.dis_4,966509793379
+112241,1009183714,زينب حمد صالح الحمد ,null,null,,base.sa,1992-1-1,Female,data_security.Grade_1,1,data_security.City_1,data_security.dis_4,966506616233
+112245,1086494448,وجدان عبدالله دخيل المسلم,null,null,,base.sa,1988-1-1,Female,data_security.Grade_2,1,data_security.City_1,data_security.dis_4,966592930450
+112251,1091527240,عبدالكريم إبراهيم ناصر العنيق,null,null,,base.sa,1993-1-1,Male,data_security.Grade_3,1,data_security.City_1,data_security.dis_22,966501700061
+112255,1005499635,سعد عبدالرحمن سليمان آل سليمان,null,null,,base.sa,1981-1-1,Male,data_security.Grade_4,1,data_security.City_1,data_security.dis_22,966505212315
+112273,1115207415,مشعل سويعد المطيري,null,null,,base.sa,1970-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_6,966500028758
+112278,1121453961,يوسف أحمد يوسف,null,null,,base.sa,1980-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_149,966505407402
+112279,1112640956,خالد عبد اللطيف عبد الله  اليوسف ,null,null,,base.sa,1997-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_149,966555276162
+112110,1129600555,عامر محمد أحمد إثلاوي ,null,null,,base.sa,1997-1-1,Male,data_security.Grade_6,1,data_security.City_1,data_security.dis_88,966555225610
+112115,2277078305,محمد وائل سيداحمد حسن ,null,null,,base.sa,1995-1-1,Male,data_security.Grade_7,1,data_security.City_1,data_security.dis_88,966530816406
+112123,2292187768,ريم محمد ذيب محمود الديري,null,null,,base.sa,1998-1-1,Female,data_security.Grade_3,1,data_security.City_1,data_security.dis_25,966565639946
+112128,2134016407,فاطمة عيسى عبدالرحمن قدام  ,null,null,,base.sa,2000-1-1,Female,data_security.Grade_1,1,data_security.City_1,data_security.dis_23,966509492695
+112254,2031882030,ميسرة محمد عبدالفتاح القادري,null,null,,base.sa,1999-1-1,Male,data_security.Grade_2,1,data_security.City_1,data_security.dis_10,966599686659
+112271,1112599509,محمد موسى سعود المطيري,null,null,,base.sa,1991-1-1,Male,data_security.Grade_3,1,data_security.City_1,data_security.dis_6,966556509506
+112274,2006036210,يزيد جهاد كحساي جهاد,null,null,,base.sa,2001-1-1,Male,data_security.Grade_4,1,data_security.City_1,data_security.dis_6,966531112053
+112288,1098395906,سلطان بندر شايع المطيري,null,null,,base.sa,2002-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_6,966555409981
+112149,1004107064,رقية منصور حسن الفيفي,null,null,,base.sa,2000-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_33,966503775994
+112155,2181158409,مودة محمد سليمان بنكي,null,null,,base.sa,1999-1-1,Male,data_security.Grade_6,1,data_security.City_1,data_security.dis_36,966534461727
+112172,2186671489,صهيب بن محمد العمودي,null,null,,base.sa,1977-1-1,Male,data_security.Grade_3,1,data_security.City_1,data_security.dis_129,966567772011
+112179,2111183642,محمد عبدالله محمد موسى,null,null,,base.sa,1989-1-1,Male,data_security.Grade_1,1,data_security.City_1,data_security.dis_43,966502502686
+112204,2183537550,عمر بن مبارك البحري,null,null,,base.sa,1971-1-1,Male,data_security.Grade_2,1,data_security.City_1,data_security.dis_129,966537169559
+112286,1003828041,عبد الرحمن وليد صالح الحمندي,null,null,,base.sa,1966-1-1,Male,data_security.Grade_3,1,data_security.City_1,data_security.dis_149,966546229955
+112287,1061585020,سعد فهد محمد عبد الرحمن العبيد,null,null,,base.sa,1974-1-1,Male,data_security.Grade_4,1,data_security.City_1,data_security.dis_149,966542277167
+112319,1023033309,هلا احمد محمد المسعر ,null,null,,base.sa,1967-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_4,966555242649
+112336,2165630209,نسيبه يوسف أحمد جاموس,null,null,,base.sa,1988-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_4,966504425612
+112360,1123533661,عبدالإله سعود فواز السبيعيى,null,null,,base.sa,1974-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_31,966505289721
+112362,1118810090,بدر صنيتان معتوق المطيري,null,null,,base.sa,1958-1-1,Male,data_security.Grade_6,1,data_security.City_1,data_security.dis_149,966555216458
+112366,1115556860,مشاري وسمي المطيري ,null,null,,base.sa,1965-1-1,Male,data_security.Grade_3,1,data_security.City_1,data_security.dis_31,966598439796
+112153,2341572465,عبدالله محمد حمد الشدادي,null,null,,base.sa,1983-1-1,Male,data_security.Grade_1,1,data_security.City_1,data_security.dis_73,966530711001
+112161,1109694206,حبيبة منصور حسن الفيفي,null,null,,base.sa,1994-1-1,Male,data_security.Grade_2,1,data_security.City_1,data_security.dis_33,966553907233
+112222,1077782272,الاء عمر عبدالله المعقيل ,null,null,,base.sa,1979-1-1,Female,data_security.Grade_3,1,data_security.City_1,data_security.dis_4,966590176009
+112253,2135000939,سمير صادق عمار علواش,null,null,,base.sa,1985-1-1,Male,data_security.Grade_4,1,data_security.City_1,data_security.dis_170,966598022409
+112256,2013446378,محسن محمد عبدالفتاح القادري,null,null,,base.sa,1969-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_10,966599685686
+112295,1141127629,هيف خالد هايف العتيبي,null,null,,base.sa,1986-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_6,966554430018
+112301,2222886919,علي حميد علي بجو,null,null,,base.sa,1979-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_149,966563813817
+112363,1119916631,فردان خالد الهاجري ,null,null,,base.sa,1966-1-1,Male,data_security.Grade_6,1,data_security.City_1,data_security.dis_31,966507489616
+112386,1010834313,فهيد خلف فالح السبيعي,null,null,,base.sa,1969-1-1,Male,data_security.Grade_7,1,data_security.City_1,data_security.dis_62,966503110611
+156662,2132066438,بيان مرتضى أحمد وليد,null,null,,base.sa,1976-1-1,Female,data_security.Grade_3,1,data_security.City_1,data_security.dis_25,966599611514
+156665,1117705804,محمد بن خلف آل سليمان,null,null,,base.sa,1982-1-1,Male,data_security.Grade_1,1,data_security.City_1,data_security.dis_22,966505825113
+156679,1004222806,سلمى حمد موسى الحماد,null,null,,base.sa,1976-1-1,Female,data_security.Grade_2,1,data_security.City_1,data_security.dis_63,966550299337
+156681,2318145311,حمزة عبداللطيف أحمد حربة,null,null,,base.sa,1985-1-1,Male,data_security.Grade_3,1,data_security.City_1,data_security.dis_36,966532249610
+156687,1033806421,نورة محمد العتيبي,null,null,,base.sa,1980-1-1,Female,data_security.Grade_4,1,data_security.City_1,data_security.dis_13,966535621979
+156708,2349979431,رفيدة خالد فتح الله عبدالشافي,null,null,,base.sa,1960-1-1,Female,data_security.Grade_5,1,data_security.City_1,data_security.dis_22,966565208171
+156751,1138571839,فارس عبدالله الرشود,null,null,,base.sa,1975-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_23,966555259666
+156756,2254135987,علي عبدالرؤوف محمد,null,null,,base.sa,1981-1-1,Male,data_security.Grade_5,1,data_security.City_1,data_security.dis_23,966554681963
+156788,1105625014,منى عبدالعزيز ابراهيم الحقيل,null,null,,base.sa,1982-1-1,Female,data_security.Grade_6,1,data_security.City_1,data_security.dis_181,966500926222
+156793,1068058859,سعدية محمد سلمان والبي,null,null,,base.sa,1980-1-1,Female,data_security.Grade_7,1,data_security.City_1,data_security.dis_217,966583549399
+156798,1134253228,لين عبدالرحم المقبل,null,null,,base.sa,1966-1-1,Female,data_security.Grade_3,1,data_security.City_1,data_security.dis_63,966550445585

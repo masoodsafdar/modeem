@@ -1,0 +1,4 @@
+id,subject_page_ids/from_verse/id,subject_page_ids/to_verse/id,subject_page_ids/to_surah/id,subject_page_ids/from_surah/id,name,type_method
+mk_memorize_method_1,__export__.mk_surah_verses_1,__export__.mk_surah_verses_17,__export__.mk_surah_2,__export__.mk_surah_1,p1,page
+,__export__.mk_surah_verses_38,__export__.mk_surah_verses_87,__export__.mk_surah_2,__export__.mk_surah_2,,
+,__export__.mk_surah_verses_24,__export__.mk_surah_verses_37,__export__.mk_surah_2,__export__.mk_surah_2,,

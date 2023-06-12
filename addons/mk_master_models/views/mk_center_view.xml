@@ -1,0 +1,58 @@
+<odoo>
+    <data>
+    
+ 	<record id="mk_center_form_view" model="ir.ui.view">
+          <field name="name">Center Form View</field>
+          <field name="model">mk.center</field>
+          <field name="arch" type="xml">
+              <form string = "Center ">
+		  <header>
+		    
+		  </header>
+		  <sheet>
+			  <group>
+                <field name="code"/>
+			  	<field name="name" required="1"/>
+                <field name="active"/>
+
+			  </group>
+	  	</sheet>
+              </form>
+             </field>
+         </record>
+
+        <record id="mk_center_tree_view" model="ir.ui.view">
+            <field name="name">Center Tree View</field>
+            <field name="model">mk.center</field>
+            <field name="arch" type="xml">
+                <tree delete="0" string="Center ">
+                	<field name="name" required="1"/>
+                    <field name="code"/>
+
+                </tree>
+            </field>
+        </record>
+        
+        <record id="mk_center_search_view" model="ir.ui.view">
+            <field name="name">Center Search View</field>
+            <field name="model">mk.center</field>
+            <field name="arch" type="xml">
+                <search string="Center ">
+                    <field name="name" string="Center " filter_domain="[('name','ilike', self)]"/>
+                     <filter domain="[('active','=',False)]" name="active" string="Un Active"/>
+                </search>
+            </field>
+        </record>
+        
+        <record id="mk_center_action" model="ir.actions.act_window">
+            <field name="name">Center </field>
+            <field name="res_model">mk.center</field>
+            <field name="type">ir.actions.act_window</field>
+            <!-- <field name="view_type">form</field> -->
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+            <field name="search_view_id" ref="mk_center_search_view"/>
+        </record>
+    </data>  
+</odoo>

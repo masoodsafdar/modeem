@@ -1,0 +1,26 @@
+<odoo>
+    <data>
+    
+    	<!--======================================================
+    	                           Episode
+    	    ====================================================== -->
+		        
+		<record id="mk_episode_form_view" model="ir.ui.view">
+			<field name="name">Episode Form View</field>
+			<field name="model">mk.episode</field>
+			<field name="inherit_id" ref="mk_episode_management.mk_episode_form_view"/>
+			<field name="arch" type="xml">
+				<field name="episode_type" position="after">
+					<field name="episode_specific_ids" invisible="1" widget="many2many_tags"/>
+                	<field name="episode_season"    attrs="{'invisible':[('episode_specific_ids','=',[])], 'readonly': [('active','!=',True)]}" required="1"/>
+                	<field name="episode_season_id" attrs="{'invisible':[('episode_season','!=','seasonal')],
+                											'readonly': [('active','!=',True)],
+                											'required': [('episode_season','=','seasonal')]}" 
+                									domain="[('id','in',episode_specific_ids)]"
+                									options="{'no_open':1,'no_create':1}"/>
+				</field>			
+			</field>
+		</record>
+
+    </data>  
+</odoo>

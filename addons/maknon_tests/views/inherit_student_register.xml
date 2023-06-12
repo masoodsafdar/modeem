@@ -1,0 +1,25 @@
+<odoo>
+    <data>
+    	<record id="student_register_form_inherited_view" model="ir.ui.view">
+			<field name="name">mk.student.register</field>
+          	<field name="model">mk.student.register</field>
+          	<field name="inherit_id" ref="mk_student_register.view_student_register_form"/>
+      		<field name="arch" type="xml">
+			<xpath expr='//page[4]' position='after'>
+				<field name="category" invisible="1"/>
+				<page string="السجل التاريخي للاختبارات">
+				    <field name="test_session_ids">
+				        <tree create="0" delete="0">
+				            <field name="test_time"/>
+				            <field name="branch"/>
+				            <field name="test_name"/>
+				            <field name="state"/>
+				        </tree>
+				    </field>
+				</page>
+			</xpath>
+			</field>
+	   </record>
+							
+</data>
+</odoo>							

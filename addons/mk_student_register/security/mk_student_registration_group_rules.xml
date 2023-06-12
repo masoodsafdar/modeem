@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<odoo>
+		<data>
+			<record model="ir.rule" id="student_register_rule">
+      			<field name="name">student register  rules</field>
+      			<field name="model_id" ref="mk_student_register.model_mk_student_register"/>
+      			<field name="domain_force">['|',('is_student_meqraa','=',True),
+											   '&amp;',('mosq_id.categ_id.mosque_type','in',(str(user.gender)).split(",")),
+											   '|',('mosq_id.id','in',user.mosque_ids.ids),
+												   ('mosq_id.center_department_id.id','in',user.department_ids.ids)]</field>
+			</record>
+
+         	<record model="ir.rule" id="student_link_rule">
+      			<field name="name">student link  rules</field>
+      			<field name="model_id" ref="mk_student_register.model_mk_link"/>
+      			<field name="domain_force">['|',('student_id.is_student_meqraa','=',True),
+											   '&amp;',('mosq_id.categ_id.mosque_type','in',(str(user.gender)).split(",")),
+												  '|',('mosq_id.id','in',user.mosque_ids.ids),
+													  ('mosq_id.center_department_id.id','in',user.department_ids.ids)]
+				</field>
+			</record>
+		</data>
+	</odoo>

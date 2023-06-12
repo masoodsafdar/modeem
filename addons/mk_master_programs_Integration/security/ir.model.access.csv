@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+mk_Integration_add,Access_responsible_mk_master_programs_Integrations ,mk_master_programs_Integration.model_supervisor_line,mk_master_models.group_read_employee,1,1,1,0
+
+

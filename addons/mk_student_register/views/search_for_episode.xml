@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <data>
+			
+    	<!-- ================================================================
+    					       Assign Student To Episode
+    	     ================================================================ -->        
+
+		<record id="view_serach_for_episode_form" model="ir.ui.view">
+			<field name="name">view.search.link.form</field>
+			<field name="model">mk.search.episode</field>
+			<field name="arch" type="xml">
+				<form string="Link student acceptance" >
+					<header>
+                	</header>
+                	
+                	<sheet>
+                    	<group>
+                        	<group>
+                            	<field name="student_id" options="{'no_create': 1, 'no_create_edit': 1,'no_open':1}"/>
+                        	</group>
+	                    	<group>
+	                        	<field name="year" options="{'no_open':1,'no_create':1}"/>
+	                    	</group>
+                    	</group>
+                    	
+                        <p style="color:red">الية البحث عن الحلقات تعتمد علي نوع الطالب (ذكر / انثى) في ايجاد الحلقة المناسبة للطالب
+                        </p>
+                        
+                        <group string="Avialable Episodes">
+							<div>
+                            	<field name="epi_link"  nolabel="1">
+                            		<tree create="false">
+                            			<field name="id" invisible="1"/>
+                            			<field name="student_id" invisible="1"/>
+                            			<field name="episode_id"/>
+                            			<field name="flag" invisible="1"/>
+                            			<button name="status" icon="fa-check text-success" attrs="{'invisible':[('flag','=',False)]}" />
+                            		</tree>
+                            	</field>
+                            </div>
+						</group>                                       
+					</sheet>
+					
+					<footer>
+                        <!--<button name="send" string="Send SMS" type="object" class="oe_highlight"/>
+                        or-->
+						<button name="ok" type="object"    string="OK"     class="oe_highlight"/>
+                        <button           special="cancel" string="Cancel" class="oe_link"/>
+                    </footer>
+				</form>
+			</field>
+		</record>
+		
+        <record id="mk_serach_episode_action" model="ir.actions.act_window">
+			<field name="name">Search For Avialable Episodes</field>
+			<field name="res_model">mk.search.episode</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">form</field>
+			<field name="view_id" ref="view_serach_for_episode_form"/>
+			<field name="target">new</field>
+        </record>
+        
+    	<!-- ================================================================
+    									episode_searc
+    	     ================================================================ -->
+    	     
+		<record id="view_serach_result_for_episode_form" model="ir.ui.view">
+			<field name="name">view.mk.episode_searc.link.form</field>
+            <field name="model">mk.episode_searc</field>
+            <field name="arch" type="xml">
+            	<form string="Link student acceptance" >
+					<group>
+                        <group>
+                            <field name="student_id" readonly="1"/>
+                            <field name="episode_id" readonly="1"/>
+                        </group>
+                    </group>
+					<notebook>
+                    	<page string="Days">
+                        	<br></br>
+                          	<field name="student_days" widget="many2many_tags" options="{'no_create': 1, 'no_open': 1}"/>
+                    	</page>
+                    	<page string="almanhaj and programs setting">
+                    		<group> 
+                    			<field name="program_type" required="1"/>
+                    			<field name="episode_current_program" string="program name" domain="[('program_type', '=', program_type)]" required="1" options="{'no_create': 1, 'no_create_edit': 1}" widget="selection"/>                    
+                    			<field name="almanhaj" required="1" options="{'no_create': 1, 'no_create_edit': 1}" widget="selection"/>            
+            					<field name="page_id" attrs="{'invisible':['|',('program_type','=','close'),('almanhaj','=',False)],
+            					                              'required':[('program_type','!=','close')]}" options="{'no_create': 1, 'no_open': 1}" domain="[('type_method','=','subject')]"/> 
+                    
+                				<field name="save_start_point" attrs="{'invisible':[('page_id','=',False)],'required':[('page_id','!=',True)]}"/> 
+                    			<field name="is_tlawa"      invisible="1"/>
+                    			<field name="is_big_review" invisible="1"/>
+                    			<field name="part_id" attrs="{'invisible':['|',('is_tlawa','=',False), ('program_type','=','close')]}" widget="many2many_tags" options="{'no_create': True,'no_open': True,}"/>
+                    		</group>
+                    	</page>
+                
+                		<page string="Big review setting"  attrs="{'invisible':['|',('is_big_review','=',False),('page_id','=',False)]}">
+                        	<group>
+                				<field name="big_part_ids" string="big_review_parts" widget="many2many_tags"  options="{'no_create': True,'no_open': True,}"/>
+                        		<field name="start_point" attrs="{'required':[('is_big_review','!=',False)]}"/>
+                        		<field name="review_direction"/>
+                        	</group>
+                    	</page>
+                	</notebook>
+                    
+                    <group>
+                        <field name="flag" string="link student with this episode"/>
+                    </group>
+                </form>
+            </field>
+		</record>        		
+	</data> 
+</odoo>
+ 

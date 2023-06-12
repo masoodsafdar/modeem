@@ -1,0 +1,76 @@
+<odoo>
+    <data>
+    
+    <record id="mk_episode_productivity_form_view" model="ir.ui.view">
+          <field name="name">Productivity Form View</field>
+          <field name="model">mk.productivity.teach</field>
+          <field name="arch" type="xml">
+           <form string="Productivity">
+              <header>  
+		      <button name="cal_productivity" string="Productivity" type="object" />
+                 </header>
+                 <sheet>
+                       <group>
+                            <field name="teacher_id"  options="{'no_create': 1, 'no_create_edit': 1}"/>
+</group>
+                       <notebook>
+                     <page string="Teacher productivity">
+                          <field name="productivity_line">
+                              <tree editable="bottom">
+		                    <field name="episode_type" options="{'no_create': True,'no_open': True,}"/>
+		                    <!--field name="episode_id" options="{'no_create': 1, 'no_create_edit': 1}"/-->
+		                    <field name="productivity" options="{'no_create': 1, 'no_create_edit': 1}"/>
+		                    <field name="rate"/>
+				    <field name="motivate"/>
+                           </tree>
+                          </field>
+                        </page>   
+
+                       
+                    </notebook>
+                                     </sheet>
+                          
+              </form>
+             </field>
+         </record>
+
+        <record id="mk_teach_productivity_tree_view" model="ir.ui.view">
+            <field name="name">Productivity Tree View</field>
+            <field name="model">mk.productivity.teach</field>
+            <field name="arch" type="xml">
+                <tree delete="0" string="Productivity">
+                    <field name="teacher_id"/>
+                </tree>
+            </field>
+        </record>
+        
+        <record id="mk_productivity_search_view" model="ir.ui.view">
+            <field name="name">Productivity  Search View</field>
+            <field name="model">mk.productivity.teach</field>
+            <field name="arch" type="xml">
+                <search string="Productivity">
+                       <field name="teacher_id"/>
+                </search>
+            </field>
+        </record>
+
+
+
+
+
+      <record id="mk_productivity_action" model="ir.actions.act_window">
+          <field name="name">Teachers Productivity</field>
+          <field name="res_model">mk.productivity.teach</field>
+          <field name="view_mode">tree,form,graph</field>
+          <field name="help" type="html">
+              <p>
+                 Teachers Productivity
+              </p>
+          </field>
+      </record>
+
+      <menuitem id="productivtiy_menu"  action="mk_productivity_action" sequence="10"  parent="mk_episode_management_menu" />
+        
+
+    </data>  
+</odoo>

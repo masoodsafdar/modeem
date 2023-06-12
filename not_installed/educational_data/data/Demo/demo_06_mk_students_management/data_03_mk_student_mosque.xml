@@ -1,0 +1,12 @@
+<odoo>
+    <data noupdate="1">
+        <record id="mk_mosque1" model="mk.mosque">
+            <field name="first_student" ref="mk_student_register1"/>
+            <field name="second_student" ref="mk_student_register2"/>
+        </record>
+        <record id="mk_mosque2" model="mk.mosque">
+            <field name="first_student" ref="mk_student_register3"/>
+            <field name="second_student" ref="mk_student_register4"/>
+        </record>
+    </data>
+</odoo>

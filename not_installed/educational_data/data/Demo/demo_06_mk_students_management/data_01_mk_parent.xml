@@ -1,0 +1,34 @@
+<odoo>
+    <data noupdate="1">
+        <record id="mk_parent" model="res.partner">
+            <field name="name">احمد</field>
+            <field name="display_name">احمد منير محمد</field>
+            <field name="lang">ar_SY</field>
+            <field name="active" eval="True"/>
+            <field name="customer" eval="False"/>
+            <field name="supplier" eval="False"/>
+            <field name="employee" eval="False"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="email">ahmadmohamad@gmail.com</field>
+            <field name="mobile">966 54222</field>
+            <field name="is_company" eval="False"/>
+            <field name="partner_share" eval="True"/>
+            <field name="opt_out" eval="False"/>
+            <field name="passwd">9852</field>
+            <field name="second_name">منير</field>
+            <field name="third_name">محمد</field>
+            <field name="no_identity" eval="False"/>
+            <field name="identity_no">1000000370</field>
+            <field name="gender">male</field>
+            <field name="job_id" ref="mk_job3"/>
+            <field name="city_id" ref="mk_city1"/>
+            <field name="area_id" ref="mk_area1"/>
+            <field name="district_id" ref="mk_district4"/>
+            <field name="marital_status">married</field>
+            <field name="registeration_code">2000048</field>
+            <field name="grade_id" ref="mk_episode_management.mk_grade16"/>
+            <field name="parent" eval="True"/>
+            <field name="is_student" eval="False"/>
+        </record>
+    </data>
+</odoo>

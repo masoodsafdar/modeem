@@ -1,0 +1,25 @@
+    @font-face {
+
+            font-family: Neo Sans Arabic;
+
+            src: url('/mk_episode_management/static/src/NeoSansArabic.ttf') format('opentype');
+
+     }
+      table {
+                            border-collapse: collapse;
+
+                            }
+
+                        table{
+                             border: 1px solid black;
+                            }
+                        td{
+                            border: 1px solid black;
+                            padding: 5px 5px 5px 5px;
+                        }
+                        th{
+                            border: 1px solid black;
+                            padding: 5px 5px 5px 5px;
+                        }
+
+

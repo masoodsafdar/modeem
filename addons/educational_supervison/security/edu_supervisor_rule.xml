@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <!--data>
+
+<record model="ir.rule" id="edu_mosques_rule">
+<field name="name">supervisor manager mosques rules</field>
+<field name="model_id" ref="mk_master_models.model_mk_mosque"/>
+<field name="domain_force">
+
+	[('edu_supervisor.user_id.id','in',[user.id]),('edu_supervisor.state','=','accept')]
+
+</field>
+
+<field name="groups" eval="[(4, ref('educational_supervison.mosque_edu_users'))]"/>
+</record>
+
+<record model="ir.rule" id="edu_mk_student_register_rule">
+<field name="name">sup manager student rules</field>
+<field name="model_id" ref="mk_student_register.model_mk_student_register"/>
+<field name="domain_force">
+[('mosque_id.edu_supervisor.user_id.id','in',[user.id]),('mosque_id.edu_supervisor.state','=','accept')]
+</field>
+<field name="groups" eval="[(4, ref('educational_supervison.mosque_edu_users'))]"/>
+</record>
+
+
+
+<record model="ir.rule" id="edu_mk_link_rule">
+<field name="name">sup manager mk link rules</field>
+<field name="model_id" ref="mk_student_register.model_mk_link"/>
+<field name="domain_force">
+[('mosq_id.edu_supervisor.user_id.id','in',[user.id]),('mosq_id.edu_supervisor.state','=','accept')]
+</field>
+<field name="groups" eval="[(4, ref('educational_supervison.mosque_edu_users'))]"/>
+</record>
+
+
+
+<record model="ir.rule" id="edu_mk_supervisor_mosque_rule">
+<field name="name">sup mk supervisor mosque rules</field>
+<field name="model_id" ref="mk_episode_management.model_mk_supervisor_mosque"/>
+<field name="domain_force">
+[('mosque_id.edu_supervisor.user_id.id','in',[user.id]),('mosque_id.edu_supervisor.state','=','accept')]
+</field>
+<field name="groups" eval="[(4, ref('educational_supervison.mosque_edu_users'))]"/>
+
+</record>
+
+<record model="ir.rule" id="edu_mk_episode_rule">
+<field name="name">sup mk pisode rules</field>
+<field name="model_id" ref="mk_master_models.model_mk_episode"/>
+<field name="domain_force">
+[('mosque_id.edu_supervisor.user_id.id','in',[user.id]),('mosque_id.edu_supervisor.state','=','accept')]
+</field>
+<field name="groups" eval="[(4, ref('educational_supervison.mosque_edu_users'))]"/>
+</record>
+
+<record model="ir.rule" id="edu_mk_prograedu_rule">
+<field name="name">sup mk programs rules</field>
+<field name="model_id" ref="mk_program_management.model_mk_programs"/>
+<field name="domain_force">
+['|','|','&amp;',('center_department_id.mosque_ids.edu_supervisor.user_id.id','in',[user.id]),
+('mosque_id.edu_supervisor.user_id.id','in',[user.id]),('mosque_id','=',False),
+('center_department_id','=',False)]
+</field>
+<field name="groups" eval="[(4, ref('educational_supervison.mosque_edu_users'))]"/>
+</record>
+
+
+
+<record model="ir.rule" id="edu_mk_approaches_rule">
+<field name="name">sup mk programs rules</field>
+<field name="model_id" ref="mk_program_management.model_mk_approaches"/>
+<field name="domain_force">
+['|','|','&amp;',('program_id.center_department_id.mosque_ids.edu_supervisor.user_id.id','in',[user.id]),
+('program_id.mosque_id.edu_supervisor.user_id.id','in',[user.id]),('program_id.mosque_id','=',False),('program_id.center_department_id','=',False)]</field>
+<field name="groups" eval="[(4, ref('educational_supervison.mosque_edu_users'))]"/>
+</record>
+
+<record model="ir.rule" id="edu_mk_subject_configuration_rule">
+<field name="name">sup mk programs rules</field>
+<field name="model_id" ref="mk_program_management.model_mk_subject_configuration"/>
+<field name="domain_force">
+['|',('program_id.is_required','=',True),'&amp;',
+('program_id.mosque_id.edu_supervisor.user_id.id','in',[user.id]),('mosque_id.edu_supervisor.state','=','accept')]
+</field>
+
+<field name="groups" eval="[(4, ref('educational_supervison.mosque_edu_users'))]"/>
+</record>
+
+<record model="ir.rule" id="edu_mk_student_prepare_rule">
+<field name="name">sup student prepare rules</field>
+<field name="model_id" ref="mk_student_managment.model_mk_student_prepare"/>
+<field name="domain_force">
+[('stage_pre_id.mosque_id.edu_supervisor.user_id.id','in',[user.id]),('stage_pre_id.mosque_id.edu_supervisor.state','=','accept')]
+</field>
+<field name="groups" eval="[(4, ref('educational_supervison.mosque_edu_users'))]"/>
+</record>
+
+<record model="ir.rule" id="edu_mk_student_absence_rule">
+<field name="name">sup student absence rules</field>
+<field name="model_id" ref="mk_student_managment.model_mk_student_absence"/>
+<field name="domain_force">
+[('mosque_id.edu_supervisor.user_id.id','in',[user.id]),('mosque_id.edu_supervisor.state','=','accept')]</field>
+<field name="groups" eval="[(4, ref('educational_supervison.mosque_edu_users'))]"/>
+</record>
+
+<record model="ir.rule" id="edu_mk_episode_attendance_rule">
+<field name="name">sup episode attendacne rules</field>
+<field name="model_id" ref="mk_student_managment.model_mk_episode_attendace"/>
+<field name="domain_force">
+[('masjed.edu_supervisor.user_id.id,'in',[user.id]),('masjed.edu_supervisor.state','=','accept')]</field>
+<field name="groups" eval="[(4, ref('educational_supervison.mosque_edu_users'))]"/>
+</record>
+
+
+<record model="ir.rule" id="edu_hr_department_rule">
+<field name="name">hr department rules</field>
+<field name="model_id" ref="hr.model_hr_department"/>
+<field name="domain_force">
+[('mosque_ids.edu_supervisor.user_id.id','in',[user.id]),('mosque_ids.edu_supervisor.state','=','accept')]</field>
+<field name="groups" eval="[(4, ref('educational_supervison.mosque_edu_users'))]"/>
+</record>
+
+<record model="ir.rule" id="edu_hr_employee_rule">
+<field name="name">sup hr employee rules</field>
+<field name="model_id" ref="hr.model_hr_employee"/>
+<field name="domain_force">
+[('mosqtech_ids.edu_supervisor.user_id.id','in',[user.id])]</field>
+      <field name="perm_read" eval="True"/>
+      <field name="perm_write" eval="False"/>
+      <field name="perm_unlink" eval="False"/>
+      <field name="perm_create" eval="False"/>
+
+<field name="groups" eval="[(4, ref('educational_supervison.mosque_edu_users'))]"/>
+</record>
+
+
+<record model="ir.rule" id="edu_mke_sts_rule">
+<field name="name">sup manager mk link rules</field>
+<field name="model_id" ref="mk_tests.model_mk_test_internal_registerations"/>
+<field name="domain_force">
+[('student_id.mosq_id.edu_supervisor.user_id.id','in',[user.id]),('student_id.mosq_id.edu_supervisor.state','=','accept')]
+</field>
+<field name="groups" eval="[(4, ref('educational_supervison.mosque_edu_users'))]"/>
+</record>
+
+<record model="ir.rule" id="edu_mk_episode_master_rule">
+<field name="name">sup mk pisode rules</field>
+<field name="model_id" ref="mk_master_models.model_mk_episode_master"/>
+<field name="domain_force">
+[('mosque_id.edu_supervisor.user_id.id','in',[user.id]),('mosque_id.edu_supervisor.state','=','accept')]
+</field>
+<field name="groups" eval="[(4, ref('educational_supervison.mosque_edu_users'))]"/>
+</record>
+
+<record model="ir.rule" id="edu_episode_search_transfer_rule">
+<field name="name">sup episode search transfer rules</field>
+<field name="model_id" ref="mk_student_managment.model_mk_episode_search_transfer"/>
+<field name="domain_force">[]</field>
+      <field name="perm_read" eval="True"/>
+      <field name="perm_write" eval="True"/>
+      <field name="perm_unlink" eval="True"/>
+      <field name="perm_create" eval="True"/>
+
+<field name="groups" eval="[(4, ref('educational_supervison.mosque_edu_users'))]"/>
+</record>
+
+<record model="ir.rule" id="edu_episode_search_lines_rule">
+<field name="name">sup episode search lines rules</field>
+<field name="model_id" ref="mk_student_managment.model_mk_episode_search_lines"/>
+<field name="domain_force">[]</field>
+      <field name="perm_read" eval="True"/>
+      <field name="perm_write" eval="True"/>
+      <field name="perm_unlink" eval="True"/>
+      <field name="perm_create" eval="True"/>
+
+<field name="groups" eval="[(4, ref('educational_supervison.mosque_edu_users'))]"/>
+</record>
+
+
+<record model="ir.rule" id="mu_mk_clearance_rule">
+      <field name="name">mu clearance rules</field>
+      <field name="model_id" ref="mk_student_managment.model_mk_clearance"/>
+      <field name="domain_force">[('mosque_id.edu_supervisor.user_id.id','in',[user.id])]</field>
+
+      <field name="groups" eval="[(4, ref('educational_supervison.mosque_edu_users'))]"/>
+
+
+</record>
+
+</data-->
+</openerp>

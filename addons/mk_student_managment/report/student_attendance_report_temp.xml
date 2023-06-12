@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<template id="student_attendance_report_temp">
+    	<t t-call="web.html_container">
+        	<t t-call="web.internal_layout">
+            	<div class="page">
+                	<h2 style="text-align:center;font-size:40px">شهادة الحضور</h2>
+                                	                	
+                	<div>
+	                	<table width="100%">
+	                		<tr>
+	                			<td style="text-align:right;font-size:20px">
+	                				<span t-esc="student"/>
+	                			</td>
+	                			                		
+	                			<td width="10%" style="text-align:right;font-size:20px">
+	                				<strong>:</strong><strong>الطالب</strong>
+	                			</td>                			
+	                		</tr>
+	                	</table>                	
+                	</div>                	
+                	
+                	<div style="padding-top:10px;">
+	                	<table width="100%">	                		
+	                		<tr>
+	                			<td style="text-align:right;font-size:20px">	                			
+									<span t-esc="' [ ' + episode + ' [ ' + period "/>
+	                			</td>
+	                			                		
+	                			<td width="10%" style="text-align:right;font-size:20px">
+	                				<strong>:</strong><strong>الحلقة</strong>
+	                			</td>                			
+	                		</tr>
+	                	</table>                	
+                	</div>                	
+                	
+                	<div style="padding-top:10px;">
+	                	<table width="100%">
+	                		<tr>
+	                			<td width="65%">
+	                				<strong> </strong>
+	                			</td>
+	                			        		
+	                			<td width="15%" style="text-align:right;font-size:20px">
+	                				<span t-esc="date_to"/>
+	                			</td>
+	                			
+	                			<td width="1%">
+	                				<strong> </strong>
+	                			</td>       
+	                				                			        
+	                			<td width="3%" style="text-align:right;font-size:20px">
+	                				<strong>:</strong><strong>إلى</strong>
+	                			</td>     
+	                			
+	                			<td width="1%">
+	                				<strong> </strong>
+	                			</td>       	                			          			
+	                			
+	                			<td width="15%">
+	                				<span t-esc="date_from" style="font-size:20px"/>
+	                			</td>                			
+	                			<td width="1%" style="text-align:right;font-size:20px">
+	                				<strong>:</strong><strong>من</strong>
+	                			</td>                			                			                        			        			
+	                		</tr>
+	                	</table>                	
+                	</div>
+                	
+                    <div style="padding-top:4px;">
+                		<br></br>
+                		<table class="table table-condensed">
+                    		<th style="text-align:center;font-size:20px">
+                    			الحالة    
+                    		</th>
+                    		                		
+                   			<th style="text-align:center;font-size:20px">
+                    			التاريخ
+                    		</th>
+                		
+                			<t t-foreach="lines" t-as="line">
+                    			<tr>
+	                 				<td style="text-align:center;font-size:20px">
+	                    				<t t-esc="line['status']"/>                              
+	                 				</td>
+	                 				                    			
+                       				<td style="text-align:center;font-size:20px">
+                          				<t t-esc="line['date']"/>
+                       				</td>
+                    			</tr>
+                			</t>
+                			
+            			</table>
+                	</div>                               
+            	</div>
+        	</t>
+    	</t>
+	</template>
+</odoo>

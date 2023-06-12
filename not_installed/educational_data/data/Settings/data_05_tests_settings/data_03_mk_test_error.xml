@@ -1,0 +1,53 @@
+<odoo>
+    <data noupdate="1">
+        <record id="mk_test_error1" model="mk.test.error">
+            <field name="company_id" ref="base.main_company"/>
+            <field name="error_type">at</field>
+            <field name="code">galy</field>
+            <field name="name">اللحن الجلي</field>
+            <field name="degree_deduct">1</field>
+        </record>
+        <record id="mk_test_error2" model="mk.test.error">
+            <field name="company_id" ref="base.main_company"/>
+            <field name="error_type">at</field>
+            <field name="code">khafy</field>
+            <field name="name">اللحن الخفي</field>
+            <field name="degree_deduct">1</field>
+        </record>
+        <record id="mk_test_error3" model="mk.test.error">
+            <field name="company_id" ref="base.main_company"/>
+            <field name="error_type">s</field>
+            <field name="code">lafzy</field>
+            <field name="name">لفظي</field>
+            <field name="degree_deduct">2</field>
+        </record>
+        <record id="mk_test_error4" model="mk.test.error">
+            <field name="company_id" ref="base.main_company"/>
+            <field name="error_type">at</field>
+            <field name="code">Tjweed</field>
+            <field name="name">تجويد</field>
+            <field name="degree_deduct">1.5</field>
+        </record>
+        <record id="mk_test_error5" model="mk.test.error">
+            <field name="company_id" ref="base.main_company"/>
+            <field name="error_type">s</field>
+            <field name="code">اخطاء</field>
+            <field name="name">تردد بدون تنبيه</field>
+            <field name="degree_deduct">0</field>
+        </record>
+        <record id="mk_test_error6" model="mk.test.error">
+            <field name="company_id" ref="base.main_company"/>
+            <field name="error_type">s</field>
+            <field name="code">تردد</field>
+            <field name="name">تردد مع تنبيه</field>
+            <field name="degree_deduct">0.25</field>
+        </record>
+        <record id="mk_test_error7" model="mk.test.error">
+            <field name="company_id" ref="base.main_company"/>
+            <field name="error_type">s</field>
+            <field name="code">فتح</field>
+            <field name="name">تردد مع فتح</field>
+            <field name="degree_deduct">1</field>
+        </record>
+    </data>
+</odoo>

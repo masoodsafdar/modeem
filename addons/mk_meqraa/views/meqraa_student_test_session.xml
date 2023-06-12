@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+   <!-- meqraa student test register wizard form view-->
+    <record id="meqraa_student_test_register_from" model="ir.ui.view">
+        <field name="name">meqraa.student.test.register.form</field>
+        <field name="model">test.register</field>
+        <field name="arch" type="xml">
+            <form>
+                <script>
+                    $(document).ready(function(){
+                    $('.modal-dialog').css({'width': '85%', 'height': '100%'});
+                    $('.modal-content').css({'height': '100%'});
+                    $('.modal-body').css({'height': '100%'});
+                    });
+                </script>
+
+                <group>
+                    <group>
+                        <field name="avalible_minutes" readonly="1" string="السعة الاستعابية / الدقائق"/>
+                    </group>
+
+                    <group>
+                        <field name="episode" string="الحلقة" required="1" options="{'no_create':True,'no_open':True}" domain="[('is_episode_meqraa','=',True),('state','=','accept'),('active','=',True)]"/>
+                    </group>
+
+                    <group>
+                        <field name="avalible_teacher" invisible="1"/>
+                    </group>
+                    <group>
+                        <field name="total_minutes" invisible="1" readonly="1"/>
+                        <field name="test_time"     invisible="1"/>
+                        <field name="center_tests"  invisible="1"/>
+                    </group>
+                </group>
+
+                <field name="set_b" invisible="1"/>
+
+                <button string=" " icon="fa-plus" name="show" type="object" attrs="{'invisible':[('set_b','=',True)]}"/>
+                <label for="set_b" string="إضافة المزيد من الطلاب" attrs="{'invisible':[('set_b','=',True)]}"/>
+
+                <button string=" " icon="fa-minus" name="hide1" type="object" attrs="{'invisible':[('set_b','=',False)]}"/>
+                <label for="set_b"  string="إخفاء" attrs="{'invisible':[('set_b','=',False)]}"/>
+
+                <field name="students_list" domain="[('episode_id','=',episode),('state','=', 'accept')]" attrs="{'invisible':[('set_b','=',False)]}">
+                    <tree>
+                        <field name="student_id"/>
+                        <field name="episode_id"/>
+                    </tree>
+                </field>
+
+                <group colspan="2" col="6" attrs="{'invisible': [('set_b','=',False)]}" string="إعدادات موحدة">
+                    <field name="test_name" options="{'no_open':1,'no_create':1}" string="نوع الاختبار" domain="[('id','in',center_tests)]"/>
+                    <field name="trackk"/>
+                    <field name="branch"    options="{'no_open':1,'no_create':1}" string="الفرع"       domain="[('test_name','=',test_name), ('trackk','=',trackk)]"/>
+                </group>
+
+                <span style="margin-right:300px;">
+                    <button name="set_branch" type="object" string="للتحقق" attrs="{'invisible':[('set_b','=',False)]}" icon="fa-arrow-down"/>
+                </span>
+
+                <br></br><br></br><br></br>
+
+                <field name="student_id" attrs="{'invisible':[('hide','=',0)]}" required="1"  context="{'default_avalible_minutes':avalible_minutes,'group_by':'student_id'}">
+                    <tree editable="bottom" edit="true" create="false" decoration-danger="flag==False">
+                        <field name="student_id" required="1" options="{'no_create':True,'no_open':True}"/>
+                        <field name="avalible_minutes" invisible="1"/>
+                        <field name="center_tests"     invisible="1"/>
+                        <field name="test_name"        required="1" options="{'no_open':1,'no_create':1}"             string="نوع الاختبار" domain="[('id','in',center_tests)]"/>
+                        <field name="trackk"/>
+                        <field name="branch"           required="1" options="{'no_open':1,'no_create':1,'no_edit':1}" string="الفرع"       domain="[('test_name','=',test_name), ('trackk','=',trackk)]"/>
+                        <field name="branch_duration" string="مدة الفرع"/>
+                        <field name="massege" string="                     "/>
+                        <field name="flag"           invisible="1"/>
+                        <field name="academic_id"    invisible="1" options="{'no_open':1,'no_create':1}"/>
+                        <field name="study_class_id" invisible="1" options="{'no_open':1,'no_create':1}"/>
+                    </tree>
+                </field>
+
+
+                <group>
+                    <field name="counter" string="عدد الطلاب المستوفين للشروط"/>
+                    <field name="hide" invisible="1"/>
+                </group>
+
+                <footer>
+                    <button name="ok" type="object" string="تسجيل" class="oe_highlight"/>
+                    <button special="cancel" string="الغاء" class="oe_link"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+   <!-- meqraa student test register action-->
+    <record id="meqraa_student_test_subscription_action" model="ir.actions.act_window">
+        <field name="name">Meqraa student test subscription</field>
+        <field name="res_model">test.register</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="meqraa_student_test_register_from"/>
+        <field name="target">new</field>
+    </record>
+
+   <!-- center time table inherit views-->
+    <record id="center_time_table_inherit_tree_view" model="ir.ui.view">
+        <field name="name">center.time.table.inherit.tree.view</field>
+        <field name="model">center.time.table</field>
+        <field name="inherit_id" ref="maknon_tests.center_time_table_tree_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//button" position="after">
+                <button type="action" name="%(meqraa_student_test_subscription_action)d" context="{'default_test_time': active_id,
+                                                                         'default_center_id': center_id,
+                                                                         'default_avalible_minutes': avalible_minutes,
+                                                                         'default_total_minutes': total_minutes}" string="Meqraa student test subscription" attrs="{'invisible':['|',('avalible_minutes','=',0), ('type_center','!=','student')]}" groups="mk_meqraa.group_administration_meqraa"/>
+
+                </xpath>
+            </field>
+    </record>
+
+    <record id="center_time_table_inherit_form_view" model="ir.ui.view">
+        <field name="name">center.time.table.inherit.form.view</field>
+        <field name="model">center.time.table</field>
+        <field name="inherit_id" ref="maknon_tests.center_time_table_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//header" position="inside">
+                <button type="action" name="%(meqraa_student_test_subscription_action)d" context="{'default_test_time': active_id,
+                                                                                 'default_center_id': center_id,
+                                                                                 'default_avalible_minutes': avalible_minutes,
+                                                                                 'default_total_minutes': total_minutes}" string="Meqraa student test subscription" attrs="{'invisible':['|',('avalible_minutes','=',0), ('type_center','!=','student')]}" groups="mk_meqraa.group_administration_meqraa"/>
+            </xpath>
+            </field>
+    </record>
+
+   <!-- student test session actions-->
+    <record id="student_meqraa_test_session_action" model="ir.actions.act_window">
+        <field name="name">Meqraa student test sessions</field>
+        <field name="res_model">student.test.session</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('category','=',False),('state','!=','cancel'),('user_ids','not in',[]),('is_student_meqraa', '=', True)]</field>
+        <field name="context">{'search_default_uid':1,'search_default_test_current_year':1}</field>
+    </record>
+
+   <!-- student test session menu-->
+    <menuitem id="student_meqraa_test_session_menu" name="Meqraa student test sessions" action="student_meqraa_test_session_action" parent="maknon_tests.test_main_menu" sequence="1" groups="mk_meqraa.group_administration_meqraa"/>
+</odoo>

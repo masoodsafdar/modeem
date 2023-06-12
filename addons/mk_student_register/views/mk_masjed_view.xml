@@ -1,0 +1,43 @@
+<odoo>
+    <data>
+        <record id="mk_mosque_form_inherit_form_view" model="ir.ui.view">
+            <field name="name">mosque Form View</field>
+            <field name="model">mk.mosque</field>
+            <field name="inherit_id" ref="mk_episode_management.mk_mosque_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[@name='mosque_information']" position="after">
+                    <page string="قائمة الشرف">
+                        <group col="4">
+                            <field name="first_student"  attrs="{'readonly': [('active','!=',True)]}"/>
+                            <field name="first_student_image"  attrs="{'readonly': [('active','!=',True)]}"
+                                   widget='image' class="oe_avatar"/>
+                            <field name="second_student"  attrs="{'readonly': [('active','!=',True)]}"/>
+                            <field name="second_student_image"  attrs="{'readonly': [('active','!=',True)]}"
+                                   widget='image' class="oe_avatar"/>
+                            <field name="third_student"  attrs="{'readonly': [('active','!=',True)]}"/>
+                            <field name="third_student_image"  attrs="{'readonly': [('active','!=',True)]}"
+                                   widget='image' class="oe_avatar"/>
+                            <field name="fourth_student"  attrs="{'readonly': [('active','!=',True)]}"/>
+                            <field name="fourth_student_image"  attrs="{'readonly': [('active','!=',True)]}"
+                                   widget='image' class="oe_avatar"/>
+                        </group>
+                    </page>
+                </xpath>
+                <xpath expr="//field[@name='mosque_admin_id']" position="after">
+                    <field name="is_send_to_mosque_admin" attrs="{'invisible': [('mosque_admin_id', '=', False)]}"/>
+                </xpath>
+                <xpath expr ="//form//sheet//notebook//page[7]" position = "after">
+                    <page string="الرسائل المرسلة" groups="base.group_no_one">
+						<field name="sms_ids" readonly="1">
+							<tree edit="false">
+								<field name="user_id"/>
+								<field name="nbr_message_sent"/>
+								<field name="message"/>
+                            </tree>
+						</field>
+					</page>
+				</xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

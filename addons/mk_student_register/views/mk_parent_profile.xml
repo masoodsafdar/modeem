@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+	<data>
+	    <record model="ir.ui.view" id="view_partner_account_form">
+	        <field name="name">partner account</field>
+	        <field name="model">res.partner</field>
+	        <field name="inherit_id" ref="account.view_partner_property_form"/>
+	        <field name="arch" type="xml">
+	            <page name="accounting" position="attributes">
+	                <attribute name="invisible">1</attribute>
+	            </page>
+	        </field>
+	    </record>
+
+		<record model="ir.ui.view" id="parent_profile_form">
+    		<field name="name">mk.parent.form</field>
+    		<field name="model">res.partner</field>
+    		<field name="inherit_id" ref="base.view_partner_form"/>
+    		<field name="arch" type="xml">
+        		<field name="company_type" position="attributes">
+					<attribute name="invisible">1</attribute>
+        		</field> 
+				<field name="name" position="attributes">
+					<attribute name="invisible">1</attribute>
+                </field> 
+        		<field name="parent_id" position="attributes">
+					<attribute name="invisible">1</attribute>
+                </field> 
+        		<field name="company_type" position="attributes">
+					<attribute name="invisible">1</attribute>
+                </field> 
+        		<field name="type" position="attributes">
+					<attribute name="invisible">1</attribute>
+                </field> 
+				<field name="street" position="attributes">
+					<attribute name="invisible">1</attribute>
+                </field> 
+				<field name="street2" position="attributes">
+					<attribute name="invisible">1</attribute>
+                </field> 
+				<field name="city" position="attributes">
+					<attribute name="invisible">1</attribute>
+                </field> 
+				<field name="state_id" position="attributes">
+					<attribute name="invisible">1</attribute>
+                </field> 
+				<field name="zip" position="attributes">
+					<attribute name="invisible">1</attribute>
+                </field> 
+				<field name="country_id" position="attributes">
+					<attribute name="invisible">1</attribute>
+                </field> 
+				<field name="website" position="attributes">
+					<attribute name="invisible">1</attribute>
+                </field> 
+				<field name="function" position="attributes">
+					<attribute name="invisible">1</attribute>
+                </field> 
+				<field name="phone" position="attributes">
+					<attribute name="invisible">1</attribute>
+                </field>
+        		<field name="mobile" position="attributes" >
+					<attribute name="invisible">1</attribute>
+				</field>
+				<field name="email" position="attributes">
+					<attribute name="invisible">1</attribute>
+				</field>
+		        <field name="image" position="attributes">
+					<attribute name="invisible">1</attribute>
+		        </field>
+		        
+		        <button name="toggle_active" position="attributes">
+					<attribute name="invisible">1</attribute>
+		        </button>
+		        
+				<field name="child_ids" position="attributes">
+					<attribute name="invisible">1</attribute>
+				</field>
+
+        		<field name="lang" position="attributes">
+					<attribute name="invisible">1</attribute>
+                </field>
+                
+				<field name="title"  position="attributes">
+					<attribute name="invisible">1</attribute>
+                </field>
+                
+				<field name="category_id"  position="attributes">
+					<attribute name="invisible">1</attribute>
+                </field>
+
+				<xpath expr="//sheet/div[@name='button_box']" position="attributes">
+					<attribute name="invisible">1</attribute>
+				</xpath>
+				
+		        <xpath expr="//sheet/group" position="attributes">
+					<attribute name="invisible">1</attribute>
+		        </xpath>
+        
+		        <xpath expr="//page[1]" position="attributes">
+					<attribute name="invisible">1</attribute>
+		        </xpath>
+
+		        <xpath expr="//label[1]" position="attributes">
+					<attribute name="invisible">1</attribute>
+		        </xpath>
+		        
+				<xpath expr="//div[@name='button_box']" position="attributes">
+					<attribute name="invisible">1</attribute>
+				</xpath>
+				
+		        <xpath expr="//div[@class='o_address_format']" position="attributes">
+					<attribute name="invisible">1</attribute>
+		        </xpath>
+
+		        <xpath expr="//div[@class='oe_title']" position="attributes">
+					<attribute name="invisible">1</attribute>
+		        </xpath>
+        
+				<page name="sales_purchases"  position="attributes">
+					<attribute name="invisible">1</attribute>
+                </page>
+                
+				<page name="internal_notes"  position="attributes">
+					<attribute name="invisible">1</attribute>
+				</page>
+				 
+				<sheet position="before">
+            		<header>
+                		<button name="send_passwd" string="send password" type="object"/>
+            		</header>
+        		</sheet>
+        		
+        		<sheet position="inside">             
+					<field name="image" widget='image' class="oe_avatar" options='{"preview_image": "image_medium", "size": [90, 90]}'/>
+                    <group>
+					</group>
+
+                    <div class="oe_title">
+						<group>        
+							<field name="identity_no" attrs="{'required':[('no_identity','=', False)],
+							                                  'invisible':[('no_identity','=',True)]}"/>
+							
+							<field name="passport_no" attrs="{'invisible':[('no_identity','=',False)], 
+							                                  'required': [('no_identity', '=', True)]}"/>
+							<field name="no_identity"/>
+						</group>
+                        <h1>
+							<table>
+								<tr>
+	                                <td>
+	                                   <field name="name" placeholder="First Name" style="padding-right:8px"/>
+	                                </td>
+                                    <td>
+                                       <field name="second_name" placeholder="Second Name" style="padding-right:8px" />
+                                    </td>                                    
+                                    <td>
+                                       <field name="third_name" placeholder="Third Name" style="padding-right:8px" />
+                                    </td>
+                                    <td>
+                                       <field name="fourth_name" placeholder="Fourth Name" style="padding-right:8px" />
+                                    </td>
+								</tr>
+							</table>
+                        </h1>
+                        <group>
+                            <field name="registeration_code"/>
+                            <field name="company_type" invisible="1"/>
+                        </group>                            
+                    </div>
+
+                    <notebook colspan="4">
+						<page string="Basic Info">
+			                <group col="4">
+			                    <field name="mobile" required="1" class="oe_phone"/>
+			                    <field name="mobile_add"          class="oe_phone"/>
+			                    <field name="country_id" options="{'no_create': 1, 'no_create_edit': 1}"/>
+			                    <field name="grade_id"   options="{'no_create': True, 'no_open':True}" string="المؤهل الدراسي"/>
+			                </group>
+
+							<group col="4">
+								<field name="email" />
+								<field name="job_id"  options="{'no_create': 1, 'no_open': 1}"/>
+								<field name="gender" />
+								<field name="marital_status" />
+                            </group>
+						</page>
+
+						<page string="Address Detail">
+							<group>
+								<field name="city_id"     placeholder="City"      options="{'no_create': True, 'no_open': True}"/>
+								<field name="area_id"     placeholder="Area"     options="{'no_create': True, 'no_open': True}"/>
+								<field name="district_id" placeholder="District" options="{'no_create': True, 'no_open': True}"/>
+							</group>
+						</page>
+
+						<page string="Students" autofocus="autofocus">
+							<field name="student_ids" mode="tree" context="{'default_flag':True}">                                
+                                <tree string="Students" delete="0">
+                                    <field name="registeration_code"/>
+                                    <field name="display_name"/>
+                                    <field name="partner_id" invisible="True"/>
+                                </tree>
+                            </field>
+                        </page>
+                                
+                        <page string="Banking accounts">
+                            <group>
+                                <field name="banking_accounts">
+                                    <tree editable="top">
+                                        <field name="account_no" />
+                                        <field name="account_owner_name"/>
+                                        <field name="bank_id"/>
+                                        <field name="state" />
+                                    </tree>            
+                                </field>
+                            </group>
+                        </page>
+					</notebook>
+				</sheet>
+			</field>
+		</record>
+		
+        <record id="view_parent_profile_tree" model="ir.ui.view">
+			<field name="name">view.parent.profile.tree</field>
+			<field name="model">res.partner</field>
+			<field name="arch" type="xml">
+				<tree delete="0">
+                    <field name="display_name"/>
+                    <field name="identity_no"/>
+		            <field name="email"/>		
+                    <field name="mobile"/>
+                    <field name="country_id"/>
+                    <field name="company_type"/>
+				</tree>
+			</field>
+		</record> 
+
+        <record id="view_student_link_tree" model="ir.ui.view">
+            <field name="name">view.student.link.tree</field>
+            <field name="model">mk.link</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="registeration_code"/>
+                    <field name="student_id" context="{'form_view_ref': 'mk_student_register.view_profile_form'}"/>
+                    <field name="episode_id"/>       
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+
+		<record model="ir.ui.view" id="mk_kanban_view_parent">
+        	<field name="name">Parent Kanban</field>
+        	<field name="model">res.partner</field>
+        	<field name="arch" type="xml">
+            	<kanban class="o_mk_parent_kanban">
+                	<field name="display_name"/>       
+                	<templates>
+                    	<t t-name="kanban-box">
+                    		<div class="oe_kanban_global_click">
+                        		<div class="o_kanban_image">
+                            		<img t-att-src="kanban_image('res.partner', 'image_medium', record.value)"/>
+                        		</div>
+                        		<div class="oe_kanban_details">
+                            		<strong>
+                                		<field name="display_name"/>
+                            		</strong>
+		                            <ul>
+		                                <li t-if="record.country_id.raw_value"><field name="country_id"/></li>
+		                                <li t-if="record.email.raw_value"><field name="email"/></li>
+		                                <li t-if="record.mobile.raw_value"><i class="fa fa-envelope"></i> <field name="mobile"/></li>                            
+		                            </ul>        
+                        		</div>
+                    		</div>
+                    	</t>
+                	</templates>
+				</kanban>
+			</field>
+    	</record>
+
+		<record id="mk_parent_search_view" model="ir.ui.view">
+			<field name="name">parent Search View</field>
+            <field name="model">res.partner</field>
+            <field name="arch" type="xml">
+                <search string="parent ">
+                    <filter name="group_area"     string="By Area"     context="{'group_by': 'area_id'}"/>
+                    <filter name="group_job"      string="By job"      context="{'group_by': 'job_id'}"/>
+                    <filter name="group_district" string="By district" context="{'group_by': 'district_id'}"/>
+                    <filter name="group_gender"   string="By Gender"    context="{'group_by': 'gender'}"/>
+                  	<field name="name"/>
+                  	<field name="identity_no"/>
+					<field name="registeration_code"/>
+                </search>
+            </field>
+        </record>
+
+		<record id="mk_parent_profile_action" model="ir.actions.act_window">
+	        <field name="name">Parent Profile</field>
+	        <field name="res_model">res.partner</field>
+	        <field name="view_type">form</field>
+	        <field name="view_mode">kanban,tree,form</field>
+	        <field name="domain">[('parent', '=', 1)]</field>
+	        <field name="context">{'default_parent':1,
+	                               'default_customer':0, 
+	                               'default_supplier':0 , 
+	                               'default_employee':0}</field>
+	        <field name="search_view_id" ref="mk_parent_search_view"/>
+		</record>
+
+		<record id="mk_student_link_accept_action" model="ir.actions.act_window">
+			<field name="name">Student link acceptance</field>
+			<field name="res_model">mk.link</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+		<menuitem id="maknoon_main_menu" name="Maknoon" web_icon="web_rtl,static/src/img/student.png"/>
+		<menuitem id="student_management_view_menu" name="Register Student" parent="maknoon_main_menu" sequence="1"/>
+                
+        <!-- Menue MK Center-->
+        <menuitem id="parent_profile_menu" name="parent profile" action="mk_parent_profile_action" parent="student_management_view_menu" sequence="2" 
+        groups="mk_student_register.group_student_parent_create,mk_student_register.group_student_parent_update,mk_student_register.group_student_parent_read"/>
+
+        <!-- menuitem id="student_link_accept_menu" name="linking student acceptance" action="mk_student_link_accept_action" parent="student_management_view_menu" sequence="4" /-->
+	</data>
+</odoo>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="ir_to_notify_for_upcoming_episode" model="ir.cron">
+            <field name="name">Notify for upcoming episode</field>
+            <field name="model_id" ref="model_mk_episode"/>
+            <field name="state">code</field>
+            <field name="code">model._notify_for_upcoming_episode()</field>
+            <field name="user_id" ref="base.user_root"/>
+            <field name="interval_number">1</field>
+            <field name="interval_type">days</field>
+            <field name="nextcall" eval="(DateTime.now() + timedelta(days=1)).strftime('%Y-%m-%d 01:00:00')"/>
+            <field name="numbercall">-1</field>
+            <field name="active" eval="True"/>
+            <field name="doall" eval="False"/>
+        </record>
+
+        <record id="ir_to_notify_for_upcoming_mk_study_class" model="ir.cron">
+            <field name="name">Notify for Upcoming Study Class</field>
+            <field name="model_id" ref="model_mk_study_class"/>
+            <field name="state">code</field>
+            <field name="code">model._notify_for_upcoming_mk_study_class()</field>
+            <field name="user_id" ref="base.user_root"/>
+            <field name="interval_number">1</field>
+            <field name="interval_type">days</field>
+            <field name="nextcall" eval="(DateTime.now() + timedelta(days=1)).strftime('%Y-%m-%d 01:30:00')"/>
+            <field name="numbercall">-1</field>
+            <field name="active" eval="True"/>
+            <field name="doall" eval="False"/>
+        </record>
+    </data>
+</odoo>

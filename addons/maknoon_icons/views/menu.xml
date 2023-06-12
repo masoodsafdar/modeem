@@ -1,0 +1,34 @@
+<odoo>
+    <data>
+
+		<menuitem id="mk_student_register.maknoon_main_menu"            web_icon="maknoon_icons,static/src/img/admin_etud.png"/>
+        <menuitem id="mk_episode_management.mk_episode_management_menu" web_icon="maknoon_icons,static/src/img/masjid.png"/>
+        <menuitem id="mk_program_management.mk_programs_main_menu"      web_icon="maknoon_icons,static/src/img/programs.png"/>
+        <menuitem id="website_support.website_support_ticket_menu"      web_icon="maknoon_icons,static/src/img/etiquette.png"/>
+        <menuitem id="mk_master_models.mk_master_menu"                  web_icon="maknoon_icons,static/src/img/master.png"/>
+        <menuitem id="contacts.menu_contacts"                           web_icon="maknoon_icons,static/src/img/phone.png"/>
+        <menuitem id="mk_intensive_courses.mk_courses_settings_menu"    web_icon="maknoon_icons,static/src/img/intensive.png"/>
+        <menuitem id="calendar.mail_menu_calendar"                      web_icon="maknoon_icons,static/src/img/calendar.png"/>
+        <menuitem id="maknon_tests.test_main_menu"                      web_icon="maknoon_icons,static/src/img/test.png"/>
+        <menuitem id="mail.mail_channel_menu_root_chat"                 web_icon="maknoon_icons,static/src/img/mail.png"/>
+        <menuitem id="contests.contests"                                web_icon="maknoon_icons,static/src/img/maidaille.png"/>
+        <!-- menuitem id="maknon_tests.test_operation_main_menu"            web_icon="maknoon_icons,static/src/img/test2.png"/-->
+        <menuitem id="user_guide.menu_user_guide_root"               web_icon="maknoon_icons,static/src/img/user-guide.png"/>
+        <menuitem id="mk_transport_management.mk_transport_main_menu"   web_icon="maknoon_icons,static/src/img/transport.png"/>
+        <menuitem id="educational_supervison.menu_root"  				web_icon="maknoon_icons,static/src/img/edu_super.png"/>
+        <menuitem id="students_motivation.menu_motivation_root" 		web_icon="maknoon_icons,static/src/img/icone_1.png"/>
+        <menuitem id="utm.menu_link_tracker_root"  						web_icon="maknoon_icons,static/src/img/link.png"/>
+		<menuitem id="mk_virtual_room.virtual_room_basic_menu" 			web_icon="maknoon_icons,static/src/img/learning.png" />
+        <menuitem id="event.event_main_menu" 	 						web_icon="maknoon_icons,static/src/img/event.png"/>
+        <menuitem id="hr.menu_hr_root"     								web_icon="maknoon_icons,static/src/img/emplo.png"/>
+        <menuitem id="hr_recruitment.menu_hr_recruitment_root"  		web_icon="maknoon_icons,static/src/img/recrutement.png"/>
+        <menuitem id="hr_holidays.menu_hr_holidays_root" 				web_icon="maknoon_icons,static/src/img/holidays.png"/>
+        <menuitem id="fleet.menu_root"  								web_icon="maknoon_icons,static/src/img/fleet.png"/>
+        <menuitem id="base_user_role.access_rights"  					web_icon="maknoon_icons,static/src/img/users.png"/>
+        <menuitem id="base.menu_management"    							web_icon="maknoon_icons,static/src/img/application.png"/>
+        <menuitem id="base.menu_administration"   						web_icon="maknoon_icons,static/src/img/config.png"/>
+        <menuitem id="mk_notification.mk_notification_root_menu"        web_icon="maknoon_icons,static/src/img/notification.png"/>
+        <menuitem id="mk_student_register.sms_center"                   web_icon="maknoon_icons,static/src/img/message.png"/>
+        
+    </data>
+</odoo>

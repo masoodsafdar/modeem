@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+		<record id="mk_contests_regulatoins_preparation_form_view" model="ir.ui.view">
+		    <field name="name">contests preparation form</field>
+		    <field name="model">regulations</field>
+		    <field name="arch" type="xml">
+            <form string = "contests regulatoins">
+				  <header></header>
+				  <sheet>
+					  <group>
+					  	<group>
+					  		<field name="name" required="1"/>
+				  		</group>
+					  	<group>
+					  		<field name="no" required="1"/>
+							<field name="write_date"/>
+						</group>
+				  	 </group>
+			  	  </sheet>
+              </form>
+             </field>
+		</record>
+		
+		<record id="mk_contests_regulatoins_preparation_tree_view" model="ir.ui.view">
+	    <field name="name">contests regulations tree</field>
+		    <field name="model">regulations</field>
+		    <field name="arch" type="xml">
+                <tree delete="0" string="contests_regulatoins_preparation">
+                	<field name="name" />
+                	<field name="no" />
+                	<field name="write_date"/>
+                </tree>
+            </field>
+		</record>
+
+		<record id="mk_contests_regulatoins_preparation_search_view" model="ir.ui.view">
+	       <field name="name">contests regulations search</field>
+	   	   <field name="model">regulations</field>
+	       <field name="arch" type="xml">
+		    	<search>
+		    		<field name="name"/>
+		    		<field name="no"/>
+		    	</search>
+	       </field>
+		</record>
+
+		<record id="mk_contests_regulatoins_preparation_action" model="ir.actions.act_window">
+			<field name="name">contests regulatoins preparation</field>
+            <field name="res_model">regulations</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+            <field name="search_view_id" ref="mk_contests_regulatoins_preparation_search_view"/>
+		</record>
+
+        <menuitem
+              id="mk_contests_regulatoins_preparation_menu"
+              name="contests Regulations"
+              action="mk_contests_regulatoins_preparation_action"
+              parent="config_menu"
+              sequence="5"
+              groups="read_contest_regulations_group"
+         />	
+	 </data>
+</openerp>
+

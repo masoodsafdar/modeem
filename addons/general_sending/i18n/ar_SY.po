@@ -1,0 +1,110 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* general_sending
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 9.0c\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-10-15 13:33+0000\n"
+"PO-Revision-Date: 2017-10-15 13:33+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: general_sending
+#: model:mail.template,body_html:general_sending.mk_send_password
+msgid "<p style=\"margin:0px 0px 10px 0px;font-size:13px;font-family:&quot;Lucida Grande&quot;,Helvetica,Verdana,Arial,sans-serif;\">your password is&nbsp; ${object.passwd}</p>"
+msgstr "<p style=\"margin:0px 0px 10px 0px;font-size:13px;font-family:&quot;Lucida Grande&quot;,Helvetica,Verdana,Arial,sans-serif;\">كلمة مرورك هي &nbsp; ${object.passwd}</p>"
+
+#. module: general_sending
+#: model:ir.model.fields,field_description:general_sending.field_mk_general_sending_create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: general_sending
+#: model:ir.model.fields,field_description:general_sending.field_mk_general_sending_create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: general_sending
+#: model:ir.model.fields,field_description:general_sending.field_mk_general_sending_display_name
+msgid "Display Name"
+msgstr "اسم العرض"
+
+#. module: general_sending
+#: code:addons/general_sending/models.py:36
+#, python-format
+msgid "Error"
+msgstr "Error"
+
+#. module: general_sending
+#: model:ir.model.fields,field_description:general_sending.field_mk_general_sending_id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: general_sending
+#: model:ir.model.fields,field_description:general_sending.field_mk_general_sending___last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: general_sending
+#: model:ir.model.fields,field_description:general_sending.field_mk_general_sending_write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: general_sending
+#: model:ir.model.fields,field_description:general_sending.field_mk_general_sending_write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: general_sending
+#: model:ir.model,name:general_sending.model_mk_general_sending
+msgid "Maknoon Sms and Emails"
+msgstr "Maknoon Sms and Emails"
+
+#. module: general_sending
+#: code:addons/general_sending/models.py:36
+#, python-format
+msgid "Message is too long"
+msgstr "Message is too long"
+
+#. module: general_sending
+#: code:addons/general_sending/models.py:52
+#, python-format
+msgid "No Gateway Found"
+msgstr "No Gateway Found"
+
+#. module: general_sending
+#: model:ir.model,name:general_sending.model_sms_smsclient
+msgid "SMS Client"
+msgstr "رسائل العميل"
+
+#. module: general_sending
+#: model:ir.model,name:general_sending.model_partner_sms_send
+msgid "partner.sms.send"
+msgstr "partner.sms.send"
+
+#. module: general_sending
+#: model:mail.template,subject:general_sending.mk_pass_student
+msgid "password reset"
+msgstr "password reset"
+
+#. module: general_sending
+#: model:mail.template,subject:general_sending.mk_send_password
+msgid "password reset "
+msgstr "password reset "
+
+#. module: general_sending
+#: model:mail.template,body_html:general_sending.mk_pass_student
+msgid "your password is ${object.passwd}"
+msgstr "كلمة مرورك هي ${object.passwd}"
+
+#. module: general_sending
+#: model:ir.model.fields,field_description:general_sending.field_mk_smsclient_config_max_receiver
+msgid "Max Receiver"
+msgstr "أقصى عدد متاح في رسالة واحدة"
+

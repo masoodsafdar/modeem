@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>       
+        <record id="add_mk_clearance_notify_mail" model="mail.template">
+            <field name="name">add_mk_clearance_notify_mail</field>
+            <field name="model_id" ref="mk_student_managment.model_mk_clearance"></field>
+            <field name="email_from">${('"%s" &lt;%s&gt;' % (object.mosque_id.responsible_id.company_id.name, object.mosque_id.responsible_id.company_id.email))|safe}</field>
+            <field name="email_to">${object.mosque_id.responsible_id.work_email}</field>
+            <field name="subject">طلب إخلاء طرف</field>
+            <field name="built_in" eval="True"/>
+            <field name="body_html"><![CDATA[
+                <p>تم تقديم طلب إخلاء طرف</p>
+                <p>من طرف الطالب ${object.name_student} </p>
+                <p>  من مسجد ${object.name_mosque} </p>
+            ]]>
+            </field>
+        </record>
+
+        <record id="reject_mk_clearance_notify_mail" model="mail.template">
+            <field name="name">reject_mk_clearance_notify_mail</field>
+            <field name="model_id" ref="mk_student_managment.model_mk_clearance"></field>
+            <field name="email_from">${('"%s" &lt;%s&gt;' % (object.mosque_id.responsible_id.company_id.name, object.mosque_id.responsible_id.company_id.email))|safe}</field>
+            <field name="email_to">${object.mosque_id.responsible_id.work_email}</field>
+            <field name="subject">طلب إخلاء طرف</field>
+            <field name="built_in" eval="True"/>
+            <field name="body_html"><![CDATA[
+                <p>تم رفض  تقديم طلب إخلاء طرف</p>
+                <p>من طرف الطالب ${object.name_student} </p>
+                <p>  من مسجد ${object.name_mosque} </p>
+            ]]>
+            </field>
+        </record>
+        <record id="accept_mk_clearance_notify_mail" model="mail.template">
+            <field name="name">accept_mk_clearance_notify_mail</field>
+            <field name="model_id" ref="mk_student_managment.model_mk_clearance"></field>
+            <field name="email_from">${('"%s" &lt;%s&gt;' % (object.mosque_id.responsible_id.company_id.name, object.mosque_id.responsible_id.company_id.email))|safe}</field>
+            <field name="email_to">${object.mosque_id.responsible_id.work_email}</field>
+            <field name="subject">طلب إخلاء طرف</field>
+            <field name="built_in" eval="True"/>
+            <field name="body_html"><![CDATA[
+                <p>تم قبول  تقديم طلب إخلاء طرف</p>
+                <p>من طرف الطالب ${object.name_student} </p>
+                <p>  من مسجد ${object.name_mosque} </p>
+            ]]>
+            </field>
+        </record>
+    </data>
+</odoo>

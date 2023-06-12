@@ -1,0 +1,15 @@
+<odoo>
+	<data>
+
+		<menuitem name="maknoon Tests" id="test_main_menu" sequence="10"/>
+
+		<menuitem name="Maknoon Tests"             id="test_processes_main_menu"         sequence="2" parent="test_main_menu" groups="maknon_tests.group_tests_settings"/>
+		<menuitem name="Tests setting"             id="test_setting_main_menu"           sequence="2" parent="test_main_menu"/>
+		
+		<menuitem name="Tests student operations"  id="test_operation_main_menu"         sequence="1" parent="test_main_menu"/>
+		<menuitem name="Tests reqistration_menu"   id="reqistration_main_menu"           sequence="1" parent="test_operation_main_menu" />
+		
+<!--		<menuitem name="Tests teachers operations" id="test_techers_operation_main_menu" sequence="1" parent="test_main_menu"/>-->
+
+	</data>
+</odoo>

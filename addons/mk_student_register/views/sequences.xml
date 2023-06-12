@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+
+        
+        <record id="mk_student_seq_serial" model="ir.sequence">
+            <field name="name">mk student</field>
+            <field name="code">mk.student.serial</field>
+            <field name="padding">6</field>
+            <field name="prefix">1</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+
+        <!-- Sequences for perant --> 
+
+        
+        <record id="mk_perant_seq_serial" model="ir.sequence">
+            <field name="name">mk perant</field>
+            <field name="code">mk.perant.serial</field>
+            <field name="padding">6</field>
+            <field name="prefix">2</field>
+
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <record id="mk_ep_teacher_serial" model="ir.sequence">
+            <field name="name">mk teacher serial</field>
+            <field name="code">mk.ep.teacher.serial</field>
+            <field name="padding">5</field>
+            <field name="prefix">3</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        
+
+
+        <record id="mk_mosque_responsiable_seq_serial" model="ir.sequence">
+            <field name="name">mk mosque responsiable</field>
+            <field name="code">mk.mosque.responsiable.serial</field>
+            <field name="padding">4</field>
+            <field name="prefix">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <record id="mk_mosque_supervisor_seq_serial" model="ir.sequence">
+            <field name="name">mk mosque supervisor</field>
+            <field name="code">mk.mosque.supervisor.serial</field>
+            <field name="padding">4</field>
+            <field name="prefix">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <record id="mk_center_manager_seq_serial" model="ir.sequence">
+            <field name="name">mk center manager</field>
+            <field name="code">mk.center.manager.serial</field>
+            <field name="padding">4</field>
+            <field name="prefix">6</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        
+        <record id="mk_mosque_serial" model="ir.sequence">
+            <field name="name">mk mosque</field>
+            <field name="code">mk.mosque.serial</field>
+            <field name="padding">4</field>
+            <field name="prefix">7</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <record id="mk_serial_managment" model="ir.sequence">
+            <field name="name">mk managment</field>
+            <field name="code">mk.managment.serial</field>
+            <field name="padding">4</field>
+            <field name="prefix">8</field>
+            <field name="company_id" eval="False"/>
+        </record>
+                
+
+
+        
+    </data>
+</odoo>

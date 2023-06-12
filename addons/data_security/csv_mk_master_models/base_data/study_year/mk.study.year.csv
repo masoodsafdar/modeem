@@ -1,0 +1,2 @@
+id,name,order,fiscal_year,company_id/id,end_date,start_date,islamic_start_date,islamic_end_date,active,is_default
+data_security.mk_study_year_1,2018 – 2019,0,2018,base.main_company,2019-01-01,2018-01-01,2018-01-01,2019-01-01,1,1

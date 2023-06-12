@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  
+   <template id="login_hide" inherit_id="web.login" name="Login Inherit hide">
+
+	<xpath expr="//button[@class='btn btn-primary']" position="replace">
+
+
+                    <button type="submit" class="btn btn-primary">تسجيل الدخول</button>
+    
+            </xpath>
+</template>
+
+    <template id="login_layout_no_db" inherit_id="web.login_layout" name="Login Layout">
+<xpath expr="//t[@t-if='not disable_database_manager']" position="replace"/>
+
+
+
+
+</template>
+
+   	<template id="login" inherit_id="web.login" name="Login Inherit">
+    		
+			<xpath expr="//input[@name='login']" position="attributes">
+				<attribute name="placeholder">رقم التسجيل أو الهوية</attribute>
+				<attribute name="autocomplete">off</attribute>
+				<attribute name="autocorrect">off</attribute>
+               
+			</xpath>
+			<xpath expr="//input[@name='password']" position="attributes">
+				<attribute name="placeholder">كلمة المرور</attribute>
+			</xpath>
+
+			
+		</template>
+ </odoo>
+
+

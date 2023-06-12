@@ -1,0 +1,299 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* mk_notification
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-12-09 10:17+0000\n"
+"PO-Revision-Date: 2020-12-09 10:17+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: mk_notification
+#: model:ir.model.fields,field_description:mk_notification.field_mk_notification_category
+#: model:ir.ui.view,arch_db:mk_notification.mk_notification_search_view
+msgid "Category"
+msgstr "التصنيف"
+
+#. module: mk_notification
+#: model:ir.ui.view,arch_db:mk_notification.mk_notification_form_view
+#: model:ir.ui.view,arch_db:mk_notification.mk_notification_search_view
+msgid "Confirm employee list"
+msgstr "إعتماد قائمة الموظفين"
+
+#. module: mk_notification
+#: model:res.groups,name:mk_notification.confirm_employee_list_send_notif
+msgid "Confirm employee list and send notif"
+msgstr "إعتماد قائمة الموظفين و إرسال الاشعار"
+
+#. module: mk_notification
+#: model:res.groups,name:mk_notification.create_write_employee_notification
+msgid "Create Edit Employee Notififcation"
+msgstr "الإنشاء و التعديل على اشعارات الموظفين"
+
+#. module: mk_notification
+#: model:res.groups,name:mk_notification.create_write_notification
+msgid "Create Edit Notififcation"
+msgstr "الإنشاء و التعديل على الاشعارات"
+
+#. module: mk_notification
+#: model:ir.model.fields,field_description:mk_notification.field_mk_notification_create_uid
+#: model:ir.model.fields,field_description:mk_notification.field_mk_notification_line_create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: mk_notification
+#: model:ir.model.fields,field_description:mk_notification.field_mk_notification_create_date
+#: model:ir.model.fields,field_description:mk_notification.field_mk_notification_line_create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: mk_notification
+#: model:res.groups,name:mk_notification.delete_employee_notification
+msgid "Delete Employee Notififcation"
+msgstr "حذف اشعارات الموظفين"
+
+#. module: mk_notification
+#: model:res.groups,name:mk_notification.delete_notification
+msgid "Delete Notififcation"
+msgstr "حذف الاشعارات"
+
+#. module: mk_notification
+#: model:ir.model.fields,field_description:mk_notification.field_mk_notification_department_id
+#: model:ir.ui.view,arch_db:mk_notification.mk_notification_search_view
+msgid "Department"
+msgstr "المركز"
+
+#. module: mk_notification
+#: model:ir.model.fields,field_description:mk_notification.field_mk_notification_description
+msgid "Description"
+msgstr "الوصف"
+
+#. module: mk_notification
+#: model:ir.model.fields,field_description:mk_notification.field_mk_notification_display_name
+#: model:ir.model.fields,field_description:mk_notification.field_mk_notification_line_display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: mk_notification
+#: model:ir.ui.view,arch_db:mk_notification.mk_employee_notification_search_view
+#: model:ir.ui.view,arch_db:mk_notification.mk_notification_search_view
+#: selection:mk.notification,state:0
+#: selection:mk.notification.line,state:0
+msgid "Draft"
+msgstr "مبدئي"
+
+#. module: mk_notification
+#: model:ir.model.fields,field_description:mk_notification.field_mk_notification_line_employee_id
+#: model:ir.ui.view,arch_db:mk_notification.mk_employee_notification_search_view
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: mk_notification
+#: selection:mk.notification,state:0
+msgid "Employee list confirmed"
+msgstr "إعتماد قائمة الموظفين"
+
+#. module: mk_notification
+#: model:ir.actions.act_window,name:mk_notification.mk_employee_notification_action
+#: model:ir.ui.menu,name:mk_notification.mk_employee_notification_menu
+#: model:ir.ui.view,arch_db:mk_notification.mk_employee_notification_form_view
+#: model:ir.ui.view,arch_db:mk_notification.mk_employee_notification_search_view
+#: model:ir.ui.view,arch_db:mk_notification.mk_employee_notification_tree_view
+#: model:ir.ui.view,arch_db:mk_notification.mk_notification_form_view
+msgid "Employee notifications"
+msgstr "اشعارات الموظفين"
+
+#. module: mk_notification
+#: model:ir.model.fields,field_description:mk_notification.field_mk_notification_employee_ids
+msgid "Employees"
+msgstr "الموظفون"
+
+#. module: mk_notification
+#: model:ir.ui.view,arch_db:mk_notification.mk_notification_form_view
+msgid "Employees list"
+msgstr "قائمة الموظفين"
+
+#. module: mk_notification
+#: selection:mk.notification,type_notification:0
+msgid "General notification"
+msgstr "إشعار عام"
+
+#. module: mk_notification
+#: model:ir.model.fields,field_description:mk_notification.field_mk_notification_id
+#: model:ir.model.fields,field_description:mk_notification.field_mk_notification_line_id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: mk_notification
+#: model:ir.model.fields,field_description:mk_notification.field_mk_notification___last_update
+#: model:ir.model.fields,field_description:mk_notification.field_mk_notification_line___last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: mk_notification
+#: model:ir.model.fields,field_description:mk_notification.field_mk_notification_line_write_uid
+#: model:ir.model.fields,field_description:mk_notification.field_mk_notification_write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: mk_notification
+#: model:ir.model.fields,field_description:mk_notification.field_mk_notification_line_write_date
+#: model:ir.model.fields,field_description:mk_notification.field_mk_notification_write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: mk_notification
+#: model:ir.ui.view,arch_db:mk_notification.mk_notification_search_view
+msgid "Name"
+msgstr "الاسم"
+
+#. module: mk_notification
+#: model:ir.model.fields,field_description:mk_notification.field_mk_notification_line_notification_id
+#: model:ir.model.fields,field_description:mk_notification.field_mk_notification_line_notification_name
+#: model:ir.model.fields,field_description:mk_notification.field_mk_notification_name
+msgid "Notification"
+msgstr "الاشعار"
+
+#. module: mk_notification
+#: model:ir.model.fields,field_description:mk_notification.field_mk_notification_type_notification
+msgid "Notification type"
+msgstr "نوع الاشعار"
+
+#. module: mk_notification
+#: model:ir.ui.view,arch_db:mk_notification.mk_employee_notification_search_view
+#: selection:mk.notification.line,state:0
+msgid "Notification viewed"
+msgstr "اطلع على الاشعار"
+
+#. module: mk_notification
+#: model:ir.actions.act_window,name:mk_notification.mk_notification_action
+#: model:ir.model.fields,field_description:mk_notification.field_mk_notification_notification_lines_ids
+#: model:ir.ui.menu,name:mk_notification.mk_notification_menu
+#: model:ir.ui.menu,name:mk_notification.mk_notification_root_menu
+#: model:ir.ui.view,arch_db:mk_notification.mk_notification_form_view
+#: model:ir.ui.view,arch_db:mk_notification.mk_notification_search_view
+#: model:ir.ui.view,arch_db:mk_notification.mk_notification_tree_view
+msgid "Notifications"
+msgstr "الاشعارات"
+
+#. module: mk_notification
+#: model:ir.ui.view,arch_db:mk_notification.mk_notification_search_view
+msgid "Notififcation type"
+msgstr "نوع الاشعار"
+
+#. module: mk_notification
+#: model:ir.module.category,name:mk_notification.mk_notification_management
+msgid "Notififcations management"
+msgstr "إدارة الاشعارات"
+
+#. module: mk_notification
+#: selection:mk.notification,type_notification:0
+msgid "Personal notification"
+msgstr "إشعار خاص"
+
+#. module: mk_notification
+#: model:res.groups,name:mk_notification.read_employee_notification
+msgid "Read Employee Notififcation"
+msgstr "الاطلاع على اشعارات الموظفين"
+
+#. module: mk_notification
+#: model:res.groups,name:mk_notification.read_notification
+msgid "Read Notififcation"
+msgstr "الاطلاع على الاشعارات"
+
+#. module: mk_notification
+#: model:ir.ui.view,arch_db:mk_notification.mk_notification_form_view
+msgid "Send"
+msgstr "إرسال"
+
+#. module: mk_notification
+#: model:ir.ui.view,arch_db:mk_notification.mk_notification_search_view
+#: selection:mk.notification,state:0
+msgid "Sent"
+msgstr "تم الارسال"
+
+#. module: mk_notification
+#: model:ir.model.fields,field_description:mk_notification.field_mk_notification_line_state
+#: model:ir.model.fields,field_description:mk_notification.field_mk_notification_state
+#: model:ir.ui.view,arch_db:mk_notification.mk_employee_notification_search_view
+#: model:ir.ui.view,arch_db:mk_notification.mk_notification_search_view
+msgid "State"
+msgstr "الحالة"
+
+#. module: mk_notification
+#: model:ir.module.category,description:mk_notification.mk_notification_management
+msgid "User access for mk_notififcation module"
+msgstr "User access for mk_notififcation module"
+
+#. module: mk_notification
+#: model:ir.ui.view,arch_db:mk_notification.mk_employee_notification_form_view
+msgid "View notification"
+msgstr "اطلع على الاشعار"
+
+#. module: mk_notification
+#: model:ir.model,name:mk_notification.model_mk_notification
+msgid "mk.notification"
+msgstr "mk.notification"
+
+#. module: mk_notification
+#: model:ir.model,name:mk_notification.model_mk_notification_line
+msgid "mk.notification.line"
+msgstr "mk.notification.line"
+
+#. module: mk_notification
+#: selection:mk.notification,category:0
+msgid "إداري\\إداريين"
+msgstr "إداري\\إداريين"
+
+#. module: mk_notification
+#: selection:mk.notification,category:0
+msgid "المشرف العام للمسجد /المدرسة"
+msgstr "المشرف العام للمسجد /المدرسة"
+
+#. module: mk_notification
+#: selection:mk.notification,category:0
+msgid "المعلمين"
+msgstr "المعلمين"
+
+#. module: mk_notification
+#: selection:mk.notification,category:0
+msgid "خدمات مساعدة"
+msgstr "خدمات مساعدة"
+
+#. module: mk_notification
+#: selection:mk.notification,category:0
+msgid "مدراء / مساعدي مدراء المركز"
+msgstr "مدراء / مساعدي مدراء المركز"
+
+#. module: mk_notification
+#: selection:mk.notification,category:0
+msgid "مشرف الباص"
+msgstr "مشرف الباص"
+
+#. module: mk_notification
+#: selection:mk.notification,category:0
+msgid "مشرف تربوي"
+msgstr "مشرف تربوي"
+
+#. module: mk_notification
+#: selection:mk.notification,category:0
+msgid "مشرفين وإداريين المسجد / المدرسة"
+msgstr "مشرفين وإداريين المسجد / المدرسة"
+
+#. module: mk_notification
+#: model:ir.model.fields,field_description:mk_notification.field_mk_notification_line_date_viewed
+msgid "Date viewed"
+msgstr "تاريخ الاطلاع"
+
+#. module: mk_notification
+#: model:ir.model.fields,field_description:mk_notification.field_mk_notification_date_notification
+#: model:ir.model.fields,field_description:mk_notification.field_mk_notification_line_date_notification
+msgid "Date"
+msgstr "التاريخ"

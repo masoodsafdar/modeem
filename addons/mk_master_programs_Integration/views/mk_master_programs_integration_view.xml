@@ -1,0 +1,35 @@
+<odoo>
+	<data>    
+		<record id="mk_episode_inherit_form_view" model="ir.ui.view">
+			<field name="name">Episode Form View</field>
+			<field name="model">mk.episode</field>
+            <field name="inherit_id" ref="mk_episode_management.mk_episode_form_view"/>
+			<field name="arch" type="xml">
+	            <field name="academic_id" position="after">
+	                 <field name="program_id" readonly="1" invisible="1"/>
+	            </field>
+			</field>
+		</record>
+
+        <!-- <record id="mk_mosque_inherit_form_view" model="ir.ui.view">
+			<field name="name">Episode Form View</field>
+			<field name="model">mk.mosque</field>
+			<field name="inherit_id" ref="mk_episode_management.mk_mosque_form_view"/>
+			<field name="arch" type="xml">
+				<xpath expr ="//form//sheet//notebook//page[6]" position = "after">
+					<page string="الكادر الإداري">
+						<field name="supervisors" readonly="1">
+							<tree edit="false">
+								<field name="name"/>
+								<field name="registeration_code"/>
+								<field name="job_id"/>
+								<field name="mobile_phone"/>
+                            </tree>
+						</field>                        
+					</page>
+				</xpath>
+			</field>
+		</record> -->
+
+    </data>  
+</odoo>

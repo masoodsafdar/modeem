@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <odoo>
+        <data noupdate="1">
+          <!-- group of create  nominations types-->
+          <record id="create_nominations_types_group" model="res.groups">
+            <field name="name">Create Nominations Types</field>
+            <field name="implied_ids" eval="[(4, ref('read_nominations_types_group'))]"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+            <field name="category_id" ref="contests_access_categ"/>
+          </record>
+
+
+          <!-- group of read  nominations request -->
+          <record id="read_nomination_request_group" model="res.groups">
+            <field name="name">Read Nomination Requests</field>
+            <field name="implied_ids" eval="[(4, ref('mk_episode_management.read_episode')),
+              (4, ref('mk_student_register.group_student_profile_read'))]"/>
+            <field name="category_id" ref="contests_access_categ"/>
+           <field name="users" eval="[(4, ref('base.user_root'))]"/>
+
+          </record>
+
+          <!-- group of write  nominations request -->
+          <record id="write_nomination_request_group" model="res.groups">
+            <field name="name">Write Nomination Request</field>
+            <field name="implied_ids" eval="[(4, ref('read_nomination_request_group')),(4, ref('create_contest_preparation_group'))]"/>
+            <field name="category_id" ref="contests_access_categ"/>
+           <field name="users" eval="[(4, ref('base.user_root'))]"/>
+
+          </record>
+
+          <!-- group of create  nominations request -->
+          <record id="create_nomination_request_group" model="res.groups">
+            <field name="name">Create Nomination Request</field>
+            <field name="implied_ids" eval="[(4, ref('read_nomination_request_group')),(4, ref('create_contest_preparation_group'))]"/>
+            <field name="category_id" ref="contests_access_categ"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+
+          </record>
+
+          
+
+        
+         
+          
+
+          <!-- group of accept_mosque_group -->
+          <record id="accept_or_deny_mosque_group" model="res.groups">
+            <field name="name">Accept Or Deny Mosque</field>
+            <field name="implied_ids" eval="[(4, ref('read_nomination_request_group'))]"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+            <field name="category_id" ref="contests_access_categ"/>
+          </record>
+
+          <!-- group of read  nominations request management -->
+          <record id="read_nomination_request_management_group" model="res.groups">
+            <field name="name">Read Nomination Request Management</field>
+            <field name="implied_ids" eval="[(4, ref('read_nomination_request_group'))]"/>
+            <field name="category_id" ref="contests_access_categ"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+
+          </record>
+
+           <!-- group of create  nominations request management -->
+          <record id="create_nomination_request_management_group" model="res.groups">
+            <field name="name">Create Nomination Request Management</field>
+            <field name="implied_ids" eval="[(4, ref('read_nomination_request_management_group')),(4, ref('create_nomination_request_group'))]"/>
+             <field name="users" eval="[(4, ref('base.user_root'))]"/>
+
+            <field name="category_id" ref="contests_access_categ"/>
+          </record>
+            <!-- group of write  nominations request management -->
+          <record id="write_nomination_request_management_group" model="res.groups">
+            <field name="name">Write Nomination Request Management</field>
+            <field name="implied_ids" eval="[(4, ref('read_nomination_request_management_group')),(4, ref('create_nomination_request_group'))]"/>
+            <field name="category_id" ref="contests_access_categ"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+
+          </record>
+          
+          <!-- group of Accept Or Reject Center level Button -->
+          <record id="accept_reject_center_level_button_group" model="res.groups">
+            <field name="name">Accept Or Reject Center level button</field>
+            <field name="implied_ids" eval="[(4, ref('read_nomination_request_group')),
+              (4, ref('read_nomination_request_management_group'))
+              ,(4, ref('read_contest_preparation_group'))]"/>
+            <field name="category_id" ref="contests_access_categ"/>
+           <field name="users" eval="[(4, ref('base.user_root'))]"/>
+
+          </record>
+
+           <!-- group of Accept Or Reject organization level Button -->
+          <record id="accept_reject_organization_level_button_group" model="res.groups">
+            <field name="name">Accept Or Reject Organization level Button</field>
+            <field name="implied_ids" eval="[(4, ref('read_nomination_request_group')),
+              (4, ref('read_nomination_request_management_group'))
+              ,(4, ref('read_contest_preparation_group'))]"/>
+            <field name="category_id" ref="contests_access_categ"/>
+           <field name="users" eval="[(4, ref('base.user_root'))]"/>
+
+          </record>
+
+          
+           <!-- group of write result management-->
+          <record id="write_result_management_group" model="res.groups">
+            <field name="name">Write Result Managemengt</field>
+            <field name="implied_ids" eval="[(4, ref('read_result_management_group')),(4, ref('create_nomination_request_management_group'))]"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+            <field name="category_id" ref="contests_access_categ"/>
+          </record>
+            <!-- group of create result management-->
+          <record id="create_result_management_group" model="res.groups">
+            <field name="name">Create Result Managemengt</field>
+            <field name="implied_ids" eval="[(4, ref('read_result_management_group')),(4, ref('create_nomination_request_management_group'))]"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+            <field name="category_id" ref="contests_access_categ"/>          
+          </record> 
+
+          
+          <!-- group of select all -->
+          <!--record id="select_all_nomination_request_management_group" model="res.groups">
+            <field name="name">Select All</field>
+            <field name="implied_ids" eval="[(4, ref('write_contest_preparation_group')),
+              (4, ref('create_contest_preparation_group')),
+              (4, ref('create_contest_stage_group')),
+              (4, ref('write_contest_calendar_group')),
+              (4, ref('create_contest_calendar_group')),
+              (4, ref('write_contest_regulations_group')),
+              (4, ref('create_contest_regulations_group')),
+              (4, ref('write_result_management_group')),
+              (4, ref('create_result_management_group')),
+              (4, ref('write_nominations_types_group')),
+              (4, ref('create_nominations_types_group')),
+              (4, ref('write_nomination_request_group')),
+              (4, ref('create_nomination_request_group')),
+              (4, ref('write_contest_types_group')),
+              (4, ref('create_contest_types_group')),
+              (4, ref('write_contest_diff_items_group')),
+              (4, ref('create_contest_diff_items_group')),
+              (4, ref('write_contest_fields_group')),
+              (4, ref('create_contest_fields_group')),
+              (4, ref('write_nomination_request_management_group')),
+              (4, ref('create_nomination_request_management_group')),
+              (4, ref('accept_or_deny_mosque_group'))]"/>
+            <field name="category_id" ref="contests_access_categ"/>
+          </record-->
+
+        </data>
+      </odoo>

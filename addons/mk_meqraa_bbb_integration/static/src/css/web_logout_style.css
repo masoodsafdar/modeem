@@ -1,0 +1,79 @@
+
+@import url(https://fonts.googleapis.com/css?family=Lato:400,100,300,700);
+
+* {
+margin: 0 auto;
+padding: 0;
+text-align: center;
+}
+	
+body {
+	background-image: url(/lapalma_website/static/src/images/full_bg.jpg);
+	background-size: cover;
+	font-family: 'Lato', sans-serif;
+	}
+
+.container_lp {
+	width: 90%;
+	margin: 0 auto;
+	text-align: left;
+	}
+
+.logout {
+padding-top: 150px;
+}
+
+.logout form {
+margin-top: 10px;
+}
+
+.logout p {
+color: #000000;
+text-align: center;
+font-size: 26px;
+font-weight: 300;
+}
+
+.logo_lp{
+height: 300px;
+margin-top: 150px;
+display: block;
+}
+
+@media (max-width: 480px) {
+
+body {
+background-image: url(/lapalma_website/static/src/images/mobile.jpg);
+background-size: cover;
+font-family: 'Lato', sans-serif;
+}
+
+.logout p {
+font-size: 15px;
+font-weight: 300;
+}
+	 
+
+.container_lp {
+width: auto;
+}
+.logo_lp {
+height: 150px;
+margin-top: 0px;
+}
+
+}
+
+.button{
+   background-color: white;
+   border: 1px solid black;
+   color: #2a8068;
+   padding: 5px 10px;
+   text-align: center;
+   display: inline-block;
+   font-size: 15px;
+   margin: 10px 30px;
+   cursor: pointer;
+   text-decoration:none;
+   border-radius: 5px;
+        }

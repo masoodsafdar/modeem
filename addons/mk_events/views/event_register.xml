@@ -1,0 +1,65 @@
+<odoo>
+  <data>
+
+  	
+  
+
+     <record model="ir.ui.view" id="events_registeration_form_view">
+      <field name="name">events registeration form</field>
+      <field name="model">event.registrations</field>
+      <field name="arch" type="xml">
+        <form>
+           <header>
+                        <button name="confirm_attendance" string="confirm attendance" type="object"  class="oe_highlight" groups="mk_events.read_attendance"/>
+                        <button name="confirm_recommondations" string="confirm recommondations"  type="object" class="oe_highlight" groups="mk_events.read_attendance"/>
+                        <!--
+                          attrs="{'invisible': [('state', 'in', ['draft','cancel'])]}"
+                       <field name="state" invisible="1"/>-->
+                    </header>
+                    <sheet string="Registration">
+                        <group>
+
+                            <group string="Event Information" name="event">
+                                <field name="event_id" />
+                                <field name="event_date"/>
+                                <field name="event_start" />
+                                <field name="event_end" />
+                            </group>
+                            <group string="Attendee" name="attendee">
+                                <field name="invited"/>
+                             <!--   <field name="is_creator"  />-->
+                                
+                            </group>
+                        </group>
+                    </sheet>
+         </form>
+       </field>
+     </record>
+
+
+      <record model="ir.ui.view" id="view_event_registeration_tree_view">
+            <field name="name">event.registeration.tree</field>
+            <field name="model">event.registrations</field>
+
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="invited"/>
+                    <field name="event_id"/>
+                </tree>
+            </field>
+        </record>
+    
+    <record model="ir.actions.act_window" id="action_window_registerations_action">
+      <field name="name">mk_events registration window</field>
+      <field name="res_model">event.registrations</field>
+      <field name="view_mode">tree,form</field>
+      <field name="domain">[('invited.user_id.id','=',uid)]</field>
+
+    </record>
+
+     <menuitem name="registeration" id="menu_event_registeration" parent="event.event_main_menu"
+              action="action_window_registerations_action" groups="mk_events.read_attendance,mk_events.create_attendance" />
+
+
+  </data>
+</odoo>

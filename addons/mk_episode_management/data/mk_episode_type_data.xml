@@ -1,0 +1,41 @@
+<odoo>
+    <data noupdate="1">
+        <record id="episode_type1" model="mk.episode_type">
+            <field name="name">تعليم صغار</field>
+            <field name="students_no">15</field>
+            <field name="minimum">20</field>
+            <field name="parts_no">1</field>
+            <field name="type_categ_ids" eval="[(4, ref('mk_grade1')),(4, ref('mk_grade2')),
+                                                (4, ref('mk_grade3')),(4, ref('mk_grade24')),
+                                                (4, ref('mk_grade25'))]"/>
+        </record>
+
+        <record id="episode_type2" model="mk.episode_type">
+            <field name="name">حفظ و مراجعة</field>
+            <field name="students_no">7</field>
+            <field name="minimum">15</field>
+            <field name="parts_no">10</field>
+            <field name="type_categ_ids" eval="[(4, ref('mk_grade21')),(4, ref('mk_grade20')),
+                                                (4, ref('mk_grade16')),(4, ref('mk_grade17')),
+                                                (4, ref('mk_grade26')),(4, ref('mk_grade18'))]"/>
+        </record>
+
+        <record id="episode_type3" model="mk.episode_type">
+            <field name="name">تصحيح تلاوة</field>
+            <field name="students_no">45</field>
+            <field name="minimum">55</field>
+            <field name="parts_no">2</field>
+            <field name="type_test">parts</field>
+            <field name="type_categ_ids"/>
+        </record>
+
+        <record id="episode_type4" model="mk.episode_type">
+            <field name="name">مقارئ قرانية</field>
+           <field name="students_no">5</field>
+            <field name="minimum">10</field>
+            <field name="parts_no">30</field>
+            <field name="type_test">diploma</field>
+            <field name="type_categ_ids"/>
+        </record>
+    </data>
+</odoo>

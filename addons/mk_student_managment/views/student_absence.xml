@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <data>
+
+<record model="ir.ui.view" id="edit_holiday_new">
+            <field name="name">Student absence</field>
+            <field name="model">mk.student_absence</field>
+            <field name="arch" type="xml">
+                                <form string="Student absence">
+                    <header>
+                        <button string="Confirm" name="action_accept" states="draft" type="object" class="oe_highlight"/>
+                        
+                        <button string="Refuse" name="action_reject" states="draft" type="object"/>
+                        
+                        <field name="state" widget="statusbar" statusbar_visible="draft,accept,refuse" statusbar_colors='{"accept":"blue","refuse":"red"}'/>
+                    </header>
+                <sheet>
+                    <group>
+                    	<group>
+                            <field name="mosque_id" />
+
+                            <field name="student_id" options="{'no_create': 1, 'no_create_edit': 1}"/>
+
+                            <field name="leave_type" options="{'no_create': 1, 'no_create_edit': 1}"/>
+                             <field name="description"/>
+                        </group>
+                        <group>
+                            <field name="episode_id" options="{'no_create': 1, 'no_create_edit': 1}"/>
+                            <field name="date_from" />
+                            <field name="date_to" />
+                        </group>
+                        <group>
+                           
+                       </group>                           
+                    </group>
+                    </sheet>
+                </form>
+                 
+            </field>
+        </record>
+
+        <record id="mk_student_absance_tree_view" model="ir.ui.view">
+            <field name="name">student absence Tree View</field>
+            <field name="model">mk.student_absence</field>
+            <field name="arch" type="xml">
+                <tree delete="0" string="student absence">
+                	<field name="student_id"/>
+                    <field name="leave_type" />
+                	<field name="date_from" />
+                	<field name="date_to" />
+                	<field name="state" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="mk_student_absence_search_view" model="ir.ui.view">
+            <field name="name">student absence Search View</field>
+            <field name="model">mk.student_absence</field>
+            <field name="arch" type="xml">
+                <search string="Student prepare">
+               		 <field name="leave_type"/>
+              	  	 <field name="date_from"/>
+              	  	 <field name="date_to"/>
+              	  	 <field name="student_id"/>
+              	  	 <field name="episode_id"/>
+              	  	 <field name="mosque_id"/>
+  
+	                 <group expand="0" string="Group By">
+		                     <filter name="leave_type"  string="نوع الاذن"     context="{'group_by': 'leave_type'}"/>
+		                     <filter name="student_id"  string="اسم الطالب"   context="{'group_by': 'student_id'}"/>
+		                     <filter name="mosque_id"   string="المسجد"       context="{'group_by': 'mosque_id'}"/>
+		                     <filter name="episode_id"  string="حلقة/ الفصل"  context="{'group_by': 'episode_id'}"/>
+		             </group>    
+				</search>
+            </field>
+        </record>
+        		
+		<record id="mk_absence_request_action" model="ir.actions.act_window">
+            <field name="name">absence request</field>
+            <field name="res_model">mk.student_absence</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+        </record>
+
+	<menuitem name="absence requests" id="mk_absence_request_menu" sequence="8" parent="manage_student_menu" action="mk_absence_request_action" groups="mk_student_managment.student_absence_read,mk_student_managment.create_student_absence"/>    
+
+    </data>  
+</odoo>

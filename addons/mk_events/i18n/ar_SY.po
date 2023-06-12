@@ -1,0 +1,750 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* mk_events
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0-20180703\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-01-05 07:49+0000\n"
+"PO-Revision-Date: 2019-01-05 07:49+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: mk_events
+#: model:ir.model.fields,field_description:mk_events.field_mail_compose_message_event_active_domain
+msgid "Active domain"
+msgstr "النطاق النشط"
+
+#. module: mk_events
+#: model:ir.model.fields,field_description:mk_events.field_event_event_agenda
+#: model:ir.ui.view,arch_db:mk_events.events_form
+msgid "Agenda"
+msgstr "اﻷهداف و اﻷجندة"
+
+#. module: mk_events
+#: model:ir.ui.view,arch_db:mk_events.email_compose_message_event_wizard_form
+msgid "Attach a file"
+msgstr "ارفاق ملف"
+
+#. module: mk_events
+#: model:ir.model.fields,field_description:mk_events.field_event_event_attachments
+#: model:ir.model.fields,field_description:mk_events.field_mail_compose_message_event_attachment_ids
+msgid "Attachments"
+msgstr "المُرفقات"
+
+#. module: mk_events
+#: model:ir.model.fields,help:mk_events.field_mail_compose_message_event_attachment_ids
+msgid "Attachments are linked to a document through model / res_id and to the message through this field."
+msgstr "Attachments are linked to a document through model / res_id and to the message through this field."
+
+#. module: mk_events
+#: model:ir.model.fields,field_description:mk_events.field_event_attendee_attendance_confirm
+#: model:ir.model.fields,field_description:mk_events.field_event_guest_attendance_confirm
+#: model:ir.model.fields,field_description:mk_events.field_event_invite_attendance_confirm
+msgid "Attendance confirm"
+msgstr "تأكيد الحضور"
+
+#. module: mk_events
+#: model:ir.model.fields,field_description:mk_events.field_event_attendee_attendance_state
+#: model:ir.model.fields,field_description:mk_events.field_event_guest_attendance_state
+#: model:ir.model.fields,field_description:mk_events.field_event_invite_attendance_state
+msgid "Attendance state"
+msgstr "حالة الحضور"
+
+#. module: mk_events
+#: model:ir.model,name:mk_events.model_event_attendee
+#: model:ir.ui.view,arch_db:mk_events.events_form
+#: model:ir.ui.view,arch_db:mk_events.events_registeration_form_view
+msgid "Attendee"
+msgstr "المدعوين"
+
+#. module: mk_events
+#: model:ir.ui.view,arch_db:mk_events.email_compose_message_event_wizard_form
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: mk_events
+#: model:ir.ui.view,arch_db:mk_events.events_form
+msgid "Cancel Event"
+msgstr "إلغاء اﻹجتماع"
+
+#. module: mk_events
+#: model:ir.model.fields,field_description:mk_events.field_event_event_center_id
+msgid "Center"
+msgstr "المركز"
+
+#. module: mk_events
+#: model:ir.model.fields,field_description:mk_events.field_event_attendee_center_id
+#: model:ir.model.fields,field_description:mk_events.field_event_invite_center_id
+msgid "Center id"
+msgstr "المركز"
+
+#. module: mk_events
+#: selection:mail.compose.message.event,message_type:0
+msgid "Comment"
+msgstr "Comment"
+
+#. module: mk_events
+#: model:ir.model,name:mk_events.model_res_company
+msgid "Companies"
+msgstr "الشركات"
+
+#. module: mk_events
+#: code:addons/mk_events/models/event.py:586
+#: model:ir.actions.act_window,name:mk_events.action_email_compose_message_wizard
+#: model:ir.ui.view,arch_db:mk_events.email_compose_message_event_wizard_form
+#, python-format
+msgid "Compose Email"
+msgstr "رسالة جديدة"
+
+#. module: mk_events
+#: model:ir.model.fields,field_description:mk_events.field_mail_compose_message_event_composition_mode
+msgid "Composition mode"
+msgstr "وضع التحرير"
+
+#. module: mk_events
+#: model:ir.ui.view,arch_db:mk_events.events_form
+msgid "Confirm Event"
+msgstr "بداية اﻹجتماع "
+
+#. module: mk_events
+#: model:res.groups,name:mk_events.create_event
+msgid "Create Event"
+msgstr "إنشاء إجتماع"
+
+#. module: mk_events
+#: model:ir.model.fields,field_description:mk_events.field_event_attendee_create_uid
+#: model:ir.model.fields,field_description:mk_events.field_event_guest_create_uid
+#: model:ir.model.fields,field_description:mk_events.field_event_invite_create_uid
+#: model:ir.model.fields,field_description:mk_events.field_event_registrations_create_uid
+#: model:ir.model.fields,field_description:mk_events.field_event_status_create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: mk_events
+#: model:ir.model.fields,field_description:mk_events.field_event_attendee_create_date
+#: model:ir.model.fields,field_description:mk_events.field_event_guest_create_date
+#: model:ir.model.fields,field_description:mk_events.field_event_invite_create_date
+#: model:ir.model.fields,field_description:mk_events.field_event_registrations_create_date
+#: model:ir.model.fields,field_description:mk_events.field_event_status_create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: mk_events
+#: model:ir.model.fields,field_description:mk_events.field_mail_compose_message_event_auto_delete
+msgid "Delete Emails"
+msgstr "Delete Emails"
+
+#. module: mk_events
+#: model:ir.model.fields,field_description:mk_events.field_mail_compose_message_event_auto_delete_message
+msgid "Delete Message Copy"
+msgstr "Delete Message Copy"
+
+#. module: mk_events
+#: model:ir.model.fields,help:mk_events.field_mail_compose_message_event_auto_delete
+msgid "Delete sent emails (mass mailing only)"
+msgstr "Delete sent emails (mass mailing only)"
+
+#. module: mk_events
+#: model:ir.model.fields,field_description:mk_events.field_event_event_describe_place
+msgid "Describe place"
+msgstr "وصف المكان"
+
+#. module: mk_events
+#: model:ir.model.fields,field_description:mk_events.field_event_attendee_display_name
+#: model:ir.model.fields,field_description:mk_events.field_event_guest_display_name
+#: model:ir.model.fields,field_description:mk_events.field_event_invite_display_name
+#: model:ir.model.fields,field_description:mk_events.field_event_registrations_display_name
+#: model:ir.model.fields,field_description:mk_events.field_event_status_display_name
+#: model:ir.model.fields,field_description:mk_events.field_mail_compose_message_event_display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: mk_events
+#: model:ir.model.fields,help:mk_events.field_mail_compose_message_event_auto_delete_message
+msgid "Do not keep a copy of the email in the document communication history (mass mailing only)"
+msgstr "Do not keep a copy of the email in the document communication history (mass mailing only)"
+
+#. module: mk_events
+#: model:ir.model.fields,field_description:mk_events.field_event_attendee_email
+#: model:ir.model.fields,field_description:mk_events.field_event_guest_email
+#: model:ir.model.fields,field_description:mk_events.field_event_invite_email
+#: selection:mail.compose.message.event,message_type:0
+msgid "Email"
+msgstr "البريد الإلكتروني"
+
+#. module: mk_events
+#: model:ir.ui.view,arch_db:mk_events.email_compose_message_event_wizard_form
+msgid "Email address to redirect replies..."
+msgstr "عنوان البريد لتوجيه الردود إليه"
+
+#. module: mk_events
+#: model:ir.model,name:mk_events.model_mail_compose_message_event
+msgid "Email composition wizard"
+msgstr "معالج تكوين رسالة بريد الالكتروني"
+
+#. module: mk_events
+#: model:ir.model.fields,field_description:mk_events.field_mail_compose_message_event_emails
+msgid "Emails"
+msgstr "الرسائل اﻹلكترونية"
+
+#. module: mk_events
+#: model:ir.model.fields,field_description:mk_events.field_event_event_employee_ids
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: mk_events
+#: model:ir.model,name:mk_events.model_event_event
+#: model:ir.model.fields,field_description:mk_events.field_event_attendee_event_id
+#: model:ir.model.fields,field_description:mk_events.field_event_guest_event_id
+#: model:ir.model.fields,field_description:mk_events.field_event_invite_event_id
+#: model:ir.model.fields,field_description:mk_events.field_mail_compose_message_event_event_id
+msgid "Event"
+msgstr "الحدث"
+
+#. module: mk_events
+#: model:ir.model,name:mk_events.model_event_type
+msgid "Event Category"
+msgstr "فئة الحدث"
+
+#. module: mk_events
+#: model:ir.ui.view,arch_db:mk_events.events_registeration_form_view
+msgid "Event Information"
+msgstr "معلومات اﻹجتماع"
+
+#. module: mk_events
+#: model:ir.model.fields,field_description:mk_events.field_event_event_event_date
+#: model:ir.model.fields,field_description:mk_events.field_event_registrations_event_date
+msgid "Event date"
+msgstr "تاريخ اﻹجتماع"
+
+#. module: mk_events
+#: model:ir.model.fields,field_description:mk_events.field_event_event_event_end
+#: model:ir.model.fields,field_description:mk_events.field_event_registrations_event_end
+msgid "Event end"
+msgstr "نهاية اﻹجتماع"
+
+#. module: mk_events
+#: model:ir.ui.view,arch_db:mk_events.events_form
+msgid "Event files"
+msgstr "ملفات اﻹجتماع"
+
+#. module: mk_events
+#: model:ir.model.fields,field_description:mk_events.field_event_registrations_event_id
+msgid "Event id"
+msgstr "اﻹجتماع"
+
+#. module: mk_events
+#: model:ir.model.fields,field_description:mk_events.field_event_event_event_start
+#: model:ir.model.fields,field_description:mk_events.field_event_registrations_event_start
+msgid "Event start"
+msgstr "بداية اﻹجتماع"
+
+#. module: mk_events
+#: model:ir.model.fields,field_description:mk_events.field_event_event_event_status
+#: model:ir.ui.menu,name:mk_events.menu_event_status
+msgid "Event status"
+msgstr "حالة اﻹجتماع"
+
+#. module: mk_events
+#: model:ir.ui.menu,name:mk_events.menu_event_type
+msgid "Event type"
+msgstr "أنواع اﻹجتماعات"
+
+#. module: mk_events
+#: model:res.groups,name:mk_events.association_info_manage
+msgid "Events Info Management"
+msgstr "مقر الجمعية"
+
+#. module: mk_events
+#: model:ir.module.category,name:mk_events.event_management_access_categ
+msgid "Events Management"
+msgstr "الإجتماعات"
+
+#. module: mk_events
+#: model:res.groups,name:mk_events.events_status_manage
+msgid "Events Status Management"
+msgstr "حالة الإجتماع"
+
+#. module: mk_events
+#: model:res.groups,name:mk_events.events_types_manage
+msgid "Events Type Management"
+msgstr "انواع الإجتماعات"
+
+#. module: mk_events
+#: model:ir.ui.view,arch_db:mk_events.events_form
+msgid "Finish Event"
+msgstr "نهاية اﻹجتماع"
+
+#. module: mk_events
+#: model:ir.model.fields,field_description:mk_events.field_event_attendee_id
+#: model:ir.model.fields,field_description:mk_events.field_event_guest_id
+#: model:ir.model.fields,field_description:mk_events.field_event_invite_id
+#: model:ir.model.fields,field_description:mk_events.field_event_registrations_id
+#: model:ir.model.fields,field_description:mk_events.field_event_status_id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: mk_events
+#: model:ir.model.fields,field_description:mk_events.field_event_registrations_invited
+msgid "Invited"
+msgstr "المدعو"
+
+#. module: mk_events
+#: model:ir.model.fields,field_description:mk_events.field_event_registrations_is_creator
+msgid "Is creator"
+msgstr "Is creator"
+
+#. module: mk_events
+#: model:ir.model.fields,field_description:mk_events.field_event_attendee___last_update
+#: model:ir.model.fields,field_description:mk_events.field_event_guest___last_update
+#: model:ir.model.fields,field_description:mk_events.field_event_invite___last_update
+#: model:ir.model.fields,field_description:mk_events.field_event_registrations___last_update
+#: model:ir.model.fields,field_description:mk_events.field_event_status___last_update
+#: model:ir.model.fields,field_description:mk_events.field_mail_compose_message_event___last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: mk_events
+#: model:ir.model.fields,field_description:mk_events.field_event_attendee_write_uid
+#: model:ir.model.fields,field_description:mk_events.field_event_guest_write_uid
+#: model:ir.model.fields,field_description:mk_events.field_event_invite_write_uid
+#: model:ir.model.fields,field_description:mk_events.field_event_registrations_write_uid
+#: model:ir.model.fields,field_description:mk_events.field_event_status_write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: mk_events
+#: model:ir.model.fields,field_description:mk_events.field_event_attendee_write_date
+#: model:ir.model.fields,field_description:mk_events.field_event_guest_write_date
+#: model:ir.model.fields,field_description:mk_events.field_event_invite_write_date
+#: model:ir.model.fields,field_description:mk_events.field_event_registrations_write_date
+#: model:ir.model.fields,field_description:mk_events.field_event_status_write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: mk_events
+#: model:ir.model.fields,field_description:mk_events.field_event_event_latitude
+#: model:ir.model.fields,field_description:mk_events.field_res_company_latitude
+msgid "Latitude"
+msgstr "خط العرض"
+
+#. module: mk_events
+#: model:ir.model.fields,field_description:mk_events.field_mail_compose_message_event_is_log
+msgid "Log an Internal Note"
+msgstr "Log an Internal Note"
+
+#. module: mk_events
+#: model:ir.model.fields,field_description:mk_events.field_event_event_longitude
+#: model:ir.model.fields,field_description:mk_events.field_res_company_longitude
+msgid "Longitude"
+msgstr "خط الطول"
+
+#. module: mk_events
+#: model:res.groups,name:mk_events.read_events
+msgid "Maknoon Events Read"
+msgstr "القراءة أو الإطلاع علي الإجتماعات"
+
+#. module: mk_events
+#: model:ir.model.fields,help:mk_events.field_mail_compose_message_event_message_type
+msgid "Message type: email for email message, notification for system message, comment for other messages such as user replies"
+msgstr "Message type: email for email message, notification for system message, comment for other messages such as user replies"
+
+#. module: mk_events
+#: model:ir.model.fields,field_description:mk_events.field_event_event_mosque_id
+msgid "Mosque"
+msgstr "المسجد"
+
+#. module: mk_events
+#: model:ir.model.fields,field_description:mk_events.field_event_attendee_mosque_ids
+#: model:ir.model.fields,field_description:mk_events.field_event_invite_mosque_ids
+msgid "Mosque id"
+msgstr "المسجد"
+
+#. module: mk_events
+#: model:ir.model.fields,field_description:mk_events.field_event_guest_name
+#: model:ir.model.fields,field_description:mk_events.field_event_status_name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: mk_events
+#: model:ir.model.fields,field_description:mk_events.field_mail_compose_message_event_notify
+msgid "Notify followers"
+msgstr "إخطار المتابعين"
+
+#. module: mk_events
+#: model:ir.model.fields,help:mk_events.field_mail_compose_message_event_notify
+msgid "Notify followers of the document (mass post only)"
+msgstr "Notify followers of the document (mass post only)"
+
+#. module: mk_events
+#: model:ir.model.fields,field_description:mk_events.field_event_event_other_attachements
+msgid "Other attachements"
+msgstr "مرفقات أخرى"
+
+#. module: mk_events
+#: model:ir.actions.act_window,name:mk_events.action_partner_mass_mail
+msgid "Partner Mass Mailing"
+msgstr "Partner Mass Mailing"
+
+#. module: mk_events
+#: model:ir.model.fields,field_description:mk_events.field_event_event_period
+msgid "Period"
+msgstr "الفترة"
+
+#. module: mk_events
+#: model:ir.model.fields,field_description:mk_events.field_event_guest_phone
+msgid "Phone"
+msgstr "رقم الهاتف"
+
+#. module: mk_events
+#: model:ir.model.fields,field_description:mk_events.field_event_event_place
+msgid "Place"
+msgstr "الجهة"
+
+#. module: mk_events
+#: model:res.groups,name:mk_events.read_attendance
+msgid "Read Attendance"
+msgstr "قراءة الحضور"
+
+#. module: mk_events
+#: model:ir.ui.view,arch_db:mk_events.events_form
+msgid "Recommendation"
+msgstr "التوصيات"
+
+#. module: mk_events
+#: model:ir.model.fields,field_description:mk_events.field_event_attendee_recommendation_acceptance
+#: model:ir.model.fields,field_description:mk_events.field_event_guest_recommendation_acceptance
+#: model:ir.model.fields,field_description:mk_events.field_event_invite_recommendation_acceptance
+msgid "Recommendation acceptance"
+msgstr "قبول التوصيات"
+
+#. module: mk_events
+#: model:ir.model.fields,field_description:mk_events.field_event_event_recommendations
+msgid "Recommendations"
+msgstr "التوصيات"
+
+#. module: mk_events
+#: model:ir.ui.view,arch_db:mk_events.events_registeration_form_view
+msgid "Registration"
+msgstr "Registration"
+
+#. module: mk_events
+#: model:ir.model.fields,field_description:mk_events.field_event_event_remind_sms
+msgid "Remind with sms"
+msgstr "التذكير برسائل جوال"
+
+#. module: mk_events
+#: model:res.groups,name:mk_events.select_all_mk_event_selectall_group
+msgid "Select All groups"
+msgstr "إختيار الكل"
+
+#. module: mk_events
+#: model:ir.ui.view,arch_db:mk_events.email_compose_message_event_wizard_form
+msgid "Send"
+msgstr "إرسال"
+
+#. module: mk_events
+#: model:res.groups,name:mk_events.send_reminder_event
+msgid "Send Reminder"
+msgstr "إرسال تذكير"
+
+#. module: mk_events
+#: model:ir.ui.view,arch_db:mk_events.events_form
+msgid "Send by Email"
+msgstr "إرسال التوصيات و المرفقات"
+
+#. module: mk_events
+#: model:ir.ui.view,arch_db:mk_events.events_form
+msgid "Send remainder"
+msgstr "إرسال تذكير"
+
+#. module: mk_events
+#: model:ir.ui.view,arch_db:mk_events.events_form
+msgid "Send remainder for users"
+msgstr "تذكير مستخدمي النظام"
+
+#. module: mk_events
+#: model:ir.ui.view,arch_db:mk_events.events_form
+msgid "Set To Draft"
+msgstr "إعادة لمبدئي"
+
+#. module: mk_events
+#: model:res.groups,name:mk_events.start_end_event
+msgid "Start or End Events"
+msgstr "بدء او إنهاء إجتماع"
+
+#. module: mk_events
+#: model:ir.model.fields,field_description:mk_events.field_mail_compose_message_event_subject
+msgid "Subject"
+msgstr "الموضوع"
+
+#. module: mk_events
+#: model:ir.ui.view,arch_db:mk_events.email_compose_message_event_wizard_form
+msgid "Subject..."
+msgstr "الموضوع..."
+
+#. module: mk_events
+#: model:ir.model.fields,field_description:mk_events.field_mail_compose_message_event_subtype_id
+msgid "Subtype"
+msgstr "النوع الفرعي"
+
+#. module: mk_events
+#: selection:mail.compose.message.event,message_type:0
+msgid "System notification"
+msgstr "System notification"
+
+#. module: mk_events
+#: model:ir.model.fields,field_description:mk_events.field_mail_compose_message_event_message_type
+msgid "Type"
+msgstr "النوع"
+
+#. module: mk_events
+#: model:ir.model.fields,field_description:mk_events.field_mail_compose_message_event_use_active_domain
+msgid "Use active domain"
+msgstr "Use active domain"
+
+#. module: mk_events
+#: model:ir.model.fields,field_description:mk_events.field_mail_compose_message_event_template_id
+msgid "Use template"
+msgstr "استخدام قالب"
+
+#. module: mk_events
+#: model:ir.model.fields,help:mk_events.field_mail_compose_message_event_is_log
+msgid "Whether the message is an internal note (comment mode only)"
+msgstr "Whether the message is an internal note (comment mode only)"
+
+#. module: mk_events
+#: model:res.groups,name:mk_events.write_events
+msgid "Write Events"
+msgstr "التعديل او الكتابة على الإجتماع"
+
+#. module: mk_events
+#: model:ir.model.fields,field_description:mk_events.field_event_attendee_agenda_reply
+#: model:ir.model.fields,field_description:mk_events.field_event_guest_agenda_reply
+#: model:ir.model.fields,field_description:mk_events.field_event_invite_agenda_reply
+msgid "agenda reply"
+msgstr "تم الرد على المحضر"
+
+#. module: mk_events
+#: model:ir.model.fields,field_description:mk_events.field_event_attendee_agenda_sent
+#: model:ir.model.fields,field_description:mk_events.field_event_guest_agenda_sent
+#: model:ir.model.fields,field_description:mk_events.field_event_invite_agenda_sent
+msgid "agenda sent"
+msgstr "تم إرسال المحضر"
+
+#. module: mk_events
+#: model:ir.ui.view,arch_db:mk_events.events_form
+msgid "attach files"
+msgstr "إرفاق ملفات"
+
+#. module: mk_events
+#: model:ir.model.fields,field_description:mk_events.field_event_event_attendee_ids
+msgid "attendee"
+msgstr "مدعو"
+
+#. module: mk_events
+#: selection:event.registrations,state:0
+msgid "cancel"
+msgstr "cancel"
+
+#. module: mk_events
+#: model:ir.ui.menu,name:mk_events.menu_event_company
+msgid "company"
+msgstr "مقر الجمعية"
+
+#. module: mk_events
+#: model:ir.actions.act_window,name:mk_events.action_company_event
+msgid "company event window"
+msgstr "مقر الجمعية"
+
+#. module: mk_events
+#: selection:event.registrations,state:0
+msgid "confirm"
+msgstr "confirm"
+
+#. module: mk_events
+#: model:ir.ui.view,arch_db:mk_events.events_registeration_form_view
+msgid "confirm attendance"
+msgstr "تأكيد الحضور"
+
+#. module: mk_events
+#: model:ir.ui.view,arch_db:mk_events.events_registeration_form_view
+msgid "confirm recommondations"
+msgstr "قبول التوصيات"
+
+#. module: mk_events
+#: model:res.groups,name:mk_events.create_attendance
+msgid "create Attendance"
+msgstr "إنشاء حضور"
+
+#. module: mk_events
+#: selection:event.registrations,state:0
+msgid "done"
+msgstr "تم"
+
+#. module: mk_events
+#: selection:event.registrations,state:0
+msgid "draft"
+msgstr "مبدئي"
+
+#. module: mk_events
+#: model:ir.ui.view,arch_db:mk_events.email_compose_message_event_wizard_form
+msgid "emailssss"
+msgstr "المستلمون"
+
+#. module: mk_events
+#: model:ir.model.fields,field_description:mk_events.field_event_attendee_employee_id
+#: model:ir.model.fields,field_description:mk_events.field_event_invite_employee_id
+msgid "employee"
+msgstr "الموظف"
+
+#. module: mk_events
+#: model:ir.model.fields,field_description:mk_events.field_event_status_no
+#: model:ir.model.fields,field_description:mk_events.field_event_type_no
+msgid "event number"
+msgstr "رقم"
+
+#. module: mk_events
+#: model:ir.model,name:mk_events.model_event_guest
+msgid "event.guest"
+msgstr "event.guest"
+
+#. module: mk_events
+#: model:ir.model,name:mk_events.model_event_invite
+msgid "event.invite"
+msgstr "event.invite"
+
+#. module: mk_events
+#: model:ir.model,name:mk_events.model_event_registrations
+msgid "event.registrations"
+msgstr "event.registrations"
+
+#. module: mk_events
+#: model:ir.model,name:mk_events.model_event_status
+msgid "event.status"
+msgstr "event.status"
+
+#. module: mk_events
+#: model:ir.model.fields,field_description:mk_events.field_event_event_guest_ids
+msgid "guests"
+msgstr "ضيوف"
+
+#. module: mk_events
+#: selection:event.event,place:0
+msgid "inside"
+msgstr "داخل الجمعية"
+
+#. module: mk_events
+#: model:ir.model.fields,field_description:mk_events.field_event_attendee_job_id
+msgid "job"
+msgstr "المسمى الوظيفي"
+
+#. module: mk_events
+#: model:ir.model.fields,field_description:mk_events.field_event_invite_job_id
+msgid "job id"
+msgstr "المسمى الوظيفي"
+
+#. module: mk_events
+#: model:ir.model.fields,field_description:mk_events.field_event_event_maknoon_street
+msgid "maknoon street"
+msgstr "مقر الجمعية"
+
+#. module: mk_events
+#: model:ir.actions.act_window,name:mk_events.events_type_action_window
+msgid "mk_event type window"
+msgstr "أنواع اﻹجتماعات"
+
+#. module: mk_events
+#: model:ir.actions.act_window,name:mk_events.events_status_action_window
+msgid "mk_events  status window"
+msgstr "حالات اﻹجتماعات"
+
+#. module: mk_events
+#: model:ir.actions.act_window,name:mk_events.action_window_registerations_action
+msgid "mk_events registration window"
+msgstr "الحضور"
+
+#. module: mk_events
+#: model:ir.model.fields,field_description:mk_events.field_event_event_obj_recommendation
+msgid "objects and recommendation"
+msgstr "التوصيات و اﻷهداف"
+
+#. module: mk_events
+#: selection:event.event,place:0
+msgid "outside"
+msgstr "خارج الجمعية"
+
+#. module: mk_events
+#: model:ir.model.fields,field_description:mk_events.field_event_guest_partner
+msgid "partner"
+msgstr "الجهة"
+
+#. module: mk_events
+#: model:ir.ui.view,arch_db:mk_events.events_form
+msgid "place"
+msgstr "مكان اﻹجتماع"
+
+#. module: mk_events
+#: model:ir.ui.menu,name:mk_events.menu_event_registeration
+msgid "registeration"
+msgstr "الحضور"
+
+#. module: mk_events
+#: model:res.groups,name:mk_events.send_recommondation
+msgid "send recommondation"
+msgstr "إرسال التوصيات"
+
+#. module: mk_events
+#: model:ir.model.fields,field_description:mk_events.field_event_registrations_state
+msgid "state"
+msgstr "الحالة"
+
+#. module: mk_events
+#: model:ir.ui.view,arch_db:mk_events.events_form
+msgid "أشخاص لهم صلة باﻹجتماع"
+msgstr "أشخاص لهم صلة باﻹجتماع"
+
+#. module: mk_events
+#: code:addons/mk_events/models/event.py:252
+#: code:addons/mk_events/models/event.py:257
+#, python-format
+msgid "الرجاء ادخال التوقيت الصحيح"
+msgstr "الرجاء ادخال التوقيت الصحيح"
+
+#. module: mk_events
+#: model:mk.sms_template,name:mk_events.sms_template_event
+msgid "تذكير"
+msgstr "تذكير"
+
+#. module: mk_events
+#: model:mk.sms_template,sms_text:mk_events.sms_template_event
+msgid "سيكون إجتماع val1 في يوم val2 عند الساعة val3"
+msgstr "سيكون إجتماع val1 في يوم val2 عند الساعة val3"
+
+#. module: mk_events
+#: selection:event.event,period:0
+msgid "صباحا"
+msgstr "صباحا"
+
+#. module: mk_events
+#: selection:event.event,place:0
+msgid "في مقر الجمعية"
+msgstr "في مقر الجمعية"
+
+#. module: mk_events
+#: model:ir.ui.view,arch_db:mk_events.events_form
+msgid "مدعوين خارجيين"
+msgstr "مدعوين خارجيين"
+
+#. module: mk_events
+#: selection:event.event,period:0
+msgid "مساء"
+msgstr "مساء"
+
+

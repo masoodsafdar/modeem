@@ -1,0 +1,38 @@
+<odoo>
+	<data noupdate="0">
+     	<record id="report_configuration_form_view" model="ir.ui.view">
+          <field name="name">إعدادات التقارير</field>
+          <field name="model">mk.report.config</field>
+          <field name="arch" type="xml">
+              <form string="إعدادات التقرير">
+		  <header>
+		    
+		  </header>
+		  <sheet>
+		  	<group>
+		  		<field name="company_id"/>
+		  	</group>
+			  <group>
+			  	<field name="print_with_header"/>
+				<field name="print_with_footer" />
+			  </group>
+	  	</sheet>
+              </form>
+             </field>
+         </record>
+
+         <record id="mk_report_configuration_action" model="ir.actions.act_window">
+            <field name="name">إعدادات التقارير</field>
+            <field name="res_model">mk.report.config</field>
+            <field name="type">ir.actions.act_window</field>
+            <!-- <field name="view_type">form</field> -->
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+        </record>
+
+        <menuitem id="menu_mk_report_configuration_main_settings" name="إعدادات التقارير" parent="mk_master_models.mk_associate_management_settings_menu" sequence="80" action="mk_report_configuration_action"/>
+
+		<!-- menuitem id="mk_report_configuration_settings_menu" name="إعدادات التقارير" parent="mk_report_configuration_main_settings_menu" action="mk_report_configuration_action" sequence="1"/-->
+	</data>
+</odoo>

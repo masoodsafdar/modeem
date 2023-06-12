@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="mk_intensive_course_request_seq_serial" model="ir.sequence">
+            <field name="name">mk intensive course</field>
+            <field name="code">mk.intensive.course.request.serial</field>
+            <field name="prefix">0</field>
+            <field name="padding">3</field>
+            <field name="company_id" eval="False"/>
+        </record>
+    </data>
+</odoo>

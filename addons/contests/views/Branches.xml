@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<openerp>
+		<data>
+			<record id="Branches_form_view" model="ir.ui.view">
+			    <field name= "name">Branches form</field>
+			    <field name= "model">branches</field>
+			    <field name= "arch"  type="xml">
+						<form string="Contests Branches" create="1" delete="1" edit="1">
+							<sheet>
+								<group>
+									<group>
+										<field name="name" />
+									</group>
+									<group>
+										<field name="no" />
+									</group>
+								</group>
+					
+								<group>
+									<group>
+										<field name="B_type" />
+										<field name="other_info"
+											attrs="{'invisible':[('B_type','!=','other')]}" />
+									</group>
+									<group>
+										<group>
+											<field name="from_p"
+												attrs="{'invisible':[('B_type','!=','Qaran')],'required':[('B_type','=','Qaran')]}" />
+										</group>
+										<group>
+											<field name="to_p"
+												attrs="{'invisible':[('B_type','!=','Qaran')],'required':[('B_type','=','Qaran')]}" />
+										</group>
+									</group>
+								</group>
+								<group>
+									<group>
+										<field name="part_o" />
+									</group>
+									<group>
+										<field name="age_r" />
+									</group>
+								</group>
+					
+								<group>
+									<group>
+										<field name="age_cat" attrs="{'invisible':[('age_r','!=','specified')],'required':[('age_r','=','specified')]}" />
+									</group>
+								</group>
+					
+								<group>
+									<group>
+										<field name="age_o" />
+									</group>
+									<group>
+										<group>
+											<field name="performance" />
+										</group>
+										<group>
+											<field name="sound_g" />
+										</group>
+										<group>
+											<field name="tjweed" />
+										</group>
+										<group>
+											<field name="tfseer" />
+										</group>
+					
+									</group>
+								</group>
+					
+							</sheet>
+						</form> 
+			    </field>     
+			</record>
+
+			<record id="contests_Branches_action" model="ir.actions.act_window">
+				<field name="name">contests Branches</field>
+				<field name="res_model">branches</field>
+				<field name="type">ir.actions.act_window</field>
+				<field name="view_type">form</field>
+				<field name="view_mode">tree,form</field>
+				<!--<field name="domain">[]</field>
+				<field name="context">{}</field>
+				<field name="search_view_id" ref="mk_contests_regulatoins_preparation_search_view"/> -->
+		    </record>
+
+		   <!-- <menuitem
+              id="branches"
+              name="contests Branches"
+              action="contests_Branches_action"
+              parent="config_menu"
+              sequence="5"
+            />	
+			-->
+         </data>
+</openerp>
+

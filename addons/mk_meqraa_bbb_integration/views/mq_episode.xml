@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record id="mq_episode_form_inherit" model="ir.ui.view">
+			<field name="name">mk.episode.form</field>
+			<field name="model">mk.episode</field>
+			<field name="inherit_id" ref="mk_meqraa.mq_episode_form_view"/>
+			<field name="arch" type="xml">
+				<xpath expr="//notebook/page[3]/group[1]" position="after">
+				 	<group string='BBB Config' name='bbb_config'>
+						<field name="id_bbb_room"/>
+						<field name="id_hook"/>
+						<button type="object" string="Re-Generate Room" name="action_regenerate_room"
+                        class="oe_highlight btn btn_alert"/>
+					</group>
+				</xpath>
+				<xpath expr="//div[@name='button_box']" position="inside">
+                    <button name="action_view_sessions" type="object" class="oe_stat_button" string='Session' icon="fa-list" groups="mk_meqraa.group_administration_meqraa">
+<!--                          <field name="compute_session" string='Total Session'/>-->
+                    </button>
+                </xpath>
+				<xpath expr="//header" position="inside">
+					<button name="%(update_episode_time_action)d" string="Update episode time" type="action" attrs="{'invisible':['|',('state','=','draft'),('is_episode_meqraa','=',False)]}" groups="mk_meqraa.group_administration_meqraa"/>
+				</xpath>
+			</field>
+		</record>
+
+		<record id="episode_form_view_inherited" model="ir.ui.view">
+			<field name="name">Episode Form View</field>
+          	<field name="model">mk.episode</field>
+          	<field name="inherit_id" ref="mk_episode_management.mk_episode_form_view"/>
+      		<field name="arch" type="xml">
+			<xpath expr="//field[@name='display_name']" position="after">
+                <div class="oe_left oe_button_box" attrs="{'invisible':[('is_online','=',False)]}">
+                    <button name="action_view_sessions" type="object" class="oe_stat_button" string='Session' icon="fa-list">
+<!--                          <field name="compute_session" string='Total Session'/>-->
+                    </button>
+				</div>
+			</xpath>
+			<xpath expr="//page[5]" position='inside'>
+				<group string='BBB Config' name='bbb_config' attrs="{'invisible':[('is_online','=',False)]}">
+					<field name="id_bbb_room"/>
+					<field name="id_hook"/>
+					<button type="object" string="Re-Generate Room" name="action_regenerate_room" class="oe_highlight btn btn_alert"/>
+				</group>
+			 </xpath>
+			</field>
+		</record>
+	</data>
+</odoo>

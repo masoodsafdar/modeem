@@ -1,0 +1,78 @@
+<odoo>
+    <data>
+        <record id="mk_comment_behavior_form_view" model="ir.ui.view">
+            <field name="name">Comments Configuration Form View</field>
+            <field name="model">mk.comment.behavior</field>
+            <field name="arch" type="xml">
+                <form string="Comments Configuration">
+                    <header>
+                    </header>
+                    <sheet>
+                        <group>
+                            <field name="company_id" required="1" invisible="1" options="{'no_open':1,'no_create':1}"/>
+                            <field name="name" required="1"/>
+                        </group>
+                        <group>
+                            <group>
+                                <field name="type" required="1" widget="radio"/>
+                                <field name="active"/>
+                            </group>
+                            <group>
+                                <field name="punishment_ids" widget="many2many_tags" domain="[('company_id','=',company_id),
+			 																	  ('state','=','active')]"
+                                       options="{'no_create': True,'no_open': True,}"/>
+                            </group>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="mk_comment_behavior_tree_view" model="ir.ui.view">
+            <field name="name">Comments Configuration Tree View</field>
+            <field name="model">mk.comment.behavior</field>
+            <field name="arch" type="xml">
+                <tree delete="0" string="Comments Configuration">
+                    <field name="company_id" invisible="1" options="{'no_open':1,'no_create':1}"/>
+                    <field name="name"/>
+                    <field name="type"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="mk_comment_behavior_search_view" model="ir.ui.view">
+            <field name="name">Comments Configuration Search View</field>
+            <field name="model">mk.comment.behavior</field>
+            <field name="arch" type="xml">
+                <search string="Comments Configuration">
+                    <field name="name" string="Comments Configuration" filter_domain="[('name','ilike', self)]"/>
+                    <field name="punishment_ids"/>
+
+                    <filter string="ملاحظة عامة" name="general_comment" domain="[('type', '=','general_comment')]"/>
+                    <filter string="السلوك" name="behavior" domain="[('type', '=','behavior')]"/>
+
+                </search>
+            </field>
+        </record>
+
+        <record id="mk_comment_behavior_action" model="ir.actions.act_window">
+            <field name="name">Comments Configuration</field>
+            <field name="res_model">mk.comment.behavior</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+            <field name="search_view_id" ref="mk_comment_behavior_search_view"/>
+        </record>
+
+        <menuitem name="Comments Configuration" id="mk_comment_behavior_menu" sequence="5"
+                  parent="mk_master_models.mk_program_management_settings_menu" action="mk_comment_behavior_action"
+                  groups=""/>
+
+    </data>
+</odoo>

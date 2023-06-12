@@ -1,0 +1,777 @@
+<odoo>
+    <data>
+        <record id="mk_contral_condition1" model="mk.contral.condition">
+            <field name="note" type="html">
+                <p style="font-family: Times; font-size: medium; letter-spacing: normal; text-align: start;">
+                    <font style="font-size: 14px;">تمنح الجمعية حلقة المسجد/المدرسة النسائية الراغبة في الإشراف عليها (
+                        تصريحاً رسمياً ) مدته ثلاث سنوات من تاريخ اعتماد الإشراف على الحلقة ، في حال توافرت الشروط
+                        التالية :
+                    </font>
+                </p>
+                <p style="font-family: Times; font-size: medium; letter-spacing: normal; text-align: start;"></p>
+                <p style="font-family: Times; font-size: medium; letter-spacing: normal; text-align: start;">
+                    <font style="font-size: 14px;">1- استمرار الحلقة في فترة التصريح المؤقت وعدم نقص طلابها المسجلين في
+                        سجل الحلقة عن 15 طالباً.
+                    </font>
+                </p>
+                <p style="font-family: Times; font-size: medium; letter-spacing: normal; text-align: start;"></p>
+                <p style="font-family: Times; font-size: medium; letter-spacing: normal; text-align: start;">
+                    <font style="font-size: 14px;">2- اجتياز معلمي الحلقات للمقابلة الشخصية أو حصولهم علي الرخص
+                        التأهيلية .
+                    </font>
+                </p>
+                <p style="font-family: Times; font-size: medium; letter-spacing: normal; text-align: start;"></p>
+                <p style="font-family: Times; font-size: medium; letter-spacing: normal; text-align: start;">
+                    <font style="font-size: 14px;">3- التزام الحلقة بتطبيق أنظمة الجمعية وتعليماتها ، والتفاعل مع
+                        برامجها .
+                    </font>
+                </p>
+                <p style="font-family: Times; font-size: medium; letter-spacing: normal; text-align: start;"></p>
+                <p style="font-family: Times; font-size: medium; letter-spacing: normal; text-align: start;">
+                    <font style="font-size: 14px;">4- التزام الجهة الإشرافية على الحلقة بتوفير مكافأة المعلم وحوافز
+                        الطلاب .
+                    </font>
+                </p>
+                <p style="font-family: Times; font-size: medium; letter-spacing: normal; text-align: start;"></p>
+                <p style="font-family: Times; font-size: medium; letter-spacing: normal; text-align: start;">
+                    <font style="font-size: 14px;">5- ارفاق كامل الأوراق والاستمارات اللازمة وتقديمها من خلال نظام مكنون
+                        التعليمي .
+                    </font>
+                </p>
+            </field>
+        </record>
+        <record id="mk_contral_condition2" model="mk.contral.condition">
+            <field name="note" type="html">
+                <p class="MsoNormal" align="center" dir="RTL"
+                   style="text-align: right; margin-bottom: 0.0001pt; line-height: 150%;">
+                    <span lang="AR-SA" style='font-size:
+15.0pt;line-height:150%;font-family:"NeoSansArabic-Medium",sans-serif'>أولا: شروط وضوابط إقامة الدورات الصيفية:
+                    </span>
+                    <span dir="LTR" style='font-size:15.0pt;
+line-height:150%;font-family:"NeoSansArabic-Medium",sans-serif'></span>
+                </p>
+                <p></p>
+                <p></p>
+                <p class="MsoNormalCxSpMiddle" dir="RTL"
+                   style="text-align: right; margin-right: -14.2pt; text-indent: 0cm;"><!--[if !supportLists]-->
+                    <span style='font-size:15.0pt;line-height:115%;font-family:"ae_AlMohanad",serif;
+mso-fareast-font-family:ae_AlMohanad'>1.
+                        <span style='font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: "Times New Roman";'>
+                              
+                        </span>
+                    </span><!--[endif]-->
+                    <span dir="RTL"></span>
+                    <span lang="AR-SA" style='font-size:15.0pt;line-height:115%;
+font-family:"ae_AlMohanad",serif'>الحصول على الإذن الرسمي لإقامة الدورة من قِبل مركز  الإشراف، على أن يكون رفع الطلب قبل
+                        بدء الدورة بما لا يقل عن أسبوع، ويمنع نشر إعلان الدورة قبل الحصول على التصريح.
+                    </span>
+                    <span dir="LTR" style='font-size:15.0pt;line-height:115%;font-family:"ae_AlMohanad",serif'></span>
+                </p>
+                <p></p>
+                <p></p>
+                <p class="MsoNormalCxSpMiddle" dir="RTL"
+                   style="text-align: right; margin-right: -14.2pt; text-indent: 0cm;"><!--[if !supportLists]-->
+                    <span style='font-size:15.0pt;line-height:115%;font-family:"ae_AlMohanad",serif;
+mso-fareast-font-family:ae_AlMohanad'>2.
+                        <span style='font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: "Times New Roman";'>
+                              
+                        </span>
+                    </span><!--[endif]-->
+                    <span dir="RTL"></span>
+                    <span lang="AR-SA" style='font-size:15.0pt;line-height:115%;
+font-family:"ae_AlMohanad",serif'>أن يكون عدد الطلاب المتوقع تسجيلهم في الدورة لا يقل عن (70) طالبا.
+                    </span>
+                    <span dir="LTR" style='font-size:15.0pt;line-height:
+115%;font-family:"ae_AlMohanad",serif'></span>
+                </p>
+                <p></p>
+                <p></p>
+                <p class="MsoNormalCxSpMiddle" dir="RTL"
+                   style="text-align: right; margin-right: -14.2pt; text-indent: 0cm;"><!--[if !supportLists]-->
+                    <span style='font-size:15.0pt;line-height:115%;font-family:"ae_AlMohanad",serif;
+mso-fareast-font-family:ae_AlMohanad'>3.
+                        <span style='font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: "Times New Roman";'>
+                              
+                        </span>
+                    </span><!--[endif]-->
+                    <span dir="RTL"></span>
+                    <span lang="AR-SA" style='font-size:15.0pt;line-height:115%;
+font-family:"ae_AlMohanad",serif'>وضع فروع ومستويات مناسبة للدورة، ولا يُنص على "حفظ" القرآن كاملا (خلال فترة محددة).
+                    </span>
+                    <span dir="LTR" style='font-size:15.0pt;line-height:115%;font-family:"ae_AlMohanad",serif'></span>
+                </p>
+                <p></p>
+                <p></p>
+                <p class="MsoNormalCxSpMiddle" dir="RTL"
+                   style="text-align: right; margin-right: -14.2pt; text-indent: 0cm;"><!--[if !supportLists]-->
+                    <span style='font-size:15.0pt;line-height:115%;font-family:"ae_AlMohanad",serif;
+mso-fareast-font-family:ae_AlMohanad'>4.
+                        <span style='font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: "Times New Roman";'>
+                              
+                        </span>
+                    </span><!--[endif]-->
+                    <span dir="RTL"></span>
+                    <span lang="AR-SA" style='font-size:15.0pt;line-height:115%;
+font-family:"ae_AlMohanad",serif'>تعبئة جميع النماذج والاستمارات المطلوبة.
+                    </span>
+                    <span dir="LTR" style='font-size:15.0pt;line-height:115%;font-family:"ae_AlMohanad",serif'></span>
+                </p>
+                <p></p>
+                <p></p>
+                <p class="MsoNormalCxSpMiddle" dir="RTL"
+                   style="text-align: right; margin-right: -14.2pt; text-indent: 0cm;"><!--[if !supportLists]-->
+                    <span style='font-size:15.0pt;line-height:115%;font-family:"ae_AlMohanad",serif;
+mso-fareast-font-family:ae_AlMohanad'>5.
+                        <span style='font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: "Times New Roman";'>
+                              
+                        </span>
+                    </span><!--[endif]-->
+                    <span dir="RTL"></span>
+                    <span lang="AR-SA" style='font-size:15.0pt;line-height:115%;
+font-family:"ae_AlMohanad",serif'>يقتصر نشاط الدورات الصيفية على تحفيظ القرآن الكريم وتلاوته وتجويده وتدبره.
+                    </span>
+                    <span dir="LTR" style='font-size:15.0pt;
+line-height:115%;font-family:"ae_AlMohanad",serif'></span>
+                </p>
+                <p></p>
+                <p></p>
+                <p class="MsoNormalCxSpMiddle" dir="RTL"
+                   style="text-align: right; margin-right: -14.2pt; text-indent: 0cm;"><!--[if !supportLists]-->
+                    <span style='font-size:15.0pt;line-height:115%;font-family:"ae_AlMohanad",serif;
+mso-fareast-font-family:ae_AlMohanad'>6.
+                        <span style='font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: "Times New Roman";'>
+                              
+                        </span>
+                    </span><!--[endif]-->
+                    <span dir="RTL"></span>
+                    <span lang="AR-SA" style='font-size:15.0pt;line-height:115%;
+font-family:"ae_AlMohanad",serif'>التقيد بالشهادات المعتمدة من قبل الجمعية، ويكون ختم المركز عليها، وتعتبر شهادة حضور
+                        وليس حفظ.
+                    </span>
+                    <span dir="LTR" style='font-size:15.0pt;line-height:115%;font-family:"ae_AlMohanad",serif'></span>
+                </p>
+                <p></p>
+                <p></p>
+                <p class="MsoNormalCxSpMiddle" dir="RTL"
+                   style="text-align: right; margin-right: -14.2pt; text-indent: 0cm;"><!--[if !supportLists]-->
+                    <span style='font-size:15.0pt;line-height:115%;font-family:"ae_AlMohanad",serif;
+mso-fareast-font-family:ae_AlMohanad'>7.
+                        <span style='font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: "Times New Roman";'>
+                              
+                        </span>
+                    </span><!--[endif]-->
+                    <span dir="RTL"></span>
+                    <span lang="AR-SA" style='font-size:15.0pt;line-height:115%;
+font-family:"ae_AlMohanad",serif'>أن لا تقل مجموع ساعات الدورة عن (75 ساعة) خلال (20 يوما فعليا) في الفترة ما
+                        بين                     (الاثنين 1/9/1440هـ) وبين (الثلاثاء 5/12/1440هـ).
+                    </span>
+                    <span dir="LTR" style='font-size:15.0pt;line-height:
+115%;font-family:"ae_AlMohanad",serif'></span>
+                </p>
+                <p></p>
+                <p></p>
+                <p class="MsoNormalCxSpMiddle" dir="RTL"
+                   style="text-align: right; margin-right: -14.2pt; text-indent: 0cm;"><!--[if !supportLists]-->
+                    <span style='font-size:15.0pt;line-height:115%;font-family:"ae_AlMohanad",serif;
+mso-fareast-font-family:ae_AlMohanad'>8.
+                        <span style='font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: "Times New Roman";'>
+                              
+                        </span>
+                    </span><!--[endif]-->
+                    <span dir="RTL"></span>
+                    <span lang="AR-SA" style='font-size:15.0pt;line-height:115%;
+font-family:"ae_AlMohanad",serif'>أن يكون من فروع الدورة حلقة لتصحيح التلاوة.
+                    </span>
+                    <span dir="LTR" style='font-size:15.0pt;line-height:115%;font-family:"ae_AlMohanad",serif'></span>
+                </p>
+                <p></p>
+                <p></p>
+                <p class="MsoNormalCxSpMiddle" dir="RTL"
+                   style="text-align: right; margin-right: -14.2pt; text-indent: 0cm;"><!--[if !supportLists]-->
+                    <span style='font-size:15.0pt;line-height:115%;font-family:"ae_AlMohanad",serif;
+mso-fareast-font-family:ae_AlMohanad'>9.
+                        <span style='font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: "Times New Roman";'>
+                              
+                        </span>
+                    </span><!--[endif]-->
+                    <span dir="RTL"></span>
+                    <span lang="AR-SA" style='font-size:15.0pt;line-height:115%;
+font-family:"ae_AlMohanad",serif'>توصية: توحيد الاستمارات الإدارية للدورة.
+                    </span>
+                    <span dir="LTR" style='font-size:15.0pt;line-height:115%;font-family:"ae_AlMohanad",serif'></span>
+                </p>
+                <p></p>
+                <p></p>
+                <p class="MsoNormalCxSpMiddle" dir="RTL" style="text-align: right; margin-right: -14.2pt;">
+                    <span lang="AR-SA" style='font-size:15.0pt;line-height:
+115%;font-family:"ae_AlMohanad",serif'></span>
+                </p>
+                <p> </p>
+                <p></p>
+                <p class="MsoNormal" align="center" dir="RTL"
+                   style="text-align: right; margin-bottom: 0.0001pt; line-height: 150%;">
+                    <span lang="AR-SA" style='font-size:
+15.0pt;line-height:150%;font-family:"NeoSansArabic-Medium",sans-serif'>ثانيا: الجوانب الإدارية والمالية:
+                    </span>
+                </p>
+                <p></p>
+                <p></p>
+                <p class="MsoNormalCxSpMiddle" dir="RTL"
+                   style="text-align: right; margin-right: -14.2pt; text-indent: 0cm;"><!--[if !supportLists]-->
+                    <span style="font-size:15.0pt;line-height:115%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol">·
+                        <span style='font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: "Times New Roman";'>
+                               
+                        </span>
+                    </span><!--[endif]-->
+                    <span dir="RTL"></span>
+                    <span lang="AR-SA" style='font-size:15.0pt;line-height:115%;
+font-family:"ae_AlMohanad",serif'>استعداد الدورة ماليا، وتحمّل كافة المصروفات المتعلقة بالدورة، مع ضبط الواردات
+                        والمصروفات حسب أنظمة الجمعية.
+                    </span>
+                    <span dir="LTR" style='font-size:15.0pt;line-height:115%;font-family:"ae_AlMohanad",serif'></span>
+                </p>
+                <p></p>
+                <p></p>
+                <p class="MsoNormalCxSpMiddle" dir="RTL"
+                   style="text-align: right; margin-right: -14.2pt; text-indent: 0cm;"><!--[if !supportLists]-->
+                    <span style="font-size:15.0pt;line-height:115%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol">·
+                        <span style='font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: "Times New Roman";'>
+                               
+                        </span>
+                    </span><!--[endif]-->
+                    <span dir="RTL"></span>
+                    <span lang="AR-SA" style='font-size:15.0pt;line-height:115%;
+font-family:"ae_AlMohanad",serif'>يمنع منعاً باتاً استلام مبالغ نقدية من الطلاب، ويتم استلامها عبر حسابات الجمعية بالطرق
+                        الرسمية مع توثيق ما يثبت تخصيصها للدورة.
+                    </span>
+                    <span dir="LTR" style='font-size:15.0pt;line-height:115%;
+font-family:"ae_AlMohanad",serif'></span>
+                </p>
+                <p></p>
+                <p></p>
+                <p class="MsoNormalCxSpMiddle" dir="RTL"
+                   style="text-align: right; margin-right: -14.2pt; text-indent: 0cm;"><!--[if !supportLists]-->
+                    <span style="font-size:15.0pt;line-height:115%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol">·
+                        <span style='font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: "Times New Roman";'>
+                               
+                        </span>
+                    </span><!--[endif]-->
+                    <span dir="RTL"></span>
+                    <span lang="AR-SA" style='font-size:15.0pt;line-height:115%;
+font-family:"ae_AlMohanad",serif'>يراعى في المصروفات إنهاء تسليم مستحقات العاملين قبل الشروع في التكريم والحوافز.
+                    </span>
+                    <span dir="LTR" style='font-size:
+15.0pt;line-height:115%;font-family:"ae_AlMohanad",serif'></span>
+                </p>
+                <p></p>
+                <p></p>
+                <p class="MsoNormalCxSpMiddle" dir="RTL"
+                   style="text-align: right; margin-right: -14.2pt; text-indent: 0cm;"><!--[if !supportLists]-->
+                    <span style="font-size:15.0pt;line-height:115%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol">·
+                        <span style='font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: "Times New Roman";'>
+                               
+                        </span>
+                    </span><!--[endif]-->
+                    <span dir="RTL"></span>
+                    <span lang="AR-SA" style='font-size:15.0pt;line-height:115%;
+font-family:"ae_AlMohanad",serif'>يراعى في  أجر المعلم في الدورات عدم المبالغة ، بحيث يكون السقف الأعلى للمعلم 30 ريالاً
+                        للساعة يراعى فيها التفاضل بين المعلمين ( الخبرة ـ القراءات ـ الشهادات ) 
+                    </span>
+                    <span dir="LTR" style='font-size:
+15.0pt;line-height:115%;font-family:"ae_AlMohanad",serif'></span>
+                </p>
+                <p></p>
+                <p></p>
+                <p class="MsoNormalCxSpMiddle" dir="RTL"
+                   style="text-align: right; margin-right: -14.2pt; text-indent: 0cm;"><!--[if !supportLists]-->
+                    <span style="font-size:15.0pt;line-height:115%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol">·
+                        <span style='font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: "Times New Roman";'>
+                               
+                        </span>
+                    </span><!--[endif]-->
+                    <span dir="RTL"></span>
+                    <span lang="AR-SA" style='font-size:15.0pt;line-height:115%;
+font-family:"ae_AlMohanad",serif'>عدم المبالغة في مصروفات التكريم والحوافز.
+                    </span>
+                    <span dir="LTR" style='font-size:15.0pt;line-height:115%;font-family:"ae_AlMohanad",serif'></span>
+                </p>
+                <p></p>
+                <p></p>
+                <p class="MsoNormalCxSpMiddle" dir="RTL"
+                   style="text-align: right; margin-right: -14.2pt; text-indent: 0cm;"><!--[if !supportLists]-->
+                    <span style="font-size:15.0pt;line-height:115%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol">·
+                        <span style='font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: "Times New Roman";'>
+                               
+                        </span>
+                    </span><!--[endif]-->
+                    <span dir="RTL"></span>
+                    <span lang="AR-SA" style='font-size:15.0pt;line-height:115%;
+font-family:"ae_AlMohanad",serif'>عدم جمع التبرعات النقدية مباشرة في أماكن عقد الدورة أو في حفلاتها الختامية.
+                    </span>
+                    <span dir="LTR" style='font-size:15.0pt;
+line-height:115%;font-family:"ae_AlMohanad",serif'></span>
+                </p>
+                <p></p>
+                <p></p>
+                <p class="MsoNormalCxSpMiddle" dir="RTL" style="text-align: right; margin-right: -14.2pt;">
+                    <span dir="LTR" style='font-size:15.0pt;line-height:
+115%;font-family:"ae_AlMohanad",serif'></span>
+                </p>
+                <p> </p>
+                <p></p>
+                <p class="MsoNormal" align="center" dir="RTL"
+                   style="text-align: right; margin-bottom: 0.0001pt; line-height: 150%;">
+                    <span lang="AR-SA" style='font-size:
+15.0pt;line-height:150%;font-family:"NeoSansArabic-Medium",sans-serif'>ثالثا: ضوابط الإعلان عن الدورات الصيفية:
+                    </span>
+                    <span dir="LTR" style='font-size:15.0pt;
+line-height:150%;font-family:"NeoSansArabic-Medium",sans-serif'></span>
+                </p>
+                <p></p>
+                <p></p>
+                <p class="MsoNormalCxSpMiddle" dir="RTL"
+                   style="text-align: right; margin-right: -14.2pt; text-indent: 0cm;"><!--[if !supportLists]-->
+                    <span style="font-size:15.0pt;line-height:115%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol">·
+                        <span style='font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: "Times New Roman";'>
+                               
+                        </span>
+                    </span><!--[endif]-->
+                    <span dir="RTL"></span>
+                    <span lang="AR-SA" style='font-size:15.0pt;line-height:115%;
+font-family:"ae_AlMohanad",serif'>أن يكون مختوما من المركز  التابعة له الدورة.
+                    </span>
+                    <span dir="LTR" style='font-size:15.0pt;line-height:115%;font-family:"ae_AlMohanad",serif'></span>
+                </p>
+                <p></p>
+                <p></p>
+                <p class="MsoNormalCxSpMiddle" dir="RTL"
+                   style="text-align: right; margin-right: -14.2pt; text-indent: 0cm;"><!--[if !supportLists]-->
+                    <span style="font-size:15.0pt;line-height:115%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol">·
+                        <span style='font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: "Times New Roman";'>
+                               
+                        </span>
+                    </span><!--[endif]-->
+                    <span dir="RTL"></span>
+                    <span lang="AR-SA" style='font-size:15.0pt;line-height:115%;
+font-family:"ae_AlMohanad",serif'>أن يوضع رقم تصريح الدورة على الإعلان.
+                    </span>
+                    <span dir="LTR" style='font-size:15.0pt;line-height:115%;font-family:"ae_AlMohanad",serif'></span>
+                </p>
+                <p></p>
+                <p></p>
+                <p class="MsoNormalCxSpMiddle" dir="RTL"
+                   style="text-align: right; margin-right: -14.2pt; text-indent: 0cm;"><!--[if !supportLists]-->
+                    <span style="font-size:15.0pt;line-height:115%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol">·
+                        <span style='font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: "Times New Roman";'>
+                               
+                        </span>
+                    </span><!--[endif]-->
+                    <span dir="RTL"></span>
+                    <span lang="AR-SA" style='font-size:15.0pt;line-height:115%;
+font-family:"ae_AlMohanad",serif'>أن لا يحتوي على رسومات أو صور لا علاقة لها بالقرآن.
+                    </span>
+                    <span dir="LTR" style='font-size:15.0pt;line-height:115%;
+font-family:"ae_AlMohanad",serif'></span>
+                </p>
+                <p></p>
+                <p></p>
+                <p class="MsoNormalCxSpMiddle" dir="RTL"
+                   style="text-align: right; margin-right: -14.2pt; text-indent: 0cm;"><!--[if !supportLists]-->
+                    <span style="font-size:15.0pt;line-height:115%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol">·
+                        <span style='font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: "Times New Roman";'>
+                               
+                        </span>
+                    </span><!--[endif]-->
+                    <span dir="RTL"></span>
+                    <span lang="AR-SA" style='font-size:15.0pt;line-height:115%;
+font-family:"ae_AlMohanad",serif'>وضع شعار الجمعية.
+                    </span>
+                    <span dir="LTR" style='font-size:15.0pt;line-height:115%;font-family:"ae_AlMohanad",serif'></span>
+                </p>
+                <p></p>
+                <p></p>
+                <p class="MsoNormalCxSpMiddle" dir="RTL"
+                   style="text-align: right; margin-right: -14.2pt; text-indent: 0cm;"><!--[if !supportLists]-->
+                    <span style="font-size:15.0pt;line-height:115%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol">·
+                        <span style='font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: "Times New Roman";'>
+                               
+                        </span>
+                    </span><!--[endif]-->
+                    <span dir="RTL"></span>
+                    <span lang="AR-SA" style='font-size:15.0pt;line-height:115%;
+font-family:"ae_AlMohanad",serif'>أن ينص في الإعلان على التالي: ((يسرجمعية تحفيظ القرآن الكريم بالرياض، مركز.......... ،
+                        بالتعاون مع جامع.......... ،  أن تعلن عن ...........))
+                    </span>
+                    <span dir="LTR" style='font-size:15.0pt;line-height:115%;font-family:"ae_AlMohanad",serif'></span>
+                </p>
+                <p></p>
+                <p></p>
+                <p class="MsoNormalCxSpMiddle" dir="RTL"
+                   style="text-align: right; margin-right: -14.2pt; text-indent: 0cm;"><!--[if !supportLists]-->
+                    <span style="font-size:15.0pt;line-height:115%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol">·
+                        <span style='font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: "Times New Roman";'>
+                               
+                        </span>
+                    </span><!--[endif]-->
+                    <span dir="RTL"></span>
+                    <span lang="AR-SA" style='font-size:15.0pt;line-height:115%;
+font-family:"ae_AlMohanad",serif'>أن يحتوي على فروع الدورة ومستوياتها.
+                    </span>
+                    <span dir="LTR" style='font-size:15.0pt;line-height:115%;font-family:"ae_AlMohanad",serif'></span>
+                </p>
+                <p></p>
+                <p></p>
+                <p class="MsoNormalCxSpMiddle" dir="RTL"
+                   style="text-align: right; margin-right: -14.2pt; text-indent: 0cm;"><!--[if !supportLists]-->
+                    <span style="font-size:15.0pt;line-height:115%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol">·
+                        <span style='font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: "Times New Roman";'>
+                               
+                        </span>
+                    </span><!--[endif]-->
+                    <span dir="RTL"></span>
+                    <span lang="AR-SA" style='font-size:15.0pt;line-height:115%;
+font-family:"ae_AlMohanad",serif'>أن يحتوي الإعلان على اسم الجامع واسم الدورة.
+                    </span>
+                    <span dir="LTR" style='font-size:15.0pt;line-height:115%;font-family:"ae_AlMohanad",serif'></span>
+                </p>
+                <p></p>
+                <p></p>
+                <p class="MsoNormalCxSpMiddle" dir="RTL"
+                   style="text-align: right; margin-right: -14.2pt; text-indent: 0cm;"><!--[if !supportLists]-->
+                    <span style="font-size:15.0pt;line-height:115%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol">·
+                        <span style='font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: "Times New Roman";'>
+                               
+                        </span>
+                    </span><!--[endif]-->
+                    <span dir="RTL"></span>
+                    <span lang="AR-SA" style='font-size:15.0pt;line-height:115%;
+font-family:"ae_AlMohanad",serif'>أن يحتوي الإعلان على وقت الدورة ومدتها.
+                    </span>
+                    <span dir="LTR" style='font-size:15.0pt;line-height:115%;font-family:"ae_AlMohanad",serif'></span>
+                </p>
+                <p></p>
+                <p></p>
+                <p class="MsoNormalCxSpMiddle" dir="RTL"
+                   style="text-align: right; margin-right: -14.2pt; text-indent: 0cm;"><!--[if !supportLists]-->
+                    <span style="font-size:15.0pt;line-height:115%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol">·
+                        <span style='font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: "Times New Roman";'>
+                               
+                        </span>
+                    </span><!--[endif]-->
+                    <span dir="RTL"></span>
+                    <span lang="AR-SA" style='font-size:15.0pt;line-height:115%;
+font-family:"ae_AlMohanad",serif'>طريقة عرض الفروع في الإعلان تكون بالفرع الأعلى (الأكبر) مثلاً الفرع الأول : مراجعة
+                        القرآن كاملاً ، الفرع الثاني : عشرون جزءا وهكذا تنازلياً.
+                    </span>
+                    <span dir="LTR" style='font-size:15.0pt;line-height:
+115%;font-family:"ae_AlMohanad",serif'></span>
+                </p>
+                <p></p>
+                <p></p>
+                <p class="MsoNormalCxSpMiddle" dir="RTL"
+                   style="text-align: right; margin-right: -14.2pt; text-indent: 0cm;"><!--[if !supportLists]-->
+                    <span style="font-size:15.0pt;line-height:115%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol">·
+                        <span style='font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: "Times New Roman";'>
+                               
+                        </span>
+                    </span><!--[endif]-->
+                    <span dir="RTL"></span>
+                    <span lang="AR-SA" style='font-size:15.0pt;line-height:115%;
+font-family:"ae_AlMohanad",serif'>المصداقية في الحوافز، والتقيد بالمواعيد المعلنة.
+                    </span>
+                    <span dir="LTR" style='font-size:15.0pt;line-height:115%;
+font-family:"ae_AlMohanad",serif'></span>
+                </p>
+                <p></p>
+                <p></p>
+                <p class="MsoNormalCxSpMiddle" dir="RTL"
+                   style="text-align: right; margin-right: -14.2pt; text-indent: 0cm;"><!--[if !supportLists]-->
+                    <span style="font-size:15.0pt;line-height:115%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol">·
+                        <span style='font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: "Times New Roman";'>
+                               
+                        </span>
+                    </span><!--[endif]-->
+                    <span dir="RTL"></span>
+                    <span lang="AR-SA" style='font-size:15.0pt;line-height:115%;
+font-family:"ae_AlMohanad",serif'>عدم الإشارة لرسوم الاشتراك أو التامين في الإعلان.
+                    </span>
+                    <span dir="LTR" style='font-size:15.0pt;line-height:115%;
+font-family:"ae_AlMohanad",serif'></span>
+                </p>
+                <p></p>
+                <p></p>
+                <p class="MsoNormalCxSpMiddle" dir="RTL"
+                   style="text-align: right; margin-right: -14.2pt; text-indent: 0cm;"><!--[if !supportLists]-->
+                    <span style="font-size:15.0pt;line-height:115%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol">·
+                        <span style='font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: "Times New Roman";'>
+                               
+                        </span>
+                    </span><!--[endif]-->
+                    <span dir="RTL"></span>
+                    <span lang="AR-SA" style='font-size:15.0pt;line-height:115%;
+font-family:"ae_AlMohanad",serif'>وجود وصف لمكان انعقاد الدورة عن طريق كروكي أو باركود.
+                    </span>
+                    <span dir="LTR" style='font-size:15.0pt;line-height:115%;
+font-family:"ae_AlMohanad",serif'></span>
+                </p>
+                <p></p>
+                <p></p>
+                <p class="MsoNormalCxSpMiddle" dir="RTL"
+                   style="text-align: right; margin-right: -14.2pt; text-indent: 0cm; line-height: 150%;"><!--[if !supportLists]-->
+                    <span style="font-size:15.0pt;line-height:150%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol">·
+                        <span style='font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: "Times New Roman";'>
+                               
+                        </span>
+                    </span><!--[endif]-->
+                    <span dir="RTL"></span>
+                    <span lang="AR-SA" style='font-size:15.0pt;line-height:150%;
+font-family:"ae_AlMohanad",serif'>وجود رقم جوال للاستفسار، أو وسائل التواصل المختلفة.
+                    </span>
+                    <span dir="LTR" style='font-size:15.0pt;line-height:150%;
+font-family:"ae_AlMohanad",serif'></span>
+                </p>
+                <p></p>
+                <p></p>
+                <p class="MsoNormalCxSpMiddle" dir="RTL" style="text-align: right; line-height: 150%;">
+                    <span lang="AR-SA" style='font-size:15.0pt;line-height:150%;font-family:
+"ae_AlMohanad",serif'></span>
+                </p>
+                <p></p>
+                <p class="MsoNormalCxSpMiddle" dir="RTL" style="text-align: right; line-height: 150%;">
+                    <span dir="LTR" style='font-size:15.0pt;line-height:150%;font-family:"ae_AlMohanad",serif'></span>
+                </p>
+                <p></p>
+                <p class="MsoNormal" align="center" dir="RTL"
+                   style="text-align: right; margin: 12pt 0cm 0.0001pt; line-height: 150%;">
+                    <span lang="AR-SA" style='font-size:15.0pt;line-height:150%;
+font-family:"NeoSansArabic-Medium",sans-serif'></span>
+                </p>
+                <p></p>
+                <p class="MsoNormal" align="center" dir="RTL"
+                   style="text-align: right; margin: 12pt 0cm 0.0001pt; line-height: 150%;">
+                    <span lang="AR-SA" style='font-size:15.0pt;line-height:150%;
+font-family:"NeoSansArabic-Medium",sans-serif'>رابعا: المشرف العام على الدورات الصيفية:
+                    </span>
+                </p>
+                <p></p>
+                <p></p>
+                <p class="MsoNormal" dir="RTL"
+                   style="text-align: right; margin: 0cm -14.2pt 0.0001pt 20pt; text-indent: -1.5pt; line-height: normal;"><!--[if !supportLists]-->
+                    <span style="font-size:15.0pt;
+font-family:Wingdings;mso-fareast-font-family:Wingdings;mso-bidi-font-family:
+Wingdings">v
+                        <span style='font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: "Times New Roman";'>
+                             
+                        </span>
+                    </span><!--[endif]-->
+                    <span dir="RTL"></span>
+                    <b>
+                        <span lang="AR-SA" style='font-size:15.0pt;font-family:"ae_AlMohanad",serif;mso-font-width:95%;
+mso-no-proof:yes'>شروط المشرف العام على الدورات الصيفية:
+                        </span>
+                        <span dir="LTR" style='font-size:15.0pt;font-family:"ae_AlMohanad",serif'></span>
+                    </b>
+                </p>
+                <p></p>
+                <p></p>
+                <p class="MsoNormal" dir="RTL"
+                   style="text-align: right; margin: 0cm -14.2pt 0.0001pt 20pt; text-indent: -1.5pt; line-height: normal;"><!--[if !supportLists]-->
+                    <span style='font-size:15.0pt;font-family:"ae_AlMohanad",serif;mso-fareast-font-family:
+ae_AlMohanad'>1.
+                        <span style='font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: "Times New Roman";'>
+                                       
+                        </span>
+                    </span><!--[endif]-->
+                    <span dir="RTL"></span>
+                    <span lang="AR-SA" style='font-size:15.0pt;font-family:"ae_AlMohanad",serif'>أن يكون سعودي
+                        الجنسية.
+                    </span>
+                    <span dir="LTR" style='font-size:15.0pt;font-family:"ae_AlMohanad",serif'></span>
+                </p>
+                <p></p>
+                <p></p>
+                <p class="MsoNormal" dir="RTL"
+                   style="text-align: right; margin: 0cm -14.2pt 0.0001pt 20pt; text-indent: -1.5pt; line-height: normal;"><!--[if !supportLists]-->
+                    <span style='font-size:15.0pt;font-family:"ae_AlMohanad",serif;mso-fareast-font-family:
+ae_AlMohanad'>2.
+                        <span style='font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: "Times New Roman";'>
+                                       
+                        </span>
+                    </span><!--[endif]-->
+                    <span dir="RTL"></span>
+                    <span lang="AR-SA" style='font-size:15.0pt;font-family:"ae_AlMohanad",serif'>أن يكون حسن التوجه
+                        وسليم العقيدة.
+                    </span>
+                    <span dir="LTR" style='font-size:15.0pt;font-family:"ae_AlMohanad",serif'></span>
+                </p>
+                <p></p>
+                <p></p>
+                <p class="MsoNormal" dir="RTL"
+                   style="text-align: right; margin: 0cm -14.2pt 0.0001pt 20pt; text-indent: -1.5pt; line-height: normal;"><!--[if !supportLists]-->
+                    <span style='font-size:15.0pt;font-family:"ae_AlMohanad",serif;mso-fareast-font-family:
+ae_AlMohanad'>3.
+                        <span style='font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: "Times New Roman";'>
+                                       
+                        </span>
+                    </span><!--[endif]-->
+                    <span dir="RTL"></span>
+                    <span lang="AR-SA" style='font-size:15.0pt;font-family:"ae_AlMohanad",serif'>أن يكون سبق له استخراج
+                        تكليف رسمي من الجمعية للإشراف على أحد المساجد.
+                    </span>
+                    <span dir="LTR" style='font-size:15.0pt;font-family:"ae_AlMohanad",serif'></span>
+                </p>
+                <p></p>
+                <p></p>
+                <p class="MsoNormal" dir="RTL"
+                   style="text-align: right; margin: 0cm -14.2pt 0.0001pt 20pt; text-indent: -1.5pt; line-height: normal;"><!--[if !supportLists]-->
+                    <span style='font-size:15.0pt;font-family:"ae_AlMohanad",serif;mso-fareast-font-family:
+ae_AlMohanad'>4.
+                        <span style='font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: "Times New Roman";'>
+                                       
+                        </span>
+                    </span><!--[endif]-->
+                    <span dir="RTL"></span>
+                    <span lang="AR-SA" style='font-size:15.0pt;font-family:"ae_AlMohanad",serif'>أن يكون حاصلا على
+                        المؤهل الجامعي أو ما يعادله.
+                    </span>
+                    <span dir="LTR" style='font-size:15.0pt;
+font-family:"ae_AlMohanad",serif'></span>
+                </p>
+                <p></p>
+                <p></p>
+                <p class="MsoNormal" dir="RTL"
+                   style="text-align: right; margin: 0cm -14.2pt 0.0001pt 20pt; text-indent: -1.5pt; line-height: normal;"><!--[if !supportLists]-->
+                    <span style='font-size:15.0pt;font-family:"ae_AlMohanad",serif;mso-fareast-font-family:
+ae_AlMohanad'>5.
+                        <span style='font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: "Times New Roman";'>
+                                       
+                        </span>
+                    </span><!--[endif]-->
+                    <span dir="RTL"></span>
+                    <span lang="AR-SA" style='font-size:15.0pt;font-family:"ae_AlMohanad",serif'>أن يكون متفرغا وقت
+                        إقامة الدورة.
+                    </span>
+                    <span dir="LTR" style='font-size:15.0pt;font-family:"ae_AlMohanad",serif'></span>
+                </p>
+                <p></p>
+                <p></p>
+                <p class="MsoNormal" dir="RTL"
+                   style="text-align: right; margin: 0cm -14.2pt 0.0001pt 20pt; text-indent: -1.5pt; line-height: normal;"><!--[if !supportLists]-->
+                    <span style='font-size:15.0pt;font-family:"ae_AlMohanad",serif;mso-fareast-font-family:
+ae_AlMohanad'>6.
+                        <span style='font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: "Times New Roman";'>
+                                       
+                        </span>
+                    </span><!--[endif]-->
+                    <span dir="RTL"></span>
+                    <span lang="AR-SA" style='font-size:15.0pt;font-family:"ae_AlMohanad",serif'>أن يكون له خبرة سابقة
+                        في تعليم القرآن الكريم.
+                    </span>
+                    <span dir="LTR" style='font-size:15.0pt;font-family:
+"ae_AlMohanad",serif'></span>
+                </p>
+                <p></p>
+                <p></p>
+                <p class="MsoNormal" dir="RTL"
+                   style="text-align: right; margin: 0cm 0cm 0.0001pt 20pt; line-height: normal;">
+                    <span lang="AR-SA" style='font-size:
+15.0pt;font-family:"ae_AlMohanad",serif'></span>
+                </p>
+                <p></p>
+                <p class="MsoNormal" dir="RTL"
+                   style="text-align: right; margin: 0cm 0cm 0.0001pt 20pt; line-height: normal;">
+                    <span dir="LTR" style='font-size:
+15.0pt;font-family:"ae_AlMohanad",serif'></span>
+                </p>
+                <p></p>
+                <p class="MsoNormal" dir="RTL"
+                   style="text-align: right; margin: 0cm -14.2pt 0.0001pt 20pt; text-indent: -1.5pt; line-height: normal;"><!--[if !supportLists]-->
+                    <span style="font-size:15.0pt;font-family:Wingdings;mso-fareast-font-family:Wingdings;
+mso-bidi-font-family:Wingdings;mso-font-width:95%;mso-no-proof:yes">v
+                        <span style='font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: "Times New Roman";'>
+                                          
+                        </span>
+                    </span><!--[endif]-->
+                    <span dir="RTL"></span>
+                    <b>
+                        <span lang="AR-SA" style='font-size:15.0pt;font-family:"ae_AlMohanad",serif;mso-font-width:95%;
+mso-no-proof:yes'>مهام المشرف العام على الدورة الصيفية:
+                        </span>
+                        <span dir="LTR" style='font-size:15.0pt;font-family:"ae_AlMohanad",serif;mso-font-width:
+95%;mso-no-proof:yes'></span>
+                    </b>
+                </p>
+                <p></p>
+                <p></p>
+                <p class="MsoNormal" dir="RTL"
+                   style="text-align: right; margin: 0cm -14.2pt 0.0001pt 20pt; text-indent: -1.5pt; line-height: normal;"><!--[if !supportLists]-->
+                    <span dir="RTL"></span>
+                    <span style='font-size:15.0pt;font-family:"ae_AlMohanad",serif;
+mso-fareast-font-family:ae_AlMohanad'>1.
+                        <span style='font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: "Times New Roman";'>
+                                       
+                        </span>
+                    </span><!--[endif]-->
+                    <span dir="RTL"></span>
+                    <span lang="AR-SA" style='font-size:15.0pt;font-family:"ae_AlMohanad",serif'><span dir="RTL"></span>
+                         الإشراف المباشر على الدورة ومتابعة رؤساء اللجان.
+                    </span>
+                    <span dir="LTR" style='font-size:15.0pt;font-family:"ae_AlMohanad",serif'></span>
+                </p>
+                <p></p>
+                <p></p>
+                <p class="MsoNormal" dir="RTL"
+                   style="text-align: right; margin: 0cm -14.2pt 0.0001pt 20pt; text-indent: -1.5pt; line-height: normal;"><!--[if !supportLists]-->
+                    <span style='font-size:15.0pt;font-family:"ae_AlMohanad",serif;mso-fareast-font-family:
+ae_AlMohanad'>2.
+                        <span style='font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: "Times New Roman";'>
+                                       
+                        </span>
+                    </span><!--[endif]-->
+                    <span dir="RTL"></span>
+                    <span lang="AR-SA" style='font-size:15.0pt;font-family:"ae_AlMohanad",serif'>رفع تقرير متكامل ونهائي
+                        عن الدورة للمركز التابع له.
+                    </span>
+                    <span dir="LTR" style='font-size:15.0pt;
+font-family:"ae_AlMohanad",serif'></span>
+                </p>
+                <p></p>
+                <p></p>
+                <p class="MsoNormal" dir="RTL"
+                   style="text-align: right; margin: 0cm -14.2pt 0.0001pt 20pt; text-indent: -1.5pt; line-height: normal;"><!--[if !supportLists]-->
+                    <span style='font-size:15.0pt;font-family:"ae_AlMohanad",serif;mso-fareast-font-family:
+ae_AlMohanad'>3.
+                        <span style='font-variant-numeric: normal; font-variant-east-asian: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: "Times New Roman";'>
+                                       
+                        </span>
+                    </span><!--[endif]-->
+                    <span dir="RTL"></span>
+                    <span lang="AR-SA" style='font-size:15.0pt;font-family:"ae_AlMohanad",serif'>المسؤولية التامة عن
+                        الدورة وبرامجها، والإشراف المباشر على تطبيق شروط وضوابط إقامتها، وتحمل المسؤولية حيال ذلك.
+                    </span>
+                </p>
+                <p></p>
+                <p></p>
+            </field>
+        </record>
+    </data>
+</odoo>

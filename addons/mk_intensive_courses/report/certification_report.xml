@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <report 
+        string="Certification" 
+        id="action_report_certifications" 
+        model="mk.certification" 
+        report_type="qweb-pdf"
+        name="mk_intensive_ courses.report_certificationtemp" 
+        file="mk_intensive_ courses.report.report_certificationtemp"
+    />
+</odoo>

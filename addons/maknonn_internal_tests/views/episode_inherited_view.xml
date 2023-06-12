@@ -1,0 +1,68 @@
+<odoo>
+	<data>
+		<record id="mk_episode_form_view_tests" model="ir.ui.view">
+        	<field name="model">mk.episode</field>
+			<field name="inherit_id" ref="mk_episode_management.mk_episode_form_view"/>
+            <field name="arch" type="xml">
+				<xpath expr="//page[5]" position="after">
+					<page string="Internal test setting">
+						<field name="episode_tests">
+							<tree editable="bottom">
+								<field name="name"/>
+								<field name="test_date"/>
+								<field name="start_point"/>
+								<field name="maximum_degree"/>
+								<field name="minumim_degree"/>
+								<field name="passing_items" widget="many2many_tags" />
+								<field name="evaluation_items" widget="many2many_tags"/>
+							</tree>
+						</field>
+					</page>
+				</xpath>
+			</field>
+		</record>
+
+		<record id="passing_items_form_view_inherited" model="ir.ui.view">
+		    <field name= "name">passing items</field>
+		    <field name= "model">mk.passing.items</field>
+			<field name="inherit_id" ref="maknon_tests.passing_items_form_view"/>
+		    <field name= "arch"  type="xml"> 
+				<xpath expr="//field[@name='branches']" position="after">
+					<field name="internal_tests" widget="many2many_tags"/>
+				</xpath>
+			</field>
+		</record>
+
+		<record id="evaluation_items_form_view_inherited" model="ir.ui.view">
+		    <field name= "name">evaluation items</field>
+		    <field name= "model">mk.evaluation.items</field>
+			<field name="inherit_id" ref="maknon_tests.evaluation_items_form_view"/>
+		    <field name= "arch"  type="xml"> 
+				<xpath expr="//field[@name='branches']" position="after">
+					<field name="internal_tests" widget="many2many_tags"/>
+				</xpath>
+			</field>
+		</record>
+
+        <record id="view_student_link_form_inh" model="ir.ui.view">
+        	<field name="name">student link Search View</field>
+            <field name="model">mk.link</field>
+			<field name="inherit_id" ref="mk_student_register.view_student_link_form"/>
+            <field name="arch" type="xml">
+				<xpath expr="//page[2]" position="after">
+					<page string="Internal test setting">
+						<field name="internal_tests">
+							<tree>
+								<field name="test_id"/>
+								<field name="create_date" string="session date"/>
+								<field name="maximum_degree"/>
+								<field name="degree"/>
+							</tree>
+						</field>
+					</page>
+				</xpath>
+			</field>
+		</record>
+		
+	</data>
+</odoo>

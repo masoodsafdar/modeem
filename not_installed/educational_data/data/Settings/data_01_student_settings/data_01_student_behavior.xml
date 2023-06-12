@@ -1,0 +1,30 @@
+<odoo>
+    <data noupdate="1">
+        <record id="mk_student_behavior1" model="mk.student.behaviors">
+            <field name="name">شتم طالب</field>
+            <field name="Warning_type">oral_warning</field>
+            <field name="Dedect_grade">1</field>
+        </record>
+        <record id="mk_student_behavior2" model="mk.student.behaviors">
+            <field name="name">اعتداء على طالب بالضرب</field>
+            <field name="Warning_type">commitment_warning</field>
+            <field name="Dedect_grade">5</field>
+        </record>
+        <record id="mk_student_behavior3" model="mk.student.behaviors">
+            <field name="name">عدم الالتزام بأداب المسجد</field>
+            <field name="Warning_type">oral_warning</field>
+            <field name="Dedect_grade">1</field>
+        </record>
+        <record id="mk_student_behavior4" model="mk.student.behaviors">
+            <field name="name">عدم التأدب مع المعلم أو الموظف</field>
+            <field name="Warning_type">commitment_warning</field>
+            <field name="Dedect_grade">5</field>
+        </record>
+        <record id="mk_student_behavior5" model="mk.student.behaviors">
+            <field name="name">اللعب في المسجد</field>
+            <field name="Warning_type">oral_warning</field>
+            <field name="Dedect_grade">1</field>
+        </record>
+
+    </data>
+</odoo>

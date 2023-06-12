@@ -1,0 +1,9 @@
+id,name,district_id/id,city_id/id,area_id/id
+dep_103,مركز إشراف الجنوب,data_security.dis_179,data_security.City_1,data_security.area_1
+dep_108,مركز إشراف الدائري الشمالي,data_security.dis_179,data_security.City_1,data_security.area_1
+dep_109,مركز إشراف الدائري الغربي,data_security.dis_179,data_security.City_1,data_security.area_1
+dep_102,مركز إشراف الروضة,data_security.dis_179,data_security.City_1,data_security.area_1
+dep_110,مركز إشراف العزيزية,data_security.dis_179,data_security.City_1,data_security.area_1
+dep_104,مركز إشراف الغرب,data_security.dis_179,data_security.City_1,data_security.area_1
+dep_106,مركز إشراف الوسط الجنوبي,data_security.dis_179,data_security.City_1,data_security.area_1
+dep_107,مركز إشراف الوسط الشمالي,data_security.dis_179,data_security.City_1,data_security.area_1

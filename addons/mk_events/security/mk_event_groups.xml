@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<odoo>
+        <data noupdate="1">
+       
+          <record id="event_management_access_categ" model="ir.module.category">
+            <field name="name">Events Management</field>
+          </record>
+
+          <!-- group of events types management -->
+          <record id="events_types_manage" model="res.groups">
+            <field name="name">Events Type Management</field>
+            <field name="category_id" ref="event_management_access_categ"/>
+          </record> 
+
+          <!-- group of events status management -->
+          <record id="events_status_manage" model="res.groups">
+            <field name="name">Events Status Management</field>
+            <field name="category_id" ref="event_management_access_categ"/>
+          </record> 
+
+          <!-- group of events info management -->
+          <record id="association_info_manage" model="res.groups">
+            <field name="name">Events Info Management</field>
+            <field name="category_id" ref="event_management_access_categ"/>
+          </record> 
+          
+          <!-- group of events read -->
+          <record id="read_events" model="res.groups">
+            <field name="name">Maknoon Events Read</field>
+            <field name="category_id" ref="event_management_access_categ" />
+          </record>
+
+	<record id="write_events" model="res.groups">
+            <field name="name">Write Events</field>
+            <field name="implied_ids" eval="[(4, ref('read_events'))]"/>
+            <field name="category_id" ref="event_management_access_categ" />
+          </record>
+
+          <!-- group of events accept or deny -->
+          <record id="accept_deny_event" model="res.groups">
+            <field name="name">Accept or Deny Events</field>
+            <field name="implied_ids" eval="[(4, ref('write_events'))]"/>
+            <field name="category_id" ref="event_management_access_categ" />
+          </record>
+
+ 	<record id="start_end_event" model="res.groups">
+            <field name="name">Start or End Events</field>
+            <field name="implied_ids" eval="[(4, ref('write_events'))]"/>
+            <field name="category_id" ref="event_management_access_categ" />
+          </record>
+
+	
+
+            <!-- send reminder event group -->
+           <record id="send_reminder_event" model="res.groups">
+               <field name="name">Send Reminder</field>
+               <field name="category_id" ref="event_management_access_categ"/>
+               <field name="implied_ids" eval="[(4, ref('read_events'))]"/>
+           </record> 
+
+           <!-- create event group -->
+           <record id="create_event" model="res.groups">
+               <field name="name">Create Event</field>
+               <field name="category_id" ref="event_management_access_categ"/>
+               <field name="implied_ids" eval="[(4, ref('read_events'))]"/>
+           </record> 
+
+ 	         <!-- read attendance group -->
+           <record id="read_attendance" model="res.groups">
+               <field name="name">Read Attendance</field>
+               <field name="implied_ids" eval="[(4, ref('read_events'))]"/>
+               <field name="category_id" ref="event_management_access_categ"/>
+           </record> 
+
+           <record id="create_attendance" model="res.groups">
+               <field name="name">create Attendance</field>
+               <field name="implied_ids" eval="[(4, ref('read_attendance'))]"/>
+               <field name="category_id" ref="event_management_access_categ"/>
+           </record>
+
+
+           <!-- create attendance group -->
+           <record id="send_recommondation" model="res.groups">
+               <field name="name">send recommondation</field>
+               <field name="implied_ids" eval="[(4, ref('read_events'))]"/>
+               <field name="category_id" ref="event_management_access_categ"/>
+           </record> 
+
+
+          <!-- delete model="res.groups" id="event.group_event_manager" /-->
+
+           <!-- group of select all -->
+          <record id="select_all_mk_event_selectall_group" model="res.groups">
+            <field name="name">Select All groups</field>
+            <field name="implied_ids" eval="[
+              (4, ref('events_types_manage')),
+              (4, ref('events_status_manage')),
+              (4, ref('association_info_manage')),
+              (4, ref('read_events')),
+              (4, ref('write_events')),
+              (4, ref('accept_deny_event')),
+              (4, ref('start_end_event')),
+              (4, ref('send_reminder_event')),
+              (4, ref('create_event')),
+              (4, ref('read_attendance')),
+              (4, ref('create_attendance')),
+              (4, ref('send_recommondation'))]"/>
+            <field name="category_id" ref="event_management_access_categ"/>
+          </record>
+
+
+
+        </data>
+</odoo>

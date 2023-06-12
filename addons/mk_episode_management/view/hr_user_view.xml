@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!--    define field login_date-->
+    <record id="view_employee_tree_inherit" model="ir.ui.view">
+        <field name="name">hr.employee.inherit.form</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_tree"/>
+        <field name="arch" type="xml">
+            <field name="parent_id" position="after">
+                <field name="login_date" string="آخر دخول للنظام"/>
+            </field>
+              <field name="parent_id" position="replace">
+                <field name="parent_id" invisible="1"/>
+            </field>
+        </field>
+    </record>
+
+    <!--    action server confirmation_request_data -->
+    <record id="action_employee_multi_request_data_confirmation" model="ir.actions.server">
+        <field name="name">طلب تأكيد البيانات</field>
+        <field name="model_id" ref="model_hr_employee"/>
+        <field name="binding_model_id" ref="model_hr_employee"/>
+        <field name="state">code</field>
+        <field name="code">
+            if records:
+            records.valid_is_confirm_info()
+        </field>
+    </record>
+
+    <!--    define field is confirm-->
+    <record id="hr_view_from_inherit" model="ir.ui.view">
+        <field name="name">hr.view.form</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="mk_master_models.view_employee_custom_form2"/>
+        <field name="arch" type="xml">
+            <xpath expr='//field[@name="job_id"]' position='after'>
+                <field name="is_confirm_info" groups=""/>
+            </xpath>
+        </field>
+    </record>
+
+    <!--  Employee quik registration-->
+    <record id="hr_center_admis_view_tree" model="ir.ui.view">
+        <field name="name">hr.employee.mk.tree</field>
+        <field name="model">hr.employee</field>
+        <field name="arch" type="xml">
+            <tree string="User" editable="top">
+                <field name="name" required="1"/>
+                <field name="identification_id" required="1"/>
+                <field name="mobile_phone" required="1"/>
+                <field name="recruit_ids" required="1" widget="many2many_tags"/>
+                <field name="category" required="1"/>
+                <field name="department_id" required="1"/>
+                <field name="gender" required="1"/>
+                <field name="marital" required="1"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_hr_center_admis" model="ir.actions.act_window">
+        <field name="name">Center Admins</field>
+        <field name="res_model">hr.employee</field>
+        <field name="binding_view_types">form</field>
+        <field name="view_mode">tree</field>
+        <field name="domain">[('category','=','center_admin')]</field>
+        <field name="context">{'default_category':'center_admin', 'default_category2':'center_admin'}</field>
+        <field name="view_id" ref="hr_center_admis_view_tree"/>
+        <field name="help">
+            Create New Hr user
+        </field>
+    </record>
+
+    <record id="hr_educational_supervisor_view_tree" model="ir.ui.view">
+        <field name="name">hr.employee.mk.tree</field>
+        <field name="model">hr.employee</field>
+        <field name="arch" type="xml">
+            <tree string="User" editable="top">
+                <field name="name" required="1"/>
+                <field name="identification_id" required="1"/>
+                <field name="mobile_phone" required="1"/>
+                <field name="recruit_ids" required="1" widget="many2many_tags"/>
+                <field name="category" required="1"/>
+                <field name="department_id" required="1"/>
+                <field name="mosque_sup" required="1" widget="many2many_tags"/>
+                <field name="gender" required="1"/>
+                <field name="marital" required="1"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="open_educational_supervisor" model="ir.actions.act_window">
+        <field name="name">Education supervisors</field>
+        <field name="res_model">hr.employee</field>
+        <field name="binding_view_types">form</field>
+        <field name="view_mode">tree</field>
+        <field name="domain">[('category','=','edu_supervisor')]</field>
+        <field name="context">{'default_category':'edu_supervisor','default_category2':'edu_supervisor'}</field>
+        <field name="view_id" ref="hr_educational_supervisor_view_tree" />
+        <field name="help">
+            Create New Hr user
+        </field>
+    </record>
+
+    <record id="hr_view_tree" model="ir.ui.view">
+        <field name="name">hr.employee.mk.tree</field>
+        <field name="model">hr.employee</field>
+        <field name="arch" type="xml">
+            <tree string="User" editable="top">
+                <field name="name" required="1"/>
+                <field name="identification_id" required="1"/>
+                <field name="mobile_phone" required="1"/>
+                <field name="recruit_ids" required="1" widget="many2many_tags"/>
+                <field name="category" required="1"/>
+                <field name="department_id" required="1"/>
+                <field name="mosqtech_ids" required="1" widget="many2many_tags" domain="[('center_department_id', '=', department_id.id)]"/>
+                <field name="gender" required="1"/>
+                <field name="marital" required="1"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="open__super" model="ir.actions.act_window">
+        <field name="name">Mosque's Supervisors</field>
+        <field name="res_model">hr.employee</field>
+        <field name="binding_view_types">form</field>
+        <field name="view_mode">tree</field>
+        <field name="domain">[('category','=','supervisor')]</field>
+        <field name="context">{'default_category':'supervisor','default_category2':'supervisor'}</field>
+        <field name="view_id" ref="hr_view_tree" />
+        <field name="help">
+            Create New Hr user
+        </field>
+    </record>
+
+    <record id="open_mosques_my_admin" model="ir.actions.act_window">
+        <field name="name">Mosques Admins</field>
+        <field name="res_model">hr.employee</field>
+        <field name="binding_view_types">form</field>
+        <field name="view_mode">tree</field>
+        <field name="domain">[('category','=','admin')]</field>
+        <field name="context">{'default_category':'admin','default_category2':'admin'}</field>
+        <field name="view_id" ref="hr_view_tree" />
+        <field name="help">
+            Create New Hr user
+        </field>
+    </record>
+
+    <record id="open_mosque_teach" model="ir.actions.act_window">
+        <field name="name">Mosque's Teachers</field>
+        <field name="res_model">hr.employee</field>
+        <field name="binding_view_types">form</field>
+        <field name="view_mode">tree</field>
+        <field name="domain">[('category','=','teacher')]</field>
+        <field name="context">{'default_category':'teacher','default_category2':'teacher'}</field>
+        <field name="view_id" ref="hr_view_tree" />
+        <field name="help">
+            Create New Hr user
+        </field>
+    </record>
+
+    <record id="open_service" model="ir.actions.act_window">
+        <field name="name">service</field>
+        <field name="res_model">hr.employee</field>
+        <field name="binding_view_types">form</field>
+        <field name="view_mode">tree</field>
+        <field name="domain">[('category','=','others')]</field>
+        <field name="context">{'default_category':'others','default_category2':'others'}</field>
+        <field name="view_id" ref="hr_view_tree" />
+        <field name="help">
+            Create New Hr user
+        </field>
+    </record>
+
+    <record id="open_drivers" model="ir.actions.act_window">
+        <field name="name">bus supervisor</field>
+        <field name="res_model">hr.employee</field>
+        <field name="binding_view_types">form</field>
+        <field name="view_mode">tree</field>
+        <field name="domain">[('category','=','bus_sup')]</field>
+        <field name="context">{'default_category':'bus_sup','default_category2':'bus_sup'}</field>
+        <field name="view_id" ref="hr_view_tree" />
+        <field name="help">
+            Create New Hr user
+        </field>
+    </record>
+
+    <record id="open_view_managment" model="ir.actions.act_window">
+        <field name="name">Managment</field>
+        <field name="res_model">hr.employee</field>
+        <field name="binding_view_types">form</field>
+        <field name="view_mode">tree</field>
+        <field name="domain">[('category','=','managment')]</field>
+        <field name="context">{'default_category':'managment', 'default_category2':'managment'}</field>
+        <field name="view_id" ref="hr_view_tree" />
+        <field name="help">
+            Create New Hr user
+        </field>
+    </record>
+
+    <menuitem id="menu_employee_quick_registration" name="Quick Registration"      parent="hr.menu_hr_root" sequence="200" groups="mk_master_models.group_read_employee"/>
+    <menuitem id="menu_employee_center"             name="Center admis"            parent="menu_employee_quick_registration"  action="action_hr_center_admis"      sequence="2" groups="mk_master_models.group_read_center"/>
+    <menuitem id="menu_open_employee_edu_sup"       name="Educational supervisors" parent="menu_employee_quick_registration"  action="open_educational_supervisor" sequence="3" groups="mk_master_models.group_read_employee_edu_sup"/>
+    <menuitem id="menu_open_employee_superv"        name="Mosque's Supervisors"    parent="menu_employee_quick_registration"  action="open__super"                 sequence="5" groups="mk_master_models.group_read_employee"/>
+    <menuitem id="menu_open_employee_admins"        name="Mosques Admins"          parent="menu_employee_quick_registration"  action="open_mosques_my_admin"       sequence="4" groups="mk_master_models.group_read_employee_admins"/>
+    <menuitem id="menu_open_employee_teacher"       name="Mosque's Teachers"       parent="menu_employee_quick_registration"  action="open_mosque_teach"           sequence="6" groups="mk_master_models.group_read_employee"/>
+    <menuitem id="menu_open_employee_service"       name="Service"                 parent="menu_employee_quick_registration"  action="open_service"                sequence="7" groups="mk_master_models.group_read_employee"/>
+    <menuitem id="menu_employee_drivers"            name="drivers"                 parent="menu_employee_quick_registration"  action="open_drivers"                sequence="8" groups="mk_master_models.group_read_employee"/>
+    <menuitem id="menu_employee_managments"         name="Managment"               parent="menu_employee_quick_registration"  action="open_view_managment"         sequence="9" groups="mk_master_models.group_read_employee"/>
+
+
+        <!--    action server add group read mosque supervisor request and permission  for supervisor employee -->
+    <record id="action_add_group_read_mosque_supervisor_request_and_permission" model="ir.actions.server">
+        <field name="name">اضافة صلاحيات الاطلاع على تصاريح و تكاليف المساجد</field>
+        <field name="model_id" ref="model_hr_employee"/>
+        <field name="binding_model_id" ref="model_hr_employee"/>
+        <field name="state">code</field>
+        <field name="code">
+            if records:
+            records.add_group_read_mosque_supervisor_request_and_permission()
+        </field>
+    </record>
+
+
+</odoo>

@@ -1,0 +1,2 @@
+id,name,manager_id/id,city_id/id,area_id/id,district_id/id
+106,مركز اشراف الوسط الجنوبي,mk_master_models.M_1,mk_master_models.City_1,mk_master_models.area_1,Disct_199

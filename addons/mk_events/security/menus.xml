@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<odoo>
+		<data>
+           <!--  events menuitem rules --> 
+			<record model='ir.ui.menu' id='event.menu_event_event'>
+				<field name='groups_id' eval="[(6,0,[ref('read_events')])]"/>
+			</record>
+
+		</data>
+</odoo>

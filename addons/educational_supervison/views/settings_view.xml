@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+  <data>
+
+    <!-- edu.name   -->
+    <record id="educational_supervison.form_name" model="ir.ui.view">
+      <field name="name">edu.name.form</field>
+      <field name="model">edu.name</field>
+      <field name="arch" type="xml">
+        <form delete="0">
+          <sheet>
+            <group>
+              <group>
+                <field name="number" required="1"/>
+              </group>
+              <group>
+                <field name="name" required="1"/>
+              </group>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <!-- edu.field   -->
+    <record id="educational_supervison.form_field" model="ir.ui.view">
+      <field name="name">edu.field.form</field>
+      <field name="model">edu.field</field>
+      <field name="arch" type="xml">
+        <form delete="0">
+          <sheet>
+            <group>
+              <group>
+                <field name="number" required="1"/>
+              </group>
+              <group>
+                <field name="name" required="1"/>
+                <field name="type_evaluation"/>
+              </group>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <!-- edu.visit   -->
+    <record id="educational_supervison.form_visit" model="ir.ui.view">
+      <field name="name">edu.visit.form</field>
+      <field name="model">edu.visit</field>
+      <field name="arch" type="xml">
+        <form delete="0">
+          <sheet>
+            <group>
+              <group>
+                <field name="number" required="1"/>
+              </group>
+              <group>
+                <field name="name" required="1"/>
+                <field name="is_suddenly" required="1"/>
+              </group>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <!-- edu.approve   -->
+    <record id="educational_supervison.form_approve" model="ir.ui.view">
+      <field name="name">edu.approve.form</field>
+      <field name="model">edu.approve</field>
+      <field name="arch" type="xml">
+        <form delete="0">
+          <sheet>
+            <group>
+              <group>
+                <field name="number" required="1"/>
+              </group>
+              <group>
+                <field name="name" required="1"/>
+              </group>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+  <!-- actions   -->
+    <act_window  id="educational_supervison.action_name"
+                 name="Names"
+                 res_model="edu.name"
+                 view_mode="tree,form"/>
+
+    <act_window  id="educational_supervison.action_field"
+                  name="Fields"
+                  res_model="edu.field"
+                  view_mode="tree,form"/>
+
+    <act_window  id="educational_supervison.action_visit"
+                 name="Visits"
+                 res_model="edu.visit"
+                 view_mode="tree,form"/>
+
+    <act_window  id="educational_supervison.action_approve"
+                 name="Approves"
+                 res_model="edu.approve"
+                 view_mode="tree,form"/>
+
+  <!-- menuitems   -->
+    <menuitem name="اﻹﺷﺮاﻑ اﻟﺘﺮﺑﻮﻱ" id="educational_supervison.menu_root"/>
+
+    <menuitem name="الإعدادات" id="educational_supervison.menu_settings" parent="educational_supervison.menu_root"/>
+    <menuitem name="مسميات اﻹﺷﺮاﻑ اﻟﺘﺮﺑﻮﻱ" id="educational_supervison.menu_name"  parent="educational_supervison.menu_settings" action="educational_supervison.action_name"  groups="educational_supervison.group_read_edu_name" />
+    <menuitem name="مجالات اﻹﺷﺮاﻑ اﻟﺘﺮﺑﻮﻱ"  id="educational_supervison.menu_field" parent="educational_supervison.menu_settings" action="educational_supervison.action_field" groups="educational_supervison.group_read_edu_field" />
+    <menuitem name="أنواع الزيارات" id="educational_supervison.menu_visit"   parent="educational_supervison.menu_settings" action="educational_supervison.action_visit"   groups="educational_supervison.group_read_edu_visit" />
+    <menuitem name="أنواع التوثيق"  id="educational_supervison.menu_approve" parent="educational_supervison.menu_settings" action="educational_supervison.action_approve" groups="educational_supervison.group_edit_edu_approve" />
+
+  </data>
+</odoo>

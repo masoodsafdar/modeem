@@ -1,0 +1,124 @@
+<odoo>
+    <data noupdate="1">
+        <record id="mk_parts1" model="mk.parts">
+            <field name="name">الجزء الأول</field>
+            <field name="order">1</field>
+        </record>
+        <record id="mk_parts2" model="mk.parts">
+            <field name="name">الجزء الثاني</field>
+            <field name="order">2</field>
+        </record>
+        <record id="mk_parts3" model="mk.parts">
+            <field name="name">الجزء الثالث</field>
+            <field name="order">3</field>
+        </record>
+        <record id="mk_parts4" model="mk.parts">
+            <field name="name">الجزء الرابع</field>
+            <field name="order">4</field>
+        </record>
+        <record id="mk_parts5" model="mk.parts">
+            <field name="name">الجزء الخامس</field>
+            <field name="order">5</field>
+        </record>
+        <record id="mk_parts6" model="mk.parts">
+            <field name="name">الجزء السادس</field>
+            <field name="order">6</field>
+        </record>
+        <record id="mk_parts7" model="mk.parts">
+            <field name="name">الجزء السابع</field>
+            <field name="order">7</field>
+        </record>
+        <record id="mk_parts8" model="mk.parts">
+            <field name="name">الجزء الثامن</field>
+            <field name="order">8</field>
+        </record>
+        <record id="mk_parts9" model="mk.parts">
+            <field name="name">الجزء التاسع</field>
+            <field name="order">9</field>
+        </record>
+        <record id="mk_parts10" model="mk.parts">
+            <field name="name">الجزء العاشر</field>
+            <field name="order">10</field>
+        </record>
+        <record id="mk_parts11" model="mk.parts">
+            <field name="name">الجزء الحادي عشر</field>
+            <field name="order">11</field>
+        </record>
+        <record id="mk_parts12" model="mk.parts">
+            <field name="name">الجزء الثاني عشر</field>
+            <field name="order">12</field>
+        </record>
+        <record id="mk_parts13" model="mk.parts">
+            <field name="name">الجزء الثالث عشر</field>
+            <field name="order">13</field>
+        </record>
+        <record id="mk_parts14" model="mk.parts">
+            <field name="name">الجزء الرابع عشر</field>
+            <field name="order">14</field>
+        </record>
+        <record id="mk_parts15" model="mk.parts">
+            <field name="name">الجزء الخامس عشر</field>
+            <field name="order">15</field>
+        </record>
+        <record id="mk_parts16" model="mk.parts">
+            <field name="name">الجزء السادس عشر</field>
+            <field name="order">16</field>
+        </record>
+        <record id="mk_parts17" model="mk.parts">
+            <field name="name">الجزء السابع عشر</field>
+            <field name="order">17</field>
+        </record>
+        <record id="mk_parts18" model="mk.parts">
+            <field name="name">الجزء الثامن عشر</field>
+            <field name="order">18</field>
+        </record>
+        <record id="mk_parts19" model="mk.parts">
+            <field name="name">الجزء التاسع عشر</field>
+            <field name="order">19</field>
+        </record>
+        <record id="mk_parts20" model="mk.parts">
+            <field name="name">الجزء العشرون</field>
+            <field name="order">20</field>
+        </record>
+        <record id="mk_parts21" model="mk.parts">
+            <field name="name">الجزء الحادي والعشرون</field>
+            <field name="order">21</field>
+        </record>
+        <record id="mk_parts22" model="mk.parts">
+            <field name="name">الجزء الثاني والعشرون</field>
+            <field name="order">22</field>
+        </record>
+        <record id="mk_parts23" model="mk.parts">
+            <field name="name">الجزء الثالث والعشرون</field>
+            <field name="order">23</field>
+        </record>
+        <record id="mk_parts24" model="mk.parts">
+            <field name="name">الجزء الرابع والعشرون</field>
+            <field name="order">24</field>
+        </record>
+        <record id="mk_parts25" model="mk.parts">
+            <field name="name">الجزء الخامس والعشرون</field>
+            <field name="order">25</field>
+        </record>
+        <record id="mk_parts26" model="mk.parts">
+            <field name="name">الجزء السادس والعشرون</field>
+            <field name="order">26</field>
+        </record>
+        <record id="mk_parts27" model="mk.parts">
+            <field name="name">الجزء السابع والعشرون</field>
+            <field name="order">27</field>
+        </record>
+        <record id="mk_parts28" model="mk.parts">
+            <field name="name">الجزء الثامن والعشرون</field>
+            <field name="order">28</field>
+        </record>
+        <record id="mk_parts29" model="mk.parts">
+            <field name="name">الجزء التاسع والعشرون</field>
+            <field name="order">29</field>
+        </record>
+        <record id="mk_parts30" model="mk.parts">
+            <field name="name">الجزء الثلاثون</field>
+            <field name="order">30</field>
+        </record>
+    </data>
+</odoo>

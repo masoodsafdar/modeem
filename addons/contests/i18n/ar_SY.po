@@ -1,0 +1,1293 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* contests
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0-20180627\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-07-10 07:34+0000\n"
+"PO-Revision-Date: 2019-07-10 07:34+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: contests
+#: model:ir.model.fields,field_description:contests.field_contest_preparation_name
+msgid " contest name"
+msgstr " إسم المسابقة"
+
+#. module: contests
+#: model:ir.ui.view,arch_db:contests.nominations_process_form_view
+msgid "<span class=\"oe_inline\"> years</span>"
+msgstr "<span class=\"oe_inline\"> سنوات </span>"
+
+#. module: contests
+#: selection:nomination.process,state:0
+msgid "Accept"
+msgstr "ترشيح"
+
+#. module: contests
+#: model:res.groups,name:contests.accept_or_deny_mosque_group
+msgid "Accept Or Deny Mosque"
+msgstr "قبول أو رفض مسجد"
+
+#. module: contests
+#: model:res.groups,name:contests.accept_reject_center_level_button_group
+msgid "Accept Or Reject Center level button"
+msgstr "قبول او رفض على مستوى المركز"
+
+#. module: contests
+#: model:res.groups,name:contests.accept_reject_organization_level_button_group
+msgid "Accept Or Reject Organization level Button"
+msgstr "قبول او رفض على مستوى الجمعية"
+
+#. module: contests
+#: selection:nomination.process,state:0
+msgid "Accept center"
+msgstr "تصديق المركز"
+
+#. module: contests
+#: selection:nomination.process,state:0
+msgid "Accept mosque"
+msgstr "تصديق المسجد"
+
+#. module: contests
+#: model:ir.model.fields,field_description:contests.field_mk_work_plan_achived
+msgid "Achieved"
+msgstr "منجز"
+
+#. module: contests
+#: model:ir.model.fields,field_description:contests.field_nomination_process_age
+msgid "Age"
+msgstr "العمر"
+
+#. module: contests
+#: model:ir.model.fields,field_description:contests.field_branches_age_cat
+msgid "Age cat"
+msgstr "الفئة العمرية"
+
+#. module: contests
+#: model:ir.model.fields,field_description:contests.field_branches_age_o
+msgid "Age order"
+msgstr "الترتيب"
+
+#. module: contests
+#: model:ir.model.fields,field_description:contests.field_branches_age_r
+msgid "Age range"
+msgstr "نطاق العمر"
+
+#. module: contests
+#: selection:contest.preparation,gender_type:0
+msgid "All"
+msgstr "All"
+
+#. module: contests
+#: model:ir.model.fields,field_description:contests.field_contest_preparation_gender_type
+msgid "Allowed gender"
+msgstr "الجنس"
+
+#. module: contests
+#: selection:branches,part_o:0
+msgid "Ascending"
+msgstr "تصاعدي"
+
+#. module: contests
+#: model:ir.model.fields,field_description:contests.field_mk_work_plan_attachment
+msgid "Attachement"
+msgstr "التوثيق"
+
+#. module: contests
+#: model:ir.model.fields,field_description:contests.field_nomination_process_branch
+msgid "Branch"
+msgstr "الفرع"
+
+#. module: contests
+#: model:ir.model.fields,field_description:contests.field_contest_preparation_branches
+#: model:ir.model.fields,field_description:contests.field_mk_results_test_branches
+#: model:ir.model.fields,field_description:contests.field_nomination_process_test_branches
+msgid "Branches"
+msgstr "فروع المسابقات"
+
+#. module: contests
+#: model:ir.model.fields,field_description:contests.field_contest_preparation_center_id
+#: model:ir.model.fields,field_description:contests.field_mk_results_center
+msgid "Center"
+msgstr "المركز"
+
+#. module: contests
+#: model:ir.model.fields,field_description:contests.field_contest_preparation_center_emp
+msgid "Center emp"
+msgstr "Center emp"
+
+#. module: contests
+#: model:ir.model.fields,field_description:contests.field_contest_preparation_conditions
+msgid "Conditions"
+msgstr "شروط المسابقة والتسجيل"
+
+#. module: contests
+#: model:ir.ui.view,arch_db:contests.mk_contests_types_form_view
+msgid "Contest Types"
+msgstr "أنواع المسابقات"
+
+#. module: contests
+#: model:ir.ui.view,arch_db:contests.Branches_form_view
+msgid "Contests Branches"
+msgstr "فروع المسابقات"
+
+#. module: contests
+#: model:ir.ui.menu,name:contests.contests_main_menu
+#: model:ir.ui.menu,name:contests.contests_menu
+msgid "Contests Management"
+msgstr "المسابقات"
+
+#. module: contests
+#: model:ir.ui.menu,name:contests.config_menu
+msgid "Contests config"
+msgstr "إعدادات المسابقات"
+
+#. module: contests
+#: model:res.groups,name:contests.create_contest_calendar_group
+msgid "Create Contests Calendar"
+msgstr "إنشاء تقويم المسابقات"
+
+#. module: contests
+#: model:res.groups,name:contests.create_contest_preparation_group
+msgid "Create Contests Preparation"
+msgstr "إنشاء سجل المسابقات"
+
+#. module: contests
+#: model:res.groups,name:contests.create_nomination_request_group
+msgid "Create Nomination Request"
+msgstr "إنشاء طلبات ترشيح"
+
+#. module: contests
+#: model:res.groups,name:contests.create_nomination_request_management_group
+msgid "Create Nomination Request Management"
+msgstr "إنشاء إدارة طلبات ترشيح"
+
+#. module: contests
+#: model:res.groups,name:contests.create_nominations_types_group
+msgid "Create Nominations Types"
+msgstr "إنشاء أنواع ترشيح"
+
+#. module: contests
+#: model:res.groups,name:contests.create_contest_regulations_group
+msgid "Create Regulations"
+msgstr "إنشاء لوائح"
+
+#. module: contests
+#: model:res.groups,name:contests.create_result_management_group
+msgid "Create Result Managemengt"
+msgstr "إنشاء إدارة نتائج"
+
+#. module: contests
+#: model:res.groups,name:contests.create_contest_stage_group
+msgid "Create Stage"
+msgstr "إنشاء مرحلة"
+
+#. module: contests
+#: model:res.groups,name:contests.create_contest_fields_group
+msgid "Create contest fields"
+msgstr "إنشاء مجال المسابقة"
+
+#. module: contests
+#: model:res.groups,name:contests.create_contest_diff_items_group
+msgid "Create diff items"
+msgstr "إنشاء بنود المفاضلة"
+
+#. module: contests
+#: model:ir.model.fields,field_description:contests.field_branches_create_uid
+#: model:ir.model.fields,field_description:contests.field_contest_calendar_create_uid
+#: model:ir.model.fields,field_description:contests.field_contest_diff_items_create_uid
+#: model:ir.model.fields,field_description:contests.field_contest_preparation_create_uid
+#: model:ir.model.fields,field_description:contests.field_contest_stages_create_uid
+#: model:ir.model.fields,field_description:contests.field_contest_type_create_uid
+#: model:ir.model.fields,field_description:contests.field_mk_contenst_fields_create_uid
+#: model:ir.model.fields,field_description:contests.field_mk_fields_items_create_uid
+#: model:ir.model.fields,field_description:contests.field_mk_results_create_uid
+#: model:ir.model.fields,field_description:contests.field_mk_work_plan_create_uid
+#: model:ir.model.fields,field_description:contests.field_nomination_process_create_uid
+#: model:ir.model.fields,field_description:contests.field_nomination_request_managment_create_uid
+#: model:ir.model.fields,field_description:contests.field_nomination_types_create_uid
+#: model:ir.model.fields,field_description:contests.field_regulations_create_uid
+#: model:ir.model.fields,field_description:contests.field_result_managment_create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: contests
+#: model:ir.model.fields,field_description:contests.field_branches_create_date
+#: model:ir.model.fields,field_description:contests.field_contest_calendar_create_date
+#: model:ir.model.fields,field_description:contests.field_contest_diff_items_create_date
+#: model:ir.model.fields,field_description:contests.field_contest_preparation_create_date
+#: model:ir.model.fields,field_description:contests.field_contest_stages_create_date
+#: model:ir.model.fields,field_description:contests.field_contest_type_create_date
+#: model:ir.model.fields,field_description:contests.field_mk_contenst_fields_create_date
+#: model:ir.model.fields,field_description:contests.field_mk_fields_items_create_date
+#: model:ir.model.fields,field_description:contests.field_mk_results_create_date
+#: model:ir.model.fields,field_description:contests.field_mk_work_plan_create_date
+#: model:ir.model.fields,field_description:contests.field_nomination_process_create_date
+#: model:ir.model.fields,field_description:contests.field_nomination_request_managment_create_date
+#: model:ir.model.fields,field_description:contests.field_nomination_types_create_date
+#: model:ir.model.fields,field_description:contests.field_regulations_create_date
+#: model:ir.model.fields,field_description:contests.field_result_managment_create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: contests
+#: model:ir.model.fields,field_description:contests.field_mk_work_plan_date
+#: model:ir.model.fields,field_description:contests.field_result_managment_date
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: contests
+#: model:ir.model.fields,field_description:contests.field_mk_work_plan_day
+msgid "Day"
+msgstr "اليوم"
+
+#. module: contests
+#: model:ir.model.fields,field_description:contests.field_mk_results_degree
+msgid "Degree"
+msgstr "المؤهل"
+
+#. module: contests
+#: model:ir.model.fields,field_description:contests.field_branches_display_name
+#: model:ir.model.fields,field_description:contests.field_contest_calendar_display_name
+#: model:ir.model.fields,field_description:contests.field_contest_diff_items_display_name
+#: model:ir.model.fields,field_description:contests.field_contest_preparation_display_name
+#: model:ir.model.fields,field_description:contests.field_contest_stages_display_name
+#: model:ir.model.fields,field_description:contests.field_contest_type_display_name
+#: model:ir.model.fields,field_description:contests.field_mk_contenst_fields_display_name
+#: model:ir.model.fields,field_description:contests.field_mk_fields_items_display_name
+#: model:ir.model.fields,field_description:contests.field_mk_results_display_name
+#: model:ir.model.fields,field_description:contests.field_mk_work_plan_display_name
+#: model:ir.model.fields,field_description:contests.field_nomination_process_display_name
+#: model:ir.model.fields,field_description:contests.field_nomination_request_managment_display_name
+#: model:ir.model.fields,field_description:contests.field_nomination_types_display_name
+#: model:ir.model.fields,field_description:contests.field_regulations_display_name
+#: model:ir.model.fields,field_description:contests.field_result_managment_display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: contests
+#: selection:nomination.process,state:0
+msgid "Draft"
+msgstr "مبدئي"
+
+#. module: contests
+#: model:ir.model.fields,field_description:contests.field_nomination_process_email
+msgid "Email"
+msgstr "البريد الإلكتروني"
+
+#. module: contests
+#: model:ir.model.fields,field_description:contests.field_contest_preparation_endD
+msgid "End Date"
+msgstr "تاريخ الإنتهاء"
+
+#. module: contests
+#: selection:contest.preparation,gender_type:0
+msgid "Female"
+msgstr "أنثى"
+
+#. module: contests
+#: model:ir.model.fields,field_description:contests.field_branches_from_p
+msgid "From part"
+msgstr "من جزء"
+
+#. module: contests
+#: model:ir.model.fields,field_description:contests.field_branches_id
+#: model:ir.model.fields,field_description:contests.field_contest_calendar_id
+#: model:ir.model.fields,field_description:contests.field_contest_diff_items_id
+#: model:ir.model.fields,field_description:contests.field_contest_preparation_id
+#: model:ir.model.fields,field_description:contests.field_contest_stages_id
+#: model:ir.model.fields,field_description:contests.field_contest_type_id
+#: model:ir.model.fields,field_description:contests.field_mk_contenst_fields_id
+#: model:ir.model.fields,field_description:contests.field_mk_fields_items_id
+#: model:ir.model.fields,field_description:contests.field_mk_results_id
+#: model:ir.model.fields,field_description:contests.field_mk_work_plan_id
+#: model:ir.model.fields,field_description:contests.field_nomination_process_id
+#: model:ir.model.fields,field_description:contests.field_nomination_request_managment_id
+#: model:ir.model.fields,field_description:contests.field_nomination_types_id
+#: model:ir.model.fields,field_description:contests.field_regulations_id
+#: model:ir.model.fields,field_description:contests.field_result_managment_id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: contests
+#: model:ir.model.fields,field_description:contests.field_nomination_process_identity_num
+msgid "Identitiy number"
+msgstr "رقم الهوية"
+
+#. module: contests
+#: model:ir.model.fields,field_description:contests.field_branches___last_update
+#: model:ir.model.fields,field_description:contests.field_contest_calendar___last_update
+#: model:ir.model.fields,field_description:contests.field_contest_diff_items___last_update
+#: model:ir.model.fields,field_description:contests.field_contest_preparation___last_update
+#: model:ir.model.fields,field_description:contests.field_contest_stages___last_update
+#: model:ir.model.fields,field_description:contests.field_contest_type___last_update
+#: model:ir.model.fields,field_description:contests.field_mk_contenst_fields___last_update
+#: model:ir.model.fields,field_description:contests.field_mk_fields_items___last_update
+#: model:ir.model.fields,field_description:contests.field_mk_results___last_update
+#: model:ir.model.fields,field_description:contests.field_mk_work_plan___last_update
+#: model:ir.model.fields,field_description:contests.field_nomination_process___last_update
+#: model:ir.model.fields,field_description:contests.field_nomination_request_managment___last_update
+#: model:ir.model.fields,field_description:contests.field_nomination_types___last_update
+#: model:ir.model.fields,field_description:contests.field_regulations___last_update
+#: model:ir.model.fields,field_description:contests.field_result_managment___last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: contests
+#: model:ir.model.fields,field_description:contests.field_branches_write_uid
+#: model:ir.model.fields,field_description:contests.field_contest_calendar_write_uid
+#: model:ir.model.fields,field_description:contests.field_contest_diff_items_write_uid
+#: model:ir.model.fields,field_description:contests.field_contest_preparation_write_uid
+#: model:ir.model.fields,field_description:contests.field_contest_stages_write_uid
+#: model:ir.model.fields,field_description:contests.field_contest_type_write_uid
+#: model:ir.model.fields,field_description:contests.field_mk_contenst_fields_write_uid
+#: model:ir.model.fields,field_description:contests.field_mk_fields_items_write_uid
+#: model:ir.model.fields,field_description:contests.field_mk_results_write_uid
+#: model:ir.model.fields,field_description:contests.field_mk_work_plan_write_uid
+#: model:ir.model.fields,field_description:contests.field_nomination_process_write_uid
+#: model:ir.model.fields,field_description:contests.field_nomination_request_managment_write_uid
+#: model:ir.model.fields,field_description:contests.field_nomination_types_write_uid
+#: model:ir.model.fields,field_description:contests.field_regulations_write_uid
+#: model:ir.model.fields,field_description:contests.field_result_managment_write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: contests
+#: model:ir.model.fields,field_description:contests.field_branches_write_date
+#: model:ir.model.fields,field_description:contests.field_contest_calendar_write_date
+#: model:ir.model.fields,field_description:contests.field_contest_diff_items_write_date
+#: model:ir.model.fields,field_description:contests.field_contest_preparation_write_date
+#: model:ir.model.fields,field_description:contests.field_contest_stages_write_date
+#: model:ir.model.fields,field_description:contests.field_contest_type_write_date
+#: model:ir.model.fields,field_description:contests.field_mk_contenst_fields_write_date
+#: model:ir.model.fields,field_description:contests.field_mk_fields_items_write_date
+#: model:ir.model.fields,field_description:contests.field_mk_results_write_date
+#: model:ir.model.fields,field_description:contests.field_mk_work_plan_write_date
+#: model:ir.model.fields,field_description:contests.field_nomination_process_write_date
+#: model:ir.model.fields,field_description:contests.field_nomination_request_managment_write_date
+#: model:ir.model.fields,field_description:contests.field_nomination_types_write_date
+#: model:ir.model.fields,field_description:contests.field_regulations_write_date
+#: model:ir.model.fields,field_description:contests.field_result_managment_write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: contests
+#: selection:contest.preparation,gender_type:0
+msgid "Male"
+msgstr "ذكر"
+
+#. module: contests
+#: model:ir.model.fields,field_description:contests.field_contest_preparation_mosque_id
+#: model:ir.model.fields,field_description:contests.field_mk_results_mosque_id
+msgid "Mosque"
+msgstr "المسجد"
+
+#. module: contests
+#: model:ir.model.fields,field_description:contests.field_contest_diff_items_name
+#: model:ir.model.fields,field_description:contests.field_contest_stages_name
+#: model:ir.model.fields,field_description:contests.field_contest_type_name
+#: model:ir.model.fields,field_description:contests.field_mk_contenst_fields_name
+#: model:ir.model.fields,field_description:contests.field_mk_fields_items_name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: contests
+#: model:ir.model.fields,field_description:contests.field_nomination_process_nomation_date
+#: model:ir.model.fields,field_description:contests.field_nomination_request_managment_nomation_date
+msgid "Nomation Date"
+msgstr "التاريخ"
+
+#. module: contests
+#: model:ir.model.fields,field_description:contests.field_mk_work_plan_notice
+msgid "Notice"
+msgstr "ملاحظات"
+
+#. module: contests
+#: model:ir.model.fields,field_description:contests.field_nomination_request_managment_notify
+msgid "Notify"
+msgstr "إشعار الطلاب برصد الدرجات"
+
+#. module: contests
+#: model:ir.model.fields,field_description:contests.field_mk_results_order
+msgid "Order"
+msgstr "الترتيب"
+
+#. module: contests
+#: model:ir.model.fields,field_description:contests.field_branches_other_info
+msgid "Other info"
+msgstr "معلومات أخرى"
+
+#. module: contests
+#: model:ir.model.fields,field_description:contests.field_contest_preparation_place
+#: model:ir.model.fields,field_description:contests.field_contest_stages_place
+#: model:ir.model.fields,field_description:contests.field_mk_work_plan_place
+msgid "Place"
+msgstr "الجهة"
+
+#. module: contests
+#: selection:branches,B_type:0
+msgid "Qaran"
+msgstr "قرآني"
+
+#. module: contests
+#: model:res.groups,name:contests.read_contest_preparation_group
+msgid "Read Contest Preparation"
+msgstr "قراءة سجل المسابقات"
+
+#. module: contests
+#: model:res.groups,name:contests.read_contest_calendar_group
+msgid "Read Contests Calendar"
+msgstr "قراءة تقويم المسابقات"
+
+#. module: contests
+#: model:res.groups,name:contests.read_nomination_request_management_group
+msgid "Read Nomination Request Management"
+msgstr "قراءة إدارة طلبات ترشيح"
+
+#. module: contests
+#: model:res.groups,name:contests.read_nomination_request_group
+msgid "Read Nomination Requests"
+msgstr "قراءة طلبات الترشيح"
+
+#. module: contests
+#: model:res.groups,name:contests.read_nominations_types_group
+msgid "Read Nominations Types"
+msgstr "قراءة أنواع الترشيح"
+
+#. module: contests
+#: model:res.groups,name:contests.read_contest_regulations_group
+msgid "Read Regulations"
+msgstr "قراءة لوائح"
+
+#. module: contests
+#: model:res.groups,name:contests.read_result_management_group
+msgid "Read Result Managemengt"
+msgstr "قراءة إدارة نتائج"
+
+#. module: contests
+#: selection:nomination.process,state:0
+msgid "Reject"
+msgstr "رفض"
+
+#. module: contests
+#: model:ir.model.fields,field_description:contests.field_contest_stages_stages
+msgid "Relation between stage & calender"
+msgstr "التقويم"
+
+#. module: contests
+#: model:ir.model.fields,field_description:contests.field_contest_stages_relation
+msgid "Relation between stage & contest"
+msgstr "Relation between stage & contest"
+
+#. module: contests
+#: model:ir.ui.view,arch_db:contests.result_managment_view_form_view
+msgid "Results"
+msgstr "النتائج"
+
+#. module: contests
+#: model:res.groups,name:contests.select_all_nomination_request_management_group
+msgid "Select All"
+msgstr "إختيار الكل"
+
+#. module: contests
+#: model:ir.ui.view,arch_db:contests.nominations_process_form_view
+msgid "Set to Draft"
+msgstr "عدم تفعيل"
+
+#. module: contests
+#: model:ir.model.fields,field_description:contests.field_contest_stages_end_D
+msgid "Stage End Date"
+msgstr "تاريخ النهاية"
+
+#. module: contests
+#: model:ir.model.fields,field_description:contests.field_contest_stages_Start_D
+msgid "Stage Start Date"
+msgstr "تاريخ البداية"
+
+#. module: contests
+#: model:ir.model.fields,field_description:contests.field_contest_stages_no
+msgid "Stage number"
+msgstr "رقم المرحلة"
+
+#. module: contests
+#: model:ir.model.fields,field_description:contests.field_contest_calendar_stage_relation
+msgid "Stage relation"
+msgstr "مراحل المسابقة"
+
+#. module: contests
+#: model:ir.model.fields,field_description:contests.field_contest_preparation_StartD
+msgid "Start Date"
+msgstr "تاريخ البدء"
+
+#. module: contests
+#: model:ir.model.fields,field_description:contests.field_mk_results_student
+msgid "Student"
+msgstr "اسم الطالب"
+
+#. module: contests
+#: model:ir.model.fields,field_description:contests.field_contest_preparation_Target_age_cat
+msgid "Target age categorys"
+msgstr "المرحلة العمرية"
+
+#. module: contests
+#: model:ir.model.fields,field_description:contests.field_contest_preparation_target_grade
+msgid "Target grade categorys"
+msgstr "الفئات المستهدفة"
+
+#. module: contests
+#: model:ir.model.fields,field_description:contests.field_mk_results_test_type
+#: model:ir.model.fields,field_description:contests.field_nomination_process_test_type
+msgid "Test Type"
+msgstr "اسم الاختبار"
+
+#. module: contests
+#: model:ir.model.fields,field_description:contests.field_branches_to_p
+msgid "To part"
+msgstr "إلي جزء"
+
+#. module: contests
+#: model:ir.model.fields,field_description:contests.field_nomination_process_track
+msgid "Track"
+msgstr "المسار"
+
+#. module: contests
+#: model:res.groups,name:contests.write_contest_calendar_group
+msgid "Write Contests Calendar"
+msgstr "تعديل تقويم المسابقات"
+
+#. module: contests
+#: model:res.groups,name:contests.write_contest_preparation_group
+msgid "Write Contests Preparation"
+msgstr "تعديل تسجيل المسابقات"
+
+#. module: contests
+#: model:res.groups,name:contests.write_nomination_request_group
+msgid "Write Nomination Request"
+msgstr "تعديل طلبات ترشيح"
+
+#. module: contests
+#: model:res.groups,name:contests.write_nomination_request_management_group
+msgid "Write Nomination Request Management"
+msgstr "تعديل إدارة طلبات ترشيح"
+
+#. module: contests
+#: model:res.groups,name:contests.write_nominations_types_group
+msgid "Write Nominations Types"
+msgstr "تعديل أنواع الترشيح"
+
+#. module: contests
+#: model:res.groups,name:contests.write_contest_regulations_group
+msgid "Write Regulations"
+msgstr "تعديل لوائح"
+
+#. module: contests
+#: model:res.groups,name:contests.write_result_management_group
+msgid "Write Result Managemengt"
+msgstr "تعديل إدارة نتائج"
+
+#. module: contests
+#: model:res.groups,name:contests.write_contest_fields_group
+msgid "Write contest fields"
+msgstr "تعديل مجال المسابقة"
+
+#. module: contests
+#: model:res.groups,name:contests.write_contest_diff_items_group
+msgid "Write contest_diff_items"
+msgstr "تعديل بنود المفاضلة"
+
+#. module: contests
+#: model:ir.ui.view,arch_db:contests.nomination_request_managment_form_view
+msgid "accept"
+msgstr "موافقة"
+
+#. module: contests
+#: model:ir.ui.view,arch_db:contests.nomination_request_managment_form_view
+msgid "accept center"
+msgstr " تأكيد المركز"
+
+#. module: contests
+#: model:ir.ui.view,arch_db:contests.nominations_process_form_view
+msgid "accept mosque"
+msgstr "تصديق المسجد"
+
+#. module: contests
+#: selection:mk.work_plan,achived:0
+msgid "achived"
+msgstr "خيارات"
+
+#. module: contests
+#: selection:branches,age_o:0
+msgid "ascending"
+msgstr "تصاعدي"
+
+#. module: contests
+#: model:ir.ui.view,arch_db:contests.nomination_request_managment_form_view
+msgid "attach file"
+msgstr "ارفاق ملف"
+
+#. module: contests
+#: model:ir.model.fields,field_description:contests.field_contest_preparation_attachment
+msgid "attachment"
+msgstr "مرفق لوائح المسابقة"
+
+#. module: contests
+#: model:ir.model.fields,field_description:contests.field_nomination_process_birth_place
+msgid "birth place"
+msgstr "مكان الميلاد"
+
+#. module: contests
+#: model:ir.model.fields,field_description:contests.field_nomination_process_birthdate
+msgid "birthdate"
+msgstr "تاريخ الميلاد"
+
+#. module: contests
+#: model:ir.model.fields,field_description:contests.field_branches_B_type
+msgid "branche Type"
+msgstr "النوع"
+
+#. module: contests
+#: model:ir.model.fields,field_description:contests.field_branches_name
+msgid "branche name"
+msgstr "إسم الفرع"
+
+#. module: contests
+#: model:ir.model.fields,field_description:contests.field_branches_no
+msgid "branche number"
+msgstr "رقم الفرع"
+
+#. module: contests
+#: model:ir.model,name:contests.model_branches
+msgid "branches"
+msgstr "فروع المسابقات"
+
+#. module: contests
+#: model:ir.model.fields,field_description:contests.field_nomination_request_managment_candidaties
+#: model:ir.model.fields,field_description:contests.field_nomination_request_managment_man
+#: model:ir.model.fields,field_description:contests.field_nomination_request_managment_managers
+msgid "candidates"
+msgstr "المرشحون"
+
+#. module: contests
+#: model:ir.ui.view,arch_db:contests.nomination_request_managment_form_view
+msgid "candidaties student"
+msgstr "الطلاب المرشحين"
+
+#. module: contests
+#: selection:contest.preparation,place:0
+msgid "center_level"
+msgstr "على مستوى المركز"
+
+#. module: contests
+#: model:ir.model.fields,field_description:contests.field_contest_preparation_diff_items
+msgid "contenst differentiation items"
+msgstr "بنود المفاضلة"
+
+#. module: contests
+#: model:ir.model.fields,field_description:contests.field_contest_preparation_contest_fields
+msgid "contenst fields"
+msgstr "مجال  / مجالات المسابقة"
+
+#. module: contests
+#: model:ir.model.fields,field_description:contests.field_contest_diff_items_contest_id
+#: model:ir.model.fields,field_description:contests.field_mk_news_contest
+#: model:ir.model.fields,field_description:contests.field_nomination_process_contest
+#: model:ir.model.fields,field_description:contests.field_nomination_request_managment_contest
+#: model:ir.model.fields,field_description:contests.field_result_managment_contest
+msgid "contest"
+msgstr "المسابقة"
+
+#. module: contests
+#: model:ir.model.fields,field_description:contests.field_contest_type_method
+msgid "contest field"
+msgstr "المجال"
+
+#. module: contests
+#: model:ir.model.fields,field_description:contests.field_contest_preparation_gools
+msgid "contest gools"
+msgstr "اهداف المسابقة"
+
+#. module: contests
+#: model:ir.model.fields,field_description:contests.field_contest_calendar_name
+msgid "contest name"
+msgstr "إسم المسابقة"
+
+#. module: contests
+#: model:ir.model.fields,field_description:contests.field_contest_preparation_contest_type
+msgid "contest type"
+msgstr "نوع المسابقة"
+
+#. module: contests
+#: model:ir.model,name:contests.model_contest_calendar
+msgid "contest.calendar"
+msgstr "تقويم المسابقات"
+
+#. module: contests
+#: model:ir.model,name:contests.model_contest_diff_items
+msgid "contest.diff.items"
+msgstr "contest.diff.items"
+
+#. module: contests
+#: model:ir.model,name:contests.model_contest_preparation
+msgid "contest.preparation"
+msgstr "سجل المسابقات"
+
+#. module: contests
+#: model:ir.model,name:contests.model_contest_stages
+msgid "contest.stages"
+msgstr "مراحل المسابقات"
+
+#. module: contests
+#: model:ir.model,name:contests.model_contest_type
+msgid "contest.type"
+msgstr "contest.type"
+
+#. module: contests
+#: model:ir.model.fields,field_description:contests.field_mk_test_names_is_contest
+#: model:ir.ui.menu,name:contests.contests
+msgid "contests"
+msgstr "مسابقات"
+
+#. module: contests
+#: model:ir.actions.act_window,name:contests.contests_Branches_action
+msgid "contests Branches"
+msgstr "فروع المسابقات"
+
+#. module: contests
+#: model:ir.ui.menu,name:contests.mk_contests_regulatoins_preparation_menu
+msgid "contests Regulations"
+msgstr "لوائح المسابقات"
+
+#. module: contests
+#: model:ir.ui.menu,name:contests.contests_calendar_menu
+msgid "contests calendar"
+msgstr "تقويم المسابقات"
+
+#. module: contests
+#: model:ir.actions.act_window,name:contests.contests_calendar_action
+msgid "contests calendar action"
+msgstr "تقويم المسابقات"
+
+#. module: contests
+#: model:ir.actions.act_window,name:contests.contests_diff_items_action
+msgid "contests diff items"
+msgstr "بنود المفاضلة"
+
+#. module: contests
+#: model:ir.ui.menu,name:contests.contests_fields_menu
+msgid "contests fields"
+msgstr "مجال المسابقة"
+
+#. module: contests
+#: model:ir.actions.act_window,name:contests.contests_fields_action
+msgid "contests fields action"
+msgstr "مجال المسابقة"
+
+#. module: contests
+#: model:ir.ui.view,arch_db:contests.contest_preparation_form_view
+msgid "contests preparation"
+msgstr "لوائح المسابقات"
+
+#. module: contests
+#: model:ir.actions.act_window,name:contests.contests_preparation_action
+#: model:ir.ui.menu,name:contests.contests_preparations_menu
+msgid "contests preparations"
+msgstr "سجل المسابقات"
+
+#. module: contests
+#: model:ir.ui.view,arch_db:contests.mk_contests_regulatoins_preparation_form_view
+msgid "contests regulatoins"
+msgstr "لوائح المسابقات"
+
+#. module: contests
+#: model:ir.actions.act_window,name:contests.mk_contests_regulatoins_preparation_action
+msgid "contests regulatoins preparation"
+msgstr "لوائح المسابقات"
+
+#. module: contests
+#: model:ir.actions.act_window,name:contests.contests_types_action
+#: model:ir.ui.menu,name:contests.contests_types_menu
+msgid "contests types"
+msgstr "نوع المسابقة"
+
+#. module: contests
+#: model:ir.ui.view,arch_db:contests.mk_contests_regulatoins_preparation_tree_view
+msgid "contests_regulatoins_preparation"
+msgstr "لوائح المسابقات"
+
+#. module: contests
+#: model:res.groups,name:contests.create_contest_types_group
+msgid "create Contest types"
+msgstr "إنشاء أنواع المسابقات"
+
+#. module: contests
+#: selection:contest.stages,place:0
+msgid "department"
+msgstr "مركز"
+
+#. module: contests
+#: selection:branches,age_o:0
+#: selection:branches,part_o:0
+msgid "descending"
+msgstr "تنازلي"
+
+#. module: contests
+#: model:ir.model.fields,field_description:contests.field_nomination_process_degree
+msgid "edud egree"
+msgstr "المؤهل العلمي"
+
+#. module: contests
+#: model:ir.model.fields,field_description:contests.field_nomination_process_candidate_hr
+#: model:ir.model.fields,field_description:contests.field_nomination_process_candidate_outsource
+msgid "employee name"
+msgstr "اسم الموظف"
+
+#. module: contests
+#: model:ir.model.fields,field_description:contests.field_contest_calendar_ED
+msgid "end Date"
+msgstr "تاريخ النهاية"
+
+#. module: contests
+#: selection:contest.stages,place:0
+#: model:ir.model.fields,field_description:contests.field_nomination_process_episode
+msgid "episode"
+msgstr "حلقة"
+
+#. module: contests
+#: model:ir.model.fields,field_description:contests.field_mk_contenst_fields_field_item_ids
+msgid "field items"
+msgstr "بنود المجال"
+
+#. module: contests
+#: model:ir.model.fields,field_description:contests.field_mk_fields_items_field_id
+msgid "fields"
+msgstr "المجالات"
+
+#. module: contests
+#: selection:mk.work_plan,day:0
+msgid "friday"
+msgstr "الجمعة"
+
+#. module: contests
+#: model:ir.model.fields,field_description:contests.field_nomination_process_agree_terms
+msgid "i agree all terms"
+msgstr "اتعهد بصحة البيانات السابقة"
+
+#. module: contests
+#: model:ir.model.fields,field_description:contests.field_nomination_process_identity
+msgid "identity"
+msgstr "مرفق الهوية"
+
+#. module: contests
+#: model:ir.model.fields,field_description:contests.field_contest_preparation_is_quran
+msgid "is qran"
+msgstr "قرآنى"
+
+#. module: contests
+#: model:ir.model.fields,field_description:contests.field_nomination_process_is_quran
+msgid "is quran"
+msgstr "قراني"
+
+#. module: contests
+#: selection:nomination.process,nomination_type:0
+msgid "manager"
+msgstr "إداري"
+
+#. module: contests
+#: model:ir.model,name:contests.model_mk_contenst_fields
+msgid "mk.contenst.fields"
+msgstr "mk.contenst.fields"
+
+#. module: contests
+#: model:ir.model,name:contests.model_mk_fields_items
+msgid "mk.fields.items"
+msgstr "mk.fields.items"
+
+#. module: contests
+#: model:ir.model,name:contests.model_mk_news
+msgid "mk.news"
+msgstr "mk.news"
+
+#. module: contests
+#: model:ir.model,name:contests.model_mk_test_names
+msgid "mk.test.names"
+msgstr "mk.test.names"
+
+#. module: contests
+#: selection:mk.work_plan,day:0
+msgid "monday"
+msgstr "الاثنين"
+
+#. module: contests
+#: model:ir.model.fields,field_description:contests.field_nomination_process_mosque
+msgid "mosque"
+msgstr "المسجد/ المدرسة"
+
+#. module: contests
+#: selection:contest.preparation,place:0
+msgid "mosque_level"
+msgstr "على مستوى المسجد"
+
+#. module: contests
+#: model:ir.model.fields,field_description:contests.field_nomination_process_nationality
+msgid "nationality"
+msgstr "الجنسية"
+
+#. module: contests
+#: model:ir.ui.view,arch_db:contests.nomination_request_managment_form_view
+msgid "nominate"
+msgstr "ترشيخ"
+
+#. module: contests
+#: model:ir.ui.view,arch_db:contests.nomination_request_managment_form_view
+msgid "nominate all"
+msgstr "ترشيح الكل"
+
+#. module: contests
+#: model:ir.ui.view,arch_db:contests.mk_nomination_types_preparation_search_view
+msgid "nomination"
+msgstr "انواع الترشيحات"
+
+#. module: contests
+#: model:ir.model.fields,field_description:contests.field_nomination_types_code
+msgid "nomination code"
+msgstr "الرمز"
+
+#. module: contests
+#: model:ir.model.fields,field_description:contests.field_mk_results_nomination_request
+#: model:ir.model.fields,field_description:contests.field_mk_work_plan_nomination_request
+#: model:ir.model.fields,field_description:contests.field_nomination_request_managment_work_plan_ids
+msgid "nomination request"
+msgstr "nomination request"
+
+#. module: contests
+#: model:ir.ui.menu,name:contests.nomination_request_managment_menu
+#: model:ir.ui.view,arch_db:contests.nomination_request_managment_form_view
+#: model:ir.ui.view,arch_db:contests.nomination_request_managment_tree_view
+msgid "nomination request managment"
+msgstr "إدارة طلبات الترشيح"
+
+#. module: contests
+#: model:ir.actions.act_window,name:contests.nomination_request_managment_action
+msgid "nomination request managment programs"
+msgstr "ادارة طلبات المترشحين و التحضير"
+
+#. module: contests
+#: model:ir.model.fields,field_description:contests.field_nomination_process_nomination_type
+msgid "nomination type"
+msgstr "نوع المرشح"
+
+#. module: contests
+#: model:ir.model.fields,field_description:contests.field_nomination_types_name
+msgid "nomination type name"
+msgstr "إسم نوع التصفية"
+
+#. module: contests
+#: model:ir.ui.menu,name:contests.mk_nomination_types_preparation_menu
+#: model:ir.ui.view,arch_db:contests.mk_nomination_types_preparation_form_view
+msgid "nomination types"
+msgstr "أنواع التصفيات"
+
+#. module: contests
+#: model:ir.ui.view,arch_db:contests.mk_contests_types_tree_view
+#: model:ir.ui.view,arch_db:contests.mk_nomination_types_preparation_tree_view
+msgid "nomination types preparation"
+msgstr "طلبات الترشيح"
+
+#. module: contests
+#: model:ir.actions.act_window,name:contests.mk_nomination_types_preparation_action
+msgid "nomination types preparations"
+msgstr "أنواع التصفيات"
+
+#. module: contests
+#: model:ir.model,name:contests.model_nomination_process
+msgid "nomination.process"
+msgstr "nomination.process"
+
+#. module: contests
+#: model:ir.model,name:contests.model_nomination_request_managment
+msgid "nomination.request.managment"
+msgstr "nomination.request.managment"
+
+#. module: contests
+#: model:ir.model.fields,field_description:contests.field_nomination_request_managment_nomination_type
+msgid "nomination.type"
+msgstr "نوع الترشيح"
+
+#. module: contests
+#: model:ir.model,name:contests.model_nomination_types
+msgid "nomination.types"
+msgstr "انواع الترشيحات"
+
+#. module: contests
+#: model:ir.ui.menu,name:contests.nominations_process_menu
+#: model:ir.ui.view,arch_db:contests.nominations_process_form_view
+#: model:ir.ui.view,arch_db:contests.nominations_process_tree_view
+msgid "nominations process"
+msgstr "طلبات الترشيح"
+
+#. module: contests
+#: model:ir.actions.act_window,name:contests.nominations_process_action
+msgid "طلبات ترشيح طلاب الجمعية"
+msgstr "طلبات ترشيح طلاب الجمعية"
+
+#. module: contests
+#: selection:mk.work_plan,achived:0
+msgid "not achived"
+msgstr "غير منجز"
+
+#. module: contests
+#: selection:branches,age_r:0
+msgid "not specified"
+msgstr "مفتوح"
+
+#. module: contests
+#: selection:branches,B_type:0
+msgid "other"
+msgstr "اخرى"
+
+#. module: contests
+#: model:ir.model.fields,field_description:contests.field_nomination_process_out_source
+msgid "out of company"
+msgstr "المرشح من خارج الجمعية"
+
+#. module: contests
+#: model:ir.model.fields,field_description:contests.field_nomination_process_parent_phone
+msgid "parent phone"
+msgstr "جوال ولي الأمر"
+
+#. module: contests
+#: model:ir.model.fields,field_description:contests.field_branches_part_o
+msgid "part order"
+msgstr "الترتيب"
+
+#. module: contests
+#: model:ir.model.fields,field_description:contests.field_branches_performance
+msgid "performance"
+msgstr "اداء"
+
+#. module: contests
+#: model:ir.model.fields,field_description:contests.field_nomination_process_previous_contests
+#: model:ir.ui.view,arch_db:contests.nominations_process_form_view
+msgid "previous contests"
+msgstr "المشاركات السابقة"
+
+#. module: contests
+#: selection:contest.type,method:0
+msgid "program field"
+msgstr "program field"
+
+#. module: contests
+#: model:ir.model.fields,field_description:contests.field_mk_work_plan_program_name
+msgid "program name"
+msgstr "اسم البرنامج"
+
+#. module: contests
+#: selection:contest.type,method:0
+msgid "quran field"
+msgstr "quran field"
+
+#. module: contests
+#: model:ir.ui.view,arch_db:contests.nomination_request_managment_form_view
+#: selection:nomination.process,nomination_type:0
+msgid "refree"
+msgstr "محكم"
+
+#. module: contests
+#: model:ir.ui.view,arch_db:contests.mk_contests_regulatoins_preparation_search_view
+msgid "regulation"
+msgstr "اللوائح"
+
+#. module: contests
+#: model:ir.model.fields,field_description:contests.field_regulations_name
+msgid "regulation name"
+msgstr "إسم اللائحة"
+
+#. module: contests
+#: model:ir.model.fields,field_description:contests.field_regulations_no
+msgid "regulation no"
+msgstr "رمز اللائحة"
+
+#. module: contests
+#: model:ir.model,name:contests.model_regulations
+msgid "regulations"
+msgstr "اللوائح"
+
+#. module: contests
+#: model:ir.ui.view,arch_db:contests.nomination_request_managment_form_view
+msgid "reject"
+msgstr "رفض"
+
+#. module: contests
+#: model:ir.ui.view,arch_db:contests.nomination_request_managment_form_view
+msgid "reject center"
+msgstr "رفض"
+
+#. module: contests
+#: model:ir.ui.view,arch_db:contests.nominations_process_form_view
+msgid "reject mosque"
+msgstr "رفض"
+
+#. module: contests
+#: model:ir.model.fields,field_description:contests.field_nomination_process_request
+msgid "request"
+msgstr "طلب نقل"
+
+#. module: contests
+#: model:ir.ui.menu,name:contests.result_managment_view_menu
+#: model:ir.ui.view,arch_db:contests.result_managment_view_form_view
+#: model:ir.ui.view,arch_db:contests.result_managment_view_tree_view
+msgid "result managment"
+msgstr "إدارة النتائج"
+
+#. module: contests
+#: model:ir.actions.act_window,name:contests.result_managment_view_action
+msgid "result managment programs"
+msgstr "إدارة النتائج"
+
+#. module: contests
+#: model:ir.model.fields,field_description:contests.field_mk_results_result_id
+msgid "result request"
+msgstr "result request"
+
+#. module: contests
+#: model:ir.model,name:contests.model_result_managment
+msgid "result.managment"
+msgstr "result.managment"
+
+#. module: contests
+#: model:ir.model,name:contests.model_mk_results
+#: model:ir.model.fields,field_description:contests.field_nomination_request_managment_result_ids
+#: model:ir.model.fields,field_description:contests.field_result_managment_result_ids
+msgid "results"
+msgstr "النتائج"
+
+#. module: contests
+#: selection:mk.work_plan,day:0
+msgid "saturday"
+msgstr "السبت"
+
+#. module: contests
+#: model:ir.model.fields,field_description:contests.field_branches_sound_g
+msgid "sound goodness"
+msgstr "حسن الصوت"
+
+#. module: contests
+#: selection:branches,age_r:0
+msgid "specified"
+msgstr "محدد"
+
+#. module: contests
+#: model:ir.model.fields,field_description:contests.field_contest_calendar_SD
+msgid "start Date"
+msgstr " تاريخ البداية"
+
+#. module: contests
+#: model:ir.model.fields,field_description:contests.field_nomination_process_state
+msgid "state"
+msgstr "الحالة"
+
+#. module: contests
+#: model:ir.ui.view,arch_db:contests.nominations_process_tree_view
+msgid "status"
+msgstr "الحالة"
+
+#. module: contests
+#: selection:nomination.process,nomination_type:0
+msgid "student"
+msgstr "طالب"
+
+#. module: contests
+#: model:ir.model.fields,field_description:contests.field_nomination_process_candidate_student
+#: model:ir.model.fields,field_description:contests.field_nomination_process_name
+msgid "student name"
+msgstr "إسم الطالب"
+
+#. module: contests
+#: model:ir.model.fields,field_description:contests.field_mk_results_student_phone
+#: model:ir.model.fields,field_description:contests.field_nomination_process_student_phone
+msgid "student phone"
+msgstr "جوال الطالب"
+
+#. module: contests
+#: selection:mk.work_plan,day:0
+msgid "sunday"
+msgstr "الأحد"
+
+#. module: contests
+#: model:ir.model.fields,field_description:contests.field_branches_tfseer
+msgid "tfseer"
+msgstr "تفسير"
+
+#. module: contests
+#: selection:mk.work_plan,day:0
+msgid "thursday"
+msgstr "الخميس"
+
+#. module: contests
+#: model:ir.model.fields,field_description:contests.field_branches_tjweed
+msgid "tjweed"
+msgstr "تجويد"
+
+#. module: contests
+#: selection:mk.work_plan,day:0
+msgid "tuesday"
+msgstr "الاربعاء"
+
+#. module: contests
+#: selection:mk.work_plan,day:0
+msgid "wednesday"
+msgstr "الثلاثاء"
+
+#. module: contests
+#: model:ir.model,name:contests.model_mk_work_plan
+#: model:ir.ui.view,arch_db:contests.nomination_request_managment_form_view
+msgid "work plan"
+msgstr "خطة العمل"
+
+#. module: contests
+#: model:res.groups,name:contests.write_contest_types_group
+msgid "write Contest types"
+msgstr "تعديل أنواع المسابقات"
+
+#. module: contests
+#: model:ir.module.category,name:contests.contests_access_categ
+msgid "إدارة المسابقات"
+msgstr "إدارة المسابقات"
+
+#. module: contests
+#: model:ir.model.fields,field_description:contests.field_contest_preparation_test_id
+msgid "اسم المسابقة"
+msgstr "اسم المسابقة"
+
+#. module: contests
+#: model:ir.ui.view,arch_db:contests.contest_preparation_form_view
+msgid "الفروع"
+msgstr "الفروع"
+
+#. module: contests
+#: model:ir.model.fields,field_description:contests.field_contest_preparation_brochure
+msgid "برشور  المسابقة"
+msgstr "برشور  المسابقة"
+
+#. module: contests
+#: model:ir.ui.view,arch_db:contests.contest_preparation_form_view
+msgid "بنود المفاضلة"
+msgstr "بنود المفاضلة"
+
+#. module: contests
+#: model:ir.model.fields,field_description:contests.field_contest_preparation_brochure_active
+msgid "تفعيل البرشور على البورتال"
+msgstr "تفعيل البرشور على الموقع"
+
+#. module: contests
+#: selection:contest.preparation,place:0
+msgid "على مستوى الجمعية  "
+msgstr "على مستوى الجمعية  "
+

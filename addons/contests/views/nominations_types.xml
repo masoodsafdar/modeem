@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+		<record id="mk_nomination_types_preparation_form_view" model="ir.ui.view">
+		    <field name="name">nomination types preparation form</field>
+		    <field name="model">nomination.types</field>
+		    <field name="arch" type="xml">
+            <form string="نوع التصفية">
+				  <header></header>
+				  <sheet>
+					  <group>
+					  	<group>
+					  		<field name="name" required="1" string="إسم نوع التصفية"/>
+				  		</group>
+					  	<group>
+					  		<field name="code" required="1"/>
+						</group>
+				  	</group>
+			  	</sheet>
+            </form>
+            </field>
+		</record>
+
+		<record id="mk_nomination_types_preparation_tree_view" model="ir.ui.view">
+	    	<field name="name">nomination types preparation tree</field>
+		    <field name="model">nomination.types</field>
+		    <field name="arch" type="xml">
+                <tree delete="0" string="أنواع التصفيات">
+                	<field name="name" string="إسم نوع التصفية"/>
+                	<field name="code" />
+                </tree>
+            </field>
+		</record>
+		
+		<record id="mk_nomination_types_preparation_search_view" model="ir.ui.view">
+		        <field name="name">nomination types preparation search</field>
+		    	<field name="model">nomination.types</field>
+		   		<field name="arch" type="xml">
+		    	<search>
+		    		<field name="name"/>
+		    		<field name="code"/>
+		    		<filter string="nomination" domain=""/>
+		    	</search>
+		    </field>
+		</record>
+
+		<record id="mk_nomination_types_preparation_action" model="ir.actions.act_window">
+			<field name="name">nomination types preparations</field>
+            <field name="res_model">nomination.types</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+            <field name="search_view_id" ref="mk_nomination_types_preparation_search_view"/>
+		</record>
+
+        <menuitem id="mk_nomination_types_preparation_menu"
+	              name="أنواع التصفيات"
+	              action="mk_nomination_types_preparation_action"
+	              parent="config_menu"
+	              sequence="5"
+	              groups="read_nominations_types_group"/>
+              	
+	 </data>
+</openerp>
+

@@ -1,0 +1,31 @@
+<odoo>
+	<data noupdate="1">
+		<record model="mk.test.center.prepration" id="mk_test_center_prepration4">
+			<field name="place_options">at</field>
+			<field name="latitude">0</field>
+			<field name="longtitude">0</field>
+			<field name="main_center">مركز إشراف الوسط</field>
+			<field name="academic_id" ref="mk_study_year1"/>
+			<field name="study_class_id" ref="mk_study_class1"/>
+			<field name="center_group">student</field>
+			<field name="center_id" ref="mak_test_center4"/>
+			<field name="website_registeration">1</field>
+			<field name="all_branches">1</field>
+			<field name="flag">1</field>
+			
+			<field name="registeration_start_date">2020-12-01</field>
+			<field name="registeration_end_date">2020-12-31</field>
+
+			<field name="exam_start_date">2020-12-01</field>
+			<field name="exam_end_date">2020-12-31</field>			
+
+			<field name="monday">1</field>
+			<field name="thursday">1</field>
+			
+			<!-- field name="periods_ids" -->
+			<!-- field name="department_ids" -->
+			<!-- field name="test_names" -->
+			<!-- field name="branches_ids" -->
+		</record>
+	</data>  
+</odoo>

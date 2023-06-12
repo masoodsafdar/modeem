@@ -1,0 +1,14 @@
+<odoo>
+    <data noupdate="1">
+        <record id="mk_report_config1" model="mk.report.config">
+            <field name="company_id" ref="base.main_company"/>
+            <field name="print_with_header" eval="True"/>
+            <field name="print_with_footer" eval="True"/>
+        </record>
+        <record id="mk_report_config2" model="mk.report.config">
+            <field name="company_id" ref="base.main_company"/>
+            <field name="print_with_header" eval="True"/>
+            <field name="print_with_footer" eval="True"/>
+        </record>
+    </data>
+</odoo>

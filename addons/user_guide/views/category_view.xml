@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="user_guide_category_form_view" model="ir.ui.view">
+            <field name="name">user.guide.category.form.view</field>
+            <field name="model">user.guide.category</field>
+            <field name="arch" type="xml">
+                <form class="oe_form_configuration">
+                    <sheet>
+                        <div class="oe_title">
+                            <label class="oe_edit_only" for="name" string="Category Name"/>
+                            <h1><field name="name"  required="1" placeholder="e.g. Category"/></h1>
+                        </div>
+                        <group>
+                            <field name="department_id"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+         <record id="user_guide_category_tree_view" model="ir.ui.view">
+            <field name="name">user.guide.category.tree.view</field>
+            <field name="model">user.guide.category</field>
+            <field name="arch" type="xml">
+                    <tree string="Guide Category">
+                        <field name ="name"/>
+                        <field name ="department_id"/>
+                    </tree>
+            </field>
+        </record>
+
+        <record id="user_guide_category_action" model="ir.actions.act_window">
+            <field name="name">Guide Categories</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">user.guide.category</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- <menuitem id="menu_user_guide_root" name="User Guide" sequence="-999"/> -->
+        <menuitem
+            id="user_guide.menu_user_guide_category"
+            name="Categories"
+            sequence="2"
+            parent="menu_user_guide_root"
+            action="user_guide_category_action"
+            groups="user_guide.user_guide_group_manager" />
+
+
+    </data>
+</odoo>

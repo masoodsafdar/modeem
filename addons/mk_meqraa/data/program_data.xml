@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+    
+		<record id="program_meqraa" model="mk.programs">
+		    <field name="name">برنامج المقراة(حفظ)</field>
+		    <field name="state">active</field>
+		    <field name="is_program_meqraa" eval="True"/>
+		    <field name="program_type">open</field>
+		    <field name="mail" eval="True"/>
+		    <field name="femail" eval="True"/>
+		    <field name="memorize" eval="True"/>
+		</record>
+		
+		<record id="approache_meqraa1" model="mk.approaches">
+		    <field name="name">منهج حفظ في سنة</field>
+		    <field name="is_approache_meqraa" eval="True"/>
+		    <field name="program_type">open</field>
+		    <field name="program_id" ref="mk_meqraa.program_meqraa"/>
+		    <field name="lessons_minimum_audit">5</field>
+		    <field name="lessons_memorize">5</field>
+		</record>
+		<record id="approache_meqraa2" model="mk.approaches">
+		    <field name="name">منهج حفظ في سنتين</field>
+		    <field name="is_approache_meqraa" eval="True"/>
+		    <field name="program_type">open</field>
+		    <field name="program_id" ref="mk_meqraa.program_meqraa"/>
+		    <field name="lessons_minimum_audit">5</field>
+		    <field name="lessons_memorize">5</field>
+		</record>
+		<record id="approache_meqraa3" model="mk.approaches">
+		    <field name="name">منهج حفظ في ثلاث سنوات</field>
+		    <field name="is_approache_meqraa" eval="True"/>
+		    <field name="program_type">open</field>
+		    <field name="program_id" ref="mk_meqraa.program_meqraa"/>
+		    <field name="lessons_minimum_audit">1</field>
+		    <field name="lessons_memorize">1</field>
+		</record>
+		
+	</data>
+</odoo>

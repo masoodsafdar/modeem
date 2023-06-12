@@ -1,0 +1,250 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+		<!-- ==================================================
+								   Area
+		     ================================================== -->
+		     
+		<record id="res_countr_city_tree" model="ir.ui.view">
+			<field name="name">res.country.tree.view</field>
+			<field name="model">res.country.state</field>
+			<field name="arch" type="xml">
+				<tree>
+					<field name="name" string="Area name"/>
+					<field name="code" string="Area code"/>
+					<field name="country_id"/>
+				</tree>
+			</field>
+		</record>		     
+		     
+		<record id="view_city_form_inherited_view" model="ir.ui.view">
+			<field name="name">res.country.state.form</field>
+			<field name="model">res.country.state</field>
+			<field name="arch" type="xml">
+				<form>
+					<sheet>
+						<group>
+							<group>
+								<field name="name" string="Area name"/>
+								<field name="code" string="Area code"/>
+								<field name="enable"/>
+								<field name="active" class="oe_field_active"/>															
+							</group>
+							<group>
+								<field name="country_id" options="{'no_create': 1, 'no_create_edit': 1,'no_open':1}"/>
+								<field name="latitude"/>
+								<field name="longitude"/>							
+							</group>							
+						</group>
+					</sheet>
+					<div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+				</form>
+			</field>
+		</record>
+		
+        <record id="view_res_country_state_search" model="ir.ui.view">
+	        <field name="name">view.res.country.state.search</field>
+	        <field name="model">res.country.state</field>
+	        <field name="arch" type="xml">
+          		<search string="">
+					<field name="name"/>
+					 <group string="Filter By">
+                            <filter name="active"   string="Active"                   domain="[('active','=',True)]"/>
+                           <filter name="un active" string="Un active"                domain="[('active','=',False)]"/>
+                           <filter name="enable"    string="Enabled for Educational"  domain="[('enable','=',True)]"/>
+                           <filter name="disable"   string="Disabled for Educational" domain="[('enable','=',False)]"/>
+                     </group>
+           		</search>
+			</field>
+		</record>		
+		
+		<record id="city_act_window" model="ir.actions.act_window">
+			<field name="name">Area</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">res.country.state</field>
+			<!-- <field name="view_type">form</field> -->
+			<field name="view_mode">tree,form</field>
+			<field name="domain">[('type_location','=','area')]</field>
+			<field name="context">{'search_default_enable':1, 
+			                       'default_enable': 1,
+			                       'default_type_location': 'area',}</field>
+		</record>
+	
+		<record id="act_open_city_view_form" model="ir.actions.act_window.view">
+			<field name="act_window_id" ref="city_act_window" />
+			<field name="sequence" eval="20" />
+			<field name="view_mode">form</field>
+			<field name="view_id" ref="view_city_form_inherited_view" />
+		</record>
+
+		<record id="act_open_city_view_tree" model="ir.actions.act_window.view">
+			<field name="act_window_id" ref="city_act_window" />
+			<field name="sequence" eval="10"/>
+			<field name="view_mode">tree</field>
+			<field name="view_id" ref="res_countr_city_tree" />
+		</record>
+		
+		<menuitem id="mk_master_menu"                      name="Configuration"                sequence="6" parent=""/>		
+		<menuitem id="mk_student_management_settings_menu" name="Students management settings" sequence="1" parent="mk_master_menu"/>
+		<menuitem id="mk_student_setting_menu"             name="Location"                     sequence="2" parent="mk_master_menu" />
+        <menuitem id="view_state"                          name="Area"                         sequence="4" parent="mk_student_setting_menu" action="city_act_window"/>				
+		
+		<!-- ==================================================
+								   City
+		     ================================================== -->		
+		     
+		<record id="res_countr_area_tree" model="ir.ui.view">
+			<field name="name">res.country.tree.view</field>
+			<field name="model">res.country.state</field>
+			<field name="arch" type="xml">
+				<tree>
+					<field name="name"    string="City name"/>
+					<field name="code"    string="City code"/>
+					<field name="area_id" string="Area"/>
+					<field name="country_id"/>
+				</tree>
+			</field>
+		</record>		     
+
+		<record id="view_area_form_inherited_view" model="ir.ui.view">
+			<field name="name">res.country.state.form</field>
+			<field name="model">res.country.state</field>
+			<field name="arch" type="xml">
+				<form>
+					<sheet>
+						<group>
+							<group>
+								<field name="name"    string="City name"/>
+								<field name="code"    string="City code"/>
+								<field name="enable"/>
+								<field name="active" class="oe_field_active" />													
+							</group>
+							<group>
+								<field name="area_id" string="Area" options="{'no_create': True, 'no_open': True}"/>
+								<field name="country_id"            options="{'no_create': 1, 'no_create_edit': 1,'no_open':1}"/>
+								<field name="latitude"/>
+								<field name="longitude"/>
+							</group>						
+						</group>
+					</sheet>
+					<div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+				</form>
+			</field>
+		</record>
+		
+		<record model="ir.actions.act_window" id="area_act_window">
+			<field name="name">city</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">res.country.state</field>
+			<!-- <field name="view_type">form</field> -->
+			<field name="view_mode">tree,form</field>
+			<field name="domain">[('type_location','=','city')]</field>
+			<field name="context">{'search_default_enable':1, 
+			                       'default_enable': 1,
+			                       'default_type_location': 'city',}</field>
+		</record>
+
+		<record model="ir.actions.act_window.view" id="act_open_area_view_form">
+			<field name="act_window_id" ref="area_act_window" />
+			<field name="sequence" eval="20" />
+			<field name="view_mode">form</field>
+			<field name="view_id" ref="view_area_form_inherited_view" />
+		</record>
+
+		<record model="ir.actions.act_window.view" id="act_open_area_view_tree">
+			<field name="act_window_id" ref="area_act_window" />
+			<field name="sequence" eval="10" />
+			<field name="view_mode">tree</field>
+			<field name="view_id" ref="res_countr_area_tree" />
+		</record>
+		
+		<menuitem id="view_area" name="City" sequence="4" parent="mk_student_setting_menu" action="area_act_window"/>		
+		
+		<!-- ==================================================
+								   Distict
+		     ================================================== -->		
+		     
+		<record id="res_countr_district_tree" model="ir.ui.view">
+			<field name="name">res.country.tree.view</field>
+			<field name="model">res.country.state</field>
+			<field name="arch" type="xml">
+				<tree delete="0" create="0" edit="0">
+					<field name="name"        string="Distict name"/>
+					<field name="code"        string="District code"/>
+					<field name="area_id"     string="Area"/>
+					<field name="district_id" string="City"/>
+					<field name="country_id"/>
+					<field name="center_department_id"/>
+				</tree>
+			</field>
+		</record>		     
+
+		<record id="view_district_form_inherited_view" model="ir.ui.view">
+			<field name="name">res.country.state.form</field>
+			<field name="model">res.country.state</field>
+			<field name="arch" type="xml">
+				<form delete="0" create="0" edit="0">
+					<sheet>
+						<group>
+							<group>
+								<field name="name"        string="Disrict name"/>
+								<field name="code"        string="Disrict code" required="1"/>
+								<field name="district_code"         readonly="1"/>
+								<field name="center_department_id" required="1"/>
+								<field name="department_ids" domain="[('id','!=',center_department_id)]" options="{'no_create': 1, 'no_open':1}" widget="many2many_tags"/>
+								<field name="enable"/>
+								<field name="active" class="oe_field_active" />							
+							</group>
+							<group>
+								<field name="area_id"     string="Area" options="{'no_create': True, 'no_open': True}"/>
+								<field name="district_id" string="City" options="{'no_create': True, 'no_open': True}"/>
+								<field name="country_id"                options="{'no_create': 1, 'no_create_edit': 1,'no_open':1}"/>							
+								<field name="latitude"/>
+								<field name="longitude"/>
+							</group>						
+						</group>
+					</sheet>
+					<div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+				</form>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="district_act_window">
+			<field name="name">districts</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">res.country.state</field>
+			<!-- <field name="view_type">form</field> -->
+			<field name="view_mode">tree,form</field>
+			<field name="domain">[('type_location','=','district')]</field>
+			<field name="context">{'search_default_enable':1, 
+			                       'default_enable': 1,
+			                       'default_type_location': 'district',}</field>
+		</record>
+
+		<record model="ir.actions.act_window.view" id="act_open_districts_view_form">
+			<field name="act_window_id" ref="district_act_window" />
+			<field name="sequence" eval="20" />
+			<field name="view_mode">form</field>
+			<field name="view_id" ref="view_district_form_inherited_view" />
+		</record>
+
+		<record model="ir.actions.act_window.view" id="act_open_tree_view_tree">
+			<field name="act_window_id" ref="district_act_window" />
+			<field name="sequence" eval="10" />
+			<field name="view_mode">tree</field>
+			<field name="view_id" ref="res_countr_district_tree" />
+		</record>
+
+		<menuitem id="view_street" name="District" sequence="4" parent="mk_student_setting_menu" action="district_act_window"/>
+		
+	</data>
+</odoo>

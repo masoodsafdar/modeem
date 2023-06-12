@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <template id="report_students_template">
+            <t t-call="web.html_container">
+                <t t-call="web.external_layout">
+                    <div class="page" style="font-family:Amiri">
+
+                        <style type="text/css">
+                            table, tbody,thead,td,th,tr {
+                            border: 1px solid #414141;
+                            }
+                            .table-condensed > thead > tr > th,
+                            .table-condensed > tbody > tr > td {
+                            vertical-align: bottom;
+
+                            border: 1px solid #414141;
+                            border-bottom: 1px solid #414141;
+                            border-top: 1px solid #414141;
+                            }
+                        </style>
+                        <div class="col-xs-12">
+                            <center>
+                                <u>
+                                    <strong>
+                                        <h2>تقرير حسب حالة الطالب</h2>
+                                    </strong>
+                                    <h4>
+                                        <strong></strong>
+                                    </h4>
+                                    <h4>
+                                        <span t-esc="center_name"/>
+                                    </h4>
+                                </u>
+                                <h4>
+                                    الفصل
+                                    <span t-esc="study_class_name"/>
+                                    لعام
+                                    <span t-esc="academic_name"/>
+                                </h4>
+                            </center>
+                        </div>
+
+                        <div class="col-xs-12">
+                            <table class="table table-condensed table-bordered col-xs-12">
+                                <thead>
+                                    <th class="text-center">عدد الطلاب المنتسبين لبرنامج موسمي</th>
+                                    <th class="text-center">عدد الطلاب المنتسبين لحلقة</th>
+                                    <th class="text-center">عدد الطلاب في حالة أخلاء طرف</th>
+                                    <th class="text-center">عدد الطلاب المؤرشفين</th>
+                                    <th class="text-center">عدد الطلاب المنقولين</th>
+                                    <th class="text-center">عدد الطلاب المنتهيين</th>
+                                    <th class="text-center">عدد الطلاب المرفوضين</th>
+                                    <th class="text-center">عدد الطلاب المقبولين</th>
+                                    <th class="text-center">عدد الطلاب المبتدئين</th>
+                                    <th class="text-center" t-if="type_filter == 'study_class'">المركز</th>
+                                    <th class="text-center" t-if="type_filter in ['center','category','gender_type','supervisor']">المساجد</th>
+                                    <th class="text-center" t-if="type_filter == 'mosque'">المسجد</th>
+                                    <th class="text-center" t-if="type_filter == 'teacher'">المعلم/المعلمة</th>
+                                </thead>
+                                <tbody>
+                                    <t t-set="total_nbr_seasonal_episode_related_student" t-value="0"/>
+                                    <t t-set="total_nbr_episode_related_student" t-value="0"/>
+                                    <t t-set="total_nbr_cleared_student" t-value="0"/>
+                                    <t t-set="total_nbr_inactive_student" t-value="0"/>
+                                    <t t-set="total_nbr_moved_student" t-value="0"/>
+                                    <t t-set="total_nbr_done_student" t-value="0"/>
+                                    <t t-set="total_nbr_rejected_student" t-value="0"/>
+                                    <t t-set="total_nbr_accepted_student" t-value="0"/>
+                                    <t t-set="total_nbr_draft_students" t-value="0"/>
+                                    <t t-foreach="docs" t-as="doc">
+                                        <tr>
+                                            <td class="text-center">
+                                                <span t-esc="doc['nbr_seasonal_episode_related_student']"/>
+                                                <t t-set="total_nbr_seasonal_episode_related_student"
+                                                   t-value="total_nbr_seasonal_episode_related_student + doc['nbr_seasonal_episode_related_student']"/>
+                                            </td>
+                                            <td class="text-center">
+                                                <span t-esc="doc['nbr_episode_related_student']"/>
+                                                <t t-set="total_nbr_episode_related_student"
+                                                   t-value="total_nbr_episode_related_student + doc['nbr_episode_related_student']"/>
+                                            </td>
+                                            <td class="text-center">
+                                                <span t-esc="doc['nbr_cleared_student']"/>
+                                                <t t-set="total_nbr_cleared_student"
+                                                   t-value="total_nbr_cleared_student + doc['nbr_cleared_student']"/>
+                                            </td>
+                                            <td class="text-center">
+                                                <span t-esc="doc['nbr_inactive_student']"/>
+                                                <t t-set="total_nbr_inactive_student"
+                                                   t-value="total_nbr_inactive_student + doc['nbr_inactive_student']"/>
+                                            </td>
+                                            <td class="text-center">
+                                                <span t-esc="doc['nbr_moved_student']"/>
+                                                <t t-set="total_nbr_moved_student"
+                                                   t-value="total_nbr_moved_student + doc['nbr_moved_student']"/>
+                                            </td>
+                                            <td class="text-center">
+                                                <span t-esc="doc['nbr_done_student']"/>
+                                                <t t-set="total_nbr_done_student"
+                                                   t-value="total_nbr_done_student + doc['nbr_done_student']"/>
+                                            </td>
+                                            <td class="text-center">
+                                                <span t-esc="doc['nbr_rejected_student']"/>
+                                                <t t-set="total_nbr_rejected_student"
+                                                   t-value="total_nbr_rejected_student + doc['nbr_rejected_student']"/>
+                                            </td>
+                                            <td class="text-center">
+                                                <span t-esc="doc['nbr_accepted_student']"/>
+                                                <t t-set="total_nbr_accepted_student"
+                                                   t-value="total_nbr_accepted_student + doc['nbr_accepted_student']"/>
+                                            </td>
+                                            <td class="text-center">
+                                                <span t-esc="doc['nbr_draft_students']"/>
+                                                <t t-set="total_nbr_draft_students"
+                                                   t-value="total_nbr_draft_students + doc['nbr_draft_students']"/>
+                                            </td>
+                                            <td class="text-center"  t-if="type_filter == 'study_class'">
+                                                <span t-esc="doc['center']"/>
+                                            </td>
+                                             <td class="text-center" t-if="type_filter in ['center','category','gender_type','supervisor','mosque']">
+                                                <span t-esc="doc['mosques']"/>
+                                            </td>
+                                             <td class="text-center" t-if="type_filter == 'teacher'">
+                                                <span t-esc="doc['teacher']"/>
+                                            </td>
+                                        </tr>
+                                    </t>
+                                    <tr>
+                                        <td class="text-center">
+                                            <span t-esc="total_nbr_seasonal_episode_related_student"/>
+                                        </td>
+                                        <td class="text-center">
+                                            <span t-esc="total_nbr_episode_related_student"/>
+                                        </td>
+                                        <td class="text-center">
+                                            <span t-esc="total_nbr_cleared_student"/>
+                                        </td>
+                                        <td class="text-center">
+                                            <span t-esc="total_nbr_inactive_student"/>
+                                        </td>
+                                        <td class="text-center">
+                                            <span t-esc="total_nbr_moved_student"/>
+                                        </td>
+                                        <td class="text-center">
+                                            <span t-esc="total_nbr_done_student"/>
+                                        </td>
+                                        <td class="text-center">
+                                            <span t-esc="total_nbr_rejected_student"/>
+                                        </td>
+                                        <td class="text-center">
+                                            <span t-esc="total_nbr_accepted_student"/>
+                                        </td>
+                                        <td class="text-center">
+                                            <span t-esc="total_nbr_draft_students"/>
+                                        </td>
+                                        <td class="text-center">
+
+                                        </td>
+                                        <td class="text-center">
+                                            <span>المجموع</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="col-xs-12 footer">
+                            <div class="row text-center" style="border-top: 1px solid black;">
+                                <div class="col-xs-3 col-xs-offset-9 text-right">
+                                    <ul class="list-inline" style="margin-top:10px;">
+                                        <li>Page:</li>
+                                        <li>
+                                            <span class="page"/>
+                                        </li>
+                                        <li>/</li>
+                                        <li>
+                                            <span class="topage"/>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

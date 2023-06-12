@@ -1,0 +1,1380 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* mk_tests
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-03-03 10:13+0000\n"
+"PO-Revision-Date: 2018-03-03 10:13+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: mk_tests
+#: code:addons/mk_tests/models/mk_test_internal_registerations.py:220
+#, python-format
+msgid " From "
+msgstr " من "
+
+#. module: mk_tests
+#: code:addons/mk_tests/models/mk_test_internal_registerations.py:220
+#, python-format
+msgid " To "
+msgstr " إلى "
+
+#. module: mk_tests
+#: code:addons/mk_tests/models/mk_test_student_preparation.py:62
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_center_config_aasr
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_internal_registerations_aasr
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_internal_registerations_period_aasr
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_time_aasr
+#, python-format
+msgid "Aasr"
+msgstr "العصر"
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_committee_test_active
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_center_config_active
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_class_active
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_class_committee_active
+msgid "Active"
+msgstr "نشط"
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_mk_branches_age_category
+#: model:ir.model.fields,field_description:mk_tests.field_passage_reward_age_catg_ids
+#: model:ir.model.fields,field_description:mk_tests.field_test_branch_line_age_categ_ids
+msgid "Age Category"
+msgstr "فئة العمر"
+
+#. module: mk_tests
+#: selection:mk.test.type,test_scope:0
+msgid "All Quran"
+msgstr "كل القرآن"
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_class_allhn_khaffy
+msgid "Allhan Alkhaffy"
+msgstr "درجة اللحن الخفي"
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_class_alhn_gly
+msgid "Allhn Algaly"
+msgstr "درجة اللحن الجلي"
+
+#. module: mk_tests
+#: code:addons/mk_tests/models/mk_test_internal_registerations.py:227
+#, python-format
+msgid "Already Exist Periods"
+msgstr "توجد فترات مسبقاً"
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_class_applied_score
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_class_questions_configuration_applied_score
+msgid "Applied Tajweed Score"
+msgstr "درجة التجويد التطبيقي"
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_appreciation_test_appre_name
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_appreciation_name
+msgid "Appreciation Name"
+msgstr "اسم التقدير"
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_class_apprec_test_ids
+msgid "Appreciation Test"
+msgstr "تقدير الاختبار"
+
+#. module: mk_tests
+#: model:ir.ui.view,arch_db:mk_tests.mk_test_class_form_view
+msgid "Appreciations Tests"
+msgstr "تقديرات اﻹختبارات"
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_center_area_id
+#: model:ir.ui.view,arch_db:mk_tests.mk_test_center_form_view
+msgid "Area"
+msgstr "منطقة"
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_passage_reward_award_category
+msgid "Award Category"
+msgstr "المكافأة"
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_type_test_branche_ids
+msgid "Branche Tests"
+msgstr "اختبارات الفروع"
+
+#. module: mk_tests
+#: model:ir.ui.view,arch_db:mk_tests.mk_test_type_form_view
+msgid "Branches Tests"
+msgstr "اختبارات الفروع"
+
+#. module: mk_tests
+#: model:ir.ui.view,arch_db:mk_tests.mk_test_student_preparation_tree_view
+msgid "Cancel"
+msgstr "غائب"
+
+#. module: mk_tests
+#: selection:mk.test.student.preparation,state:0
+msgid "Cancelled"
+msgstr "غائب"
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_internal_registerations_center_department_id
+msgid "Center"
+msgstr "المركز"
+
+#. module: mk_tests
+#: model:ir.ui.view,arch_db:mk_tests.mk_test_center_form_view
+msgid "Center Location"
+msgstr "موقع المركز"
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_center_name
+msgid "Center Name"
+msgstr "اسم المركز"
+
+#. module: mk_tests
+#: selection:passage.reward,award_category:0
+msgid "Certificate"
+msgstr "الشهادة"
+
+#. module: mk_tests
+#: selection:passage.reward,award_category:0
+msgid "Certificate and amount of money"
+msgstr "الشهادة ومكافئة مالية"
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_time_chec
+msgid "Check"
+msgstr "Check"
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_time_checked
+msgid "Checked"
+msgstr "Checked"
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_center_city_id
+#: model:ir.ui.view,arch_db:mk_tests.mk_test_center_form_view
+msgid "City"
+msgstr "المدينة"
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_student_preparation_comment
+msgid "Comment"
+msgstr "تعليق"
+
+#. module: mk_tests
+#: model:ir.ui.view,arch_db:mk_tests.mk_test_center_config_form_view
+msgid "Committee Test"
+msgstr "لجان الاختبار"
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_center_config_committee_test_ids
+msgid "Committee test"
+msgstr "لجان الاختبار"
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_committee_test_commitee_id
+msgid "Committee_id"
+msgstr "Committee_id"
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_appreciation_company_id
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_center_company_id
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_center_config_company_id
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_class_committee_company_id
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_class_company_id
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_class_questions_configuration_company_id
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_deduct_company_id
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_internal_registerations_company_id
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_student_preparation_company_id
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_time_company_id
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_type_company_id
+msgid "Company"
+msgstr "الجمعية"
+
+#. module: mk_tests
+#: selection:mk.test.type,follow_super:0
+msgid "Company Tests"
+msgstr "اختبارات الجمعية"
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_class_parts_config_id
+msgid "Config"
+msgstr "تهيئة"
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_class_confused
+msgid "Confused"
+msgstr "درجة القلقلة"
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_appreciation_test_create_uid
+#: model:ir.model.fields,field_description:mk_tests.field_committee_test_create_uid
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_appreciation_create_uid
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_center_config_create_uid
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_center_create_uid
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_class_committee_create_uid
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_class_create_uid
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_class_parts_create_uid
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_class_questions_configuration_create_uid
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_deduct_create_uid
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_internal_registerations_create_uid
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_student_preparation_create_uid
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_time_create_uid
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_type_create_uid
+#: model:ir.model.fields,field_description:mk_tests.field_passage_reward_create_uid
+#: model:ir.model.fields,field_description:mk_tests.field_test_branch_line_create_uid
+#: model:ir.model.fields,field_description:mk_tests.field_test_type_error_create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_appreciation_test_create_date
+#: model:ir.model.fields,field_description:mk_tests.field_committee_test_create_date
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_appreciation_create_date
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_center_config_create_date
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_center_create_date
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_class_committee_create_date
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_class_create_date
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_class_parts_create_date
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_class_questions_configuration_create_date
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_deduct_create_date
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_internal_registerations_create_date
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_student_preparation_create_date
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_time_create_date
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_type_create_date
+#: model:ir.model.fields,field_description:mk_tests.field_passage_reward_create_date
+#: model:ir.model.fields,field_description:mk_tests.field_test_branch_line_create_date
+#: model:ir.model.fields,field_description:mk_tests.field_test_type_error_create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_time_test_date
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: mk_tests
+#: model:ir.ui.view,arch_db:mk_tests.mk_test_center_config_form_view
+msgid "Days"
+msgstr "الأيام"
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_deduct_degree_deduct
+#: model:ir.model.fields,field_description:mk_tests.field_test_type_error_degree_deduct
+#: model:ir.ui.view,arch_db:mk_tests.mk_test_error_form_view
+msgid "Degree Deduct"
+msgstr "درجات الخصم"
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_center_config_department_ids
+msgid "Departments"
+msgstr "مراكز الاشراف التابعة لمركز الاختبارات"
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_class_parts_difficult
+msgid "Difficult"
+msgstr "الصعب"
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_appreciation_test_display_name
+#: model:ir.model.fields,field_description:mk_tests.field_committee_test_display_name
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_appreciation_display_name
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_center_config_display_name
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_center_display_name
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_class_committee_display_name
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_class_display_name
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_class_parts_display_name
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_class_questions_configuration_display_name
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_deduct_display_name
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_internal_registerations_display_name
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_student_preparation_display_name
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_time_display_name
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_type_display_name
+#: model:ir.model.fields,field_description:mk_tests.field_passage_reward_display_name
+#: model:ir.model.fields,field_description:mk_tests.field_test_branch_line_display_name
+#: model:ir.model.fields,field_description:mk_tests.field_test_type_error_display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_center_district_id
+#: model:ir.ui.view,arch_db:mk_tests.mk_test_center_form_view
+msgid "District"
+msgstr "الحي"
+
+#. module: mk_tests
+#: selection:mk.test.student.preparation,state:0
+msgid "Draft"
+msgstr "مبدئي"
+
+#. module: mk_tests
+#: selection:mk.test.student.preparation,state:0
+msgid "student prepares"
+msgstr "الطالب حاضر/ الطالبة حاضرة"
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_type_duration
+msgid "Duration"
+msgstr "المدة"
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_class_parts_easy
+msgid "Easy"
+msgstr "الساهل"
+
+#. module: mk_tests
+#: selection:mk.test.type,test_scope:0
+msgid "Ending"
+msgstr "نهاية مقرر"
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_deduct_test_error_id
+msgid "Error"
+msgstr "اسم الخطأ"
+
+#. module: mk_tests
+#: code:addons/mk_tests/models/mk_test_student_preparation.py:66
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_center_config_esha
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_internal_registerations_esha
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_internal_registerations_period_esha
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_time_esha
+#, python-format
+msgid "Esha"
+msgstr "العِشاء"
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_center_config_exam_end_date
+msgid "Exam End Date"
+msgstr "تاريخ نهاية الاختبارات"
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_center_config_exam_start_date
+msgid "Exam Start Date"
+msgstr "تاريخ بداية الاختبارات"
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_committee_test_examiner_employee_id
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_class_committee_examiner_employee_id
+msgid "Examinner"
+msgstr "اسم المُمْتَحِن"
+
+#. module: mk_tests
+#: model:ir.ui.view,arch_db:mk_tests.mk_test_center_config_form_view
+msgid "Exams Periods"
+msgstr "فترة الاختبارات"
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_class_farsh_latter
+msgid "Farsh Latter"
+msgstr "درجة فرش الحروف"
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_type_follow_super
+msgid "Follow Super"
+msgstr "المشرف/ المشرفة"
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_center_config_friday
+msgid "Friday"
+msgstr "الجمعه"
+
+#. module: mk_tests
+#: selection:mk.test.type,test_methodology:0
+msgid "From End to Start"
+msgstr "من الناس الى الفاتحة"
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_time_from_period
+msgid "From Period"
+msgstr "من الفترة"
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_appreciation_test_from_score
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_appreciation_from_score
+msgid "From Score"
+msgstr "من"
+
+#. module: mk_tests
+#: selection:mk.test.type,test_methodology:0
+msgid "From Start to End"
+msgstr "من الفاتحة الى الناس"
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_class_general_score
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_class_questions_configuration_general_score
+msgid "General Performance Score"
+msgstr "درجة الاداء العام"
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_class_good_sound
+msgid "Good Sound"
+msgstr "درجة حسن الصوت"
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_appreciation_test_id
+#: model:ir.model.fields,field_description:mk_tests.field_committee_test_id
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_appreciation_id
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_center_config_id
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_center_id
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_class_committee_id
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_class_id
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_class_parts_id
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_class_questions_configuration_id
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_deduct_id
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_internal_registerations_id
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_student_preparation_id
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_time_id
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_type_id
+#: model:ir.model.fields,field_description:mk_tests.field_passage_reward_id
+#: model:ir.model.fields,field_description:mk_tests.field_test_branch_line_id
+#: model:ir.model.fields,field_description:mk_tests.field_test_type_error_id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_type_check_img
+msgid "Image fro student"
+msgstr "صورة شخصية للطالب/ الطالبة"
+
+#. module: mk_tests
+#: code:addons/mk_tests/models/mk_test_center_config.py:79
+#: code:addons/mk_tests/models/mk_test_center_config.py:81
+#, python-format
+msgid "Invalid Exam End Date"
+msgstr "تاريخ نهاية الاختبارات غير صحيح"
+
+#. module: mk_tests
+#: code:addons/mk_tests/models/mk_test_center_config.py:77
+#, python-format
+msgid "Invalid Exam Start Date"
+msgstr "تاريخ بداية الاختبارات غير صحيح"
+
+#. module: mk_tests
+#: code:addons/mk_tests/models/mk_test_class.py:202
+#, python-format
+msgid "Invalid Number from score bigger than to score"
+msgstr "الرقم المدخل غير صحيح"
+
+
+#. module: mk_tests
+#: code:addons/mk_tests/models/mk_test_class_questions_configuration.py:133
+#, python-format
+msgid "Invalid Number of Questions Number"
+msgstr "عدد الاسئلة في الجزء الواحد غير صحيح"
+
+#. module: mk_tests
+#: code:addons/mk_tests/models/mk_test_class.py:205
+#, python-format
+msgid "Invalid Number to score bigger than max scors"
+msgstr "الرقم  غير صحيح ! الدرجة المدخلة اكبر من الدرجه الكبرى "
+
+#. module: mk_tests
+#: code:addons/mk_tests/models/mk_test_center_config.py:75
+#: code:addons/mk_tests/models/mk_test_center_config.py:83
+#, python-format
+msgid "Invalid Registeration End Date"
+msgstr "تاريخ نهاية التسجيل غير صحيح"
+
+#. module: mk_tests
+#: code:addons/mk_tests/models/mk_test_center_config.py:73
+#, python-format
+msgid "Invalid Registeration Start Date"
+msgstr "تاريخ بداية التسجيل غير صحيح"
+
+#. module: mk_tests
+#: code:addons/mk_tests/models/mk_test_class.py:134
+#, python-format
+msgid "Invalid Total Questions Number"
+msgstr "Invalid Total Questions Number"
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_appreciation_test___last_update
+#: model:ir.model.fields,field_description:mk_tests.field_committee_test___last_update
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_appreciation___last_update
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_center___last_update
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_center_config___last_update
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_class___last_update
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_class_committee___last_update
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_class_parts___last_update
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_class_questions_configuration___last_update
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_deduct___last_update
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_internal_registerations___last_update
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_student_preparation___last_update
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_time___last_update
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_type___last_update
+#: model:ir.model.fields,field_description:mk_tests.field_passage_reward___last_update
+#: model:ir.model.fields,field_description:mk_tests.field_test_branch_line___last_update
+#: model:ir.model.fields,field_description:mk_tests.field_test_type_error___last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_appreciation_test_write_uid
+#: model:ir.model.fields,field_description:mk_tests.field_committee_test_write_uid
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_appreciation_write_uid
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_center_config_write_uid
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_center_write_uid
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_class_committee_write_uid
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_class_parts_write_uid
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_class_questions_configuration_write_uid
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_class_write_uid
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_deduct_write_uid
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_internal_registerations_write_uid
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_student_preparation_write_uid
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_time_write_uid
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_type_write_uid
+#: model:ir.model.fields,field_description:mk_tests.field_passage_reward_write_uid
+#: model:ir.model.fields,field_description:mk_tests.field_test_branch_line_write_uid
+#: model:ir.model.fields,field_description:mk_tests.field_test_type_error_write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_appreciation_test_write_date
+#: model:ir.model.fields,field_description:mk_tests.field_committee_test_write_date
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_appreciation_write_date
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_center_config_write_date
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_center_write_date
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_class_committee_write_date
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_class_parts_write_date
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_class_questions_configuration_write_date
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_class_write_date
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_deduct_write_date
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_internal_registerations_write_date
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_student_preparation_write_date
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_time_write_date
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_type_write_date
+#: model:ir.model.fields,field_description:mk_tests.field_passage_reward_write_date
+#: model:ir.model.fields,field_description:mk_tests.field_test_branch_line_write_date
+#: model:ir.model.fields,field_description:mk_tests.field_test_type_error_write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_center_latitude
+msgid "Latitude"
+msgstr "خط العرض"
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_test_branch_line_line_id
+msgid "Line Branch"
+msgstr "Line Branch"
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_class_listen
+msgid "Listening"
+msgstr "الدرجة الاجمالية"
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_center_longitude
+msgid "Longitude"
+msgstr "خط الطول"
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_class_Looted
+msgid "Looted"
+msgstr "درجة المدود"
+
+#. module: mk_tests
+#: code:addons/mk_tests/models/mk_test_student_preparation.py:64
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_center_config_magrib
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_internal_registerations_magrib
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_internal_registerations_period_magrib
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_time_magrib
+#, python-format
+msgid "Magrib"
+msgstr "المغرب"
+
+#. module: mk_tests
+#: model:ir.ui.view,arch_db:mk_tests.mk_test_center_form_view
+msgid "Map Dimension"
+msgstr "احداثيات الخريطة"
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_class_master_letter
+msgid "Mastering letter Movements"
+msgstr "درجة إتقان حركات الحروف"
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_class_max_score
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_class_questions_configuration_max_score
+msgid "Maximum Score"
+msgstr "الدرجة الكبرى"
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_class_parts_middle
+msgid "Middle"
+msgstr "المتوسط"
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_class_mim_static
+msgid "Mim Static"
+msgstr "درجة الميم الساكنة"
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_class_min_score
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_class_questions_configuration_min_score
+msgid "Minimum Score"
+msgstr "الدرجة الصغرى"
+
+#. module: mk_tests
+#: model:ir.ui.view,arch_db:mk_tests.mk_test_type_form_view
+msgid "Minute"
+msgstr "دقيقة"
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_center_config_monday
+msgid "Monday"
+msgstr "الإثنين"
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_internal_registerations_mosque_department_id
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_internal_registerations_mosque_id
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_student_preparation_mosq_id
+msgid "Mosque"
+msgstr "المسجد/المدرسة"
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_class_name
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_class_questions_configuration_name
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_type_name
+#: model:ir.model.fields,field_description:mk_tests.field_passage_reward_name
+#: model:ir.ui.view,arch_db:mk_tests.mk_test_class_tree_view
+msgid "Name"
+msgstr "الاسم"
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_test_branch_line_branch
+msgid "Name Branch"
+msgstr "اسم الفرع"
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_test_branch_line_branch_type
+msgid "Branch Type"
+msgstr "نوع الفرع"
+
+#. module: mk_tests
+#: selection:test.branch.line,branch_type:0
+msgid "Competitions"
+msgstr "مسابقات"
+
+#. module: mk_tests
+#: selection:test.branch.line,branch_type:0
+msgid "Intensive Course"
+msgstr "دورات مكثفة"
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_class_line_number
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_class_questions_configuration_line_number
+msgid "Number of Lines Per Question"
+msgstr "عدد السطور في السؤال الواحد"
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_class_parts_question_number
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_class_question_number
+msgid "Number of Questions Per Part"
+msgstr "عدد الاسئلة في الجزء الواحد"
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_class_nun_mim_intencive
+msgid "Nun and Mim Intensive"
+msgstr "درجة النون والميم المشددتين"
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_class_nun_static
+msgid "Nun static"
+msgstr "درجة النون الساكنة"
+
+#. module: mk_tests
+#: selection:mk.test.type,test_type:0
+msgid "Open"
+msgstr "مفتوح"
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_test_type_error_order_id
+msgid "Order"
+msgstr "الترتيب"
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_class_orig_novel
+msgid "Original Novel"
+msgstr "درجة أصول الرواية"
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_class_parts_part_id
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_class_questions_configuration_part_ids
+#: model:ir.model.fields,field_description:mk_tests.field_test_branch_line_part_ids
+msgid "Parts"
+msgstr "الأجزاء المحددة"
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_class_part_question_ids
+msgid "Parts Question"
+msgstr "Parts Question"
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_class_reward_test_ids
+#: model:ir.ui.view,arch_db:mk_tests.mk_test_class_form_view
+msgid "Passage Reward"
+msgstr "مكافأة اﻹختبار"
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_internal_registerations_period_id
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_student_preparation_period_id
+msgid "Period"
+msgstr "الفترة"
+
+#. module: mk_tests
+#: code:addons/mk_tests/models/mk_test_internal_registerations.py:189
+#, python-format
+msgid "Please, Check periods..."
+msgstr "الرجاء التأكد من الفترات"
+
+#. module: mk_tests
+#: model:ir.ui.view,arch_db:mk_tests.mk_test_student_preparation_tree_view
+msgid "Prepare Student"
+msgstr "تحضير الطالب/ الطالبة"
+
+
+#. module: mk_tests
+#: selection:mk.test.type,test_methodology:0
+msgid "Random"
+msgstr "عشوائي"
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_center_config_registeration_end_date
+msgid "Registeration End Date"
+msgstr "تاريخ نهاية التسجيل"
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_center_config_registeration_start_date
+msgid "Registeration Start Date"
+msgstr "تاريخ بداية التسجيل"
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_center_config_website_registeration
+msgid "Registeration by Website"
+msgstr "التسجيل عن طريق الموقع"
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_passage_reward_reward_id
+msgid "Reward"
+msgstr "Reward"
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_class_safety_letters
+msgid "Safety of exits and letters"
+msgstr "درجة سلامة المخارج والحروف"
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_center_config_saturday
+msgid "Saturday"
+msgstr "السبت"
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_class_save
+msgid "Save"
+msgstr "درجة الحفظ"
+
+#. module: mk_tests
+#: code:addons/mk_tests/models/mk_test_class.py:59
+#: code:addons/mk_tests/models/mk_test_class_questions_configuration.py:57
+#, python-format
+msgid "Select Difference Parts"
+msgstr "اختيار اجزاء متفرقة"
+
+#. module: mk_tests
+#: model:ir.ui.view,arch_db:mk_tests.mk_test_student_preparation_tree_view
+msgid "Set to Draft"
+msgstr "استرجاع الطالب/ الطالبة"
+
+#. module: mk_tests
+#: selection:mk.test.type,test_type:0
+msgid "Specific"
+msgstr "محدّد (متّصل)"
+
+#. module: mk_tests
+#: selection:mk.test.type,test_scope:0
+msgid "Specific Parts"
+msgstr "اجزاء محددة"
+
+#. module: mk_tests
+#: selection:mk.test.student.preparation,state:0
+msgid "Start"
+msgstr "بداء الاختبار"
+
+#. module: mk_tests
+#: model:ir.ui.view,arch_db:mk_tests.mk_test_student_preparation_tree_view
+msgid "Start Test"
+msgstr "بداية الاختبار"
+
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_class_start_hesit
+msgid "Starting and not hesitating"
+msgstr "درجة الانطلاق وعدم التردد"
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_student_preparation_state
+msgid "Status"
+msgstr "الحالة "
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_class_stop_start
+msgid "Stop and Start"
+msgstr "درجة الوقف والابتداء"
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_internal_registerations_student_id
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_student_preparation_link_id
+#: selection:mk.test.type,target:0
+msgid "Student"
+msgstr "طالب/ الطالبة"
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_class_committee_study_class_id
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_class_questions_configuration_study_class_id
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_internal_registerations_study_class_id
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_student_preparation_study_class_id
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_time_study_class_id
+#: model:ir.model.fields,field_description:mk_tests.field_passage_reward_study_class_id
+msgid "Study Class Year"
+msgstr "الفصل الدراسي"
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_center_config_study_year_id
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_class_committee_study_year_id
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_class_questions_configuration_study_year_id
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_class_study_year_id
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_internal_registerations_study_year_id
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_student_preparation_study_year_id
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_time_study_year_id
+msgid "Study Year"
+msgstr "العام الدراسي"
+
+#. module: mk_tests
+#: code:addons/mk_tests/models/mk_test_student_preparation.py:58
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_center_config_subh
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_internal_registerations_period_subh
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_internal_registerations_subh
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_time_subh
+#, python-format
+msgid "Subh"
+msgstr "الصبح"
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_center_config_sunday
+msgid "Sunday"
+msgstr "اﻷحد"
+
+#. module: mk_tests
+#: selection:mk.test.type,target:0
+msgid "Supervisor"
+msgstr "مشرف/ مشرفة"
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_type_target
+msgid "Target"
+msgstr "الفئة المستهدفة"
+
+#. module: mk_tests
+#: selection:mk.test.type,target:0
+msgid "Teacher"
+msgstr "معلّم"
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_time_test_id
+msgid "Test"
+msgstr "اختبار"
+
+#. module: mk_tests
+#: model:ir.ui.view,arch_db:mk_tests.mk_test_error_search_view
+msgid "Test Appreciation"
+msgstr "تعريف تقديرات الاختبارات "
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_center_config_center_id
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_class_committee_test_center_id
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_internal_registerations_test_center_config_id
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_student_preparation_test_center_config_id
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_time_test_center_config_id
+#: model:ir.ui.view,arch_db:mk_tests.mk_test_center_form_view
+#: model:ir.ui.view,arch_db:mk_tests.mk_test_center_search_view
+#: model:ir.ui.view,arch_db:mk_tests.mk_test_center_tree_view
+msgid "Test Center"
+msgstr "مركز الاختبار"
+
+#. module: mk_tests
+#: model:ir.ui.view,arch_db:mk_tests.mk_test_center_config_form_view
+msgid "Test Center Config"
+msgstr "اعدادات الاختبارات"
+
+#. module: mk_tests
+#: model:ir.actions.act_window,name:mk_tests.mk_test_center_action
+#: model:ir.ui.menu,name:mk_tests.mk_test_center_menu
+msgid "Test Center "
+msgstr "تعريف مراكز الاختبارات "
+
+#. module: mk_tests
+#: model:ir.ui.view,arch_db:mk_tests.mk_test_center_config_form_view
+#: model:ir.ui.view,arch_db:mk_tests.mk_test_center_config_search_view
+#: model:ir.ui.view,arch_db:mk_tests.mk_test_center_config_tree_view
+msgid "Test Center Configuration"
+msgstr "اعداد مراكز الاختبارات"
+
+#. module: mk_tests
+#: model:ir.actions.act_window,name:mk_tests.mk_test_center_config_action
+#: model:ir.ui.menu,name:mk_tests.mk_test_center_config_menu
+msgid "Test Center Configuration "
+msgstr "اعداد مراكز الاختبارات "
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_class_questions_configuration_test_class_id
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_class_test_class_id
+#: model:ir.ui.view,arch_db:mk_tests.mk_test_class_form_view
+#: model:ir.ui.view,arch_db:mk_tests.mk_test_class_search_view
+#: model:ir.ui.view,arch_db:mk_tests.mk_test_class_tree_view
+msgid "Test Class"
+msgstr "اعدادات الاختبارات الفصلية"
+
+#. module: mk_tests
+#: model:ir.actions.act_window,name:mk_tests.mk_test_class_action
+#: model:ir.ui.menu,name:mk_tests.mk_test_class_menu
+msgid "Test Class "
+msgstr "اعدادات الاختبارات الفصلية "
+
+#. module: mk_tests
+#: model:ir.ui.view,arch_db:mk_tests.mk_test_class_questions_configuration_form_view
+#: model:ir.ui.view,arch_db:mk_tests.mk_test_class_questions_configuration_search_view
+#: model:ir.ui.view,arch_db:mk_tests.mk_test_class_questions_configuration_tree_view
+msgid "Test Class Question Confiquration"
+msgstr "اعدادات اسئلة الاختبارات الفصلية"
+
+#. module: mk_tests
+#: model:ir.actions.act_window,name:mk_tests.mk_test_class_questions_configuration_action
+msgid "Test Class Question Confiquration "
+msgstr "اعدادات اسئلة الاختبارات الفصلية "
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_internal_registerations_test_date
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_student_preparation_test_date
+msgid "Test Date"
+msgstr "تاريخ الاختبار"
+
+#. module: mk_tests
+#: model:ir.ui.view,arch_db:mk_tests.mk_test_deduct_form_view
+#: model:ir.ui.view,arch_db:mk_tests.mk_test_deduct_search_view
+#: model:ir.ui.view,arch_db:mk_tests.mk_test_deduct_tree_view
+msgid "Test Deduct"
+msgstr "اعداد خصم الأخطاء في الاختبارات"
+
+#. module: mk_tests
+#: model:ir.actions.act_window,name:mk_tests.mk_test_deduct_action
+msgid "Test Deduct "
+msgstr "اعداد خصم الأخطاء في الاختبارات "
+
+#. module: mk_tests
+#: model:ir.ui.view,arch_db:mk_tests.mk_test_error_form_view
+#: model:ir.ui.view,arch_db:mk_tests.mk_test_error_search_view
+#: model:ir.ui.view,arch_db:mk_tests.mk_test_error_tree_view
+msgid "Test Error"
+msgstr "اعداد تعريف الخطأ"
+
+#. module: mk_tests
+#: model:ir.actions.act_window,name:mk_tests.mk_test_error_action
+#: model:ir.ui.menu,name:mk_tests.mk_test_error_menu
+msgid "Test Error "
+msgstr "اعداد تعريف الخطأ "
+
+#. module: mk_tests
+#: model:ir.ui.view,arch_db:mk_tests.mk_test_internal_registerations_form_view
+#: model:ir.ui.view,arch_db:mk_tests.mk_test_internal_registerations_search_view
+#: model:ir.ui.view,arch_db:mk_tests.mk_test_internal_registerations_tree_view
+msgid "Test Internal Registerations"
+msgstr "التسجيل الداخلي للاختبارات"
+
+#. module: mk_tests
+#: model:ir.actions.act_window,name:mk_tests.mk_test_internal_registerations_action
+#: model:ir.ui.menu,name:mk_tests.mk_test_internal_registerations_menu
+msgid "Test Internal Registerations "
+msgstr "التسجيل الداخلي للاختبارات "
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_type_test_methodology
+msgid "Test Methodology"
+msgstr "طريقة الاختبار"
+
+#. module: mk_tests
+#: selection:mk.test.type,follow_super:0
+msgid "Tests Mosque/School "
+msgstr "اختبارات المساجد/المدارس"
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_student_preparation_test_registeration_id
+msgid "Test Registeration"
+msgstr "التسجيل الداخلي للاختبارات"
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_class_questions_configuration_test_scope
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_class_test_scope
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_type_test_scope
+msgid "Test Scope"
+msgstr "نطاق الاختبار"
+
+#. module: mk_tests
+#: model:ir.ui.view,arch_db:mk_tests.mk_test_student_preparation_form_view
+#: model:ir.ui.view,arch_db:mk_tests.mk_test_student_preparation_search_view
+#: model:ir.ui.view,arch_db:mk_tests.mk_test_student_preparation_tree_view
+msgid "Test Student Preparation"
+msgstr "تحضير الطالب/ الطالبة لاختبار"
+
+#. module: mk_tests
+#: model:ir.actions.act_window,name:mk_tests.mk_test_student_preparation_action
+#: model:ir.ui.menu,name:mk_tests.mk_test_student_preparation_menu
+msgid "Test Student Preparation "
+msgstr "تحضير الطالب/ الطالبة لاختبار "
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_internal_registerations_test_time
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_student_preparation_test_time
+#: model:ir.ui.view,arch_db:mk_tests.mk_test_time_form_view
+#: model:ir.ui.view,arch_db:mk_tests.mk_test_time_search_view
+#: model:ir.ui.view,arch_db:mk_tests.mk_test_time_tree_view
+msgid "Test Time"
+msgstr "زمن الاختبار"
+
+#. module: mk_tests
+#: model:ir.actions.act_window,name:mk_tests.mk_test_time_action
+msgid "Test Time "
+msgstr "Test Time "
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_appreciation_test_appre_test_type_id
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_appreciation_test_type_id
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_class_committee_test_type_id
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_class_questions_configuration_test_type
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_class_questions_configuration_test_type_id
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_class_test_type
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_class_test_type_id
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_deduct_test_type_id
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_student_preparation_test_type_id
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_time_test_type_id
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_type_test_type
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_internal_registerations_test_branch_id
+#: model:ir.ui.view,arch_db:mk_tests.mk_test_type_form_view
+#: model:ir.ui.view,arch_db:mk_tests.mk_test_type_search_view
+#: model:ir.ui.view,arch_db:mk_tests.mk_test_type_tree_view
+msgid "Test Type"
+msgstr "اسم الاختبار"
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_internal_registerations_test_type_id
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_type_type_test_ids
+msgid "Test Type"
+msgstr "نوع الاختبار"
+
+
+#. module: mk_tests
+#: model:ir.actions.act_window,name:mk_tests.mk_test_type_action
+#: model:ir.ui.menu,name:mk_tests.mk_test_type_menu
+msgid "Test Type "
+msgstr "انواع الاختبارات "
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_student_preparation_period_t
+msgid "Test period"
+msgstr "فترة الاختبار"
+
+#. module: mk_tests
+#: model:ir.ui.view,arch_db:mk_tests.mk_test_class_form_view
+msgid "Test scores"
+msgstr "اقسام الاختبار"
+
+#. module: mk_tests
+#: model:ir.ui.menu,name:mk_tests.mk_tests_main_menu
+#: model:ir.ui.menu,name:mk_tests.mk_tests_menu
+msgid "Tests Management"
+msgstr "الاختبارات"
+
+#. module: mk_tests
+#: model:ir.ui.view,arch_db:mk_tests.mk_test_center_config_form_view
+#: model:ir.ui.view,arch_db:mk_tests.mk_test_internal_registerations_form_view
+msgid "Tests Periods"
+msgstr "فترة الاختبار"
+
+#. module: mk_tests
+#: model:ir.ui.view,arch_db:mk_tests.mk_test_center_config_form_view
+msgid "Tests Registeration"
+msgstr "التسجيل للاختبارات"
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_center_config_test_type_ids
+msgid "Tests Type"
+msgstr "اسم الاختبار"
+
+#. module: mk_tests
+#: model:ir.ui.view,arch_db:mk_tests.mk_test_class_form_view
+msgid "Tests questions"
+msgstr "اسئلة الاختبارات الفصلية"
+
+#. module: mk_tests
+#: model:ir.ui.menu,name:mk_tests.mk_tests_settings_menu
+msgid "Tests settings"
+msgstr "إعدادات الإختبارات"
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_class_questions_configuration_theoretical_score
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_class_theoretical_score
+msgid "Theoretical Tajweed Score"
+msgstr "درجة التجويد النظري"
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_center_config_thursday
+msgid "Thursday"
+msgstr "الخميس"
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_internal_registerations_time_id
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_time_name
+msgid "Time"
+msgstr "زمن اﻹختبار"
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_internal_registerations_time_backup_id
+msgid "Time Backup"
+msgstr "Time Backup"
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_time_to_period
+msgid "To Period"
+msgstr "الى الفترة"
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_appreciation_test_to_score
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_appreciation_to_score
+msgid "To Score"
+msgstr "الى"
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_class_total_question
+msgid "Total question number"
+msgstr "Total question number"
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_center_config_tuesday
+msgid "Tuesday"
+msgstr "الثلاثاء"
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_test_type_error_type_error
+msgid "Type Error"
+msgstr "نوع الخطاء"
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_type_test_error_ids
+#: model:ir.ui.view,arch_db:mk_tests.mk_test_type_form_view
+msgid "Type Error Tests"
+msgstr "اخطاء الاختبار"
+
+#. module: mk_tests
+#: model:ir.ui.view,arch_db:mk_tests.mk_test_internal_registerations_form_view
+msgid "Update Test Time"
+msgstr "تحديث زمن الإختبار"
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_center_config_wednesday
+msgid "Wednesday"
+msgstr "اﻷربعاء"
+
+#. module: mk_tests
+#: code:addons/mk_tests/models/mk_test_student_preparation.py:60
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_center_config_zuhr
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_internal_registerations_period_zuhr
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_internal_registerations_zuhr
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_time_zuhr
+#, python-format
+msgid "Zuhr"
+msgstr "الظهر"
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_test_branch_line_check
+msgid "all Quran"
+msgstr "اختيار القرآن كامل"
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_passage_reward_amount_money
+msgid "amount of money"
+msgstr "المبلغ المطلوب"
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_appreciation_test_apprec_id
+msgid "appreci_id"
+msgstr "appreci_id"
+
+#. module: mk_tests
+#: model:ir.model,name:mk_tests.model_appreciation_test
+msgid "appreciation.test"
+msgstr "appreciation.test"
+
+#. module: mk_tests
+#: model:ir.model,name:mk_tests.model_committee_test
+msgid "committee.test"
+msgstr "committee.test"
+
+#. module: mk_tests
+#: model:ir.ui.view,arch_db:mk_tests.mk_test_class_form_view
+#: model:ir.ui.view,arch_db:mk_tests.mk_test_class_questions_configuration_form_view
+msgid "difficult"
+msgstr "صعب"
+
+#. module: mk_tests
+#: model:ir.ui.view,arch_db:mk_tests.mk_test_class_form_view
+#: model:ir.ui.view,arch_db:mk_tests.mk_test_class_questions_configuration_form_view
+msgid "easy"
+msgstr "سهل"
+
+#. module: mk_tests
+#: model:ir.ui.view,arch_db:mk_tests.mk_test_center_form_view
+msgid "latitude"
+msgstr "خط العرض"
+
+#. module: mk_tests
+#: model:ir.ui.view,arch_db:mk_tests.mk_test_center_form_view
+msgid "longitude"
+msgstr "خط الطول"
+
+#. module: mk_tests
+#: model:ir.ui.view,arch_db:mk_tests.mk_test_class_form_view
+#: model:ir.ui.view,arch_db:mk_tests.mk_test_class_questions_configuration_form_view
+msgid "middle"
+msgstr "متوسط"
+
+#. module: mk_tests
+#: model:ir.model,name:mk_tests.model_mk_branches
+msgid "mk.branches"
+msgstr "mk.branches"
+
+#. module: mk_tests
+#: model:ir.model,name:mk_tests.model_mk_passage_reward
+msgid "mk.passage.reward"
+msgstr "mk.passage.reward"
+
+#. module: mk_tests
+#: model:ir.model,name:mk_tests.model_mk_test_appreciation
+msgid "mk.test.appreciation"
+msgstr "mk.test.appreciation"
+
+#. module: mk_tests
+#: model:ir.model,name:mk_tests.model_mk_test_center
+msgid "mk.test.center"
+msgstr "mk.test.center"
+
+#. module: mk_tests
+#: model:ir.model,name:mk_tests.model_mk_test_center_config
+msgid "mk.test.center.config"
+msgstr "mk.test.center.config"
+
+#. module: mk_tests
+#: model:ir.model,name:mk_tests.model_mk_test_class
+msgid "mk.test.class"
+msgstr "mk.test.class"
+
+#. module: mk_tests
+#: model:ir.model,name:mk_tests.model_mk_test_class_committee
+msgid "mk.test.class.committee"
+msgstr "mk.test.class.committee"
+
+#. module: mk_tests
+#: model:ir.model,name:mk_tests.model_mk_test_class_parts
+msgid "mk.test.class.parts"
+msgstr "mk.test.class.parts"
+
+#. module: mk_tests
+#: model:ir.model,name:mk_tests.model_mk_test_class_questions_configuration
+msgid "mk.test.class.questions.configuration"
+msgstr "mk.test.class.questions.configuration"
+
+#. module: mk_tests
+#: model:ir.model,name:mk_tests.model_mk_test_deduct
+msgid "mk.test.deduct"
+msgstr "mk.test.deduct"
+
+#. module: mk_tests
+#: model:ir.model,name:mk_tests.model_mk_test_internal_registerations
+msgid "mk.test.internal.registerations"
+msgstr "mk.test.internal.registerations"
+
+#. module: mk_tests
+#: model:ir.model,name:mk_tests.model_mk_test_student_preparation
+msgid "mk.test.student.preparation"
+msgstr "mk.test.student.preparation"
+
+#. module: mk_tests
+#: model:ir.model,name:mk_tests.model_mk_test_time
+msgid "mk.test.time"
+msgstr "mk.test.time"
+
+#. module: mk_tests
+#: model:ir.model,name:mk_tests.model_mk_test_type
+msgid "mk.test.type"
+msgstr "mk.test.type"
+
+#. module: mk_tests
+#: model:ir.model,name:mk_tests.model_parts_branch_line
+msgid "parts.branch.line"
+msgstr "parts.branch.line"
+
+#. module: mk_tests
+#: model:ir.model,name:mk_tests.model_passage_reward
+msgid "passage.reward"
+msgstr "passage.reward"
+
+#. module: mk_tests
+#: model:ir.ui.view,arch_db:mk_tests.mk_test_class_form_view
+#: model:ir.ui.view,arch_db:mk_tests.mk_test_class_questions_configuration_form_view
+msgid "question_number"
+msgstr "question_number"
+
+#. module: mk_tests
+#: model:ir.model.fields,field_description:mk_tests.field_mk_test_class_parts_test_question_id
+msgid "test question"
+msgstr "test question"
+
+#. module: mk_tests
+#: model:ir.model,name:mk_tests.model_test_branch_line
+msgid "test.branch.line"
+msgstr "test.branch.line"
+
+#. module: mk_tests
+#: model:ir.model,name:mk_tests.model_test_type_error
+msgid "test.type.error"
+msgstr "test.type.error"
+
+#. module: mk_tests
+#: code:addons/mk_tests/models/mk_test_student_preparation.py:34
+#, python-format
+msgid "لا يمكنك حذف سجل تم تأكيده"
+msgstr "لا يمكنك حذف سجل تم تأكيده"
+
+#. module: mk_tests
+#: code:addons/mk_tests/models/mk_test_student_preparation.py:39
+#, python-format
+msgid "لا يمكنك حذف هذا السجل لإرتباطه بسجلات أخرى"
+msgstr "لا يمكنك حذف هذا السجل لإرتباطه بسجلات أخرى"
+
+#. module: mk_tests
+#: sql_constraint:mk.test.type:0
+msgid "موجود مسبقاً !"
+msgstr "موجود مسبقاً !"
+

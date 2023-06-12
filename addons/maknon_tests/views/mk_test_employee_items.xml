@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<openerp>
+		<data>
+			<record id="employee_items_form_view" model="ir.ui.view">
+			    <field name= "name">employee items</field>
+			    <field name= "model">employee.items</field>
+			    <field name= "arch"  type="xml"> 
+			         <form  create="1" delete="1" edit="1">
+			             <sheet>
+			             	<group>
+			             		<group>
+			             			<field name="name"/>
+			             			<field name="total" string="مجموع الدرجات"/>
+			             		</group>
+
+			             		<group>
+			             			<field name="branches" widget="many2many_tags" domain="[('branch_group','=','employee')]"/>
+			             		</group>			             		
+			             	</group>
+			             </sheet>
+						 <div class="oe_chatter">
+							<field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+							<field name="message_ids"          widget="mail_thread"/>
+						 </div>
+			         </form>
+			    </field>
+			 </record>
+
+			 <record id="employee_items_tree" model="ir.ui.view">
+			    <field name= "name">employee items</field>
+			    <field name= "model">employee.items</field>
+			      <field name="arch" type="xml">
+			        <tree>
+						<field name="name"/>
+						<field name="total" string="مجموع الدرجات"/>
+				    </tree>
+			   </field>
+			 </record>
+
+			 <record id="employee_items_action" model="ir.actions.act_window">
+				<field name="name">employee items</field>
+				<field name="res_model">employee.items</field>
+				<field name="type">ir.actions.act_window</field>
+				<field name="view_type">form</field>
+				<field name="view_mode">tree,form</field>
+				<!--<field name="domain">[]</field>
+				<field name="context">{}</field>
+				<field name="search_view_id" ref="mk_contests_regulatoins_preparation_search_view"/> -->
+		    </record>
+
+		   <menuitem id="test_employee_items"
+                     name="Employee Items"
+                     action="employee_items_action"
+                     parent="maknon_tests.test_processes_main_menu"
+                     sequence="5"/>
+		</data>
+	</openerp>

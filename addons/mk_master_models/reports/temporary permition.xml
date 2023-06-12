@@ -1,0 +1,24 @@
+<odoo>
+    <template id="temporary permition_reprt">
+      <t t-foreach="docs" t-as="o">
+        <t t-call="web.external_layout">
+          <div class="oe_structure"/>
+          <div class="row mt32 mb32">
+            <div class="page">
+                <h3 class="text-center" style="font-size:28px;">تصريح مؤقت</h3>
+                <p class="text-right" style="font-size:28px; padding-right:5%; padding-top:50px ;font-family:Arial" >
+                  <br> ...الحمدلله والصلاة والسلام على رسول الله </br>
+                   <br>:أما بعد</br>
+                   <br> بناء على الصلاحية المخولة ل<span t-field="o.center_id"/>  التابع لجمعية مكنون لتحفيظ القرآن الكريم في منطقة الرياض </br>
+                  <br> تقرر منح حلقة/مدرسة(<span t-field="o.masjed_id"/>)<br>
+                  <br> بحي () تصريح رقم(<span t-field="o.district_id"/>)
+                  <br> ويشرف عليها ()</br>
+                  <h5 class="text-center" style="font-size:20px;"> حتى تاريخ (<span t-field="o.permision_end_date"/>)</h5>
+                  <h5 class="text-center" style="font-size:20px;">,,,هذا ونسأل الله التوفيق والإعانة والسداد</h5>
+                </p>
+           </div>
+        </div>
+      </t>
+    </t>
+  </template>
+</odoo>

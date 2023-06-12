@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+
+        <report id="attendance_certificate"
+                string="attendance certificate"
+                model="attendance.certificate"
+                report_type="qweb-pdf"
+                file="mk_student_managment.student_attendance_report_temp"
+                name="mk_student_managment.student_attendance_report_temp"
+        />
+
+
+<!--        <record id="attendance_certificate" model="ir.actions.report">-->
+<!--        </record>-->
+
+
+    </data>
+</odoo>    

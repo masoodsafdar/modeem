@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<odoo>
+<data>
+
+<record id="search_episodes_wizard_form_view" model="ir.ui.view">
+<field name="name">episode search form</field>
+<field name="model">mk.episode_search</field>
+<field name="arch" type="xml">
+<form>
+	<group colspan="2" col="4">
+		<field name="student_id"/>
+		<field name="episode_id"/>
+		<field name="study_year" options="{'no_open':1,'no_create':1}"/>
+	</group>
+
+	<group colspan="4" col="4">
+		<field name="subh_t" invisible="1"/>
+		<field name="zuhr_t" invisible="1"/>
+		<field name="aasr_t" invisible="1"/>
+		<field name="magrib_t" invisible="1"/>
+		<field name="esha_t" invisible="1"/>
+
+		<field name="subh" attrs="{'invisible':[('subh_t','=',False)]}"/>
+		<field name="zuhr" attrs="{'invisible':[('zuhr_t','=',False)]}"/>
+		<field name="aasr" attrs="{'invisible':[('aasr_t','=',False)]}"/>
+		<field name="magrib" attrs="{'invisible':[('magrib_t','=',False)]}"/>
+		<field name="esha" attrs="{'invisible':[('esha_t','=',False)]}"/>
+
+		<field name="student_days" widget="many2many_checkboxes" options="{'no_create': True, 'no_open': True}"/>/>
+	</group>
+
+<button name="ok" type="object" string="OK" class="oe_highlight"/>
+<button string="Cancel" class="oe_link" special="cancel"/>
+</form>
+</field>
+</record>    
+
+<record id="episode_search_wizard_action" model="ir.actions.act_window">
+<field name="name">episode search</field>
+<field name="res_model">mk.episode_search</field>
+<field name="view_type">form</field>
+<field name="view_mode">form</field>
+<field name="view_id" ref="search_episodes_wizard_form_view"/>
+<field name="target">new</field>
+<field name="context">{'ep_id':active_id}
+</field>
+</record>
+
+
+
+
+</data>
+</odoo>

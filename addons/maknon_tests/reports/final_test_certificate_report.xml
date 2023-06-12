@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model="report.paperformat" id="paperformat_final_test_certificate_report">
+            <field name="name">paperformat report</field>
+            <field name="default" eval="True"/>
+            <field name="format">A4</field>
+            <field name="page_width">0</field>
+            <field name="page_height">0</field>
+            <field name="orientation">Landscape</field>
+            <field name="margin_top">0</field>
+            <field name="margin_right">0</field>
+            <field name="margin_bottom">0</field>
+            <field name="margin_left">0</field>
+            <field name="header_line" eval="False"/>
+            <field name="header_spacing">30</field>
+            <field name="dpi">90</field>
+        </record>
+
+
+        <report id="final_test_certificate_report_id"
+                string="Final test certificate"
+                model="student.test.session"
+                report_type="qweb-pdf"
+                name="maknon_tests.final_test_certificate_report"
+                file="maknon_tests.final_test_certificate_report"
+                paperformat="paperformat_final_test_certificate_report"/>
+
+        <report id="licence_test_certification_report"
+                string="شهادة اختبار مجاز"
+                model="student.test.session"
+                report_type="qweb-pdf"
+                name="maknon_tests.licence_test_certification_report_template"
+                file="maknon_tests.licence_test_certification_report_template"
+                paperformat="paperformat_final_test_certificate_report"/>
+    </data>
+</odoo>

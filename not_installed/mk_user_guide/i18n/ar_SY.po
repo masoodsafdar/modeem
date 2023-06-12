@@ -1,0 +1,136 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* mk_user_guide
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-09-09 08:55+0000\n"
+"PO-Revision-Date: 2018-09-09 08:55+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: mk_user_guide
+#: model:ir.model.fields,field_description:mk_user_guide.field_mk_user_guide_active
+msgid "Active"
+msgstr "نشط"
+
+#. module: mk_user_guide
+#: model:ir.model.fields,field_description:mk_user_guide.field_mk_user_guide_line_attachment
+msgid "Attachment"
+msgstr "المرفقات"
+
+#. module: mk_user_guide
+#: model:ir.model.fields,field_description:mk_user_guide.field_mk_user_guide_create_uid
+#: model:ir.model.fields,field_description:mk_user_guide.field_mk_user_guide_line_create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: mk_user_guide
+#: model:ir.model.fields,field_description:mk_user_guide.field_mk_user_guide_create_date
+#: model:ir.model.fields,field_description:mk_user_guide.field_mk_user_guide_line_create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: mk_user_guide
+#: model:ir.model.fields,field_description:mk_user_guide.field_mk_user_guide_line_description
+msgid "Description"
+msgstr "الوصف"
+
+#. module: mk_user_guide
+#: model:ir.model.fields,field_description:mk_user_guide.field_mk_user_guide_display_name
+#: model:ir.model.fields,field_description:mk_user_guide.field_mk_user_guide_line_display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: mk_user_guide
+#: model:ir.model.fields,field_description:mk_user_guide.field_mk_user_guide_id
+#: model:ir.model.fields,field_description:mk_user_guide.field_mk_user_guide_line_id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: mk_user_guide
+#: model:ir.model.fields,field_description:mk_user_guide.field_mk_user_guide_info
+#: model:ir.model.fields,field_description:mk_user_guide.field_mk_user_guide_line_info_id
+msgid "Info"
+msgstr "Info"
+
+#. module: mk_user_guide
+#: model:ir.model.fields,field_description:mk_user_guide.field_mk_user_guide___last_update
+#: model:ir.model.fields,field_description:mk_user_guide.field_mk_user_guide_line___last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: mk_user_guide
+#: model:ir.model.fields,field_description:mk_user_guide.field_mk_user_guide_line_write_uid
+#: model:ir.model.fields,field_description:mk_user_guide.field_mk_user_guide_write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: mk_user_guide
+#: model:ir.model.fields,field_description:mk_user_guide.field_mk_user_guide_line_write_date
+#: model:ir.model.fields,field_description:mk_user_guide.field_mk_user_guide_write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: mk_user_guide
+#: model:ir.model.fields,field_description:mk_user_guide.field_mk_user_guide_line_name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: mk_user_guide
+#: model:ir.model.fields,field_description:mk_user_guide.field_mk_user_guide_line_video
+msgid "Video"
+msgstr "فديو"
+
+#. module: mk_user_guide
+#: model:ir.model,name:mk_user_guide.model_mk_user_guide
+msgid "mk.user.guide"
+msgstr "mk.user.guide"
+
+#. module: mk_user_guide
+#: model:ir.model,name:mk_user_guide.model_mk_user_guide_line
+msgid "mk.user.guide.line"
+msgstr "mk.user.guide.line"
+
+#. module: mk_user_guide
+#: model:ir.model.fields,field_description:mk_user_guide.field_mk_user_guide_name
+msgid "module name"
+msgstr "إسم الوحدة البرمجية"
+
+#. module: mk_user_guide
+#: model:ir.actions.act_window,name:mk_user_guide.mk_user_guide_action
+#: model:ir.ui.menu,name:mk_user_guide.mk_user_guide_main_menu
+#: model:ir.ui.menu,name:mk_user_guide.mk_user_guide_menu
+#: model:ir.ui.menu,name:mk_user_guide.user_guide_menu
+#: model:ir.ui.view,arch_db:mk_user_guide.mk_user_guide_tree_view
+msgid "user guide"
+msgstr "دليل المستخدم"
+
+#. module: mk_user_guide
+#: model:res.groups,name:mk_user_guide.create_user_guide
+msgid "Create User guide"
+msgstr "انشاء دليل المستخدم"
+
+#. module: mk_user_guide
+#: model:res.groups,name:mk_user_guide.delete_user_guide
+msgid "Delete User guide"
+msgstr "حذف دليل مستخدم"
+
+#. module: mk_user_guide
+#: model:res.groups,name:mk_user_guide.write_user_guide
+msgid "Update or Modify User guide"
+msgstr "التعديل على دليل المستخدم"
+
+#. module: mk_user_guide
+#: model:ir.module.category,name:mk_user_guide.user_guide_category
+msgid "User guide Management"
+msgstr "دليل المستخدم"
+
+
+

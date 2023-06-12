@@ -1,0 +1,56 @@
+<odoo>
+    <data noupdate="1">
+        <record id="mk_age_category1" model="mk.age.category">
+            <field name="from_age">1</field>
+            <field name="to_age">3</field>
+        </record>
+        <record id="mk_age_category2" model="mk.age.category">
+            <field name="from_age">4</field>
+            <field name="to_age">6</field>
+        </record>
+        <record id="mk_age_category3" model="mk.age.category">
+            <field name="from_age">7</field>
+            <field name="to_age">9</field>
+        </record>
+        <record id="mk_age_category4" model="mk.age.category">
+            <field name="from_age">10</field>
+            <field name="to_age">12</field>
+        </record>
+        <record id="mk_age_category5" model="mk.age.category">
+            <field name="from_age">13</field>
+            <field name="to_age">15</field>
+        </record>
+        <record id="mk_age_category6" model="mk.age.category">
+            <field name="from_age">16</field>
+            <field name="to_age">18</field>
+        </record>
+        <record id="mk_age_category7" model="mk.age.category">
+            <field name="from_age">19</field>
+            <field name="to_age">24</field>
+        </record>
+        <record id="mk_age_category8" model="mk.age.category">
+            <field name="from_age">25</field>
+            <field name="to_age">35</field>
+        </record>
+        <record id="mk_age_category9" model="mk.age.category">
+            <field name="from_age">35</field>
+            <field name="to_age">45</field>
+        </record>
+        <record id="mk_age_category10" model="mk.age.category">
+            <field name="from_age">45</field>
+            <field name="to_age">100</field>
+        </record>
+        <record id="mk_age_category11" model="mk.age.category">
+            <field name="from_age">10</field>
+            <field name="to_age">100</field>
+        </record>
+        <record id="mk_age_category12" model="mk.age.category">
+            <field name="from_age">9</field>
+            <field name="to_age">100</field>
+        </record>
+        <record id="mk_age_category13" model="mk.age.category">
+            <field name="from_age">1</field>
+            <field name="to_age">8</field>
+        </record>
+    </data>
+</odoo>

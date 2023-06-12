@@ -1,0 +1,171 @@
+<odoo>
+    <data>
+
+        <record id="mk_surah_form_view" model="ir.ui.view">
+            <field name="name">Surah Form View</field>
+            <field name="model">mk.surah</field>
+            <field name="arch" type="xml">
+                <form string="Surah" delete="false" create="false" edit="false">
+                    <header>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name" required="1"/>
+                            </group>
+                            <group>
+                                <field name="order" required="1"/>
+                                <field name="nbr_lines" readonly="1" string="عدد الأسطر"/>
+                            </group>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="mk_surah_tree_view" model="ir.ui.view">
+            <field name="name">Surah.Tree.View</field>
+            <field name="model">mk.surah</field>
+            <field name="arch" type="xml">
+                <tree string="Surah" delete="false" create="false">
+                    <field name="name"/>
+                    <field name="order"/>
+                    <field name="nbr_lines" string="عدد الأسطر"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="mk_surah_search_view" model="ir.ui.view">
+            <field name="name">Surah Search View</field>
+            <field name="model">mk.surah</field>
+            <field name="arch" type="xml">
+                <search string="Surah">
+                    <field name="name" string="Surah"
+                           filter_domain="['|',('name','ilike', self),('order','ilike', self)]"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="mk_surah_action" model="ir.actions.act_window">
+            <field name="name">Surah</field>
+            <field name="res_model">mk.surah</field>
+            <field name="type">ir.actions.act_window</field>
+            <!-- <field name="view_type">form</field> -->
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+            <field name="search_view_id" ref="mk_surah_search_view"/>
+        </record>
+
+        <record id="mk_surah_verse_form_view" model="ir.ui.view">
+            <field name="name">Surah Verse Form View</field>
+            <field name="model">mk.surah.verses</field>
+            <field name="arch" type="xml">
+                <form string="Surah">
+                    <header>
+
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="surah_id" required="1" options="{'no_create': True,'no_open': True,}"
+                                       string="السورة"/>
+                            </group>
+                            <group>
+                                <field name="part_id" required="1" options="{'no_create': True,'no_open': True,}"/>
+                            </group>
+                        </group>
+                        <group>
+                            <field name="verse" required="1"/>
+                            <field name="page_no"/>
+                        </group>
+                        <group>
+                            <group>
+                                <field name="line_start" string="سطر البداية"/>
+                                <field name="original_accumalative_order" required="1"/>
+                                <field name="reverse_accumalative_order" required="1"/>
+                                <field name="difficulty_level" required="1" widget="radio"/>
+                            </group>
+                            <group>
+                                <field name="line_end" string="سطر النهاية"/>
+                                <field name="original_surah_order" required="1"/>
+                                <field name="reverse_surah_order" required="1"/>
+                                <field name="line_no" required="1"/>
+                            </group>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="mk_surah_verse_tree_view" model="ir.ui.view">
+            <field name="name">Surah Verse Tree View</field>
+            <field name="model">mk.surah.verses</field>
+            <field name="arch" type="xml">
+                <tree delete="0" string="Surah">
+                    <field name="surah_id" options="{'no_create': True,'no_open': True,}" string="السورة"/>
+                    <field name="part_id" options="{'no_create': True,'no_open': True,}"/>
+                    <field name="original_accumalative_order"/>
+                    <field name="reverse_accumalative_order"/>
+                    <field name="original_surah_order"/>
+                    <field name="reverse_surah_order"/>
+                    <field name="line_no"/>
+                    <field name="page_no"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="mk_surah_verse_search_view" model="ir.ui.view">
+            <field name="name">Surah Verse Search View</field>
+            <field name="model">mk.surah.verses</field>
+            <field name="arch" type="xml">
+                <search string="Surah">
+                    <field name="surah_id"/>
+                    <field name="part_id"/>
+                    <field name="page_no"/>
+                    <field name="original_accumalative_order"/>
+                    <field name="reverse_accumalative_order"/>
+                    <field name="original_surah_order"/>
+                    <field name="reverse_surah_order"/>
+                    <field name="line_no"/>
+
+                    <filter string="ساهل" name="up" domain="[('difficulty_level', '=','up')]"/>
+                    <filter string="متوسط" name="down" domain="[('difficulty_level', '=','page')]"/>
+                    <filter string="صعب" name="down" domain="[('difficulty_level', '=','page')]"/>
+
+                    <group expand="0" string="Group By">
+                        <filter name="group_surah" string="سورة" context="{'group_by': 'surah_id'}"/>
+                        <filter name="group_surah" string="الجزء" context="{'group_by': 'part_id'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record id="mk_surah_verse_action" model="ir.actions.act_window">
+            <field name="name">Surah Verse</field>
+            <field name="res_model">mk.surah.verses</field>
+            <field name="type">ir.actions.act_window</field>
+            <!-- <field name="view_type">form</field> -->
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+            <field name="search_view_id" ref="mk_surah_verse_search_view"/>
+        </record>
+
+
+        <menuitem name="Surah" id="mk_surah_menu" sequence="5" parent="mk_program_management_settings_menu"
+                  action="mk_surah_action"/>
+
+        <menuitem name="Surah Verse" id="mk_surah_verse_menu" sequence="5" parent="mk_program_management_settings_menu"
+                  action="mk_surah_verse_action"/>
+
+    </data>
+</odoo>

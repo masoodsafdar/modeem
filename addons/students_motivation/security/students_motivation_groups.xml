@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data noupdate="1">
+        <record model="ir.module.category" id="moodule_motivation_categ">
+            <field name="name">Motivation management</field>
+            <field name="sequence">300</field>
+        </record>
+                    <!--     request management groups      -->
+        <record id="group_motivation_request_management" model="res.groups">
+            <field name="name">Motivation request management</field>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+            <!-- field name="users" eval="[(4, ref('base.user_root'))]"/-->
+            <field name="category_id" ref="moodule_motivation_categ"/>
+        </record>
+
+        <record id="accept_refuse_motivation_request" model="res.groups">
+            <field name="name">Accept/refuse motivation request</field>
+            <field name="implied_ids" eval="[(4, ref('group_motivation_request_management'))]"/>
+            <!-- field name="users" eval="[(4, ref('base.user_root'))]"/-->
+            <field name="category_id" ref="moodule_motivation_categ"/>
+        </record>
+
+        <record id="deliver_motivation_request" model="res.groups">
+            <field name="name">Deliver motivation request</field>
+            <field name="implied_ids" eval="[(4, ref('group_motivation_request_management'))]"/>
+            <!-- field name="users" eval="[(4, ref('base.user_root'))]"/-->
+            <field name="category_id" ref="moodule_motivation_categ"/>
+        </record>
+                    <!--    markdown points groups      -->
+        <record id="read_markdown_points" model="res.groups">
+            <field name="name">Read markdown points</field>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+            <!-- field name="users" eval="[(4, ref('base.user_root'))]"/-->
+            <field name="category_id" ref="moodule_motivation_categ"/>
+        </record>
+
+        <record id="create_write_markdown_points" model="res.groups">
+            <field name="name">Creat/write markdown points</field>
+            <field name="implied_ids" eval="[(4, ref('read_markdown_points'))]"/>
+            <!-- field name="users" eval="[(4, ref('base.user_root'))]"/-->
+            <field name="category_id" ref="moodule_motivation_categ"/>
+        </record>
+
+        <record id="delete_markdown_points" model="res.groups">
+            <field name="name">Delete markdown points</field>
+            <field name="implied_ids" eval="[(4, ref('read_markdown_points'))]"/>
+            <!-- field name="users" eval="[(4, ref('base.user_root'))]"/-->
+            <field name="category_id" ref="moodule_motivation_categ"/>
+        </record>
+
+        <record id="confirm_markdown_points" model="res.groups">
+            <field name="name">Confirm markdown points</field>
+            <field name="implied_ids" eval="[(4, ref('create_write_markdown_points'))]"/>
+            <!-- field name="users" eval="[(4, ref('base.user_root'))]"/-->
+            <field name="category_id" ref="moodule_motivation_categ"/>
+        </record>
+                    <!--    student points groups      -->
+        <record id="read_students_points" model="res.groups">
+            <field name="name">Read students points</field>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+            <!-- field name="users" eval="[(4, ref('base.user_root'))]"/-->
+            <field name="category_id" ref="moodule_motivation_categ"/>
+        </record>
+
+        <record id="create_write_students_points" model="res.groups">
+            <field name="name">Creat/write students points</field>
+            <field name="implied_ids" eval="[(4, ref('read_students_points'))]"/>
+            <!-- field name="users" eval="[(4, ref('base.user_root'))]"/-->
+            <field name="category_id" ref="moodule_motivation_categ"/>
+        </record>
+
+        <record id="delete_students_points" model="res.groups">
+            <field name="name">Delete students points</field>
+            <field name="implied_ids" eval="[(4, ref('read_students_points'))]"/>
+            <!-- field name="users" eval="[(4, ref('base.user_root'))]"/-->
+            <field name="category_id" ref="moodule_motivation_categ"/>
+        </record>
+
+              <!--  Product template management groups      -->
+        <record id="product_management" model="res.groups">
+            <field name="name">Product management</field>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+            <!-- field name="users" eval="[(4, ref('base.user_root'))]"/-->
+            <field name="category_id" ref="moodule_motivation_categ"/>
+        </record>
+
+                    <!--    Standard items groups      -->
+        <record id="read_standard_items" model="res.groups">
+            <field name="name">Read standard items</field>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+            <!-- field name="users" eval="[(4, ref('base.user_root'))]"/-->
+            <field name="category_id" ref="moodule_motivation_categ"/>
+        </record>
+
+        <record id="create_write_standard_items" model="res.groups">
+            <field name="name">Creat/write standard items</field>
+            <field name="implied_ids" eval="[(4, ref('read_standard_items'))]"/>
+            <!-- field name="users" eval="[(4, ref('base.user_root'))]"/-->
+            <field name="category_id" ref="moodule_motivation_categ"/>
+        </record>
+
+        <record id="delete_standard_items" model="res.groups">
+            <field name="name">Delete standard items</field>
+            <field name="implied_ids" eval="[(4, ref('read_standard_items'))]"/>
+            <!-- field name="users" eval="[(4, ref('base.user_root'))]"/-->
+            <field name="category_id" ref="moodule_motivation_categ"/>
+        </record>
+    </data>
+</odoo>

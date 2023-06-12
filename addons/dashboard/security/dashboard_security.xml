@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data noupdate="0">
+	
+	<record id="category_dashboard" model="ir.module.category">
+        <field name="name">Dashboard</field>
+    </record>
+    
+    <record id="dashboard_user" model="res.groups">
+        <field name="name">Dashboard Users</field>
+        <field name="category_id" ref="category_dashboard"/>
+        <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+    </record>
+    <record id="dashboard_manager" model="res.groups">
+        <field name="name">Dashboard Managers</field>
+        <field name="category_id" ref="category_dashboard"/>
+        <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        <field name="implied_ids" eval="[(4, ref('dashboard.dashboard_user'))]"/>
+    </record>
+
+</data>
+</openerp>

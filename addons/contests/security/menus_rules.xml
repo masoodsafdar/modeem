@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+    	<record model='ir.ui.menu' id='contests.nominations_process_menu'>
+			<field name='groups_id' eval="[(4, ref('read_nomination_request_group'))]"/>
+		</record>
+
+		<record model='ir.ui.menu' id='contests.nomination_request_managment_menu'>
+			<field name='groups_id' eval="[(4, ref('read_nomination_request_management_group'))]"/>
+		</record>
+
+		<record model='ir.ui.menu' id='contests.contests_fields_menu'>
+			<field name='groups_id' eval="[(4, ref('write_contest_fields_group'))]"/>
+		</record>
+		
+		<!--record model='ir.ui.menu' id='contests.contests_diff_items_menu'>
+			<field name='groups_id' eval="[(4, ref('write_contest_diff_items_group'))]"/>
+		</record-->
+		
+		<record model='ir.ui.menu' id='contests.contests_types_menu'>
+			<field name='groups_id' eval="[(4, ref('write_contest_types_group'))]"/>
+		</record>
+		
+    </data>
+</odoo>

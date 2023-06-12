@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">	
+    
+      	<record model="edu.field" id="edu_field1">
+            <field name="number">1</field>
+            <field name="name">المجال التعليمي</field>
+        </record>
+      	<record model="edu.field" id="edu_field2">
+            <field name="number">2</field>
+            <field name="name">مجال إداري</field>
+        </record>        
+      	<record model="edu.field" id="edu_field3">
+            <field name="number">3</field>
+            <field name="name">مجال تعليم نوعي</field>
+        </record>
+      	<record model="edu.field" id="edu_field4">
+            <field name="number">4</field>
+            <field name="name">مجال مالي</field>
+        </record>
+        
+        
+    	<record model="edu.criterion" id="criterion1">
+            <field name="criterion_number">1</field>
+            <field name="name">عدد المعلمين المؤهلين تعليمياً وتربوياً</field>
+            <field name="criterion_weight">20</field>
+            <field name="field" ref="educational_supervison.edu_field1"/>
+        </record>
+    	<record model="edu.criterion" id="criterion2">
+            <field name="criterion_number">2</field>
+            <field name="name">عدد المعلمين المفعلين في تقديم برامج تعليمية وتربوية نوعية</field>
+            <field name="criterion_weight">4</field>
+            <field name="field" ref="educational_supervison.edu_field1"/>
+        </record>
+    	<record model="edu.criterion" id="criterion3">
+            <field name="criterion_number">3</field>
+            <field name="name">عدد البرامج المقدمة من المشرف للميدان</field>
+            <field name="criterion_weight">2</field>
+            <field name="field" ref="educational_supervison.edu_field1"/>
+        </record>
+    	<record model="edu.criterion" id="criterion4">
+            <field name="criterion_number">4</field>
+            <field name="name">عدد المساجد المطبقة للخطط التعليمية و التربوية المعتمدة</field>
+            <field name="criterion_weight">12</field>
+            <field name="field" ref="educational_supervison.edu_field1"/>
+        </record>
+    	<record model="edu.criterion" id="criterion5">
+            <field name="criterion_number">5</field>
+            <field name="name">تحقيق مخرجات تعليمية وتربوية كمية ونوعية متميزة</field>
+            <field name="criterion_weight">22</field>
+            <field name="field" ref="educational_supervison.edu_field1"/>
+        </record>
+    	<record model="edu.criterion" id="criterion6">
+            <field name="criterion_number">6</field>
+            <field name="name">التجويد الإداري</field>
+            <field name="criterion_weight">8</field>
+            <field name="field" ref="educational_supervison.edu_field1"/>
+        </record>
+    	<record model="edu.criterion" id="criterion7">
+            <field name="criterion_number">7</field>
+            <field name="name">الضبط الاداري</field>
+            <field name="criterion_weight">8</field>
+            <field name="field" ref="educational_supervison.edu_field1"/>
+        </record>
+    	<record model="edu.criterion" id="criterion8">
+            <field name="criterion_number">8</field>
+            <field name="name">القياس والتقويم التعليمي والتربوي</field>
+            <field name="criterion_weight">8</field>
+            <field name="field" ref="educational_supervison.edu_field1"/>
+        </record>
+    	<record model="edu.criterion" id="criterion9">
+            <field name="criterion_number">9</field>
+            <field name="name">النمو المهني</field>
+            <field name="criterion_weight">8</field>
+            <field name="field" ref="educational_supervison.edu_field1"/>
+        </record>
+    	<record model="edu.criterion" id="criterion10">
+            <field name="criterion_number">10</field>
+            <field name="name">تنفيذ برامج الخطة والمركز</field>
+            <field name="criterion_weight">8</field>
+            <field name="field" ref="educational_supervison.edu_field1"/>
+        </record>
+
+</data>
+</odoo>
+
+
+

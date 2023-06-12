@@ -1,0 +1,8 @@
+<odoo>
+<data noupdate="1">
+	<record model="mk.virtual_room.type" id="virtual_room_type1">
+		<field name="name">تعليم قرآن</field>
+		<field name="order_type">1</field>
+	</record>
+    </data>  
+</odoo>

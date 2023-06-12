@@ -1,0 +1,92 @@
+<odoo>
+	<data>
+		<record model="ir.ui.view" id="mk_supervisor_mosque_view_form">
+			<field name="name">mk.supervisor.mosque.form</field>
+			<field name="model">mk.supervisor.mosque</field>
+			<field name="arch" type="xml">
+				<form string="Supervisor" version="8.0">
+			     	<header>
+						<button name="act_accept" string="Accept" type="object" states="draft" class="oe_highlight"/>
+			     		<button name="act_reject" string="Reject" type="object" states="draft" class="oe_highlight"/>
+						<field name="state" widget="statusbar" statusbar_visible="draft,accept,reject"/>
+			   		</header>
+		   
+			        <sheet>
+			           	<group>
+			           		<field name="registeration_code" readonly="True"/>
+			           		<field name="mosque_id"/>
+			           	</group>
+			
+						<div class="oe_title">
+							<h2>
+						    	<table>
+						     		<tr>
+										<td>
+										   <field name="name" placeholder="First Name" style="padding-right:8px"/>
+										</td>
+										<td>
+										   <field name="second_name" placeholder="Second Name" style="padding-right:8px" />
+										</td>
+										<td>
+										   <field name="third_name" placeholder="Third Name" style="padding-right:8px" />
+										</td>
+										<td>
+										   <field name="fourth_name" placeholder="Fourth Name" style="padding-right:8px" />
+										</td>
+									</tr>
+						    	</table>                          
+							</h2>
+						</div>
+			
+						<group>
+							<field name="user_id"  style="width: 200px" attrs="{'invisible':[('state','!=','accept')]}"/>
+							<field name="emam"/>
+						</group>
+			
+						<group col="4">
+							<field name="identity_no" attrs="{'required':[('no_identity','=', False)], 'invisible':[('no_identity','=',True)]}"/>
+							<field name="iqama_expire" />
+							<field name="passport_no" attrs="{'invisible':[('no_identity','=',False)],
+							                                  'required': [('no_identity', '=', True)]}"/>
+							<field name="no_identity"/>
+						 </group>
+			                
+						<group col="4">
+							<field name="mobile"/>
+							<field name="country_id"/>
+							<field name="grade_id" options="{'no_create': True, 'no_open':True}"/>
+						</group>
+			
+						<group col="4">
+							<field name="email" widget="email"/>
+							<field name="job_id" options="{'no_open':1,'no_create':1}"/>
+							<field name="gender"/>
+							<field name="marital_status"/>
+						</group>
+					</sheet>
+				</form>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="mk_supervisor_mosque_tree">
+		    <field name="name">mk.supervisor.mosque.tree</field>
+		    <field name="model">mk.supervisor.mosque</field>
+		    <field name="arch" type="xml">
+		        <tree>
+					<field name="mosque_id"/>
+					<field name="display_name"/>
+					<field name="state"/>
+		        </tree>
+		    </field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_supervisor_mosque">
+			<field name="name">Supervisor</field>
+			<field name="res_model">mk.supervisor.mosque</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+    	<menuitem id="mk_view_supervisor_menu" name="Adding Supervisor" parent="mk_episode_management_menu" sequence="1"/>
+      	<menuitem id="mk_supervisor_menu"      name="Supervisor"        parent="mk_view_supervisor_menu" action="action_supervisor_mosque" sequence="2"/>
+   </data>
+</odoo>

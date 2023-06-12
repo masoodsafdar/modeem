@@ -1,0 +1,82 @@
+<odoo>
+    <data>
+    
+ 	<record id="mk_test_class_form_view" model="ir.ui.view">
+          <field name="name">Test Class Form View</field>
+          <field name="model">mk.test.class</field>
+          <field name="arch" type="xml">
+              <form string = "Test Class">
+		  <header>
+		    
+		  </header>
+		  <sheet>
+			  <group>
+			  	<group>
+			  		<field name="company_id" required="1"/>
+				  	<field name="study_year_id" required="1" domain="[('company_id','=',company_id)]"/>
+				  	<field name="study_class_id" required="1" domain="[('study_year_id','=',study_year_id)]"/>
+				  	<field name="test_type_id" required="1" domain="[('company_id','=',company_id)]"/>
+				  	<field name="test_type" invisible="1"/>
+				  	<field name="name" required="1" attrs="{'readonly':[('test_type','=','o')]}"/>
+				  	<field name="active"/>
+			  	</group>
+				<group>
+					<field name="question_number" required="1"/>
+					<field name="max_score" required="1"/>
+					<field name="min_score" required="1"/>
+					<field name="line_number" required="1"/>
+				</group>
+			</group>
+			<group colspan="2" col="6">
+				<field name="applied_score" required="1"/>
+				<field name="general_score" required="1"/>
+				<field name="theoretical_score" required="1"/>
+			  </group>
+			  <group colspan="2" col="8">
+			  	<field name="test_scope" invisible="1"/>
+				<field name="part_ids" widget="many2many_checkboxes" attrs="{'invisible':[('test_scope','!=','s')]}"/>
+			  </group>
+	  	</sheet>
+              </form>
+             </field>
+         </record>
+
+        <record id="mk_test_class_tree_view" model="ir.ui.view">
+            <field name="name">Test Class Tree View</field>
+            <field name="model">mk.test.class</field>
+            <field name="arch" type="xml">
+                <tree string="Test Class">
+                	<field name="company_id" required="1"/>
+                	<field name="study_year_id" required="1"/>
+                	<field name="study_class_id" required="1"/>
+                	<field name="test_type_id" required="1"/>
+                	<field name="name" required="1" string="Name"/>
+                </tree>
+            </field>
+        </record>
+        
+        <record id="mk_test_class_search_view" model="ir.ui.view">
+            <field name="name">Test Class Search View</field>
+            <field name="model">mk.test.class</field>
+            <field name="arch" type="xml">
+                <search string="Test Class ">
+                    <field name="name" string="Test Class" filter_domain="[('name','ilike', self)]"/>
+                </search>
+            </field>
+        </record>
+        
+        <record id="mk_test_class_action" model="ir.actions.act_window">
+            <field name="name">Test Class </field>
+            <field name="res_model">mk.test.class</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+            <field name="search_view_id" ref="mk_test_class_search_view"/>
+        </record>
+
+	<menuitem name="Test Class " id="mk_test_class_menu" sequence="5" parent="mk_tests_menu" action="mk_test_class_action"/>    
+
+    </data>  
+</odoo>

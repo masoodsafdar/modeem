@@ -1,0 +1,61 @@
+<odoo>
+    <data>
+    
+ 	<record id="view_city_form" model="ir.ui.view">
+				<field name="name">view.city.form</field>
+				<field name="model">mk.city</field>
+				<field name="arch" type="xml">
+					<form string="City" version="8.0">
+                        <sheet>
+                        	<group>
+                        		<field name="name" required="True"/>
+                        	</group>
+                        </sheet>
+                    </form>
+                </field>
+        </record>
+
+        <!-- Tree View MK Campus-->
+		<record id="view_city_tree" model="ir.ui.view">
+				<field name="name">view.city.tree</field>
+				<field name="model">mk.city</field>
+				<field name="arch" type="xml">
+					<tree>
+                        <field name="name" required="True"/>
+                    </tree>
+                </field>
+        </record>
+        
+        <record id="mk_city_search_view" model="ir.ui.view">
+            <field name="name">city Search View</field>
+            <field name="model">mk.city</field>
+            <field name="arch" type="xml">
+                <search string="city">
+                    <field name="name" string="city" filter_domain="[('name','ilike', self)]"/>
+                </search>
+            </field>
+        </record>
+        
+        <record id="mk_city_action" model="ir.actions.act_window">
+            <field name="name">city </field>
+            <field name="res_model">mk.city</field>
+            <field name="type">ir.actions.act_window</field>
+            <!-- <field name="view_type">form</field> -->
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+            <field name="search_view_id" ref="mk_city_search_view"/>
+        </record>
+
+
+<!--
+<menuitem
+			id="mk_city_menu"
+			name="City"
+			action="mk_city_action"
+			parent="mk_student_setting_menu"
+			sequence="3" />
+-->
+
+    </data>  
+</odoo>

@@ -1,0 +1,77 @@
+<odoo>
+  <data>
+	 	<record model="ir.ui.view" id="mk_student_suspend_resume">
+	    	<field name="name">mk.student.suspend.resume.form</field>
+	    	<field name="model">mk.student.suspend.resume</field>
+	    	<field name="arch" type="xml">
+	    		<form string="Student Suspention and Resume">
+	    			<header position="inside">
+	        			<button name="act_susped" string="Suspend"  type="object" class="oe_highlight" attrs="{'invisible':['|',('state', '=', 'suspend')]}"/>
+	         			<button name="act_resume" string="Resume"   type="object" class="oe_highlight" attrs="{'invisible':['|',('state', '=', 'resume')]}"/>
+	                 	<button name="act_accept" string="Validate" type="object" class="oe_highlight" attrs="{'invisible':['|',('state', '=', 'accept')]}"/>
+	                	<button name="act_reject" string="Reject"   type="object" class="oe_highlight" attrs="{'invisible':['|',('state', '=', 'reject')]}"/>  
+	                	<button name="set_draft"  string="Set to draft" type="object" states="reject" class="oe_highlight"/>                    
+	          			<field name="state" widget="statusbar" statusbable="draft,accept,reject"/>
+	      			</header>
+	      			
+	    			<sheet>
+	    				<group col="4" colspan="2">
+	    					<field name="masjed" required ="1"/>
+	    					<field name="student" required ="1" domain="[('episode_id','=',episode),('state', '=', 'accept')]" options="{'no_create': 1, 'no_create_edit': 1}"/>
+	    					<field name="episode" required ="1" domain="[('mosque_id','=',masjed)]" options="{'no_create': 1, 'no_create_edit': 1}"/>
+	    					<field name="year"  options="{'no_open':1,'no_create':1}"/> 
+	    					<field name="study_class_id" required ="1" domain="[('study_year_id','=',year)]" options="{'no_open':1,'no_create':1}"/>
+	    				</group>
+	    
+	    				<notebook>
+	    					<page string="Basic Information">
+	      						<group>
+	      							<field name="suspend_type" required ="1"/>
+	      							<field name="sus_date"/>
+	       						</group>
+	      						<field name="details"/>
+	      					</page>
+	      				</notebook>       
+	    			</sheet>
+	    		</form>
+	    	</field>
+	    </record>
+
+	    <record model="ir.ui.view" id="mk_student_suspend_resume_tree">
+	    	<field name="name">mk.student.suspend.resume.tree</field>
+	    	<field name="model">mk.student.suspend.resume</field>
+	    	<field name="arch" type="xml">
+	    		<tree>
+	    			<field name="student"/>
+	    			<field name="episode"/>
+	    			<field name="suspend_type"/>
+	    		</tree>
+	    	</field>
+	  	</record>
+
+	    <record id="action_mk_student_suspend_resume" model="ir.actions.act_window">
+			<field name="name">Suspension and Resume</field>
+			<field name="res_model">mk.student.suspend.resume</field>
+			<field name="view_mode">tree,form</field>
+	    </record>
+	    
+	    <!-- ===========================================
+	    					   DEPARTMENT
+	         =========================================== -->
+
+	   	<!-- record model="ir.ui.view" id="mk_hr_department_form">
+		    <field name="name">mk.hr.department.form</field>
+		    <field name="model">hr.department</field>
+		    <field name="type">form</field>
+		    <field name="inherit_id" ref="hr.view_department_form" />
+		    <field name="arch" type="xml">
+	   			<xpath expr="//field[@name='level_type']" position="after">
+	          		<field name="masjed" attrs="{'invisible': [('level_type','!=','mc')], 
+	          		                             'required':  [('level_type','=','mc')]}" />
+	        	</xpath>
+	    	</field>
+	    </record-->
+    
+   		<menuitem id="mk_student_suspend_resume_menu" name="Suspension and Resume" parent="manage_student_menu" action="action_mk_student_suspend_resume"/> 
+	</data>
+</odoo>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="1">
+
+        <record model="ir.module.category" id="mk_productivity_management">
+            <field name="name">Productivity management</field>
+            <field name="description">User access for productivity_managment module</field>
+            <field name="sequence">3</field>
+        </record>
+
+        <!-- productivity groups-->
+        <record id="read_productivity" model="res.groups">
+            <field name="name">Read Productivity</field>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+            <field name="category_id" ref="mk_productivity_management"/>
+        </record>
+
+        <record id="create_edit_productivity" model="res.groups">
+            <field name="name">Create Edit Productivity</field>
+            <field name="implied_ids" eval="[(4, ref('read_productivity'))]"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+            <field name="category_id" ref="mk_productivity_management"/>
+        </record>
+
+        <record id="delete_productivity" model="res.groups">
+            <field name="name">Delete Productivity</field>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+            <field name="category_id" ref="mk_productivity_management"/>
+        </record>
+
+        <!-- group of productivity settings -->
+        <record id="productivity_settings" model="res.groups">
+            <field name="name">Productivity Settings</field>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+            <field name="category_id" ref="mk_productivity_management"/>
+        </record>
+
+    </data>
+</openerp>

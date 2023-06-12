@@ -1,0 +1,35 @@
+<odoo>
+	<data>
+    	<record model="report.paperformat" id="paperformat_test_report_permissionn">
+	        <field name="name">paperformat permision reportt</field>
+	        <field name="default" eval="True"/>
+	        <field name="format">A4</field>
+	        <field name="page_width">0</field>
+	        <field name="page_width">0</field>
+	        <field name="orientation">Landscape</field>
+	        <field name="margin_top">0</field>
+	        <field name="margin_right">0</field>
+	        <field name="margin_bottom">0</field>
+	        <field name="margin_left">0</field>
+	        <field name="header_line" eval="False"/>
+	        <field name="header_spacing">40</field>
+	        <field name="dpi">90</field>
+		</record>
+
+		<!-- report id="report_permitions"
+		        string="تصريح إفتتاح مسجد/مدرسة"
+		        model="mosque.permision"
+		        report_type="qweb-pdf"
+		        name="mk_episode_management.report_mosque_permitions"
+		        file="mk_episode_management.report_mosque_permitions"
+		        paperformat="paperformat_test_report_permissionn"/-->
+        
+    	<report id="report_permitions_k"
+		        string="تصريح إفتتاح مسجد/مدرسة"
+		        model="mosque.permision"
+		        report_type="qweb-pdf"
+		        name="mk_episode_management.report_mosque_permitions_k"
+		        file="mk_episode_management.report_mosque_permitions"
+		        paperformat="paperformat_test_report_permissionn"/>
+	</data>
+</odoo>

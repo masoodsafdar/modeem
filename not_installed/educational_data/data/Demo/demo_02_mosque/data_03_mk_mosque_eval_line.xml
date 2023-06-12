@@ -1,0 +1,22 @@
+<odoo>
+    <data noupdate="1">
+        <record id="mosque_eval_line1" model="mosque.eval.line">
+            <field name="item">وجود مشرف</field>
+            <field name="evaluation">good</field>
+            <field name="degree">2</field>
+            <field name="eval_id" ref="mosque_eval1"/>
+        </record>
+        <record id="mosque_eval_line2" model="mosque.eval.line">
+            <field name="item">وجود اكثر من 15 طالب</field>
+            <field name="evaluation">verygood</field>
+            <field name="degree">3</field>
+            <field name="eval_id" ref="mosque_eval1"/>
+        </record>
+        <record id="mosque_eval_line3" model="mosque.eval.line">
+            <field name="item">وجود تصريح</field>
+            <field name="evaluation">excellent</field>
+            <field name="degree">5</field>
+            <field name="eval_id" ref="mosque_eval1"/>
+        </record>
+    </data>
+</odoo>

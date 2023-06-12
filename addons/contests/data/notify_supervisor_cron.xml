@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="ir_to_notify_for_upcoming_contest_preparation" model="ir.cron">
+            <field name="name">Notify for upcoming contest preparation</field>
+            <field name="model_id" ref="model_contest_preparation" />
+            <field name="state">code</field>
+            <field name="code">model._notify_for_upcoming_contest_preparation()</field>
+            <field name="user_id" ref="base.user_root"/>
+            <field name="interval_number">1</field>
+            <field name="interval_type">days</field>
+            <field name="nextcall" eval="(DateTime.now() + timedelta(days=1)).strftime('%Y-%m-%d 00:30:00')"/>
+            <field name="numbercall">-1</field>
+            <field name="active" eval="True"/>
+            <field name="doall" eval="False"/>
+        </record>
+    </data>
+</odoo>

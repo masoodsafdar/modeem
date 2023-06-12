@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="1">
+        <record id="productivity_incentive_data_1_episode_type1" model="mk.productivity_incentive">
+            <field name="type_mark">perfect</field>
+            <field name="min_nbr_part">91</field>
+            <field name="max_nbr_part">1000</field>
+            <field name="incentive_id" ref="mk_productivity.incentive_data6"/>
+            <field name="type_episode_id" ref="mk_productivity.episode_type1"/>
+        </record>
+        <record id="productivity_incentive_data_2_episode_type1" model="mk.productivity_incentive">
+            <field name="type_mark">excellent</field>
+            <field name="min_nbr_part">46</field>
+            <field name="max_nbr_part">90</field>
+            <field name="incentive_id" ref="mk_productivity.incentive_data7"/>
+            <field name="type_episode_id" ref="mk_productivity.episode_type1"/>
+        </record>
+        <record id="productivity_incentive_data_3_episode_type1" model="mk.productivity_incentive">
+            <field name="type_mark">very good</field>
+            <field name="min_nbr_part">37</field>
+            <field name="max_nbr_part">45</field>
+            <field name="incentive_id" ref="mk_productivity.incentive_data8"/>
+            <field name="type_episode_id" ref="mk_productivity.episode_type1"/>
+        </record>
+        <record id="productivity_incentive_data_4_episode_type1" model="mk.productivity_incentive">
+            <field name="type_mark">good</field>
+            <field name="min_nbr_part">22</field>
+            <field name="max_nbr_part">36</field>
+            <field name="incentive_id" ref="mk_productivity.incentive_data4"/>
+            <field name="type_episode_id" ref="mk_productivity.episode_type1"/>
+        </record>
+        <record id="productivity_incentive_data_5_episode_type1" model="mk.productivity_incentive">
+            <field name="type_mark">low</field>
+            <field name="min_nbr_part">0</field>
+            <field name="max_nbr_part">21</field>
+            <field name="incentive_id" ref="mk_productivity.incentive_data5"/>
+            <field name="type_episode_id" ref="mk_productivity.episode_type1"/>
+        </record>
+
+
+        <record id="productivity_incentive_data_1_episode_type6" model="mk.productivity_incentive">
+            <field name="type_mark">perfect</field>
+            <field name="min_nbr_part">181</field>
+            <field name="max_nbr_part">1000</field>
+            <field name="incentive_id" ref="mk_productivity.incentive_data1"/>
+            <field name="type_episode_id" ref="mk_productivity.episode_type6"/>
+        </record>
+        <record id="productivity_incentive_data_2_episode_type6" model="mk.productivity_incentive">
+            <field name="type_mark">excellent</field>
+            <field name="min_nbr_part">91</field>
+            <field name="max_nbr_part">180</field>
+            <field name="incentive_id" ref="mk_productivity.incentive_data2"/>
+            <field name="type_episode_id" ref="mk_productivity.episode_type6"/>
+        </record>
+        <record id="productivity_incentive_data_3_episode_type6" model="mk.productivity_incentive">
+            <field name="type_mark">very good</field>
+            <field name="min_nbr_part">70</field>
+            <field name="max_nbr_part">90</field>
+            <field name="incentive_id" ref="mk_productivity.incentive_data3"/>
+            <field name="type_episode_id" ref="mk_productivity.episode_type6"/>
+        </record>
+        <record id="productivity_incentive_data_4_episode_type6" model="mk.productivity_incentive">
+            <field name="type_mark">good</field>
+            <field name="min_nbr_part">46</field>
+            <field name="max_nbr_part">69</field>
+            <field name="incentive_id" ref="mk_productivity.incentive_data4"/>
+            <field name="type_episode_id" ref="mk_productivity.episode_type6"/>
+        </record>
+        <record id="productivity_incentive_data_5_episode_type6" model="mk.productivity_incentive">
+            <field name="type_mark">low</field>
+            <field name="min_nbr_part">0</field>
+            <field name="max_nbr_part">45</field>
+            <field name="incentive_id" ref="mk_productivity.incentive_data5"/>
+            <field name="type_episode_id" ref="mk_productivity.episode_type6"/>
+        </record>
+
+
+        <record id="productivity_incentive_data_6_episode_type2" model="mk.productivity_incentive">
+            <field name="type_mark">perfect</field>
+            <field name="min_nbr_part">31</field>
+            <field name="max_nbr_part">100</field>
+            <field name="incentive_id" ref="mk_productivity.incentive_data6"/>
+            <field name="type_episode_id" ref="mk_productivity.episode_type2"/>
+        </record>
+        <record id="productivity_incentive_data_7_episode_type2" model="mk.productivity_incentive">
+            <field name="type_mark">excellent</field>
+            <field name="min_nbr_part">16</field>
+            <field name="max_nbr_part">30</field>
+            <field name="incentive_id" ref="mk_productivity.incentive_data7"/>
+            <field name="type_episode_id" ref="mk_productivity.episode_type2"/>
+        </record>
+        <record id="productivity_incentive_data_8_episode_type2" model="mk.productivity_incentive">
+            <field name="type_mark">very good</field>
+            <field name="min_nbr_part">12</field>
+            <field name="max_nbr_part">15</field>
+            <field name="incentive_id" ref="mk_productivity.incentive_data8"/>
+            <field name="type_episode_id" ref="mk_productivity.episode_type2"/>
+        </record>
+        <record id="productivity_incentive_data_9_episode_type2" model="mk.productivity_incentive">
+            <field name="type_mark">good</field>
+            <field name="min_nbr_part">8</field>
+            <field name="max_nbr_part">11</field>
+            <field name="incentive_id" ref="mk_productivity.incentive_data4"/>
+            <field name="type_episode_id" ref="mk_productivity.episode_type2"/>
+        </record>
+        <record id="productivity_incentive_data_10_episode_type2" model="mk.productivity_incentive">
+            <field name="type_mark">low</field>
+            <field name="min_nbr_part">0</field>
+            <field name="max_nbr_part">7</field>
+            <field name="incentive_id" ref="mk_productivity.incentive_data5"/>
+            <field name="type_episode_id" ref="mk_productivity.episode_type2"/>
+        </record>
+
+
+
+        <record id="productivity_incentive_data_11_episode_type3" model="mk.productivity_incentive">
+            <field name="type_mark">perfect</field>
+            <field name="min_nbr_part">181</field>
+            <field name="max_nbr_part">1000</field>
+            <field name="incentive_id" ref="mk_productivity.incentive_data6"/>
+            <field name="type_episode_id" ref="mk_productivity.episode_type3"/>
+        </record>
+        <record id="productivity_incentive_data_12_episode_type3" model="mk.productivity_incentive">
+            <field name="type_mark">excellent</field>
+            <field name="min_nbr_part">91</field>
+            <field name="max_nbr_part">180</field>
+            <field name="incentive_id" ref="mk_productivity.incentive_data7"/>
+            <field name="type_episode_id" ref="mk_productivity.episode_type3"/>
+        </record>
+        <record id="productivity_incentive_data_13_episode_type3" model="mk.productivity_incentive">
+            <field name="type_mark">very good</field>
+            <field name="min_nbr_part">69</field>
+            <field name="max_nbr_part">90</field>
+            <field name="incentive_id" ref="mk_productivity.incentive_data8"/>
+            <field name="type_episode_id" ref="mk_productivity.episode_type3"/>
+        </record>
+        <record id="productivity_incentive_data_14_episode_type3" model="mk.productivity_incentive">
+            <field name="type_mark">good</field>
+            <field name="min_nbr_part">45</field>
+            <field name="max_nbr_part">68</field>
+            <field name="incentive_id" ref="mk_productivity.incentive_data4"/>
+            <field name="type_episode_id" ref="mk_productivity.episode_type3"/>
+        </record>
+        <record id="productivity_incentive_data_15_episode_type3" model="mk.productivity_incentive">
+            <field name="type_mark">low</field>
+            <field name="min_nbr_part">0</field>
+            <field name="max_nbr_part">44</field>
+            <field name="incentive_id" ref="mk_productivity.incentive_data5"/>
+            <field name="type_episode_id" ref="mk_productivity.episode_type3"/>
+        </record>
+
+
+
+        <record id="productivity_incentive_data_16_episode_type4" model="mk.productivity_incentive">
+            <field name="type_mark">perfect</field>
+            <field name="min_nbr_part">127</field>
+            <field name="max_nbr_part">1000</field>
+            <field name="incentive_id" ref="mk_productivity.incentive_data6"/>
+            <field name="type_episode_id" ref="mk_productivity.episode_type4"/>
+        </record>
+        <record id="productivity_incentive_data_17_episode_type4" model="mk.productivity_incentive">
+            <field name="type_mark">excellent</field>
+            <field name="min_nbr_part">64</field>
+            <field name="max_nbr_part">126</field>
+            <field name="incentive_id" ref="mk_productivity.incentive_data7"/>
+            <field name="type_episode_id" ref="mk_productivity.episode_type4"/>
+        </record>
+        <record id="productivity_incentive_data_18_episode_type4" model="mk.productivity_incentive">
+            <field name="type_mark">very good</field>
+            <field name="min_nbr_part">49</field>
+            <field name="max_nbr_part">63</field>
+            <field name="incentive_id" ref="mk_productivity.incentive_data8"/>
+            <field name="type_episode_id" ref="mk_productivity.episode_type4"/>
+        </record>
+        <record id="productivity_incentive_data_19_episode_type4" model="mk.productivity_incentive">
+            <field name="type_mark">good</field>
+            <field name="min_nbr_part">34</field>
+            <field name="max_nbr_part">48</field>
+            <field name="incentive_id" ref="mk_productivity.incentive_data4"/>
+            <field name="type_episode_id" ref="mk_productivity.episode_type4"/>
+        </record>
+        <record id="productivity_incentive_data_20_episode_type4" model="mk.productivity_incentive">
+            <field name="type_mark">low</field>
+            <field name="min_nbr_part">0</field>
+            <field name="max_nbr_part">33</field>
+            <field name="incentive_id" ref="mk_productivity.incentive_data5"/>
+            <field name="type_episode_id" ref="mk_productivity.episode_type4"/>
+        </record>
+
+
+        <record id="productivity_incentive_data_21_episode_type5" model="mk.productivity_incentive">
+            <field name="type_mark">perfect</field>
+            <field name="min_nbr_part">301</field>
+            <field name="max_nbr_part">1000</field>
+            <field name="incentive_id" ref="mk_productivity.incentive_data6"/>
+            <field name="type_episode_id" ref="mk_productivity.episode_type5"/>
+        </record>
+        <record id="productivity_incentive_data_22_episode_type5" model="mk.productivity_incentive">
+            <field name="type_mark">excellent</field>
+            <field name="min_nbr_part">151</field>
+            <field name="max_nbr_part">300</field>
+            <field name="incentive_id" ref="mk_productivity.incentive_data7"/>
+            <field name="type_episode_id" ref="mk_productivity.episode_type5"/>
+        </record>
+        <record id="productivity_incentive_data_23_episode_type5" model="mk.productivity_incentive">
+            <field name="type_mark">very good</field>
+            <field name="min_nbr_part">121</field>
+            <field name="max_nbr_part">150</field>
+            <field name="incentive_id" ref="mk_productivity.incentive_data8"/>
+            <field name="type_episode_id" ref="mk_productivity.episode_type5"/>
+        </record>
+        <record id="productivity_incentive_data_24_episode_type5" model="mk.productivity_incentive">
+            <field name="type_mark">good</field>
+            <field name="min_nbr_part">61</field>
+            <field name="max_nbr_part">120</field>
+            <field name="incentive_id" ref="mk_productivity.incentive_data4"/>
+            <field name="type_episode_id" ref="mk_productivity.episode_type5"/>
+        </record>
+        <record id="productivity_incentive_data_25_episode_type5" model="mk.productivity_incentive">
+            <field name="type_mark">low</field>
+            <field name="min_nbr_part">0</field>
+            <field name="max_nbr_part">60</field>
+            <field name="incentive_id" ref="mk_productivity.incentive_data5"/>
+            <field name="type_episode_id" ref="mk_productivity.episode_type5"/>
+        </record>
+    </data>
+</openerp>

@@ -1,0 +1,116 @@
+#-*- coding:utf-8 -*-
+import openerp.http as http
+from openerp.http import Response
+from openerp import SUPERUSER_ID
+import sys, json
+import logging
+from datetime import datetime,timedelta
+from odoo.tools import DEFAULT_SERVER_DATE_FORMAT, DEFAULT_SERVER_DATETIME_FORMAT
+_logger = logging.getLogger(__name__)
+from openerp.http import request
+import operator
+
+class WebFormController(http.Controller):
+	@http.route('/register/get_episodes_data/<int:episode_id>', type='json', auth='public',  csrf=False)
+	def get_episodes(self,episode_id,**args):
+		results=[]
+		periods=[]
+		jobs_data=[]
+		grades_data=[]
+		episode_data=request.env['mk.episode'].sudo().browse(SUPERUSER_ID).search([('id','=',episode_id)])
+		for epi in episode_data:
+			if epi.subh:
+				periods.append('s')
+			if epi.zuhr:
+				periods.append('z')
+			if epi.aasr:
+				periods.append('a')
+			if epi.magrib:
+				periods.append('m')
+			if epi.esha:
+				periods.append('e')
+			if epi.teacher_id:
+				teacher=epi.teacher_id.name
+			else:
+				teacher=''
+			if epi.episode_work:
+				episode_work=epi.episode_work.name
+			else:
+				episode_work=''
+			if epi.episode_type:
+				episode_type=epi.episode_type.name
+			else:
+				episode_type=''
+			if epi.teacher_id:
+				teacher_id=epi.teacher_id.id
+			else:
+				teacher_id=''
+			for job in epi.job_ids:
+				jobs_data.append([job.id,job.name])
+			for grade in epi.grade_ids:
+				grades_data.append([grade.id,grade.name])
+			results.append({
+				'id':epi.id,'episode_name':epi.name,
+				'mosque_id':epi.mosque_id.id,'mosque_name':epi.mosque_id.name,
+				'study_year_id':epi.academic_id.id,'study_year_name':epi.academic_id.name,
+				'study_class_id':epi.study_class_id.id,'study_class_name':epi.study_class_id.name,
+				'start_date':epi.start_date,'women_or_men':epi.women_or_men,'end_date':epi.end_date,
+				'episode_work_id':epi.episode_work.id,'episode_work_name':episode_work,
+				'episode_type_id':epi.episode_type.id,'episode_type_name':episode_type,
+				'job_ids':jobs_data,'grade_ids':grades_data,
+				'teacher_id':teacher_id,'teacher_name':teacher,
+				'period_ids':periods})
+		return str(results)
+
+
+	@http.route('/register/study_class_data', type='json', auth='public',  csrf=False)
+	def get_study_class(self,**args):
+		result={}
+		
+		leaves=[]
+		study_class_ids=request.env['mk.study.class'].sudo().search([('is_default','=', True)])
+		formal_leave_ids=request.env['mk.formal.leave'].sudo().search([('start_date','>=', study_class_ids[0].start_date),('end_date','<=', study_class_ids[0].end_date),('study_year_id', '=', study_class_ids[0].study_year_id.id)])
+		for leave in formal_leave_ids:
+			leaves.append({
+				'name':leave.leave_id.name,
+				'start_date':leave.start_date,
+				'islamic_start_date':leave.islamic_start_date,
+				'islamic_end_date':leave.islamic_end_date,
+				'end_date':leave.end_date
+				})
+		leaves = sorted(leaves, key=lambda k: k['start_date'])
+		if study_class_ids:
+			result={'name': study_class_ids[0].name,'islamic_start_date':study_class_ids[0].islamic_start_date,'islamic_end_date':study_class_ids[0].islamic_end_date,
+				'start_date':study_class_ids[0].start_date,'end_date':study_class_ids[0].end_date, 'holidays':leaves}
+		return str(result)
+
+
+	@http.route('/register/mosque/<int:mosque_id>',type='تسخى', auth='public',  csrf=False)	
+	def get_mosque_inf(self, mosque_id, **args):
+		episode_ids=request.env['mk.episode'].search([('mosque_id', '=', mosque_id), ('state', '=', 'accept')])
+		teacher_ids=request.env['hr.employee'].search([('state', '=', 'accept'), ('mosqtech_ids', '=', mosque_id), ('category','=','teacher')])
+		student_ids=request.env['mk.student.register'].search([('mosque_id', '=', mosque_id)])
+		mosques=request.env['mk.mosque'].search([('id','=',mosque_id)])
+		#rec.teacher_ids=teacher_ids
+		courses=request.env['mk.course.request'].search([('state','=','accept'),('mosque_id','=',mosque_id)])
+		return  str({'teachers_number':len(teacher_ids),'others_emp_number':len(mosques.mosq_other_emp_ids),'episodes_number':len(episode_ids),'student_number':len(student_ids),'supervisor':len(mosques.supervisors),'courses':len(courses)})
+
+	@http.route('/register/update_mosque/<int:target_id>/<int:mosque_id>/<int:is_student>/',type='json',auth='public',csrf=False)
+	def get_mosque_id(self,target_id,mosque_id,is_student,**args):
+		res = []
+		#print("in")
+		#mosq=args.get('mosque_id',{})
+		#emp=args.get('employee_id',{})
+		if is_student==0:
+			#print("if")
+			emp_recs = request.env['hr.employee'].sudo().search([('id','=',target_id),('category','in',['admin'])])
+			for emp in emp_recs:
+				emp.update({'mosqtech_ids':[(4,mosque_id)]})
+		else:
+			#print("else")
+			st_recs = request.env['mk.student.register'].sudo().search([('id','=',target_id)])
+			for st in st_recs:
+				print("12",mosque_id)
+				st.update({'mosque_id':[(4,mosque_id)]})
+		
+		return "done"

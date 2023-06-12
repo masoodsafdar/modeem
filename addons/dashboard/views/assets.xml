@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<template id="assets_backend" name="account assets"
+			inherit_id="web.assets_backend">
+			<xpath expr="//link" position="after">
+				<link rel="stylesheet" href="/dashboard/static/src/css/dashboard.css" />
+				<link rel="stylesheet" href="/dashboard/static/src/css/font-awesome.css"/>
+				<link href="/dashboard/static/src/css/simple-iconpicker.min.css" rel='stylesheet' type='text/css' />
+			</xpath>
+			<xpath expr="//script" position="after">
+				<script src="/dashboard/static/src/js/raphael.js" />
+				<script src="/dashboard/static/src/js/raphael.min.js" />
+			</xpath>
+		</template>
+	</data>
+</odoo>

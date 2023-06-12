@@ -1,0 +1,2 @@
+id,name,company_id/id,aasr_period_to,zuhr_period_to,esha_period_to,magrib_period_to,subh_period_to,subh_period,zuhr_period,esha_period,aasr_period,magrib_period,aasr_period_from,esha_period_from,magrib_period_from,zuhr_period_from,subh_period_from
+mk_periods_1,الفترات,base.main_company,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0

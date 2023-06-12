@@ -1,0 +1,154 @@
+<odoo>
+    <data noupdate="1">
+        <record id="mk_mosque1" model="mk.mosque">
+            <field name="name">الإمام مالك بن أنس</field>
+            <field name="responsible_id" ref="hr_employee1"/>
+            <field name="one_way_money">20</field>
+            <field name="double_way_money">35</field>
+            <field name="build_type" ref="mk_building_type1"/>
+            <field name="permision_date">2020-08-30</field>
+            <field name="permision_end_date">2023-07-28</field>
+            <field name="responsible_end_date">2020-08-30</field>
+            <field name="responsible_type">1</field>
+            <field name="permision_type">pe</field>
+            <field name="mosque_type">2</field>
+            <field name="episode_value">ev</field>
+            <field name="city_id" ref="mk_city1"/>
+            <field name="area_id" ref="mk_area1"/>
+            <field name="district_id" ref="mk_district1"/>
+            <field name="latitude">0</field>
+            <field name="state">accept</field>
+            <field name="longitude">0</field>
+            <field name="categ_id" ref="mk_mosque_category2"/>
+            <field name="register_code">700</field>
+            <field name="check_maneg_mosque" eval="1"/>
+            <field name="check_parking_mosque" eval="1"/>
+            <field name="center_department_id" ref="mk_hr_department7"/>
+            <field name="attach_no">0000027/10/2020</field>
+            <field name="send_time">0</field>
+            <field name="phone">966 558176907</field>
+            <field name="fax">966 558176908</field>
+            <field name="email">imam.melek@gmail.com</field>
+            <field name="mosque_addres">عبدالملك السعدي، منفوحة الجديدة، الرياض 12654</field>
+            <field name="is_specific_eval" eval="False"/>
+            <field name="lessons_minimum_audit">10</field>
+            <field name="quantity_minimum_audit">0</field>
+            <field name="deduct_qty_small_review">0</field>
+            <field name="memorize_minimum_audit">0</field>
+            <field name="deduct_memor_sml_review">0</field>
+            <field name="mastering_minimum_audit">0</field>
+            <field name="deduct_tjwd_sml_review">0</field>
+            <field name="lessons_maximum_audit">0</field>
+            <field name="quantity_maximum_audit">0</field>
+            <field name="deduct_qty_big_review">0</field>
+            <field name="memorize_maximum_audit">0</field>
+            <field name="deduct_memor_big_review">0</field>
+            <field name="mastering_maximum_audit">0</field>
+            <field name="deduct_tjwd_big_review">0</field>
+            <field name="lessons_reading">0</field>
+            <field name="quantity_reading">0</field>
+            <field name="deduct_qty_reading">0</field>
+            <field name="memorize_reading">0</field>
+            <field name="deduct_memor_reading">0</field>
+            <field name="mastering_reading">0</field>
+            <field name="deduct_tjwd_reading">0</field>
+            <field name="lessons_memorize">0</field>
+            <field name="quantity_memorize">0</field>
+            <field name="deduct_qty_memorize">0</field>
+            <field name="memorize_degree">0</field>
+            <field name="deduct_memor_memorize">0</field>
+            <field name="mastering_memorize">0</field>
+            <field name="deduct_tjwd_memorize">0</field>
+            <field name="preparation_degree">0</field>
+            <field name="late_deduct">0</field>
+            <field name="excused_absence_deduct">0</field>
+            <field name="no_excused_absence_deduct">0</field>
+            <field name="behavior_degree">0</field>
+            <field name="test_degree">0</field>
+            <field name="nbr_question_test">0</field>
+            <field name="qty_question_test"></field>
+            <field name="deduction_test">0</field>
+            <field name="exam_degree">0</field>
+            <field name="nbr_question_exam">0</field>
+            <field name="qty_question_exam"></field>
+            <field name="deduction_exam">0</field>
+            <field name="gender_mosque">male</field>
+            <field name="active" eval="True"/>
+        </record>
+        <record id="mk_mosque2" model="mk.mosque">
+            <field name="name">أمهات المؤمنينن</field>
+            <field name="responsible_id" ref="hr_employee8"/>
+            <field name="one_way_money">35</field>
+            <field name="double_way_money">65</field>
+            <field name="build_type" ref="mk_building_type8"/>
+            <field name="permision_date">2020-08-30</field>
+            <field name="permision_end_date">2023-07-28</field>
+            <field name="responsible_end_date">2020-08-30</field>
+            <field name="responsible_type">1</field>
+            <field name="permision_type">pe</field>
+            <field name="mosque_type">2</field>
+            <field name="episode_value">ev</field>
+            <field name="city_id" ref="mk_city1"/>
+            <field name="area_id" ref="mk_area1"/>
+            <field name="district_id" ref="mk_district1"/>
+            <field name="latitude">0</field>
+            <field name="state">accept</field>
+            <field name="longitude">0</field>
+            <field name="categ_id" ref="mk_mosque_category1"/>
+            <field name="register_code">70002</field>
+            <field name="check_maneg_mosque" eval="True"/>
+            <field name="check_parking_mosque" eval="True"/>
+            <field name="center_department_id" ref="mk_hr_department2"/>
+            <field name="attach_no">000007/10/2020</field>
+            <field name="send_time">0</field>
+            <field name="phone">966 558178566</field>
+            <field name="fax">966 558178547</field>
+            <field name="email">omahet.moeminin@masjed.com</field>
+            <field name="mosque_addres">الرياض ، حي الزهرة</field>
+            <field name="is_specific_eval" eval="True"/>
+            <field name="lessons_minimum_audit">10</field>
+            <field name="quantity_minimum_audit">10</field>
+            <field name="deduct_qty_small_review">1</field>
+            <field name="memorize_minimum_audit">10</field>
+            <field name="deduct_memor_sml_review">10</field>
+            <field name="mastering_minimum_audit">10</field>
+            <field name="deduct_tjwd_sml_review">1</field>
+            <field name="lessons_maximum_audit">10</field>
+            <field name="quantity_maximum_audit">10</field>
+            <field name="deduct_qty_big_review">1</field>
+            <field name="memorize_maximum_audit">10</field>
+            <field name="deduct_memor_big_review">10</field>
+            <field name="mastering_maximum_audit">10</field>
+            <field name="deduct_tjwd_big_review">1</field>
+            <field name="lessons_reading">10</field>
+            <field name="quantity_reading">10</field>
+            <field name="deduct_qty_reading">1</field>
+            <field name="memorize_reading">10</field>
+            <field name="deduct_memor_reading">10</field>
+            <field name="mastering_reading">10</field>
+            <field name="deduct_tjwd_reading">1</field>
+            <field name="lessons_memorize">10</field>
+            <field name="quantity_memorize">10</field>
+            <field name="deduct_qty_memorize">1</field>
+            <field name="memorize_degree">10</field>
+            <field name="deduct_memor_memorize">10</field>
+            <field name="mastering_memorize">10</field>
+            <field name="deduct_tjwd_memorize">1</field>
+            <field name="preparation_degree">1</field>
+            <field name="late_deduct">0.25</field>
+            <field name="excused_absence_deduct">0</field>
+            <field name="no_excused_absence_deduct">0.5</field>
+            <field name="behavior_degree">2</field>
+            <field name="test_degree">30</field>
+            <field name="nbr_question_test">5</field>
+            <field name="qty_question_test">qty100</field>
+            <field name="deduction_test">3</field>
+            <field name="exam_degree">70</field>
+            <field name="nbr_question_exam">7</field>
+            <field name="qty_question_exam">qty100</field>
+            <field name="deduction_exam">5</field>
+            <field name="gender_mosque">female</field>
+            <field name="active" eval="True"/>
+        </record>
+    </data>
+</odoo>

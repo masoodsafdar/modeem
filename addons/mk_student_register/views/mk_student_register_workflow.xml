@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <data>
+
+        <!-- General Structure Of A WorkFlow XML File -->
+
+        <record id="wkf_student_register" model="workflow">
+            <field name="name">workflow.register</field>
+            <field name="osv">mk.student.register</field>
+            <field name="on_create">True</field>
+        </record>
+
+        <record id="act_draft" model="workflow.activity">
+            <field name="wkf_id" ref="wkf_student_register"/>
+            <field name="name">draft</field>
+            <field name="flow_start" eval="True"/>
+            <field name="kind">function</field>
+            <field name="action">accept_request()</field>
+        </record>
+
+        <record id="act_revise" model="workflow.activity">
+            <field name="wkf_id" ref="wkf_student_register"/>
+            <field name="name">Revise</field>
+            <field name="kind">function</field>
+            <field name="action">revise_registration()</field>
+        </record>
+
+        <record id="act_accept" model="workflow.activity">
+            <field name="wkf_id" ref="wkf_student_register"/>
+            <field name="name">Accept</field>
+            <field name="kind">function</field>
+            <field name="action">action_accept()</field>
+        </record>
+
+       <record id="act_reject" model="workflow.activity">
+            <field name="wkf_id" ref="wkf_student_register"/>
+            <field name="name">Reject</field>
+            <field name="kind">function</field>
+            <field name="action">action_reject()</field>
+        </record>
+
+        <record id="act_cancel" model="workflow.activity">
+            <field name="wkf_id" ref="wkf_student_register"/>
+            <field name="name">Cancel</field>
+            <field name="kind">function</field>
+            <field name="action">action_cancel()</field>
+
+        </record>
+        
+        <record id="reg_draft_to_revise" model="workflow.transition">
+            <field name="act_from" ref="act_draft"/>
+            <field name="act_to" ref="act_revise"/>
+            <field name="signal">revise</field>
+        </record>
+
+        <record id="reg_revise_to_accept" model="workflow.transition">
+            <field name="act_from" ref="act_revise"/>
+            <field name="act_to" ref="act_accept"/>
+            <field name="signal">accept</field>
+        </record>
+
+        <record id="reg_revise_to_reject" model="workflow.transition">
+            <field name="act_from" ref="act_revise"/>
+            <field name="act_to" ref="act_reject"/>
+            <field name="signal">reject</field>
+        </record>
+        
+
+    </data>
+</odoo>

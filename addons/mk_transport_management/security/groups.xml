@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="1">
+
+	<record id="bus_supervisor_group" model="res.groups">
+	     <field name="name">bus supervisor group</field>
+	     <field name="implied_ids" eval="[(4, ref('base.user_root'))]"/>
+	     <!--<field name="users" eval="[(4, ref('base.user_root'))]"/>-->
+	     <field name="category_id" ref="mk_users.maknon_management"/>
+	</record>
+
+
+</data>
+</openerp>

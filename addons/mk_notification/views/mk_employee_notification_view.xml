@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="mk_employee_notification_form_view" model="ir.ui.view">
+        <field name="name">Employee notifications form View</field>
+        <field name="model">mk.notification.line</field>
+        <field name="arch" type="xml">
+            <form string="Employee notifications" create="0" edit="0" delete="0">
+                <header>
+                    <button name="action_notification_view"    string="View notification"  type="object" states="draft" class="oe_highlight" groups="mk_notification.create_write_employee_notification"/>
+                    <field  name="state" widget="statusbar" statusbar_visible="draft,notification_viewed"/>
+                </header>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="employee_id" options="{'no_create': True,'no_open': True,}"/>
+                            <field name="notification_id"/>
+                        </group>
+                        <group>
+                            <field name="date_notification"/>
+                            <field name="date_viewed"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="mk_employee_notification_tree_view" model="ir.ui.view">
+        <field name="name">Employee notifications tree view</field>
+        <field name="model">mk.notification.line</field>
+        <field name="arch" type="xml">
+            <tree string="Employee notifications" create="0" delete="0">
+                <field name="employee_id"/>
+                <field name="notification_id"/>
+                <field name="date_notification"/>
+                <field name="date_viewed"/>
+                <field name="state"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="mk_employee_notification_search_view" model="ir.ui.view">
+            <field name="name">Employee notifications Search View</field>
+            <field name="model">mk.notification.line</field>
+            <field name="arch" type="xml">
+                <search string="Employee notifications">
+                    <field name="employee_id"/>
+                    <field name="state"/>
+                    <group>
+                        <filter name="group_employee_id" string="Employee" context="{'group_by': 'employee_id'}"/>
+                        <filter name="group_state"       string="State"      context="{'group_by': 'state'}"/>
+                    </group>
+                    <filter name="draft"               string="Draft"                domain="[('state','=','draft')]"/>
+                    <filter name="notification_viewed" string="Notification viewed"  domain="[('state','=','notification_viewed')]"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="mk_employee_notification_action" model="ir.actions.act_window">
+            <field name="name">Employee notifications</field>
+            <field name="res_model">mk.notification.line</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context"></field>
+        </record>
+
+    <menuitem id="mk_employee_notification_menu" name="Employee notifications" parent="mk_notification_root_menu" action="mk_employee_notification_action" sequence="2"
+              groups="mk_notification.read_employee_notification,mk_notification.create_write_employee_notification,mk_notification.delete_employee_notification"/>
+
+</odoo>

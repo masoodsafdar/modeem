@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<menuitem id="menu_meqraa_main"        name="MEQRAA" web_icon="mk_meqraa,static/description/icone ta3limi.png"  groups="mk_meqraa.group_administration_meqraa"/>
+		<menuitem id="mq_student_submenu"      name="Student profile"     parent="menu_meqraa_main"                                                   sequence="0"  groups="mk_meqraa.group_administration_meqraa"/>
+		<menuitem id="mq_student_profile_menu" name="Student profile"     parent="mq_student_submenu" action="mk_meqraa.mq_student_profile_action"    sequence="0"  groups="mk_meqraa.group_administration_meqraa"/>
+	    <menuitem id="mq_prepare_student_menu" name="Prepration Students" parent="mq_student_submenu" action="mk_meqraa.mq_prepration_student_action" sequence="1"  groups="mk_meqraa.group_administration_meqraa"/>
+
+        <menuitem id="quick_add_meqraa_student_menu" name="Quick Add Meqraa Student" parent="menu_meqraa_main" action="quick_add_meqraa_student_action" sequence="1" groups="mk_meqraa.group_administration_meqraa"/>
+        <menuitem id="quick_add_meqraa_episode_menu" name="Quick Add Meqraa Episode" parent="menu_meqraa_main" action="quick_add_meqraa_episode_action" sequence="2" groups="mk_meqraa.group_administration_meqraa"/>
+
+	    		  
+	   	<menuitem id="mq_episodes_submenu"     name="Halakat"          parent="menu_meqraa_main"                                                  groups="mk_meqraa.group_administration_meqraa" sequence="2"/>
+	   	<menuitem id="mq_episodes_menu"        name="Halakat"          parent="mq_episodes_submenu" action="mk_meqraa.mq_episodes_action"         groups="mk_meqraa.group_administration_meqraa" sequence="0"/>
+	   	<menuitem id="mq_annual_vacation_menu" name="Annual vacations" parent="mq_episodes_submenu" action="mk_meqraa.mq_annual_vacation_action"  groups="mk_meqraa.group_administration_meqraa" sequence="1"/>
+	    <menuitem id="mq_time_menu"            name="Times"            parent="mq_episodes_submenu" action="mk_meqraa.mq_times_action"            groups="mk_meqraa.group_administration_meqraa" sequence="2"/>
+
+		<menuitem id="meqraa_episode_menu" name="حلقات المقرأة" parent="mk_episode_management.mk_episode_management_menu_title"  action="mk_meqraa.mq_episodes_action" groups="mk_meqraa.group_administration_meqraa" sequence="51"/>
+
+
+		<!-- <menuitem id="mq_setting_menu" name="Settings" parent="menu_meqraa_main" sequence="3"/>
+		<menuitem id="mq_annual_vacation_menu" name="Annual vacations" parent="mq_setting_menu" action="mk_meqraa.mq_annual_vacation_action" sequence="0"/>
+		<menuitem id="mq_time_menu" name="Times" parent="mq_setting_menu" action="mk_meqraa.mq_times_action" sequence="1"/> -->
+		
+		<menuitem id="mq_programs_approaches_submenu" name="Programs/Approaches" parent="menu_meqraa_main"                                                               groups="mk_meqraa.group_administration_meqraa" sequence="3"/>
+		<menuitem id="mq_programs_menu"               name="Programs"            parent="mq_programs_approaches_submenu" action="mk_meqraa.mq_opened_programs_action"    groups="mk_meqraa.group_administration_meqraa" sequence="0"/>
+		<menuitem id="mq_approaches_menu"             name="Approaches"          parent="mq_programs_approaches_submenu" action="mk_meqraa.mq_open_mk_approaches_action" groups="mk_meqraa.group_administration_meqraa" sequence="1"/>
+		
+	</data>
+</odoo>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<openerp>
+		<data>
+			<record id="test_qua_form_view" model="ir.ui.view">
+			    <field name= "name">السؤال</field>
+			    <field name= "model">test.questions</field>
+			    <field name= "arch"  type="xml"> 
+			         <form>
+			             <sheet>
+			         <group>
+			             		<group>
+			             			<field name="from_surah" options="{'no_create': True,'no_open': True,}"/>
+			             		</group>
+			             		<group>
+			             			<field name="from_aya"   options="{'no_create': True,'no_open': True,}"/>
+			             		</group>
+			             		<group>
+			             			<field name="to_surah"   options="{'no_create': True,'no_open': True,}"/>
+			             		</group>
+								<group>
+								<field name="to_aya"         options="{'no_create': True,'no_open': True,}"/>
+			             		</group>
+			             		<group>
+			             			<field name="text" invisible="0"/>
+			             		</group>
+			             	</group>
+
+			             </sheet>
+			         </form>
+			    </field>
+			 </record>
+			</data>
+		</openerp>

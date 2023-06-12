@@ -1,0 +1,42 @@
+<odoo>
+	<data noupdate="1">
+        <record id="mk_episode_master1" model="mk.episode.master">
+            <field name="name">حلقة عمر بن الخطاب</field>
+            <field name="active" eval="True"/>
+            <field name="mosque_id" ref="mk_mosque1"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="academic_id" ref="mk_study_year1"/>
+            <field name="study_class_id" ref="mk_study_class1"/>
+            <field name="state">active</field>
+            <field name="subh" eval="False"/>
+            <field name="zuhr" eval="False"/>
+            <field name="aasr" eval="True"/>
+            <field name="magrib" eval="False"/>
+            <field name="esha" eval="False"/>
+            <field name="subh_flag" eval="False"/>
+            <field name="zuhr_flag" eval="False"/>
+            <field name="aasr_flag" eval="False"/>
+            <field name="magrib_flag" eval="False"/>
+            <field name="esha_flag" eval="False"/>
+        </record>
+        <record id="mk_episode_master2" model="mk.episode.master">
+            <field name="name">حلقة المؤمنات</field>
+            <field name="active" eval="True"/>
+            <field name="mosque_id" ref="mk_mosque2"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="academic_id" ref="mk_study_year1"/>
+            <field name="study_class_id" ref="mk_study_class1"/>
+            <field name="state">active</field>
+            <field name="subh" eval="False"/>
+            <field name="zuhr" eval="False"/>
+            <field name="aasr" eval="True"/>
+            <field name="magrib" eval="False"/>
+            <field name="esha" eval="False"/>
+            <field name="subh_flag" eval="False"/>
+            <field name="zuhr_flag" eval="False"/>
+            <field name="aasr_flag" eval="False"/>
+            <field name="magrib_flag" eval="False"/>
+            <field name="esha_flag" eval="False"/>
+        </record>
+    </data>
+</odoo>

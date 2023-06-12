@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record id="mq_opened_programs_action" model="ir.actions.act_window">
+			<field name="name">برامج المقراة</field>
+			<field name="res_model">mk.programs</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+			<field name="domain">[('program_type','=','open'),('is_program_meqraa', '=', True)]</field>
+			<field name="context">{'default_program_type':'open','default_is_program_meqraa':True}</field>
+		</record>
+	</data>
+</odoo>

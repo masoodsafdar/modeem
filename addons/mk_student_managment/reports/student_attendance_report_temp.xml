@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<template id="student_attendance_report_temp">
+    <t t-call="web.html_container">
+        <t t-call="web.internal_layout">
+            <div class="page">
+                <h2>student Attendance</h2>
+                
+                <div class="basic_info">
+                    <t t-set="info" t-value="info"/>
+                        <span><strong>Purphase:</strong>
+                        <span t-esc="info['title']"/>
+                        </span>
+                        <br></br>
+                        <span>
+                        <strong>Student:</strong>
+                        <span t-esc="info['student']"/>   
+                        </span>
+                        <br></br>
+                        <span>
+                        <strong>Epsoide:</strong>
+                        <span t-esc="info['episode']"/>
+                        </span>
+                        <br></br>
+                        <span>
+                        <strong>From:</strong>
+                        <span t-esc="info['date_from']"/>
+                        </span>
+                        <span>
+                        <strong>To:</strong>
+                        <span t-esc="info['date_to']"/>
+                        </span>
+                </div>
+
+
+                                <div>
+                <br></br>
+                <table class="table table-condensed">
+                   <th>
+                    Date
+                    </th>
+                    <th>
+                    Status    
+                    </th>
+                
+                <t t-set="lines" t-value="get_lines"/>
+                <t t-foreach="lines" t-as="line">
+                    <tr>
+                    <t t-foreach="line" t-as="item">
+             
+                    <!-- cheack if student have attendance record by passing date to query -->
+  
+
+                   
+                        
+                            <t t-if="item=='state'">
+                             <td>
+                                <t t-esc="item_value"/>                              
+                             </td>
+                            </t>
+
+                            <t t-if="item=='day'">
+                             <td>
+                                <t t-esc="item_value"/>
+                             </td>
+                            </t>
+                        
+                    
+                    </t>
+                                      
+                    </tr>
+                </t>
+            </table>
+                </div>
+
+                 
+              
+
+            </div>
+        </t>
+    </t>
+</template>
+</odoo>

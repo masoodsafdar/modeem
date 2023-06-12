@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<openerp>
+    <data>
+
+    	 <record id="view_company_event_form" model="ir.ui.view">
+			<field name="name">res.company.form</field>
+			<field name="model">res.company</field>
+			<field name="inherit_id" ref="base.view_company_form"/>
+			<field name="arch" type="xml">
+		                <field name="report_header" position="before">
+		                	
+		                        <field name="latitude"/>
+		                        <field name="longitude"/>
+		                        
+		                </field>
+			</field>
+    	</record>
+
+   <record model="ir.actions.act_window" id="action_company_event">
+      <field name="name">company event window</field>
+      <field name="res_model">res.company</field>
+      <field name="view_mode">tree,form</field>
+
+    </record>
+
+     <menuitem name="company" id="menu_event_company" parent="event.menu_event_configuration"
+              action="action_company_event" groups="association_info_manage"/>
+        
+
+    </data>
+</openerp>

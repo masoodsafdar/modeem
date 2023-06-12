@@ -1,0 +1,67 @@
+<odoo>
+	<data>
+		<record id="approaches_form_inherited_view" model="ir.ui.view">
+			<field name="name">Approaches Form View</field>
+          	<field name="model">mk.approaches</field>
+          	<field name="inherit_id" ref="mk_program_management.mk_approaches_form_view"/>
+		  	<field name="arch" type="xml">
+ 		  		<xpath expr='//page[4]' position='after'>
+ 		  			<page string="جدولة الاختبارات">
+ 		  				<group>
+                           <field name="test_schedule_ids" context="{'type_org': 'general'}" nolabel="1">
+								<tree>
+									<field name="study_year_id"/>
+									<field name="study_class_id"/>
+									<field name="type_schedule"/>
+									<field name="type_org" invisible="1"/>
+									<field name="period_schedule"/>
+									<field name="nbr_period"/>
+									<field name="state"/>
+								</tree>
+								<form editable="bottom">
+									<header>
+										<field  name="state" widget="statusbar" statusbar_visible="draft,confirm,done"/>
+										<button name="action_confirm" string="Confirm" type="object" states="draft"   class="oe_highlight"/>
+										<button name="action_done"    string="Done"    type="object" states="confirm" class="oe_highlight"/>
+									</header>
+									<sheet>
+										<group>
+											<group>
+												<field name="study_year_id"  options="{'no_create': True,'no_open': True,}" attrs="{'readonly':[('state','=','done')]}"/>
+												<field name="study_class_id" options="{'no_create': True,'no_open': True,}" attrs="{'readonly':[('state','=','done')]}"/>
+											</group>
+											<group>
+												<field name="type_schedule"   attrs="{'readonly':[('state','=','done')]}"/>
+												<field name="period_schedule" attrs="{'invisible':[('type_schedule','=','program')], 'readonly':[('state','=','done')]}" />
+												<field name="nbr_period"      attrs="{'invisible':[('type_schedule','=','program')], 'readonly':[('state','=','done')]}"/>
+											</group>
+										</group>
+										<separator string="الاختبارات" attrs="{'invisible':['|', ('state','!=','done'), ('type_schedule','=','program')]}"/>
+										<field name="day_schedule_test_ids" attrs="{'invisible':['|', ('state','!=','done'), ('type_schedule','=','program')], 'readonly':[('state','=','done')]}">
+											<tree>
+												<field name="date_test"/>
+												<field name="type_schedule"/>
+											</tree>
+											<form>
+												<group>
+													<group>
+														<field name="date_test"/>
+														<field name="type_schedule"   readonly="1"/>
+													</group>
+													<group>
+														<field name="period_schedule" readonly="1"/>
+														<field name="nbr_period"      readonly="1"/>
+													</group>
+												</group>
+											</form>
+										</field>
+                                    </sheet>
+								</form>
+                           </field>
+                        </group>
+		  			</page>
+		  		</xpath>
+		  	</field>
+		</record>
+	</data>
+</odoo>

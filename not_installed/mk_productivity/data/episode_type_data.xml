@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <!--	mk.episode_type data	-->
+        <record id="episode_type1" model="mk.episode_type">
+            <field name="name">عامة (معلم غير مكفول)</field>
+            <field name="students_no">15</field>
+            <field name="minimum">15</field>
+            <field name="parts_no">3</field>
+            <field name="type_task">memorizing_the_holly_quran</field>
+            <field name="type_test">parts_final</field>
+            <field name="type_categ">all_society_segments_nine_and_more</field>
+        </record>
+
+        <record id="episode_type6" model="mk.episode_type">
+            <field name="name">عامة (معلم مكفول)</field>
+            <field name="students_no">30</field>
+            <field name="minimum">30</field>
+            <field name="parts_no">3</field>
+            <field name="type_task">memorizing_the_holly_quran</field>
+            <field name="type_test">parts_final</field>
+            <field name="type_categ">all_society_segments_nine_and_more</field>
+        </record>
+
+        <record id="episode_type2" model="mk.episode_type">
+            <field name="name">تأسيس و تلقين</field>
+            <field name="students_no">15</field>
+            <field name="minimum">15</field>
+            <field name="parts_no">1</field>
+            <field name="type_task">receive_memorize_holy_quran</field>
+            <field name="type_test">parts</field>
+            <field name="type_categ">non_readers_and_children_under_nine</field>
+        </record>
+
+        <record id="episode_type3" model="mk.episode_type">
+            <field name="name">تصحيح التلاوة</field>
+            <field name="students_no">45</field>
+            <field name="minimum">45</field>
+            <field name="parts_no">2</field>
+            <field name="type_task">recitation_corection_of_the_holy_duran</field>
+            <field name="type_test">parts</field>
+            <field name="type_categ">all_society_segments_nine_and_more</field>
+        </record>
+
+        <record id="episode_type4" model="mk.episode_type">
+            <field name="name">نوعي</field>
+            <field name="students_no">7</field>
+            <field name="minimum">7</field>
+            <field name="parts_no">9</field>
+            <field name="type_task">memorizing_the_holly_quran</field>
+            <field name="type_test">parts_final</field>
+            <field name="type_categ">excellent_students</field>
+        </record>
+
+        <record id="episode_type5" model="mk.episode_type">
+            <field name="name">المقارىء</field>
+            <field name="students_no">5</field>
+            <field name="minimum">5</field>
+            <field name="parts_no">30</field>
+            <field name="type_task">awarding_prizes</field>
+            <field name="type_test">diploma</field>
+            <field name="type_categ">who_finished_quran</field>
+        </record>
+    </data>
+</openerp>

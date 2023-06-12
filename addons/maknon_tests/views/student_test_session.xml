@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<odoo>
+		<data>
+		    <record model="ir.actions.act_window" id="test_action_mistake_tree1">
+		          <field name="name"> </field>
+		          <field name="res_model">question.error</field>
+		          <field name="view_mode">tree</field>
+		          <field name="type">ir.actions.act_window</field>
+		          <field name="target">new</field>
+		          <field name="domain">[('question_id','=',active_id)]</field>
+		          <field name="context">{'group_by':'member','group_by': 'item'}</field>
+		    </record>
+
+			<record id="student_test_session_form_view" model="ir.ui.view">
+			    <field name= "name">Student Test Session </field>
+			    <field name= "model">student.test.session</field>
+			    <field name= "arch"  type="xml">
+				<form  create="0" delete="0" edit="0">
+			        <header>
+                        <button name="update_branch_wizard_action" type="object" string="تصحيح الفرع" attrs="{'invisible':[('state','not in',('draft','done'))]}" groups="maknon_tests.update_branch1"/>						<button type="action" name="%(maknon_tests.update_degree_wizard)d" string="Update degree"           groups="maknon_tests.update_test_degree"        attrs="{'invisible': [('state','!=','done')]}"/>
+						<button type="object" name="print_parts_certification"             string="Print parts Certificate" groups="maknon_tests.print_parts_certification" attrs="{'invisible': ['|','|','|',('state', '!=', 'done'),('is_pass', '=', False),('type_test', '!=', 'parts'),('appreciation', 'in', ['acceptable','fail']) ]}"/>
+						<button type="object" name="print_final_test_certification"        string="طباعة شهادة الخاتمين"    groups="maknon_tests.print_parts_certification" attrs="{'invisible': ['|','|','|',('state', '!=', 'done'),('is_pass', '=', False),('type_test', '!=', 'final'),('appreciation', 'in', ['acceptable','fail']) ]}"/>
+						<button type="object" name="print_licence_test_certification"      string="طباعة شهادة مجاز"        groups="maknon_tests.print_parts_certification" attrs="{'invisible': ['|','|','|',('state', '!=', 'done'),('is_pass', '=', False),('type_test', '!=', 'vacations'),('appreciation', 'in', ['acceptable','fail']) ]}"/>
+						<button type="object" name="action_get_diploma"        string="إستلام الشهادة"    groups="maknon_tests.print_parts_certification" attrs="{'invisible': ['|','|','|',('state', '!=', 'done'),('is_pass', '=', False),('is_get_diploma', '=', True),('appreciation', 'in', ['acceptable','fail']) ]}"/>
+						<button type="object" name="start_exam"  string="start session"  attrs="{'invisible':['|','|',('state','not in',('draft')), ('editable','=',False), ('flag','=',False)]}" groups="maknon_tests.session_exiaminer"/>
+			            <button type="object" name="end_exam"    string="end session"    attrs="{'invisible':['|','|',('state','not in',('start')), ('editable','=',False), ('flag','=',False)]}" groups="maknon_tests.session_exiaminer"/>
+						<button type="object" name="cancel_exam" string="cancel session" attrs="{'invisible':['|','|',('state','not in',('draft')), ('editable','=',False), ('flag','=',False)]}" groups="maknon_tests.session_exiaminer"/>
+
+						<button type="object" name="set_draft" string="إرجاع الي مبدئي" attrs="{'invisible':['|','|','|',('state','not in',('absent','cancel')), ('editable','=',False), ('flag','=',False)]}" groups="maknon_tests.session_exiaminer"/>
+
+						<button type="object" name="set_upsent" string="غياب" attrs="{'invisible':['|','|','|',('state','not in',('draft')), ('editable','=',False), ('flag','=',False)]}" groups="maknon_tests.session_exiaminer"/>
+
+						<field name="state" widget="statusbar"/>
+			        </header>
+					<sheet>
+
+						<group>
+							<field name="editable" invisible="1"/>
+							<field name="flag"     invisible="1"/>
+							<field name="is_printed"     invisible="1"/>
+							<field name="is_get_diploma"     invisible="1"/>
+
+							<group>
+								<field name="academic_id" readonly="1" options="{'no_open':1,'no_create':1}"/>
+							</group>
+
+							<group>
+								<field name="study_class_id" readonly="1" options="{'no_open':1,'no_create':1}"/>
+							</group>
+
+							<group>
+								<field name="center_id"      readonly="1" options="{'no_open':1,'no_create':1}"/>
+								<field name="test_center_id" readonly="1" options="{'no_open':1,'no_create':1}"/>
+								<field name="department_id"  readonly="1" options="{'no_open':1,'no_create':1}"/>
+							</group>
+
+							<group>
+								<field name="test_time" readonly="1" options="{'no_open':1,'no_create':1}"/>
+							</group>
+							<group>
+								<field name="category" invisible="1"/>
+								<field name="student_id" readonly="1" options="{'no_open':1,'no_create':1}" attrs="{'invisible': [('category','!=',False)]}"/>
+								<field name="employee_id" readonly="1" options="{'no_open':1,'no_create':1}" attrs="{'invisible': [('category','=',False)]}"/>
+								<field name="mobile_nbr" readonly="1" options="{'no_open':1,'no_create':1}"/>
+								<field name="attachment_id" attrs="{'invisible': [('type_test', '!=', 'vacations')]}"/>
+							</group>
+
+							<group>
+								<field name="masjed_name" string="المسجد"/>
+								<field name="mosque_id"       invisible="1"/>
+								<field name="gender_mosque"   invisible="1"/>
+								<field name="categ_mosque_id" invisible="1"/>
+								<field name="class_epsd_id"   invisible="1"/>
+								<field name="deprt_mosq_id"   invisible="1"/>
+								<field name="episode_teacher" string="Episode Teacher" attrs="{'invisible':[('employee_id','!=',False)]}" readonly="1" options="{'no_open':1,'no_create':1}"/>
+							</group>
+
+							<group>
+								<field name="test_name" options="{'no_open': True}" readonly="1"/>
+								<field name="type_test" invisible="1"/>
+							</group>
+
+							<group>
+								<field name="branch" options="{'no_open': True}" readonly="1"/>
+								<field name="branch_duration"/>
+							</group>
+
+							<group>
+								<field name="avalible_teacher" widget="many2many_tags" invisible="1"/>
+								<field name="teacher" domain="[('id','in',avalible_teacher)]" options="{'no_open':1,'no_create':1,'no_edit':1}" invisible="1"/>
+								<field name="committe_id" string="لجنة الاختبار" options="{'no_open': True}" readonly="1"/>
+							</group>
+
+							<group>
+								<field name="user_id" string="عضو اللجنة الرئيسي" options="{'no_open': True}" readonly="1"/>
+							</group>
+						</group>
+
+						<group>
+							<group>
+							</group>
+							<group col="4">
+								<button string="add error" class="btn-primary" style="height:50px;width:130px" type="action" name="%(add_error_actoin)d"
+														   attrs="{'invisible':[('state','!=','start')]}" context="{'default_session_id':active_id}"/>
+							</group>
+						</group>
+
+						<notebook>
+							<page string="Exam questions" attrs="{'invisible':[('flag','=',False)]}">
+								<field name="test_question">
+									<tree decoration-bf="from_surah!=False">
+										<field name="from_surah"/>
+										<field name="from_aya" options="{'no_create': True,'no_open': True,}"/>
+										<field name="to_surah" options="{'no_create': True,'no_open': True,}"/>
+										<field name="to_aya"   options="{'no_create': True,'no_open': True,}"/>
+										<field name="text"  invisible="1"/>
+										<field name="state" invisible="1"/>
+										<button name="toggle_set_fail" type="object" string="خصم درجة السؤال"/>
+										<field name="set_fail" string=" "/>
+
+									</tree>
+								</field>
+							</page>
+
+							<page string="Exam Result" attrs="{'invisible':[('state','!=','done')]}">
+								<group>
+									<group>
+										<field name="maximum_degree"/>
+									</group>
+
+									<group>
+										<field name="degree"/>
+										<field name="force_degree" attrs="{'invisible': [('force_degree','=',0)]}"/>
+										<field name="final_degree" invisible="1"/>
+									</group>
+
+									<group>
+										<field name="appreciation"/>
+									</group>
+
+									<group>
+										<field name="start_date"/>
+									</group>
+
+									<group>
+										<field name="done_date"/>
+									</group>
+								</group>
+
+								<group>
+									<field name="is_pass" invisible="1"/>
+									<field name="branch_order" invisible="1"/>
+								</group>
+							</page>
+						</notebook>
+					</sheet>
+					<div class="oe_chatter">
+						<field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+						<field name="message_ids" widget="mail_thread"/>
+					</div>
+			    </form>
+			    </field>
+			</record>
+
+			<record id="session_search_view" model="ir.ui.view">
+            	<field name="name">session search</field>
+            	<field name="model">student.test.session</field>
+            	<field name="arch" type="xml">
+                	<search string="session">
+                		<field name="student_name"/>
+                		<field name="episode_id" 	  string="الحلقة"/>
+                		<field name="branch"/>
+	                    <field name="center_id"   	  string="مقر الاختبار"/>
+	                    <field name="test_center_id"  string="مركز الاختبار"/>
+	                    <field name="department_id"   string="مركز الاشراف"/>
+	                    <field name="committe_id"     options="{'no_create': True,'no_open': True,}"/>
+	                    <field name="masjed_name"/>
+	                    <field name="categ_mosque_id" string="فئة المسجد"/>
+                	 	<field name="test_time"/>
+                	 	<field name="type_test"/>
+                	 	<field name="is_pass"/>
+                	 	<field name="user_id"/>
+						<field name="episode_teacher"/>
+						<field name="episode_type"/>
+						<field name="is_printed"/>
+						<field name="is_get_diploma"/>
+						<field name="nationality"/>
+						<field name="mobile_nbr"/>
+						<field name="identity_nbr"/>
+
+                    	<filter string="مبدئي"      name="draft_filter"  domain="[('state','=','draft')]"/>
+                    	<filter string="غائب"     name="absent_filter" domain="[('state','=','absent')]"/>
+                    	<filter string="جاري الاختبار"  name="start_filter"  domain="[('state','=','start')]"/>
+                    	<filter string="إيقاف"     name="pasue_filter"  domain="[('state','=','pasue')]"/>
+                    	<filter string="تم الاختبار"   name="done_filter"   domain="[('state','=','done')]"/>
+                    	<filter string="إلغاء الاختبار"  name="cancel_filter" domain="[('state','=','cancel')]"/>
+
+                    	<separator/>
+						<filter string="تمت الطباعة"     name="is_printed"     domain="[('is_printed','=',True)]"/>
+						<filter string="لم تتم الطباعة"  name="is_not_printed" domain="[('is_printed','=',False)]"/>
+                    	<separator/>
+						<filter string="تم استلام الشهادة"     name="is_get_diploma"     domain="[('is_get_diploma','=',True)]"/>
+						<filter string="لم يتم استلام الشهادة" name="is_not_get_diploma" domain="[('is_get_diploma','=',False)]"/>
+                    	<separator/>
+	                    <filter name="male"          string="مساجد رجالية"		domain="[('gender_mosque','=','male')]"/>
+	                    <filter name="female"        string="مساجد نسائية" 		domain="[('gender_mosque','=','female')]"/>
+
+                    	<separator/>
+	                    <filter string="طلاب قمت انت بتسجيلهم" name="uid"             domain="[('create_uid','=',uid)]"/>
+
+	                    <separator/>
+	                    <filter string="نجح في الاختبار"        name="passed"          domain="[('is_pass','=',True)]"/>
+
+						<separator/>
+	                    <filter string="دون لجنة اختبار"       name="no"              domain="[('committe_id','=',False)]"/>
+
+	                    <separator/>
+	                    <filter string="إختبارات العام الحالي"     name="test_current_year" domain="[('is_current_year','=',True)]"/>
+
+	                    <separator/>
+	                     <filter name="filter_inactive"          string="مؤرشفة"         domain="[('active','=',False)]"/>
+
+	                     <group>
+		                     <filter name="episode_teacher"    string="Episode Teacher" context="{'group_by': 'episode_teacher'}"/>
+		                     <filter name="group_academic_id"    string="العام الدراسي" context="{'group_by': 'academic_id'}"/>
+		                     <filter name="group_study_class_id" string="الفصل الدراسي" context="{'group_by': 'study_class_id'}"/>
+		                     <separator/>
+		                     <filter name="group_test_name"   string="مقر الاختبار"  context="{'group_by': 'center_id'}"/>
+		                     <filter name="group_branch"      string="مركز الاختبار" context="{'group_by': 'test_center_id'}"/>
+		                     <filter name="group_type_test"      string="نوع الاختبار" context="{'group_by': 'type_test'}"/>
+		                     <filter name="group_branch"      string="مركز الاشراف"  context="{'group_by': 'department_id'}"/>
+		                     <separator/>
+		                     <filter name="group_time"        string="زمن الاختبار"          context="{'group_by': 'test_time'}"/>
+		                     <filter name="group_branch"      string="الفرع"              context="{'group_by': 'branch'}"/>
+		                     <filter name="group_commitee_id" string="لجنة الإختبار"           context="{'group_by': 'committe_id'}"/>
+		                     <filter name="group_commitee_member_id" string="عضو اللجنة الرئيسي" context="{'group_by': 'user_id'}"/>
+		                     <separator/>
+		                     <filter name="group_masjed_name" string="المسجد"     context="{'group_by': 'masjed_name'}"/>
+		                     <filter name="group_gender_mosq" string="نوع المسجد"   context="{'group_by': 'gender_mosque'}"/>
+		                     <filter name="group_categ_mosq"  string="فئة المسجد"   context="{'group_by': 'categ_mosque_id'}"/>
+		                     <filter name="group_deprt_mosq"  string="مركز المسجد"  context="{'group_by': 'deprt_mosq_id'}"/>
+		                     <separator/>
+		                     <filter name="group_episode_id"  string="الحلقة"               context="{'group_by': 'episode_id'}"/>
+		                     <filter name="group_class_epsd"  string="الفصل الدراسي للحلقة"        context="{'group_by': 'class_epsd_id'}"/>
+		                     <filter name="group_teacher"  string="معلم الحلقة"        context="{'group_by': 'episode_teacher'}"/>
+							 <separator/>
+		                     <filter name="episode_type"   string="نوع الحلقة"               context="{'group_by': 'episode_type'}"/>
+							 <separator/>
+		                     <filter name="nationality"    string="الجنسية" context="{'group_by': 'nationality'}"/>
+	                     </group>
+                	</search>
+            	</field>
+        	</record>
+
+
+
+			<record id="student_test_session__tree_view" model="ir.ui.view">
+				<field name= "name">Student Test Session</field>
+			    <field name= "model">student.test.session</field>
+			   	<field name="arch" type="xml">
+				<tree create="false" edit="false" delete="false" decoration-danger="state != 'done'" decoration-info="is_printed ==True and is_get_diploma==False"
+					  decoration-success="is_get_diploma==True" decoration-bf="editable==True and is_printed == False" decoration-muted="editable==False">
+						<field name="avalible_teacher" widget="many2many_tags" invisible="1"/>
+			        	<field name="editable" invisible="1"/>
+			        	<field name="flag" invisible="1"/>
+			        	<field name="is_printed" invisible="1"/>
+			        	<field name="is_get_diploma" invisible="1"/>
+			        	<field name="student_name" string="الطالب"/>
+			        	<field name="identity_nbr" string="رقم الهوية/جواز السفر"/>
+			        	<field name="nationality" string="لجنسية"/>
+			        	<field name="masjed_name"  string="المسجد"/>
+						<field name="student_id"   readonly="1" invisible="1"/>
+						<field name="test_name"    readonly="1" invisible="1"/>
+						<field name="branch"       readonly="1" string="نوع الاختبار والمسار"/>
+						<field name="center_id"    readonly="1" options="{'no_create': True,'no_open': True,}"/>
+						<field name="test_time"    readonly="1" string="موعد الاختبار"/>
+						<field name="create_uid"   string="registerd by" readonly="1" invisible="1"/>
+						<field name="state"        readonly="1" string="حالة الاختبار"/>
+						<field name="user_ids"     invisible="1" widget="many2many_tags"/>
+			       		<field name="committe_id"  string="اسم لجنة الاختبار"/>
+			       		<field name="user_id"      string="رئيس اللجنة"/>
+			       		<field name="active"       invisible="1"/>
+				        <button icon="fa-plus" name="%(add_teacher_actoin)d" type="action" string="add teacher" context="{'default_session_id':active_id}"
+		                        attrs="{'invisible':['|','|',('state','=','done'),
+		                                                     ('editable','=',False),
+		                                                     ('active','=',False)]}" groups="maknon_tests.select_exiaminer_session"/>
+				    </tree>
+			   </field>
+			 </record>
+			<record id="employee_test_session_tree_view" model="ir.ui.view">
+				<field name= "name">Student Test Session</field>
+			    <field name= "model">student.test.session</field>
+			   	<field name="arch" type="xml">
+				<tree create="false" edit="false" delete="false" decoration-danger="state != 'done'" decoration-info="is_printed ==True and is_get_diploma==False"
+					  decoration-success="is_get_diploma==True" decoration-bf="editable==True and is_printed == False" decoration-muted="editable==False">
+						<field name="avalible_teacher" widget="many2many_tags" invisible="1"/>
+			        	<field name="editable" invisible="1"/>
+			        	<field name="flag" invisible="1"/>
+			        	<field name="is_printed" invisible="1"/>
+			        	<field name="is_get_diploma" invisible="1"/>
+			        	<field name="student_name" string="الموظف"/>
+			        	<field name="identity_nbr" string="رقم الهوية/جواز السفر"/>
+			        	<field name="nationality" string="لجنسية"/>
+			        	<field name="masjed_name"  string="المسجد"/>
+						<field name="student_id"   readonly="1" invisible="1"/>
+						<field name="test_name"    readonly="1" invisible="1"/>
+						<field name="branch"       readonly="1" string="نوع الاختبار والمسار"/>
+						<field name="center_id"    readonly="1" options="{'no_create': True,'no_open': True,}"/>
+						<field name="test_time"    readonly="1" string="موعد الاختبار"/>
+						<field name="create_uid"   string="registerd by" readonly="1" invisible="1"/>
+						<field name="state"        readonly="1" string="حالة الاختبار"/>
+						<field name="user_ids"     invisible="1" widget="many2many_tags"/>
+			       		<field name="committe_id"  string="اسم لجنة الاختبار"/>
+			       		<field name="user_id"      string="رئيس اللجنة"/>
+			       		<field name="active"       invisible="1"/>
+				        <button icon="fa-plus" name="%(add_teacher_actoin)d" type="action" string="add teacher" context="{'default_session_id':active_id}"
+		                        attrs="{'invisible':['|','|',('state','=','done'),
+		                                                     ('editable','=',False),
+		                                                     ('active','=',False)]}" groups="maknon_tests.select_exiaminer_session"/>
+				    </tree>
+			   </field>
+			 </record>
+
+			<record id="my_student_test_session__tree_view" model="ir.ui.view">
+				<field name= "name">Student Test Session</field>
+			    <field name= "model">student.test.session</field>
+			   	<field name="arch" type="xml">
+			        <tree create="0" edit="0" delete="0" decoration-success="state=='done'" decoration-info="state=='start'">
+			        	<field name="avalible_teacher" widget="many2many_tags" invisible="1"/>
+			        	<field name="editable"     invisible="1"/>
+			        	<field name="flag"         invisible="1"/>
+			        	<field name="test_time"    readonly="1"/>
+			        	<field name="student_name" string="الطالب"/>
+						<field name="student_id"   readonly="1" invisible="1"/>
+						<field name="test_name"    readonly="1"/>
+						<field name="branch"       readonly="1"/>
+						<field name="center_id"    readonly="1" options="{'no_create': True,'no_open': True,}"/>
+						<field name="state"        readonly="1"/>
+			       		<field name="teacher"      invisible="1" domain="[('id','in',avalible_teacher)]"/>
+						<field name="user_ids"     invisible="1" widget="many2many_tags"/>
+			       		<field name="user_id"      invisible="1"/>
+				    </tree>
+			   </field>
+			 </record>
+
+			<record id="student_test_session_results_tree_view" model="ir.ui.view">
+				<field name= "name">Student Test Session</field>
+			    <field name= "model">student.test.session</field>
+			   	<field name="arch" type="xml">
+			        <tree create="false" edit='false' delete="false">
+			        	<field name="student_name" string="الطالب"/>
+			        	<field name="masjed_name"  string="المسجد"/>
+						<field name="branch"/>
+						<field name="degree"/>
+						<field name="appreciation"/>
+				    </tree>
+			   </field>
+			 </record>
+
+			<record id="st_test_session_action" model="ir.actions.act_window">
+				<field name="name">Student Test Session</field>
+				<field name="res_model">student.test.session</field>
+				<field name="type">ir.actions.act_window</field>
+				<field name="view_type">form</field>
+				<field name="view_mode">tree,form</field>
+				<field name="domain">[('category','=',False),('is_student_meqraa', '=', False),('state','!=','cancel'),('user_ids','not in',[])]</field>
+				<field name="context">{'search_default_uid':1,'search_default_test_current_year':1}</field>
+				<!--<field name="domain">[]</field>
+				<field name="context">{}</field>
+				<field name="search_view_id" ref="mk_contests_regulatoins_preparation_search_view"/> -->
+		    </record>
+
+			<record id="st_test_session_results_action" model="ir.actions.act_window">
+				<field name="name">Students Test Session results</field>
+				<field name="res_model">student.test.session</field>
+				<field name="type">ir.actions.act_window</field>
+				<field name="view_type">form</field>
+				<field name="view_mode">tree,form</field>
+				<field name="domain">[('category','=',False),('is_student_meqraa', '=', False),('state','=','done')]</field>
+				<field name="context">{'search_default_test_current_year':1}</field>
+				<field name="view_id" ref="maknon_tests.student_test_session_results_tree_view"/>
+		    </record>
+
+			<record id="open_my_test_sessions" model="ir.actions.act_window">
+				<field name="name">Student Test Session</field>
+				<field name="res_model">student.test.session</field>
+				<field name="type">ir.actions.act_window</field>
+				<field name="view_type">form</field>
+				<field name="view_mode">tree,form</field>
+<!--				<field name="domain">[('user_id','=',uid)]</field>-->
+				<field name="domain">[('category','=',False),('is_student_meqraa', '=', False),'|',('user_id','=',uid),'&amp;',('user_id','=',False),('user_ids','in',uid)]</field>
+				<field name="context">{'search_default_draft_filter':1, 'search_default_group_masjed_name':1}</field>
+				<field name="view_id" ref="my_student_test_session__tree_view"/>
+		    </record>
+
+			<record id="st_employee_test_session_action" model="ir.actions.act_window">
+				<field name="name">اختبارات الموظفين</field>
+				<field name="res_model">student.test.session</field>
+				<field name="type">ir.actions.act_window</field>
+				<field name="view_type">form</field>
+				<field name="view_mode">tree,form</field>
+				<field name="domain">[('category','!=',False),('state','!=','cancel'),('user_ids','not in',[])]</field>
+				<field name="context">{'search_default_uid':1,'search_default_test_current_year':1}</field>
+				<!--<field name="domain">[]</field>
+				<field name="context">{}</field>
+				<field name="search_view_id" ref="mk_contests_regulatoins_preparation_search_view"/> -->
+				<field name="view_id" ref="employee_test_session_tree_view"/>
+		    </record>
+
+		    <record model="ir.ui.view" id="test_mistake_tree">
+		          <field name="name">test.mistake.tree</field>
+		          <field name="model">question.error</field>
+		          <field name="arch" type="xml">
+		             <tree editable="bottom">
+		                  <field name="item"/>
+		                  <field name="value" string="عدد الاخطاء"/>
+		                  <field name="member" string="العضو"/>
+		              </tree>
+		         </field>
+			</record>
+
+		    <menuitem id="student_test_session_menu" name="students list" action="st_test_session_action" parent="maknon_tests.reqistration_main_menu"
+                     sequence="0" groups="select_exiaminer_session,create_student_test_session"/>
+
+			<menuitem id="student_test_session_result_menu" name="students Test Session results" action="st_test_session_results_action" parent="maknon_tests.test_operation_main_menu"
+                     sequence="2" groups="select_exiaminer_session,create_student_test_session"/>
+
+		    <menuitem id="my_student_test_session_menu" name="students test session" action="open_my_test_sessions" parent="maknon_tests.test_operation_main_menu"
+                     sequence="0" groups="session_exiaminer"/>
+
+			<menuitem id="student_employee_test_session_menu" name="اختبارات المعلمين" action="st_employee_test_session_action" parent="maknon_tests.test_main_menu"
+                     sequence="1" groups="create_employee_test_session"/>
+
+			<record id="view_student_link_form_inherit" model="ir.ui.view">
+				<field name="name">link record</field>
+            	<field name="model">mk.link</field>
+				<field name="inherit_id" ref="mk_student_register.view_student_link_form"/>
+            	<field name="arch" type="xml">
+					<xpath expr="//page[1]" position="after">
+						<page string="company tests" attrs="{'invisible': [('state','in',['draft','reject'])]}">
+							<field name="company_tests" domain="[('state','=','done')]">
+								<tree>
+									<field name="done_date"/>
+									<field name="center_id" options="{'no_create': True,'no_open': True,}"/>
+									<field name="test_name"/>
+									<field name="branch"/>
+									<field name="maximum_degree"/>
+									<field name="degree"/>
+									<field name="appreciation"/>
+								</tree>
+							</field>
+						</page>
+					</xpath>
+				</field>
+			</record>
+	</data>
+</odoo>

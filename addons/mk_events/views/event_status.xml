@@ -1,0 +1,42 @@
+<odoo>
+  <data>
+
+  	  <record model="ir.ui.view" id="events_status_list">
+      <field name="name">events status list</field>
+      <field name="model">event.status</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="no"/>
+        
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="events_status_form">
+      <field name="name">events status form</field>
+      <field name="model">event.status</field>
+      <field name="arch" type="xml">
+
+        <form>
+        <sheet>
+        	<group colspan="4" col="4">
+          <field name="name"/>
+          <field name="no"/>
+        </group>
+        </sheet>
+        </form>
+      </field>
+    </record>
+    
+
+    
+    <record model="ir.actions.act_window" id="events_status_action_window">
+      <field name="name">mk_events  status window</field>
+      <field name="res_model">event.status</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+  	<menuitem name="Event status" id="menu_event_status" action="events_status_action_window" parent="event.menu_event_configuration" groups="events_status_manage"/>
+  </data>
+</odoo>

@@ -1,0 +1,1355 @@
+id,name,center_department_id/id,city_id/id,area_id/id,district_id/id,latitude,longitude,categ_id/id
+5396,تركي بن حمد الصفيان,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_284,0,0,data_security.Cat_3
+5386,حلقات جامع عبدالله المعتاز,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_336,0,0,data_security.Cat_3
+5384,حلقات جامع عبدالله وهيلة العنقري,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_336,0,0,data_security.Cat_3
+5358,خريجات مدارس المملكة,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_13,0,0,data_security.Cat_3
+5344,مجمع نخب التعليمي,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_13,0,0,data_security.Cat_3
+5351,جامع الشاكرين ,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_190,0,0,data_security.Cat_3
+5322,الإمام الشاطبي ,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_45,0,0,data_security.Cat_3
+5323,أم هانئ صباحي,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_12,0,0,data_security.Cat_3
+5328,عبقرية الشروق الصباحية,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_5,0,0,data_security.Cat_3
+5329,روضة الجزيرة الصباحية,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_5,0,0,data_security.Cat_3
+5330,جامع ابراهيم السباح,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_130,0,0,data_security.Cat_3
+5331,مدرسة ابراهيم محمد السباح المسائية,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_130,0,0,data_security.Cat_3
+5332,مدرسة ابراهيم محمد السباح الصباحية,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_130,0,0,data_security.Cat_3
+5334,دار الأبرار المسائية,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_190,0,0,data_security.Cat_3
+5335,جامع نوره,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_123,0,0,data_security.Cat_3
+5341,الدفعة (47) من خريجي الكلية الأمنية,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_284,0,0,data_security.Cat_3
+5403,جامع حمدان البلوي,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_146,0,0,data_security.Cat_3
+5404,زينب بنت جحش (الصباحية),data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_32,0,0,data_security.Cat_3
+5405,احمد البلوي,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_45,0,0,data_security.Cat_3
+5260,منابر النور الصباحية,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_8,0,0,data_security.Cat_3
+5261,منابر النور المسائية,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_8,0,0,data_security.Cat_3
+5266,جامع عبدالعزيز الغليقه,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_32,0,0,data_security.Cat_3
+5272,ذو النورين,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_5,0,0,data_security.Cat_3
+5273,السنابل صباحي,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_138,0,0,data_security.Cat_3
+5274,زينب بنت جحش,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_32,0,0,data_security.Cat_3
+5238,اليرموك صباحي,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_146,0,0,data_security.Cat_3
+5241,مسجد عمار بن ياسر حلقات أبي هريره,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_8,0,0,data_security.Cat_3
+5244,مدرسة دار القدس لتحفيظ القرآن الكريم,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_10,0,0,data_security.Cat_3
+5228,القدس صباحي,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_10,0,0,data_security.Cat_3
+5249,جامع حمود اللحيدان,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_130,0,0,data_security.Cat_3
+5250,حلقه الشيخ / محمد بن ابراهيم,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_10,0,0,data_security.Cat_3
+5251,جامع حمد المورقي,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_5,0,0,data_security.Cat_3
+5252,مسجد موسى بن نصير,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_52,0,0,data_security.Cat_3
+5268,مسجد ابراهيم القريشي,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_13,0,0,data_security.Cat_3
+5276,جامع بن باز,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_5,0,0,data_security.Cat_3
+5280,أنس بن مالك,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_13,0,0,data_security.Cat_3
+5286,اشبيليا,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_32,0,0,data_security.Cat_3
+5290,ابو بكر الصديق,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_130,0,0,data_security.Cat_3
+5295,دار لطيفه بنت عبدالله الخلف,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_32,0,0,data_security.Cat_3
+5303,خالد بن الوليد,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_190,0,0,data_security.Cat_3
+5312,جامع العريني,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_190,0,0,data_security.Cat_3
+5314,روضة الجزيرة المسائية,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_5,0,0,data_security.Cat_3
+5315,عبقرية الشروق المسائية,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_5,0,0,data_security.Cat_3
+5318,مسجد عبدالعزيز العثمان,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_130,0,0,data_security.Cat_3
+5230,إقرأ ( صباحية),data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_109,0,0,data_security.Cat_3
+5231,جامع أحمد بن عبدالرحمن العبيلان,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_190,0,0,data_security.Cat_3
+5236,اقرأ - صباحية,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_109,0,0,data_security.Cat_3
+5215,خديجة بنت خويلد مسائي,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_109,0,0,data_security.Cat_3
+5216,خديجة بنت خويلد,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_109,0,0,data_security.Cat_3
+5217,جامع زيد المليحي,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_146,0,0,data_security.Cat_3
+5218,علياء مسائي,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_5,0,0,data_security.Cat_3
+5221,جامع الأميره العنود بنت عبدالعزيز,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_5,0,0,data_security.Cat_3
+5222,رياض الجنان مسائي,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_32,0,0,data_security.Cat_3
+5223,عمر بن عبدالعزيز,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_138,0,0,data_security.Cat_3
+5195,إقرأ الصباحية ,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_109,0,0,data_security.Cat_3
+5196,إقرأ المسائية ,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_109,0,0,data_security.Cat_3
+5197,مسجد النور ,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_52,0,0,data_security.Cat_3
+5198,أزهار البيان صباحي,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_109,0,0,data_security.Cat_3
+5191,مناهل الفرقان صباحي,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_130,0,0,data_security.Cat_3
+5192,سليمان العباد,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_130,0,0,data_security.Cat_3
+5185,حاملات المسك - صباحي,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_130,0,0,data_security.Cat_3
+5202,مسجد عبدالكريم الخليفي,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_130,0,0,data_security.Cat_3
+5203,درة بنت أبي سلمة صباحي,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_45,0,0,data_security.Cat_3
+5204,ناصر بن مهنا السبيعي,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_130,0,0,data_security.Cat_3
+5158,الأبرار,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_130,0,0,data_security.Cat_3
+5147,مسجد/ عبدالعزيز الفياض ,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_130,0,0,data_security.Cat_3
+5148,حلقات مسجد أبي أمامة الباهلي,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_52,0,0,data_security.Cat_3
+5111,سعيد  بن زيد ,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_52,0,0,data_security.Cat_3
+5121,حصة سليمان العثيم,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_190,0,0,data_security.Cat_3
+5128,مدينة المهيلب  ,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_52,0,0,data_security.Cat_3
+5176,قحصان اليامي ,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_13,0,0,data_security.Cat_3
+5177,أحمد الحصين ,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_130,0,0,data_security.Cat_3
+5178,مسجد عبدالرحمن بن عوف ,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_5,0,0,data_security.Cat_3
+5162,الجواهر الحسان صباحي,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_336,0,0,data_security.Cat_3
+5103,جامع محمد عبدالله الوهبي الحربي ,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_32,0,0,data_security.Cat_3
+5104,سعد الضويحي ,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_146,0,0,data_security.Cat_3
+5086,سعيد السيد,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_14,0,0,data_security.Cat_3
+5087,حصة الراضي ,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_130,0,0,data_security.Cat_3
+5088,الطريقي ,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_130,0,0,data_security.Cat_3
+5090,جامع الراجحي ,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_138,0,0,data_security.Cat_3
+5093,مسجد أبي سعيد الخدري ,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_12,0,0,data_security.Cat_3
+5055,جامع محمد الدعجاني ,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_130,0,0,data_security.Cat_3
+5057,جامع أبي عبيدة بن الجراح,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_146,0,0,data_security.Cat_3
+5058,عثمان بن عفان ,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_45,0,0,data_security.Cat_3
+5051,جامع ضيحة معتق العتيبي,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_284,0,0,data_security.Cat_3
+5071,حلقات جامع الرمال,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_284,0,0,data_security.Cat_3
+5072,مسجد البدر ,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_52,0,0,data_security.Cat_3
+5073,مسجد عوض الحربي,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_32,0,0,data_security.Cat_3
+5069,مسجد الأسرة ,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_190,0,0,data_security.Cat_3
+5078,عبدالله بن حمد بن سليم ,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_12,0,0,data_security.Cat_3
+5079,الثريا مسائي,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_284,0,0,data_security.Cat_3
+5042,أم أيمن المعيزلية صباحي ,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_123,0,0,data_security.Cat_3
+5023,جامع سلمان الفارسي,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_52,0,0,data_security.Cat_3
+5024,مسجد طلحة بن عبيدالله,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_52,0,0,data_security.Cat_3
+5033,مسجد خالد بن الوليد,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_32,0,0,data_security.Cat_3
+4987,لولوة بنت دعيج العاصمي,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_190,0,0,data_security.Cat_3
+4989,الفاروق,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_32,0,0,data_security.Cat_3
+5014,الحمراء - الصباحية ,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_13,0,0,data_security.Cat_3
+5015,الحمراء - المسائية ,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_13,0,0,data_security.Cat_3
+5016,أزهار البيان مسائي,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_109,0,0,data_security.Cat_3
+5017,اقرأ مسائي,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_109,0,0,data_security.Cat_3
+4951,أبو بكر الصديق,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_12,0,0,data_security.Cat_3
+4896,جامع أبوبكر الصديق,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_45,0,0,data_security.Cat_3
+4911,مناهل الفرقان مسائي,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_130,0,0,data_security.Cat_3
+4914,أحمد بن حنبل,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_138,0,0,data_security.Cat_3
+4825,اليقين - صباحي,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_12,0,0,data_security.Cat_3
+4826,اليقين - مسائي,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_12,0,0,data_security.Cat_3
+4832,مسجد سعد بن ابي وقاص,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_109,0,0,data_security.Cat_3
+4840,الأندلس مسائي,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_236,0,0,data_security.Cat_3
+4769,نور الهداية صباحي,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_146,0,0,data_security.Cat_3
+4621,الخيرات - صباحي,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_138,0,0,data_security.Cat_3
+4627,النهضة مسائي,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_138,0,0,data_security.Cat_3
+4629,مسجد عبدالله العتيبي,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_52,0,0,data_security.Cat_3
+4633,جامع الأمير سلطان,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_8,0,0,data_security.Cat_3
+4634,مسجد الشيخ ناصر الرميح,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_236,0,0,data_security.Cat_3
+4635,مسجد ذو النورين,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_52,0,0,data_security.Cat_3
+4637,مسجد لطيفة حلقات التوحيد,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_52,0,0,data_security.Cat_3
+4598,حلقات محمد منصور الراجحي,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_146,0,0,data_security.Cat_3
+4599,حلقات جامع ابن القيم ,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_109,0,0,data_security.Cat_3
+4604,حلقات الفاروق,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_14,0,0,data_security.Cat_3
+4605,مسجد ابي عبدالله البخاري,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_138,0,0,data_security.Cat_3
+4606,الجواهر الحسان مسائي,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_336,0,0,data_security.Cat_3
+4607,مريم بنت عمران صباحي,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_12,0,0,data_security.Cat_3
+4612,مسجد والدة محمد النشمي,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_109,0,0,data_security.Cat_3
+4652,الماهرات مسائي,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_146,0,0,data_security.Cat_3
+4666,فهد العويضة صباحي -الخليج ,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_52,0,0,data_security.Cat_3
+4716,مسجد رياض الصالحين,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_190,0,0,data_security.Cat_3
+4717,جامع الصغير - مجمع الوقار التعليمي ,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_32,0,0,data_security.Cat_3
+4718,مسجد عمير بن سعد الانصاري - مجمع الوقار التعليمي,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_138,0,0,data_security.Cat_3
+4719,مسجد عبدالعزيز الخريف - مجمع الوقار التعليمي,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_8,0,0,data_security.Cat_3
+4746,مسجد سعد بن أبي وقاص - ب,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_52,0,0,data_security.Cat_3
+4447,العفيفات مسائي,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_52,0,0,data_security.Cat_3
+4425,ساره الحميزي مسائي,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_32,0,0,data_security.Cat_3
+4426,الفردوس مسائية,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_32,0,0,data_security.Cat_3
+4429,الفردوس صباحي,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_32,0,0,data_security.Cat_3
+4470,عمرة بنت رواحة صباحي,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_52,0,0,data_security.Cat_3
+4471,الخيرات مسائي,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_138,0,0,data_security.Cat_3
+4472,مزنة الحديثي صباحي,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_5,0,0,data_security.Cat_3
+4473,حفصة بنت عمر مسائي,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_8,0,0,data_security.Cat_3
+4474,فهد العويضة مسائي -الحمراء,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_13,0,0,data_security.Cat_3
+4456,رياض الجنان مسائي,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_32,0,0,data_security.Cat_3
+4457,الذاكرات مسائي,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_138,0,0,data_security.Cat_3
+4464,البابطين صباحي,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_190,0,0,data_security.Cat_3
+4466,السنابل مسائي,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_138,0,0,data_security.Cat_3
+4491,مدرسة ام يوسف العطير ,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_45,0,0,data_security.Cat_3
+4496,عبدالرحمن بن عوف,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_146,0,0,data_security.Cat_3
+4526,مجمع المطوع القرآني,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_10,0,0,data_security.Cat_3
+4530,مجمع الفلاح التعليمي بجامع البابطين,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_190,0,0,data_security.Cat_3
+4542,حلقات الفدا,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_8,0,0,data_security.Cat_3
+4544,حلقات العجلان,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_8,0,0,data_security.Cat_3
+4585,الحمراء صباحي,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_13,0,0,data_security.Cat_3
+4418,جامع الأمير سلطان,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_5,0,0,data_security.Cat_3
+4312,عبدالعزيز الحقباني - مجمع الوقار التعليمي,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_32,0,0,data_security.Cat_3
+4278,جامع الهريش (الرياحين),data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_130,0,0,data_security.Cat_3
+4279,البابطين مسائي,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_190,0,0,data_security.Cat_3
+4300,ام يوسف العطير 2,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_45,0,0,data_security.Cat_3
+4196,جامع السحيم,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_190,0,0,data_security.Cat_3
+4197,عبدالرحمن الداخل,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_15,0,0,data_security.Cat_3
+4203,مسجد البليهد,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_52,0,0,data_security.Cat_3
+4204,الحديثي,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_5,0,0,data_security.Cat_3
+4205,الفاضل ,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_13,0,0,data_security.Cat_3
+4207,الفاضل ,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_14,0,0,data_security.Cat_3
+4210,جامع أبي عبدالله اللحيدان,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_14,0,0,data_security.Cat_3
+4256,محمد بن عبد الله التركي ,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_236,0,0,data_security.Cat_3
+4259,جامع فهد البريك ,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_5,0,0,data_security.Cat_3
+4260,عبد الله بن عباس ,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_138,0,0,data_security.Cat_3
+4261,جامع شيخ الاسلام ابن تيمية ,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_52,0,0,data_security.Cat_3
+4272,طارق العريفي,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_190,0,0,data_security.Cat_3
+4273,جامع الغويري,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_13,0,0,data_security.Cat_3
+3677,رفعة بنت عبدالله صباحي,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_12,0,0,data_security.Cat_3
+3713,ساره الحميزي صباحي,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_32,0,0,data_security.Cat_3
+4129,مزنة الحديثي مسائي,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_5,0,0,data_security.Cat_3
+4173,حاملات المسك مسائي,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_8,0,0,data_security.Cat_3
+4174,الأرقم مسائي -القدس,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_10,0,0,data_security.Cat_3
+2590,الشيماء بنت الحارث مسائي,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_5,0,0,data_security.Cat_3
+1956,خالد المليحي,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_146,0,0,data_security.Cat_3
+1969,مجمع ابي يوسف القراني,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_13,0,0,data_security.Cat_3
+1525,جامع أم خالد العساف,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_13,0,0,data_security.Cat_3
+2049,لطيفة آل الشيخ,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_13,0,0,data_security.Cat_3
+1841,عبدالله العتيبي,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_52,0,0,data_security.Cat_3
+2077,مسجد عمير بن وهب,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_236,0,0,data_security.Cat_3
+2221,جامع منيرة العريفي,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_52,0,0,data_security.Cat_3
+2222,إبراهيم الخليل,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_10,0,0,data_security.Cat_3
+2223,سعيد السيد,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_14,0,0,data_security.Cat_3
+2229,عبدالله سليمان العقيل,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_15,0,0,data_security.Cat_3
+2289,حلقات رياض الجنان,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_32,0,0,data_security.Cat_3
+2254,مسجد الإحسان,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_252,0,0,data_security.Cat_3
+1418,لطيفه,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_252,0,0,data_security.Cat_3
+2557,قرطبة الغربية,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_190,0,0,data_security.Cat_3
+2540,معيض آل سلطان,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_32,0,0,data_security.Cat_3
+2698,حمزة بن عبدالمطلب,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_15,0,0,data_security.Cat_3
+2765,جامع فهد الهريش,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_130,0,0,data_security.Cat_3
+2766,إبراهيم الدريس,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_32,0,0,data_security.Cat_3
+3556,جامع المحيسن,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_32,0,0,data_security.Cat_3
+3557,مسجد المشوح,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_109,0,0,data_security.Cat_3
+761,جامع البويب,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_39,0,0,data_security.Cat_3
+1660,سلمان الفارسي,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_52,0,0,data_security.Cat_3
+762,يوسف الفوزان,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_13,0,0,data_security.Cat_3
+1388,جامع عمر بن الخطاب ,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_138,0,0,data_security.Cat_3
+418,نايف الحديثي,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_10,0,0,data_security.Cat_3
+1194,الناصر,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_15,0,0,data_security.Cat_3
+799,صالح الرشيد,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_5,0,0,data_security.Cat_3
+759,مسجد عمر بن عبدالعزيز,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_146,0,0,data_security.Cat_3
+1517,حي الحمراء,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_13,0,0,data_security.Cat_3
+839,خديجة بنت خويلد,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_5,0,0,data_security.Cat_3
+824,العجلان,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_8,0,0,data_security.Cat_3
+1371,عمر بن عبدالعزيز,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_138,0,0,data_security.Cat_3
+1494,محمد بن سعيدان,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_146,0,0,data_security.Cat_3
+1715,عبدالعزيز الطياش,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_146,0,0,data_security.Cat_3
+758,الحمد,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_52,0,0,data_security.Cat_3
+1618,عوض الحربي,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_13,0,0,data_security.Cat_3
+1595,معاوية بن ابي سفيان,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_8,0,0,data_security.Cat_3
+727,عبد العزيز بن جلوي,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_12,0,0,data_security.Cat_3
+768,محمد بن عبدالوهاب,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_15,0,0,data_security.Cat_3
+1410,الصحابة,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_14,0,0,data_security.Cat_3
+783,حسين ابوسليمان,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_14,0,0,data_security.Cat_3
+1280,محمد عبدالوهاب,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_138,0,0,data_security.Cat_3
+775,جامع باجد العتيبي,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_32,0,0,data_security.Cat_3
+1319,الأمير سلطان بن عبدالعزيز,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_138,0,0,data_security.Cat_3
+2640,العفيفات صباحي,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_52,0,0,data_security.Cat_3
+2641,رفعة بنت عبدالله مسائي,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_12,0,0,data_security.Cat_3
+647,الأميرة حصة بنت عبدالعزيز,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_13,0,0,data_security.Cat_3
+1331,قتيبة بن مسلم الباهلي,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_52,0,0,data_security.Cat_3
+1267,أيوب العوهلي,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_138,0,0,data_security.Cat_3
+1366,جامع  المطلق,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_52,0,0,data_security.Cat_3
+1931,محمد بن سعود الكبير,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_10,0,0,data_security.Cat_3
+1834,عمر بن عبدالعزيز,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_14,0,0,data_security.Cat_3
+1555,ذات النطاقين - مجمع الوقار التعليمي,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_146,0,0,data_security.Cat_3
+1617,جامع أبي عبدالله,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_14,0,0,data_security.Cat_3
+1663,جامع عبدالمحسن المهيدب ,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_12,0,0,data_security.Cat_3
+479,خالد بن الوليد,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_138,0,0,data_security.Cat_3
+687,منيرة إبراهيم العثيمين,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_138,0,0,data_security.Cat_3
+1897,سلمان الفارسي,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_5,0,0,data_security.Cat_3
+538,الفاروق,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_5,0,0,data_security.Cat_3
+1281,حي الملك فيصل,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_12,0,0,data_security.Cat_3
+1530,آل الشيخ,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_52,0,0,data_security.Cat_3
+1384,الجميعة 4 (مجمع الوقار التعليمي ),data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_138,0,0,data_security.Cat_3
+1661,والدة الأمير تركي بن فيصل,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_12,0,0,data_security.Cat_3
+1594,حفصة بنت عمر صباحي,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_8,0,0,data_security.Cat_3
+1446,فهد العويضة صباحي -الحمراء ,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_13,0,0,data_security.Cat_3
+1390,نور الهداية مسائي,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_146,0,0,data_security.Cat_3
+2408,رياض الجنان صباحي,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_32,0,0,data_security.Cat_3
+228,الهمم مسائي,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_14,0,0,data_security.Cat_3
+1078, الذاكرات صباحي,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_138,0,0,data_security.Cat_3
+513,خولة بنت حكيم مسائي,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_123,0,0,data_security.Cat_3
+1916,درة بنت أبي سلمة مسائي,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_45,0,0,data_security.Cat_3
+1820,النهضة صباحي,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_138,0,0,data_security.Cat_3
+695, حياة مسائي,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_5,0,0,data_security.Cat_3
+1880,أم أيمن المعيزلية مسائي,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_123,0,0,data_security.Cat_3
+492, أم سلمة (الروضة) صباحي,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_12,0,0,data_security.Cat_3
+1662,جامع عبدالعزيز بن باز,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_12,0,0,data_security.Cat_3
+1207,سعيد بن زيد ,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_52,0,0,data_security.Cat_3
+937, الخيرات صباحي,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_138,0,0,data_security.Cat_3
+1692,أم هانئ مسائي,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_12,0,0,data_security.Cat_3
+733, الأرقم مسائي -الشهداء ,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_14,0,0,data_security.Cat_3
+211,الشيماء بنت الحارث صباحي,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_5,0,0,data_security.Cat_3
+195, المعرفة مسائي,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_66,0,0,data_security.Cat_3
+162,الحمراء مسائي,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_13,0,0,data_security.Cat_3
+1800,أم يوسف العطير صباحي,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_45,0,0,data_security.Cat_3
+247,فهد العويضة مسائي -الخليج ,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_52,0,0,data_security.Cat_3
+1894, اليرموك - مسائي,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_146,0,0,data_security.Cat_3
+1881,فاطمة الزهراء مسائي,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_8,0,0,data_security.Cat_3
+1533, عمرة بنت رواحة مسائي,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_52,0,0,data_security.Cat_3
+193, مريم بنت عمران مسائي,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_8,0,0,data_security.Cat_3
+244,جامع القدس ,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_10,0,0,data_security.Cat_3
+3375,الجوهرة,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_10,0,0,data_security.Cat_3
+872,جامع أبو بكر الصديق,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_5,0,0,data_security.Cat_3
+1858,جامع وحلقات سهل بن سعد رضي الله عنه,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_12,0,0,data_security.Cat_3
+583,ابن القيم ,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_12,0,0,data_security.Cat_3
+599,جامع الفرقان,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_12,0,0,data_security.Cat_3
+1625,الرويلي,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_13,0,0,data_security.Cat_3
+1338,جامع الإمام البخاري ,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_10,0,0,data_security.Cat_3
+622,جامع الأمير سلطان,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_10,0,0,data_security.Cat_3
+1221,سلطانة بنت تركي السديري,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_8,0,0,data_security.Cat_3
+508,جامع العثمان ,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_13,0,0,data_security.Cat_3
+736,المنديل,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_8,0,0,data_security.Cat_3
+3378,صلاح الدين الأيوبي ,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_8,0,0,data_security.Cat_3
+1941,علي بن المديني,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_8,0,0,data_security.Cat_3
+481,الدرويش,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_8,0,0,data_security.Cat_3
+1320,عقبة بن نافع,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_8,0,0,data_security.Cat_3
+3379,فيحان بن ملافح,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_8,0,0,data_security.Cat_3
+691,الملك عبد العزيز,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_8,0,0,data_security.Cat_3
+1591,مصعب بن عمير,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_8,0,0,data_security.Cat_3
+1870,العباس ,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_8,0,0,data_security.Cat_3
+362,صلاح الدين الأيوبي ,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_138,0,0,data_security.Cat_3
+3355,التقوى ,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_138,0,0,data_security.Cat_3
+1258,عبد الرحمن الداخل,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_15,0,0,data_security.Cat_3
+1219,أبو بكر الصديق ,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_15,0,0,data_security.Cat_3
+1215,اللحيدان,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_12,0,0,data_security.Cat_3
+3367,جامع عمار بن ياسر ,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_52,0,0,data_security.Cat_3
+1520,عبد الله بن الزبير,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_52,0,0,data_security.Cat_3
+666,أبي عبيدة بن الجراح,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_52,0,0,data_security.Cat_3
+537,جامع مها الجميح,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_5,0,0,data_security.Cat_3
+1353,الرشيد,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_5,0,0,data_security.Cat_3
+650,عبد العزيز بن باز,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_45,0,0,data_security.Cat_3
+240,مصعب بن عمير ,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_5,0,0,data_security.Cat_3
+1889,النفيسة,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_5,0,0,data_security.Cat_3
+1665,جامع العساف,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_10,0,0,data_security.Cat_3
+470,خالد بن الوليد ,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_12,0,0,data_security.Cat_3
+3348,جامع بن تيمية / مجمع أحمد بن حنبل التعليمي النموذجي,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_45,0,0,data_security.Cat_3
+1485,مسجد أحمد بن حنبل,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_123,0,0,data_security.Cat_3
+1813,حلقات جامع عمر بن الخطاب لتحفيظ القرآن الكريم ,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_123,0,0,data_security.Cat_3
+1606,الحمراء الشرقية,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_13,0,0,data_security.Cat_3
+683,جامع الدخيل,data_security.dep_102,data_security.City_1,data_security.area_1,data_security.dis_14,0,0,data_security.Cat_3
+1129,النمر,data_security.dep_103,data_security.City_1,data_security.area_1,data_security.dis_151,0,0,data_security.Cat_3
+1694,الهويش- مجمع المثاني,data_security.dep_103,data_security.City_1,data_security.area_1,data_security.dis_23,0,0,data_security.Cat_3
+965,عبد الله بن مرزوق,data_security.dep_103,data_security.City_1,data_security.area_1,data_security.dis_47,0,0,data_security.Cat_3
+926,إسكان وزارة الداخلية,data_security.dep_103,data_security.City_1,data_security.area_1,data_security.dis_165,0,0,data_security.Cat_3
+1272,جامع الفاروق,data_security.dep_103,data_security.City_1,data_security.area_1,data_security.dis_47,0,0,data_security.Cat_3
+226,سعيد بن زيد ,data_security.dep_103,data_security.City_1,data_security.area_1,data_security.dis_23,0,0,data_security.Cat_3
+1365,علي بن أبي طالب ,data_security.dep_103,data_security.City_1,data_security.area_1,data_security.dis_151,0,0,data_security.Cat_3
+1725,حي الفواز,data_security.dep_103,data_security.City_1,data_security.area_1,data_security.dis_105,0,0,data_security.Cat_3
+1406,صالح العقيلي,data_security.dep_103,data_security.City_1,data_security.area_1,data_security.dis_151,0,0,data_security.Cat_3
+1428,ابراهيم السبعان,data_security.dep_103,data_security.City_1,data_security.area_1,data_security.dis_23,0,0,data_security.Cat_3
+1811,السلوم,data_security.dep_103,data_security.City_1,data_security.area_1,data_security.dis_23,0,0,data_security.Cat_3
+1021,عبد الرحمن الجريوي,data_security.dep_103,data_security.City_1,data_security.area_1,data_security.dis_151,0,0,data_security.Cat_3
+1231,الأميرة سارة,data_security.dep_103,data_security.City_1,data_security.area_1,data_security.dis_151,0,0,data_security.Cat_3
+1392,الجويعد,data_security.dep_103,data_security.City_1,data_security.area_1,data_security.dis_151,0,0,data_security.Cat_3
+1350,مريم الحسن,data_security.dep_103,data_security.City_1,data_security.area_1,data_security.dis_23,0,0,data_security.Cat_3
+930,علي بن حسن بن قعود,data_security.dep_103,data_security.City_1,data_security.area_1,data_security.dis_47,0,0,data_security.Cat_3
+1626,آل عبد القادر,data_security.dep_103,data_security.City_1,data_security.area_1,data_security.dis_23,0,0,data_security.Cat_3
+1244,عبد الله بن عايض,data_security.dep_103,data_security.City_1,data_security.area_1,data_security.dis_47,0,0,data_security.Cat_3
+1235,محمد بن صالح بن عثيمين,data_security.dep_103,data_security.City_1,data_security.area_1,data_security.dis_115,0,0,data_security.Cat_3
+1518,مسجد التقوى,data_security.dep_103,data_security.City_1,data_security.area_1,data_security.dis_226,0,0,data_security.Cat_3
+333,الإمام مسلم,data_security.dep_103,data_security.City_1,data_security.area_1,data_security.dis_151,0,0,data_security.Cat_3
+163,الأميرة الجوهرة ,data_security.dep_103,data_security.City_1,data_security.area_1,data_security.dis_47,0,0,data_security.Cat_3
+900,ابي سعيد الخدري,data_security.dep_103,data_security.City_1,data_security.area_1,data_security.dis_228,0,0,data_security.Cat_3
+585,أم عبد الرحمن,data_security.dep_103,data_security.City_1,data_security.area_1,data_security.dis_151,0,0,data_security.Cat_3
+1127,عروة بن الزبير,data_security.dep_103,data_security.City_1,data_security.area_1,data_security.dis_226,0,0,data_security.Cat_3
+1815, مجمع الخلفاء بمسجد العيد ,data_security.dep_103,data_security.City_1,data_security.area_1,data_security.dis_200,0,0,data_security.Cat_3
+1177,ذي النورين ,data_security.dep_103,data_security.City_1,data_security.area_1,data_security.dis_226,0,0,data_security.Cat_3
+1419,عبد الله بن الزبير,data_security.dep_103,data_security.City_1,data_security.area_1,data_security.dis_151,0,0,data_security.Cat_3
+586,السناني,data_security.dep_103,data_security.City_1,data_security.area_1,data_security.dis_165,0,0,data_security.Cat_3
+1423,مسجد مريم الخريف,data_security.dep_103,data_security.City_1,data_security.area_1,data_security.dis_23,0,0,data_security.Cat_3
+1089,طارق بن زياد ,data_security.dep_103,data_security.City_1,data_security.area_1,data_security.dis_115,0,0,data_security.Cat_3
+1273,فيصل بن فهد,data_security.dep_103,data_security.City_1,data_security.area_1,data_security.dis_226,0,0,data_security.Cat_3
+1628,سعد بن عبادة,data_security.dep_103,data_security.City_1,data_security.area_1,data_security.dis_226,0,0,data_security.Cat_3
+1407,الملك سعود,data_security.dep_103,data_security.City_1,data_security.area_1,data_security.dis_151,0,0,data_security.Cat_3
+1754,جرير بن عبد الله,data_security.dep_103,data_security.City_1,data_security.area_1,data_security.dis_23,0,0,data_security.Cat_3
+1402,عبد الله بن المبارك ,data_security.dep_103,data_security.City_1,data_security.area_1,data_security.dis_151,0,0,data_security.Cat_3
+1077,الشبل,data_security.dep_103,data_security.City_1,data_security.area_1,data_security.dis_23,0,0,data_security.Cat_3
+1135,المحيميدي,data_security.dep_103,data_security.City_1,data_security.area_1,data_security.dis_23,0,0,data_security.Cat_3
+1230,الملك خالد ,data_security.dep_103,data_security.City_1,data_security.area_1,data_security.dis_23,0,0,data_security.Cat_3
+1170,حذيفة بن اليمان ,data_security.dep_103,data_security.City_1,data_security.area_1,data_security.dis_23,0,0,data_security.Cat_3
+1303,الغيامة,data_security.dep_103,data_security.City_1,data_security.area_1,data_security.dis_23,0,0,data_security.Cat_3
+257,جامع الشيخ سليمان العودة,data_security.dep_103,data_security.City_1,data_security.area_1,data_security.dis_186,0,0,data_security.Cat_3
+1681,مجمع حلقات جامع الشيخ سليمان القاسم,data_security.dep_103,data_security.City_1,data_security.area_1,data_security.dis_23,0,0,data_security.Cat_3
+348,حلقات أبو موسى الأشعري بمسجد الهادي,data_security.dep_103,data_security.City_1,data_security.area_1,data_security.dis_115,0,0,data_security.Cat_3
+1343, جامع نورة العجلان ,data_security.dep_103,data_security.City_1,data_security.area_1,data_security.dis_47,0,0,data_security.Cat_3
+1421,الفاروق ,data_security.dep_103,data_security.City_1,data_security.area_1,data_security.dis_23,0,0,data_security.Cat_3
+1361,حمزة بن عبد المطلب,data_security.dep_103,data_security.City_1,data_security.area_1,data_security.dis_47,0,0,data_security.Cat_3
+1689,حصة العريفي,data_security.dep_103,data_security.City_1,data_security.area_1,data_security.dis_30,0,0,data_security.Cat_3
+1422,فهد السبعان,data_security.dep_103,data_security.City_1,data_security.area_1,data_security.dis_151,0,0,data_security.Cat_3
+995, الإمام أحمد ( آل عبد الله  ),data_security.dep_103,data_security.City_1,data_security.area_1,data_security.dis_151,0,0,data_security.Cat_3
+1344,جامع التقوى,data_security.dep_103,data_security.City_1,data_security.area_1,data_security.dis_186,0,0,data_security.Cat_3
+1688,التقوى بمخطط المزيني,data_security.dep_103,data_security.City_1,data_security.area_1,data_security.dis_151,0,0,data_security.Cat_3
+901,حذيفة بن اليمان ,data_security.dep_103,data_security.City_1,data_security.area_1,data_security.dis_228,0,0,data_security.Cat_3
+905,مجمع رياض القرآن النموذجي,data_security.dep_103,data_security.City_1,data_security.area_1,data_security.dis_228,0,0,data_security.Cat_3
+903,سعد بن الربيع,data_security.dep_103,data_security.City_1,data_security.area_1,data_security.dis_228,0,0,data_security.Cat_3
+902,الخباب بن الأرت,data_security.dep_103,data_security.City_1,data_security.area_1,data_security.dis_228,0,0,data_security.Cat_3
+3,الحارثة بن النعمان,data_security.dep_103,data_security.City_1,data_security.area_1,data_security.dis_228,0,0,data_security.Cat_3
+1115,قتيبة بن مسلم,data_security.dep_103,data_security.City_1,data_security.area_1,data_security.dis_151,0,0,data_security.Cat_3
+1150,الهداية,data_security.dep_103,data_security.City_1,data_security.area_1,data_security.dis_186,0,0,data_security.Cat_3
+1812,الأرقم,data_security.dep_103,data_security.City_1,data_security.area_1,data_security.dis_151,0,0,data_security.Cat_3
+1608,محمد بن فواز آل عبد الله,data_security.dep_103,data_security.City_1,data_security.area_1,data_security.dis_23,0,0,data_security.Cat_3
+1935,الشيماء بنت الحارث مسائي,data_security.dep_103,data_security.City_1,data_security.area_1,data_security.dis_151,0,0,data_security.Cat_3
+1876,البينات مسائي,data_security.dep_103,data_security.City_1,data_security.area_1,data_security.dis_165,0,0,data_security.Cat_3
+1046,سودة بنت زمعة مسائي,data_security.dep_103,data_security.City_1,data_security.area_1,data_security.dis_151,0,0,data_security.Cat_3
+531,عاتكة بنت زيد مسائي,data_security.dep_103,data_security.City_1,data_security.area_1,data_security.dis_115,0,0,data_security.Cat_3
+924,حمنة بنت جحش مسائي,data_security.dep_103,data_security.City_1,data_security.area_1,data_security.dis_165,0,0,data_security.Cat_3
+1182,حفصة بنت عمر مسائي,data_security.dep_103,data_security.City_1,data_security.area_1,data_security.dis_23,0,0,data_security.Cat_3
+1191,ابن القيم مسائي,data_security.dep_103,data_security.City_1,data_security.area_1,data_security.dis_23,0,0,data_security.Cat_3
+402,نور الهداية مسائي,data_security.dep_103,data_security.City_1,data_security.area_1,data_security.dis_228,0,0,data_security.Cat_3
+1190,أسماء بنت أبي بكر مسائي,data_security.dep_103,data_security.City_1,data_security.area_1,data_security.dis_23,0,0,data_security.Cat_3
+1195,سكينة بنت أبي وقاص مسائي,data_security.dep_103,data_security.City_1,data_security.area_1,data_security.dis_226,0,0,data_security.Cat_3
+1727, درة بنت أبي سلمة مسائي,data_security.dep_103,data_security.City_1,data_security.area_1,data_security.dis_151,0,0,data_security.Cat_3
+467,الرميصاء مسائي,data_security.dep_103,data_security.City_1,data_security.area_1,data_security.dis_151,0,0,data_security.Cat_3
+1192, فاطمة بنت الخطاب مسائي,data_security.dep_103,data_security.City_1,data_security.area_1,data_security.dis_226,0,0,data_security.Cat_3
+1900,أم كلثوم مسائي,data_security.dep_103,data_security.City_1,data_security.area_1,data_security.dis_23,0,0,data_security.Cat_3
+3446,الشيماء بنت الحارث صباحي,data_security.dep_103,data_security.City_1,data_security.area_1,data_security.dis_151,0,0,data_security.Cat_3
+2219,أحد,data_security.dep_103,data_security.City_1,data_security.area_1,data_security.dis_30,0,0,data_security.Cat_3
+3466,سودة بنت زمعة صباحي روضة الطفل المسلم,data_security.dep_103,data_security.City_1,data_security.area_1,data_security.dis_23,0,0,data_security.Cat_3
+3469,فاطمة بنت الخطاب صباحي روضة دوح القرآن,data_security.dep_103,data_security.City_1,data_security.area_1,data_security.dis_324,0,0,data_security.Cat_3
+1627,السليم,data_security.dep_103,data_security.City_1,data_security.area_1,data_security.dis_200,0,0,data_security.Cat_3
+1721,السويلم,data_security.dep_103,data_security.City_1,data_security.area_1,data_security.dis_151,0,0,data_security.Cat_3
+2044,عائشة بنت أبي بكر,data_security.dep_103,data_security.City_1,data_security.area_1,data_security.dis_151,0,0,data_security.Cat_3
+1412,الشيخ فهد بن علي آل إسماعيل,data_security.dep_103,data_security.City_1,data_security.area_1,data_security.dis_23,0,0,data_security.Cat_3
+2092,حلقات الاميرة سلطانه بنت عبدالعزيز رحمها الله,data_security.dep_103,data_security.City_1,data_security.area_1,data_security.dis_165,0,0,data_security.Cat_3
+3538,الإخلاص مسائي,data_security.dep_103,data_security.City_1,data_security.area_1,data_security.dis_23,0,0,data_security.Cat_3
+3668,البينات صباحي روضة براعم الهدى,data_security.dep_103,data_security.City_1,data_security.area_1,data_security.dis_165,0,0,data_security.Cat_3
+4419,خالد السلمان,data_security.dep_103,data_security.City_1,data_security.area_1,data_security.dis_151,0,0,data_security.Cat_3
+4452,سلمى بنت عميس مسائي,data_security.dep_103,data_security.City_1,data_security.area_1,data_security.dis_47,0,0,data_security.Cat_3
+4632,دوح الكتاب مسائي,data_security.dep_103,data_security.City_1,data_security.area_1,data_security.dis_186,0,0,data_security.Cat_3
+4816,الذكر الحكيم مسائي,data_security.dep_103,data_security.City_1,data_security.area_1,data_security.dis_151,0,0,data_security.Cat_3
+4934,ابن جبرين مسائي,data_security.dep_103,data_security.City_1,data_security.area_1,data_security.dis_47,0,0,data_security.Cat_3
+5124,الفتح مسائي,data_security.dep_103,data_security.City_1,data_security.area_1,data_security.dis_151,0,0,data_security.Cat_3
+5219,عاتكة بنت زيد صباحي روضة صناع المجد,data_security.dep_103,data_security.City_1,data_security.area_1,data_security.dis_186,0,0,data_security.Cat_3
+5220,الرميصاء صباحي,data_security.dep_103,data_security.City_1,data_security.area_1,data_security.dis_151,0,0,data_security.Cat_3
+5317,حمد الزير,data_security.dep_103,data_security.City_1,data_security.area_1,data_security.dis_23,0,0,data_security.Cat_3
+5306,عائشة بنت أبي بكر الصديق,data_security.dep_103,data_security.City_1,data_security.area_1,data_security.dis_151,0,0,data_security.Cat_3
+5342,حلقات مسجد عبد العزيز بن سعود الحمد,data_security.dep_103,data_security.City_1,data_security.area_1,data_security.dis_47,0,0,data_security.Cat_3
+5350,حلقات حمزة بن عبد المطلب,data_security.dep_103,data_security.City_1,data_security.area_1,data_security.dis_151,0,0,data_security.Cat_3
+5352,أم فارس,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_150,0,0,data_security.Cat_3
+5355,جامع الصفيان - مجمع الفريان النموذجي,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_172,0,0,data_security.Cat_3
+5325,صالح العبدالقادر 2 بصياح,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_177,0,0,data_security.Cat_3
+5326,محمد الراجحي بالرفيعة,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_65,0,0,data_security.Cat_3
+5381,جامع العبيكان بالشميسي,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_76,0,0,data_security.Cat_3
+5365,أروى بنت عبد المطلب - صباحي -,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_36,0,0,data_security.Cat_3
+5366,أروى بنت عبد المطلب - صباحي -,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_36,0,0,data_security.Cat_3
+5367,الإمام محمد بن سعود - مسائي - ,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_170,0,0,data_security.Cat_3
+5370,مسجد محمد بن مرشد الزير,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_172,0,0,data_security.Cat_3
+5371,مسجد عبدالله عبدالرحمن البرغش ووالدته,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_172,0,0,data_security.Cat_3
+5383,الشيخ محمد الراجحي - صباحي-,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_65,0,0,data_security.Cat_3
+5391,سيف العريفي - مساء -,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_43,0,0,data_security.Cat_3
+5392,سيف العريفي - صباحي -,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_43,0,0,data_security.Cat_3
+5395,نورة السالم ,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_217,0,0,data_security.Cat_3
+5282,مقرأة مركز الغرب الأولى بمسجد الخضيري,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_71,0,0,data_security.Cat_3
+5247,جامع ابن عثيمين,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_36,0,0,data_security.Cat_3
+5212,جامع النمر - مجمع الفرقان التعليمي,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_36,0,0,data_security.Cat_3
+5201,حفصة بنت سيرين مسائي,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_22,0,0,data_security.Cat_3
+5180,الامير محمد بن عبدالرحمن الفيصل ,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_251,0,0,data_security.Cat_3
+4907,مسجد ابن عيسى,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_36,0,0,data_security.Cat_3
+4945,مسجد الصديق 2,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_22,0,0,data_security.Cat_3
+4879,الشعلان 2 سلطانه,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_251,0,0,data_security.Cat_3
+4983,عبدالعزيز الرويتع مسائي,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_4,0,0,data_security.Cat_3
+4984,مسجد جعفر بن أبي طالب,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_172,0,0,data_security.Cat_3
+5029,العباس بن عبدالمطلب صباحي,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_187,0,0,data_security.Cat_3
+5040,أم رومان بنت عامر مسائي,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_217,0,0,data_security.Cat_3
+5114,الوالدين مسائي,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_43,0,0,data_security.Cat_3
+5115,مسجد مخطط القصر 2 - مجمع قرآني,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_170,0,0,data_security.Cat_3
+5116,مسجد العويمرية الشمالي / مجمع الفاروق التعليمي,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_76,0,0,data_security.Cat_3
+5091,حلقات مسجد الجدتين,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_59,0,0,data_security.Cat_3
+4638,جامع عبدالرحمن الخنيفر,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_200,0,0,data_security.Cat_3
+4609,الشبانات,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_59,0,0,data_security.Cat_3
+4611,ناصر الشثري,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_36,0,0,data_security.Cat_3
+4592,الراجحي باسكان الملك سلمان ,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_43,0,0,data_security.Cat_3
+4593,دارة الملك عبدالعزيز,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_131,0,0,data_security.Cat_3
+4748,والدة الأمير طلال بن سعود - مجمع الفاروق التعليمي,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_218,0,0,data_security.Cat_3
+4749,جامع الصانع 2 حلقات مؤمن _ مجمع قرآني,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_22,0,0,data_security.Cat_3
+4455,الملك عبدالعزيز مسائي,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_172,0,0,data_security.Cat_3
+4572,محمد بن عبدالوهاب مسائي,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_36,0,0,data_security.Cat_3
+4467,مسجد الحميميدي,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_22,0,0,data_security.Cat_3
+4468,جامع المديميغ,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_22,0,0,data_security.Cat_3
+4451,القري الطويل - مجمع قرآني,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_43,0,0,data_security.Cat_3
+4143,عائشة بنت سليمان الراجحي صباحي,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_172,0,0,data_security.Cat_3
+3868,جامع الأميرة سارة بنت عبدالله الجلوي,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_36,0,0,data_security.Cat_3
+3870,التخيفي,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_22,0,0,data_security.Cat_3
+3688,مسجد قصر الأمير سعود بن سلمان,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_36,0,0,data_security.Cat_3
+3690,مسجد الرويشد,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_150,0,0,data_security.Cat_3
+3692,مسجد طلحة بن عبيدالله,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_59,0,0,data_security.Cat_3
+3693,جامع القصر- مجمع قرآني,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_22,0,0,data_security.Cat_3
+3694,مسجد العنقري,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_36,0,0,data_security.Cat_3
+3701,ام الطفيل مسائي,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_36,0,0,data_security.Cat_3
+2169,جامع عمر بن عبدالعزيز1 بحي صياح - مجمع قرآني ,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_177,0,0,data_security.Cat_3
+433,جامع الشيخ صالح العريفي,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_86,0,0,data_security.Cat_3
+1152,الشيخ محمد بن عثيمين مسائي,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_181,0,0,data_security.Cat_3
+1301,القرينين الجنوبي - مجمع الفاروق التعليمي,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_76,0,0,data_security.Cat_3
+1302,حلة بن هــندي - مجمع الفاروق التعليمي,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_76,0,0,data_security.Cat_3
+1239,مسجد المســعد (حلقات بصائر) - مجمع قرآني,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_170,0,0,data_security.Cat_3
+1291,السـياري,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_22,0,0,data_security.Cat_3
+1188,الأحمــد,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_22,0,0,data_security.Cat_3
+1523,الحرس,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_131,0,0,data_security.Cat_3
+1196,الراجحي- (5) مجمع الشيخ عبدالعزيز العزمان التعليمي,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_144,0,0,data_security.Cat_3
+1270,ابن الفارس ,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_86,0,0,data_security.Cat_3
+1793,عودة العودة,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_172,0,0,data_security.Cat_3
+1750,الهويمل-(2) - مجمع قرآني,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_36,0,0,data_security.Cat_3
+1447,الشعيبـي  (2) مجمع الفاروق التعليمي,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_76,0,0,data_security.Cat_3
+1238,الأمير عبدالعزيز الثنيان (2) _ مجمع الاتقان التعليمي,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_187,0,0,data_security.Cat_3
+3478,أم المؤمنين صفية بنت حيي صباحي,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_43,0,0,data_security.Cat_3
+3479,الرميصاء بنت ملحان صباحي,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_187,0,0,data_security.Cat_3
+3481,الإيمان صباحي,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_144,0,0,data_security.Cat_3
+129,الحياة مسائي,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_22,0,0,data_security.Cat_3
+1968,أبو حبيب الشثري مسائي,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_170,0,0,data_security.Cat_3
+1403,جمانة بنت أبي طالب مسائي,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_22,0,0,data_security.Cat_3
+1536,فلذات الأكباد مسائي,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_71,0,0,data_security.Cat_3
+1321,سيف العريفي مسائي,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_43,0,0,data_security.Cat_3
+1289, حليمة السعدية مسائي,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_22,0,0,data_security.Cat_3
+187,الشيخ عبدالعزيز بن باز مسائي,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_187,0,0,data_security.Cat_3
+3463,الرميصاء بنت ملحان صباحي,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_187,0,0,data_security.Cat_3
+3453,خبيب بن عدي صباحي,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_74,0,0,data_security.Cat_3
+3455,سارة مسائي,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_36,0,0,data_security.Cat_3
+1920, الهمم مسائي,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_75,0,0,data_security.Cat_3
+568,الذكر - الفاخرية مسائي,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_102,0,0,data_security.Cat_3
+201, الإيمان,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_144,0,0,data_security.Cat_3
+1393, الفجر مسائي,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_217,0,0,data_security.Cat_3
+1776, الفضائل مسائي,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_172,0,0,data_security.Cat_3
+1674, أمهات المؤمنين مسائي,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_172,0,0,data_security.Cat_3
+4135,رياض الهداية صباحي,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_200,0,0,data_security.Cat_3
+1932,"الشيخ محمد بن عبد العزيز الراجحي ""مساءً""",data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_65,0,0,data_security.Cat_3
+1318,سمية بنت معبد الخياط مسائي,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_22,0,0,data_security.Cat_3
+4137,الهداية مسائي,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_200,0,0,data_security.Cat_3
+1557,عائشة بنت سليمان الراجحي مسائي,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_172,0,0,data_security.Cat_3
+1342, الشيخ عبد الله القرعاوي مسائي,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_43,0,0,data_security.Cat_3
+1548, نائلة الفرافصة مسائي,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_36,0,0,data_security.Cat_3
+191, أم المؤمنين صفية بنت حيي,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_43,0,0,data_security.Cat_3
+980, الإمام محمد بن سعود صباحي,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_170,0,0,data_security.Cat_3
+1578, جويرية بنت الحارث مسائي,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_170,0,0,data_security.Cat_3
+232, أم معبد,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_181,0,0,data_security.Cat_3
+265, أميمة بنت بشر مسائي,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_181,0,0,data_security.Cat_3
+933, أم عمارة الأنصارية مسائي,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_76,0,0,data_security.Cat_3
+1521, أم أبي ذر مسائي,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_86,0,0,data_security.Cat_3
+1315,أم الخير مسائي,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_36,0,0,data_security.Cat_3
+1921,روضة سارة صباحي,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_36,0,0,data_security.Cat_3
+1698, الإحسان مسائي,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_76,0,0,data_security.Cat_3
+1502, آسيه بنت مزاحم مسائي,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_22,0,0,data_security.Cat_3
+188, أروى بنت عبدالمطلب مسائي,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_36,0,0,data_security.Cat_3
+1923,محمد بن عبدالوهاب,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_187,0,0,data_security.Cat_3
+1566, خبيب بن عدي مسائي,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_74,0,0,data_security.Cat_3
+1890, الدريهمية مسائي,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_59,0,0,data_security.Cat_3
+1584,مسجد الفنتوخ - مجمع قرآني,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_172,0,0,data_security.Cat_3
+1253,الأميرة منيرة بنت عبدالرحمن (2) - مجمع قرآني,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_76,0,0,data_security.Cat_3
+1516,الملك سعود,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_131,0,0,data_security.Cat_3
+1501,مسجد أم فهد _ مجمع الرائدة التعليمي,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_36,0,0,data_security.Cat_3
+1369,عبدالرحمن الداخل,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_172,0,0,data_security.Cat_3
+1133,الأمير خالد بن سعود (1)-البريك,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_36,0,0,data_security.Cat_3
+1122,مجمع الشيخ عبدالله القرعاوي بجامع النور - مجمع قرآني,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_36,0,0,data_security.Cat_3
+1561,جامع الدريهمية  - مجمع قرآني,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_59,0,0,data_security.Cat_3
+1030,الأمير محمد بن عبد العزيز - مجمع قرآني,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_131,0,0,data_security.Cat_3
+1396,الأمير فهد بن سعد,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_76,0,0,data_security.Cat_3
+1439, الامير نايف,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_172,0,0,data_security.Cat_3
+1640, حلقات جامع العرفج - مجمع الفريان النموذجي,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_172,0,0,data_security.Cat_3
+1775,العبيكان- مجمع قرآني,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_172,0,0,data_security.Cat_3
+1616,حلقات البراء بجامع الأميرة سارة بنت سعد - مجمع الفريان النموذجي,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_22,0,0,data_security.Cat_3
+1723,المرافق - مجمع الصفوة التعليمي,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_22,0,0,data_security.Cat_3
+1497,نجر الشيباني,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_131,0,0,data_security.Cat_3
+936, الراجحي ( الوشام ) مجمع الفاروق التعليمي,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_144,0,0,data_security.Cat_3
+1368,حلقات أعلام الدعوة بجامع الأمير حسن بن عبدالله آل سعود - مجمع الفريان النموذجي,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_22,0,0,data_security.Cat_3
+1712,النفيسي _ مجمع قرآني _,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_43,0,0,data_security.Cat_3
+1227,الهويش,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_22,0,0,data_security.Cat_3
+1560,حلقات مبين بجامع عمر بن عبدالعزيز 2,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_22,0,0,data_security.Cat_3
+1749,الحقباني  (2) - مجمع قرآني,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_181,0,0,data_security.Cat_3
+1452,الغشيان (2) ,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_36,0,0,data_security.Cat_3
+949,عبدالله البراهيم ,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_86,0,0,data_security.Cat_3
+1670,الثنيان (1),data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_36,0,0,data_security.Cat_3
+1130,جامع محمد بن ماجد مجمع الفرقان التعليمي,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_36,0,0,data_security.Cat_3
+1509, ابن جلعود,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_71,0,0,data_security.Cat_3
+1669,صالح العبدالقادر 1 بسلطانة - مجمع قرآني,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_170,0,0,data_security.Cat_3
+858,الملك سلمان (1) - مجمع قرآني,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_43,0,0,data_security.Cat_3
+1579, وزير العدل - مجمع قرآني,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_170,0,0,data_security.Cat_3
+1519,ابن خضير(2),data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_131,0,0,data_security.Cat_3
+1527,الأميرة قماشه بنت سعود,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_131,0,0,data_security.Cat_3
+1734,الحصيني(1),data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_172,0,0,data_security.Cat_3
+1638,جامع الراجحي بشبرا - مجمع قرآني ,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_172,0,0,data_security.Cat_3
+1198,حلقات جامع أسامة بن زيد  رضي الله عنه ,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_22,0,0,data_security.Cat_3
+1293,الصانع (1) حلقات الفاروق - مجمع قرآني,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_172,0,0,data_security.Cat_3
+1639,الملك عبدالعزيز (2) - مجمع قرآني,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_172,0,0,data_security.Cat_3
+1590, محمد بن سعود العلي,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_22,0,0,data_security.Cat_3
+1295,جامع الحميدي _ مجمع الرائدة التعليمي,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_36,0,0,data_security.Cat_3
+1443, آل شرمان,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_170,0,0,data_security.Cat_3
+1647,جامع عائشة بنت أبي بكر ,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_22,0,0,data_security.Cat_3
+1598,المقيرن (المنصوريات سابقًاً) ,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_76,0,0,data_security.Cat_3
+1457,العنوز,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_76,0,0,data_security.Cat_3
+1672,الملك عبد العزيز (1) مجمع المدينة التعليمي,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_36,0,0,data_security.Cat_3
+1250,صالح بن عبدالحميد آل الشيخ - مجمع المدينة التعليمي,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_36,0,0,data_security.Cat_3
+1106,شيخ الإسلام ابن تيمية - مجمع قرآني,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_170,0,0,data_security.Cat_3
+996,التوحيد (1),data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_86,0,0,data_security.Cat_3
+1768, ابن نوح,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_36,0,0,data_security.Cat_3
+1096,ابن جابر,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_131,0,0,data_security.Cat_3
+1285,الغشيان (1)  ( حلقات اللولؤ المكنون ),data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_22,0,0,data_security.Cat_3
+1308,ابن سعيد (2) حلقات الإبن البار,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_181,0,0,data_security.Cat_3
+1605,حنين ,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_22,0,0,data_security.Cat_3
+1487,الضويان,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_36,0,0,data_security.Cat_3
+1420,الإمام الشاطبي - مجمع الصفوة التعليمي,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_22,0,0,data_security.Cat_3
+1394,عبدالله بن حذافه السهمي,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_172,0,0,data_security.Cat_3
+2707,جامع ابن عدوان - مجمع الاتقان التعليمي,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_187,0,0,data_security.Cat_3
+1569,الأميرة العنود بنت عبدالعزيز آل جلوي,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_22,0,0,data_security.Cat_3
+1531,الراجحي (4) ,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_144,0,0,data_security.Cat_3
+1427,شعبة أم سليم - مجمع الفاروق التعليمي,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_76,0,0,data_security.Cat_3
+944,أبي هريرة,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_86,0,0,data_security.Cat_3
+1316,جامع  الإيمان _ مجمع الرائدة التعليمي,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_22,0,0,data_security.Cat_3
+1581,ابن سعيد 1,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_22,0,0,data_security.Cat_3
+1728,الأمير سلطان بن عبدالعزيز - مجمع قرآني,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_43,0,0,data_security.Cat_3
+1148, سعد المقرن - مجمع الصفوة التعليمي,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_36,0,0,data_security.Cat_3
+628,التضامن ,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_22,0,0,data_security.Cat_3
+1441,التركي,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_22,0,0,data_security.Cat_3
+1242,الشيخ عبدالله الخريف - مجمع قرآني,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_187,0,0,data_security.Cat_3
+1679,عبدالله بن سعود _ مجمع الرائدة التعليمي,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_22,0,0,data_security.Cat_3
+1903,جامع خبيب بن عدي - مجمع قرآني,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_22,0,0,data_security.Cat_3
+1448,أم سليم,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_150,0,0,data_security.Cat_3
+1756,عبدالله بن ناصر,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_22,0,0,data_security.Cat_3
+1414,مسجد المعزي - حلقات الجليس الصالح,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_76,0,0,data_security.Cat_3
+1613, الامير خالد بن سعود (2)- الزامل,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_181,0,0,data_security.Cat_3
+1074,حلقات الذكر مسجد سعد بن معاذ ,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_74,0,0,data_security.Cat_3
+1400,والدة الملك سعود (2)- مجمع  الشيخ عبدالعزيز العزمان التعليمي,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_144,0,0,data_security.Cat_3
+1550,مسجد الخراشي _ مجمع الفرقان التعليمي,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_181,0,0,data_security.Cat_3
+1930,المنصور ,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_22,0,0,data_security.Cat_3
+1416, بجاد,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_76,0,0,data_security.Cat_3
+1397,عثمان الصالح - مجمع الشيخ عبدالعزيزالعزمان التعليمي,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_144,0,0,data_security.Cat_3
+1189, الفوارة الجنوبي - مجمع قرآني,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_102,0,0,data_security.Cat_3
+1125, جامع المدينة - مجمع المدينة التعليمي,data_security.dep_104,data_security.City_1,data_security.area_1,data_security.dis_36,0,0,data_security.Cat_3
+5390,الصحابة  (اليمامة),data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_147,0,0,data_security.Cat_3
+5388,العجيبة الشرقي,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_188,0,0,data_security.Cat_3
+5291,عبد الله بن مسعود,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_199,0,0,data_security.Cat_3
+5296,السلامة مسائي ,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_77,0,0,data_security.Cat_3
+5298,السلامة صباحي ,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_77,0,0,data_security.Cat_3
+5299,معاذ بن جبل,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_184,0,0,data_security.Cat_3
+5301,الخراشي,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_49,0,0,data_security.Cat_3
+5242,مسجد الطويلعة,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_199,0,0,data_security.Cat_3
+5183,الأميرتركي بن عبدالله,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_61,0,0,data_security.Cat_3
+5184,الأميرتركي بن عبدالله,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_61,0,0,data_security.Cat_3
+5138,أبو بكر الصديق (المنصورة),data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_129,0,0,data_security.Cat_3
+4768,بن سحيم,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_153,0,0,data_security.Cat_3
+4777,الخلفاء الراشدين,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_147,0,0,data_security.Cat_3
+4834,الملك عبدالعزيز,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_106,0,0,data_security.Cat_3
+4818,حلقة اليمامة الشمالي,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_147,0,0,data_security.Cat_3
+4823,الفريان(عتيقة),data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_184,0,0,data_security.Cat_3
+4824,بن شويش,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_184,0,0,data_security.Cat_3
+4941,العجلان(الخالدية),data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_49,0,0,data_security.Cat_3
+4946,شماء بنت محمد مسائي,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_49,0,0,data_security.Cat_3
+4947,شماء بنت محمد صباحي,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_49,0,0,data_security.Cat_3
+4937,جمانة بنت أبي طالب مسائي,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_198,0,0,data_security.Cat_3
+4847,الإمام الذهبي بمسجدالرفيعة,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_94,0,0,data_security.Cat_3
+5041,الفوزاني,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_199,0,0,data_security.Cat_3
+5043,الأمير عبدالله بن عبدالرحمن الفيصل,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_129,0,0,data_security.Cat_3
+5031,الجنان مسائي ,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_188,0,0,data_security.Cat_3
+5021,ابن سلمه,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_147,0,0,data_security.Cat_3
+5107,حلقات نور الرحمن في مسجد الخريجي الشمالي بعتيقة ,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_184,0,0,data_security.Cat_3
+4628,حلقات شارع الوزير,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_61,0,0,data_security.Cat_3
+4596,الصحابة  (اليمامة),data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_147,0,0,data_security.Cat_3
+4600,الشيخ التويجري,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_199,0,0,data_security.Cat_3
+4668, الفريان(الخالدية),data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_49,0,0,data_security.Cat_3
+4751,الأمير محمد بن سعود,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_198,0,0,data_security.Cat_3
+4752,السبعان,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_114,0,0,data_security.Cat_3
+4494,سليمان الربيش مسائي,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_147,0,0,data_security.Cat_3
+4545,العمور,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_77,0,0,data_security.Cat_3
+4574,عبدالله بن مسعود مسائي,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_129,0,0,data_security.Cat_3
+4576,الصديقة بنت الصديق مسائي,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_195,0,0,data_security.Cat_3
+4577,الصديقة بنت الصديق (صباحي),data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_195,0,0,data_security.Cat_3
+4163,المزروع,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_147,0,0,data_security.Cat_3
+4216,خولة الأسدية مسائي,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_198,0,0,data_security.Cat_3
+4219,أمهات المؤمنين مسائي,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_129,0,0,data_security.Cat_3
+4421,السمو مسائي,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_77,0,0,data_security.Cat_3
+4181,أم حمد الحمودي مسائي,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_147,0,0,data_security.Cat_3
+1246,روح الحياة بمسجد غبيراء العام,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_188,0,0,data_security.Cat_3
+2009,الشليخة,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_147,0,0,data_security.Cat_3
+1503,العضيب,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_129,0,0,data_security.Cat_3
+1977,الخرجي,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_198,0,0,data_security.Cat_3
+1992,أويس القرني (ملتقى الأربعين),data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_49,0,0,data_security.Cat_3
+1896,أبوهريرة,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_129,0,0,data_security.Cat_3
+280,الملك عبدالله,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_94,0,0,data_security.Cat_3
+2261,العرفج,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_129,0,0,data_security.Cat_3
+2247,غمامة,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_129,0,0,data_security.Cat_3
+2701,القريشية,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_95,0,0,data_security.Cat_3
+994,الطرادية,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_95,0,0,data_security.Cat_3
+925,عمير بن وهب,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_195,0,0,data_security.Cat_3
+557,عبدالعزيز العريفي مسائي,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_147,0,0,data_security.Cat_3
+1798,ابن دريب,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_147,0,0,data_security.Cat_3
+878,الرويتع,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_147,0,0,data_security.Cat_3
+1084,مصعب بن عمير(المنصورة),data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_129,0,0,data_security.Cat_3
+1005,أبوعبيدة,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_147,0,0,data_security.Cat_3
+1375,الخريجي,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_147,0,0,data_security.Cat_3
+532,السلامة,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_199,0,0,data_security.Cat_3
+1131,المثلث,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_49,0,0,data_security.Cat_3
+1175,العويضة,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_49,0,0,data_security.Cat_3
+1143,السالمية,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_153,0,0,data_security.Cat_3
+798,ابن خثيلة,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_106,0,0,data_security.Cat_3
+1290,الرشودي,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_198,0,0,data_security.Cat_3
+518,الحبيب,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_103,0,0,data_security.Cat_3
+3510,التقوى صباحي,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_199,0,0,data_security.Cat_3
+3515,الزهراوين صباحي,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_198,0,0,data_security.Cat_3
+1491,فاطمة بنت محمد مسائي,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_49,0,0,data_security.Cat_3
+1156,زينب بنت علي مسائي,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_198,0,0,data_security.Cat_3
+213, زينب بنت جحش مسائي,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_188,0,0,data_security.Cat_3
+605, الصحيحان مسائي,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_198,0,0,data_security.Cat_3
+1009, الإنشراح مسائي,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_94,0,0,data_security.Cat_3
+1377,فهد العويضة مسائي,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_49,0,0,data_security.Cat_3
+1910,حبيبة بنت سهل مسائي,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_184,0,0,data_security.Cat_3
+219,رفيدة الأسلمية مسائي,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_199,0,0,data_security.Cat_3
+981,أبوبكر الصديق(غبيراء),data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_188,0,0,data_security.Cat_3
+956,حلة فهد بن سعود,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_95,0,0,data_security.Cat_3
+873,حلقات الشيخ ابراهيم الفرحان بمسجد القاسم,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_147,0,0,data_security.Cat_3
+1185, الفضيلة مسائي,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_129,0,0,data_security.Cat_3
+1651, الصفوة مسائي,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_129,0,0,data_security.Cat_3
+688, الزهراوين مسائي,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_199,0,0,data_security.Cat_3
+1789,التقوى مسائي,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_231,0,0,data_security.Cat_3
+992,الطرباق,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_198,0,0,data_security.Cat_3
+1693, الكوثر مسائي,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_153,0,0,data_security.Cat_3
+988, الفلاح مسائي,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_147,0,0,data_security.Cat_3
+236, الأسوة مسائي,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_129,0,0,data_security.Cat_3
+1726,حلقات جامع عبدالله بن مسعود -رضي الله عنه-,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_129,0,0,data_security.Cat_3
+1819,سنابل,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_49,0,0,data_security.Cat_3
+1877, الدعوة مسائي,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_188,0,0,data_security.Cat_3
+1165, الصابرات مسائي,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_114,0,0,data_security.Cat_3
+989, السمو صباحي,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_77,0,0,data_security.Cat_3
+1511,الخريجي الجنوبي,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_184,0,0,data_security.Cat_3
+1360,الأمير عبدالرحمن بن عبدالعزيز(اليمامة),data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_147,0,0,data_security.Cat_3
+1241,الفريان,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_195,0,0,data_security.Cat_3
+927,العز بن عبدالسلام,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_198,0,0,data_security.Cat_3
+268,العجيبة,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_188,0,0,data_security.Cat_3
+1556,مسجد العقيل الشمالي (جبرة)- مجمع خيركم النموذجي,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_156,0,0,data_security.Cat_3
+1054,الأمير بندر بن محمد آل سعود,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_199,0,0,data_security.Cat_3
+1356,الأمير تركي بن عبدالعزيز,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_156,0,0,data_security.Cat_3
+1300,الخرجي,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_199,0,0,data_security.Cat_3
+1795,الأميرة الجوهرة  (بنين),data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_184,0,0,data_security.Cat_3
+1862,حلقات جامع الحجاز,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_147,0,0,data_security.Cat_3
+1453,البديع,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_198,0,0,data_security.Cat_3
+1508,العصفور,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_195,0,0,data_security.Cat_3
+1218,ابن نوفل,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_114,0,0,data_security.Cat_3
+1044,المصيريعي,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_95,0,0,data_security.Cat_3
+1599,السهول,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_199,0,0,data_security.Cat_3
+224,عبدالله البصير,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_77,0,0,data_security.Cat_3
+569,السنيدي,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_49,0,0,data_security.Cat_3
+1632,سعد بن معاذ (عتيقة),data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_184,0,0,data_security.Cat_3
+1724,الأمير مصعب بن عبدالله,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_198,0,0,data_security.Cat_3
+1072,جامع اليمامة الجنوبي,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_147,0,0,data_security.Cat_3
+1263,الغفيص ,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_49,0,0,data_security.Cat_3
+252,ابن خميس مجمع حلقات أخلاق المؤمنين,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_188,0,0,data_security.Cat_3
+1822,مطلق بن شافي ,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_147,0,0,data_security.Cat_3
+1217,الأمير متعب بن عبدالعزيز(الفوطه),data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_106,0,0,data_security.Cat_3
+1110,البراء بن عازب,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_129,0,0,data_security.Cat_3
+1706,محمد بن عبدالله آل الشيخ,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_198,0,0,data_security.Cat_3
+1507,الصانع(منفوحة),data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_199,0,0,data_security.Cat_3
+947,علي بن أبي طالب ,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_49,0,0,data_security.Cat_3
+1305,جامع الخالدية,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_49,0,0,data_security.Cat_3
+1474,الشماسية الجنوبي,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_188,0,0,data_security.Cat_3
+1722,العباس بن عبدالمطلب (غبيراء),data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_188,0,0,data_security.Cat_3
+1385,حلة الأحرار,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_95,0,0,data_security.Cat_3
+1666,الصانع (المصورة),data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_129,0,0,data_security.Cat_3
+1767,الإمام الطبري,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_129,0,0,data_security.Cat_3
+1052,العقيل(غبيراء),data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_188,0,0,data_security.Cat_3
+253,عمار بن ياسر ,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_188,0,0,data_security.Cat_3
+946,الصغير,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_49,0,0,data_security.Cat_3
+1415,الملك خالد (الريل),data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_94,0,0,data_security.Cat_3
+1032,ابن حيان,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_95,0,0,data_security.Cat_3
+1265,فاطمة بنت أسد,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_49,0,0,data_security.Cat_3
+1468,الشيحية,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_188,0,0,data_security.Cat_3
+1395,اليحيى,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_61,0,0,data_security.Cat_3
+1588,الطلاسي,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_95,0,0,data_security.Cat_3
+175,آل عشيوان - مجمع خيركم النموذجي,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_199,0,0,data_security.Cat_3
+1792,مصعب بن عمير (عتيقة),data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_184,0,0,data_security.Cat_3
+1873,العقيل الجنوبي - مجمع خيركم النموذجي,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_156,0,0,data_security.Cat_3
+1450,فهد بن مقيل,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_147,0,0,data_security.Cat_3
+1449,شاطئ العلم بمسجد الراجحي,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_147,0,0,data_security.Cat_3
+1048,الصحابة(غبيراء),data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_188,0,0,data_security.Cat_3
+210,بن دايل,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_184,0,0,data_security.Cat_3
+1730,مجمع الأبرار بمسجد العرف,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_129,0,0,data_security.Cat_3
+225,سعد بن معاذ (المنصورة),data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_129,0,0,data_security.Cat_3
+1646,مدرسة التقوى لتحفيظ القران الكريم بمسجد عمر بن الخطاب(منفوحة),data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_198,0,0,data_security.Cat_3
+1512,الفوزان (الرويل سابقًا),data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_199,0,0,data_security.Cat_3
+227,علي بن ابي طالب(منفوحة),data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_199,0,0,data_security.Cat_3
+669,الوسيطي,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_156,0,0,data_security.Cat_3
+1752,مجمع الشيخ إبراهيم العريفي لتعليم القران,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_129,0,0,data_security.Cat_3
+1659,الشيخ سعد الحبابي,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_129,0,0,data_security.Cat_3
+1454,علي بن أبي طالب (خنشليلة),data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_220,0,0,data_security.Cat_3
+1226,أم إبراهيم الذياب,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_129,0,0,data_security.Cat_3
+1476,البصير,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_129,0,0,data_security.Cat_3
+1341,عائشة بنت أبي بكر,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_129,0,0,data_security.Cat_3
+1007,ناصر العبيد,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_61,0,0,data_security.Cat_3
+1746,الحوامي - مجمع خيركم,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_199,0,0,data_security.Cat_3
+1699,ابن منيع,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_199,0,0,data_security.Cat_3
+1631,خالد بن الوليد ,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_188,0,0,data_security.Cat_3
+1600,الغضية,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_198,0,0,data_security.Cat_3
+1357,الشيخ عبدالعزيز آل الشيخ,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_198,0,0,data_security.Cat_3
+1213,العجلان,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_153,0,0,data_security.Cat_3
+1426,الأمير عبدالله بن عبدالرحمن (منفوحة),data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_198,0,0,data_security.Cat_3
+1040, الخضرمة ( حلقات ابي بن كعب),data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_198,0,0,data_security.Cat_3
+1547,عبدالله الزكري,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_198,0,0,data_security.Cat_3
+401,الثليماء,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_147,0,0,data_security.Cat_3
+1506,البياشة,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_95,0,0,data_security.Cat_3
+1845,ابن سيار,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_188,0,0,data_security.Cat_3
+722,الحربي,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_49,0,0,data_security.Cat_3
+1003,الملك خالد,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_198,0,0,data_security.Cat_3
+1840,المرشد,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_129,0,0,data_security.Cat_3
+542,سعد بن معاذ (غبيراء),data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_188,0,0,data_security.Cat_3
+197,الفاروق - مجمع نموذجي,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_188,0,0,data_security.Cat_3
+1482,الحسن بن علي,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_129,0,0,data_security.Cat_3
+1673,حلقات الإمام السعدي بجامع الأميرة دليل بنت عبد الرحمن,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_129,0,0,data_security.Cat_3
+536,التيسير,data_security.dep_106,data_security.City_1,data_security.area_1,data_security.dis_198,0,0,data_security.Cat_3
+64,السديري -مجمع جيل القرآن النموذجي-,data_security.dep_107,data_security.City_1,data_security.area_1,data_security.dis_25,0,0,data_security.Cat_3
+67,الملز الجنوبي,data_security.dep_107,data_security.City_1,data_security.area_1,data_security.dis_26,0,0,data_security.Cat_3
+68,الكعكي,data_security.dep_107,data_security.City_1,data_security.area_1,data_security.dis_82,0,0,data_security.Cat_3
+65,العباس,data_security.dep_107,data_security.City_1,data_security.area_1,data_security.dis_26,0,0,data_security.Cat_3
+66,العساف,data_security.dep_107,data_security.City_1,data_security.area_1,data_security.dis_113,0,0,data_security.Cat_3
+271,الفرقان ,data_security.dep_107,data_security.City_1,data_security.area_1,data_security.dis_25,0,0,data_security.Cat_3
+43,سلمان بن دخيل ( عرين سابقاً ),data_security.dep_107,data_security.City_1,data_security.area_1,data_security.dis_26,0,0,data_security.Cat_3
+44,غاتر تحسين,data_security.dep_107,data_security.City_1,data_security.area_1,data_security.dis_26,0,0,data_security.Cat_3
+45,البر,data_security.dep_107,data_security.City_1,data_security.area_1,data_security.dis_82,0,0,data_security.Cat_3
+2046,حصة العمار,data_security.dep_107,data_security.City_1,data_security.area_1,data_security.dis_25,0,0,data_security.Cat_3
+47,صلاح الدين الأيوبي,data_security.dep_107,data_security.City_1,data_security.area_1,data_security.dis_143,0,0,data_security.Cat_3
+63,التقوى -مجمع جيل القرآن النموذجي-,data_security.dep_107,data_security.City_1,data_security.area_1,data_security.dis_25,0,0,data_security.Cat_3
+62,مسجد الفالح,data_security.dep_107,data_security.City_1,data_security.area_1,data_security.dis_26,0,0,data_security.Cat_3
+61,الراجحي بحى الصفا,data_security.dep_107,data_security.City_1,data_security.area_1,data_security.dis_79,0,0,data_security.Cat_3
+291,الحبيشي,data_security.dep_107,data_security.City_1,data_security.area_1,data_security.dis_157,0,0,data_security.Cat_3
+3360,البابطين,data_security.dep_107,data_security.City_1,data_security.area_1,data_security.dis_25,0,0,data_security.Cat_3
+279,المنتزه الجديد,data_security.dep_107,data_security.City_1,data_security.area_1,data_security.dis_143,0,0,data_security.Cat_3
+287,المنتزه الشمالي,data_security.dep_107,data_security.City_1,data_security.area_1,data_security.dis_143,0,0,data_security.Cat_3
+288,غرب وزارة الداخلية,data_security.dep_107,data_security.City_1,data_security.area_1,data_security.dis_113,0,0,data_security.Cat_3
+289,الأمير سلطان بن عبد العزيز,data_security.dep_107,data_security.City_1,data_security.area_1,data_security.dis_25,0,0,data_security.Cat_3
+274,الفالح,data_security.dep_107,data_security.City_1,data_security.area_1,data_security.dis_25,0,0,data_security.Cat_3
+235,المنتزه الجنوبي,data_security.dep_107,data_security.City_1,data_security.area_1,data_security.dis_143,0,0,data_security.Cat_3
+217,حمد البادي,data_security.dep_107,data_security.City_1,data_security.area_1,data_security.dis_26,0,0,data_security.Cat_3
+283,الملك عبدالله - مجمع ابي موسى الاشعري النموذجي,data_security.dep_107,data_security.City_1,data_security.area_1,data_security.dis_26,0,0,data_security.Cat_3
+242,الربع -مجمع جيل القرآن النموذجي-,data_security.dep_107,data_security.City_1,data_security.area_1,data_security.dis_25,0,0,data_security.Cat_3
+277,سعد بن معاذ ,data_security.dep_107,data_security.City_1,data_security.area_1,data_security.dis_26,0,0,data_security.Cat_3
+218,سعد بن معاذ (الفيصلية),data_security.dep_107,data_security.City_1,data_security.area_1,data_security.dis_107,0,0,data_security.Cat_3
+1205,حلقات مسجد محمد عوض بن لادن,data_security.dep_107,data_security.City_1,data_security.area_1,data_security.dis_157,0,0,data_security.Cat_3
+9,الأمير متعب بن عبدالعزيز الغربي,data_security.dep_107,data_security.City_1,data_security.area_1,data_security.dis_26,0,0,data_security.Cat_3
+11,الأميرة شيخة بنت عبدالعزيز,data_security.dep_107,data_security.City_1,data_security.area_1,data_security.dis_113,0,0,data_security.Cat_3
+12,الأمير فيصل بن سعد,data_security.dep_107,data_security.City_1,data_security.area_1,data_security.dis_113,0,0,data_security.Cat_3
+3413,علي فهد الهزاع,data_security.dep_107,data_security.City_1,data_security.area_1,data_security.dis_113,0,0,data_security.Cat_3
+15,حلقات جامع الصفدي,data_security.dep_107,data_security.City_1,data_security.area_1,data_security.dis_25,0,0,data_security.Cat_3
+206, الحافظات مسائي,data_security.dep_107,data_security.City_1,data_security.area_1,data_security.dis_107,0,0,data_security.Cat_3
+16,الرشودي,data_security.dep_107,data_security.City_1,data_security.area_1,data_security.dis_113,0,0,data_security.Cat_3
+17,المدي,data_security.dep_107,data_security.City_1,data_security.area_1,data_security.dis_113,0,0,data_security.Cat_3
+28,الصفدي مسائي,data_security.dep_107,data_security.City_1,data_security.area_1,data_security.dis_25,0,0,data_security.Cat_3
+21, الهداية مسائي,data_security.dep_107,data_security.City_1,data_security.area_1,data_security.dis_25,0,0,data_security.Cat_3
+22, نسيبة بنت كعب مسائي,data_security.dep_107,data_security.City_1,data_security.area_1,data_security.dis_143,0,0,data_security.Cat_3
+23,الرشاد مسائي,data_security.dep_107,data_security.City_1,data_security.area_1,data_security.dis_25,0,0,data_security.Cat_3
+24, أم المؤمنين عائشة مسائي,data_security.dep_107,data_security.City_1,data_security.area_1,data_security.dis_113,0,0,data_security.Cat_3
+25, الرميصاء مسائي,data_security.dep_107,data_security.City_1,data_security.area_1,data_security.dis_25,0,0,data_security.Cat_3
+26, المؤمنات صباحي,data_security.dep_107,data_security.City_1,data_security.area_1,data_security.dis_25,0,0,data_security.Cat_3
+31,الجود مسائي,data_security.dep_107,data_security.City_1,data_security.area_1,data_security.dis_26,0,0,data_security.Cat_3
+29,أم إياس مسائي,data_security.dep_107,data_security.City_1,data_security.area_1,data_security.dis_26,0,0,data_security.Cat_3
+35,النبراس مسائي,data_security.dep_107,data_security.City_1,data_security.area_1,data_security.dis_25,0,0,data_security.Cat_3
+19, ذات النطاقين مسائي,data_security.dep_107,data_security.City_1,data_security.area_1,data_security.dis_25,0,0,data_security.Cat_3
+34, خولة بنت ثعلبة مسائي,data_security.dep_107,data_security.City_1,data_security.area_1,data_security.dis_16,0,0,data_security.Cat_3
+33,البصائر صباحي,data_security.dep_107,data_security.City_1,data_security.area_1,data_security.dis_26,0,0,data_security.Cat_3
+32, البيان مسائي ,data_security.dep_107,data_security.City_1,data_security.area_1,data_security.dis_79,0,0,data_security.Cat_3
+20,السلف مسائي,data_security.dep_107,data_security.City_1,data_security.area_1,data_security.dis_157,0,0,data_security.Cat_3
+39,الهداية صباحي,data_security.dep_107,data_security.City_1,data_security.area_1,data_security.dis_25,0,0,data_security.Cat_3
+40,المؤمنات مسائي,data_security.dep_107,data_security.City_1,data_security.area_1,data_security.dis_25,0,0,data_security.Cat_3
+998,أم ثابت الأنصارية مسائي,data_security.dep_107,data_security.City_1,data_security.area_1,data_security.dis_107,0,0,data_security.Cat_3
+37,عاتكة بنت عبدالمطلب مسائي,data_security.dep_107,data_security.City_1,data_security.area_1,data_security.dis_143,0,0,data_security.Cat_3
+153,نور القرآن صباحي,data_security.dep_107,data_security.City_1,data_security.area_1,data_security.dis_26,0,0,data_security.Cat_3
+577,البصائر مسائي,data_security.dep_107,data_security.City_1,data_security.area_1,data_security.dis_26,0,0,data_security.Cat_3
+1950,عاتكة بنت عبدالمطلب صباحي,data_security.dep_107,data_security.City_1,data_security.area_1,data_security.dis_143,0,0,data_security.Cat_3
+2005,السلف صباحي,data_security.dep_107,data_security.City_1,data_security.area_1,data_security.dis_157,0,0,data_security.Cat_3
+1954,مشرف صباحي,data_security.dep_107,data_security.City_1,data_security.area_1,data_security.dis_26,0,0,data_security.Cat_3
+1934,قطوف مسائي,data_security.dep_107,data_security.City_1,data_security.area_1,data_security.dis_26,0,0,data_security.Cat_3
+3493,البيان صباحي,data_security.dep_107,data_security.City_1,data_security.area_1,data_security.dis_79,0,0,data_security.Cat_3
+3495,مدرسة الجود الصباحية ,data_security.dep_107,data_security.City_1,data_security.area_1,data_security.dis_19,0,0,data_security.Cat_3
+3500,قطوف صباحي,data_security.dep_107,data_security.City_1,data_security.area_1,data_security.dis_26,0,0,data_security.Cat_3
+1011,أم ثابت الأنصارية,data_security.dep_107,data_security.City_1,data_security.area_1,data_security.dis_107,0,0,data_security.Cat_3
+2376,طارق مراد ,data_security.dep_107,data_security.City_1,data_security.area_1,data_security.dis_82,0,0,data_security.Cat_3
+156,لطيفة الفضل ,data_security.dep_107,data_security.City_1,data_security.area_1,data_security.dis_26,0,0,data_security.Cat_3
+157,عبدالعزيز البراهيم,data_security.dep_107,data_security.City_1,data_security.area_1,data_security.dis_70,0,0,data_security.Cat_3
+1948,الكلية,data_security.dep_107,data_security.City_1,data_security.area_1,data_security.dis_143,0,0,data_security.Cat_3
+1952,اليرموك,data_security.dep_107,data_security.City_1,data_security.area_1,data_security.dis_26,0,0,data_security.Cat_3
+1984,محمد الحقيل ,data_security.dep_107,data_security.City_1,data_security.area_1,data_security.dis_113,0,0,data_security.Cat_3
+1846,الحروب,data_security.dep_107,data_security.City_1,data_security.area_1,data_security.dis_143,0,0,data_security.Cat_3
+3925,الشلوي,data_security.dep_107,data_security.City_1,data_security.area_1,data_security.dis_143,0,0,data_security.Cat_3
+3720,العيسى,data_security.dep_107,data_security.City_1,data_security.area_1,data_security.dis_25,0,0,data_security.Cat_3
+3711,الزغيبي,data_security.dep_107,data_security.City_1,data_security.area_1,data_security.dis_25,0,0,data_security.Cat_3
+4586,منيرة شويش المطيري مسائي,data_security.dep_107,data_security.City_1,data_security.area_1,data_security.dis_26,0,0,data_security.Cat_3
+4490,الأمير بندر بن عبدالعزيز,data_security.dep_107,data_security.City_1,data_security.area_1,data_security.dis_26,0,0,data_security.Cat_3
+4528,خادم الحرمين الشريفين الملك عبدالله بن عبدالعزيز- مجمع ابي موسى الاشعري النموذجي,data_security.dep_107,data_security.City_1,data_security.area_1,data_security.dis_26,0,0,data_security.Cat_3
+4431,خديجة بنت خويلد صباحي,data_security.dep_107,data_security.City_1,data_security.area_1,data_security.dis_82,0,0,data_security.Cat_3
+4714,مشرفة ,data_security.dep_107,data_security.City_1,data_security.area_1,data_security.dis_157,0,0,data_security.Cat_3
+4669,عبدالعزيز عبدالكريم المعيوف,data_security.dep_107,data_security.City_1,data_security.area_1,data_security.dis_143,0,0,data_security.Cat_3
+4697,البطيحان ,data_security.dep_107,data_security.City_1,data_security.area_1,data_security.dis_143,0,0,data_security.Cat_3
+5068,الزياد,data_security.dep_107,data_security.City_1,data_security.area_1,data_security.dis_26,0,0,data_security.Cat_3
+4880,الأمير سلطان بن عبدالعزيز ,data_security.dep_107,data_security.City_1,data_security.area_1,data_security.dis_143,0,0,data_security.Cat_3
+4877,الأمير متعب بن عبدالعزيز الشمالي - مجمع ابي موسى الاشعري النموذجي,data_security.dep_107,data_security.City_1,data_security.area_1,data_security.dis_26,0,0,data_security.Cat_3
+4756,الخضير ,data_security.dep_107,data_security.City_1,data_security.area_1,data_security.dis_25,0,0,data_security.Cat_3
+5120,النملة مسائي,data_security.dep_107,data_security.City_1,data_security.area_1,data_security.dis_25,0,0,data_security.Cat_3
+5253,جامع ضاحية بلنسية,data_security.dep_107,data_security.City_1,data_security.area_1,data_security.dis_126,0,0,data_security.Cat_3
+5257,جامع الأمير تركي بن عبدالله,data_security.dep_107,data_security.City_1,data_security.area_1,data_security.dis_126,0,0,data_security.Cat_3
+5304,رحاب القرآن,data_security.dep_107,data_security.City_1,data_security.area_1,data_security.dis_26,0,0,data_security.Cat_3
+5287,الرميصاء صباحي,data_security.dep_107,data_security.City_1,data_security.area_1,data_security.dis_25,0,0,data_security.Cat_3
+5285,الجميح ( الوزارات),data_security.dep_107,data_security.City_1,data_security.area_1,data_security.dis_143,0,0,data_security.Cat_3
+5269,نادي إنسان الاجتماعي ,data_security.dep_107,data_security.City_1,data_security.area_1,data_security.dis_143,0,0,data_security.Cat_3
+5349,الحبيشي القديم,data_security.dep_107,data_security.City_1,data_security.area_1,data_security.dis_157,0,0,data_security.Cat_3
+5340,محمد بن ناصر الهزاع,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_134,0,0,data_security.Cat_3
+5279,حصة القبيسي ,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_134,0,0,data_security.Cat_3
+5321,زيد بن ثابت,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_142,0,0,data_security.Cat_3
+5402,مركز الملك سلمان,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_141,0,0,data_security.Cat_3
+5369,أسماء بنت أبي بكر,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_233,0,0,data_security.Cat_3
+5382,أم مصعب,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_134,0,0,data_security.Cat_3
+5385,جامع إبراهيم الفواز,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_133,0,0,data_security.Cat_3
+5297,حلقات جامع التقوى ,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_63,0,0,data_security.Cat_3
+5319,عبد العزيز بن باز,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_99,0,0,data_security.Cat_3
+5308,منيرة بنت عبداللطيف ال الشيخ,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_233,0,0,data_security.Cat_3
+5265,هيا الخضير,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_233,0,0,data_security.Cat_3
+5248,والدة أحمد البلوي,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_63,0,0,data_security.Cat_3
+5112,الشيخ محمد عبدالله الماجد,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_18,0,0,data_security.Cat_3
+5129,الارتقاء (صباحي),data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_104,0,0,data_security.Cat_3
+5160,والدة محمد الثنيان,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_132,0,0,data_security.Cat_3
+5164, ام فهد السعيدان,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_136,0,0,data_security.Cat_3
+5165,الجوهرة,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_78,0,0,data_security.Cat_3
+5166,النرجس,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_134,0,0,data_security.Cat_3
+5167,ام المؤمنين عائشة,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_104,0,0,data_security.Cat_3
+5168,ام خالد,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_142,0,0,data_security.Cat_3
+5169,ام انس,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_33,0,0,data_security.Cat_3
+5181,المركز النسائي لتحفيظ القرآن والسنة في إسكان جامعة الامام ,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_104,0,0,data_security.Cat_3
+5182, جامعة الملك سعود,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_132,0,0,data_security.Cat_3
+5188,الرضوان,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_134,0,0,data_security.Cat_3
+5208,سعد الخثلان,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_233,0,0,data_security.Cat_3
+5237,رياض النرجس صباحي,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_134,0,0,data_security.Cat_3
+5232,القيم -  صباحي,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_136,0,0,data_security.Cat_3
+4778,عبد الله بن تركي الضحيان,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_132,0,0,data_security.Cat_3
+4781,محمد عبد العزيز الجميح - مجمع مشكاة التعليمي النموذجي,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_233,0,0,data_security.Cat_3
+4795,أم خالد (صباحي),data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_142,0,0,data_security.Cat_3
+4796,الأنفال (صباحي),data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_136,0,0,data_security.Cat_3
+4822,زامل السليم,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_142,0,0,data_security.Cat_3
+4835,عمر بن عبد العزيز,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_90,0,0,data_security.Cat_3
+4933,النور صباحي,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_33,0,0,data_security.Cat_3
+4935,عبدالعزيز النصار,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_125,0,0,data_security.Cat_3
+4920,مجمع حلقات جامعة الأميرة نورة بنت عبدالرحمن ,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_134,0,0,data_security.Cat_3
+4942,أنس بن مالك,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_63,0,0,data_security.Cat_3
+4943,عبدالله وابنه محمد المعمر ,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_33,0,0,data_security.Cat_3
+4899,الشيخ صالح العبيلان,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_233,0,0,data_security.Cat_3
+4886,الأميرة الجوهرة بنت فيصل مجمع مشكاة التعليمي,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_78,0,0,data_security.Cat_3
+4861,الصفا,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_233,0,0,data_security.Cat_3
+4862,الياسمين صباحي,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_233,0,0,data_security.Cat_3
+4863,العطاء صباحي,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_33,0,0,data_security.Cat_3
+4864,العطاء مسائي,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_142,0,0,data_security.Cat_3
+5061,أم أنس مسائي,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_33,0,0,data_security.Cat_3
+5108,الأميرعبدالعزيز بن فهد ,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_21,0,0,data_security.Cat_3
+5117,محسن مجلي با مجلي,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_134,0,0,data_security.Cat_3
+4999,الندى صباحي,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_133,0,0,data_security.Cat_3
+5000,دوحة القرآن.صباحي,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_142,0,0,data_security.Cat_3
+5007,الفريان,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_78,0,0,data_security.Cat_3
+4654,الأمير سلطان بن عبد العزيز ,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_21,0,0,data_security.Cat_3
+4648,الشيخ محمد علي الصانع - مجمع مشكاة,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_78,0,0,data_security.Cat_3
+4650,حصة بنت سليمان الراضي,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_233,0,0,data_security.Cat_3
+4651,محمد بن فهد بن جريس,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_233,0,0,data_security.Cat_3
+4692,الحياء صباحي,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_21,0,0,data_security.Cat_3
+4693,نورة السويلم (صباحي),data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_233,0,0,data_security.Cat_3
+4694,منيرة الشبيلي,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_104,0,0,data_security.Cat_3
+4715,الماجد,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_99,0,0,data_security.Cat_3
+4747,الفتاة صباحاً,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_142,0,0,data_security.Cat_3
+4723,أم سلمة ( الروضة ) مسائي,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_8,0,0,data_security.Cat_3
+4728,السويلم,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_133,0,0,data_security.Cat_3
+4730,سيرين القبطية صباحاً,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_18,0,0,data_security.Cat_3
+4602,الخنساء - مسائي,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_160,0,0,data_security.Cat_3
+4614,والدة سعد الدريس,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_233,0,0,data_security.Cat_3
+4615,عبد الله تركي الضحيان,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_233,0,0,data_security.Cat_3
+4620,صالح الراجحي - المجمع النموذجي,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_133,0,0,data_security.Cat_3
+4469,عبد الله الهداب النسائية,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_63,0,0,data_security.Cat_3
+4481,الفتح - مسائي,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_41,0,0,data_security.Cat_3
+4482,عبد الله ناصر الوهيبي,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_136,0,0,data_security.Cat_3
+4483,مانع الجهني,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_33,0,0,data_security.Cat_3
+4489,الفتح,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_142,0,0,data_security.Cat_3
+4475,الندى,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_133,0,0,data_security.Cat_3
+4522,هند بنت عتبة - صباحي,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_90,0,0,data_security.Cat_3
+4498,ام سلمة المصيف مسائي,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_21,0,0,data_security.Cat_3
+4500,العقيق صباحي,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_90,0,0,data_security.Cat_3
+4520,الربيع - صباحي,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_63,0,0,data_security.Cat_3
+4453,عبد الله بن جبرين,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_63,0,0,data_security.Cat_3
+4454,التقوى,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_63,0,0,data_security.Cat_3
+4495,القيم,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_136,0,0,data_security.Cat_3
+4537,التعاون - صباحي,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_41,0,0,data_security.Cat_3
+3656,الأنفال مسائي,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_136,0,0,data_security.Cat_3
+3716,عبد الهادي الصفوق,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_136,0,0,data_security.Cat_3
+3844,ناصر الزيد,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_125,0,0,data_security.Cat_3
+3864,والدة الأمير عبد العزيز بن تركي,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_90,0,0,data_security.Cat_3
+3952,الدريبي,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_99,0,0,data_security.Cat_3
+3569, الأميره الجوهرة - مسائي,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_78,0,0,data_security.Cat_3
+4424,نورة السويلم  مسائي,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_233,0,0,data_security.Cat_3
+4289,أم خالد الماجد,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_142,0,0,data_security.Cat_3
+4311,الياسمين المسائية,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_233,0,0,data_security.Cat_3
+4223,أبو بكر الصديق ,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_142,0,0,data_security.Cat_3
+3695,المفدى,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_78,0,0,data_security.Cat_3
+3697,أبو حيمد,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_233,0,0,data_security.Cat_3
+3700,جامع الهداب - مجمع مشكاة التعليمي,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_63,0,0,data_security.Cat_3
+1097,عبد الله الفارس,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_132,0,0,data_security.Cat_3
+823, والدة الأمير عبد العزيز بن فهد,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_104,0,0,data_security.Cat_3
+1905,سكن التحلية العائلي,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_132,0,0,data_security.Cat_3
+1861,علي بلشرف,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_21,0,0,data_security.Cat_3
+841,الأبرار,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_33,0,0,data_security.Cat_3
+1855,زيد بن ثابت,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_18,0,0,data_security.Cat_3
+1023, ابن سعيدان,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_136,0,0,data_security.Cat_3
+950,عبد الله الحصيني,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_136,0,0,data_security.Cat_3
+854,أحد,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_41,0,0,data_security.Cat_3
+1786,الربيع,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_63,0,0,data_security.Cat_3
+1173,هيا بنت ناصر الجديد,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_125,0,0,data_security.Cat_3
+875,معاذ بن جبل,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_18,0,0,data_security.Cat_3
+1055,إسكان هئية أعضاء تدريس جامعة الإمام,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_104,0,0,data_security.Cat_3
+84,حلقات الصفوة بمسجد هيا الحسن,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_104,0,0,data_security.Cat_3
+85,المنار,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_90,0,0,data_security.Cat_3
+2045,الفاروق,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_135,0,0,data_security.Cat_3
+1854,عبد العزيز الشلفان,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_90,0,0,data_security.Cat_3
+1971,المهندس عبد الرحمن الخناني,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_125,0,0,data_security.Cat_3
+260,الإحسان,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_90,0,0,data_security.Cat_3
+1577,حطين,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_160,0,0,data_security.Cat_3
+91,عمر بن عبد العزيز,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_21,0,0,data_security.Cat_3
+1386,عبد العزيز الفايز,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_78,0,0,data_security.Cat_3
+146,سيد الشهداء,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_21,0,0,data_security.Cat_3
+74,سمية بنت خياط مسائي,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_141,0,0,data_security.Cat_3
+813,زينب بنت خزيمة,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_63,0,0,data_security.Cat_3
+815,أسماء بنت يزيد الأنصارية,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_33,0,0,data_security.Cat_3
+3492,الشيماء بنت الحارث صباحي,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_141,0,0,data_security.Cat_3
+1839,الارتقاء,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_104,0,0,data_security.Cat_3
+1109,الفتاة,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_142,0,0,data_security.Cat_3
+1387,حلقات جامع القرية الثانية,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_324,0,0,data_security.Cat_3
+1200,العبيد,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_142,0,0,data_security.Cat_3
+1445,الأميرة العنود بنت محمد,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_99,0,0,data_security.Cat_3
+2159,أم النجباء لبابة بنت الحارث - مسائي,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_78,0,0,data_security.Cat_3
+817,التعاون - مسائي,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_41,0,0,data_security.Cat_3
+1451,الربيع - مسائي,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_63,0,0,data_security.Cat_3
+1211,البلطان,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_141,0,0,data_security.Cat_3
+1922,سارة بنت تركي آل سعود,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_63,0,0,data_security.Cat_3
+1471,حسن المصري,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_21,0,0,data_security.Cat_3
+1254,خالد بن الوليد,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_233,0,0,data_security.Cat_3
+1957,الزهراء,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_41,0,0,data_security.Cat_3
+1802,فهد العويضة,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_141,0,0,data_security.Cat_3
+1808,علي الشقحاء,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_63,0,0,data_security.Cat_3
+1101,أم الوليد بنت عمر بن الخطاب,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_135,0,0,data_security.Cat_3
+1017,مجمع حلقات جامع التقوى,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_21,0,0,data_security.Cat_3
+1036, أم سلمة المصيف صباحي,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_21,0,0,data_security.Cat_3
+827,صفية بنت عبد المطلب,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_21,0,0,data_security.Cat_3
+186, البشرى,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_323,0,0,data_security.Cat_3
+1086, كريمة بنت المقداد,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_33,0,0,data_security.Cat_3
+1286, الصفوة,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_99,0,0,data_security.Cat_3
+259, الحياء,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_21,0,0,data_security.Cat_3
+1099, طرفة الخريف,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_142,0,0,data_security.Cat_3
+251,العقيق مسائي,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_90,0,0,data_security.Cat_3
+1937, تميمة بنت أبي سفيان,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_18,0,0,data_security.Cat_3
+494, الشفاء بنت عبد الله,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_135,0,0,data_security.Cat_3
+1079, هند بنت عتبة,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_90,0,0,data_security.Cat_3
+1892, الفتح النسائية - صباحي,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_41,0,0,data_security.Cat_3
+165, أم الكرام السلمية مسائي,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_78,0,0,data_security.Cat_3
+209, سيرين القبطية,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_18,0,0,data_security.Cat_3
+231, الوهيبي ,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_136,0,0,data_security.Cat_3
+1804, الشيماء بنت الحارث مسائي,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_141,0,0,data_security.Cat_3
+1787,راشد عبد الله المبارك,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_63,0,0,data_security.Cat_3
+1307,سليمان الحبيب,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_90,0,0,data_security.Cat_3
+1334,الهداية,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_90,0,0,data_security.Cat_3
+1408,الرحمة ,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_160,0,0,data_security.Cat_3
+828,محمد بن عثيمين,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_141,0,0,data_security.Cat_3
+812,بلال بن رباح ,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_135,0,0,data_security.Cat_3
+1664,رياض الصالحين ,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_18,0,0,data_security.Cat_3
+1012,النور ,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_33,0,0,data_security.Cat_3
+837,منيرة المفيريج,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_33,0,0,data_security.Cat_3
+307,ابن القيم الجوزية  lمدارس مغلقة,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_41,0,0,data_security.Cat_3
+319,البراء بن مالك,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_33,0,0,data_security.Cat_3
+565,عثمان محمد العثمان,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_142,0,0,data_security.Cat_3
+353,أنس بن مالك ,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_33,0,0,data_security.Cat_3
+816,عبد اللطيف العبد اللطيف,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_18,0,0,data_security.Cat_3
+1586,الأميرة نورة بنت عبدالله,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_132,0,0,data_security.Cat_3
+2248,الفدا,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_90,0,0,data_security.Cat_3
+697,الفرقان ,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_90,0,0,data_security.Cat_3
+491,حلقات واحة القرآن ,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_141,0,0,data_security.Cat_3
+715,إمام الدعوة ,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_33,0,0,data_security.Cat_3
+615,الأمير فيصل بن فهد,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_124,0,0,data_security.Cat_3
+1818,ذي النورين عثمان بن عفان _ مجمع تعليمي نموذجي,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_142,0,0,data_security.Cat_3
+934,الأميرة الجوهرة آل إبراهيم,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_41,0,0,data_security.Cat_3
+571,عمر بن الخطاب ,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_41,0,0,data_security.Cat_3
+2079,الطاسان,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_18,0,0,data_security.Cat_3
+1328,الأميرسلطان بن عبد العزيز,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_135,0,0,data_security.Cat_3
+1013,عماربن ياسر,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_135,0,0,data_security.Cat_3
+1729,الفلاح ,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_104,0,0,data_security.Cat_3
+342,الفاروق,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_135,0,0,data_security.Cat_3
+2380,الحسن البصري,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_124,0,0,data_security.Cat_3
+967,عبد العزيز آل الشيخ,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_18,0,0,data_security.Cat_3
+1780,حمد السليم,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_78,0,0,data_security.Cat_3
+973,عمرو بن العاص,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_135,0,0,data_security.Cat_3
+1769,الأميرة شاهيناز بنت فيصل آل سعود,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_41,0,0,data_security.Cat_3
+420,عبد الله المطلق,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_21,0,0,data_security.Cat_3
+964,عبد الله بن مسعود,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_99,0,0,data_security.Cat_3
+1153,حلقات جامع القاضي - المجمع النموذجي,data_security.dep_108,data_security.City_1,data_security.area_1,data_security.dis_41,0,0,data_security.Cat_3
+1745,مصعب بن عمير,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_200,0,0,data_security.Cat_3
+611,حسان بن ثابت (1),data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_179,0,0,data_security.Cat_3
+1255,حسان بن ثابت  (2),data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_181,0,0,data_security.Cat_3
+498,ابن عقيل,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_74,0,0,data_security.Cat_3
+616,معاذ بن جبل,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_74,0,0,data_security.Cat_3
+487,الشيخ صالح الغنيم,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_74,0,0,data_security.Cat_3
+641,التنزيل,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_87,0,0,data_security.Cat_3
+2272,غزوى المطيري/ مجمع القراء التعليمي,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_179,0,0,data_security.Cat_3
+314,الخيري,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_179,0,0,data_security.Cat_3
+1212,عبدالعزيز الجريان,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_88,0,0,data_security.Cat_3
+1614,الأمير سلطان بن عبد العزيز,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_74,0,0,data_security.Cat_3
+1583,والدة اللواء الفرائضي,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_179,0,0,data_security.Cat_3
+455,مجمع آل مقرن القرآني,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_179,0,0,data_security.Cat_3
+1363,فيحان بن هذال بن فهيد- مجمع ابن فهيد النموذجي,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_193,0,0,data_security.Cat_3
+620,الأمير خالد بن سعود / مجمع القراء التعليمي,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_179,0,0,data_security.Cat_3
+803,الجار الله,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_88,0,0,data_security.Cat_3
+1607,عبداللطيف جميل ,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_74,0,0,data_security.Cat_3
+1860,عبدالعزيز بن باز (1),data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_87,0,0,data_security.Cat_3
+670,جامع آل عشيوان,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_88,0,0,data_security.Cat_3
+489,الحزم,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_74,0,0,data_security.Cat_3
+1038,الفصام,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_87,0,0,data_security.Cat_3
+644,عبدالرحمن آل فريان,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_74,0,0,data_security.Cat_3
+1202,عبدالعزيز الحلوان,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_86,0,0,data_security.Cat_3
+1593,محمد بن عبدالوهاب ( 4 ),data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_87,0,0,data_security.Cat_3
+358,الملك خالد,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_87,0,0,data_security.Cat_3
+1687,الأميرة موضي السديري,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_86,0,0,data_security.Cat_3
+582,أبو هريرة (1),data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_179,0,0,data_security.Cat_3
+1140,حلقات خباب بن الأرت بجامع أم هذلول,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_74,0,0,data_security.Cat_3
+1748,أحمد بن حنبل (1),data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_87,0,0,data_security.Cat_3
+1260,الأميرة نورة بنت عبدالعزيز,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_87,0,0,data_security.Cat_3
+606,البركات,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_36,0,0,data_security.Cat_3
+676,موسى بن نصير,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_87,0,0,data_security.Cat_3
+865,خبيب بن عدي المدائن,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_87,0,0,data_security.Cat_3
+1563,عبدالكريم الخراشي,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_179,0,0,data_security.Cat_3
+887,عبدالرحمن العساكر,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_86,0,0,data_security.Cat_3
+806,والدة الأمير فهد بن محمد الكبير,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_182,0,0,data_security.Cat_3
+1624,محمد بن عبدالوهاب (3),data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_179,0,0,data_security.Cat_3
+634,خليل السبعان,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_87,0,0,data_security.Cat_3
+629,عبدالله الموسى,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_179,0,0,data_security.Cat_3
+573,أم عبدالرحمن,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_179,0,0,data_security.Cat_3
+221,عبداللطيف جميل (1),data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_36,0,0,data_security.Cat_3
+643,الأخوين,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_179,0,0,data_security.Cat_3
+653,أم عطية الأنصارية - مسائية,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_87,0,0,data_security.Cat_3
+1171,البلاغ - مسائية,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_179,0,0,data_security.Cat_3
+1696,أم سهل بنت عمر المسائية,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_88,0,0,data_security.Cat_3
+1603,التوحيد - مسائية,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_74,0,0,data_security.Cat_3
+1049, أم إبراهيم الخراشي الاولى- مسائي,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_179,0,0,data_security.Cat_3
+1137, دار العفاف - صباحية,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_88,0,0,data_security.Cat_3
+1783, البشائر - مسائية,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_88,0,0,data_security.Cat_3
+3429, أم الفضل بنت الحارث - صباحي,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_179,0,0,data_security.Cat_3
+471,زاد المسير - مسائية,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_87,0,0,data_security.Cat_3
+1942,بلقيس - مسائية,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_88,0,0,data_security.Cat_3
+164, المتقنات - مسائية,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_179,0,0,data_security.Cat_3
+2034,أم سليم الأنصارية - مسائية,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_87,0,0,data_security.Cat_3
+630, خديجة الكاتب ـ (مسائية),data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_87,0,0,data_security.Cat_3
+1417, فاطمة بنت محمد بن عبدالوهاب - مسائية,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_86,0,0,data_security.Cat_3
+3507,ام ابراهيم الخراشي (1) - صباحية,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_179,0,0,data_security.Cat_3
+3508,روضة براعم بلقيس - صباحية,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_88,0,0,data_security.Cat_3
+3506,المتقنات - الفتره الصباحية,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_179,0,0,data_security.Cat_3
+1139,معاذ بن جبل - مسائية,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_74,0,0,data_security.Cat_3
+1558,دار الثريا (مسائية),data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_87,0,0,data_security.Cat_3
+341,التعاون (2),data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_179,0,0,data_security.Cat_3
+371,ابن حزم,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_87,0,0,data_security.Cat_3
+1975,عبدالله العمار,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_74,0,0,data_security.Cat_3
+459,أبو عبيدة عامر بن الجراح,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_86,0,0,data_security.Cat_3
+3516,الثريا - صباحية,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_87,0,0,data_security.Cat_3
+3517,أم سليم الأنصارية - صباحية,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_87,0,0,data_security.Cat_3
+140,أم عمار - مسائية,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_74,0,0,data_security.Cat_3
+142,درة بنت أبي سلمة (مسائية),data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_36,0,0,data_security.Cat_3
+3519,الجوهرة - مسائية,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_74,0,0,data_security.Cat_3
+145,الشموس بنت أبي عامر - مسائية,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_182,0,0,data_security.Cat_3
+3520,أم الفضل بنت الحارث - مسائية,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_179,0,0,data_security.Cat_3
+3521,مدرسة هاجر - مسائية,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_87,0,0,data_security.Cat_3
+3522,درة بنت أبي سلمة (صباحي),data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_74,0,0,data_security.Cat_3
+3524,أم عمار - صباحية,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_74,0,0,data_security.Cat_3
+239,جعفر بن أبي طالب,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_86,0,0,data_security.Cat_3
+1489,ابن قدامة,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_74,0,0,data_security.Cat_3
+1604,المزروع  حلقات العساكر,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_87,0,0,data_security.Cat_3
+684,النور (1),data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_86,0,0,data_security.Cat_3
+1574,عمر بن الخطاب (4),data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_179,0,0,data_security.Cat_3
+795,الشافعي,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_74,0,0,data_security.Cat_3
+1312,عمر الفاروق,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_86,0,0,data_security.Cat_3
+1236,إبراهيم العريفي,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_87,0,0,data_security.Cat_3
+1906,الحسين بن علي,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_87,0,0,data_security.Cat_3
+2211,أم عبدالعزيز الشثري,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_193,0,0,data_security.Cat_3
+1540,سعد بن أبي وقاص(مجمع آل عياف),data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_179,0,0,data_security.Cat_3
+778,مجمع العلماء بجامع حمود التويجري,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_179,0,0,data_security.Cat_3
+1478,عمر بن الخطاب (3),data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_87,0,0,data_security.Cat_3
+285,موضي السعيدان,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_289,0,0,data_security.Cat_3
+1801,أحمد القبس,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_193,0,0,data_security.Cat_3
+801,الجوهرة  - صباحية,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_74,0,0,data_security.Cat_3
+4232,محمد تركي التركي,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_193,0,0,data_security.Cat_3
+4238,التوحيد (1),data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_179,0,0,data_security.Cat_3
+4275,العفاف - مسائية,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_88,0,0,data_security.Cat_3
+4148,ام كعب الانصارية ـ (صباحي),data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_182,0,0,data_security.Cat_3
+3903,روضات الجنان (مسائية) ,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_193,0,0,data_security.Cat_3
+3717,ام ابراهيم الخراشي الثانية,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_183,0,0,data_security.Cat_3
+3718,غزيله الانصارية - مسائية,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_182,0,0,data_security.Cat_3
+4532,الملك سعود,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_179,0,0,data_security.Cat_3
+4476,الشيخ عبدالله المرشد,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_214,0,0,data_security.Cat_3
+4436,عبد الله بن رواحة,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_179,0,0,data_security.Cat_3
+4440,لولوة الدهش - مسائية,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_182,0,0,data_security.Cat_3
+4441,أم طالب بنت ابي طالب الهاشمية - مسائية,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_86,0,0,data_security.Cat_3
+4622,الأبوين/ مجمع القراء التعليمي,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_179,0,0,data_security.Cat_3
+4617,طرفة المقبل,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_193,0,0,data_security.Cat_3
+4754,طرفة بنت حمد- مجمع العلماء التعليمي,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_179,0,0,data_security.Cat_3
+5008,حكمة النسائية المسائية,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_182,0,0,data_security.Cat_3
+5018,أحمد الجار الله,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_86,0,0,data_security.Cat_3
+5019,عبد الله العجلان,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_193,0,0,data_security.Cat_3
+4950,طرفه بنت حمد الصباحية,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_289,0,0,data_security.Cat_3
+4954,عائشة بنت أبي بكر,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_88,0,0,data_security.Cat_3
+4955,محمد بن راشد المزيعل,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_179,0,0,data_security.Cat_3
+4973,نورة الوهيبي - مسائية,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_86,0,0,data_security.Cat_3
+5046,حذيفة بن اليمان,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_87,0,0,data_security.Cat_3
+5047,جامع الفرسان,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_182,0,0,data_security.Cat_3
+5092,حمد الوهيبي / مجمع القراء,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_74,0,0,data_security.Cat_3
+5053,هياء بنت محمد العيسى,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_182,0,0,data_security.Cat_3
+5076,التعاون (3) / مجمع القراء التعليمي,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_179,0,0,data_security.Cat_3
+4865,الرضوان,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_193,0,0,data_security.Cat_3
+4888,عثمان بن عفان,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_193,0,0,data_security.Cat_3
+4936,الشيخ صالح الفوزان,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_193,0,0,data_security.Cat_3
+4838,لولوة الوهيب,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_193,0,0,data_security.Cat_3
+4846,نورة الحصيني,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_193,0,0,data_security.Cat_3
+4789, طرفه بنت حمد المسائية,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_179,0,0,data_security.Cat_3
+4809,آل الشيخ,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_36,0,0,data_security.Cat_3
+4745,الإحسان,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_182,0,0,data_security.Cat_3
+5233,أبي بن كعب,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_182,0,0,data_security.Cat_3
+5234,زاد المعاد,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_193,0,0,data_security.Cat_3
+5235,الهدى,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_88,0,0,data_security.Cat_3
+5224,عبدالعزيز بن باز (2),data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_200,0,0,data_security.Cat_3
+5200,مجمع العوالي التعليمي لتحفيظ القران الكريم,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_200,0,0,data_security.Cat_3
+5163,العوالي,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_183,0,0,data_security.Cat_3
+5179,اقرأ - مسائية ,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_182,0,0,data_security.Cat_3
+5156,جامع الشيخ عبدالعزيز بن صالح المرشد,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_193,0,0,data_security.Cat_3
+5149,الشيباني,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_193,0,0,data_security.Cat_3
+5131,أئمة الدعوة,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_193,0,0,data_security.Cat_3
+5113,مالك بن سعيد,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_87,0,0,data_security.Cat_3
+5106,مدرسة سارة العريفي - مسائي ,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_86,0,0,data_security.Cat_3
+5275,سليمان الدخيل,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_179,0,0,data_security.Cat_3
+5254,عبدالعزيز بن باز (3)	,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_182,0,0,data_security.Cat_3
+5255,أبو بكر الصديق (3)	,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_193,0,0,data_security.Cat_3
+5256,الوالدين (1),data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_182,0,0,data_security.Cat_3
+5310,الشهداء,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_289,0,0,data_security.Cat_3
+5311,حلقات الفنتوخ,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_182,0,0,data_security.Cat_3
+5313,التعاون,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_179,0,0,data_security.Cat_3
+5307,هيا القضيع,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_183,0,0,data_security.Cat_3
+5277,عمر بن الخطاب (5),data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_200,0,0,data_security.Cat_3
+5288,جامع والدة الأمير منصور,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_86,0,0,data_security.Cat_3
+5289,جنى الجنتين المسائية,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_47,0,0,data_security.Cat_3
+5293,سعد بن عبادة,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_179,0,0,data_security.Cat_3
+5294,النور (2),data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_179,0,0,data_security.Cat_3
+5372,الضحيان -صباحية,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_87,0,0,data_security.Cat_3
+5373,الضحيان - مسائية,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_87,0,0,data_security.Cat_3
+5374,مسك -مسائية,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_193,0,0,data_security.Cat_3
+5375,عثمان الرشيد,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_193,0,0,data_security.Cat_3
+5376,حفاظ الوحي,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_86,0,0,data_security.Cat_3
+5377,سعد بن عبدالله بن كليب,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_193,0,0,data_security.Cat_3
+5378,الوهيبي,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_193,0,0,data_security.Cat_3
+5379,جامع الأميرة سارة,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_200,0,0,data_security.Cat_3
+5380,جامع التقوى,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_179,0,0,data_security.Cat_3
+5394,المنيع,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_193,0,0,data_security.Cat_3
+5401,خالد بن الوليد,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_179,0,0,data_security.Cat_3
+5387,مسجد عبدالله القحطاني,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_193,0,0,data_security.Cat_3
+5324,غزوى المطيري - مسائية,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_179,0,0,data_security.Cat_3
+5354,إبراهيم المسلم,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_182,0,0,data_security.Cat_3
+5345,أم سهل بنت عمر - الصباحية,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_86,0,0,data_security.Cat_3
+5346,حكمة -الصباحية,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_182,0,0,data_security.Cat_3
+5347,هيا الصبيح,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_200,0,0,data_security.Cat_3
+5348,حلقات نمار,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_179,0,0,data_security.Cat_3
+5362,حلقات الإتقان,data_security.dep_109,data_security.City_1,data_security.area_1,data_security.dis_193,0,0,data_security.Cat_3
+5357,ريحانة بنت زيد (صباحية),data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_89,0,0,data_security.Cat_3
+5359,المعمري,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_89,0,0,data_security.Cat_3
+5333,إصلاحية الرياض,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_46,0,0,data_security.Cat_3
+5278,فاطمة باحويرث,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_89,0,0,data_security.Cat_3
+5283,الأمير مشعل ,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_89,0,0,data_security.Cat_3
+5305,البركات,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_89,0,0,data_security.Cat_3
+5320,محمد بن راشد الثوري,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_54,0,0,data_security.Cat_3
+5245,أروى بنت كريز صباحي,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_89,0,0,data_security.Cat_3
+5267,الإمام مالك بن أنس,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_54,0,0,data_security.Cat_3
+5259,مجمع حلقات المعيلي,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_54,0,0,data_security.Cat_3
+5262,أسماء بنت أبي بكر,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_54,0,0,data_security.Cat_3
+5263,الشيخ عبد الله إبراهيم القباع وحرمه,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_46,0,0,data_security.Cat_3
+5146,عبد العزيز المانع,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_54,0,0,data_security.Cat_3
+5226,ابن باز - اسكان الأفراد ( جامع الفاروق),data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_216,0,0,data_security.Cat_3
+5227,الاترجة صباحي,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_54,0,0,data_security.Cat_3
+5213,الايمان,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_54,0,0,data_security.Cat_3
+5214,أم عبد الله الدغيشم,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_89,0,0,data_security.Cat_3
+4814,هيله مسائي,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_89,0,0,data_security.Cat_3
+4815,هيله صباحي,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_89,0,0,data_security.Cat_3
+4830,أسيد بن خضير,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_89,0,0,data_security.Cat_3
+4827,حماد الثقفي,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_89,0,0,data_security.Cat_3
+4919,الغفران,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_89,0,0,data_security.Cat_3
+4883,مجمع حلقات جامع خديجة بنت محمد بغلف,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_89,0,0,data_security.Cat_3
+4874,العابدين,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_54,0,0,data_security.Cat_3
+4857,اروى بنت كريز مسائي,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_89,0,0,data_security.Cat_3
+4859,الفضل و أم سعود,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_89,0,0,data_security.Cat_3
+4860,علي الطويل,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_89,0,0,data_security.Cat_3
+5080,باجنيد,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_89,0,0,data_security.Cat_3
+5070,مها فالح الدوسري,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_89,0,0,data_security.Cat_3
+5105,عائشة بنت خميس الذيبان,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_89,0,0,data_security.Cat_3
+5049,أم عبدالله الحسين صباحي,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_89,0,0,data_security.Cat_3
+5050,ابن قيم الجوزية,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_54,0,0,data_security.Cat_3
+5045,أم عبدالله الحسين مسائي,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_89,0,0,data_security.Cat_3
+5025,عبد الله البندقاني,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_89,0,0,data_security.Cat_3
+5035,مبارك حمد الدوسري,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_54,0,0,data_security.Cat_3
+5036,أبناء أحمد باسودان,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_54,0,0,data_security.Cat_3
+5038,الجوزاء,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_89,0,0,data_security.Cat_3
+4731,جامع الأمير فهد بن محمد آل سعود,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_54,0,0,data_security.Cat_3
+4742,جامع عبد العزيز العسكر,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_54,0,0,data_security.Cat_3
+4696,البدر,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_89,0,0,data_security.Cat_3
+4713,عبد الله بن سعيد القحطاني,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_89,0,0,data_security.Cat_3
+4613,جامع العمري,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_89,0,0,data_security.Cat_3
+4631,جامع الشيخ عبدالله بن محمد أبا الخيل,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_89,0,0,data_security.Cat_3
+4639,حماد القريني,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_54,0,0,data_security.Cat_3
+4443,مزنة السبيعي ( الدار البيضاء ),data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_54,0,0,data_security.Cat_3
+4437,اللؤلؤه مسائي,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_89,0,0,data_security.Cat_3
+4480,حبيبة بنت جحش صباحي,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_34,0,0,data_security.Cat_3
+4531,افانين القرآن مسائي,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_89,0,0,data_security.Cat_3
+4540,الأمير فهد بن محمد آل سعود,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_54,0,0,data_security.Cat_3
+4567,قطيم القحطاني (الدار البيضاء),data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_54,0,0,data_security.Cat_3
+4497,نورة بنت سليمان ( نور الهدى ),data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_89,0,0,data_security.Cat_3
+4521,ام الوليد بنت عمر بن الخطاب صباحي,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_89,0,0,data_security.Cat_3
+4131,الإترجة مسائي,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_54,0,0,data_security.Cat_3
+4242,الزبير بن العوام - مجمع ابن عثيمين النموذجي,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_34,0,0,data_security.Cat_3
+4284,البواردي صباحي,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_89,0,0,data_security.Cat_3
+4291,سعد الغنام,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_89,0,0,data_security.Cat_3
+410,والدة الأمير ماجد بن عبد العزيز,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_89,0,0,data_security.Cat_3
+505,التقوى,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_54,0,0,data_security.Cat_3
+633,معاذ بن جبل (الدار البيضاء),data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_54,0,0,data_security.Cat_3
+207,الناصر,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_54,0,0,data_security.Cat_3
+241,فهد الحسين,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_89,0,0,data_security.Cat_3
+1741,الدار البيضاء (1),data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_54,0,0,data_security.Cat_3
+560,الفرج,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_89,0,0,data_security.Cat_3
+2076,معاذ بن جبل (العزيزية),data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_89,0,0,data_security.Cat_3
+497,ابن القيم,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_89,0,0,data_security.Cat_3
+572,منيرة الحميد -مجمع مسك النموذجي-,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_54,0,0,data_security.Cat_3
+1852,الصحابة,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_89,0,0,data_security.Cat_3
+1893,مسجد علوش (الحائر),data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_46,0,0,data_security.Cat_3
+1413,الغيلان,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_89,0,0,data_security.Cat_3
+1181,ابن عثيمين -مجمع ابن عثيمين النموذجي,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_34,0,0,data_security.Cat_3
+533,حمزة بن عبدالمطلب (اسكان الخرج) - مجمع ابن عثيمين النموذجي,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_34,0,0,data_security.Cat_3
+135,ام الوليد بنت عمر بن الخطاب مسائي,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_89,0,0,data_security.Cat_3
+3525,شميله بنت الحارث صباحي,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_324,0,0,data_security.Cat_3
+2096,ام ايوب الانصارية مسائي,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_89,0,0,data_security.Cat_3
+3526,الفرقان صباحي ( مركز إعداد الحافظات ),data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_89,0,0,data_security.Cat_3
+3527,الحافظة صباحي,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_89,0,0,data_security.Cat_3
+3528,مدرسة البواردي ( روضةمجمع البواردي ) الصباحية,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_89,0,0,data_security.Cat_3
+744,مسجد الحربي (العزيزية),data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_89,0,0,data_security.Cat_3
+750,جامع ابن عبد الوهاب (العزيزيه) -مجمع مسك النموذجي-,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_89,0,0,data_security.Cat_3
+848,الغنام,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_89,0,0,data_security.Cat_3
+745,مسجد أحمد الزهراني ( الغنامية ),data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_53,0,0,data_security.Cat_3
+719,الزبير بن العوام,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_54,0,0,data_security.Cat_3
+522,الفاروق,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_89,0,0,data_security.Cat_3
+523,ابي حنيفة,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_89,0,0,data_security.Cat_3
+1879,ضواي العيتبي,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_89,0,0,data_security.Cat_3
+1035,حلقات متعب السبيعي,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_54,0,0,data_security.Cat_3
+862,عروة بن الزبير,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_34,0,0,data_security.Cat_3
+784,الخشمان,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_54,0,0,data_security.Cat_3
+840,العرنوس,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_89,0,0,data_security.Cat_3
+810,الابرار مسائي,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_89,0,0,data_security.Cat_3
+805,الفرقان مسائي,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_89,0,0,data_security.Cat_3
+753,خولة بنت حكيم مسائي,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_54,0,0,data_security.Cat_3
+1901,ريحانه بنت زيد مسائي,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_89,0,0,data_security.Cat_3
+743,آسية بنت مزاحم مسائي,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_89,0,0,data_security.Cat_3
+1208,روضة الذاكرات مسائي,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_34,0,0,data_security.Cat_3
+264,ذات النطاقين مسائي,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_46,0,0,data_security.Cat_3
+857,شميله بنت الحارث مسائي,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_89,0,0,data_security.Cat_3
+1652,البواردي مسائي,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_89,0,0,data_security.Cat_3
+1108,ام سنان الاسلميه مسائي,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_89,0,0,data_security.Cat_3
+847,نورالقران,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_128,0,0,data_security.Cat_3
+230,الحافظة مسائي,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_89,0,0,data_security.Cat_3
+196,حبيبه بنت جحش مسائي,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_34,0,0,data_security.Cat_3
+1902,بلال بن رباح ,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_89,0,0,data_security.Cat_3
+1551,شيخ الاسلام ابن تيمية (العزيزيه),data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_89,0,0,data_security.Cat_3
+866,عمر بن الخطاب (اسكان البحريه),data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_216,0,0,data_security.Cat_3
+1116,ابي بكر الصديق (اسكان البحريه),data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_216,0,0,data_security.Cat_3
+1513,الدار البيضاء الأوسط,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_54,0,0,data_security.Cat_3
+1002,عمر بن عبدالعزيز,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_89,0,0,data_security.Cat_3
+844,ابي هريرة,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_89,0,0,data_security.Cat_3
+1233,عبدالله بن عباس ,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_54,0,0,data_security.Cat_3
+1774,الدخيل,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_89,0,0,data_security.Cat_3
+1376,لطيفة آل الشيخ ,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_89,0,0,data_security.Cat_3
+752,الامير مساعد بن سعود بن عبدالعزيز,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_129,0,0,data_security.Cat_3
+1806,غائب بن خلف,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_128,0,0,data_security.Cat_3
+1576,حلقات الصديق -مجمع مسك النموذجي-,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_89,0,0,data_security.Cat_3
+1810,ابن كثير,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_89,0,0,data_security.Cat_3
+1193,الوالدين ,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_54,0,0,data_security.Cat_3
+918,عمر بن الخطاب (اسكان الخرج),data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_34,0,0,data_security.Cat_3
+748,عمر بن الخطاب ,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_89,0,0,data_security.Cat_3
+1287,خالد بن الوليد ( العزيزية ),data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_89,0,0,data_security.Cat_3
+1470,علي بن أبي طالب (اسكان الخرج),data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_34,0,0,data_security.Cat_3
+1061,علي بن أبي طالب (العزيزيه),data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_89,0,0,data_security.Cat_3
+850,وليد بن محمد الدغيثر/ خديجة بنت خويلد-مجمع ابن عثيمين النموذجي,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_34,0,0,data_security.Cat_3
+1209,ابي بكر الصديق (اسكان الخرج),data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_34,0,0,data_security.Cat_3
+3331,خولة بنت حكيم صباحي,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_53,0,0,data_security.Cat_3
+1071,الشهداء,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_224,0,0,data_security.Cat_3
+1790,عثمان بن عفان  (إسكان البحرية),data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_216,0,0,data_security.Cat_3
+868,المجمع القرآني بمسجد أبي بن كعب بإسكان القوات البحرية ,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_216,0,0,data_security.Cat_3
+899,علي بن ابي طالب (اسكان البحريه),data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_216,0,0,data_security.Cat_3
+1187,الشيخ محمد ابن عثيمين,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_54,0,0,data_security.Cat_3
+1875,ذات النطاقين,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_89,0,0,data_security.Cat_3
+976,مجمع حلقات البواردي,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_89,0,0,data_security.Cat_3
+1329,جامع التعاون,data_security.dep_110,data_security.City_1,data_security.area_1,data_security.dis_54,0,0,data_security.Cat_3

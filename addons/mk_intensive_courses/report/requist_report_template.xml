@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+        <template id="requist_report_template">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="web.external_layout">
+                        <link rel="stylesheet" href="/mk_intensive_courses/static/src/font.css"/>
+                        <div class="footer">
+                            <div>
+                            </div>
+                        </div>
+
+                        <xpath expr="//div[@class='header']" position="replace">
+                        </xpath>
+                        <div class="oe_structure"/>
+                        <div class="row mt32 mb32">
+
+                            <div class="page">
+                                <t t-set="mosque_type" t-value="o.gender_mosque"/>
+                                <t t-set="department_name" t-value="o.department_id.name"/>
+                                <t t-set="academic_name" t-value="o.academic_id.name.split(' ')[2].replace('0','٠').replace('1','١').replace('2','٢').replace('3','٣').replace('4','٤').replace('5','٥').replace('6','٦').replace('7','٧').replace('8','٨').replace('9','٩')"/>
+                                <t t-set="department_code" t-value="o.department_id.code.replace('0','٠').replace('1','١').replace('2','٢').replace('3','٣').replace('4','٤').replace('5','٥').replace('6','٦').replace('7','٧').replace('8','٨').replace('9','٩')"/>
+                                <t t-set="course_request_code" t-value="o.course_request_code.replace('0','٠').replace('1','١').replace('2','٢').replace('3','٣').replace('4','٤').replace('5','٥').replace('6','٦').replace('7','٧').replace('8','٨').replace('9','٩')"/>
+                                <t t-set="hijri_start_date" t-value="o.hijri_start_date"/>
+                                <t t-set="hijri_end_date" t-value="o.hijri_end_date"/>
+                                <t t-set="today"
+                                   t-value="context_timestamp(datetime.datetime.now()).strftime('%Y-%m-%d')"/>
+                                <t t-set="hijri_today" t-value="o.get_hijri_today(today)"/>
+                                <t t-if="mosque_type == 'male'">
+                                    <t t-if="o.course_request_type == 'quran_day'">
+                                       <div style="background-image:url(/mk_intensive_courses/static/src/img/quran_day.jpeg);background-size:360mm  250mm; width:360mm; height:250mm;">
+                                            <br/>
+                                            <br/>
+                                            <br/>
+                                            <br/>
+                                            <br/>
+                                            <br/>
+                                            <br/>
+                                            <br/>
+                                            <br/>
+                                            <br/>
+                                            <br/>
+                                            <br/>
+                                            <br/>
+                                            <br/>
+                                            <br/>
+                                            <t t-if="o.state == 'accept' ">
+                                                <div class="col-md-12 text-center">
+
+                                                    <p class="text-center"
+                                                       style="font-size:30px; font-family:Neo Sans Arabic">
+                                                        :الحمدلله والصلاة والسلام على رسول الله أما بعد
+                                                    </p>
+                                                    <p class="text-center"
+                                                       style="font-size:30px; font-family:Neo Sans Arabic">
+                                                        (فإن الجمعية الخيرية لتحفيظ القرآن الكريم بالرياض
+                                                        ممثلة بمركز (
+                                                        <span t-esc="department_name"/>
+                                                        <br/>
+                                                        قررت منح التصريح رقم
+                                                        <span t-esc="academic_name"/>/<span t-esc="department_code"/>/
+                                                        <span t-esc="course_request_code"/>
+                                                        <br/>
+                                                        (لدورة
+                                                        (<span t-field="o.course_name"/>-
+                                                        <span t-field="o.mosque_id.name"/>
+                                                        <br/>
+                                                        (في الفترة من
+                                                        (<span t-esc="o.start_date"/>)
+                                                        الموافقة ل(<span t-esc="hijri_start_date"/>)
+                                                        إلى
+                                                        (<span t-esc="o.end_date"/>)
+                                                        الموافقة ل(
+                                                        <span t-esc="hijri_end_date"/>
+                                                        <br/>
+                                                        و يشرف عليها الشيخ
+                                                        <span t-field="o.admin_id"/>
+                                                    </p>
+                                                    <p class="text-center"
+                                                       style="font-size:30px; font-family:Neo Sans Arabic">
+                                                        .سائلين المولى أن يستعملنا في طاعته, وفي خدمة كتابه
+                                                    </p>
+                                                </div>
+                                            </t>
+                                            <t t-if="o.state in ['draft','send']">
+                                                <br/>
+                                                <br/>
+                                                <br/>
+                                                <br/>
+                                                <br/>
+                                                <br/>
+                                                <br/>
+                                                <p class="text-center"
+                                                   style="font-size:30px; font-family:Neo Sans Arabic">
+                                                    لم يتم الموافقة على الدورة المكثفة بعد
+                                                </p>
+                                                <br/>
+                                                <br/>
+                                                <br/>
+                                                <br/>
+                                                <br/>
+                                                <br/>
+                                                <br/>
+                                            </t>
+                                            <t t-if="o.state == 'closed'">
+                                                <br/>
+                                                <br/>
+                                                <br/>
+                                                <br/>
+                                                <br/>
+                                                <br/>
+                                                <br/>
+                                                <p class="text-center"
+                                                   style="font-size:30px; font-family:Neo Sans Arabic">
+                                                    تم اقفال الدورة المكثفة
+                                                </p>
+                                                <br/>
+                                                <br/>
+                                                <br/>
+                                                <br/>
+                                                <br/>
+                                                <br/>
+                                                <br/>
+                                            </t>
+                                            <br/>
+                                            <br/>
+                                            <br/>
+                                            <br/>
+                                            <br/>
+                                            <table width="100%" style="border: none;padding-top:30px">
+                                                <tr style="border:none;">
+                                                    <td class="text-right;" style="border:none;">
+                                                        <t t-set="signature" t-value="o.department_id.signature"/>
+                                                        <img t-if="signature"
+                                                             t-att-src="'data:image/png;base64,%s' % to_text(signature)"
+                                                             height="80" border="1" width="400"/>
+                                                        <br/>
+                                                        <span class="text-right"
+                                                              style="font-size:25px; padding-left:100px; font-family:Neo Sans Arabic"
+                                                              t-field="o.department_id.test_center_admin"/>
+                                                    </td>
+                                                    <td class="text-right"
+                                                        style="width:65%;font-size:20px;padding-right:200px;border:none;"
+                                                        align="right">
+                                                        <img src='/mk_intensive_courses/static/src/img/maknoon_signature.png'
+                                                             style="padding-left:20px;"/>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </t>
+                                    <t t-else="">
+                                       <div style="background-image:url(/mk_intensive_courses/static/src/img/intensive_course.jpg);background-size:360mm  250mm; width:360mm; height:250mm;">
+                                            <br/>
+                                            <br/>
+                                            <br/>
+                                            <br/>
+                                            <br/>
+                                            <br/>
+                                            <br/>
+                                            <br/>
+                                            <br/>
+                                            <br/>
+                                            <br/>
+                                            <br/>
+                                            <br/>
+                                            <br/>
+                                            <br/>
+                                            <t t-if="o.state == 'accept' ">
+                                                <div class="col-md-12 text-center">
+
+                                                    <p class="text-center"
+                                                       style="font-size:30px; font-family:Neo Sans Arabic">
+                                                        :الحمدلله والصلاة والسلام على رسول الله أما بعد
+                                                    </p>
+                                                    <p class="text-center"
+                                                       style="font-size:30px; font-family:Neo Sans Arabic">
+                                                        (فإن الجمعية الخيرية لتحفيظ القرآن الكريم بالرياض
+                                                        ممثلة بمركز (
+                                                        <span t-esc="department_name"/>
+                                                        <br/>
+                                                        قررت منح التصريح رقم
+                                                        <span t-esc="academic_name"/>/<span t-esc="department_code"/>/
+                                                        <span t-esc="course_request_code"/>
+                                                        <br/>
+                                                        (لدورة
+                                                        (<span t-field="o.course_name"/>-
+                                                        <span t-field="o.mosque_id.name"/>
+                                                        <br/>
+                                                        (في الفترة من
+                                                        (<span t-esc="o.start_date"/>)
+                                                        الموافقة ل(<span t-esc="hijri_start_date"/>)
+                                                        إلى
+                                                        (<span t-esc="o.end_date"/>)
+                                                        الموافقة ل(
+                                                        <span t-esc="hijri_end_date"/>
+                                                        <br/>
+                                                        و يشرف عليها الشيخ
+                                                        <span t-field="o.admin_id"/>
+                                                    </p>
+                                                    <p class="text-center"
+                                                       style="font-size:30px; font-family:Neo Sans Arabic">
+                                                        .سائلين المولى أن يستعملنا في طاعته, وفي خدمة كتابه
+                                                    </p>
+                                                </div>
+                                            </t>
+                                            <t t-if="o.state in ['draft','send']">
+                                                <br/>
+                                                <br/>
+                                                <br/>
+                                                <br/>
+                                                <br/>
+                                                <br/>
+                                                <br/>
+                                                <p class="text-center"
+                                                   style="font-size:30px; font-family:Neo Sans Arabic">
+                                                    لم يتم الموافقة على الدورة المكثفة بعد
+                                                </p>
+                                                <br/>
+                                                <br/>
+                                                <br/>
+                                                <br/>
+                                                <br/>
+                                                <br/>
+                                                <br/>
+                                            </t>
+                                            <t t-if="o.state == 'closed'">
+                                                <br/>
+                                                <br/>
+                                                <br/>
+                                                <br/>
+                                                <br/>
+                                                <br/>
+                                                <br/>
+                                                <p class="text-center"
+                                                   style="font-size:30px; font-family:Neo Sans Arabic">
+                                                    تم اقفال الدورة المكثفة
+                                                </p>
+                                                <br/>
+                                                <br/>
+                                                <br/>
+                                                <br/>
+                                                <br/>
+                                                <br/>
+                                                <br/>
+                                            </t>
+                                            <br/>
+                                            <br/>
+                                            <br/>
+                                            <br/>
+                                            <br/>
+                                            <table width="100%" style="border: none;padding-top:30px">
+                                                <tr style="border:none;">
+                                                    <td class="text-right;" style="border:none;">
+                                                        <t t-set="signature" t-value="o.department_id.signature"/>
+                                                        <img t-if="signature"
+                                                             t-att-src="'data:image/png;base64,%s' % to_text(signature)"
+                                                             height="80" border="1" width="400"/>
+                                                        <br/>
+                                                        <span class="text-right"
+                                                              style="font-size:25px; padding-left:100px; font-family:Neo Sans Arabic"
+                                                              t-field="o.department_id.test_center_admin"/>
+                                                    </td>
+                                                    <td class="text-right"
+                                                        style="width:65%;font-size:20px;padding-right:200px;border:none;"
+                                                        align="right">
+                                                        <img src='/mk_intensive_courses/static/src/img/maknoon_signature.png'
+                                                             style="padding-left:20px;"/>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </t>
+                                </t>
+                                <t t-if="mosque_type == 'female'">
+                                    <div style="background-image:url(/mk_intensive_courses/static/src/img/intensive_course_female.jpg);background-size:360mm  250mm; width:360mm; height:250mm;">
+                                        <br/>
+                                        <br/>
+                                        <br/>
+                                        <br/>
+                                        <br/>
+                                        <br/>
+                                        <br/>
+                                        <br/>
+                                        <br/>
+                                        <br/>
+                                        <br/>
+                                        <br/>
+                                        <br/>
+                                        <br/>
+                                        <br/>
+                                        <t t-if="o.state == 'accept' ">
+                                            <div class="col-md-12 text-center">
+                                                <p class="text-center"
+                                                   style="font-size:30px; font-family:Neo Sans Arabic">
+                                                    :الحمدللّه والصلاة والسلام على رسول اللّه, أما بعد
+                                                </p>
+                                                <p class="text-center"
+                                                   style="font-size:30px; font-family:Neo Sans Arabic">
+                                                    (فإن الجمعية الخيرية لتحفيظ القرآن الكريم بالرياض (مكنون
+                                                    <br/>
+                                                    ممثلة بمركز إشراف (<span t-esc="department_name"/>)
+                                                    قررت منح التصريح رقم
+                                                    <span t-esc="academic_name"/>/<span t-esc="department_code"/>/
+                                                    <span t-esc="course_request_code"/>
+                                                    <br/>
+                                                    <t t-if="o.course_request_type == 'quran_day'">
+                                                         لدورة اليوم القرآني
+                                                    </t>
+                                                     <t t-if="o.course_request_type == 'intensive_course'">
+                                                         لدورة صيفية
+                                                    </t>
+                                                     <t t-if="o.course_request_type == 'ramadan_course'">
+                                                         لدورة رمضانية
+                                                    </t>
+                                                    <br/>
+                                                    <t t-if="o.location == 'female_episodes'">
+                                                         [ تابعة لمدرسة
+                                                        <span t-esc="o.mosque_id.display_name.replace(']','')"/>
+                                                         <br/>
+                                                       والمقامة في مسجد
+                                                        <span t-esc="o.external_mosq_name"/>
+                                                        <br/>
+                                                    <span>.</span>
+                                                    </t>
+                                                    <t t-else="">
+                                                    [ والمقامة في مدرسة
+                                                    <span t-esc="o.mosque_id.display_name.replace(']','')"/>
+                                                    <br/>
+                                                    <span>.</span>
+                                                    </t>
+                                                    (خلال المدة من
+                                                    (<span t-esc="hijri_start_date.replace('-','/').replace('0','٠').replace('1','١').replace('2','٢').replace('3','٣').replace('4','٤').replace('5','٥').replace('6','٦').replace('7','٧').replace('8','٨').replace('9','٩')"/>هـ)
+                                                    إلى
+                                                    (<span
+                                                        t-esc="hijri_end_date.replace('-','/').replace('0','٠').replace('1','١').replace('2','٢').replace('3','٣').replace('4','٤').replace('5','٥').replace('6','٦').replace('7','٧').replace('8','٨').replace('9','٩')"/>
+                                                    هـ
+                                                </p>
+                                                <p class="text-center"
+                                                   style="font-size:30px; font-family:Neo Sans Arabic">
+                                                    ،،سائلين اللّه تعالى لهم التوفيق و السداد
+                                                </p>
+                                            </div>
+                                        </t>
+                                        <t t-if="o.state in ['draft','send']">
+                                            <br/>
+                                            <br/>
+                                            <br/>
+                                            <br/>
+                                            <br/>
+                                            <br/>
+                                            <br/>
+                                            <p class="text-center"
+                                               style="font-size:30px; font-family:Neo Sans Arabic">
+                                                لم يتم الموافقة على الدورة المكثفة بعد
+                                            </p>
+                                            <br/>
+                                            <br/>
+                                            <br/>
+                                            <br/>
+                                            <br/>
+                                            <br/>
+                                            <br/>
+                                        </t>
+                                        <t t-if="o.state == 'closed'">
+                                            <br/>
+                                            <br/>
+                                            <br/>
+                                            <br/>
+                                            <br/>
+                                            <br/>
+                                            <br/>
+                                            <p class="text-center"
+                                               style="font-size:30px; font-family:Neo Sans Arabic">
+                                                تم اقفال الدورة المكثفة
+                                            </p>
+                                            <br/>
+                                            <br/>
+                                            <br/>
+                                            <br/>
+                                            <br/>
+                                            <br/>
+                                            <br/>
+                                        </t>
+                                        <br/>
+                                        <br/>
+                                        <br/>
+                                        <br/>
+                                        <br/>
+                                        <table width="100%" style="border: none;padding-top:30px">
+                                            <tr style="border:none;">
+                                                <td class="text-right;" style="border:none;">
+                                                    <t t-set="signature" t-value="o.department_id.signature"/>
+                                                    <img t-if="signature"
+                                                         t-att-src="'data:image/png;base64,%s' % to_text(signature)"
+                                                         height="80" border="1" width="400"/>
+                                                    <br/>
+                                                    <span class="text-right"
+                                                          style="font-size:25px; padding-left:90px; font-family:Neo Sans Arabic"
+                                                          t-field="o.department_id.test_center_admin"/>
+                                                </td>
+                                                <td class="text-right"
+                                                    style="width:65%;font-size:20px;padding-right:200px;border:none;"
+                                                    align="right">
+                                                    <p>تاريخ الإصدار</p>
+                                                    <span t-esc="context_timestamp(datetime.datetime.now()).strftime('%Y/%m/%d').replace('0','٠').replace('1','١').replace('2','٢').replace('3','٣').replace('4','٤').replace('5','٥').replace('6','٦').replace('7','٧').replace('8','٨').replace('9','٩')"/>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </t>
+                            </div>
+                        </div>
+
+                    </t>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+

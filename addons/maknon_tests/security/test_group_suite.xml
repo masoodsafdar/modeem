@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="print_parts_certification" model="res.groups">
+            <field name="name">Print Parts Certification</field>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+            <field name="category_id" ref="maknon_tests.module_category_types_tests" />
+        </record>
+
+        <record id="group_old_student_test_management" model="res.groups">
+            <field name="name">ادارة أرشيف الطلاب الخاتمين</field>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+            <field name="category_id" ref="maknon_tests.module_category_test_category"/>
+        </record>
+    </data>
+</odoo>

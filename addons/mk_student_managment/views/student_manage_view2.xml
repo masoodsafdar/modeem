@@ -1,0 +1,82 @@
+<odoo>
+  <data>
+  	<record model="ir.ui.view" id="mk_studen_line_form">
+          <field name="name">student listen line Form</field>
+          <field name="model">mk.listen.line</field>
+          <field name="arch" type="xml">
+          	<form string="tree view Student" version="8.0">
+          		<sheet>
+          			<group>
+          				<field name="type_follow"/>
+                		<field name="date" readonly="True" invisible="True"/>
+                		<field name="day" readonly="True" invisible="True"/>
+                		<field name="actual_date" readonly="True" />
+                		<field name="actual_day" readonly="True"/>
+                		<field name="student_id"   required="1" readonly="True" options="{'no_create': True,'no_open': True,}"/>
+                		<field name="is_test"      readonly="True"/>
+                		<field name="subject_id"   readonly="True" options="{'no_create': True,'no_open': True,}"/>
+                		 <field name="day_subject" readonly="True"/>
+                		<field name="from_surah"   readonly="True" options="{'no_create': True,'no_open': True,}"/>
+                		<field name="from_aya"     readonly="True" options="{'no_create': True,'no_open': True,}"/>
+                		<field name="to_surah"     readonly="True" options="{'no_create': True,'no_open': True,}"/>
+                		<field name="to_aya"       readonly="True" options="{'no_create': True,'no_open': True,}"/>
+                		<field name="check"        readonly="True"/>
+                	</group>
+                </sheet>
+          	</form>
+          </field>
+     </record>
+      <record model="ir.ui.view" id="mk_studen_view_tree">
+          <field name="name">student listen line</field>
+          <field name="model">mk.listen.line</field>
+          <field name="arch" type="xml">
+              <tree>
+              		<field name="type_follow"/>
+                    <field name="date"/>
+                    <field name="day"/>
+                    <field name="actual_date"/>
+                    <field name="actual_day"/>
+                    <field name="student_id"/>
+                    <field name="is_test"/>
+                    <field name="subject_id" options="{'no_create': True,'no_open': True,}"/>
+                     <field name="day_subject"/>
+                    <field name="from_surah" options="{'no_create': True,'no_open': True,}"/>
+                    <field name="from_aya"   options="{'no_create': True,'no_open': True,}"/>
+                    <field name="to_surah"   options="{'no_create': True,'no_open': True,}"/>
+                    <field name="to_aya"     options="{'no_create': True,'no_open': True,}"/>
+                    <field name="check"/>
+               </tree>
+         </field>
+      </record>
+                          
+
+
+
+<record model="ir.actions.act_window" id="action_mk_listen">
+    <field name="name">Listen Line</field>
+    <field name="type">ir.actions.act_window</field>
+    <field name="res_model">mk.listen.line</field>
+    <field name="view_type">form</field>
+    <field name="view_mode">tree,form</field>
+  </record>
+  
+  <record model="ir.actions.act_window.view" id="act_open_line_listen">
+    <field name="act_window_id" ref="action_mk_listen" />
+    <field name="sequence" eval="22" />
+    <field name="view_mode">form</field>
+    <field name="view_id" ref="mk_studen_line_form" />
+  </record>
+
+  <record model="ir.actions.act_window.view" id="act_open_line_listen_tree">
+    <field name="act_window_id" ref="action_mk_listen" />
+    <field name="sequence" eval="15" />
+    <field name="view_mode">tree</field>
+    <field name="view_id" ref="mk_studen_view_tree" />
+  </record>
+
+
+<menuitem id="line_listen_menu" name="Prepration Tree" parent="manage_student_menu" 
+      action="action_mk_listen"  sequence="3" groups="mk_student_management.student_prepare_read"/>
+
+	</data>
+</odoo>

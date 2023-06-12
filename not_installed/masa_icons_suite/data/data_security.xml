@@ -1,0 +1,136 @@
+<odoo>
+    <data>
+        <!--      Transport Management  -->
+        <record id="mk_transport_management.trans_createe_attendance" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="mk_transport_management.create_transportation_management" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="mk_transport_management.read_driver" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="mk_transport_management.send_transporation_request" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="mk_transport_management.vehicle_asset_manage" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="mk_transport_management.trans_writee_attendance" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="mk_transport_management.write_transportation_management" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="mk_transport_management.accept_reject_attendance" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="mk_transport_management.create_driver" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="mk_transport_management.trans_read_attendance" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="mk_transport_management.group_stop_transportation" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="mk_transport_management.vehicle_types_manage" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="mk_transport_management.write_driver" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="mk_transport_management.write_driver" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <!--   EDU     -->
+        <record id="educational_supervison.group_create_comapany_pointers" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="educational_supervison.group_create_edu_criterion" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="educational_supervison.group_create_edu_name" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="educational_supervison.group_create_item" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="educational_supervison.group_edit_comapany_pointers" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="educational_supervison.group_edit_edu_criterion" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="educational_supervison.group_edit_item" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="educational_supervison.group_name_write_supervisor_item" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="educational_supervison.group_read_comapany_pointers" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="educational_supervison.group_read_edu_criterion" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="educational_supervison.group_read_edu_name" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="educational_supervison.group_read_item" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="educational_supervison.group_read_visits_managment" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="educational_supervison.group_write_edu_field" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="educational_supervison.group_write_visits_managment" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="educational_supervison.group_create_edu_approve" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="educational_supervison.group_create_edu_field" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="educational_supervison.group_create_edu_visit" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="educational_supervison.group_distribute_comapany_pointers" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="educational_supervison.group_edit_edu_approve" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="educational_supervison.group_edit_edu_name" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="educational_supervison.group_name_distribute_supervisor_item" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="educational_supervison.group_read_center_item" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="educational_supervison.group_read_edu_approve" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="educational_supervison.group_read_edu_visit" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="educational_supervison.group_read_supervisor_item" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="educational_supervison.group_write_center_item" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="educational_supervison.group_write_edu_visit" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="educational_supervison.select_all" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+
+    </data>
+</odoo>

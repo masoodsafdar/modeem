@@ -1,0 +1,603 @@
+<odoo>
+    <data>
+        <record id="action_view_mosq_permission" model="ir.actions.act_window">
+            <field name="name">التصاريح</field>
+            <field name="res_model">mosque.permision</field>
+            <field name="binding_view_types">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('masjed_id','=',active_id)]</field>
+            <field name="context">{'default_masjed_id': active_id}</field>
+        </record>
+
+        <record id="action_view_mosq_supervisor_permission_request" model="ir.actions.act_window">
+            <field name="name">طلبات تكاليف مشرفي المساجد</field>
+            <field name="res_model">mosque.supervisor.request</field>
+            <field name="binding_view_types">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('mosque_id','=',active_id),('type_request','=','supervisor_request')]</field>
+            <field name="context">{'default_mosque_id': active_id,
+                                   'default_type_request': 'supervisor_request'}</field>
+            <field name="view_id" ref="mk_mosque_supervisior_request_tree_view"/>
+        </record>
+
+        <record id="action_view_mosq_admin_permission_request" model="ir.actions.act_window">
+            <field name="name">طلبات تكاليف مديري المساجد/المدارس</field>
+            <field name="res_model">mosque.supervisor.request</field>
+            <field name="binding_view_types">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('mosque_id','=',active_id),('type_request','=','admin_request')]</field>
+            <field name="context">{'default_mosque_id': active_id,
+                                   'default_type_request': 'admin_request'}</field>
+            <field name="view_id" ref="mk_mosque_admin_request_tree_view"/>
+        </record>
+    
+        <!-- <record id="mk_mosque_form_view" model="ir.ui.view">
+            <field name="name">mosque Form View</field>
+            <field name="model">mk.mosque</field>
+            <field name="arch" type="xml">
+                <form string="mosque " create="false" edit="true" delete="false">
+                    <header>
+                        <button name="accept_validate" string="Validate"     type="object" groups="mk_episode_management.group_mosque_confirm" class="btn btn-sm oe_button" attrs="{'invisible':['|',('state', 'in', ('accept','reject')),('active','!=',True)]}"/>
+                        <button name="reject_validate" string="reject"       type="object" groups="mk_episode_management.group_mosque_reject"  class="btn btn-sm oe_button" attrs="{'invisible':['|',('state', 'in', ('accept','reject')),('active','!=',True)]}"/>
+                        <button name="draft_validate"  string="Set to draft" type="object" groups="mk_episode_management.group_mosque_reject"  states="accept,reject"/>
+                        <field  name="state" widget="statusbar"/>
+                    </header>
+
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
+	                        <button name="%(action_view_mosq_permission)d"
+	                            	type="action"
+	                            	class="oe_stat_button"
+	                            	groups="mk_episode_management.read_mosque_permision"
+	                            	icon="fa-file-o">
+	                            <field name="nbr_permission" widget="statinfo" string="التصاريح"/>
+	                        </button>
+
+                            <button name="%(action_view_mosq_supervisor_permission_request)d"
+	                            	type="action"
+	                            	class="oe_stat_button"
+	                            	groups="mk_episode_management.read_mosque_supervisor_requests"
+	                            	icon="fa-file-o">
+	                            <field name="nbr_supervisor_permission_requests" widget="statinfo" string="تكاليف مشرفي المساجد"/>
+	                        </button>
+                             <button name="%(action_view_mosq_admin_permission_request)d"
+	                            	type="action"
+	                            	class="oe_stat_button"
+	                            	groups="mk_episode_management.read_mosque_supervisor_requests"
+	                            	icon="fa-file-o">
+	                            <field name="nbr_admin_permission_requests" widget="statinfo" string="تكاليف مديري المساجد/المدارس"/>
+	                        </button>
+                        </div>
+	                     <div class="oe_button_box" name="button_box">
+                            <button name="toggle_active" type="object" class="oe_stat_button" icon="fa-archive">
+                                <field name="active" widget="boolean_button" options='{"terminology": "archive"}'/>
+                            </button>                            
+                        </div>
+                        <field name="image" widget='image' class="oe_avatar" options='{"preview_image": "image_medium", "size": [90, 90]}'/>
+                        <group>
+                            <group>
+                                <field name="name"          attrs="{'readonly': [('active','!=',True)]}" required="True"/>
+                                <field name="register_code" readonly="1"/>
+                                <field name="categ_id"  options="{'no_create': 1, 'no_open':1}"/>
+                                <field name="mosq_category" string="الفئة"/>
+                                <field name="mosq_type" options="{'no_create': 1, 'no_open':1}" string="الفئة في الاداري" invisible="1" readonly="1"/>
+                                <field name="is_complexe" invisible="1"/>
+                                <field name="complex_name"  attrs="{'invisible':[('is_complexe', '=', False)]}"/>
+                                <field name="gender_mosque" invisible="1"/>
+                                <field name="center_department_id"  options="{'no_create': 1, 'no_open':1}" string="المركز" readonly="1"/>
+                                <field name="responsible_id"        options="{'no_create': 1, 'no_open':1}" readonly="1"/>
+                                <field name="mosque_admin_id"       options="{'no_create': 1, 'no_open':1}" readonly="1"/>
+                            </group>
+
+                            <group>
+                                <field name="episodes"             readonly="1"/>
+                                <field name="episode_value"        readonly="1" string="دوام الحلقات"/>
+                                <field name="is_specific_eval" attrs="{'readonly': [('active','!=',True)]}"/>
+                                <field name="check_maneg_mosque"   readonly="1"/>
+                                <field name="check_parking_mosque" readonly="1"/>
+                            </group>
+                        </group>
+
+                        <group>
+                            <group>
+                                <field name="has_permission"     readonly="1" string="يوجد تصريح"/>
+                                <field name="permission_status"  readonly="1" string="حالة التصريح"/>
+                                <field name="permision_type"     readonly="1" string="نوع التصريح"/>
+                                <field name="permission_code"     readonly="1" string="رقم التصريح" attrs="{'invisible': [('nbr_permission','=', 0)]}" />
+                                <field name="mosque_type"        readonly="1" string="حالة التصريح" invisible="1"/>
+                                <field name="permision_date"     readonly="1" string="تاريخ التصريح"/>
+                                <field name="permision_end_date" readonly="1"/>
+                            </group>
+
+                            <group>
+                                <field name="build_type"           readonly="1" style="width:50%" options="{'no_create': 1, 'no_open':1}"/>
+                                <field name="responsible_end_date" readonly="1" string="تاريخ التكليف للمشرف"/>
+                                <field name="responsible_type"     readonly="1" string="حالة التكليف للمشرف"/>
+                                <field name="attach_no"            readonly="1"/>
+                                <field name="close_date"           readonly="1"  attrs="{'invisible': [('active','=',True)]}"/>
+                            </group>
+                        </group>
+
+                        <notebook>
+                            <page string="Location Mosque">
+                                <group>
+                                    <field name="city_id"     required="1" readonly="1" options="{'no_create': 1, 'no_create_edit': 1,'no_open':1}"/>
+                                    <field name="area_id"     required="1" readonly="1" options="{'no_create': 1, 'no_create_edit': 1,'no_open':1}"/>
+                                    <field name="district_id" required="1" readonly="1" options="{'no_create': 1, 'no_create_edit': 1,'no_open':1}" domain="[('center_department_id','=',center_department_id)]"/>
+                                    <field name="latitude"  attrs="{'readonly': [('active','!=',True)]}" readonly="1"/>
+                                    <field name="longitude" attrs="{'readonly': [('active','!=',True)]}" readonly="1"/>
+                                    <field name="mosq_subscription_url" attrs="{'readonly': [('active','!=',True)]}" widget="url" readonly="1"/>
+                                </group>
+                            </page>
+                            <page string="Reject Reason" attrs="{'invisible':[('state','!=','reject')]}">
+                                <field name="reject_reason" attrs="{'invisible':[('state','!=','reject')], 'required':[('state','=','reject')]}" readonly="1"/>
+                            </page>
+
+                            <page string="episodes">
+                                <field name="episode_id" attrs="{'readonly': [('active','!=',True)]}">
+                                    <tree>
+                                        <field name="name"/>
+                                        <field name="episode_type"  invisible="1" options="{'no_create': True,'no_open': True,}"/>
+                                        <field name="episode_work"  invisible="1" options="{'no_create': True,'no_open': True,}"/>
+                                    </tree>
+                                </field>
+                            </page>
+
+                            <page string="الحضور والسلوك" attrs="{'invisible': [('is_specific_eval','=',False)]}">
+                                <group colspan="2" col="8" string="الحضور">
+                                    <field name="preparation_degree"        string="درجة الحضور"              attrs="{'readonly': [('active','!=',True)]}"/>
+                                    <field name="late_deduct"               string="الخصم على التأخير"         attrs="{'readonly': [('active','!=',True)]}"/>
+                                    <field name="excused_absence_deduct"    string="الخصم على الغياب بعذر"     attrs="{'readonly': [('active','!=',True)]}"/>
+                                    <field name="no_excused_absence_deduct" string="الخصم على الغياب بدون عذر" attrs="{'readonly': [('active','!=',True)]}"/>
+                                </group>
+                                <group colspan="2" col="8" string="السلوك">
+                                    <group colspan="2" col="2">
+                                        <field name="behavior_degree" string="درجة السلوك" attrs="{'readonly': [('active','!=',True)]}"/>
+                                    </group>
+                                    <group colspan="2" col="6">
+                                    </group>
+                                </group>
+                            </page>
+
+                            <page string="إعدادات الدروس" attrs="{'invisible': [('is_specific_eval','=',False)]}">
+                                <group colspan="4" col="8">
+                                    <label for="lessons_minimum_audit"   string="الدروس"/>
+                                    <label for="quantity_minimum_audit"  string="درجة الكمية"/>
+                                    <label for="deduct_qty_small_review" string="مقدار الخصم"/>
+                                    <label for="memorize_minimum_audit"  string="درجة جودة الحفظ"/>
+                                    <label for="deduct_memor_sml_review" string="مقدار الخصم"/>
+                                    <label for="mastering_minimum_audit" string="درجة التجويد"/>
+                                    <label for="deduct_tjwd_sml_review"  string="مقدار الخصم"/>
+
+                                    <field name="lessons_minimum_audit"   nolabel="1" attrs="{'readonly': [('active','!=',True)]}"/>
+                                    <field name="quantity_minimum_audit"  nolabel="1" attrs="{'readonly': [('active','!=',True)]}"/>
+                                    <field name="deduct_qty_small_review" nolabel="1" attrs="{'readonly': [('active','!=',True)]}"/>
+                                    <field name="memorize_minimum_audit"  nolabel="1" attrs="{'readonly': [('active','!=',True)]}"/>
+                                    <field name="deduct_memor_sml_review" nolabel="1" attrs="{'readonly': [('active','!=',True)]}"/>
+                                    <field name="mastering_minimum_audit" nolabel="1" attrs="{'readonly': [('active','!=',True)]}"/>
+                                    <field name="deduct_tjwd_sml_review"  nolabel="1" attrs="{'readonly': [('active','!=',True)]}"/>
+
+                                    <field name="lessons_maximum_audit"   nolabel="1" attrs="{'readonly': [('active','!=',True)]}"/>
+                                    <field name="quantity_maximum_audit"  nolabel="1" attrs="{'readonly': [('active','!=',True)]}"/>
+                                    <field name="deduct_qty_big_review"   nolabel="1" attrs="{'readonly': [('active','!=',True)]}"/>
+                                    <field name="memorize_maximum_audit"  nolabel="1" attrs="{'readonly': [('active','!=',True)]}"/>
+                                    <field name="deduct_memor_big_review" nolabel="1" attrs="{'readonly': [('active','!=',True)]}"/>
+                                    <field name="mastering_maximum_audit" nolabel="1" attrs="{'readonly': [('active','!=',True)]}"/>
+                                    <field name="deduct_tjwd_big_review"  nolabel="1" attrs="{'readonly': [('active','!=',True)]}"/>
+
+                                    <field name="lessons_reading"      nolabel="1" attrs="{'readonly': [('active','!=',True)]}"/>
+                                    <field name="quantity_reading"     nolabel="1" attrs="{'readonly': [('active','!=',True)]}"/>
+                                    <field name="deduct_qty_reading"   nolabel="1" attrs="{'readonly': [('active','!=',True)]}"/>
+                                    <field name="memorize_reading"     nolabel="1" attrs="{'readonly': [('active','!=',True)]}"/>
+                                    <field name="deduct_memor_reading" nolabel="1" attrs="{'readonly': [('active','!=',True)]}"/>
+                                    <field name="mastering_reading"    nolabel="1" attrs="{'readonly': [('active','!=',True)]}"/>
+                                    <field name="deduct_tjwd_reading"  nolabel="1" attrs="{'readonly': [('active','!=',True)]}"/>
+
+                                    <field name="lessons_memorize"      nolabel="1" attrs="{'readonly': [('active','!=',True)]}"/>
+                                    <field name="quantity_memorize"     nolabel="1" attrs="{'readonly': [('active','!=',True)]}"/>
+                                    <field name="deduct_qty_memorize"   nolabel="1" attrs="{'readonly': [('active','!=',True)]}"/>
+                                    <field name="memorize_degree"       nolabel="1" attrs="{'readonly': [('active','!=',True)]}"/>
+                                    <field name="deduct_memor_memorize" nolabel="1" attrs="{'readonly': [('active','!=',True)]}"/>
+                                    <field name="mastering_memorize"    nolabel="1" attrs="{'readonly': [('active','!=',True)]}"/>
+                                    <field name="deduct_tjwd_memorize"  nolabel="1" attrs="{'readonly': [('active','!=',True)]}"/>
+                                </group>
+                            </page>
+
+                            <page string="القياس والتقييم" attrs="{'invisible': [('is_specific_eval','=',False)]}">
+                                <group colspan="4" col="5">
+                                    <label for="test_degree"       string="درجة الإختبار"/>
+                                    <label for="nbr_question_test" string="عدد الأسئلة"/>
+                                    <label for="qty_question_test" string="مقدار السؤال"/>
+                                    <label for="deduction_test"    string="مقدار الخصم"/>
+
+                                    <field name="test_degree"       nolabel="1" attrs="{'readonly': [('active','!=',True)]}"/>
+                                    <field name="nbr_question_test" nolabel="1" attrs="{'readonly': [('active','!=',True)]}"/>
+                                    <field name="qty_question_test" nolabel="1" attrs="{'readonly': [('active','!=',True)]}"/>
+                                    <field name="deduction_test"    nolabel="1" attrs="{'readonly': [('active','!=',True)]}"/>
+
+                                    <field name="exam_degree"       nolabel="1" attrs="{'readonly': [('active','!=',True)]}"/>
+                                    <field name="nbr_question_exam" nolabel="1" attrs="{'readonly': [('active','!=',True)]}"/>
+                                    <field name="qty_question_exam" nolabel="1" attrs="{'readonly': [('active','!=',True)]}"/>
+                                    <field name="deduction_exam"    nolabel="1" attrs="{'readonly': [('active','!=',True)]}"/>
+                                </group>
+                            </page>
+
+                            <page string="جدولة الاختبارات" attrs="{'invisible': [('is_specific_eval','=',False)]}">
+                                <group>
+                                    <field name="test_schedule_ids" context="{'mosque_id': active_id, 'type_org': 'mosque'}" nolabel="1">
+                                        <tree>
+                                            <field name="study_year_id"/>
+                                            <field name="study_class_id"/>
+                                            <field name="type_schedule"/>
+                                            <field name="type_org" invisible="1"/>
+                                            <field name="state"/>
+                                        </tree>
+                                        <form editable="bottom">
+                                            <header>
+                                                <field  name="state" widget="statusbar" statusbar_visible="draft,confirm,done"/>
+                                                <button name="action_confirm" string="Confirm" type="object" states="draft"   class="oe_highlight"/>
+                                                <button name="action_done"    string="Done"    type="object" states="confirm" class="oe_highlight"/>
+                                            </header>
+                                            <sheet>
+                                                <group>
+                                                    <group>
+                                                        <field name="mosque_ctx_id" invisible="1"/>
+                                                        <field name="study_year_id"  options="{'no_create': True,'no_open': True,}" attrs="{'readonly':[('state','=','done')]}"/>
+                                                        <field name="study_class_id" options="{'no_create': True,'no_open': True,}" attrs="{'readonly':[('state','=','done')]}"/>
+                                                    </group>
+                                                    <group>
+                                                        <field name="type_schedule"   attrs="{'readonly':[('state','=','done')]}"/>
+                                                        <field name="period_schedule" attrs="{'invisible':[('type_schedule','=','program')], 'readonly':[('state','=','done')]}" />
+                                                        <field name="nbr_period"      attrs="{'invisible':[('type_schedule','=','program')], 'readonly':[('state','=','done')]}"/>
+                                                        <field name="day_exam_id"     attrs="{'invisible':['|',('state','=','draft'),('type_schedule','=','program')],'readonly':[('state','=','done')]}" options="{'no_create': True,'no_open': True,}" domain="[('id','in',day_episod_ids)]"/>
+                                                    </group>
+                                                </group>
+                                                <separator string="حلقات المسجد"    attrs="{'invisible':[('state','=','draft')]}"/>
+                                                <field name="episode_mosq_ids" invisible="1"/>
+                                                <field name="episod_ids"       attrs="{'invisible':[('state','=','draft')], 'readonly':[('state','=','done')]}" domain="[('id','in',episode_mosq_ids)]"/>
+                                                <group>
+                                                    <group>
+                                                        <field name="day_episod_ids" invisible="1"/>
+                                                    </group>
+                                                </group>
+                                            </sheet>
+                                        </form>
+                                    </field>
+                                </group>
+                            </page>
+
+                            <page string="Teacher">
+                                <field name="teacher_ids" attrs="{'readonly': [('active','!=',True)]}">
+                                    <tree editable="bottom">
+                                        <field name="name"/>
+                                        <field name="registeration_code"/>
+                                        <field name="job_id"/>
+                                        <field name="mobile_phone"/>
+                                    </tree>
+                                </field>
+                            </page>
+
+                        	<page string="المشرفون التربويون">
+                        		<field name="edu_supervisor" attrs="{'readonly': [('active','!=',True)]}">
+                            		<tree editable="bottom">
+	                              		<field name="name"/>
+                                        <field name="registeration_code"/>
+                                        <field name="job_id"/>
+                                        <field name="mobile_phone"/>
+                            		</tree>
+                        		</field>
+                        	</page>
+
+                            <page string="Managment">
+                                <field name="managment_id" readonly="True">
+                                    <tree editable="bottom">
+                                       <field name="name"/>
+                                        <field name="registeration_code"/>
+                                        <field name="job_id"/>
+                                        <field name="mobile_phone"/>
+                                    </tree>
+                                </field>
+                            </page>
+
+                            <page string="Socail Link">
+                                <field name="link_ids" attrs="{'readonly': [('active','!=',True)]}">
+                                    <tree editable="bottom">
+                                        <field name="title" widget="url"/>
+                                    </tree>
+                                </field>
+                            </page>
+
+                            <page string="Transport payments">
+                                <group col="4">
+                                    <field name="one_way_money" attrs="{'readonly': [('active','!=',True)]}"/>
+                                    <field name="double_way_money" attrs="{'readonly': [('active','!=',True)]}"/>
+                                </group>
+                            </page>
+
+                            <page string="Mosque Information" name="mosque_information">
+                                <group col="4">
+                                    <field name="mosque_addres"           attrs="{'readonly': [('active','!=',True)]}"/>
+                                    <field name="mosque_secondary_addres" attrs="{'readonly': [('active','!=',True)]}"/>
+                                    <field name="mosque_link"             attrs="{'readonly': [('active','!=',True)]}" widget="url" />
+                                    <field name="mosque_logo"             attrs="{'readonly': [('active','!=',True)]}" widget="binary"/>
+                                    <field name="mosque_logo_two"         attrs="{'readonly': [('active','!=',True)]}" widget="binary"/>
+                                    <field name="page_theme"              attrs="{'readonly': [('active','!=',True)]}"/>
+                                    <field name="mosque_info"             attrs="{'readonly': [('active','!=',True)]}"/>
+                                    <field name="phone"                   attrs="{'readonly': [('active','!=',True)]}"/>
+                                    <field name="fax"                     attrs="{'readonly': [('active','!=',True)]}"/>
+                                    <field name="email"                   attrs="{'readonly': [('active','!=',True)]}"/>
+                                </group>
+                            </page>
+
+                            <page string="Sms Gateway">
+                                <group col="4">
+                                    <field name="gateway_config"   attrs="{'readonly': [('active','!=',True)]}" options="{'no_create': True,'no_open': True,}"/>
+                                    <field name="gateway_user"     attrs="{'readonly': [('active','!=',True)]}"/>
+                                    <field name="gateway_password" attrs="{'readonly': [('active','!=',True)]}" password="True"/>
+                                    <field name="gateway_sender"   attrs="{'readonly': [('active','!=',True)]}"/>
+                                    <field name="send_time"        attrs="{'readonly': [('active','!=',True)]}"/>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+						<field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+						<field name="message_ids" widget="mail_thread"/>
+					</div>
+                </form>
+            </field>
+        </record>
+ -->
+        <record id="mk_mosque_tree_view" model="ir.ui.view">
+            <field name="name">mosque Tree View</field>
+            <field name="model">mk.mosque</field>
+            <field name="arch" type="xml">
+                <tree delete="0" create="0" edit="0" string="mosque ">
+                    <field name="name"/>
+                    <field name="episode_value" string="دوام الحلقات"/>
+                    <field name="responsible_id"/>
+                    <field name="res_identity"/>
+                    <field name="center_department_id"/>
+                    <field name="area_id"/>
+                    <field name="district_id"/>
+                    <field name="episodes_number"   string="عدد الحلقات"/>
+                    <field name="student_numbers"    string="عدد الطلاب"/>
+                    <field name="others_emp_number" string="عدد الإداريين"/>
+                    <field name="teachers_number"   string="عدد المعلمون"/>
+                    <field name="supervisors_no"    string="عدد المشرفون"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- <record id="mk_mosque_search_view" model="ir.ui.view">
+            <field name="name">mosque Search View</field>
+            <field name="model">mk.mosque</field>
+            <field name="arch" type="xml">
+                <search string="mosque ">
+                    <field name="name" string="mosque" filter_domain="[('name','ilike', self)]"/>
+                    <field name="register_code"/>
+                    <field name="center_department_id"/>
+                    <field name="categ_id"/>
+                    <field name="permision_end_date"/>
+                    <field name="complex_name"/>
+                    <field name="is_synchronized_admin"/>
+                    <field name="is_synchro_edu_admin"/>
+
+                    <separator/>
+                    <filter domain="[('active','=', False)]"    string="مغلق"/>
+                    <filter domain="[('active','=', True)]"    string="مفتوح"/>
+                    <separator/>
+                    <filter name="male"   string="مساجد رجالية" domain="[('gender_mosque','=','male')]"/>
+                    <filter name="female" string="مساجد نسائية" domain="[('gender_mosque','=','female')]"/>
+                    <separator/>
+                    <filter name="is_synchronized_admin" string="تم تحيين البيانات" domain="[('is_synchronized_admin','=', True )]"/>
+                    <filter name="is_not_synchronized_admin" string="بيانات غير محينة" domain="[('is_synchronized_admin','=', False )]"/>
+                    <separator/>
+                    <filter name="is_synchro_edu_admin" string="تمت الموائمة" domain="[('is_synchro_edu_admin','=', True )]"/>
+                    <filter name="is_not_synchro_edu_admin" string="مساجد غير موائمة" domain="[('is_synchro_edu_admin','=', False )]"/>
+                    <separator/>
+                    <filter domain="[('state','=','draft')]"  name="draft"  string="مبدئي"/>
+                    <filter domain="[('state','=','accept')]" name="accept" string="مقبول"/>
+                    <filter domain="[('state','=','reject')]" name="reject" string="مرفوض"/>
+                    <separator/>
+                    <filter name="finished_mosq_permission"    string="التصاريح المنتهية" domain="[('permision_end_date','&lt;',context_today().strftime('%Y-%m-%d') )]"/>
+                    <separator/>
+                    <filter domain="[('responsible_id','=', False),('state','!=','reject')]" string="غير مسند الي مسؤول"/>
+                    <separator/>
+                    <filter domain="[('nbr_permission','=', 0)]" string="لا يوجد تصريح"/>
+                    <filter domain="[('nbr_permission','>', 0)]" string="يوجد تصريح"/>
+                    <separator/>
+                    <filter domain="[('mosque_admin_id','=', False),('state','!=','reject')]"  string="غير مسند إلي مدير/مديرة"/>
+                    <filter domain="[('mosque_admin_id','!=', False)]" string="مسند إلي مدير/مديرة"/>
+
+                    <group>
+                        <filter name="group_area"         string="By Area"               context="{'group_by': 'area_id'}"/>
+                        <filter name="group_district"     string="By district"           context="{'group_by': 'district_id'}"/>
+                        <filter name="group_center"       string="By supervision center" context="{'group_by': 'center_department_id'}"/>
+                        <filter name="group_categoty"     string="By category"           context="{'group_by': 'categ_id'}"/>
+                        <filter name="group_complex_name" string="اسم المجمع"            context="{'group_by': 'complex_name'}"/>
+                        <filter name="group_state"    string="الحالات"                    context="{'group_by': 'state'}"/>
+                    </group>
+                </search>
+            </field>
+        </record> -->
+
+        <record model="ir.ui.view" id="mk_mosque_kanban_view">
+            <field name="name">mosque kanban</field>
+            <field name="model">mk.mosque</field>
+            <field name="arch" type="xml">
+                <kanban class="o_mk_parent_kanban" create="false" edit="false" delete="false">
+                    <field name="id"/>
+                    <field name="name"/>
+                    <field name="responsible_id"/>
+                    <field name="student_numbers"/>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <t t-if="record.responsible_id.raw_value">
+                                <div class="oe_kanban_global_click" style="width:450px;height:181px">
+                                    <span>
+                                        <img t-att-src="kanban_image('mk.mosque', 'image_medium', record.id.raw_value)" class="oe_kanban_image" style="width:50px;height:50px;"/>
+                                        <span style="font-size:16px;color:##af481f">
+                                            <b>
+                                                <field name="display_name"/>
+                                            </b>
+                                        </span>
+                                    </span>
+
+                                    <div class="#" style="border-top:1px #4a8448 solid;margin-top:10px;">
+                                    </div>
+
+                                    <div class="oe_kanban_details"
+                                         style="text-align:right;padding-bottom:5px;clear:both;vertical-align: right;margin-top:10px;">
+                                        <a type="object" name="open_other">
+                                            <div class="oe_super">
+                                                <br></br>
+                                                <br></br>
+                                                <span style="color:white"><b>الإداريين</b></span>
+                                                <span class="oe_counter">
+                                                    <b><field name="others_emp_number"/></b>
+                                                </span>
+                                            </div>
+                                        </a>
+
+                                        <a type="object" name="open_episods">
+                                            <div class="oe_episodes">
+                                                <br></br>
+                                                <br></br>
+                                                <span style="color:white"><b>الحلقات</b></span>
+                                                <span class="oe_counter"><b><field name="episodes_number"/></b></span>
+                                            </div>
+                                        </a>
+                                        <a type="object" name="open_student">
+                                            <div class="oe_teacher">
+                                                <br></br>
+                                                <br></br>
+                                                <span style="color:white"><b>الطلاب</b></span>
+                                                <span class="oe_counter"><b><field name="student_numbers"/></b></span>
+                                            </div>
+                                        </a>
+
+                                        <a type="object" name="open_teacher">
+                                            <div class="oe_teacher">
+                                                <br></br>
+                                                <br></br>
+                                                <span style="color:white"><b>المعلمين</b></span>
+                                                <span class="oe_counter"><b><field name="teachers_number"/></b></span>
+                                            </div>
+                                        </a>
+                                        <t t-if="student_numbers &gt; 0">
+                                            <a type="object" name="open_student">
+                                                <div class="oe_masjed_icon">
+                                                    <br></br>
+                                                    <br></br>
+                                                    <span style="color:white"><b>الطلاب</b></span>
+                                                    <span class="oe_counter"><b><field name="student_numbers"/></b></span>
+                                                </div>
+                                            </a>
+                                        </t>
+                                        <a type="object" name="open_super">
+                                            <div class="oe_super">
+                                                <br></br>
+                                                <br></br>
+                                                <span style="color:white"><b>المشرفين</b></span>
+                                                <span class="oe_counter"><b><field name="supervisors_no"/></b></span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </t>
+
+                            <t t-else="">
+                                <div class="oe_kanban_global_click"
+                                     style="width:450px;height:181px; background-color: #aad9c5;color: #fff;">
+                                    <span>
+                                        <img t-att-src="kanban_image('mk.mosque', 'image_medium', record.id.raw_value)" class="oe_kanban_image" style="width:50px;height:50px;"/>
+                                        <span style="font-size:16px;color:##af481f"><b><field name="name"/></b></span>
+                                    </span>
+
+                                    <div class="#" style="border-top:1px #4a8448 solid;margin-top:10px;">
+                                    </div>
+
+                                    <div class="oe_kanban_details"
+                                         style="text-align:right;padding-bottom:5px;clear:both;vertical-align: right;margin-top:10px;">
+                                        <a type="object" name="open_other">
+                                            <div class="oe_super">
+                                                <br></br>
+                                                <br></br>
+                                                <span style="color:white"><b>الإداريين</b></span>
+                                                <span class="oe_counter"><b><field name="others_emp_number"/></b></span>
+                                            </div>
+                                        </a>
+
+                                        <a type="object" name="open_episods">
+                                            <div class="oe_episodes">
+                                                <br></br>
+                                                <br></br>
+                                                <span style="color:white"><b>الحلقات</b></span>
+                                                <span class="oe_counter"><b><field name="episodes_number"/></b></span>
+                                            </div>
+                                        </a>
+
+                                         <a type="object" name="open_student">
+                                            <div class="oe_teacher">
+                                                <br></br>
+                                                <br></br>
+                                                <span style="color:white"><b>الطلاب</b></span>
+                                                <span class="oe_counter"><b><field name="student_numbers"/></b></span>
+                                            </div>
+                                        </a>
+
+                                        <a type="object" name="open_teacher">
+                                            <div class="oe_teacher">
+                                                <br></br>
+                                                <br></br>
+                                                <span style="color:white"><b>المعلمين</b></span>
+                                                <span class="oe_counter"><b><field name="teachers_number"/></b></span>
+                                            </div>
+                                        </a>
+                                        <t t-if="student_numbers &gt; 0">
+                                            <a type="object" name="open_student">
+                                                <div class="oe_masjed_icon">
+                                                    <br></br>
+                                                    <br></br>
+                                                    <span style="color:white"><b>الطلاب</b></span>
+                                                    <span class="oe_counter"><b><field name="student_numbers"/></b></span>
+                                                </div>
+                                            </a>
+                                        </t>
+                                        <a type="object" name="open_super">
+                                            <div class="oe_super">
+                                                <br></br>
+                                                <br></br>
+                                                <span style="color:white"><b>المشرفين</b></span>
+                                                <span class="oe_counter"><b><field name="supervisors_no"/></b></span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </t>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
+        <record id="mk_mosque_action" model="ir.actions.act_window">
+            <field name="name">mosque</field>
+            <field name="res_model">mk.mosque</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="binding_view_types">form</field>
+            <field name="view_mode">kanban,tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+            <!-- <field name="search_view_id" ref="mk_mosque_search_view"/> -->
+        </record>
+
+        <!-- <menuitem name="mosque " id="mk_mosque_menu_1" sequence="0" parent="mk_episode_management_menu" action="mk_mosque_action"/> -->
+
+        <menuitem name="mosque " id="mk_mosque_menu_1" sequence="0" parent="mk_episode_management_menu"
+                  action="mk_mosque_action"
+                  groups="group_mosque_create,group_mosque_edit,group_mosque_read,group_mosque_confirm,group_mosque_reject"/>
+    </data>
+</odoo>

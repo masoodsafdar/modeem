@@ -1,0 +1,755 @@
+<odoo>
+    <data noupdate="1">
+        <record id="template_repport_permession" model="mail.template">
+            <field name="name">إعداد تقرير تصريح المساجد</field>
+            <field name="repport_type">mosuqe_permession</field>
+            <field name="model_id" ref="model_mosque_permision"/>
+            <field name="body_html">
+                <![CDATA[
+           <div style="font-size:42px;font-family:Neo Sans Arabic; text-align:center;">
+    <div style="text-align: center; font-family:Neo Sans Arabic; font-size:42px;">
+        : الحمد الله والصلاة والسلام على رسول الله .. أما بعد
+    </div>
+    <div style="text-align: center; font-family:Neo Sans Arabic; font-size:42px;">
+        فإن الجمعية الخيرية لتحفيظ القرآن الكريم في منطقة الرياض
+    </div>
+    <div style="text-align: center; font-family:Neo Sans Arabic; font-size:42px;">
+        و بناءً على صلاحيتها قررت تجديد تصريح رقم
+        <b style="text-align: center; font-family:Neo Sans Arabic; font-size:42px;">
+            ${object.register_code}-${object.district_id.code}-${object.center_id.code}
+        </b>
+لمسجد
+        </div>
+    <div style="text-align: center; font-family:Neo Sans Arabic; font-size:42px;">
+        <b style="text-align: center; font-family:Neo Sans Arabic; font-size:42px;">
+                ${object.masjed_id.name}</b>
+            </div>
+    <div style="text-align: center; font-family:Neo Sans Arabic; font-size:42px;">
+        لتحفيظ القرآن الكريم بالرياض
+        بحي
+        <b style="text-align: center; font-family:Neo Sans Arabic; font-size:42px;">
+            ${object.district_id.name}
+        </b>
+        في مركز
+        <b style="text-align: center; font-family:Neo Sans Arabic; font-size:42px;">
+            ${object.center_id.name}
+        </b>
+    </div>
+    <div style="text-align: center; font-family:Neo Sans Arabic; font-size:42px;">
+        ،،،
+        هذا ونسأل الله التوفيق والإعانة والسداد
+    </div>
+</div>
+<br>
+<br>
+<br>
+
+<br>
+
+<div style="font-family:Neo Sans Arabic; font-size: 18px; text-align: right; padding-right: 70px;">
+تاريخ الانتهاء
+<b style="font-family:Neo Sans Arabic; font-size:18px;">
+    ${object.hijri_permision_end_date [0:4]}/${object.hijri_permision_end_date [5:7]}/${object.hijri_permision_end_date [8:10]}
+</b>
+</div>
+ ]]>
+            </field>
+            <field name="body_html2">
+                <![CDATA[
+ <div style="font-size:42px;font-family:Neo Sans Arabic; text-align:center;">
+    <div style="text-align: center; font-family:Neo Sans Arabic; font-size:42px;">
+        : الحمد الله والصلاة والسلام على رسول الله .. أما بعد
+    </div>
+    <div style="text-align: center; font-family:Neo Sans Arabic; font-size:42px;">
+        فإن الجمعية الخيرية لتحفيظ القرآن الكريم في منطقة الرياض
+    </div>
+    <div style="text-align: center; font-family:Neo Sans Arabic; font-size:42px;">
+        و بناءً على صلاحيتها قررت تجديد تصريح رقم
+        <b style="text-align: center; font-family:Neo Sans Arabic; font-size:42px;">
+            ${object.register_code.replace('0','٠').replace('1','١').replace('2','٢').replace('3','٣').replace('4','٤').replace('5','٥').replace('6','٦').replace('7','٧').replace('8','٨').replace('9','٩')}-${object.district_id.code.replace('0','٠').replace('1','١').replace('2','٢').replace('3','٣').replace('4','٤').replace('5','٥').replace('6','٦').replace('7','٧').replace('8','٨').replace('9','٩')}-${object.center_id.code.replace('0','٠').replace('1','١').replace('2','٢').replace('3','٣').replace('4','٤').replace('5','٥').replace('6','٦').replace('7','٧').replace('8','٨').replace('9','٩')}
+        </b>
+لمسجد
+    </div>
+    <div style="text-align: center; font-family:Neo Sans Arabic; font-size:42px;">
+        <b style="text-align: center; font-family:Neo Sans Arabic; font-size:42px;">
+ ${object.masjed_id.name}</b>
+ </div>
+    <div style="text-align: center; font-family:Neo Sans Arabic; font-size:42px;">
+        لتحفيظ القرآن الكريم بالرياض
+        بحي
+        <b style="text-align: center; font-family:Neo Sans Arabic; font-size:42px;">
+            ${object.district_id.name}
+        </b>
+        في مركز
+        <b style="text-align: center; font-family:Neo Sans Arabic; font-size:42px;">
+            ${object.center_id.name}
+        </b>
+    </div>
+    <div style="text-align: center; font-family:Neo Sans Arabic; font-size:42px;">
+        ،،،
+        هذا ونسأل الله التوفيق والإعانة والسداد
+    </div>
+</div>
+<br>
+<br>
+<br>
+
+<br>
+
+<div style="font-family:Neo Sans Arabic; font-size: 18px; text-align: right; padding-right: 70px;">
+تاريخ الانتهاء
+<b style="font-family:Neo Sans Arabic; font-size:18px;">
+    ${object.hijri_permision_end_date.replace('0','٠').replace('1','١').replace('2','٢').replace('3','٣').replace('4','٤').replace('5','٥').replace('6','٦').replace('7','٧').replace('8','٨').replace('9','٩') [0:4]}/${object.hijri_permision_end_date.replace('0','٠').replace('1','١').replace('2','٢').replace('3','٣').replace('4','٤').replace('5','٥').replace('6','٦').replace('7','٧').replace('8','٨').replace('9','٩') [5:7]}/${object.hijri_permision_end_date.replace('0','٠').replace('1','١').replace('2','٢').replace('3','٣').replace('4','٤').replace('5','٥').replace('6','٦').replace('7','٧').replace('8','٨').replace('9','٩') [8:10]}
+</b>
+</div>
+              ]]>
+            </field>
+            <field name="back" type="base64" file="mk_episode_management/static/src/img/permission_mosque.png"/>
+        </record>
+
+        <record id="template_repport_school_permession" model="mail.template">
+            <field name="name">إعداد تقرير تصريح المدارس</field>
+            <field name="repport_type">mosuqe_school_permession</field>
+            <field name="model_id" ref="model_mosque_permision"/>
+            <field name="body_html">
+                <![CDATA[
+<div style="font-size:42px;font-family:Neo Sans Arabic; text-align:center;">
+    <div style="text-align: center; font-family:Neo Sans Arabic; font-size:42px;">
+        : الحمد الله والصلاة والسلام على رسول الله .. أما بعد
+    </div>
+    <div style="text-align: center; font-family:Neo Sans Arabic; font-size:42px;">
+        فإن الجمعية الخيرية لتحفيظ القرآن الكريم في منطقة الرياض
+    </div>
+    <div style="text-align: center; font-family:Neo Sans Arabic; font-size:42px;">
+        و بناءً على صلاحيتها قررت تجديد تصريح رقم
+        <b style="text-align: center; font-family:Neo Sans Arabic; font-size:42px;">
+            ${object.register_code}-${object.district_id.code}-${object.center_id.code}
+        </b>
+            لمدرسة
+    </div>
+    <div style="text-align: center; font-family:Neo Sans Arabic; font-size:42px;">
+        <b style="text-align: center; font-family:Neo Sans Arabic; font-size:42px;">
+            ${object.masjed_id.name}-${object.masjed_id.episode_value.replace('ev', 'مسائية').replace('mo', 'صباحية')}
+        </b>
+        <p
+ </div>
+    <div style="text-align: center; font-family:Neo Sans Arabic; font-size:42px;">
+        لتحفيظ القرآن الكريم بالرياض
+        بحي
+        <b style="text-align: center; font-family:Neo Sans Arabic; font-size:42px;">
+            ${object.district_id.name}
+        </b>
+        في مركز
+        <b style="text-align: center; font-family:Neo Sans Arabic; font-size:42px;">
+            ${object.center_id.name}
+        </b>
+    </div>
+    <div style="text-align: center; font-family:Neo Sans Arabic; font-size:42px;">
+        ،،،
+        هذا ونسأل الله التوفيق والإعانة والسداد
+    </div>
+</div>
+<br>
+<br>
+<br>
+
+<br>
+
+<div style="font-family:Neo Sans Arabic; font-size: 18px; text-align: right; padding-right: 70px;">
+تاريخ الانتهاء
+<b style="font-family:Neo Sans Arabic; font-size:18px;">
+    ${object.hijri_permision_end_date [0:4]}/${object.hijri_permision_end_date [5:7]}/${object.hijri_permision_end_date [8:10]}
+</b>
+</div>
+ ]]>
+            </field>
+            <field name="body_html2">
+                <![CDATA[
+            <div style="font-size:42px;font-family:Neo Sans Arabic; text-align:center;">
+    <div style="text-align: center; font-family:Neo Sans Arabic; font-size:42px;">
+        : الحمد الله والصلاة والسلام على رسول الله .. أما بعد
+    </div>
+    <div style="text-align: center; font-family:Neo Sans Arabic; font-size:42px;">
+        فإن الجمعية الخيرية لتحفيظ القرآن الكريم في منطقة الرياض
+    </div>
+    <div style="text-align: center; font-family:Neo Sans Arabic; font-size:42px;">
+        و بناءً على صلاحيتها قررت تجديد تصريح رقم
+        <b style="text-align: center; font-family:Neo Sans Arabic; font-size:42px;">
+            ${object.register_code.replace('0','٠').replace('1','١').replace('2','٢').replace('3','٣').replace('4','٤').replace('5','٥').replace('6','٦').replace('7','٧').replace('8','٨').replace('9','٩')}-${object.district_id.code.replace('0','٠').replace('1','١').replace('2','٢').replace('3','٣').replace('4','٤').replace('5','٥').replace('6','٦').replace('7','٧').replace('8','٨').replace('9','٩')}-${object.center_id.code.replace('0','٠').replace('1','١').replace('2','٢').replace('3','٣').replace('4','٤').replace('5','٥').replace('6','٦').replace('7','٧').replace('8','٨').replace('9','٩')}
+        </b>
+            لمدرسة
+    </div>
+    <div style="text-align: center; font-family:Neo Sans Arabic; font-size:42px;">
+        <b style="text-align: center; font-family:Neo Sans Arabic; font-size:42px;">
+ ${object.masjed_id.name}-${object.masjed_id.episode_value.replace('ev', 'مسائية').replace('mo', 'صباحية')}
+         </b>
+            </div>
+    <div style="text-align: center; font-family:Neo Sans Arabic; font-size:42px;">
+        لتحفيظ القرآن الكريم بالرياض
+        بحي
+        <b style="text-align: center; font-family:Neo Sans Arabic; font-size:42px;">
+            ${object.district_id.name}
+        </b>
+        في مركز
+        <b style="text-align: center; font-family:Neo Sans Arabic; font-size:42px;">
+            ${object.center_id.name}
+        </b>
+    </div>
+    <div style="text-align: center; font-family:Neo Sans Arabic; font-size:42px;">
+        ،،،
+        هذا ونسأل الله التوفيق والإعانة والسداد
+    </div>
+</div>
+<br>
+<br>
+<br>
+
+<br>
+
+<div style="font-family:Neo Sans Arabic; font-size: 18px; text-align: right; padding-right: 70px;">
+تاريخ الانتهاء
+<b style="font-family:Neo Sans Arabic; font-size:18px;">
+    ${object.hijri_permision_end_date.replace('0','٠').replace('1','١').replace('2','٢').replace('3','٣').replace('4','٤').replace('5','٥').replace('6','٦').replace('7','٧').replace('8','٨').replace('9','٩') [0:4]}/${object.hijri_permision_end_date.replace('0','٠').replace('1','١').replace('2','٢').replace('3','٣').replace('4','٤').replace('5','٥').replace('6','٦').replace('7','٧').replace('8','٨').replace('9','٩') [5:7]}/${object.hijri_permision_end_date.replace('0','٠').replace('1','١').replace('2','٢').replace('3','٣').replace('4','٤').replace('5','٥').replace('6','٦').replace('7','٧').replace('8','٨').replace('9','٩') [8:10]}
+</b>
+</div>
+              ]]>
+            </field>
+            <field name="back" type="base64" file="mk_episode_management/static/src/img/permission_school.png"/>
+        </record>
+
+
+        <record id="repport_mosque_supervisors" model="mail.template">
+            <field name="name">إعداد تقرير طلبات تكاليف مشرفي المساجد</field>
+            <field name="repport_type">mosque_supervisor</field>
+            <field name="model_id" ref="model_mosque_supervisor_request"/>
+            <field name="is_arabic_number" eval="True"/>
+            <field name="body_html">
+                <![CDATA[
+               <div style="font-size:26px;text-align:justify;direction:rtl;font-family:Neo Sans Arabic;padding-right:50px;padding-left:50px">
+    <div>
+        <div style="font-size:26px;text-align:justify;font-family:Neo Sans Arabic;padding-right:50px;padding-left:50px">
+            الحمد لله وحده , والصلاة والسلام على من لا نبي بعده.. وبعد..
+        </div>
+        <div style="font-size:26px;text-align:justify;font-family:Neo Sans Arabic;padding-right:50px;padding-left:50px">
+            فإن الجمعية الخيرية لتحفيظ القرآن الكريم في الرياض, بناء على صلاحياتها،
+        </div>
+        <div style="font-size:26px;text-align:justify;font-family:Neo Sans Arabic;padding-right:50px;padding-left:50px">
+            وبعد الاطلاع على التصريح رقم
+            <b style="font-size:26px;font-family:Neo Sans Arabic;">
+                ${object.mosque_id.register_code}-${object.mosque_id.district_id.code}-${object.center_id.code}
+            </b>
+            القاضي بافتتاح حلقات
+        </div>
+        <div style="font-size:26px;text-align:justify;font-family:Neo Sans Arabic;padding-right:50px;padding-left:50px">
+            لتحفيظ القرآن الكريم بمسجد
+            <b style="font-size:26px;font-family:Neo Sans Arabic;">
+                ${object.mosque_id.name}
+            </b>
+            في مدينة الرياض بحي
+            <b style="font-size:26px;font-family:Neo Sans Arabic;">
+                ${object.mosque_id.district_id.name}
+            </b>
+            التابعة لـمركز
+            <b style="font-size:26px;font-family:Neo Sans Arabic;">
+                ${object.center_id.name}
+            </b>
+        </div>
+        <div style="font-size:26px;text-align:justify;font-family:Neo Sans Arabic;padding-right:50px;padding-left:50px">
+            قررت ما يلي:
+        </div>
+        <div style="font-size:26px;text-align:justify;font-family:Neo Sans Arabic;padding-right:50px;padding-left:50px">
+            <b style="font-size:26px;font-family:Neo Sans Arabic;">
+                أولاً:
+            </b>
+            تكليف الشيخ
+            <b style="font-size:26px;font-family:Neo Sans Arabic;">
+                ${object.employee_id.name}
+            </b>
+            هوية رقم
+            <b style="font-size:26px;font-family:Neo Sans Arabic;">
+                ${object.employee_id.identification_id}
+            </b>
+        </div>
+        <div style="font-size:26px;text-align:justify;font-family:Neo Sans Arabic;padding-right:50px;padding-left:50px">
+            بالإشراف على مسجد
+            <b style="font-size:26px;font-family:Neo Sans Arabic;">
+                ${object.mosque_id.name}
+            </b>
+        </div>
+        <div style="font-size:26px;text-align:justify;font-family:Neo Sans Arabic;padding-right:50px;padding-left:50px">
+            <b style="font-size:26px;font-family:Neo Sans Arabic;">
+                ثانياً:
+            </b>
+            يلتزم المشرف بالمسئوليات المناطة به، والقيام
+            بكافة المهام المكلف بها من قبل
+            الجمعية، و الالتزام بالأنظمة واللوائح
+            الصادرة منها
+        </div>
+    </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div style="font-family:Neo Sans Arabic; font-size: 22px; text-align: right; padding-right: 70px;">
+تاريخ الانتهاء
+<b style="font-family:Neo Sans Arabic; font-size:18px;">
+    ${object.hijri_end_date [0:4]}/${object.hijri_end_date [5:7]}/${object.hijri_end_date [8:10]}
+</b>
+</div>
+]]>
+            </field>
+            <field name="body_html2">
+                <![CDATA[
+<div style="font-size:26px;text-align:justify;direction:rtl;font-family:Neo Sans Arabic;padding-right:50px;padding-left:50px">
+    <div>
+        <div style="font-size:26px;text-align:justify;font-family:Neo Sans Arabic;padding-right:50px;padding-left:50px">
+            الحمد لله وحده , والصلاة والسلام على من لا نبي بعده.. وبعد..
+        </div>
+        <div style="font-size:26px;text-align:justify;font-family:Neo Sans Arabic;padding-right:50px;padding-left:50px">
+            فإن الجمعية الخيرية لتحفيظ القرآن الكريم في الرياض, بناء على صلاحياتها،
+        </div>
+        <div style="font-size:26px;text-align:justify;font-family:Neo Sans Arabic;padding-right:50px;padding-left:50px">
+            وبعد الاطلاع على التصريح رقم
+            <b style="font-size:26px;font-family:Neo Sans Arabic;">
+                ${object.mosque_id.register_code.replace('0','٠').replace('1','١').replace('2','٢').replace('3','٣').replace('4','٤').replace('5','٥').replace('6','٦').replace('7','٧').replace('8','٨').replace('9','٩')}-${object.mosque_id.district_id.code.replace('0','٠').replace('1','١').replace('2','٢').replace('3','٣').replace('4','٤').replace('5','٥').replace('6','٦').replace('7','٧').replace('8','٨').replace('9','٩')}-${object.center_id.code.replace('0','٠').replace('1','١').replace('2','٢').replace('3','٣').replace('4','٤').replace('5','٥').replace('6','٦').replace('7','٧').replace('8','٨').replace('9','٩')}
+            </b>
+            القاضي بافتتاح حلقات
+        </div>
+        <div style="font-size:26px;text-align:justify;font-family:Neo Sans Arabic;padding-right:50px;padding-left:50px">
+            لتحفيظ القرآن الكريم بمسجد
+            <b style="font-size:26px;font-family:Neo Sans Arabic;">
+                ${object.mosque_id.name}
+            </b>
+            في مدينة الرياض بحي
+            <b style="font-size:26px;font-family:Neo Sans Arabic;">
+                ${object.mosque_id.district_id.name}
+            </b>
+            التابعة لـمركز
+            <b style="font-size:26px;font-family:Neo Sans Arabic;">
+                ${object.center_id.name}
+            </b>
+        </div>
+        <div style="font-size:26px;text-align:justify;font-family:Neo Sans Arabic;padding-right:50px;padding-left:50px">
+            قررت ما يلي:
+        </div>
+        <div style="font-size:26px;text-align:justify;font-family:Neo Sans Arabic;padding-right:50px;padding-left:50px">
+            <b style="font-size:26px;font-family:Neo Sans Arabic;">
+                أولاً:
+            </b>
+            تكليف الشيخ
+            <b style="font-size:26px;font-family:Neo Sans Arabic;">
+                ${object.employee_id.name}
+            </b>
+            هوية رقم
+            <b style="font-size:26px;font-family:Neo Sans Arabic;">
+                ${object.employee_id.identification_id.replace('0','٠').replace('1','١').replace('2','٢').replace('3','٣').replace('4','٤').replace('5','٥').replace('6','٦').replace('7','٧').replace('8','٨').replace('9','٩')}
+            </b>
+        </div>
+        <div style="font-size:26px;text-align:justify;font-family:Neo Sans Arabic;padding-right:50px;padding-left:50px">
+            بالإشراف على مسجد
+            <b style="font-size:26px;font-family:Neo Sans Arabic;">
+                ${object.mosque_id.name}
+            </b>
+        </div>
+        <div style="font-size:26px;text-align:justify;font-family:Neo Sans Arabic;padding-right:50px;padding-left:50px">
+            <b style="font-size:26px;font-family:Neo Sans Arabic;">
+                ثانياً:
+            </b>
+            يلتزم المشرف بالمسئوليات المناطة به، والقيام
+            بكافة المهام المكلف بها من قبل
+            الجمعية، و الالتزام بالأنظمة واللوائح
+            الصادرة منها
+        </div>
+    </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div style="font-family:Neo Sans Arabic; font-size: 18px; text-align: right; padding-right: 70px;">
+تاريخ الانتهاء
+<b style="font-family:Neo Sans Arabic; font-size:18px;">
+    ${object.hijri_end_date.replace('0','٠').replace('1','١').replace('2','٢').replace('3','٣').replace('4','٤').replace('5','٥').replace('6','٦').replace('7','٧').replace('8','٨').replace('9','٩') [0:4]}/${object.hijri_end_date.replace('0','٠').replace('1','١').replace('2','٢').replace('3','٣').replace('4','٤').replace('5','٥').replace('6','٦').replace('7','٧').replace('8','٨').replace('9','٩') [5:7]}/${object.hijri_end_date.replace('0','٠').replace('1','١').replace('2','٢').replace('3','٣').replace('4','٤').replace('5','٥').replace('6','٦').replace('7','٧').replace('8','٨').replace('9','٩') [8:10]}
+</b>
+</div>
+]]>
+            </field>
+            <field name="back" type="base64" file="mk_episode_management/static/src/img/supervisor_mosque.png"/>
+        </record>
+
+        <record id="repport_school_supervisors" model="mail.template">
+            <field name="name">إعداد تقرير طلبات تكاليف مشرفي المدارس</field>
+            <field name="repport_type">school_supervisor</field>
+            <field name="model_id" ref="model_mosque_supervisor_request"/>
+            <field name="is_arabic_number" eval="True"/>
+            <field name="body_html">
+                <![CDATA[
+               <div style="font-size:26px;text-align:justify;direction:rtl;font-family:Neo Sans Arabic;padding-right:50px;padding-left:50px">
+    <div>
+        <div style="font-size:26px;text-align:justify;font-family:Neo Sans Arabic;padding-right:50px;padding-left:50px">
+            الحمد لله وحده , والصلاة والسلام على من لا نبي بعده.. وبعد..
+        </div>
+        <div style="font-size:26px;text-align:justify;font-family:Neo Sans Arabic;padding-right:50px;padding-left:50px">
+            فإن الجمعية الخيرية لتحفيظ القرآن الكريم في الرياض, بناء على صلاحياتها،
+        </div>
+        <div style="font-size:26px;text-align:justify;font-family:Neo Sans Arabic;padding-right:50px;padding-left:50px">
+            وبعد الاطلاع على التصريح رقم
+            <b style="font-size:26px;font-family:Neo Sans Arabic;">
+                ${object.mosque_id.register_code}-${object.mosque_id.district_id.code}-${object.center_id.code}
+            </b>
+            القاضي بافتتاح حلقات
+        </div>
+        <div style="font-size:26px;text-align:justify;font-family:Neo Sans Arabic;padding-right:50px;padding-left:50px">
+            لتحفيظ القرآن الكريم بمدرسة
+            <b style="font-size:26px;font-family:Neo Sans Arabic;">
+                ${object.mosque_id.name}
+            </b>
+            في مدينة الرياض بحي
+            <b style="font-size:26px;font-family:Neo Sans Arabic;">
+                ${object.mosque_id.district_id.name}
+            </b>
+            التابعة لـمركز
+            <b style="font-size:26px;font-family:Neo Sans Arabic;">
+                ${object.center_id.name}
+            </b>
+        </div>
+        <div style="font-size:26px;text-align:justify;font-family:Neo Sans Arabic;padding-right:50px;padding-left:50px">
+            قررت ما يلي:
+        </div>
+        <div style="font-size:26px;text-align:justify;font-family:Neo Sans Arabic;padding-right:50px;padding-left:50px">
+            <b style="font-size:26px;font-family:Neo Sans Arabic;">
+                أولاً:
+            </b>
+            تكليف الشيخ
+            <b style="font-size:26px;font-family:Neo Sans Arabic;">
+                ${object.employee_id.name}
+            </b>
+            هوية رقم
+            <b style="font-size:26px;font-family:Neo Sans Arabic;">
+                ${object.employee_id.identification_id}
+            </b>
+        </div>
+        <div style="font-size:26px;text-align:justify;font-family:Neo Sans Arabic;padding-right:50px;padding-left:50px">
+            بالإشراف على مدرسة
+            <b style="font-size:26px;font-family:Neo Sans Arabic;">
+                ${object.mosque_id.name}
+            </b>
+        </div>
+        <div style="font-size:26px;text-align:justify;font-family:Neo Sans Arabic;padding-right:50px;padding-left:50px">
+            <b style="font-size:26px;font-family:Neo Sans Arabic;">
+                ثانياً:
+            </b>
+            يلتزم المشرف بالمسئوليات المناطة به، والقيام
+            بكافة المهام المكلف بها من قبل
+            الجمعية، و الالتزام بالأنظمة واللوائح
+            الصادرة منها
+        </div>
+    </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div style="font-family:Neo Sans Arabic; font-size: 22px; text-align: right; padding-right: 70px;">
+تاريخ الانتهاء
+<b style="font-family:Neo Sans Arabic; font-size:18px;">
+    ${object.hijri_end_date [0:4]}/${object.hijri_end_date [5:7]}/${object.hijri_end_date [8:10]}
+</b>
+</div>
+]]>
+            </field>
+            <field name="body_html2">
+                <![CDATA[
+<div style="font-size:26px;text-align:justify;direction:rtl;font-family:Neo Sans Arabic;padding-right:50px;padding-left:50px">
+    <div>
+        <div style="font-size:26px;text-align:justify;font-family:Neo Sans Arabic;padding-right:50px;padding-left:50px">
+            الحمد لله وحده , والصلاة والسلام على من لا نبي بعده.. وبعد..
+        </div>
+        <div style="font-size:26px;text-align:justify;font-family:Neo Sans Arabic;padding-right:50px;padding-left:50px">
+            فإن الجمعية الخيرية لتحفيظ القرآن الكريم في الرياض, بناء على صلاحياتها،
+        </div>
+        <div style="font-size:26px;text-align:justify;font-family:Neo Sans Arabic;padding-right:50px;padding-left:50px">
+            وبعد الاطلاع على التصريح رقم
+            <b style="font-size:26px;font-family:Neo Sans Arabic;">
+                ${object.mosque_id.register_code.replace('0','٠').replace('1','١').replace('2','٢').replace('3','٣').replace('4','٤').replace('5','٥').replace('6','٦').replace('7','٧').replace('8','٨').replace('9','٩')}-${object.mosque_id.district_id.code.replace('0','٠').replace('1','١').replace('2','٢').replace('3','٣').replace('4','٤').replace('5','٥').replace('6','٦').replace('7','٧').replace('8','٨').replace('9','٩')}-${object.center_id.code.replace('0','٠').replace('1','١').replace('2','٢').replace('3','٣').replace('4','٤').replace('5','٥').replace('6','٦').replace('7','٧').replace('8','٨').replace('9','٩')}
+            </b>
+            القاضي بافتتاح حلقات
+        </div>
+        <div style="font-size:26px;text-align:justify;font-family:Neo Sans Arabic;padding-right:50px;padding-left:50px">
+            لتحفيظ القرآن الكريم بمدرسة
+            <b style="font-size:26px;font-family:Neo Sans Arabic;">
+                ${object.mosque_id.name}
+            </b>
+            في مدينة الرياض بحي
+            <b style="font-size:26px;font-family:Neo Sans Arabic;">
+                ${object.mosque_id.district_id.name}
+            </b>
+            التابعة لـمركز
+            <b style="font-size:26px;font-family:Neo Sans Arabic;">
+                ${object.center_id.name}
+            </b>
+        </div>
+        <div style="font-size:26px;text-align:justify;font-family:Neo Sans Arabic;padding-right:50px;padding-left:50px">
+            قررت ما يلي:
+        </div>
+        <div style="font-size:26px;text-align:justify;font-family:Neo Sans Arabic;padding-right:50px;padding-left:50px">
+            <b style="font-size:26px;font-family:Neo Sans Arabic;">
+                أولاً:
+            </b>
+            تكليف الشيخ
+            <b style="font-size:26px;font-family:Neo Sans Arabic;">
+                ${object.employee_id.name}
+            </b>
+            هوية رقم
+            <b style="font-size:26px;font-family:Neo Sans Arabic;">
+                ${object.employee_id.identification_id.replace('0','٠').replace('1','١').replace('2','٢').replace('3','٣').replace('4','٤').replace('5','٥').replace('6','٦').replace('7','٧').replace('8','٨').replace('9','٩')}
+            </b>
+        </div>
+        <div style="font-size:26px;text-align:justify;font-family:Neo Sans Arabic;padding-right:50px;padding-left:50px">
+            بالإشراف على مدرسة
+            <b style="font-size:26px;font-family:Neo Sans Arabic;">
+                ${object.mosque_id.name}
+            </b>
+        </div>
+        <div style="font-size:26px;text-align:justify;font-family:Neo Sans Arabic;padding-right:50px;padding-left:50px">
+            <b style="font-size:26px;font-family:Neo Sans Arabic;">
+                ثانياً:
+            </b>
+            يلتزم المشرف بالمسئوليات المناطة به، والقيام
+            بكافة المهام المكلف بها من قبل
+            الجمعية، و الالتزام بالأنظمة واللوائح
+            الصادرة منها
+        </div>
+    </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div style="font-family:Neo Sans Arabic; font-size: 18px; text-align: right; padding-right: 70px;">
+تاريخ الانتهاء
+<b style="font-family:Neo Sans Arabic; font-size:18px;">
+    ${object.hijri_end_date.replace('0','٠').replace('1','١').replace('2','٢').replace('3','٣').replace('4','٤').replace('5','٥').replace('6','٦').replace('7','٧').replace('8','٨').replace('9','٩') [0:4]}/${object.hijri_end_date.replace('0','٠').replace('1','١').replace('2','٢').replace('3','٣').replace('4','٤').replace('5','٥').replace('6','٦').replace('7','٧').replace('8','٨').replace('9','٩') [5:7]}/${object.hijri_end_date.replace('0','٠').replace('1','١').replace('2','٢').replace('3','٣').replace('4','٤').replace('5','٥').replace('6','٦').replace('7','٧').replace('8','٨').replace('9','٩') [8:10]}
+</b>
+</div>
+]]>
+            </field>
+            <field name="back" type="base64" file="mk_episode_management/static/src/img/supervisor_mosque.png"/>
+        </record>
+
+        <record id="repport_mosque_directors" model="mail.template">
+            <field name="name">إعداد تقرير طلبات تكاليف مديري المساجد/المدارس</field>
+            <field name="repport_type">mosque_directors</field>
+            <field name="model_id" ref="model_mosque_supervisor_request"/>
+            <field name="is_arabic_number" eval="True"/>
+            <field name="body_html">
+                <![CDATA[
+<div style="font-size:26px;text-align:justify;direction:rtl;font-family:Neo Sans Arabic;padding-right:50px;padding-left:50px">
+    <div style="font-size:26px;text-align:justify;font-family:Neo Sans Arabic;padding-right:50px;padding-left:50px">
+        الحمد لله وحده , والصلاة والسلام على من لا نبي بعده.. وبعد..
+    </div>
+    <div style="font-size:26px;text-align:justify;font-family:Neo Sans Arabic;padding-right:50px;padding-left:50px">
+        فإن الجمعية الخيرية لتحفيظ القرآن الكريم في الرياض، بناء على صلاحياتها،
+    </div>
+    <div style="font-size:26px;text-align:justify;font-family:Neo Sans Arabic;padding-right:50px;padding-left:50px">
+        وبعد الاطلاع على التصريح رقم
+        <b style="font-family:Neo Sans Arabic; font-size:26px;">
+            ${object.mosque_id.register_code}-${object.mosque_id.district_id.code}-${object.center_id.code}
+        </b>
+        القاضي بافتتاح مدرسة
+    </div>
+    <div style="font-size:26px;text-align:justify;font-family:Neo Sans Arabic;padding-right:50px;padding-left:50px">
+        لتحفيظ القرآن الكريم باسم
+        <b style="font-family:Neo Sans Arabic; font-size:26px;">
+            ${object.mosque_id.name}
+        </b>
+        في مدينة الرياض
+        بحي
+        <b style="font-family:Neo Sans Arabic; font-size:26px;">
+            ${object.mosque_id.district_id.name}
+        </b>
+        التابعة لـ
+        <b style="font-family:Neo Sans Arabic; font-size:26px;">
+            ${object.center_id.name}
+        </b>
+    </div>
+    <div style="font-size:26px;text-align:justify;font-family:Neo Sans Arabic;padding-right:50px;padding-left:50px">
+        <b style="font-family:Neo Sans Arabic; font-size:26px;">
+            قررت ما يلي:
+        </b>
+    </div>
+    <div style="font-size:26px;text-align:justify;font-family:Neo Sans Arabic;padding-right:50px;padding-left:50px">
+        <b style="font-family:Neo Sans Arabic; font-size:26px;">
+            أولاً:
+        </b>
+        تكليف الاستاذة
+        <b style="font-family:Neo Sans Arabic; font-size:26px;">
+            ${object.mosque_admin_id.name}
+        </b>
+        صاحبة الهوية
+        رقم
+        <b style="font-family:Neo Sans Arabic; font-size:26px;">
+            ${object.mosque_admin_id.identification_id}
+        </b>
+        بإدارة مدرسة
+        <b style="font-family:Neo Sans Arabic; font-size:26px;">
+            ${object.mosque_id.name}
+        </b>
+    </div>
+    <div style="font-size:26px;text-align:justify;font-family:Neo Sans Arabic;padding-right:50px;padding-left:50px">
+        للفترة
+        <b style="font-family:Neo Sans Arabic; font-size:26px;">
+            ${object.hijri_date_request[0:4]}/${object.hijri_date_request[5:7]}/${object.hijri_date_request[8:10]}
+            -
+            هـ
+            ${object.hijri_end_date[0:4]}/${object.hijri_end_date[5:7]}/${object.hijri_end_date[8:10]}
+            هـ
+        </b>
+    </div>
+    <div style="font-size:26px;text-align:justify;font-family:Neo Sans Arabic;padding-right:50px;padding-left:50px">
+        <b style="font-family:Neo Sans Arabic; font-size:26px;">
+            ثانياً
+            :
+        </b>
+        يلتزم المشرف بالمسئوليات المناطة به، والقيام بكافة المهام المكلف بها من قبل الجمعية، و الالتزام بالأنظمة واللوائح
+        الصادرة منها
+    </div>
+</div>
+]]>
+            </field>
+            <field name="body_html2">
+                <![CDATA[
+<div style="font-size:26px;text-align:justify;direction:rtl;font-family:Neo Sans Arabic;padding-right:50px;padding-left:50px">
+    <div style="font-size:26px;text-align:justify;font-family:Neo Sans Arabic;padding-right:50px;padding-left:50px">
+        الحمد لله وحده , والصلاة والسلام على من لا نبي بعده.. وبعد..
+    </div>
+    <div style="font-size:26px;text-align:justify;font-family:Neo Sans Arabic;padding-right:50px;padding-left:50px">
+        فإن الجمعية الخيرية لتحفيظ القرآن الكريم في الرياض، بناء على صلاحياتها،
+    </div>
+    <div style="font-size:26px;text-align:justify;font-family:Neo Sans Arabic;padding-right:50px;padding-left:50px">
+        وبعد الاطلاع على التصريح رقم
+        <b style="font-family:Neo Sans Arabic; font-size:26px;">
+            ${object.mosque_id.register_code.replace('0','٠').replace('1','١').replace('2','٢').replace('3','٣').replace('4','٤').replace('5','٥').replace('6','٦').replace('7','٧').replace('8','٨').replace('9','٩')}-${object.mosque_id.district_id.code.replace('0','٠').replace('1','١').replace('2','٢').replace('3','٣').replace('4','٤').replace('5','٥').replace('6','٦').replace('7','٧').replace('8','٨').replace('9','٩')}-${object.center_id.code.replace('0','٠').replace('1','١').replace('2','٢').replace('3','٣').replace('4','٤').replace('5','٥').replace('6','٦').replace('7','٧').replace('8','٨').replace('9','٩')}
+        </b>
+        القاضي بافتتاح مدرسة
+    </div>
+    <div style="font-size:26px;text-align:justify;font-family:Neo Sans Arabic;padding-right:50px;padding-left:50px">
+        لتحفيظ القرآن الكريم باسم
+        <b style="font-family:Neo Sans Arabic; font-size:26px;">
+            ${object.mosque_id.name}
+        </b>
+        في مدينة الرياض
+        بحي
+        <b style="font-family:Neo Sans Arabic; font-size:26px;">
+            ${object.mosque_id.district_id.name}
+        </b>
+        التابعة لـ
+        <b style="font-family:Neo Sans Arabic; font-size:26px;">
+            ${object.center_id.name}
+        </b>
+    </div>
+    <div style="font-size:26px;text-align:justify;font-family:Neo Sans Arabic;padding-right:50px;padding-left:50px">
+        <b style="font-family:Neo Sans Arabic; font-size:26px;">
+            قررت ما يلي:
+        </b>
+    </div>
+    <div style="font-size:26px;text-align:justify;font-family:Neo Sans Arabic;padding-right:50px;padding-left:50px">
+        <b style="font-family:Neo Sans Arabic; font-size:26px;">
+            أولاً:
+        </b>
+        تكليف الاستاذة
+        <b style="font-family:Neo Sans Arabic; font-size:26px;">
+            ${object.mosque_admin_id.name}
+        </b>
+        صاحبة الهوية
+        رقم
+        <b style="font-family:Neo Sans Arabic; font-size:26px;">
+            ${object.mosque_admin_id.identification_id.replace('0','٠').replace('1','١').replace('2','٢').replace('3','٣').replace('4','٤').replace('5','٥').replace('6','٦').replace('7','٧').replace('8','٨').replace('9','٩')}
+        </b>
+        بإدارة مدرسة
+        <b style="font-family:Neo Sans Arabic; font-size:26px;">
+            ${object.mosque_id.name}
+        </b>
+    </div>
+    <div style="font-size:26px;text-align:justify;font-family:Neo Sans Arabic;padding-right:50px;padding-left:50px">
+        للفترة
+        <b style="font-family:Neo Sans Arabic; font-size:26px;">
+            ${object.hijri_date_request.replace('0','٠').replace('1','١').replace('2','٢').replace('3','٣').replace('4','٤').replace('5','٥').replace('6','٦').replace('7','٧').replace('8','٨').replace('9','٩') [0:4]}/${object.hijri_date_request.replace('0','٠').replace('1','١').replace('2','٢').replace('3','٣').replace('4','٤').replace('5','٥').replace('6','٦').replace('7','٧').replace('8','٨').replace('9','٩') [5:7]}/${object.hijri_date_request.replace('0','٠').replace('1','١').replace('2','٢').replace('3','٣').replace('4','٤').replace('5','٥').replace('6','٦').replace('7','٧').replace('8','٨').replace('9','٩') [8:10]}
+            -
+            هـ
+            ${object.hijri_end_date.replace('0','٠').replace('1','١').replace('2','٢').replace('3','٣').replace('4','٤').replace('5','٥').replace('6','٦').replace('7','٧').replace('8','٨').replace('9','٩') [0:4]}/${object.hijri_end_date.replace('0','٠').replace('1','١').replace('2','٢').replace('3','٣').replace('4','٤').replace('5','٥').replace('6','٦').replace('7','٧').replace('8','٨').replace('9','٩') [5:7]}/${object.hijri_end_date.replace('0','٠').replace('1','١').replace('2','٢').replace('3','٣').replace('4','٤').replace('5','٥').replace('6','٦').replace('7','٧').replace('8','٨').replace('9','٩') [8:10]}
+            هـ
+        </b>
+    </div>
+    <div style="font-size:26px;text-align:justify;font-family:Neo Sans Arabic;padding-right:50px;padding-left:50px">
+        <b style="font-family:Neo Sans Arabic; font-size:26px;">
+            ثانياً
+            :
+        </b>
+        يلتزم المشرف بالمسئوليات المناطة به، والقيام بكافة المهام المكلف بها من قبل الجمعية، و الالتزام بالأنظمة واللوائح
+        الصادرة منها
+    </div>
+</div>
+]]>
+            </field>
+            <field name="back" type="base64" file="mk_episode_management/static/src/img/admin_mosque.png"/>
+        </record>
+    </data>
+</odoo>

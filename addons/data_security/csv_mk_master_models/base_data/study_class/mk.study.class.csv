@@ -1,0 +1,2 @@
+id,is_default,name,order,study_year_id/id,company_id/id,end_date,start_date,islamic_start_date,islamic_end_date,active
+mk_study_class_1,True,الفصل الاول,0,mk_study_year_1,base.main_company,2018-06-30,2018-01-01,2018-01-01,2018-06-30,1

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record id="drivers_records_form_view" model="ir.ui.view">
+		    <field name= "name">drivers records form</field>
+		    <field name= "model">drivers.records</field>
+		    <field name= "arch"  type="xml"> 
+		        <form string="drivers records">
+		           <sheet>
+
+		           	<group> <field name="identity_no" required="1"/> </group>
+		           	<field name="flag2" invisible="0"/> 
+		           	 <group attrs="{'invisible': [('flag2','=',False)]}" string="driver information" style="width:70%;"> 
+
+                           <field name="flag2" invisible="1"/> 
+
+                           <field name="create_date" invisible="1"/> 
+                          <!--  <label>this student is registered in this mosque  </label>-->
+
+                           <field name="driver_name"  attrs="{'invisible': [('flag2','=',False)]}"/> 
+                           <field name="mosque_name"  attrs="{'invisible': [('flag2','=',False)]}"/> 
+                           <field name="center_name"  attrs="{'invisible': [('flag2','=',False)]}"/> 
+                           <field name="mosque_new" attrs="{'required':[('flag2','!=',False)],'invisible': [('flag2','=',False)]}"/>
+
+                            <button name="add_mosq"
+                                string="add"
+                                type="object"
+                                attrs="{'invisible': [('flag2','=',False)]}" 
+                                confirm="Are you sure you want to do this?"
+                                /> 
+                        </group>   
+
+<div attrs="{'invisible': [('create_date','!=',False)]}">
+		           	<group>
+		               	<group>	<field name="name" attrs="{'required': [('flag2','=',False)]}"/> </group>
+		               	<group> <field name="country_id" attrs="{'required': [('flag2','=',False)]}"/> </group>
+             	      </group>		
+		           	  <group>
+		               	<group> <field name="identity_no" attrs="{'required': [('flag2','=',False)]}"/> </group>
+		           	<group> <field name="egama_exp_date" attrs="{'required': [('flag2','=',False)]}"/> </group>
+                       </group>
+		           	  <group>
+		             <group>	<field name="License_exp_date" attrs="{'required': [('flag2','=',False)]}"/>  </group>
+		               	<group> <field name="phone_no" attrs="{'required': [('flag2','=',False)]}"/> </group>
+		               	<group><field name="driver_guarantor" attrs="{'required': [('flag2','=',False)]}"/></group>
+		               	<group>
+		               		<field name="center_id" attrs="{'required': [('flag2','=',False)]}" options="{'no_create': True,'no_open': True,}"/>
+		               		<field name="mosques"   attrs="{'required': [('flag2','=',False)]}" widget="many2many_tags" options="{'no_create': True,'no_open': True,}"/>
+		               	</group>
+                      </group>
+                  </div>
+                    </sheet>
+                </form>
+             </field>
+        </record>
+        <record id="drivers_records_action" model="ir.actions.act_window">
+			<field name="name">drivers records</field>
+			<field name="res_model">drivers.records</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+         <menuitem
+              id="drivers_records_menu"
+              name="Drivers Records"
+              action="drivers_records_action"
+              parent="transport_config_menu" 
+               groups="read_driver" 
+             />	 
+       </data>
+    </odoo>

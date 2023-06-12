@@ -1,0 +1,46 @@
+<odoo>
+    <data>
+		<record id="mk_mosque_categ_form_view" model="ir.ui.view">
+			<field name="name">mosque category Form View</field>
+          	<field name="model">hr.department.category</field>
+          	<field name="arch" type="xml">
+            	<form delete="0" create="0" edit="0" string="mosque category">
+					<sheet>
+						<group>
+				  			<field name="name" required="1"/>
+                            <field name="code" readonly="1"/>
+						</group>
+	  	 			</sheet>
+					<div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+              	</form>
+			</field>
+		</record>
+
+		<record id="mk_mosque_categ_tree_view" model="ir.ui.view">
+			<field name="name">mosque category tree View</field>
+          	<field name="model">hr.department.category</field>
+          	<field name="arch" type="xml">
+          		<tree delete="0" create="0" edit="0" string="mosque category">
+	                <field name="name"/>
+                    <field name="code"/>
+		  		</tree>
+          	</field>
+		</record>
+
+        <record id="mk_mosque_categ_action" model="ir.actions.act_window">
+            <field name="name">Mosque category</field>
+            <field name="res_model">hr.department.category</field>
+            <field name="type">ir.actions.act_window</field>
+            <!-- <field name="view_type">form</field> -->
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+         </record>
+
+        <menuitem name="Mosque category " id="mk_mosque_categ_menu" sequence="3" parent="mk_associate_management_settings_menu" action="mk_mosque_categ_action"/>
+
+    </data>
+</odoo>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="1">
+		<record id="sms_template_1" model="mk.sms_template">
+		    <field name="name">نسيت كلمة المرور</field>
+		    <field name="code">mk_send_pass</field>
+		    <field name="sms_text"> كلمة مرورك هي val1 </field>
+		</record>
+	</data>
+</openerp>

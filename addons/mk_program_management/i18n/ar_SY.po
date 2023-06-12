@@ -1,0 +1,1669 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* mk_program_management
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-04 12:31+0000\n"
+"PO-Revision-Date: 2022-12-04 12:31+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_approaches_active
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_comment_behavior_active
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_programs_active
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_punishment_active
+#: model:ir.ui.view,arch_db:mk_program_management.mk_approaches_search_view
+#: model:ir.ui.view,arch_db:mk_program_management.mk_programs_search_view
+#: model:ir.ui.view,arch_db:mk_program_management.mk_punishment_search_view
+#: selection:mk.approaches,state:0
+#: selection:mk.programs,state:0
+#: selection:mk.punishment,state:0
+#: selection:mk.subject.configuration,state:0
+msgid "Active"
+msgstr "نشط"
+
+#. module: mk_program_management
+#: model:ir.ui.view,arch_db:mk_program_management.mk_plan_form_view
+msgid "Add Note"
+msgstr "إضافة ملاحظة"
+
+#. module: mk_program_management
+#: model:ir.ui.view,arch_db:mk_program_management.mk_plan_form_view
+msgid "Add Test"
+msgstr "إضافة إختبار"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_approaches_age_category_ids
+msgid "Age Category"
+msgstr "فئة العمر"
+
+#. module: mk_program_management
+#: selection:mk.program,maximum_audit_direction:0
+#: selection:mk.program,minimum_audit_direction:0
+#: selection:mk.program,reading_direction:0
+#: selection:mk.program,saving_direction:0
+msgid "AlBaqarah-AlNass"
+msgstr "البقرة - الناس"
+
+#. module: mk_program_management
+#: selection:mk.program,maximum_audit_direction:0
+#: selection:mk.program,minimum_audit_direction:0
+#: selection:mk.program,reading_direction:0
+#: selection:mk.program,saving_direction:0
+msgid "AlNass-AlBaqarah"
+msgstr "الناس - البقرة"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_plan_all
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_program_all
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_program_all_message
+msgid "All"
+msgstr "الكل"
+
+#. module: mk_program_management
+#: sql_constraint:mk.approaches:0
+msgid "Already Exist!"
+msgstr "موجود مسبقا"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_plan_approach_id
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_program_approach_id
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_subject_configuration_approach_id
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_subject_process_approach_id
+msgid "Approach"
+msgstr "المنهج"
+
+#. module: mk_program_management
+#: model:ir.ui.view,arch_db:mk_program_management.mk_approaches_form_view
+#: model:ir.ui.view,arch_db:mk_program_management.mk_approaches_search_view
+#: model:ir.ui.view,arch_db:mk_program_management.mk_approaches_tree_view
+msgid "Approaches Configuration"
+msgstr "اعداد المناهج"
+
+#. module: mk_program_management
+#: selection:mk.comment.behavior,type:0
+msgid "Behavior"
+msgstr "السلوك"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_program_behavior_mark
+msgid "Behavior Mark"
+msgstr "درجة السلوك"
+
+#. module: mk_program_management
+#: selection:mk.manual.plan,type_follow:0
+msgid "Big Review"
+msgstr "مراجعة كبرى"
+
+#. module: mk_program_management
+#: model:ir.ui.view,arch_db:mk_program_management.mk_approaches_form_view
+msgid "Big Reviews"
+msgstr "مراجعة كبرى"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_punishment_guardian_call
+msgid "Call the Guardian and write a Pledge"
+msgstr "استدعاء ولي الامر و كتابة تعهّد"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_approaches_center_department_id
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_plan_share_center_id
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_programs_center_department_id
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_subject_configuration_center_department_id
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_subject_process_center_department_id
+msgid "Center"
+msgstr "المركز"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_approaches_code
+msgid "Code"
+msgstr "كود البرنامج"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_program_comments
+msgid "Comments"
+msgstr "الملاحظات"
+
+#. module: mk_program_management
+#: model:ir.actions.act_window,name:mk_program_management.mk_comment_behavior_action
+#: model:ir.ui.menu,name:mk_program_management.mk_comment_behavior_menu
+#: model:ir.ui.view,arch_db:mk_program_management.mk_comment_behavior_form_view
+#: model:ir.ui.view,arch_db:mk_program_management.mk_comment_behavior_search_view
+#: model:ir.ui.view,arch_db:mk_program_management.mk_comment_behavior_tree_view
+msgid "Comments Configuration"
+msgstr "اعداد الملاحظات"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_approaches_company_id
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_comment_behavior_company_id
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_programs_company_id
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_punishment_company_id
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_subject_configuration_company_id
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_subject_process_company_id
+msgid "Company"
+msgstr "الشركة"
+
+#. module: mk_program_management
+#: model:ir.ui.view,arch_db:mk_program_management.mk_approaches_form_view
+msgid "Configurations"
+msgstr "الإعدادات"
+
+#. module: mk_program_management
+#: model:ir.ui.view,arch_db:mk_program_management.mk_plan_share_form_view
+msgid "Confirm"
+msgstr "تأكيد"
+
+#. module: mk_program_management
+#: selection:mk.plan.share,state:0
+msgid "Confirmed"
+msgstr "مقبول"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_plan_details_course_id
+msgid "Course"
+msgstr "دورة"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_plan_plan_course_ids
+msgid "Courses"
+msgstr "دورات"
+
+#. module: mk_program_management
+#: model:ir.ui.view,arch_db:mk_program_management.mk_subject_process_form_view
+msgid "Create Subjects"
+msgstr "إنشاء مقررات"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_approaches_create_uid
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_comment_behavior_create_uid
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_manual_plan_create_uid
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_plan_course_create_uid
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_plan_create_uid
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_plan_details_create_uid
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_plan_share_create_uid
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_program_create_uid
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_programs_create_uid
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_punishment_create_uid
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_subject_configuration_create_uid
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_subject_process_create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_approaches_create_date
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_comment_behavior_create_date
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_manual_plan_create_date
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_plan_course_create_date
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_plan_create_date
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_plan_details_create_date
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_plan_share_create_date
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_program_create_date
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_programs_create_date
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_punishment_create_date
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_subject_configuration_create_date
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_subject_process_create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_plan_share_date
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_subject_configuration_num_words
+msgid "Day"
+msgstr "اليوم"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_punishment_deduct_from_degrees
+msgid "Deduct From Degrees"
+msgstr "درجة الخصم من الدرجات"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_punishment_deduct_from_points
+msgid "Deduct From Points"
+msgstr "درجة الخصم من النقاط"
+
+#. module: mk_program_management
+#: model:ir.ui.view,arch_db:mk_program_management.mk_approaches_form_view
+msgid "Degrees"
+msgstr "الدرجات"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_subject_configuration_detail_id
+msgid "Detail"
+msgstr "تفاصيل المقرر"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_plan_course_detail_ids
+msgid "Details"
+msgstr "التفاصيل"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_program_maximum_audit_direction
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_program_minimum_audit_direction
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_program_reading_direction
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_program_saving_direction
+msgid "Direction"
+msgstr "الاتجاه"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_approaches_display_name
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_comment_behavior_display_name
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_manual_plan_display_name
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_plan_course_display_name
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_plan_details_display_name
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_plan_display_name
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_plan_share_display_name
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_program_display_name
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_programs_display_name
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_punishment_display_name
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_subject_configuration_display_name
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_subject_process_display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: mk_program_management
+#: selection:mk.approaches,state:0
+#: selection:mk.plan.share,state:0
+#: selection:mk.programs,state:0
+#: selection:mk.punishment,state:0
+#: selection:mk.subject.configuration,state:0
+msgid "Draft"
+msgstr "مبدئي"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_program_excused_absence
+msgid "Excused Absence"
+msgstr "الغياب بعذر"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_approaches_excused_absence_deduct
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_program_excused_absence_deduct
+msgid "Excused Absence Deduct"
+msgstr "الخصم علي الغياب بعذر"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_programs_experience_years
+msgid "Experience Years"
+msgstr "سنوات الخبرة"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_programs_femail
+msgid "Femail"
+msgstr "إناث"
+
+#. module: mk_program_management
+#: selection:mk.programs,program_gender:0
+msgid "Female"
+msgstr "أنثى"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_punishment_freeze_study_class
+msgid "Freeze the Study Class"
+msgstr "تجميد الفصل الدراسي"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_manual_plan_from_aya
+msgid "From Aya"
+msgstr "من آية"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_manual_plan_from_surah
+msgid "From Sura"
+msgstr "من سورة"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_plan_details_from_surah
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_program_maximum_audit_from_surah
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_program_minimum_audit_from_surah
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_program_reading_from_surah
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_program_saving_from_surah
+msgid "From Surah"
+msgstr "من سورة"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_plan_details_from_verses
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_program_maximum_audit_from_verses
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_program_minimum_audit_from_verses
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_program_reading_from_verses
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_program_saving_from_verses
+msgid "From Verses "
+msgstr "من آية "
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_subject_configuration_from_surah
+msgid "From: Surah"
+msgstr "من السورة"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_program_maximum_audit_full_mastery_mark
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_program_minimum_audit_full_mastery_mark
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_program_reading_full_mastery_mark
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_program_saving_full_mastery_mark
+msgid "Full Mastery Mark"
+msgstr "Full Mastery Mark"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_program_full_preparation_mark
+msgid "Full Preparation Mark"
+msgstr "Full Preparation Mark"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_program_maximum_audit_full_quantity_mark
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_program_minimum_audit_full_quantity_mark
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_program_reading_full_quantity_mark
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_program_saving_full_quantity_mark
+msgid "Full Quantity Mark"
+msgstr "Full Quantity Mark"
+
+#. module: mk_program_management
+#: selection:mk.comment.behavior,type:0
+msgid "General Comment"
+msgstr "ملاحظة عامة"
+
+#. module: mk_program_management
+#: model:ir.ui.view,arch_db:mk_program_management.mk_approaches_search_view
+#: model:ir.ui.view,arch_db:mk_program_management.mk_programs_search_view
+msgid "Group By"
+msgstr "تجميع حسب"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_approaches_id
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_comment_behavior_id
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_manual_plan_id
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_plan_course_id
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_plan_details_id
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_plan_id
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_plan_share_id
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_program_id
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_programs_id
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_punishment_id
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_subject_configuration_id
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_subject_process_id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_approaches___last_update
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_comment_behavior___last_update
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_manual_plan___last_update
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_plan___last_update
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_plan_course___last_update
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_plan_details___last_update
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_plan_share___last_update
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_program___last_update
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_programs___last_update
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_punishment___last_update
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_subject_configuration___last_update
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_subject_process___last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_approaches_write_uid
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_comment_behavior_write_uid
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_manual_plan_write_uid
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_plan_course_write_uid
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_plan_details_write_uid
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_plan_share_write_uid
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_plan_write_uid
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_program_write_uid
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_programs_write_uid
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_punishment_write_uid
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_subject_configuration_write_uid
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_subject_process_write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_approaches_write_date
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_comment_behavior_write_date
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_manual_plan_write_date
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_plan_course_write_date
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_plan_details_write_date
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_plan_share_write_date
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_plan_write_date
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_program_write_date
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_programs_write_date
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_punishment_write_date
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_subject_configuration_write_date
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_subject_process_write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_program_late
+msgid "Late"
+msgstr "تأخير"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_approaches_late_deduct
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_program_late_deduct
+msgid "Late Deduct"
+msgstr "التأخير"
+
+#. module: mk_program_management
+#: model:ir.ui.view,arch_db:mk_program_management.mk_approaches_form_view
+msgid "Lessons"
+msgstr "دروس"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_approaches_lessons_maximum_audit
+msgid "Lessons Maximum Audit"
+msgstr "Lessons Maximum Audit"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_approaches_lessons_memorize
+msgid "Lessons Memorize"
+msgstr "Lessons Memorize"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_approaches_lessons_minimum_audit
+msgid "Lessons Minimum Audit"
+msgstr "Lessons Minimum Audit"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_approaches_lessons_reading
+msgid "Lessons Reading"
+msgstr "Lessons Reading"
+
+#. module: mk_program_management
+#: model:ir.ui.view,arch_db:mk_program_management.mk_approaches_form_view
+msgid "Lessons setting"
+msgstr "إعدادات الدروس"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_plan_level_id
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_program_level_id
+msgid "Level"
+msgstr "المستوى"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_program_level_type
+msgid "Level Type"
+msgstr "نوع المستوى"
+
+#. module: mk_program_management
+#: model:ir.ui.view,arch_db:mk_program_management.mk_approaches_form_view
+#: selection:mk.manual.plan,type_follow:0
+msgid "Listening"
+msgstr "التسميع"
+
+#. module: mk_program_management
+#: model:res.groups,name:mk_program_management.group_Program_settings
+msgid "MK Program settings"
+msgstr "اعدادات البرامج والمناهج"
+
+#. module: mk_program_management
+#: model:res.groups,name:mk_program_management.group_activate_program
+msgid "MK activate  program"
+msgstr "تفعيل او إلغاء البرنامج المفتوح"
+
+#. module: mk_program_management
+#: model:res.groups,name:mk_program_management.group_activate_program_close
+msgid "MK activate  program close"
+msgstr "تفعيل او إلغاء تفعيل البرنامج المحدد"
+
+#. module: mk_program_management
+#: model:res.groups,name:mk_program_management.group_create_close_center_program
+msgid "MK create close center program"
+msgstr "إنشاء برنامج محدد على مستوى المركز"
+
+#. module: mk_program_management
+#: model:res.groups,name:mk_program_management.group_create_close_program_mosque
+msgid "MK create close program  mosque"
+msgstr "إنشاء برنامج محدد على مستوى المسجد"
+
+#. module: mk_program_management
+#: model:res.groups,name:mk_program_management.group_create_close_program_association
+msgid "MK create close program association"
+msgstr "إنشاء برنامج محدد على مستوى الجمعية"
+
+#. module: mk_program_management
+#: model:res.groups,name:mk_program_management.group_create_open_center_program
+msgid "MK create open center program"
+msgstr "إنشاء برنامج مفتوح علي مستوى المركز"
+
+#. module: mk_program_management
+#: model:res.groups,name:mk_program_management.group_create_open_program_mosque
+msgid "MK create open program  mosque"
+msgstr "إنشاء برنامج مفتوح علي مستوي المسجد"
+
+#. module: mk_program_management
+#: model:res.groups,name:mk_program_management.group_create_open_program_association
+msgid "MK create open program association"
+msgstr "إنشاء برنامج مفتوح علي مستوي الجمعية"
+
+#. module: mk_program_management
+#: model:res.groups,name:mk_program_management.group_delete_program
+msgid "MK delete"
+msgstr "حذف البرامج المفتوحة"
+
+#. module: mk_program_management
+#: model:res.groups,name:mk_program_management.group_delete_program_close
+msgid "MK delete close"
+msgstr "حذف البرامج المحددة"
+
+#. module: mk_program_management
+#: model:res.groups,name:mk_program_management.group_edit_level_program
+msgid "MK edit level program"
+msgstr "التحرير او الكتابة علي مستوي البرنامج المفتوح"
+
+#. module: mk_program_management
+#: model:res.groups,name:mk_program_management.group_edit_level_program_close
+msgid "MK edit level program close"
+msgstr "التحرير والكتابة على مستوى البرنامج المحدد"
+
+#. module: mk_program_management
+#: model:ir.module.category,name:mk_program_management.module_category_open_programs
+msgid "MK open programs Data"
+msgstr "إدارة الرامج والمناهج/البرامج"
+
+#. module: mk_program_management
+#: model:res.groups,name:mk_program_management.group_read_level_program
+msgid "MK read level program"
+msgstr "القراءة واﻹطلاع على البرامج المفتوحة"
+
+#. module: mk_program_management
+#: model:res.groups,name:mk_program_management.group_read_level_program_close
+msgid "MK read level program close"
+msgstr "القراءة والإطلاع على البرامج المحددة"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_programs_mail
+msgid "Mail"
+msgstr "ذكور"
+
+#. module: mk_program_management
+#: selection:mk.programs,program_gender:0
+msgid "Male"
+msgstr "ذكر"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_approaches_mastering_maximum_audit
+msgid "Mastering Maximum Audit"
+msgstr "Mastering Maximum Audit"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_approaches_mastering_memorize
+msgid "Mastering Memorize"
+msgstr "Mastering Memorize"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_approaches_mastering_minimum_audit
+msgid "Mastering Minimum Audit"
+msgstr "Mastering Minimum Audit"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_approaches_mastering_reading
+msgid "Mastering Reading"
+msgstr "إتقان التلاوة"
+
+#. module: mk_program_management
+#: selection:mk.approaches,program_purpose:0
+#: selection:mk.programs,program_purpose:0
+msgid "Mastering Reading Only"
+msgstr "إتقان التلاوة فقط"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_approaches_maximum_audit
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_plan_maximum_audit
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_program_maximum_audit
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_programs_maximum_audit
+#: model:ir.ui.view,arch_db:mk_program_management.mk_approaches_form_view
+#: selection:mk.plan.details,plan:0
+msgid "Maximum Audit"
+msgstr "مراجعة كبرى"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_approaches_memorize
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_programs_memorize
+msgid "Memorize"
+msgstr "درجة الحفظ"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_approaches_memorize_degree
+msgid "Memorize Degree"
+msgstr "Memorize Degree"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_approaches_memorize_maximum_audit
+msgid "Memorize Maximum Audit"
+msgstr "Memorize Maximum Audit"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_approaches_memorize_minimum_audit
+msgid "Memorize Minimum Audit"
+msgstr "Memorize Minimum Audit"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_approaches_memorize_reading
+msgid "Memorize Reading"
+msgstr "Memorize Reading"
+
+#. module: mk_program_management
+#: selection:mk.approaches,program_purpose:0
+#: selection:mk.programs,program_purpose:0
+msgid "Memorize Specific Parts"
+msgstr "حفظ أجزاء محددة"
+
+#. module: mk_program_management
+#: selection:mk.approaches,program_purpose:0
+msgid "Memorize Specific Surah"
+msgstr "حفظ سور محددة"
+
+#. module: mk_program_management
+#: selection:mk.approaches,program_purpose:0
+#: selection:mk.programs,program_purpose:0
+msgid "Memorize all Quran"
+msgstr "حفظ القرآن كاملآ"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_approaches_minimum_audit
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_plan_minimum_audit
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_program_minimum_audit
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_programs_minimum_audit
+#: model:ir.ui.view,arch_db:mk_program_management.mk_approaches_form_view
+#: selection:mk.plan.details,plan:0
+msgid "Minimum Audit"
+msgstr "مراجعة صغرى"
+
+#. module: mk_program_management
+#: model:ir.module.category,name:mk_program_management.module_category_curriculum_open_selected
+msgid "Mk open or selected curriculum"
+msgstr "إدارة البرامج والمناهج/المناهج"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_approaches_mosque_id
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_plan_share_mosque_id
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_programs_mosque_id
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_subject_configuration_mosque_id
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_subject_process_mosque_id
+msgid "Mosque"
+msgstr "المسجد"
+
+#. module: mk_program_management
+#: model:ir.ui.view,arch_db:mk_program_management.mk_plan_form_view
+msgid "Moving Terms"
+msgstr "Moving Terms"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_approaches_name
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_comment_behavior_name
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_plan_course_name
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_plan_name
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_program_name
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_programs_name
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_punishment_name
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_subject_configuration_name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_program_no_excused_absence
+msgid "No Excused Absence"
+msgstr "الغياب بدون عذر"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_approaches_no_excused_absence_deduct
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_program_no_excused_absence_deduct
+msgid "No Excused Absence Deduct"
+msgstr "الغياب بدون عذر"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_program_not_saving
+msgid "Not Saving"
+msgstr "Not Saving"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_program_maximum_audit_lines_number
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_program_minimum_audit_lines_number
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_program_reading_lines_number
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_program_saving_lines_number
+msgid "Number of Lines"
+msgstr "عدد اﻷسطر"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_subject_process_subject_no
+msgid "Number of Subjects"
+msgstr "عدد المقررات"
+
+#. module: mk_program_management
+#: selection:mk.program,level_type:0
+msgid "Open"
+msgstr "مفتوح"
+
+#. module: mk_program_management
+#: model:ir.ui.view,arch_db:mk_program_management.mk_punishment_form_view
+msgid "Options"
+msgstr "خيارات"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_manual_plan_order
+msgid "Order"
+msgstr "الترتيب"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_subject_configuration_part_id
+msgid "Part"
+msgstr "الجزء"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_approaches_part_ids
+#: model:ir.ui.view,arch_db:mk_program_management.mk_approaches_form_view
+msgid "Parts"
+msgstr "الأجزاء"
+
+#. module: mk_program_management
+#: model:ir.actions.act_window,name:mk_program_management.mk_plan_action
+#: model:ir.actions.act_window,name:mk_program_management.mk_program_plan_action
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_plan_course_plan_id
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_plan_details_plan
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_plan_share_plan_id
+#: model:ir.ui.view,arch_db:mk_program_management.mk_plan_form_view
+#: model:ir.ui.view,arch_db:mk_program_management.mk_plan_search_view
+#: model:ir.ui.view,arch_db:mk_program_management.mk_plan_tree_view
+msgid "Plan"
+msgstr "الخطة"
+
+#. module: mk_program_management
+#: model:ir.actions.act_window,name:mk_program_management.mk_plan_share_action
+#: model:ir.ui.view,arch_db:mk_program_management.mk_plan_share_form_view
+#: model:ir.ui.view,arch_db:mk_program_management.mk_plan_share_search_view
+#: model:ir.ui.view,arch_db:mk_program_management.mk_plan_share_tree_view
+msgid "Plan Share"
+msgstr "مشاركة الخطة"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_approaches_preparation_degree
+msgid "Prepartion Degree"
+msgstr "درجة التحضير"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_approaches_is_previous_approach
+msgid "Previous Approach?"
+msgstr "منهج مسبق؟"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_programs_is_previous_program
+msgid "Previous Program?"
+msgstr "برنامج مسبق؟"
+
+#. module: mk_program_management
+#: model:ir.ui.view,arch_db:mk_program_management.mk_plan_form_view
+msgid "Print"
+msgstr "طباعة"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_approaches_program_id
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_plan_program_id
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_programs_program_id
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_subject_configuration_program_id
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_subject_process_program_id
+msgid "Program"
+msgstr "البرنامج"
+
+#. module: mk_program_management
+#: model:ir.ui.view,arch_db:mk_program_management.mk_programs_form_view
+msgid "Program Approches"
+msgstr "المناهج التابعة"
+
+#. module: mk_program_management
+#: model:ir.ui.view,arch_db:mk_program_management.mk_programs_form_view
+msgid "Program Parts"
+msgstr "اجزاء البرنامج"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_approaches_program_purpose
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_programs_program_purpose
+msgid "Program Purpose"
+msgstr "الغرض من البرنامج"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_programs_program_approches
+msgid "Program appreoches"
+msgstr "المناهج التابعة"
+
+#. module: mk_program_management
+#: model:ir.ui.view,arch_db:mk_program_management.mk_approaches_form_view
+msgid "Program info"
+msgstr "معلومات البرنامج"
+
+#. module: mk_program_management
+#: model:ir.ui.view,arch_db:mk_program_management.mk_programs_form_view
+#: model:ir.ui.view,arch_db:mk_program_management.mk_programs_search_view
+#: model:ir.ui.view,arch_db:mk_program_management.mk_programs_tree_view
+msgid "Programs Configuration"
+msgstr "اعدادات البرامج"
+
+#. module: mk_program_management
+#: model:ir.actions.act_window,name:mk_program_management.mk_punishment_action
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_comment_behavior_punishment_ids
+#: model:ir.ui.menu,name:mk_program_management.mk_punishment_menu
+#: model:ir.ui.view,arch_db:mk_program_management.mk_punishment_form_view
+#: model:ir.ui.view,arch_db:mk_program_management.mk_punishment_search_view
+#: model:ir.ui.view,arch_db:mk_program_management.mk_punishment_tree_view
+#: model:ir.ui.view,arch_db:mk_program_management.mk_subject_configuration_search_view
+msgid "Punishment"
+msgstr "اعداد العقوبات"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_programs_recruitment_ids
+msgid "Qualfication"
+msgstr "المؤهل"
+
+#. module: mk_program_management
+#: model:ir.ui.view,arch_db:mk_program_management.mk_approaches_form_view
+msgid "Quantity"
+msgstr "كمية"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_approaches_quantity_maximum_audit
+msgid "Quantity Maximum Audit"
+msgstr "Quantity Maximum Audit"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_approaches_quantity_memorize
+msgid "Quantity Memorize"
+msgstr "Quantity Memorize"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_approaches_quantity_minimum_audit
+msgid "Quantity Minimum Audit"
+msgstr "Quantity Minimum Audit"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_approaches_quantity_reading
+msgid "Quantity Reading"
+msgstr "Quantity Reading"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_approaches_reading
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_plan_reading
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_program_reading
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_programs_reading
+#: model:ir.ui.view,arch_db:mk_program_management.mk_approaches_form_view
+#: selection:mk.plan.details,plan:0
+msgid "Reading"
+msgstr "تلاوة"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_program_reading_mark
+msgid "Reading Mark"
+msgstr "درجة التلاوة"
+
+#. module: mk_program_management
+#: selection:mk.manual.plan,type_follow:0
+msgid "Recitation"
+msgstr "Recitation"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_program_registeration_fees
+msgid "Registeration Fees"
+msgstr "رسوم التسجيل"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_approaches_required_mosques
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_programs_is_required
+msgid "Required for All Mosques"
+msgstr "الظهور في الحلقات التابعة"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_plan_saving
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_program_saving
+#: selection:mk.plan.details,plan:0
+msgid "Saving"
+msgstr "حفظ"
+
+#. module: mk_program_management
+#: model:res.groups,name:mk_program_management.select_all_program_management_open_selected
+msgid "Select All"
+msgstr "إختيار الكل"
+
+#. module: mk_program_management
+#: model:res.groups,name:mk_program_management.select_all_programs_program_management
+msgid "Select All programs"
+msgstr "إختيار الكل"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_punishment_mosque_message
+msgid "Send Message to Mosque Admin"
+msgstr "ارسال رسالة لِمُشرف المسجد/ مشرفة المدرسة"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_punishment_guardian_message
+msgid "Send Message to guardian"
+msgstr "ارسال رسالة لولي الأمر"
+
+#. module: mk_program_management
+#: model:ir.ui.view,arch_db:mk_program_management.mk_programs_form_view
+#: model:ir.ui.view,arch_db:mk_program_management.mk_punishment_form_view
+msgid "Set to Active"
+msgstr "تفعيل"
+
+#. module: mk_program_management
+#: model:ir.ui.view,arch_db:mk_program_management.mk_punishment_form_view
+msgid "Set to Draft"
+msgstr "عدم تفعيل"
+
+#. module: mk_program_management
+#: model:ir.ui.view,arch_db:mk_program_management.mk_approaches_form_view
+msgid "Small Reviews"
+msgstr "مراجعة صغرى"
+
+#. module: mk_program_management
+#: selection:mk.manual.plan,type_follow:0
+msgid "Smll Review"
+msgstr "مراجعة صغرى"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_programs_specialization_ids
+msgid "Specialization"
+msgstr "التخصص"
+
+#. module: mk_program_management
+#: selection:mk.program,level_type:0
+msgid "Specific"
+msgstr "خاص"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_approaches_state
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_plan_share_state
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_programs_state
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_punishment_state
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_subject_configuration_state
+msgid "Status"
+msgstr "الحالة "
+
+#. module: mk_program_management
+#: model:ir.ui.view,arch_db:mk_program_management.mk_plan_form_view
+msgid "Stopping Test"
+msgstr "Stopping Test"
+
+#. module: mk_program_management
+#: model:ir.ui.view,arch_db:mk_program_management.mk_plan_form_view
+msgid "Stopping to Qualify Student"
+msgstr "Stopping to Qualify Student"
+
+#. module: mk_program_management
+#: model:ir.ui.view,arch_db:mk_program_management.mk_plan_form_view
+msgid "Stopping to Reply"
+msgstr "Stopping to Reply"
+
+#. module: mk_program_management
+#: model:ir.ui.view,arch_db:mk_program_management.mk_plan_form_view
+msgid "Stopping to Test Measuring"
+msgstr "Stopping to Test Measuring"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_subject_configuration_subject_id
+msgid "Subject"
+msgstr "الموضوع"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_approaches_subject_id
+msgid "Subjects"
+msgstr "المقرر"
+
+#. module: mk_program_management
+#: model:ir.actions.act_window,name:mk_program_management.mk_subject_configuration_action
+#: model:ir.ui.view,arch_db:mk_program_management.mk_subject_configuration_form_view
+#: model:ir.ui.view,arch_db:mk_program_management.mk_subject_configuration_search_view
+#: model:ir.ui.view,arch_db:mk_program_management.mk_subject_configuration_tree_view
+msgid "Subjects Configuration"
+msgstr "اعدادات المقرر"
+
+#. module: mk_program_management
+#: model:ir.actions.act_window,name:mk_program_management.mk_subject_process_action
+#: model:ir.actions.act_window,name:mk_program_management.mk_subject_process_action_test
+#: model:ir.ui.view,arch_db:mk_program_management.mk_subject_process_form_view
+#: model:ir.ui.view,arch_db:mk_program_management.mk_subject_process_search_view
+#: model:ir.ui.view,arch_db:mk_program_management.mk_subject_process_tree_view
+msgid "Subjects Process"
+msgstr "معالج إنشاء المقررات"
+
+#. module: mk_program_management
+#: model:ir.ui.view,arch_db:mk_program_management.mk_approaches_form_view
+msgid "Surah"
+msgstr "سورة"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_approaches_tajweed_degree
+msgid "Tajweed Degree"
+msgstr "درجة التجويد"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_approaches_job_ids
+msgid "Target Job"
+msgstr "الفئات المستهدفة"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_approaches_stage_ids
+msgid "Target Stages"
+msgstr "المرحلة المستهدفة"
+
+#. module: mk_program_management
+#: model:ir.ui.view,arch_db:mk_program_management.mk_programs_form_view
+msgid "Target Type"
+msgstr "الجنس المستهدف"
+
+#. module: mk_program_management
+#: model:ir.ui.view,arch_db:mk_program_management.mk_programs_form_view
+msgid "Teacher Specification"
+msgstr "مواصفات المعلم/ المعلمة"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_approaches_is_test
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_subject_configuration_is_test
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_subject_process_is_test
+msgid "Test After End of Subject"
+msgstr "يوجد اختبار بعد انتهاء المقرر"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_approaches_test_degree
+msgid "Test Degree"
+msgstr "درجة الإختبار"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_program_test_mark
+msgid "Test Mark"
+msgstr "درجه الإختبار"
+
+#. module: mk_program_management
+#: model:ir.ui.view,arch_db:mk_program_management.mk_approaches_form_view
+msgid "Tlawa"
+msgstr "تلاوة"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_manual_plan_to_aya
+msgid "To Aya"
+msgstr "إلى آية"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_manual_plan_to_surah
+msgid "To Sura"
+msgstr "إلى سورة"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_plan_details_to_surah
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_program_maximum_audit_to_surah
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_program_minimum_audit_to_surah
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_program_reading_to_surah
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_program_saving_to_surah
+msgid "To Surah"
+msgstr "الى سورة"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_plan_details_to_verses
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_program_maximum_audit_to_verses
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_program_minimum_audit_to_verses
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_program_reading_to_verses
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_program_saving_to_verses
+msgid "To Verses "
+msgstr "الى الآية "
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_subject_configuration_to_surah
+msgid "To: Surah"
+msgstr "الى السورة"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_comment_behavior_type
+msgid "Type"
+msgstr "النوع"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_manual_plan_type_follow
+msgid "Type of Follow"
+msgstr "نوع المتابعة"
+
+#. module: mk_program_management
+#: model:ir.ui.view,arch_db:mk_program_management.mk_approaches_search_view
+#: model:ir.ui.view,arch_db:mk_program_management.mk_punishment_search_view
+msgid "Un active"
+msgstr "الغير نشطة"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_subject_configuration_from_verse
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_subject_configuration_to_verse
+msgid "Verse"
+msgstr "الآية"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_approaches_approach_id
+msgid "approach"
+msgstr "المنهج"
+
+#. module: mk_program_management
+#: model:ir.model,name:mk_program_management.model_approach_line
+msgid "approach.line"
+msgstr "approach.line"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_manual_plan_approche_id
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_manual_plan_big_id
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_manual_plan_small_id
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_manual_plan_tlawa_id
+msgid "approche"
+msgstr "approche"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_programs_center
+msgid "center"
+msgstr "center"
+
+#. module: mk_program_management
+#: selection:mk.approaches,program_type:0
+#: selection:mk.programs,program_type:0
+msgid "close"
+msgstr "محدد"
+
+#. module: mk_program_management
+#: model:res.groups,name:mk_program_management.create_an_close_curriculum_association_level
+msgid "create an close curriculum to association level"
+msgstr "إنشاء منهج محدد "
+
+#. module: mk_program_management
+#: model:res.groups,name:mk_program_management.create_an_open_curriculum_association_level
+msgid "create an open curriculum to association level"
+msgstr "إنشاء منهج مفتوح "
+
+#. module: mk_program_management
+#: model:res.groups,name:mk_program_management.delete
+msgid "delete"
+msgstr "حذف المناهج المفتوحه"
+
+#. module: mk_program_management
+#: model:res.groups,name:mk_program_management.delete_close
+msgid "delete close"
+msgstr "حذف المنهج محددة"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_manual_plan_is_test
+msgid "is test"
+msgstr "اختبار"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_programs_masjed
+msgid "masjed"
+msgstr "المسجد/المدرسة"
+
+#. module: mk_program_management
+#: model:ir.model,name:mk_program_management.model_mk_approaches
+msgid "mk.approaches"
+msgstr "mk.approaches"
+
+#. module: mk_program_management
+#: model:ir.model,name:mk_program_management.model_mk_comment_behavior
+msgid "mk.comment.behavior"
+msgstr "mk.comment.behavior"
+
+#. module: mk_program_management
+#: model:ir.model,name:mk_program_management.model_mk_manual_plan
+msgid "mk.manual.plan"
+msgstr "mk.manual.plan"
+
+#. module: mk_program_management
+#: model:ir.model,name:mk_program_management.model_mk_plan
+msgid "mk.plan"
+msgstr "mk.plan"
+
+#. module: mk_program_management
+#: model:ir.model,name:mk_program_management.model_mk_plan_course
+msgid "mk.plan.course"
+msgstr "mk.plan.course"
+
+#. module: mk_program_management
+#: model:ir.model,name:mk_program_management.model_mk_plan_details
+msgid "mk.plan.details"
+msgstr "mk.plan.details"
+
+#. module: mk_program_management
+#: model:ir.model,name:mk_program_management.model_mk_plan_share
+msgid "mk.plan.share"
+msgstr "mk.plan.share"
+
+#. module: mk_program_management
+#: model:ir.model,name:mk_program_management.model_mk_program
+msgid "mk.program"
+msgstr "mk.program"
+
+#. module: mk_program_management
+#: model:ir.model,name:mk_program_management.model_mk_programs
+msgid "mk.programs"
+msgstr "mk.programs"
+
+#. module: mk_program_management
+#: model:ir.model,name:mk_program_management.model_mk_punishment
+msgid "mk.punishment"
+msgstr "mk.punishment"
+
+#. module: mk_program_management
+#: model:ir.model,name:mk_program_management.model_mk_subject_configuration
+msgid "mk.subject.configuration"
+msgstr "mk.subject.configuration"
+
+#. module: mk_program_management
+#: model:ir.model,name:mk_program_management.model_mk_subject_process
+msgid "mk.subject.process"
+msgstr "mk.subject.process"
+
+#. module: mk_program_management
+#: model:ir.ui.menu,name:mk_program_management.mk_programs_main_menu
+msgid "mk_program_management.mk_programs_main_menu"
+msgstr "mk_program_management.mk_programs_main_menu"
+
+#. module: mk_program_management
+#: selection:mk.approaches,program_type:0
+#: selection:mk.programs,program_type:0
+msgid "open"
+msgstr "مفتوح"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_subject_configuration_order
+msgid "order"
+msgstr "الترتيب"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_approaches_big_review_ids
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_approaches_listen_ids
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_approaches_small_reviews_ids
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_approaches_tlawa_ids
+msgid "plan"
+msgstr "الخطة"
+
+#. module: mk_program_management
+#: model:ir.ui.view,arch_db:mk_program_management.mk_programs_form_view
+msgid "program setting"
+msgstr "إعدادات البرنامج"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_approaches_program_type
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_programs_program_type
+msgid "program type"
+msgstr "نوع البرنامج"
+
+#. module: mk_program_management
+#: model:res.groups,name:mk_program_management.read_curriculum_level_close
+msgid "read on close the curriculum level"
+msgstr "القراءة والإطلاع على المناهج المحدة"
+
+#. module: mk_program_management
+#: model:res.groups,name:mk_program_management.read_curriculum_level
+msgid "read on the curriculum level"
+msgstr "القراءة والإطلاع على المناهج المفتوحة"
+
+#. module: mk_program_management
+#: model:ir.ui.view,arch_db:mk_program_management.mk_programs_search_view
+msgid "state"
+msgstr "الحالة"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_approaches_surah_ids
+msgid "surah"
+msgstr "سورة"
+
+#. module: mk_program_management
+#: model:res.groups,name:mk_program_management.update_curriculum_level_close
+msgid "update on the curriculum close level"
+msgstr "تعديل المنهج المحدد"
+
+#. module: mk_program_management
+#: model:res.groups,name:mk_program_management.update_curriculum_level
+msgid "update on the curriculum level"
+msgstr "تعديل المنهج المفتوح"
+
+#. module: mk_program_management
+#: model:res.groups,name:mk_program_management.mk_path_read_group
+msgid "Read episode path"
+msgstr "القراءة والإطلاع على المسارات"
+
+#. module: mk_program_management
+#: model:res.groups,name:mk_program_management.mk_path_write_group
+msgid "Write on episode path"
+msgstr "تعديل المسارات"
+
+#. module: mk_program_management
+#: selection:mk.approaches,qty_question_exam:0
+#: selection:mk.approaches,qty_question_test:0
+msgid "آية"
+msgstr "آية"
+
+#. module: mk_program_management
+#: model:ir.ui.view,arch_db:mk_program_management.mk_programs_search_view
+msgid "أنشئ بواسطة"
+msgstr "أنشئ بواسطة"
+
+#. module: mk_program_management
+#: model:ir.ui.menu,name:mk_program_management.mk_programs_configuration_menu
+#: model:ir.ui.menu,name:mk_program_management.mk_programs_menu
+msgid "إعدادات البرامج"
+msgstr "إعدادات البرامج"
+
+#. module: mk_program_management
+#: model:ir.ui.menu,name:mk_program_management.mk_approaches_configuration_menu
+msgid "إعدادات المناهج"
+msgstr "إعدادات المناهج"
+
+#. module: mk_program_management
+#: model:ir.ui.view,arch_db:mk_program_management.mk_programs_search_view
+msgid "إناث"
+msgstr "إناث"
+
+#. module: mk_program_management
+#: model:ir.ui.view,arch_db:mk_program_management.mk_punishment_search_view
+msgid "ارسال رسالة لولي الأمر"
+msgstr "ارسال رسالة لولي الأمر"
+
+#. module: mk_program_management
+#: model:ir.ui.view,arch_db:mk_program_management.mk_punishment_search_view
+msgid "ارسال رسالة لِمُشرف المسجد/ مشرفة المدرسة"
+msgstr "ارسال رسالة لِمُشرف المسجد/ مشرفة المدرسة"
+
+#. module: mk_program_management
+#: model:ir.ui.view,arch_db:mk_program_management.mk_punishment_search_view
+msgid "استدعاء ولي الامر و كتابة تعهّد"
+msgstr "استدعاء ولي الامر و كتابة تعهّد"
+
+#. module: mk_program_management
+#: model:ir.ui.view,arch_db:mk_program_management.mk_approaches_form_view
+msgid "الإختبارات الدورية"
+msgstr "الإختبارات الدورية"
+
+#. module: mk_program_management
+#: model:ir.ui.view,arch_db:mk_program_management.mk_approaches_form_view
+msgid "الإختبارات الفصلية"
+msgstr "الإختبارات الفصلية"
+
+#. module: mk_program_management
+#: model:ir.actions.act_window,name:mk_program_management.opened_programs_action
+#: model:ir.ui.menu,name:mk_program_management.mk_opened_programs_menu
+msgid "البرامج المفتوحة"
+msgstr "البرامج المفتوحة"
+
+#. module: mk_program_management
+#: model:ir.ui.view,arch_db:mk_program_management.mk_approaches_search_view
+msgid "البرنامج"
+msgstr "البرنامج"
+
+#. module: mk_program_management
+#: sql_constraint:mk.programs:0
+msgid "البرنامج موجود مسبقا !!"
+msgstr "البرنامج موجود مسبقا !!"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_programs_program_gender
+#: model:ir.ui.view,arch_db:mk_program_management.mk_programs_search_view
+msgid "الجنس"
+msgstr "الجنس"
+
+#. module: mk_program_management
+#: model:ir.ui.view,arch_db:mk_program_management.mk_approaches_search_view
+msgid "الحالة"
+msgstr "الحالة"
+
+#. module: mk_program_management
+#: model:ir.ui.view,arch_db:mk_program_management.mk_approaches_form_view
+msgid "الحضور"
+msgstr "الحضور"
+
+#. module: mk_program_management
+#: model:ir.ui.view,arch_db:mk_program_management.mk_approaches_form_view
+msgid "الحفظ"
+msgstr "الحفظ"
+
+#. module: mk_program_management
+#: model:ir.ui.view,arch_db:mk_program_management.mk_approaches_form_view
+msgid "الخصم على التأخير"
+msgstr "الخصم على التأخير"
+
+#. module: mk_program_management
+#: model:ir.ui.view,arch_db:mk_program_management.mk_approaches_form_view
+msgid "الخصم على الغياب بدون عذر"
+msgstr "الخصم على الغياب بدون عذر"
+
+#. module: mk_program_management
+#: model:ir.ui.view,arch_db:mk_program_management.mk_approaches_form_view
+msgid "الخصم على الغياب بعذر"
+msgstr "الخصم على الغياب بعذر"
+
+#. module: mk_program_management
+#: model:ir.ui.view,arch_db:mk_program_management.mk_approaches_form_view
+#: model:ir.ui.view,arch_db:mk_program_management.mk_comment_behavior_search_view
+msgid "السلوك"
+msgstr "السلوك"
+
+#. module: mk_program_management
+#: model:ir.ui.view,arch_db:mk_program_management.mk_programs_search_view
+msgid "الظهور في الحلقات التابعة"
+msgstr "الظهور في الحلقات التابعة"
+
+#. module: mk_program_management
+#: model:ir.ui.view,arch_db:mk_program_management.mk_approaches_search_view
+msgid "الفئات المستهدفة"
+msgstr "الفئات المستهدفة"
+
+#. module: mk_program_management
+#: model:ir.ui.view,arch_db:mk_program_management.mk_approaches_form_view
+msgid "القياس والتقييم"
+msgstr "القياس والتقييم"
+
+#. module: mk_program_management
+#: model:ir.ui.view,arch_db:mk_program_management.mk_approaches_search_view
+msgid "المرحلة المستهدفة"
+msgstr "المرحلة المستهدفة"
+
+#. module: mk_program_management
+#: model:ir.ui.view,arch_db:mk_program_management.mk_programs_search_view
+msgid "المركز"
+msgstr "المركز"
+
+#. module: mk_program_management
+#: model:ir.ui.view,arch_db:mk_program_management.mk_programs_search_view
+msgid "المسجد"
+msgstr "المسجد"
+
+#. module: mk_program_management
+#: model:ir.ui.view,arch_db:mk_program_management.mk_programs_search_view
+msgid "المسجد/المدرسة"
+msgstr "المسجد/المدرسة"
+
+#. module: mk_program_management
+#: model:ir.actions.act_window,name:mk_program_management.open_mk_approaches_action
+#: model:ir.ui.menu,name:mk_program_management.mk_opened_approaches_menu
+msgid "المناهج المفتوحة"
+msgstr "المناهج المفتوحة1"
+
+#. module: mk_program_management
+#: model:ir.actions.act_window,help:mk_program_management.opened_programs_action
+msgid "انقر هنا لإضافة جديد مستند"
+msgstr "انقر هنا لإضافة جديد مستند"
+
+#. module: mk_program_management
+#: model:ir.ui.view,arch_db:mk_program_management.mk_punishment_search_view
+msgid "تجميد الفصل الدراسي"
+msgstr "تجميد الفصل الدراسي"
+
+#. module: mk_program_management
+#: model:ir.ui.view,arch_db:mk_program_management.mk_approaches_search_view
+#: model:ir.ui.view,arch_db:mk_program_management.mk_programs_search_view
+msgid "تلاوة"
+msgstr "تلاوة"
+
+#. module: mk_program_management
+#: selection:mk.approaches,qty_question_exam:0
+#: selection:mk.approaches,qty_question_test:0
+msgid "ثلاثة ارباع صفحة"
+msgstr "ثلاثة ارباع صفحة"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_approaches_exam_degree
+#: model:ir.ui.view,arch_db:mk_program_management.mk_approaches_form_view
+msgid "درجة الإختبار"
+msgstr "درجة الإختبار"
+
+#. module: mk_program_management
+#: model:ir.ui.view,arch_db:mk_program_management.mk_approaches_form_view
+msgid "درجة التجويد"
+msgstr "درجة التجويد"
+
+#. module: mk_program_management
+#: model:ir.ui.view,arch_db:mk_program_management.mk_approaches_form_view
+msgid "درجة الحضور"
+msgstr "درجة الحضور"
+
+#. module: mk_program_management
+#: model:ir.ui.view,arch_db:mk_program_management.mk_approaches_search_view
+#: model:ir.ui.view,arch_db:mk_program_management.mk_programs_search_view
+msgid "درجة الحفظ"
+msgstr "درجة الحفظ"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_approaches_behavior_degree
+msgid "درجة السلوك"
+msgstr "درجة السلوك"
+
+#. module: mk_program_management
+#: model:ir.ui.view,arch_db:mk_program_management.mk_approaches_form_view
+msgid "درجة جودة الحفظ"
+msgstr "درجة جودة الحفظ"
+
+#. module: mk_program_management
+#: model:ir.ui.view,arch_db:mk_program_management.mk_programs_search_view
+msgid "ذكور"
+msgstr "ذكور"
+
+#. module: mk_program_management
+#: selection:mk.approaches,qty_question_exam:0
+#: selection:mk.approaches,qty_question_test:0
+msgid "ربع صفحة"
+msgstr "ربع صفحة"
+
+#. module: mk_program_management
+#: selection:mk.approaches,qty_question_exam:0
+#: selection:mk.approaches,qty_question_test:0
+msgid "صفحة واحدة"
+msgstr "صفحة واحدة"
+
+#. module: mk_program_management
+#: selection:mk.approaches,qty_question_exam:0
+#: selection:mk.approaches,qty_question_test:0
+msgid "صفحة وثلاثة ارباع"
+msgstr "صفحة وثلاثة ارباع"
+
+#. module: mk_program_management
+#: selection:mk.approaches,qty_question_exam:0
+#: selection:mk.approaches,qty_question_test:0
+msgid "صفحة وربع"
+msgstr "صفحة وربع"
+
+#. module: mk_program_management
+#: selection:mk.approaches,qty_question_exam:0
+#: selection:mk.approaches,qty_question_test:0
+msgid "صفحة ونصف"
+msgstr "صفحة ونصف"
+
+#. module: mk_program_management
+#: selection:mk.approaches,qty_question_exam:0
+#: selection:mk.approaches,qty_question_test:0
+msgid "صفحتان"
+msgstr "صفحتان"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_approaches_nbr_question_exam
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_approaches_nbr_question_test
+#: model:ir.ui.view,arch_db:mk_program_management.mk_approaches_form_view
+msgid "عدد الأسئلة"
+msgstr "عدد الأسئلة"
+
+#. module: mk_program_management
+#: model:ir.ui.view,arch_db:mk_program_management.mk_programs_form_view
+msgid "عدم التفعيل"
+msgstr "عدم التفعيل"
+
+#. module: mk_program_management
+#: code:addons/mk_program_management/models/mk_subject_configuration.py:56
+#, python-format
+msgid "لا يمكنك حذف سجل تم تأكيده"
+msgstr "لا يمكنك حذف سجل تم تأكيده"
+
+#. module: mk_program_management
+#: code:addons/mk_program_management/models/mk_subject_configuration.py:61
+#, python-format
+msgid "لا يمكنك حذف هذا السجل لإرتباطه بسجلات أخرى"
+msgstr "لا يمكنك حذف هذا السجل لإرتباطه بسجلات أخرى"
+
+#. module: mk_program_management
+#: model:ir.ui.view,arch_db:mk_program_management.mk_approaches_search_view
+msgid "مبدئي"
+msgstr "مبدئي"
+
+#. module: mk_program_management
+#: model:ir.ui.view,arch_db:mk_program_management.mk_approaches_search_view
+#: model:ir.ui.view,arch_db:mk_program_management.mk_programs_search_view
+msgid "مراجعة صغرى"
+msgstr "مراجعة صغرى"
+
+#. module: mk_program_management
+#: model:ir.ui.view,arch_db:mk_program_management.mk_approaches_search_view
+#: model:ir.ui.view,arch_db:mk_program_management.mk_programs_search_view
+msgid "مراجعة كبرى"
+msgstr "مراجعة كبرى"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_approaches_deduct_memor_big_review
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_approaches_deduct_memor_memorize
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_approaches_deduct_memor_reading
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_approaches_deduct_memor_sml_review
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_approaches_deduct_qty_big_review
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_approaches_deduct_qty_memorize
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_approaches_deduct_qty_reading
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_approaches_deduct_qty_small_review
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_approaches_deduct_tjwd_big_review
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_approaches_deduct_tjwd_memorize
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_approaches_deduct_tjwd_reading
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_approaches_deduct_tjwd_sml_review
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_approaches_deduction_exam
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_approaches_deduction_test
+#: model:ir.ui.view,arch_db:mk_program_management.mk_approaches_form_view
+msgid "مقدار الخصم"
+msgstr "مقدار الخصم"
+
+#. module: mk_program_management
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_approaches_qty_question_exam
+#: model:ir.model.fields,field_description:mk_program_management.field_mk_approaches_qty_question_test
+#: model:ir.ui.view,arch_db:mk_program_management.mk_approaches_form_view
+msgid "مقدار السؤال"
+msgstr "مقدار السؤال"
+
+#. module: mk_program_management
+#: model:ir.ui.view,arch_db:mk_program_management.mk_comment_behavior_search_view
+msgid "ملاحظة عامة"
+msgstr "ملاحظة عامة"
+
+#. module: mk_program_management
+#: model:ir.ui.view,arch_db:mk_program_management.mk_approaches_search_view
+msgid "نشط"
+msgstr "نشط"
+
+#. module: mk_program_management
+#: selection:mk.approaches,qty_question_exam:0
+#: selection:mk.approaches,qty_question_test:0
+msgid "نصف صفحة"
+msgstr "نصف صفحة"
+
+#. module: mk_program_management
+#: model:ir.ui.view,arch_db:mk_program_management.mk_approaches_search_view
+msgid "نوع البرنامج"
+msgstr "نوع البرنامج"
+

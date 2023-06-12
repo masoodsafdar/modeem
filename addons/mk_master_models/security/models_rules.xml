@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+    
+		<record model="ir.rule" id="cm_cenetr_rule">
+		      <field name="name">center  rules</field>
+		      <field name="model_id" ref="hr.model_hr_department"/>
+		      <field name="domain_force">['|','|','|',('id','in',[user.department_id.id]),
+				                                      ('id','in',user.department_ids.ids),
+	                                                  ('id','in',[ms.center_department_id.id for ms in user.mosque_ids]),
+				                                       ('create_uid','=', user.id)]</field>
+		</record>
+
+		<!--record model="ir.rule" id="hr_employee_rule">
+		      <field name="name">employee  rules</field>
+		      <field name="model_id" ref="hr.model_hr_employee"/>
+		      <field name="domain_force">['|','&amp;',('category','=','edu_supervisor'),('mosque_sup.categ_id.mosque_type','in',(str(user.gender)).split(",")),'|',('department_id.id','in',user.department_ids.ids),'&amp;',('category','=','admin'),('mosqtech_ids.categ_id.mosque_type','in',(str(user.gender)).split(",")),'|',('department_id.id','in',user.department_ids.ids),'&amp;',('center_admin_category','=',user.gender),'&amp;',('category','=','center_admin'),('department_id.id','in',user.department_ids.ids)]</field>
+		      <field name="groups" eval="[(4, ref('group_read_employee_edu_sup'),('group_read_employee_admins'),
+		('group_read_employee_center'),('group_read_employee_center_assistant'))]"/>
+		
+		</record-->
+
+		<record model="ir.rule" id="hr_employee_admins_rule1">
+		      <field name="name">employee </field>
+		      <field name="model_id" ref="hr.model_hr_employee"/>
+		      <field name="domain_force">['|','|',('user_id','=',user.id),
+										       ('id','in',[ms.responsible_id.id for ms in user.mosque_ids]),
+										 '&amp;',('category','in',['teacher','bus_sup','supervisor','others','managment']),
+										     '|',('mosqtech_ids','in',user.mosque_ids.ids),
+											    '|',('department_id','in',user.department_ids.ids),
+												    ('department_ids','in',user.department_ids.ids)]</field>
+		      <field name="groups" eval="[(4, ref('group_read_employee'))]"/>
+		</record>
+
+		<record model="ir.rule" id="hr_employee_admins_rule">
+		      <field name="name">employee  admins admin</field>
+		      <field name="model_id" ref="hr.model_hr_employee"/>
+		      <field name="domain_force">[('category','=','admin'),
+		                                  '|',('mosqtech_ids','in',user.mosque_ids.ids),
+		                                      '|',('department_id','=',user.department_id.id),
+		                                      '|',('department_id','in',user.department_ids.ids),
+		                                          ('department_ids','in',user.department_ids.ids)]</field>
+			<!-- ('mosque_sup.categ_id.mosque_type','in',(str(user.gender)).split(",")), -->
+		      <field name="groups" eval="[(4, ref('group_read_employee_admins'))]"/>
+		</record>
+
+
+		<record model="ir.rule" id="hr_employee_center_rule">
+		      <field name="name">employee  center rules</field>
+		      <field name="model_id" ref="hr.model_hr_employee"/>
+		      <field name="domain_force">[('category','=','center_admin'),		                                   
+		                                  '|',('department_id','in',user.department_ids.ids),
+		                                      ('department_ids','in',user.department_ids.ids)]</field><!-- '|',('center_admin_category','=',user.gender),('center_admin_category','=','both'), -->
+		      <field name="groups" eval="[(4, ref('group_read_employee_center'))]"/>
+		</record>
+
+		<record model="ir.rule" id="group_read_employee_center_assistant3">
+		      <field name="name">employee  center assistant rules</field>
+		      <field name="model_id" ref="hr.model_hr_employee"/>
+		      <field name="domain_force">[('category','=','center_admin'),
+		                                  '|',('department_id','in',user.department_ids.ids),
+		                                      ('department_ids','in',user.department_ids.ids)]</field><!-- '|',('center_admin_category','=',user.gender),('center_admin_category','=','both'), -->
+		      <field name="groups" eval="[(4, ref('group_read_employee_center_assistant'))]"/>
+		</record>
+
+		<record model="ir.rule" id="hr_employee_edu_sup_rule">
+		      <field name="name">employee  educational supervisor rules</field>
+		      <field name="model_id" ref="hr.model_hr_employee"/>
+		      <field name="domain_force">[('category','=','edu_supervisor'),		                                  
+		                                  '|',('mosque_sup','in',user.mosque_ids.ids),
+		                                      '|',('department_id','in',user.department_ids.ids),
+		                                          ('department_ids','in',user.department_ids.ids)]</field><!-- ('mosque_sup.categ_id.mosque_type','in',(str(user.gender)).split(",")), -->
+		      <field name="groups" eval="[(4, ref('group_read_employee_edu_sup'))]"/>
+		</record>
+
+		<record model="ir.rule" id="hr_mosque_user_mosque_create">
+		      <field name="name">mosque user center</field>
+		      <field name="model_id" ref="mk_master_models.model_mk_mosque"/>
+		      <field name="domain_force">[('categ_id.mosque_type','in',(str(user.gender)).split(",")),
+		                                  '|',('id','in',user.mosque_ids.ids),
+		                                      ('center_department_id','in',user.department_ids.ids)]</field>
+		</record>
+
+	</data>
+</openerp>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+    <record id="news_event_form_inherited" model="ir.ui.view">
+      <field name="name">news form</field>
+      <field name="model">mk.news</field>
+      <field name="inherit_id" ref="mk_episode_management.news_event_form"/>      
+      <field name="arch" type="xml">
+      
+        <field name="category" position="after">
+      		<field name="contest" attrs="{'invisible':[('category','!=','contest')]}"/>
+      	</field>
+      	
+      	<field name="masjed_id" position="replace">
+      		<field name="masjed_id" attrs="{'invisible':[('category','=','contest')]}"/>
+      	</field>
+      	
+      </field>
+  </record>
+
+</data>
+</odoo>

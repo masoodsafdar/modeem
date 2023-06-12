@@ -1,0 +1,30 @@
+<odoo>
+	<data>
+
+
+		<record id="mk_episode_type_view_update" model="ir.ui.view">
+		<field name="model">mk.episode_type</field>
+		<field name="inherit_id" ref="mk_master_models.mk_episode_type_form_view"/>
+                <field name="arch" type="xml">
+			<xpath expr="//group[2]" position="after">
+				<group>
+					<field name="minimum"  />
+					<field name="parts_no"  />
+				</group>
+				<field name="performance">
+					<tree editable="top">
+						<field name="name"/>
+						<field name="min_degree"/>
+						<field name="max_degree"/>
+						<field name="rate"/>
+
+					</tree>
+				</field>
+
+			</xpath>
+		</field>
+		</record>
+
+
+	</data>
+</odoo>

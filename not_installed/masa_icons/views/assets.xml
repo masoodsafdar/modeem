@@ -1,0 +1,21 @@
+<odoo>
+    <data>
+        <template id="assets2_login" inherit_id="web.assets_frontend">
+            <xpath expr="." position="inside">
+                <link rel="stylesheet" href="/masa_icons/static/src/style/style.css"/>
+                <link rel="stylesheet" href="/masa_icons/static/src/style/style.less"/>
+
+
+            </xpath>
+        </template>
+        <template id="assets_back" inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+                <link rel="stylesheet" href="/masa_icons/static/src/style/main.css"/>
+                
+
+            </xpath>
+        </template>
+
+
+    </data>
+</odoo>

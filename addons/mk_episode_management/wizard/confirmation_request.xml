@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="view_popup_customer_from" model="ir.ui.view">
+        <field name="name">confirmation request</field>
+        <field name="model">hr.employee.confirm.info</field>
+        <field name="arch" type="xml">
+            <form string="Update employee">
+                <sheet>
+                    <group>
+                        <field name="mobile" class="oe_phone"/>
+                        <field name="email" />
+                    </group>
+                </sheet>
+                <footer>
+                    <button name="action_update_info" type="object" string="validation" class="oe_highlight"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="confirmation_request_action" model="ir.actions.act_window">
+        <field name="name">confirmation request</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">hr.employee.confirm.info</field>
+        <field name="binding_view_types">form</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+
+
+
+</odoo>

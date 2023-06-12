@@ -1,0 +1,108 @@
+<odoo>
+    <data>
+		<!--	hr.department inherit form view	-->
+    	<record id="view_department_form" model="ir.ui.view">
+			<field name="name">hr.department.form</field>
+			<field name="model">hr.department</field>
+			<field name="inherit_id" ref="hr.view_department_form"/>
+			<field name="arch" type="xml">
+				<form position="replace">
+	                <form>
+	                    <sheet>
+	                        <div class="oe_button_box" name="button_box">
+	                            <button name="toggle_active" type="object" class="oe_stat_button" icon="fa-archive">
+	                                <field name="active" widget="boolean_button" options='{"terminology": "archive"}'/>
+	                            </button>
+	                        </div>
+	                        
+	                        <group>
+	                        	<group>
+		                            <field name="name"/>
+		                            <field name="manager_id" options="{'no_create': True}"/>
+		                            <field name="level_type" widget="radio" required="1"/>
+									<field name="department_code" invisble="1" readonly="1"/>
+	                        	</group>
+	                        	<group>
+									<field name="code" readonly="1"/>
+									<field name="test_center_admin"/>
+									<field name="signature" filename="signature_name"/>
+									<field name="signature_name" invisible="1"/>
+									<field name="phone_number"/>
+	                        	</group>
+	                        </group>
+	                        
+		                    <notebook>
+		                        <page string="Address Info">
+			                        <group>
+				                        <field name="city_id"     options="{'no_create': True, 'no_open': True}"/>
+				                        <field name="area_id"     options="{'no_create': True, 'no_open': True}"/>
+				                        <field name="district_id" options="{'no_create': True, 'no_open': True}"/>
+				                        <field name="latitude"/>
+				                        <field name="longitude"/>
+			                        </group>
+		                        </page>
+		
+		                        <page string="male mosques assistns">
+		                            <field name="male_managers" readonly="1" >
+		                              <tree>  
+		                                <field name="name"/>
+		                                <field name="identification_id"/>
+		                              </tree>
+		                            </field>
+		                        </page>
+		                        
+		                        <page string="female mosques assistns">
+									<field name="female_managers" readonly="1">
+									<tree>   
+									<field name="name"/>
+									<field name="identification_id"/>
+									</tree>
+									</field>
+		                        </page>
+		                        
+		                        <page string="Sms Gateway">
+		                        	<group col="4">                             
+		                              <field name="gateway_config" options="{'no_create': True,'no_open': True,}"/>
+		                              <field name="gateway_user"/>
+		                              <field name="gateway_password"/>
+		                              <field name="gateway_sender"/>
+		                              <field name="send_time"/>
+		                          </group>
+		                        </page>                       
+		                    </notebook>	                        
+	                    </sheet>
+	                    
+	                    <div class="oe_chatter">
+	                        <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+	                        <field name="message_ids" widget="mail_thread"/>
+	                    </div>
+	                </form>
+				</form>
+			</field>
+    	</record>
+
+				<!--	hr.job inherit views	-->
+		<record id="hr_job_inherit_tree_view" model="ir.ui.view">
+			<field name="name">hr.job.tree.inherit</field>
+			<field name="model">hr.job</field>
+			<field name="inherit_id" ref="hr.view_hr_job_tree"/>
+			<field name="arch" type="xml">
+				<xpath expr="//tree" position="attributes">
+					<attribute name="delete">false</attribute>
+				</xpath>
+			</field>
+		</record>
+
+		<record id="hr_job_inherit_form_view" model="ir.ui.view">
+			<field name="name">hr.job.form.inherit</field>
+			<field name="model">hr.job</field>
+			<field name="inherit_id" ref="hr.view_hr_job_form"/>
+			<field name="arch" type="xml">
+				<xpath expr="//form" position="attributes">
+					<attribute name="delete">false</attribute>
+				</xpath>
+			</field>
+		</record>
+
+    </data>  
+</odoo>

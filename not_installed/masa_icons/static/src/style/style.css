@@ -1,0 +1,173 @@
+
+.o_database_list .btn-primary{
+background-color:#274559;
+border: 1px solid #274559;
+
+}
+.o_database_list .btn-primary:hover{
+background-color:#A4A4A5;
+border: 1px solid #A4A4A5;
+
+
+}
+.o_database_list {
+    opacity: 1;
+    border-radius: 21px;
+    font-family: 'Droid Arabic Kufi', serif !important;
+}
+@font-face {
+  font-family: 'Droid Arabic Kufi';
+  font-style: normal;
+  font-weight: 700;
+  src: url(/web_rtl/static/src/fonts/DroidKufi-Bold.eot);
+  src: url(/web_rtl/static/src/fonts/DroidKufi-Bold.woff2) format('woff2'),
+       url(/web_rtl/static/src/fonts/DroidKufi-Bold.woff) format('woff'),
+       url(/web_rtl/static/src/fonts/DroidKufi-Bold.ttf) format('truetype');
+}
+body{
+font-family: 'Droid Arabic Kufi', serif !important;
+
+
+}
+div#background-wrapper {
+    background-image: url(/masa_icons/static/src/img/bg-mk.jpg) !important;
+    font-family: 'Droid Arabic Kufi', serif !important;
+    width:100%;
+
+}
+@media (min-width:1444px) and (max-width:1875px){
+div#background-wrapper {
+    background-image: url(/masa_icons/static/src/img/bg-mk.jpg) !important;
+    font-family: 'Droid Arabic Kufi', serif !important;
+    width:100%;
+
+}}
+@media (min-width:1185px) and (max-width:2000px){
+div#background-wrapper {
+    background-image: url(/masa_icons/static/src/img/bg-mk.jpg) !important;
+    font-family: 'Droid Arabic Kufi', serif !important;
+    width:100%;
+
+}}
+@media (min-width:1820px) and (max-width:1875px){
+div#background-wrapper {
+    background-image: url(/masa_icons/static/src/img/bg-mk.jpg) !important;
+    font-family: 'Droid Arabic Kufi', serif !important;
+    width:100%;
+
+}}
+@media (min-width:1501px) and (max-width:2501px){
+div#background-wrapper {
+    background-image: url(/masa_icons/static/src/img/bg_m1.jpg) !important;
+
+
+}}
+form.oe_login_form {
+
+}
+@media (min-width:360px) and (max-width:823px){
+
+.o_database_list {
+    opacity: 1;
+    border-radius: 21px;
+    height: 80%;
+}
+
+}
+@media (min-width:320px) and (max-width:1135px){
+
+.o_database_list {
+    height: 88%;
+    top: -15px;
+}
+
+}
+@media (max-width:280px){
+
+.o_database_list {
+
+    height: 81%;
+}
+
+}
+@media (max-width:320px){
+
+.o_database_list {
+
+        opacity: 1;
+    border-radius: 21px;
+    height: 91%;
+    top: -4%;
+}
+
+}
+
+.login-text {
+    white-space: normal;
+}
+.o_database_list input, .o_database_list select {
+   border-bottom: 1px solid #ceccca !important;
+    border-top: 1px solid #ceccca !important;
+    border-left: 1px solid #ceccca !important;
+    border-right: 1px solid #ceccca !important;
+       border-radius: 7px;
+    height: 50px;
+
+    color: #B18E6E;
+}
+.icone{
+width:20%;
+
+}
+a:hover {
+				text-decoration: none;
+				.oe_app_caption {
+					color: #99640e;
+				}
+.icon {
+   padding: 0px !important;
+    color: gray !important;
+    position: absolute !important;
+    left:100% !important;
+    background: white !important;
+
+
+}
+.form-group.field-login {
+
+    display: flex;
+    width: 100%;
+    margin-bottom: 15px;
+}
+.form-group.field-password {
+
+    display: flex;
+    width: 100%;
+    margin-bottom: 15px;
+}
+.control-label{
+   white-space: initial;
+display: inline-block;
+margin-bottom: 5px;
+font-size: 16px !important;
+color: gray;
+float:right;
+}}
+label.test_login_label.control-label {
+    font-size: 16px;
+    float: right;
+    margin-right: 41px !important;
+    color:gray;
+}
+i.icon {
+    right: 55px !important;
+    position: absolute;
+}
+
+.o_database_list input, .o_database_list select {
+    color: gray !important;
+}
+.text-center{
+display:none;
+
+}

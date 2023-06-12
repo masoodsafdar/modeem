@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<odoo>
+		<data>
+		<record id="mk_contests_types_form_view" model="ir.ui.view">
+		    <field name="name">contesta types  form</field>
+		    <field name="model">contest.type</field>
+		    <field name="arch" type="xml">
+              <form string = "Contest Types">
+				  <header></header>
+				  <sheet>
+					    <group>
+							<group>
+								<field name="name" required="1" />
+							</group>
+							<group>
+								<field name="method" required="1" />
+							</group>
+						</group>
+			  	  </sheet>
+              </form>
+             </field>
+		</record>
+		
+       <record id="mk_contests_types_tree_view" model="ir.ui.view">
+	        <field name="name">contesta types tree</field>
+		    <field name="model">contest.type</field>
+		    <field name="arch" type="xml">
+                <tree delete="0" string="nomination types preparation">
+                	<field name="name" />
+                	<field name="method" />
+                </tree>
+            </field>
+		</record>
+
+		<record id="mk_contest_type_search_view" model="ir.ui.view">
+	       <field name="name">contest type search</field>
+	   	   <field name="model">contest.type</field>
+	       <field name="arch" type="xml">
+		    	<search>
+		    		<field name="name"/> 
+		    		
+		    		<filter name="quran"          string="قرآن"           domain="[('method', '=','quran')]"/>
+				    <filter name="program"        string="برنامج"         domain="[('method', '=','program')]"/>
+		    	</search>
+	       </field>
+		</record>
+				
+		    <record id="contests_types_action" model="ir.actions.act_window">
+				<field name="name">contests types</field>
+				<field name="res_model">contest.type</field>
+				<field name="type">ir.actions.act_window</field>
+				<field name="view_type">form</field>
+				<field name="view_mode">tree,form</field>
+				
+		    </record>
+
+		   <menuitem
+              id="contests_types_menu"
+              name="contests types"
+              action="contests_types_action"
+              parent="config_menu"
+              sequence="5"
+            />	
+         </data>
+</odoo>
+

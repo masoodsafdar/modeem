@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="mosque_supervisor_seq_serial" model="ir.sequence">
+            <field name="name">mosque.supervisor</field>
+            <field name="code">mosque.supervisor.serial</field>
+            <field name="padding">5</field>
+            <field name="prefix">0</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        
+    </data>
+</odoo>

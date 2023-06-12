@@ -1,0 +1,28 @@
+<openerp>
+    <data>
+        <record id="mk_episode_type_view_update_inherit" model="ir.ui.view">
+            <field name="model">mk.episode_type</field>
+            <field name="inherit_id" ref="mk_episode_management.mk_episode_type_view_update"/>
+            <field name="arch" type="xml">
+            
+                <field name="type_categ_ids" position="after">
+                	<field name="type_test"/>
+                </field>
+                
+                <page name="page_task" position="after">                                            
+	                 <page string="الحوافز">
+	                     <field name="incentive_ids">
+	                         <tree editable="bottom">
+	                             <field name="min_nbr_part"/>
+	                             <field name="max_nbr_part"/>
+	                             <field name="type_mark"/>
+	                             <field name="incentive_id"/>
+	                         </tree>
+	                     </field>
+	                 </page>
+                </page>
+            </field>
+        </record>
+        
+    </data>
+</openerp>

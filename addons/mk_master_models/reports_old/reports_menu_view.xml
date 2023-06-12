@@ -1,0 +1,38 @@
+<odoo>
+    <record model="report.paperformat" id="paperformat_test_report">
+        <field name="name">paperformat.test.report</field>
+        <field name="default" eval="True"/>
+        <field name="format">A4</field>
+        <field name="page_width">0</field>
+        <field name="page_width">0</field>
+        <field name="orientation">Portrait</field>
+        <field name="margin_top">12</field>
+        <field name="margin_right">5</field>
+        <field name="margin_bottom">10</field>
+        <field name="margin_left">5</field>
+        <field name="header_line" eval="False"/>
+        <field name="header_spacing">20</field>
+        <field name="dpi">90</field>
+    </record>
+
+    <report
+             string="تجديد تكليف مشرف"
+             id="report_assign_supervisor"
+             model="mk.mosque"
+             report_type="qweb-pdf"
+             name="mk_master_models.renew_assigne_supervisore_report"
+             file="mk_master_models.renew_assigne_supervisore_report"
+             paperformat="paperformat_test_report"
+         />
+    <report
+            string="  تجديد تصريح افتتا ح مسجد\مدرسة "
+            id="report_episode_openning_permition"
+            model="mk.mosque"
+            report_type="qweb-pdf"
+            name="mk_master_models.renew_episode_openning_permition_reprt"
+            file="mk_master_models.renew_episode_openning_permition_reprt"
+            paperformat="paperformat_test_report"
+        />
+
+
+</odoo>

@@ -1,0 +1,332 @@
+<odoo>
+    <data>
+     
+		<record id="mk_episode_action_details2" model="ir.actions.act_window">
+            <field name="name">Episode periods </field>
+            <field name="res_model">mk.episode</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="binding_view_types">form</field>
+            <field name="view_mode">tree,form,kanban</field>
+            <field name="domain">[('parent_episode','=',active_id)]</field>
+            <field name="context">{}</field>
+            <field name="search_view_id" ref="mk_episode_search_view"/>
+            <field name="view_id" ref="mk_episode_tree_view"/>
+        </record>
+
+     	<record id="mk_episode_master_form_view" model="ir.ui.view">
+        	<field name="name">Episode setting Form View</field>
+          	<field name="model">mk.episode.master</field>
+          	<field name="arch" type="xml">
+          		<form string = "Episode setting">
+          			<header>
+          				<button name="action_done"    type="object" string="تجميد الحلقة"       states="active"/>
+          				<button name="action_reopen" type="object" string="إعادة تفعيل الحلقة" states="done"/>
+          				
+          				<field name="state" widget="statusbar"/>
+          				<field name="active" invisible="1"/>
+          			</header>
+          			<sheet>
+                		<div class="oe_title" style="width:100%">
+                    		<h2><field name="name" required="True" placeholder="Episode name" attrs="{'readonly': ['|',('active','!=',True),('state','!=','active')]}"/></h2>
+                		</div>
+                		
+                		<div class="oe_left oe_button_box">
+                   			<div class="oe_read_only">     
+            					<button type="action" name="%(new_period_wizard_action)d" context="{'default_selected_period':'subh','default_episode_id':active_id}" attrs="{'invisible':['|',('active','!=',True),'|',('state','!=','active'),('subh','=',True)]}" >               
+                					<img style="height:40px;width:50px;border-radius:10px;border:0px solid" src="mk_episode_management/static/img/subh_a.jpeg" />
+            					</button>    
+
+            					<button type="object" name="go_to_subh_period"  attrs="{'invisible':[('subh','!=',True)]}" >                
+                					<img style="height:40px;width:50px;border-radius:10px;border:0px solid" src="mk_episode_management/static/img/subh.jpeg" />
+            					</button> 
+
+
+            					<button type="action" name="%(new_period_wizard_action)d" context="{'default_selected_period':'zuhr','default_episode_id':active_id}" attrs="{'invisible':['|',('active','!=',True),'|',('state','!=','active'),('zuhr','=',True)]}">                                
+                					<img style="height:40px;width:50px;border-radius:10px;border:0px solid" src="mk_episode_management/static/img/zuhr_a.jpeg" />
+            					</button>    
+            
+            					<button type="object" name="go_to_zuhr_period" attrs="{'invisible':[('zuhr','!=',True)]}">                                
+                					<img style="height:40px;width:50px;border-radius:10px;border:0px solid" src="mk_episode_management/static/img/zuhr.jpeg" />
+            					</button>
+            
+            					<button type="action" name="%(new_period_wizard_action)d" context="{'default_selected_period':'aasr','default_episode_id':active_id}" attrs="{'invisible':['|',('active','!=',True),'|',('state','!=','active'),('aasr','=',True)]}" >                
+                					<img style="height:40px;width:50px;border-radius:10px;border:0px solid" src="mk_episode_management/static/img/assar_a.jpeg" />
+            					</button>
+
+            					<button type="object" name="go_to_asaar_period"  attrs="{'invisible':[('aasr','!=',True)]}" >                
+                					<img style="height:40px;width:50px;border-radius:10px;border:0px solid" src="mk_episode_management/static/img/assar.jpeg" />
+            					</button>
+
+            					<button type="action" name="%(new_period_wizard_action)d" context="{'default_selected_period':'magrib','default_episode_id':active_id}" attrs="{'invisible':['|',('active','!=',True),'|',('state','!=','active'),('magrib','=',True)]}" >                
+                					<img style="height:40px;width:50px;border-radius:10px;border:0px solid" src="mk_episode_management/static/img/magrib_a.jpeg" />
+            					</button>
+
+            					<button type="object" name="go_to_magrib_period" attrs="{'invisible':[('magrib','!=',True)]}" >
+                					<img style="height:40px;width:50px;border-radius:10px;border:0px solid" src="mk_episode_management/static/img/magrib.jpeg" />
+            					</button>
+
+            					<button type="action" name="%(new_period_wizard_action)d" context="{'default_selected_period':'esha','default_episode_id':active_id}" attrs="{'invisible':['|',('active','!=',True),'|',('state','!=','active'),('esha','=',True)]}" >                    
+                					<img style="height:40px;width:50px;border-radius:10px;border:0px solid" src="mk_episode_management/static/img/esha_a.jpeg" />
+            					</button>
+
+           						<button type="object" name="go_to_esha_period" attrs="{'invisible':[('esha','!=',True)]}">                    
+                					<img style="height:40px;width:50px;border-radius:10px;border:0px solid" src="mk_episode_management/static/img/esha.jpeg"/>
+            					</button>
+                			</div>
+                		</div>
+                		
+		                <group>
+	                		<group>
+	                			<field name="mosque_id"      options="{'no_open':1,'no_create':1}" attrs="{'readonly': ['|',('active','!=',True),('state','!=','active')]}" required="1"/>
+	                    		<field name="company_id"     options="{'no_open':1,'no_create':1}" attrs="{'readonly': ['|',('active','!=',True),('state','!=','active')]}"/>
+	                		</group>		                
+			                <group>			                
+	                    		<field name="academic_id"    options="{'no_open':1,'no_create':1}" attrs="{'readonly': ['|',('active','!=',True),('state','!=','active')]}"/>
+	                    		<field name="study_class_id" options="{'no_open':1,'no_create':1}" attrs="{'readonly': ['|',('active','!=',True),('state','!=','active')]}" required="1"/>
+			                </group>
+		                </group>
+		                
+		                <group invisible="1">
+	                		<group>
+			                    <field name="subh_flag"   invisible="1"/>
+			                    <field name="zuhr_flag"   invisible="1"/>
+			                    <field name="aasr_flag"   invisible="1"/>
+			                    <field name="magrib_flag" invisible="1"/>
+			                    <field name="esha_flag"   invisible="1"/>
+	                		</group>		                
+			                <group>			                		                
+			                    <field name="subh"   invisible="1"/>
+			                    <field name="zuhr"   invisible="1"/>
+			                    <field name="aasr"   invisible="1"/>
+			                    <field name="magrib" invisible="1"/>
+			                    <field name="esha"   invisible="1"/>
+			                </group>
+		                </group>		                
+		                
+			            <!-- notebook>
+			                <page string="episode period">
+			                    <field name="episode_ids" readonly="1"> <- - attrs="{'readonly': ['|',('active','!=',True),('state','!=','active')]}"- ->
+			                        <tree create="0" delete="0">
+			                            <field name="display_name"/>
+			                            <field name="teacher_id"/>
+			                            <field name="episode_days" widget="many2many_tags"/>
+			                            <field name="state" string="statee"/>
+			                        </tree>
+			                    </field>
+			                </page>
+			            </notebook -->                      
+        			</sheet>
+					<div class="oe_chatter">
+						<field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+						<field name="message_ids" widget="mail_thread"/>
+					</div>
+        		</form>
+        	</field>
+    	</record>
+
+    	<record id="mk_episode_master_tree_view" model="ir.ui.view">
+        	<field name="name">Episode setting Tree View</field>
+        	<field name="model">mk.episode.master</field>
+        	<field name="arch" type="xml">
+            	<tree delete="0" string="Episode setting ">
+                	<field name="subh"   invisible="1" />
+                    <field name="zuhr"   invisible="1"/>
+                    <field name="aasr"   invisible="1"/>
+                    <field name="magrib" invisible="1"/>
+                    <field name="esha"   invisible="1"/>
+                	<field name="name"/>
+                	<button name="%(mk_episode_management.mk_episode_action_details2)d" type="action" string="episode available periods" class="btn btn-sm btn btn-primary"/>
+                	<field name="study_class_id" options="{'no_open':1,'no_create':1}"/>
+                	<field name="academic_id"    options="{'no_open':1,'no_create':1}"/>
+            	</tree>
+        	</field>
+    	</record>
+        
+    	<record id="mk_episode_search_master_view" model="ir.ui.view">
+        	<field name="name">Episode Search View</field>
+        	<field name="model">mk.episode.master</field>
+        	<field name="arch" type="xml">
+            	<search string="Episode setting">
+                	<field name="name" string="Episode " />
+                	<field name="study_class_id"/>
+                	<field name="academic_id"/>
+                	<field name="mosque_id"/>
+                	<field name="episode_ids"/>
+                	
+                	<filter string="الحلقات المفعلة" name="ep_active"   domain="[('state', '=','active')]"/>
+                	<filter string="الحلقات المجمدة" name="ep_done"     domain="[('state', '=','done')]"/>
+                	<separator/>
+                	<filter string="Un Active"       name="unactive"    domain="[('active', '=',False)]"/>
+ 
+                    <group expand="0" string="Group By">
+		                     <filter name="center_department_id"  string="الفصل الدراسي"  context="{'group_by': 'study_class_id'}"/>
+		                     <filter name="academic_id"           string="العام الدراسي"  context="{'group_by': 'academic_id'}"/>
+		                     <filter name="mosque_id"             string="المسجد/المدرسة" context="{'group_by': 'mosque_id'}"/>
+		            </group>
+            	</search>
+        	</field>
+    	</record>
+      
+		<record model="ir.ui.view" id="mk_epsiode_master_kanban_view">
+			<field name="name">master episode kanban</field>
+			<field name="model">mk.episode.master</field>
+			<field name="arch" type="xml">
+				<kanban class="o_mk_parent_kanban">
+					<field name="id"/>
+					<field name="name"/>       
+					<field name="subh"/>
+					<field name="zuhr"/>
+					<field name="magrib"/>
+					<field name="aasr"/>
+					<field name="esha"/>
+					<field name="active"/>
+					<field name="state"/>
+    				<templates>
+        				<t t-name="kanban-box">
+            				<div class="oe_kanban_global_click"  style="width:420px;height:182px;border-left:6px #ece9c4 solid;border-right:6px #ece9c4 solid;">
+                				<div>
+                					<span style="font-size:16px;color:##af481f">
+                						<b><field name="name"/></b>
+                					</span>
+                				</div>
+				                <div class="kanban_sperator" style="border-top:1px #08d635 solid;margin-top:10px;">
+				                </div>
+                
+            					<div class="oe_kanban_details" style="text-align:right;padding-bottom:5px;clear:both; vertical-align:right;margin-top:10px;">
+            						<div class="oe_period">
+                						<t t-if="record.esha.raw_value==true">
+                    						<a type="object" name="go_to_esha_period" >
+                    							<img class="oe_icon" src="mk_episode_management/static/img/esha.jpeg"/>
+                    						</a>
+                 						</t>
+                 						
+                						<t t-if="record.esha.raw_value!=true and record.active.raw_value==true and record.state.raw_value=='active'">
+                    						<a type="action" name="%(new_period_wizard_action)d" context="{'default_selected_period':'esha','default_episode_id':active_id}" >
+                    							<img class="oe_icon" src="mk_episode_management/static/img/esha_a.jpeg"/>
+                    						</a>
+                						</t>
+                						
+                						<t t-if="record.esha.raw_value!=true and (record.active.raw_value!=true or record.state.raw_value!='active')">
+                    						<a>
+                    							<img class="oe_icon" src="mk_episode_management/static/img/esha_a.jpeg"/>
+                    						</a>
+                						</t>                						   
+                					</div>
+
+                					<div class="oe_period">
+                        				<t t-if="record.magrib.raw_value==true">
+                           					<a type="object" name="go_to_magrib_period" >
+                            					<img class="oe_icon" src="mk_episode_management/static/img/magrib.jpeg"/>
+                            				</a>
+                        				</t>
+
+                        				<t t-if="record.magrib.raw_value!=true and record.active.raw_value==true and record.state.raw_value=='active'">
+                           					<a type="action"  name="%(new_period_wizard_action)d" context="{'default_selected_period':'magrib','default_episode_id':active_id}">
+                            					<img class="oe_icon" src="mk_episode_management/static/img/magrib_a.jpeg"/>
+                            				</a>
+                        				</t>
+                        				
+                        				<t t-if="record.magrib.raw_value!=true and (record.active.raw_value!=true or record.state.raw_value!='active')">
+                           					<a>
+                            					<img class="oe_icon" src="mk_episode_management/static/img/magrib_a.jpeg"/>
+                            				</a>
+                        				</t>
+                					</div>
+
+                					<div class="oe_period">
+                        				<t t-if="record.aasr.raw_value==true">
+                            				<a type="object" name="go_to_asaar_period" >
+                            					<img class="oe_icon" src="mk_episode_management/static/img/assar.jpeg"/>
+                            				</a>
+                        				</t>
+
+                        				<t t-if="record.aasr.raw_value!=true and record.active.raw_value==true and record.state.raw_value=='active'">
+                            				<a type="action" name="%(new_period_wizard_action)d" context="{'default_selected_period':'aasr','default_episode_id':active_id}" >
+                            					<img class="oe_icon" src="mk_episode_management/static/img/assar_a.jpeg"/>
+                            				</a>
+                        				</t>
+
+                        				<t t-if="record.aasr.raw_value!=true and (record.active.raw_value!=true or record.state.raw_value!='active')">
+                           					<a>
+                            					<img class="oe_icon" src="mk_episode_management/static/img/assar_a.jpeg"/>
+                            				</a>
+                        				</t>
+                					</div>
+
+                					<div class="oe_period">               
+                       					<t t-if="record.zuhr.raw_value==true">
+                            				<a type="object" name="go_to_zuhr_period" >
+                            					<img class="oe_icon" src="mk_episode_management/static/img/zuhr.jpeg"/>
+                            				</a>
+                        				</t>
+                       					<t t-if="record.zuhr.raw_value!=true and record.active.raw_value==true and record.state.raw_value=='active'">
+                            				<a type="action" name="%(new_period_wizard_action)d" context="{'default_selected_period':'zuhr','default_episode_id':active_id}">
+                            					<img class="oe_icon" src="mk_episode_management/static/img/zuhr_a.jpeg"/>
+                            				</a>
+                        				</t>
+                        				
+                        				<t t-if="record.zuhr.raw_value!=true and (record.active.raw_value!=true or record.state.raw_value!='active')">
+                           					<a>
+                            					<img class="oe_icon" src="mk_episode_management/static/img/zuhr_a.jpeg"/>
+                            				</a>
+                        				</t>
+                					</div>
+
+                					<div class="oe_period">
+                         				<t t-if="record.subh.raw_value==true">
+                            				<a type="object" name="go_to_subh_period">
+                            					<img class="oe_icon" src="mk_episode_management/static/img/subh.jpeg"/>
+                            				</a>
+                         				</t>
+                         				   
+                        				<t t-if="record.subh.raw_value!=true and record.active.raw_value==true and record.state.raw_value=='active'">
+                            				<a type="action" name="%(new_period_wizard_action)d" context="{'default_selected_period':'subh','default_episode_id':active_id}" >
+                            					<img class="oe_icon" src="mk_episode_management/static/img/subh_a.jpeg"/>
+                            				</a>
+                         				</t>
+                         				
+                        				<t t-if="record.subh.raw_value!=true and (record.active.raw_value!=true or record.state.raw_value!='active')">
+                           					<a>
+                            					<img class="oe_icon" src="mk_episode_management/static/img/subh_a.jpeg"/>
+                            				</a>
+                        				</t>                         				                    
+                					</div>
+            					</div>
+            				</div>
+            			</t>
+        			</templates>
+        		</kanban>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="wizard_update_episode_name_form">
+            <field name="name">wizard_update_episode_name.form</field>
+            <field name="model">mk.update.episode.name</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Update episode name">
+                    <sheet>
+                        <group>
+                            <field name="name" string="Name"/>
+                        </group>
+                        <footer>
+                            <button name="action_update_episode_name" class="btn-primary" string="حفظ" type="object" groups="mk_episode_management.episode_name_update_group"/>
+                            <button string="Cancel" class="btn-primary" special="cancel"/>
+                        </footer>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_update_episode_name" model="ir.actions.server">
+            <field name="name">Update episode name</field>
+            <field name="model_id" ref="model_mk_episode"/>
+            <field name="binding_model_id" ref="model_mk_episode"/>
+            <field name="state">code</field>
+            <field name="code">
+                 action=record.update_episode_name()
+            </field>
+        </record>
+
+	</data>  
+</odoo>

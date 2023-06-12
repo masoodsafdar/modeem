@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data noupdate="1">
+        <record model="ir.module.category" id="mk_notification_management">
+            <field name="name">Notififcations management</field>
+            <field name="description">User access for mk_notififcation module</field>
+            <field name="sequence">10</field>
+        </record>
+
+        <!-- Notifications groups-->
+        <record id="read_notification" model="res.groups">
+            <field name="name">Read Notififcation</field>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+            <field name="category_id" ref="mk_notification.mk_notification_management"/>
+        </record>
+
+        <record id="create_write_notification" model="res.groups">
+            <field name="name">Create Edit Notififcation</field>
+            <field name="implied_ids" eval="[(4, ref('mk_notification.read_notification'))]"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+            <field name="category_id" ref="mk_notification.mk_notification_management"/>
+        </record>
+
+        <record id="delete_notification" model="res.groups">
+            <field name="name">Delete Notififcation</field>
+            <field name="implied_ids" eval="[(4, ref('mk_notification.read_notification'))]"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+            <field name="category_id" ref="mk_notification.mk_notification_management"/>
+        </record>
+
+         <record id="confirm_employee_list_send_notif" model="res.groups">
+            <field name="name">Confirm employee list and send notif</field>
+            <field name="implied_ids" eval="[(4, ref('mk_notification.read_notification'))]"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+            <field name="category_id" ref="mk_notification.mk_notification_management"/>
+         </record>
+
+          <!-- Employee notifications groups-->
+        <record id="read_employee_notification" model="res.groups">
+            <field name="name">Read Employee Notififcation</field>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+            <field name="category_id" ref="mk_notification.mk_notification_management"/>
+        </record>
+
+        <record id="create_write_employee_notification" model="res.groups">
+            <field name="name">Create Edit Employee Notififcation</field>
+            <field name="implied_ids" eval="[(4, ref('mk_notification.read_employee_notification'))]"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+            <field name="category_id" ref="mk_notification.mk_notification_management"/>
+        </record>
+
+        <record id="delete_employee_notification" model="res.groups">
+            <field name="name">Delete Employee Notififcation</field>
+            <field name="implied_ids" eval="[(4, ref('mk_notification.read_employee_notification'))]"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+            <field name="category_id" ref="mk_notification.mk_notification_management"/>
+        </record>
+
+<!--
+        <record id="news_notification_group" model="res.groups">
+            <field name="name">اشعارات النظام</field>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+            <field name="category_id" ref="mk_notification.mk_notification_management"/>
+        </record>
+        -->
+    </data>
+
+</odoo>

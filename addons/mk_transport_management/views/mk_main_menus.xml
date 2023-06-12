@@ -1,0 +1,13 @@
+<odoo>
+    <data>
+
+	<menuitem name="Transport" id="mk_transport_main_menu" groups="group_stop_transportation,accept_reject_transport_management,trans_createe_attendance"/>    
+	<menuitem name="Transport" id="mk_transport_menu" parent="mk_transport_main_menu"/>
+	<menuitem name="Transport Configration" id="transport_config_menu" 
+	parent="mk_transport_main_menu"/> 
+	<menuitem name="Transport Configration" id="transport_config_main_menu" 
+	parent="mk_transport_main_menu"/> 
+
+    </data>  
+</odoo>
+

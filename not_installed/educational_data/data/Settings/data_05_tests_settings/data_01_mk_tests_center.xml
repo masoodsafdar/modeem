@@ -1,0 +1,31 @@
+<odoo>
+    <data noupdate="1">
+        <record id="mk_test_center1" model="mk.test.center">
+            <field name="name">مركز الدائري الغربي</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="district_id" ref="mk_district69"/>
+            <field name="city_id" ref="mk_city1"/>
+            <field name="area_id" ref="mk_area1"/>
+            <field name="longitude">0</field>
+            <field name="latitude">0</field>
+        </record>
+        <record id="mk_test_center2" model="mk.test.center">
+            <field name="name">الغرب</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="district_id" ref="mk_district18"/>
+            <field name="city_id" ref="mk_city1"/>
+            <field name="area_id" ref="mk_area1"/>
+            <field name="longitude">0</field>
+            <field name="latitude">0</field>
+        </record>
+        <record id="mk_test_center3" model="mk.test.center">
+            <field name="name">مركز الغرب</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="district_id" ref="mk_district18"/>
+            <field name="city_id" ref="mk_city1"/>
+            <field name="area_id" ref="mk_area1"/>
+            <field name="longitude">0</field>
+            <field name="latitude">0</field>
+        </record>
+    </data>
+</odoo>

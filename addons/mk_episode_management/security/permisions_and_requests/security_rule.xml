@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+
+<record model="ir.rule" id="user_create_permision_center">
+      <field name="name">permision mosque</field>
+      <field name="model_id" ref="mk_episode_management.model_mosque_permision"/>
+      <field name="domain_force">['|',('masjed_id','in',user.mosque_ids.ids),
+                                      ('center_id','in',user.department_ids.ids)]
+</field>
+</record>
+
+
+<record model="ir.rule" id="user_super_request_center">
+      <field name="name">supervisor request</field>
+      <field name="model_id" ref="mk_episode_management.model_mosque_supervisor_request"/>
+      <field name="domain_force">['|',('mosque_id','in',user.mosque_ids.ids),
+                                      ('center_id','in',user.department_ids.ids)]
+      </field>
+</record>
+
+<record model="ir.rule" id="mk_line_per_report_rule1">
+      <field name="name">super report1</field>
+      <field name="model_id" ref="mk_episode_management.model_mosque_supervisor"/>
+      <field name="domain_force">[('line_ids.mosque_id.categ_id.mosque_type','in',(str(user.gender)).split(","))]</field>
+
+
+</record>
+<record model="ir.rule" id="mk_line_per_report_rule2">
+      <field name="name">super report2</field>
+      <field name="model_id" ref="mk_episode_management.model_mosque_supervisor_line"/>
+      <field name="domain_force">['|',('mosque_id','in',user.mosque_ids.ids),('center_id','in',user.department_ids.ids)]</field>
+
+
+</record>
+
+<record id="base.access_res_partner_group_partner_manager" model="ir.model.access">
+    <field name="perm_read" eval="True"/>
+    <field name="perm_write" eval="False"/>
+    <field name="perm_create" eval="False"/>
+    <field name="perm_unlink" eval="False"/>
+</record>
+
+</data>
+</openerp>

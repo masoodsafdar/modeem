@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<odoo>
+<data>
+
+<record id="new_period_confirmation_wizerd" model="ir.ui.view">
+<field name="name">new period confirm form</field>
+<field name="model">new.period</field>
+<field name="arch" type="xml">
+<form style="width:50px;">
+
+	<img style="height:40px;width:50px;border-radius:10px;border:0px solid" 
+        src="mk_episode_management/static/img/subh_a.jpeg" attrs="{'invisible':[('selected_period','!=','subh')]}"/>
+	
+	<img style="height:40px;width:50px;border-radius:10px;border:0px solid" 
+        src="mk_episode_management/static/img/zuhr_a.jpeg" attrs="{'invisible':[('selected_period','!=','zuhr')]}"/>
+	
+	<img style="height:40px;width:50px;border-radius:10px;border:0px solid" 
+        src="mk_episode_management/static/img/assar_a.jpeg" attrs="{'invisible':[('selected_period','!=','aasr')]}"/>
+	
+	<img style="height:40px;width:50px;border-radius:10px;border:0px solid" 
+        src="mk_episode_management/static/img/magrib_a.jpeg" attrs="{'invisible':[('selected_period','!=','magrib')]}"/>
+	
+	<img style="height:40px;width:50px;border-radius:10px;border:0px solid" 
+        src="mk_episode_management/static/img/esha_a.jpeg" attrs="{'invisible':[('selected_period','!=','esha')]}"/>
+	
+
+
+	<group colspan="2" col="4">
+		<field name="episode_id" invisible="0" readonly="1"/>
+		<field name="selected_period" invisible="1"/>
+		<field name="teacher_id" string="add teacher" options="{'no_create': 1, 'no_create_edit': 1,'no_open':1}"/>
+		<field name="episode_type" options="{'no_create': 1, 'no_create_edit': 1,'no_open':1}"/>
+	</group>
+
+<footer>
+	<p>
+		هل حقا تريد إضافة هذه الفتره للحلقة
+	<button name="yes" type="object" string="yes" class="oe_highlight"/>
+	<button string="no" class="oe_link" special="cancel"/>
+	</p>
+
+</footer>
+</form>
+</field>
+</record>    
+
+<record id="new_period_wizard_action" model="ir.actions.act_window">
+<field name="name"> </field>
+<field name="res_model">new.period</field>
+<field name="binding_view_types">form</field>
+<field name="view_mode">form</field>
+<field name="view_id" ref="new_period_confirmation_wizerd"/>
+<field name="target">new</field>
+<field name="context">{'ep_id':active_id}
+</field>
+</record>
+
+</data>
+</odoo>

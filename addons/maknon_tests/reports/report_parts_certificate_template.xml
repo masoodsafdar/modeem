@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="parts_certificate_report">
+        <t t-foreach="docs" t-as="o">
+            <t t-call="web.external_layout">
+                <link rel="stylesheet" href="/maknon_tests/static/src/font.css"/>
+                <div>
+                    <div class="footer">
+                        <div>
+                        </div>
+                    </div>
+                    <div class="oe_structure"/>
+                    <div class="row mt32 mb32">
+                        <t t-set="state" t-value="o.state"/>
+                        <t t-set="is_pass" t-value="o.is_pass"/>
+                        <t t-set="type_test" t-value="o.test_name.type_test"/>
+                        <t t-set="test_appreciation" t-value="o.appreciation"/>
+                        <t t-set="mosque_naame" t-value="o.mosque_id.name"/>
+                        <t t-if="state == 'done' and type_test == 'parts' and is_pass == True and test_appreciation not in ['acceptable','fail']">
+                            <div class="page">
+                                <t t-set="department_name" t-value="o.mosque_id.center_department_id.name"/>
+                                <t t-set="mosque_type" t-value="o.mosque_id.categ_id.mosque_type"/>
+                                <t t-set="student" t-value="o.sudo().student_id.student_id"/>
+                                <t t-set="study_class" t-value="o.study_class_id.name.replace('0','٠').replace('1','١').replace('2','٢').replace('3','٣').replace('4','٤').replace('5','٥').replace('6','٦').replace('7','٧').replace('8','٨').replace('9','٩')"/>
+                                <t t-set="department_manager" t-value="o.mosque_id.center_department_id.test_center_admin"/>
+                                <t t-set="signature" t-value="o.department_id.signature"/>
+                                <t t-set="category" t-value="o.category"/>
+                                <t t-if="category == False">
+                                    <t t-set="student_name" t-value="student.display_name"/>
+                                    <t t-if="student.identity_no">
+                                        <t t-set="student_identity" t-value="student.identity_no.replace('0','٠').replace('1','١').replace('2','٢').replace('3','٣').replace('4','٤').replace('5','٥').replace('6','٦').replace('7','٧').replace('8','٨').replace('9','٩')"/>
+                                    </t>
+                                    <t t-if="not student.identity_no and student.passport_no">
+                                        <t t-set="student_identity" t-value="student.passport_no.replace('0','٠').replace('1','١').replace('2','٢').replace('3','٣').replace('4','٤').replace('5','٥').replace('6','٦').replace('7','٧').replace('8','٨').replace('9','٩')"/>
+                                    </t>
+                                    <t t-if="not student.identity_no and not student.passport_no">
+                                        <t t-set="student_identity" t-value="' '"/>
+                                    </t>
+                                </t>
+
+                                <t t-if="category != False">
+                                    <t t-set="student_name" t-value="o.employee_id.name"/>
+                                    <t t-set="employee_identity" t-value="o.employee_id.identification_id.replace('0','٠').replace('1','١').replace('2','٢').replace('3','٣').replace('4','٤').replace('5','٥').replace('6','٦').replace('7','٧').replace('8','٨').replace('9','٩')"/>
+                                </t>
+
+                                <t t-set="student_nationality" t-value="o.nationality"/>
+                                <t t-if="student_nationality[:2] == 'ال'">
+                                    <t t-set="student_nationality" t-value="student_nationality[2:]"/>
+                                </t>
+                                <t t-if="mosque_type == 'female' and student_nationality[-1] != 'ة'">
+                                    <t t-set="student_nationality" t-value="student_nationality+'ة'"/>
+                                </t>
+
+                                <t t-set="mosque_name" t-value="o.mosque_id.name"/>
+                                <t t-set="mosque_display_name" t-value="o.mosque_id.display_name"/>
+                                <t t-set="length_mosque_name" t-value="len(mosque_name)"/>
+                                <t t-set="branch" t-value="o.branch"/>
+                                <t t-set="branch_from_surah" t-value="branch.from_surah.name"/>
+                                <t t-set="branch_to_surah" t-value="branch.to_surah.name"/>
+                                <t t-if="branch.select_parts">
+                                    <t t-set="parts_number" t-value="len(branch.parts_ids.ids)"/>
+                                </t>
+                                <t t-if="not branch.select_parts">
+                                    <t t-set="parts_number" t-value="branch.parts_num"/>
+                                </t>
+                                <t t-set="test_degree" t-value="str(int(o.final_degree)).replace('0','٠').replace('1','١').replace('2','٢').replace('3','٣').replace('4','٤').replace('5','٥').replace('6','٦').replace('7','٧').replace('8','٨').replace('9','٩')"/>
+                                <t t-set="test_appreciation" t-value="o.appreciation.replace('excellent','ممتاز').replace('v_good','جيد جداً').replace('good','جيد')"/>
+                                <div style="background-image:url(/maknon_tests/static/src/img/parts_certificate_background.jpg);background-size:480mm 334mm; width:480mm; height:334mm;">
+                                    <br/>
+                                    <br/>
+                                    <br/>
+                                    <br/>
+                                    <br/>
+                                    <br/>
+                                    <br/>
+                                    <br/>
+                                    <br/>
+                                    <br/>
+                                    <br/>
+                                    <br/>
+                                    <br/>
+                                    <br/>
+                                    <br/>
+                                    <br/>
+                                    <br/>
+                                    <p style="font-size:32px;line-height:2;text-align:center;direction:rtl;font-family:Neo Sans Arabic;padding-right:420px">
+                                        <br/>
+                                        <span t-esc="'يشهد مركز إشــــراف '"/>
+                                        <b>
+                                            <span t-esc="department_name + ' '"/>
+                                        </b>
+                                        <span t-esc="'بالجمعية الخيرية لتحفيظ القرآن الكريم بالرياض (مكنون)'"/>
+                                        <br/>
+                                        <t t-if="mosque_type == 'male'">
+                                             <t t-if="category == False">
+                                                <span t-esc="'بأن الطالب/ '"/>
+                                            </t>
+                                            <t t-if="category != False">
+                                                <span t-esc="'بأن الأستاذ/ '"/>
+                                            </t>
+                                        </t>
+                                        <t t-if="mosque_type == 'female'">
+                                            <t t-if="category == False">
+                                                <span t-esc="'بأن الطالبة/ '"/>
+                                            </t>
+                                            <t t-if="category != False">
+                                                <span t-esc="'بأن الأستاذة/ '"/>
+                                            </t>
+                                        </t>
+                                        <b>
+                                            <span t-esc="student_name + ', ' + student_nationality"/>
+                                        </b>
+                                        <t t-if="category != False" >
+                                            <span t-esc="' الجنسية , برقم الهوية ('"/>
+                                            <b>
+                                                <span t-esc="employee_identity"/>
+                                            </b>
+                                            <span t-esc="')'"/>
+                                        </t>
+
+                                        <t t-if=" category == False" >
+                                            <t t-if="student.identity_no">
+                                            <span t-esc="' الجنسية , برقم الهوية ('"/>
+                                            <b>
+                                                <span t-esc="student_identity"/>
+                                            </b>
+                                            <span t-esc="')'"/>
+                                        </t>
+                                            <t t-if="not student.identity_no">
+                                            <span t-esc="' الجنسية, برقم جواز سفر ('"/>
+                                                <b>
+                                                    <span t-esc="student_identity"/>
+                                                </b>
+                                                <span t-esc="')'"/>
+                                            </t>
+                                        </t>
+                                        <br/>
+                                        <t t-if="mosque_type == 'male'">
+                                            <t t-if="category == False">
+                                                <span t-esc="'من حلقات مسجد '"/>
+                                            </t>
+                                            <t t-if="category != False">
+                                                <span t-esc="'من مسجد '"/>
+                                            </t>
+                                        </t>
+                                        <t t-if="mosque_type == 'female'">
+                                            <t t-if="category == False">
+                                            <span t-esc="'من حلقات مدرسة '"/>
+                                            </t>
+                                            <t t-if="category != False">
+                                                <span t-esc="'من مدرسة '"/>
+                                            </t>
+                                        </t>
+                                        <b>
+                                            <span t-esc="mosque_display_name"/>
+                                        </b>
+                                        <br/>
+                                        <t t-if="mosque_type == 'male'">
+                                        <span style="color:#276b50;" t-esc="'أتم حفظ '"/>
+                                        </t>
+                                        <t t-if="mosque_type == 'female'">
+                                        <span style="color:#276b50;" t-esc="'أتمت حفظ '"/>
+                                        </t>
+                                        <t t-if="parts_number ==1">
+                                            <b>
+                                                <span style="color:#276b50;" t-esc="'جزء عم'"/>
+                                            </b>
+                                        </t>
+
+                                        <t t-if="parts_number ==2">
+                                            <b>
+                                                <span style="color:#276b50;" t-esc="'جزئي عم وتبارك'"/>
+                                            </b>
+                                        </t>
+                                        <t t-if="int(parts_number) &gt;= 3 and int(parts_number) &lt;= 10">
+                                            <t t-set="parts_number" t-value="str(parts_number).replace('0','٠').replace('1','١').replace('2','٢').replace('3','٣').replace('4','٤').replace('5','٥').replace('6','٦').replace('7','٧').replace('8','٨').replace('9','٩')"/>
+                                            <b>
+                                                <span style="color:#276b50;" t-esc="parts_number"/>
+                                                <span style="color:#276b50;" t-esc="' أجزاء'"/>
+                                            </b>
+                                        </t>
+                                        <t t-if="int(parts_number) &gt;= 11 and int(parts_number) &lt;= 30">
+                                            <t t-set="parts_number" t-value="str(parts_number).replace('0','٠').replace('1','١').replace('2','٢').replace('3','٣').replace('4','٤').replace('5','٥').replace('6','٦').replace('7','٧').replace('8','٨').replace('9','٩')"/>
+                                            <b>
+                                                <span style="color:#276b50;" t-esc="parts_number"/>
+                                                <span style="color:#276b50;" t-esc="' جزء'"/>
+                                            </b>
+                                        </t>
+                                        <span style="color:#276b50;" t-esc="', من سورة '"/>
+                                        <b>
+                                            <span style="color:#276b50;" t-esc="branch_from_surah"/>
+                                        </b>
+                                        <span style="color:#276b50;" t-esc="' إلى سورة '"/>
+                                        <b>
+                                            <span style="color:#276b50;" t-esc="branch_to_surah"/>
+                                        </b>
+                                        <br/>
+                                         <t t-if="mosque_type == 'male'">
+                                            <span style="color:#276b50;" t-esc="' ونجح في الاختبار '"/>
+                                        </t>
+                                        <t t-if="mosque_type == 'female'">
+                                            <span style="color:#276b50;" t-esc="' ونجحت في الاختبار '"/>
+                                        </t>
+                                         <span style="color:#276b50;" t-esc="'بتقدير'"/>
+                                        <b>
+                                            <span style="color:#276b50;" t-esc="'('+test_appreciation+'),'"/>
+                                        </b>
+                                        <span style="color:#276b50;" t-esc="'ودرجة'"/>
+                                        <b>
+                                            <span style="color:#276b50;" t-esc="'('+test_degree+')'"/>
+                                        </b>
+                                        <br/>
+                                        <span style="color:#276b50;" t-esc=" 'وذلك في '"/>
+                                        <b>
+                                            <span style="color:#276b50;" t-esc="study_class"/>
+                                        </b>
+                                        <br/>
+                                         <t t-if="mosque_type == 'male'">
+                                        <span t-esc="'سائلين المولى عز وجل أن يوفقه لإتمام حفظ كتابه والعمل بما فيه'"/>
+                                        </t>
+                                        <t t-if="mosque_type == 'female'">
+                                        <span t-esc="'سائلين المولى عز وجل أن يوفقها لإتمام حفظ كتابه والعمل بما فيه'"/>
+                                        </t>
+                                    </p>
+                                    <p style="font-size:32px;line-height:2;direction:rtl;font-family:Neo Sans Arabic;text-align:center;padding-right:1230px">
+                                        <br/>
+                                        <br/>
+                                        <img t-if="signature" t-att-src="'data:image/png;base64,%s' % to_text(signature)" height="120" border="1" width="420"/>
+                                        <br/>
+                                        <b>
+                                            <span t-esc="department_manager"/>
+                                        </b>
+                                    </p>
+                                </div>
+                            </div>
+                        </t>
+                    </div>
+                </div>
+            </t>
+        </t>
+    </template>
+</odoo>

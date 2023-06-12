@@ -1,0 +1,53 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+read_level_programs,read_level_program,model_mk_programs,group_read_level_program,1,0,0,0
+read_level_programs_res_users,read_level_programs_res_users,base.model_res_users,group_read_level_program,1,0,0,0
+read_level_programs_mk_mosque,read_level_programs_mk_mosque,mk_master_models.model_mk_mosque,group_read_level_program,1,0,0,0
+read_level_programs_hr_specializations,read_level_programs_hr_specializations,mk_master_models.model_mk_specializations,group_read_level_program,1,0,0,0
+read_level_programs_mk_approaches,read_level_programs_mk_approaches,model_mk_approaches,group_read_level_program,1,0,0,0
+read_level_programs_hr_department,read_level_programs_hr_department,model_mk_approaches,group_read_level_program,1,0,0,0
+create_open_program_association,create_open_program_association,model_mk_programs,group_create_open_program_association,1,1,1,1
+create_open_center_program,create_open_center_program,model_mk_programs,group_create_open_center_program,1,1,1,1
+create_open_program_mosque,create_open_program_mosque,model_mk_programs,group_create_open_program_mosque,1,1,1,1
+delete_program,delete_program,model_mk_programs,group_edit_level_program,1,1,0,0
+activate_program,activate_program,model_mk_programs,group_delete_program,1,0,0,1
+read on the curriculum level_mp_approach,access_create an open curriculum to association level_mk_approaches,mk_program_management.model_mk_approaches,read_curriculum_level,1,0,0,0
+read on the curriculum level_mp,access_read on the curriculum level_mk_programs,mk_program_management.model_mk_programs,read_curriculum_level,1,0,0,0
+read on the curriculum level_mg,access_read on the curriculum level_mk_grade,mk_master_models.model_mk_grade,read_curriculum_level,1,0,0,0
+read on the curriculum level_mj,access_read on the curriculum level_mk_job,mk_master_models.model_mk_job,read_curriculum_level,1,0,0,0
+read on the curriculum level_mpt,access_read on the curriculum level_mk_parts,mk_master_models.model_mk_parts,read_curriculum_level,1,0,0,0
+read on the curriculum level_ac,access_read on the curriculum level_mk_age_category,mk_master_models.model_mk_age_category,read_curriculum_level,1,0,0,0
+create an selected program on the mosque level_su,access_create an open curriculum to association level_mk_surah,mk_master_models.model_mk_surah,read_curriculum_level,1,0,0,0
+create an selected program on the mosque level_mmp,access_create an selected program on the mosque level_mk_manual_plan,mk_program_management.model_mk_manual_plan,create_an_selected_curriculum_mosque_level,1,0,0,0
+create an selected program on the mosque level_suv,access_create an selected program on the mosque level_mk_surah_verses,mk_master_models.model_mk_surah_verses,create_an_selected_curriculum_mosque_level,1,0,0,0
+create an selected curriculum to association level_mph,access_create an selected curriculum to association level_mk_appraches,mk_program_management.model_mk_approaches,create_an_selected_curriculum_association_level,1,0,0,0
+create an open curriculum to association level_mph,access_create an open curriculum to association level_mk_approaches,mk_program_management.model_mk_approaches,create_an_open_curriculum_association_level,1,1,1,1
+create an open program on the mosque level_mph,access_create an open program on the mosque level_mk_approaches,mk_program_management.model_mk_approaches,create_an_open_curriculum_mosque_level,1,1,1,1
+create an open curriculum to center level_mph,access_create an open curriculum to center level_approaches,mk_program_management.model_mk_approaches,create_an_open_curriculum_center_level,1,1,1,1
+update on the curriculum level_mph,access_update on the curriculum level_mk_approaches,mk_program_management.model_mk_approaches,update_curriculum_level,1,1,0,0
+read_level_programs_close,read_level_program_close,model_mk_programs,group_read_level_program_close,1,0,0,0
+read_level_programs_res_users_close,read_level_programs_res_users_close,base.model_res_users,group_read_level_program_close,1,0,0,0
+read_level_programs_mk_mosque_close,read_level_programs_mk_mosque_close,mk_master_models.model_mk_mosque,group_read_level_program_close,1,0,0,0
+read_level_programs_hr_specializations_close,read_level_programs_hr_specializations_close,mk_master_models.model_mk_specializations,group_read_level_program_close,1,0,0,0
+read_level_programs_mk_approaches_close,read_level_programs_mk_approaches_close,model_mk_approaches,group_read_level_program_close,1,0,0,0
+read_level_programs_hr_department_close,read_level_programs_hr_department_close,model_mk_approaches,group_read_level_program_close,1,0,0,0
+create_open_program_association_close,create_open_program_association_close,model_mk_programs,group_create_close_program_association,1,1,1,1
+create_open_center_program_close,create_open_center_program_close,model_mk_programs,group_create_close_center_program,1,1,1,1
+create_open_program_mosque_close,create_open_program_mosque_close,model_mk_programs,group_create_close_program_mosque,1,1,1,1
+delete_program_close,delete_program_close,model_mk_programs,group_edit_level_program_close,1,1,0,0
+activate_program_close,activate_program_close,model_mk_programs,group_delete_program_close,1,0,0,1
+read on the curriculum level_mp_approach_close,access_create an open curriculum to association level_mk_approaches_close,mk_program_management.model_mk_approaches,read_curriculum_level_close,1,0,0,0
+read on the curriculum level_mp_close,access_read on the curriculum level_mk_programs_close,mk_program_management.model_mk_programs,read_curriculum_level_close,1,0,0,0
+read on the curriculum level_mg_close,access_read on the curriculum level_mk_grade_close,mk_master_models.model_mk_grade,read_curriculum_level_close,1,0,0,0
+read on the curriculum level_mj_close,access_read on the curriculum level_mk_job_close,mk_master_models.model_mk_job,read_curriculum_level_close,1,0,0,0
+read on the curriculum level_mpt_close,access_read on the curriculum level_mk_parts_close,mk_master_models.model_mk_parts,read_curriculum_level_close,1,0,0,0
+read on the curriculum level_ac_close,access_read on the curriculum level_mk_age_category_close,mk_master_models.model_mk_age_category,read_curriculum_level_close,1,0,0,0
+create an selected program on the mosque level_su_close,access_create an open curriculum to association level_mk_surah_close,mk_master_models.model_mk_surah,read_curriculum_level_close,1,0,0,0
+create an selected program on the mosque level_mmp_close,access_create an selected program on the mosque level_mk_manual_plan_close,mk_program_management.model_mk_manual_plan,create_an_selected_curriculum_mosque_level_close,1,0,0,0
+create an selected program on the mosque level_suv_close,access_create an selected program on the mosque level_mk_surah_verses_close,mk_master_models.model_mk_surah_verses,create_an_selected_curriculum_mosque_level_close,1,0,0,0
+create an selected curriculum to association level_mph_close,access_create an selected curriculum to association level_mk_appraches_close,mk_program_management.model_mk_approaches,create_an_selected_curriculum_association_level_close,1,0,0,0
+create an open curriculum to association level_mph_close,access_create an open curriculum to association level_mk_approaches_close,mk_program_management.model_mk_approaches,create_an_selected_curriculum_association_level_close,1,1,1,1
+create an open program on the mosque level_mph_close,access_create an open program on the mosque level_mk_approaches_close,mk_program_management.model_mk_approaches,create_an_close_curriculum_mosque_level,1,1,1,1
+create an open curriculum to center level_mph_close,access_create an open curriculum to center level_approaches_close,mk_program_management.model_mk_approaches,create_an_selected_curriculum_association_level_close,1,1,1,1
+update on the curriculum level_mph_close,access_update on the curriculumlevel_mk_approaches_close,mk_program_management.model_mk_approaches,update_curriculum_level_close,1,1,0,0
+
+

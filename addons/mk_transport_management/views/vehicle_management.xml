@@ -1,0 +1,39 @@
+<odoo>
+	<data>
+		<record id="vehicle_management_form_view" model="ir.ui.view">
+			<field name= "name">vehicle management form</field>
+			<field name= "model">vehicle.management</field>
+			<field name= "arch"  type="xml"> 
+				<form string="vehicle management">
+					<group>
+						<field name='vehicle_id' />
+						<field name='max_capcity' />
+					</group>
+	
+					<notebook>
+						<page string="vehicle management">
+							<field name="v_lines">
+								<tree  editable="top">
+									<field name="work_days" options="{'no_create': True,'no_open': True,}"/>
+									<field name="work_periods"/>
+									<field name="avilable_seats"/>
+									<field name="go_return"/>
+								</tree>
+							</field>
+						</page>
+					</notebook>
+				</form>
+			</field>
+		</record>
+		
+		<record id="vehicle_management_menu_action" model="ir.actions.act_window">
+			<field name="name">vehicle management</field>
+			<field name="res_model">vehicle.management</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+	    </record>
+	    
+	    <menuitem id="vehicle_management_menu2" name="Vechil management" action="vehicle_management_menu_action" parent="mk_transport_menu" sequence="5"/>
+    </data>
+</odoo>
+		      			

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- user.guide view-->
+        <record model="ir.ui.view" id="user_guide_view_form">
+            <field name="name">user.guide.view.form</field>
+            <field name="model">user.guide</field>
+            <field name="arch" type="xml">
+                <form string="User Guide">
+                    <sheet string="User Guide">
+                        <div class="oe_button_box" name="button_box" groups="user_guide.user_guide_group_manager">
+                            <button name="toggle_active" type="object" class="oe_stat_button" icon="fa-archive">
+                                <field name="active" widget="boolean_button" options='{"terminology": "archive"}'/>
+                            </button>
+                        </div>
+                        <group >
+                            <field name="name"/>
+                            <field name="guide_type"/>
+                            <field name="category_id"/>
+                            <field name="order_by" groups="user_guide.user_guide_group_manager"/>
+                            <field name="description"/>
+                            <field name="video_URL" groups="user_guide.user_guide_group_manager"/>
+                            <field name="embed_video" groups="user_guide.user_guide_group_manager"/>
+                        </group>
+                        <group string="Video">
+                            <iframe id="user_guide_iframe_id" width="100%" height="720" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen;" >
+                                <script>
+                                    if(document.getElementsByName("embed_video")){
+                                        document.getElementById("user_guide_iframe_id").src = document.getElementsByName("embed_video")[0].innerHTML;
+                                    }
+                                </script>
+                            </iframe>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter" >
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+
+                </form>
+            </field>
+        </record>
+
+        <!-- user.guide tree-->
+        <record model="ir.ui.view" id="user_guide_tree_view">
+            <field name="name">user.guide.tree</field>
+            <field name="model">user.guide</field>
+            <field name="arch" type="xml">
+                <tree name="User Guide"  decoration-success="guide_type in ('guide')" 
+                                         decoration-danger="guide_type in ('announce')"
+                                         decoration-info="guide_type in ('document')"
+                                         default_order="order_by">
+                    <field name="name"/>
+                    <field name="guide_type"/>
+                    <field name="category_id"/>
+                    <field name="embed_video" invisible="1"/>
+                    <field name="num_of_attachments" invisible="1"/>
+                    <button name="button_redirect_to_video" string="Watch Video" type="object" class="btn-primary" attrs="{'invisible':[('embed_video','=',False)]}" />
+                    <button name="button_redirect_to_attachments" string="Show Document" type="object" class="btn-primary" attrs="{'invisible':[('num_of_attachments','=',0)]}" />
+
+                    <field name="description" />
+                </tree>
+            </field>
+        </record>
+
+
+        <!-- user.guide filter-->
+        <record id="view_user_guide_filter" model="ir.ui.view">
+            <field name="name">user.guide.filter</field>
+            <field name="model">user.guide</field>
+            <field name="arch" type="xml">
+                <search string="Search User Guide">
+                    <field string="Name" name="name" filter_domain="['|','|',('name', 'ilike', self), ('description', 'ilike', self)]"/>
+                    <filter string="Archived" name="archived" domain="[('active', '=', False)]" groups="user_guide.user_guide_group_manager"/>
+                    <group>
+                        <filter string="Group by type" name="group_by_type" context="{'group_by':'guide_type'}" />
+                        <filter string="Group by category" name="group_by_category" context="{'group_by':'category_id'}" />
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <!-- user.guide action -->
+        <record id="act_user_guide_view" model="ir.actions.act_window">
+            <field name="name">User Guide</field>
+            <field name="res_model">user.guide</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <!-- <field name="context">{"search_default_group_by_model":1}</field> -->
+            <field name="view_id" ref="user_guide_tree_view"/>
+        </record>
+        <menuitem id="menu_user_guide_root" name="User Guide" sequence="-999"/>
+        <menuitem id="menu_user_guide" action="act_user_guide_view" parent="menu_user_guide_root" name="User Guide" sequence="1"/>
+
+
+    </data>
+</odoo>

@@ -1,0 +1,2306 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* website_support
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-05-01 10:26+0000\n"
+"PO-Revision-Date: 2018-05-01 10:26+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: website_support
+#: model:mail.template,body_html:website_support.new_support_ticket_category_change
+msgid "\n"
+"\n"
+"\n"
+"                <head>\n"
+"        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\n"
+"        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n"
+"        <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\" />\n"
+"        <meta name=\"format-detection\" content=\"telephone=no\" /> <!-- disable auto telephone linking in iOS -->\n"
+"        <title>Trjmaty website</title>\n"
+"        <style type=\"text/css\">\n"
+"            html { background-color:#AF8B6D; margin:0; padding:0; }\n"
+"            body, #bodyTable, #bodyCell, #bodyCell{height:100% !important; margin:0; padding:0; width:100% !important;font-family:Helvetica, Arial, \"Lucida Grande\", sans-serif;}\n"
+"            table{border-collapse:collapse;}\n"
+"            table[id=bodyTable] {width:100%!important;margin:auto;max-width:500px!important;color:#7A7A7A;font-weight:normal;}\n"
+"            img, a img{border:0; outline:none; text-decoration:none;height:auto; line-height:100%;}\n"
+"            a {text-decoration:none !important;border-bottom: 1px solid;}\n"
+"            h1, h2, h3, h4, h5, h6{color:#5F5F5F; font-weight:normal; font-family:Helvetica; font-size:20px; line-height:125%; text-align:Left; letter-spacing:normal;margin-top:0;margin-right:0;margin-bottom:10px;margin-left:0;padding-top:0;padding-bottom:0;padding-left:0;padding-right:0;}\n"
+"\n"
+"            .ReadMsgBody{width:100%;} .ExternalClass{width:100%;} \n"
+"            .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div{line-height:100%;} \n"
+"            table, td{mso-table-lspace:0pt; mso-table-rspace:0pt;} \n"
+"            #outlook a{padding:0;} \n"
+"            img{-ms-interpolation-mode: bicubic;display:block;outline:none; text-decoration:none;} \n"
+"            body, table, td, p, a, li, blockquote{-ms-text-size-adjust:100%; -webkit-text-size-adjust:100%; font-weight:normal!important;border-radius: 10px 10px 0 0;} \n"
+"            .ExternalClass td[class=\"ecxflexibleContainerBox\"] h3 {padding-top: 10px !important;} \n"
+"\n"
+"            h1{display:block;font-size:26px;font-style:normal;font-weight:normal;line-height:100%;}\n"
+"            h2{display:block;font-size:20px;font-style:normal;font-weight:normal;line-height:120%;}\n"
+"            h3{display:block;font-size:17px;font-style:normal;font-weight:normal;line-height:110%;}\n"
+"            h4{display:block;font-size:18px;font-style:italic;font-weight:normal;line-height:100%;}\n"
+"            .flexibleImage{height:auto;}\n"
+"            .linkRemoveBorder{border-bottom:0 !important;}\n"
+"            table[class=flexibleContainerCellDivider] {padding-bottom:0 !important;padding-top:0 !important;}\n"
+"\n"
+"            body, #bodyTable{background-color:#E9DFD8;}\n"
+"            #emailHeader{background-color:#E9DFD8;}\n"
+"            #emailBody{background-color:#FFFFFF;}\n"
+"            #emailFooter{background-color:#E9DFD8;}\n"
+"            .nestedContainer{background-color:#F8F8F8; border:1px solid #CCCCCC;}\n"
+"            .emailButton{background-color:#205478; border-collapse:separate;border-radius: 22px;}\n"
+"            .buttonContent{color:#FFFFFF; font-family:Helvetica; font-size:18px; font-weight:bold; line-height:100%; padding:15px; text-align:center;}\n"
+"            .buttonContent a{color:#FFFFFF; display:block; text-decoration:none!important; border:0!important;}\n"
+"            .emailCalendar{background-color:#FFFFFF; border:1px solid #CCCCCC;}\n"
+"            .emailCalendarMonth{background-color:#205478; color:#FFFFFF; font-family:Helvetica, Arial, sans-serif; font-size:16px; font-weight:bold; padding-top:10px; padding-bottom:10px; text-align:center;}\n"
+"            .emailCalendarDay{color:#205478; font-family:Helvetica, Arial, sans-serif; font-size:60px; font-weight:bold; line-height:100%; padding-top:20px; padding-bottom:20px; text-align:center;}\n"
+"            .imageContentText {margin-top: 10px;line-height:0;}\n"
+"            .imageContentText a {line-height:0;}\n"
+"            #invisibleIntroduction {display:none !important;} \n"
+"\n"
+"            span[class=ios-color-hack] a {color:#275100!important;text-decoration:none!important;} /* Remove all link colors in IOS (below are duplicates based on the color preference) */\n"
+"            span[class=ios-color-hack2] a {color:#205478!important;text-decoration:none!important;}\n"
+"            span[class=ios-color-hack3] a {color:#8B8B8B!important;text-decoration:none!important;}\n"
+"\n"
+"            .a[href^=\"tel\"], a[href^=\"sms\"] {text-decoration:none!important;color:#606060!important;pointer-events:none!important;cursor:default!important;}\n"
+"            .mobile_link a[href^=\"tel\"], .mobile_link a[href^=\"sms\"] {text-decoration:none!important;color:#606060!important;pointer-events:auto!important;cursor:default!important;}\n"
+"\n"
+"\n"
+"            @media only screen and (max-width: 480px){\n"
+"\n"
+"                table[id=\"emailHeader\"],\n"
+"                table[id=\"emailBody\"],\n"
+"                table[id=\"emailFooter\"],\n"
+"                table[class=\"flexibleContainer\"],\n"
+"                td[class=\"flexibleContainerCell\"] {width:100% !important;}\n"
+"                td[class=\"flexibleContainerBox\"], td[class=\"flexibleContainerBox\"] table {display: block;width: 100%;text-align: left;}\n"
+"\n"
+"                td[class=\"imageContent\"] img {height:auto !important; width:100% !important; max-width:100% !important; }\n"
+"                img[class=\"flexibleImage\"]{height:auto !important; width:100% !important;max-width:100% !important;}\n"
+"                img[class=\"flexibleImageSmall\"]{height:auto !important; width:auto !important;}\n"
+"\n"
+"\n"
+"                \n"
+"                table[class=\"flexibleContainerBoxNext\"]{padding-top: 10px !important;}\n"
+"\n"
+"                \n"
+"                table[class=\"emailButton\"]{width:100% !important;}\n"
+"                td[class=\"buttonContent\"]{padding:0 !important;}\n"
+"                td[class=\"buttonContent\"] a{padding:15px !important;}\n"
+"\n"
+"            }\n"
+"\n"
+"            \n"
+"\n"
+"            @media only screen and (-webkit-device-pixel-ratio:.75){\n"
+"            }\n"
+"\n"
+"            @media only screen and (-webkit-device-pixel-ratio:1){\n"
+"            }\n"
+"\n"
+"            @media only screen and (-webkit-device-pixel-ratio:1.5){\n"
+"            }\n"
+"            \n"
+"            @media only screen and (min-device-width : 320px) and (max-device-width:568px) {\n"
+"\n"
+"            }\n"
+"        </style>\n"
+"\n"
+"    </head>\n"
+"                <p>Your support ticket has been updated and is now in the category '${object.category.name}' </p>\n"
+"                <hr/>\n"
+"                <b>Ticket Number:</b> ${object.ticket_number or object.id}<br/>\n"
+"                <b>Ticket Category:</b> \n"
+"                % if object.category.name :\n"
+"                    ${object.category.name}\n"
+"                % endif\n"
+"                <br/>\n"
+"                <b>Ticket Description:</b><br/>\n"
+"                ${object.description|safe}\n"
+"                \n"
+"            \n"
+"            "
+msgstr "\n"
+"\n"
+"\n"
+"                <head>\n"
+"        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\n"
+"        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n"
+"        <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\" />\n"
+"        <meta name=\"format-detection\" content=\"telephone=no\" /> <!-- disable auto telephone linking in iOS -->\n"
+"        <title>Trjmaty website</title>\n"
+"        <style type=\"text/css\">\n"
+"            html { background-color:#AF8B6D; margin:0; padding:0; }\n"
+"            body, #bodyTable, #bodyCell, #bodyCell{height:100% !important; margin:0; padding:0; width:100% !important;font-family:Helvetica, Arial, \"Lucida Grande\", sans-serif;}\n"
+"            table{border-collapse:collapse;}\n"
+"            table[id=bodyTable] {width:100%!important;margin:auto;max-width:500px!important;color:#7A7A7A;font-weight:normal;}\n"
+"            img, a img{border:0; outline:none; text-decoration:none;height:auto; line-height:100%;}\n"
+"            a {text-decoration:none !important;border-bottom: 1px solid;}\n"
+"            h1, h2, h3, h4, h5, h6{color:#5F5F5F; font-weight:normal; font-family:Helvetica; font-size:20px; line-height:125%; text-align:Left; letter-spacing:normal;margin-top:0;margin-right:0;margin-bottom:10px;margin-left:0;padding-top:0;padding-bottom:0;padding-left:0;padding-right:0;}\n"
+"\n"
+"            .ReadMsgBody{width:100%;} .ExternalClass{width:100%;} \n"
+"            .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div{line-height:100%;} \n"
+"            table, td{mso-table-lspace:0pt; mso-table-rspace:0pt;} \n"
+"            #outlook a{padding:0;} \n"
+"            img{-ms-interpolation-mode: bicubic;display:block;outline:none; text-decoration:none;} \n"
+"            body, table, td, p, a, li, blockquote{-ms-text-size-adjust:100%; -webkit-text-size-adjust:100%; font-weight:normal!important;border-radius: 10px 10px 0 0;} \n"
+"            .ExternalClass td[class=\"ecxflexibleContainerBox\"] h3 {padding-top: 10px !important;} \n"
+"\n"
+"            h1{display:block;font-size:26px;font-style:normal;font-weight:normal;line-height:100%;}\n"
+"            h2{display:block;font-size:20px;font-style:normal;font-weight:normal;line-height:120%;}\n"
+"            h3{display:block;font-size:17px;font-style:normal;font-weight:normal;line-height:110%;}\n"
+"            h4{display:block;font-size:18px;font-style:italic;font-weight:normal;line-height:100%;}\n"
+"            .flexibleImage{height:auto;}\n"
+"            .linkRemoveBorder{border-bottom:0 !important;}\n"
+"            table[class=flexibleContainerCellDivider] {padding-bottom:0 !important;padding-top:0 !important;}\n"
+"\n"
+"            body, #bodyTable{background-color:#E9DFD8;}\n"
+"            #emailHeader{background-color:#E9DFD8;}\n"
+"            #emailBody{background-color:#FFFFFF;}\n"
+"            #emailFooter{background-color:#E9DFD8;}\n"
+"            .nestedContainer{background-color:#F8F8F8; border:1px solid #CCCCCC;}\n"
+"            .emailButton{background-color:#205478; border-collapse:separate;border-radius: 22px;}\n"
+"            .buttonContent{color:#FFFFFF; font-family:Helvetica; font-size:18px; font-weight:bold; line-height:100%; padding:15px; text-align:center;}\n"
+"            .buttonContent a{color:#FFFFFF; display:block; text-decoration:none!important; border:0!important;}\n"
+"            .emailCalendar{background-color:#FFFFFF; border:1px solid #CCCCCC;}\n"
+"            .emailCalendarMonth{background-color:#205478; color:#FFFFFF; font-family:Helvetica, Arial, sans-serif; font-size:16px; font-weight:bold; padding-top:10px; padding-bottom:10px; text-align:center;}\n"
+"            .emailCalendarDay{color:#205478; font-family:Helvetica, Arial, sans-serif; font-size:60px; font-weight:bold; line-height:100%; padding-top:20px; padding-bottom:20px; text-align:center;}\n"
+"            .imageContentText {margin-top: 10px;line-height:0;}\n"
+"            .imageContentText a {line-height:0;}\n"
+"            #invisibleIntroduction {display:none !important;} \n"
+"\n"
+"            span[class=ios-color-hack] a {color:#275100!important;text-decoration:none!important;} /* Remove all link colors in IOS (below are duplicates based on the color preference) */\n"
+"            span[class=ios-color-hack2] a {color:#205478!important;text-decoration:none!important;}\n"
+"            span[class=ios-color-hack3] a {color:#8B8B8B!important;text-decoration:none!important;}\n"
+"\n"
+"            .a[href^=\"tel\"], a[href^=\"sms\"] {text-decoration:none!important;color:#606060!important;pointer-events:none!important;cursor:default!important;}\n"
+"            .mobile_link a[href^=\"tel\"], .mobile_link a[href^=\"sms\"] {text-decoration:none!important;color:#606060!important;pointer-events:auto!important;cursor:default!important;}\n"
+"\n"
+"\n"
+"            @media only screen and (max-width: 480px){\n"
+"\n"
+"                table[id=\"emailHeader\"],\n"
+"                table[id=\"emailBody\"],\n"
+"                table[id=\"emailFooter\"],\n"
+"                table[class=\"flexibleContainer\"],\n"
+"                td[class=\"flexibleContainerCell\"] {width:100% !important;}\n"
+"                td[class=\"flexibleContainerBox\"], td[class=\"flexibleContainerBox\"] table {display: block;width: 100%;text-align: left;}\n"
+"\n"
+"                td[class=\"imageContent\"] img {height:auto !important; width:100% !important; max-width:100% !important; }\n"
+"                img[class=\"flexibleImage\"]{height:auto !important; width:100% !important;max-width:100% !important;}\n"
+"                img[class=\"flexibleImageSmall\"]{height:auto !important; width:auto !important;}\n"
+"\n"
+"\n"
+"                \n"
+"                table[class=\"flexibleContainerBoxNext\"]{padding-top: 10px !important;}\n"
+"\n"
+"                \n"
+"                table[class=\"emailButton\"]{width:100% !important;}\n"
+"                td[class=\"buttonContent\"]{padding:0 !important;}\n"
+"                td[class=\"buttonContent\"] a{padding:15px !important;}\n"
+"\n"
+"            }\n"
+"\n"
+"            \n"
+"\n"
+"            @media only screen and (-webkit-device-pixel-ratio:.75){\n"
+"            }\n"
+"\n"
+"            @media only screen and (-webkit-device-pixel-ratio:1){\n"
+"            }\n"
+"\n"
+"            @media only screen and (-webkit-device-pixel-ratio:1.5){\n"
+"            }\n"
+"            \n"
+"            @media only screen and (min-device-width : 320px) and (max-device-width:568px) {\n"
+"\n"
+"            }\n"
+"        </style>\n"
+"\n"
+"    </head>\n"
+"                <p>Your support ticket has been updated and is now in the category '${object.category.name}' </p>\n"
+"                <hr/>\n"
+"                <b>Ticket Number:</b> ${object.ticket_number or object.id}<br/>\n"
+"                <b>Ticket Category:</b> \n"
+"                % if object.category.name :\n"
+"                    ${object.category.name}\n"
+"                % endif\n"
+"                <br/>\n"
+"                <b>Ticket Description:</b><br/>\n"
+"                ${object.description|safe}\n"
+"                \n"
+"            \n"
+"            "
+
+#. module: website_support
+#: model:mail.template,body_html:website_support.new_support_ticket_category
+msgid "\n"
+"\n"
+"                <p>تم إنشاء تذكرة دعم جديدة في فئة تتابعها</p>\n"
+"\n"
+"                <p>Category: ${object.category.name}</p>\n"
+"                <p>Subject: ${object.subject}</p>\n"
+"                <p>${object.description|safe}</p>\n"
+"                <p>Click <a href=\"_ticket_url_\">here</a> لعرض تذكرة الدعم هذه عبر الإنترنت</p>\n"
+"            \n"
+"            "
+msgstr "\n"
+"\n"
+"                <p>تم إنشاء تذكرة دعم جديدة في فئة تتابعها</p>\n"
+"\n"
+"                <p>Category: ${object.category.name}</p>\n"
+"                <p>Subject: ${object.subject}</p>\n"
+"                <p>${object.description|safe}</p>\n"
+"                <p>Click <a href=\"_ticket_url_\">here</a> لعرض تذكرة الدعم هذه عبر الإنترنت</p>\n"
+"            \n"
+"            "
+
+#. module: website_support
+#: model:mail.template,body_html:website_support.support_ticket_survey
+msgid "\n"
+"                \n"
+"                <p>We would like to get your feedback on the support</p>\n"
+"                <p><a href=\"_survey_url_\">here</a></p>\n"
+"                <hr/>\n"
+"                <b>Ticket Number:</b> ${object.ticket_number or object.id}<br/>\n"
+"                <b>Ticket Category:</b> \n"
+"                % if object.category.name :\n"
+"                    ${object.category.name}\n"
+"                % endif\n"
+"                <br/>\n"
+"                <b>Ticket Description:</b><br/>\n"
+"                ${object.description|safe}\n"
+"            \n"
+"            "
+msgstr "\n"
+"                \n"
+"                <p>We would like to get your feedback on the support</p>\n"
+"                <p><a href=\"_survey_url_\">here</a></p>\n"
+"                <hr/>\n"
+"                <b>Ticket Number:</b> ${object.ticket_number or object.id}<br/>\n"
+"                <b>Ticket Category:</b> \n"
+"                % if object.category.name :\n"
+"                    ${object.category.name}\n"
+"                % endif\n"
+"                <br/>\n"
+"                <b>Ticket Description:</b><br/>\n"
+"                ${object.description|safe}\n"
+"            \n"
+"            "
+
+#. module: website_support
+#: model:mail.template,body_html:website_support.support_ticket_new
+msgid "\n"
+"                <head>\n"
+"        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\n"
+"        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n"
+"        <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\" />\n"
+"        <meta name=\"format-detection\" content=\"telephone=no\" /> <!-- disable auto telephone linking in iOS -->\n"
+"        <title>Trjmaty website</title>\n"
+"        <style type=\"text/css\">\n"
+"            html { background-color:#AF8B6D; margin:0; padding:0; }\n"
+"            body, #bodyTable, #bodyCell, #bodyCell{height:100% !important; margin:0; padding:0; width:100% !important;font-family:Helvetica, Arial, \"Lucida Grande\", sans-serif;}\n"
+"            table{border-collapse:collapse;}\n"
+"            table[id=bodyTable] {width:100%!important;margin:auto;max-width:500px!important;color:#7A7A7A;font-weight:normal;}\n"
+"            img, a img{border:0; outline:none; text-decoration:none;height:auto; line-height:100%;}\n"
+"            a {text-decoration:none !important;border-bottom: 1px solid;}\n"
+"            h1, h2, h3, h4, h5, h6{color:#5F5F5F; font-weight:normal; font-family:Helvetica; font-size:20px; line-height:125%; text-align:Left; letter-spacing:normal;margin-top:0;margin-right:0;margin-bottom:10px;margin-left:0;padding-top:0;padding-bottom:0;padding-left:0;padding-right:0;}\n"
+"\n"
+"            .ReadMsgBody{width:100%;} .ExternalClass{width:100%;} \n"
+"            .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div{line-height:100%;} \n"
+"            table, td{mso-table-lspace:0pt; mso-table-rspace:0pt;} \n"
+"            #outlook a{padding:0;} \n"
+"            img{-ms-interpolation-mode: bicubic;display:block;outline:none; text-decoration:none;} \n"
+"            body, table, td, p, a, li, blockquote{-ms-text-size-adjust:100%; -webkit-text-size-adjust:100%; font-weight:normal!important;border-radius: 10px 10px 0 0;} \n"
+"            .ExternalClass td[class=\"ecxflexibleContainerBox\"] h3 {padding-top: 10px !important;} \n"
+"\n"
+"            h1{display:block;font-size:26px;font-style:normal;font-weight:normal;line-height:100%;}\n"
+"            h2{display:block;font-size:20px;font-style:normal;font-weight:normal;line-height:120%;}\n"
+"            h3{display:block;font-size:17px;font-style:normal;font-weight:normal;line-height:110%;}\n"
+"            h4{display:block;font-size:18px;font-style:italic;font-weight:normal;line-height:100%;}\n"
+"            .flexibleImage{height:auto;}\n"
+"            .linkRemoveBorder{border-bottom:0 !important;}\n"
+"            table[class=flexibleContainerCellDivider] {padding-bottom:0 !important;padding-top:0 !important;}\n"
+"\n"
+"            body, #bodyTable{background-color:#E9DFD8;}\n"
+"            #emailHeader{background-color:#E9DFD8;}\n"
+"            #emailBody{background-color:#FFFFFF;}\n"
+"            #emailFooter{background-color:#E9DFD8;}\n"
+"            .nestedContainer{background-color:#F8F8F8; border:1px solid #CCCCCC;}\n"
+"            .emailButton{background-color:#205478; border-collapse:separate;border-radius: 22px;}\n"
+"            .buttonContent{color:#FFFFFF; font-family:Helvetica; font-size:18px; font-weight:bold; line-height:100%; padding:15px; text-align:center;}\n"
+"            .buttonContent a{color:#FFFFFF; display:block; text-decoration:none!important; border:0!important;}\n"
+"            .emailCalendar{background-color:#FFFFFF; border:1px solid #CCCCCC;}\n"
+"            .emailCalendarMonth{background-color:#205478; color:#FFFFFF; font-family:Helvetica, Arial, sans-serif; font-size:16px; font-weight:bold; padding-top:10px; padding-bottom:10px; text-align:center;}\n"
+"            .emailCalendarDay{color:#205478; font-family:Helvetica, Arial, sans-serif; font-size:60px; font-weight:bold; line-height:100%; padding-top:20px; padding-bottom:20px; text-align:center;}\n"
+"            .imageContentText {margin-top: 10px;line-height:0;}\n"
+"            .imageContentText a {line-height:0;}\n"
+"            #invisibleIntroduction {display:none !important;} \n"
+"\n"
+"            span[class=ios-color-hack] a {color:#275100!important;text-decoration:none!important;} /* Remove all link colors in IOS (below are duplicates based on the color preference) */\n"
+"            span[class=ios-color-hack2] a {color:#205478!important;text-decoration:none!important;}\n"
+"            span[class=ios-color-hack3] a {color:#8B8B8B!important;text-decoration:none!important;}\n"
+"\n"
+"            .a[href^=\"tel\"], a[href^=\"sms\"] {text-decoration:none!important;color:#606060!important;pointer-events:none!important;cursor:default!important;}\n"
+"            .mobile_link a[href^=\"tel\"], .mobile_link a[href^=\"sms\"] {text-decoration:none!important;color:#606060!important;pointer-events:auto!important;cursor:default!important;}\n"
+"\n"
+"\n"
+"            @media only screen and (max-width: 480px){\n"
+"\n"
+"                table[id=\"emailHeader\"],\n"
+"                table[id=\"emailBody\"],\n"
+"                table[id=\"emailFooter\"],\n"
+"                table[class=\"flexibleContainer\"],\n"
+"                td[class=\"flexibleContainerCell\"] {width:100% !important;}\n"
+"                td[class=\"flexibleContainerBox\"], td[class=\"flexibleContainerBox\"] table {display: block;width: 100%;text-align: left;}\n"
+"\n"
+"                td[class=\"imageContent\"] img {height:auto !important; width:100% !important; max-width:100% !important; }\n"
+"                img[class=\"flexibleImage\"]{height:auto !important; width:100% !important;max-width:100% !important;}\n"
+"                img[class=\"flexibleImageSmall\"]{height:auto !important; width:auto !important;}\n"
+"\n"
+"\n"
+"                \n"
+"                table[class=\"flexibleContainerBoxNext\"]{padding-top: 10px !important;}\n"
+"\n"
+"                \n"
+"                table[class=\"emailButton\"]{width:100% !important;}\n"
+"                td[class=\"buttonContent\"]{padding:0 !important;}\n"
+"                td[class=\"buttonContent\"] a{padding:15px !important;}\n"
+"\n"
+"            }\n"
+"\n"
+"            \n"
+"\n"
+"            @media only screen and (-webkit-device-pixel-ratio:.75){\n"
+"            }\n"
+"\n"
+"            @media only screen and (-webkit-device-pixel-ratio:1){\n"
+"            }\n"
+"\n"
+"            @media only screen and (-webkit-device-pixel-ratio:1.5){\n"
+"            }\n"
+"            \n"
+"            @media only screen and (min-device-width : 320px) and (max-device-width:568px) {\n"
+"\n"
+"            }\n"
+"        </style>\n"
+"\n"
+"    </head>\n"
+"                <p>لقد تم استقبال تذكرة الدعم وسوف يتم الرجوع لك في اقرب وقت</p>\n"
+"                <hr/>\n"
+"                <b>رقم التذكره:</b> ${object.ticket_number or object.id}<br/>\n"
+"                <b>الفئة:</b> \n"
+"                % if object.category.name :\n"
+"                    ${object.category.name}\n"
+"                % endif\n"
+"                <br/>\n"
+"                <b>الوصف:</b><br/>\n"
+"                ${object.description|safe}\n"
+"                \n"
+"            \n"
+"            "
+msgstr "\n"
+"                <head>\n"
+"        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\n"
+"        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n"
+"        <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\" />\n"
+"        <meta name=\"format-detection\" content=\"telephone=no\" /> <!-- disable auto telephone linking in iOS -->\n"
+"        <title>Trjmaty website</title>\n"
+"        <style type=\"text/css\">\n"
+"            html { background-color:#AF8B6D; margin:0; padding:0; }\n"
+"            body, #bodyTable, #bodyCell, #bodyCell{height:100% !important; margin:0; padding:0; width:100% !important;font-family:Helvetica, Arial, \"Lucida Grande\", sans-serif;}\n"
+"            table{border-collapse:collapse;}\n"
+"            table[id=bodyTable] {width:100%!important;margin:auto;max-width:500px!important;color:#7A7A7A;font-weight:normal;}\n"
+"            img, a img{border:0; outline:none; text-decoration:none;height:auto; line-height:100%;}\n"
+"            a {text-decoration:none !important;border-bottom: 1px solid;}\n"
+"            h1, h2, h3, h4, h5, h6{color:#5F5F5F; font-weight:normal; font-family:Helvetica; font-size:20px; line-height:125%; text-align:Left; letter-spacing:normal;margin-top:0;margin-right:0;margin-bottom:10px;margin-left:0;padding-top:0;padding-bottom:0;padding-left:0;padding-right:0;}\n"
+"\n"
+"            .ReadMsgBody{width:100%;} .ExternalClass{width:100%;} \n"
+"            .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div{line-height:100%;} \n"
+"            table, td{mso-table-lspace:0pt; mso-table-rspace:0pt;} \n"
+"            #outlook a{padding:0;} \n"
+"            img{-ms-interpolation-mode: bicubic;display:block;outline:none; text-decoration:none;} \n"
+"            body, table, td, p, a, li, blockquote{-ms-text-size-adjust:100%; -webkit-text-size-adjust:100%; font-weight:normal!important;border-radius: 10px 10px 0 0;} \n"
+"            .ExternalClass td[class=\"ecxflexibleContainerBox\"] h3 {padding-top: 10px !important;} \n"
+"\n"
+"            h1{display:block;font-size:26px;font-style:normal;font-weight:normal;line-height:100%;}\n"
+"            h2{display:block;font-size:20px;font-style:normal;font-weight:normal;line-height:120%;}\n"
+"            h3{display:block;font-size:17px;font-style:normal;font-weight:normal;line-height:110%;}\n"
+"            h4{display:block;font-size:18px;font-style:italic;font-weight:normal;line-height:100%;}\n"
+"            .flexibleImage{height:auto;}\n"
+"            .linkRemoveBorder{border-bottom:0 !important;}\n"
+"            table[class=flexibleContainerCellDivider] {padding-bottom:0 !important;padding-top:0 !important;}\n"
+"\n"
+"            body, #bodyTable{background-color:#E9DFD8;}\n"
+"            #emailHeader{background-color:#E9DFD8;}\n"
+"            #emailBody{background-color:#FFFFFF;}\n"
+"            #emailFooter{background-color:#E9DFD8;}\n"
+"            .nestedContainer{background-color:#F8F8F8; border:1px solid #CCCCCC;}\n"
+"            .emailButton{background-color:#205478; border-collapse:separate;border-radius: 22px;}\n"
+"            .buttonContent{color:#FFFFFF; font-family:Helvetica; font-size:18px; font-weight:bold; line-height:100%; padding:15px; text-align:center;}\n"
+"            .buttonContent a{color:#FFFFFF; display:block; text-decoration:none!important; border:0!important;}\n"
+"            .emailCalendar{background-color:#FFFFFF; border:1px solid #CCCCCC;}\n"
+"            .emailCalendarMonth{background-color:#205478; color:#FFFFFF; font-family:Helvetica, Arial, sans-serif; font-size:16px; font-weight:bold; padding-top:10px; padding-bottom:10px; text-align:center;}\n"
+"            .emailCalendarDay{color:#205478; font-family:Helvetica, Arial, sans-serif; font-size:60px; font-weight:bold; line-height:100%; padding-top:20px; padding-bottom:20px; text-align:center;}\n"
+"            .imageContentText {margin-top: 10px;line-height:0;}\n"
+"            .imageContentText a {line-height:0;}\n"
+"            #invisibleIntroduction {display:none !important;} \n"
+"\n"
+"            span[class=ios-color-hack] a {color:#275100!important;text-decoration:none!important;} /* Remove all link colors in IOS (below are duplicates based on the color preference) */\n"
+"            span[class=ios-color-hack2] a {color:#205478!important;text-decoration:none!important;}\n"
+"            span[class=ios-color-hack3] a {color:#8B8B8B!important;text-decoration:none!important;}\n"
+"\n"
+"            .a[href^=\"tel\"], a[href^=\"sms\"] {text-decoration:none!important;color:#606060!important;pointer-events:none!important;cursor:default!important;}\n"
+"            .mobile_link a[href^=\"tel\"], .mobile_link a[href^=\"sms\"] {text-decoration:none!important;color:#606060!important;pointer-events:auto!important;cursor:default!important;}\n"
+"\n"
+"\n"
+"            @media only screen and (max-width: 480px){\n"
+"\n"
+"                table[id=\"emailHeader\"],\n"
+"                table[id=\"emailBody\"],\n"
+"                table[id=\"emailFooter\"],\n"
+"                table[class=\"flexibleContainer\"],\n"
+"                td[class=\"flexibleContainerCell\"] {width:100% !important;}\n"
+"                td[class=\"flexibleContainerBox\"], td[class=\"flexibleContainerBox\"] table {display: block;width: 100%;text-align: left;}\n"
+"\n"
+"                td[class=\"imageContent\"] img {height:auto !important; width:100% !important; max-width:100% !important; }\n"
+"                img[class=\"flexibleImage\"]{height:auto !important; width:100% !important;max-width:100% !important;}\n"
+"                img[class=\"flexibleImageSmall\"]{height:auto !important; width:auto !important;}\n"
+"\n"
+"\n"
+"                \n"
+"                table[class=\"flexibleContainerBoxNext\"]{padding-top: 10px !important;}\n"
+"\n"
+"                \n"
+"                table[class=\"emailButton\"]{width:100% !important;}\n"
+"                td[class=\"buttonContent\"]{padding:0 !important;}\n"
+"                td[class=\"buttonContent\"] a{padding:15px !important;}\n"
+"\n"
+"            }\n"
+"\n"
+"            \n"
+"\n"
+"            @media only screen and (-webkit-device-pixel-ratio:.75){\n"
+"            }\n"
+"\n"
+"            @media only screen and (-webkit-device-pixel-ratio:1){\n"
+"            }\n"
+"\n"
+"            @media only screen and (-webkit-device-pixel-ratio:1.5){\n"
+"            }\n"
+"            \n"
+"            @media only screen and (min-device-width : 320px) and (max-device-width:568px) {\n"
+"\n"
+"            }\n"
+"        </style>\n"
+"\n"
+"    </head>\n"
+"                <p>لقد تم استقبال تذكرة الدعم وسوف يتم الرجوع لك في اقرب وقت</p>\n"
+"                <hr/>\n"
+"                <b>رقم التذكره:</b> ${object.ticket_number or object.id}<br/>\n"
+"                <b>الفئة:</b> \n"
+"                % if object.category.name :\n"
+"                    ${object.category.name}\n"
+"                % endif\n"
+"                <br/>\n"
+"                <b>الوصف:</b><br/>\n"
+"                ${object.description|safe}\n"
+"                \n"
+"            \n"
+"            "
+
+#. module: website_support
+#: model:mail.template,body_html:website_support.support_ticket_reply_wrapper
+msgid "\n"
+"                <head>\n"
+"        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\n"
+"        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n"
+"        <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\" />\n"
+"        <meta name=\"format-detection\" content=\"telephone=no\" /> <!-- disable auto telephone linking in iOS -->\n"
+"        <title>Trjmaty website</title>\n"
+"        <style type=\"text/css\">\n"
+"            html { background-color:#AF8B6D; margin:0; padding:0; }\n"
+"            body, #bodyTable, #bodyCell, #bodyCell{height:100% !important; margin:0; padding:0; width:100% !important;font-family:Helvetica, Arial, \"Lucida Grande\", sans-serif;}\n"
+"            table{border-collapse:collapse;}\n"
+"            table[id=bodyTable] {width:100%!important;margin:auto;max-width:500px!important;color:#7A7A7A;font-weight:normal;}\n"
+"            img, a img{border:0; outline:none; text-decoration:none;height:auto; line-height:100%;}\n"
+"            a {text-decoration:none !important;border-bottom: 1px solid;}\n"
+"            h1, h2, h3, h4, h5, h6{color:#5F5F5F; font-weight:normal; font-family:Helvetica; font-size:20px; line-height:125%; text-align:Left; letter-spacing:normal;margin-top:0;margin-right:0;margin-bottom:10px;margin-left:0;padding-top:0;padding-bottom:0;padding-left:0;padding-right:0;}\n"
+"\n"
+"            .ReadMsgBody{width:100%;} .ExternalClass{width:100%;} \n"
+"            .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div{line-height:100%;} \n"
+"            table, td{mso-table-lspace:0pt; mso-table-rspace:0pt;} \n"
+"            #outlook a{padding:0;} \n"
+"            img{-ms-interpolation-mode: bicubic;display:block;outline:none; text-decoration:none;} \n"
+"            body, table, td, p, a, li, blockquote{-ms-text-size-adjust:100%; -webkit-text-size-adjust:100%; font-weight:normal!important;border-radius: 10px 10px 0 0;} \n"
+"            .ExternalClass td[class=\"ecxflexibleContainerBox\"] h3 {padding-top: 10px !important;} \n"
+"\n"
+"            h1{display:block;font-size:26px;font-style:normal;font-weight:normal;line-height:100%;}\n"
+"            h2{display:block;font-size:20px;font-style:normal;font-weight:normal;line-height:120%;}\n"
+"            h3{display:block;font-size:17px;font-style:normal;font-weight:normal;line-height:110%;}\n"
+"            h4{display:block;font-size:18px;font-style:italic;font-weight:normal;line-height:100%;}\n"
+"            .flexibleImage{height:auto;}\n"
+"            .linkRemoveBorder{border-bottom:0 !important;}\n"
+"            table[class=flexibleContainerCellDivider] {padding-bottom:0 !important;padding-top:0 !important;}\n"
+"\n"
+"            body, #bodyTable{background-color:#E9DFD8;}\n"
+"            #emailHeader{background-color:#E9DFD8;}\n"
+"            #emailBody{background-color:#FFFFFF;}\n"
+"            #emailFooter{background-color:#E9DFD8;}\n"
+"            .nestedContainer{background-color:#F8F8F8; border:1px solid #CCCCCC;}\n"
+"            .emailButton{background-color:#205478; border-collapse:separate;border-radius: 22px;}\n"
+"            .buttonContent{color:#FFFFFF; font-family:Helvetica; font-size:18px; font-weight:bold; line-height:100%; padding:15px; text-align:center;}\n"
+"            .buttonContent a{color:#FFFFFF; display:block; text-decoration:none!important; border:0!important;}\n"
+"            .emailCalendar{background-color:#FFFFFF; border:1px solid #CCCCCC;}\n"
+"            .emailCalendarMonth{background-color:#205478; color:#FFFFFF; font-family:Helvetica, Arial, sans-serif; font-size:16px; font-weight:bold; padding-top:10px; padding-bottom:10px; text-align:center;}\n"
+"            .emailCalendarDay{color:#205478; font-family:Helvetica, Arial, sans-serif; font-size:60px; font-weight:bold; line-height:100%; padding-top:20px; padding-bottom:20px; text-align:center;}\n"
+"            .imageContentText {margin-top: 10px;line-height:0;}\n"
+"            .imageContentText a {line-height:0;}\n"
+"            #invisibleIntroduction {display:none !important;} \n"
+"\n"
+"            span[class=ios-color-hack] a {color:#275100!important;text-decoration:none!important;} /* Remove all link colors in IOS (below are duplicates based on the color preference) */\n"
+"            span[class=ios-color-hack2] a {color:#205478!important;text-decoration:none!important;}\n"
+"            span[class=ios-color-hack3] a {color:#8B8B8B!important;text-decoration:none!important;}\n"
+"\n"
+"            .a[href^=\"tel\"], a[href^=\"sms\"] {text-decoration:none!important;color:#606060!important;pointer-events:none!important;cursor:default!important;}\n"
+"            .mobile_link a[href^=\"tel\"], .mobile_link a[href^=\"sms\"] {text-decoration:none!important;color:#606060!important;pointer-events:auto!important;cursor:default!important;}\n"
+"\n"
+"\n"
+"            @media only screen and (max-width: 480px){\n"
+"\n"
+"                table[id=\"emailHeader\"],\n"
+"                table[id=\"emailBody\"],\n"
+"                table[id=\"emailFooter\"],\n"
+"                table[class=\"flexibleContainer\"],\n"
+"                td[class=\"flexibleContainerCell\"] {width:100% !important;}\n"
+"                td[class=\"flexibleContainerBox\"], td[class=\"flexibleContainerBox\"] table {display: block;width: 100%;text-align: left;}\n"
+"\n"
+"                td[class=\"imageContent\"] img {height:auto !important; width:100% !important; max-width:100% !important; }\n"
+"                img[class=\"flexibleImage\"]{height:auto !important; width:100% !important;max-width:100% !important;}\n"
+"                img[class=\"flexibleImageSmall\"]{height:auto !important; width:auto !important;}\n"
+"\n"
+"\n"
+"                \n"
+"                table[class=\"flexibleContainerBoxNext\"]{padding-top: 10px !important;}\n"
+"\n"
+"                \n"
+"                table[class=\"emailButton\"]{width:100% !important;}\n"
+"                td[class=\"buttonContent\"]{padding:0 !important;}\n"
+"                td[class=\"buttonContent\"] a{padding:15px !important;}\n"
+"\n"
+"            }\n"
+"\n"
+"            \n"
+"\n"
+"            @media only screen and (-webkit-device-pixel-ratio:.75){\n"
+"            }\n"
+"\n"
+"            @media only screen and (-webkit-device-pixel-ratio:1){\n"
+"            }\n"
+"\n"
+"            @media only screen and (-webkit-device-pixel-ratio:1.5){\n"
+"            }\n"
+"            \n"
+"            @media only screen and (min-device-width : 320px) and (max-device-width:568px) {\n"
+"\n"
+"            }\n"
+"        </style>\n"
+"\n"
+"    </head>\n"
+"                <p>لقد تم تحديث تذكرة الدعم</p>\n"
+"                <b>رقم التذكرة:</b> ${object.ticket_id.id}<br/>\n"
+"                <b>الفئة:</b> ${object.ticket_id.category.name or ''}\n"
+"                <br/>\n"
+"                <b>الوصف:</b><br/>\n"
+"                ${object.ticket_id.description|safe}\n"
+"            \n"
+"            "
+msgstr "\n"
+"                <head>\n"
+"        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\n"
+"        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n"
+"        <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\" />\n"
+"        <meta name=\"format-detection\" content=\"telephone=no\" /> <!-- disable auto telephone linking in iOS -->\n"
+"        <title>Trjmaty website</title>\n"
+"        <style type=\"text/css\">\n"
+"            html { background-color:#AF8B6D; margin:0; padding:0; }\n"
+"            body, #bodyTable, #bodyCell, #bodyCell{height:100% !important; margin:0; padding:0; width:100% !important;font-family:Helvetica, Arial, \"Lucida Grande\", sans-serif;}\n"
+"            table{border-collapse:collapse;}\n"
+"            table[id=bodyTable] {width:100%!important;margin:auto;max-width:500px!important;color:#7A7A7A;font-weight:normal;}\n"
+"            img, a img{border:0; outline:none; text-decoration:none;height:auto; line-height:100%;}\n"
+"            a {text-decoration:none !important;border-bottom: 1px solid;}\n"
+"            h1, h2, h3, h4, h5, h6{color:#5F5F5F; font-weight:normal; font-family:Helvetica; font-size:20px; line-height:125%; text-align:Left; letter-spacing:normal;margin-top:0;margin-right:0;margin-bottom:10px;margin-left:0;padding-top:0;padding-bottom:0;padding-left:0;padding-right:0;}\n"
+"\n"
+"            .ReadMsgBody{width:100%;} .ExternalClass{width:100%;} \n"
+"            .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div{line-height:100%;} \n"
+"            table, td{mso-table-lspace:0pt; mso-table-rspace:0pt;} \n"
+"            #outlook a{padding:0;} \n"
+"            img{-ms-interpolation-mode: bicubic;display:block;outline:none; text-decoration:none;} \n"
+"            body, table, td, p, a, li, blockquote{-ms-text-size-adjust:100%; -webkit-text-size-adjust:100%; font-weight:normal!important;border-radius: 10px 10px 0 0;} \n"
+"            .ExternalClass td[class=\"ecxflexibleContainerBox\"] h3 {padding-top: 10px !important;} \n"
+"\n"
+"            h1{display:block;font-size:26px;font-style:normal;font-weight:normal;line-height:100%;}\n"
+"            h2{display:block;font-size:20px;font-style:normal;font-weight:normal;line-height:120%;}\n"
+"            h3{display:block;font-size:17px;font-style:normal;font-weight:normal;line-height:110%;}\n"
+"            h4{display:block;font-size:18px;font-style:italic;font-weight:normal;line-height:100%;}\n"
+"            .flexibleImage{height:auto;}\n"
+"            .linkRemoveBorder{border-bottom:0 !important;}\n"
+"            table[class=flexibleContainerCellDivider] {padding-bottom:0 !important;padding-top:0 !important;}\n"
+"\n"
+"            body, #bodyTable{background-color:#E9DFD8;}\n"
+"            #emailHeader{background-color:#E9DFD8;}\n"
+"            #emailBody{background-color:#FFFFFF;}\n"
+"            #emailFooter{background-color:#E9DFD8;}\n"
+"            .nestedContainer{background-color:#F8F8F8; border:1px solid #CCCCCC;}\n"
+"            .emailButton{background-color:#205478; border-collapse:separate;border-radius: 22px;}\n"
+"            .buttonContent{color:#FFFFFF; font-family:Helvetica; font-size:18px; font-weight:bold; line-height:100%; padding:15px; text-align:center;}\n"
+"            .buttonContent a{color:#FFFFFF; display:block; text-decoration:none!important; border:0!important;}\n"
+"            .emailCalendar{background-color:#FFFFFF; border:1px solid #CCCCCC;}\n"
+"            .emailCalendarMonth{background-color:#205478; color:#FFFFFF; font-family:Helvetica, Arial, sans-serif; font-size:16px; font-weight:bold; padding-top:10px; padding-bottom:10px; text-align:center;}\n"
+"            .emailCalendarDay{color:#205478; font-family:Helvetica, Arial, sans-serif; font-size:60px; font-weight:bold; line-height:100%; padding-top:20px; padding-bottom:20px; text-align:center;}\n"
+"            .imageContentText {margin-top: 10px;line-height:0;}\n"
+"            .imageContentText a {line-height:0;}\n"
+"            #invisibleIntroduction {display:none !important;} \n"
+"\n"
+"            span[class=ios-color-hack] a {color:#275100!important;text-decoration:none!important;} /* Remove all link colors in IOS (below are duplicates based on the color preference) */\n"
+"            span[class=ios-color-hack2] a {color:#205478!important;text-decoration:none!important;}\n"
+"            span[class=ios-color-hack3] a {color:#8B8B8B!important;text-decoration:none!important;}\n"
+"\n"
+"            .a[href^=\"tel\"], a[href^=\"sms\"] {text-decoration:none!important;color:#606060!important;pointer-events:none!important;cursor:default!important;}\n"
+"            .mobile_link a[href^=\"tel\"], .mobile_link a[href^=\"sms\"] {text-decoration:none!important;color:#606060!important;pointer-events:auto!important;cursor:default!important;}\n"
+"\n"
+"\n"
+"            @media only screen and (max-width: 480px){\n"
+"\n"
+"                table[id=\"emailHeader\"],\n"
+"                table[id=\"emailBody\"],\n"
+"                table[id=\"emailFooter\"],\n"
+"                table[class=\"flexibleContainer\"],\n"
+"                td[class=\"flexibleContainerCell\"] {width:100% !important;}\n"
+"                td[class=\"flexibleContainerBox\"], td[class=\"flexibleContainerBox\"] table {display: block;width: 100%;text-align: left;}\n"
+"\n"
+"                td[class=\"imageContent\"] img {height:auto !important; width:100% !important; max-width:100% !important; }\n"
+"                img[class=\"flexibleImage\"]{height:auto !important; width:100% !important;max-width:100% !important;}\n"
+"                img[class=\"flexibleImageSmall\"]{height:auto !important; width:auto !important;}\n"
+"\n"
+"\n"
+"                \n"
+"                table[class=\"flexibleContainerBoxNext\"]{padding-top: 10px !important;}\n"
+"\n"
+"                \n"
+"                table[class=\"emailButton\"]{width:100% !important;}\n"
+"                td[class=\"buttonContent\"]{padding:0 !important;}\n"
+"                td[class=\"buttonContent\"] a{padding:15px !important;}\n"
+"\n"
+"            }\n"
+"\n"
+"            \n"
+"\n"
+"            @media only screen and (-webkit-device-pixel-ratio:.75){\n"
+"            }\n"
+"\n"
+"            @media only screen and (-webkit-device-pixel-ratio:1){\n"
+"            }\n"
+"\n"
+"            @media only screen and (-webkit-device-pixel-ratio:1.5){\n"
+"            }\n"
+"            \n"
+"            @media only screen and (min-device-width : 320px) and (max-device-width:568px) {\n"
+"\n"
+"            }\n"
+"        </style>\n"
+"\n"
+"    </head>\n"
+"                <p>لقد تم تحديث تذكرة الدعم</p>\n"
+"                <b>رقم التذكرة:</b> ${object.ticket_id.id}<br/>\n"
+"                <b>الفئة:</b> ${object.ticket_id.category.name or ''}\n"
+"                <br/>\n"
+"                <b>الوصف:</b><br/>\n"
+"                ${object.ticket_id.description|safe}\n"
+"            \n"
+"            "
+
+#. module: website_support
+#: model:mail.template,body_html:website_support.support_ticket_user_change
+msgid "\n"
+"<head>\n"
+"        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\n"
+"        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n"
+"        <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\" />\n"
+"        <meta name=\"format-detection\" content=\"telephone=no\" /> <!-- disable auto telephone linking in iOS -->\n"
+"        <title>Trjmaty website</title>\n"
+"        <style type=\"text/css\">\n"
+"            html { background-color:#AF8B6D; margin:0; padding:0; }\n"
+"            body, #bodyTable, #bodyCell, #bodyCell{height:100% !important; margin:0; padding:0; width:100% !important;font-family:Helvetica, Arial, \"Lucida Grande\", sans-serif;}\n"
+"            table{border-collapse:collapse;}\n"
+"            table[id=bodyTable] {width:100%!important;margin:auto;max-width:500px!important;color:#7A7A7A;font-weight:normal;}\n"
+"            img, a img{border:0; outline:none; text-decoration:none;height:auto; line-height:100%;}\n"
+"            a {text-decoration:none !important;border-bottom: 1px solid;}\n"
+"            h1, h2, h3, h4, h5, h6{color:#5F5F5F; font-weight:normal; font-family:Helvetica; font-size:20px; line-height:125%; text-align:Left; letter-spacing:normal;margin-top:0;margin-right:0;margin-bottom:10px;margin-left:0;padding-top:0;padding-bottom:0;padding-left:0;padding-right:0;}\n"
+"\n"
+"            .ReadMsgBody{width:100%;} .ExternalClass{width:100%;} \n"
+"            .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div{line-height:100%;} \n"
+"            table, td{mso-table-lspace:0pt; mso-table-rspace:0pt;} \n"
+"            #outlook a{padding:0;} \n"
+"            img{-ms-interpolation-mode: bicubic;display:block;outline:none; text-decoration:none;} \n"
+"            body, table, td, p, a, li, blockquote{-ms-text-size-adjust:100%; -webkit-text-size-adjust:100%; font-weight:normal!important;border-radius: 10px 10px 0 0;} \n"
+"            .ExternalClass td[class=\"ecxflexibleContainerBox\"] h3 {padding-top: 10px !important;} \n"
+"\n"
+"            h1{display:block;font-size:26px;font-style:normal;font-weight:normal;line-height:100%;}\n"
+"            h2{display:block;font-size:20px;font-style:normal;font-weight:normal;line-height:120%;}\n"
+"            h3{display:block;font-size:17px;font-style:normal;font-weight:normal;line-height:110%;}\n"
+"            h4{display:block;font-size:18px;font-style:italic;font-weight:normal;line-height:100%;}\n"
+"            .flexibleImage{height:auto;}\n"
+"            .linkRemoveBorder{border-bottom:0 !important;}\n"
+"            table[class=flexibleContainerCellDivider] {padding-bottom:0 !important;padding-top:0 !important;}\n"
+"\n"
+"            body, #bodyTable{background-color:#E9DFD8;}\n"
+"            #emailHeader{background-color:#E9DFD8;}\n"
+"            #emailBody{background-color:#FFFFFF;}\n"
+"            #emailFooter{background-color:#E9DFD8;}\n"
+"            .nestedContainer{background-color:#F8F8F8; border:1px solid #CCCCCC;}\n"
+"            .emailButton{background-color:#205478; border-collapse:separate;border-radius: 22px;}\n"
+"            .buttonContent{color:#FFFFFF; font-family:Helvetica; font-size:18px; font-weight:bold; line-height:100%; padding:15px; text-align:center;}\n"
+"            .buttonContent a{color:#FFFFFF; display:block; text-decoration:none!important; border:0!important;}\n"
+"            .emailCalendar{background-color:#FFFFFF; border:1px solid #CCCCCC;}\n"
+"            .emailCalendarMonth{background-color:#205478; color:#FFFFFF; font-family:Helvetica, Arial, sans-serif; font-size:16px; font-weight:bold; padding-top:10px; padding-bottom:10px; text-align:center;}\n"
+"            .emailCalendarDay{color:#205478; font-family:Helvetica, Arial, sans-serif; font-size:60px; font-weight:bold; line-height:100%; padding-top:20px; padding-bottom:20px; text-align:center;}\n"
+"            .imageContentText {margin-top: 10px;line-height:0;}\n"
+"            .imageContentText a {line-height:0;}\n"
+"            #invisibleIntroduction {display:none !important;} \n"
+"\n"
+"            span[class=ios-color-hack] a {color:#275100!important;text-decoration:none!important;} /* Remove all link colors in IOS (below are duplicates based on the color preference) */\n"
+"            span[class=ios-color-hack2] a {color:#205478!important;text-decoration:none!important;}\n"
+"            span[class=ios-color-hack3] a {color:#8B8B8B!important;text-decoration:none!important;}\n"
+"\n"
+"            .a[href^=\"tel\"], a[href^=\"sms\"] {text-decoration:none!important;color:#606060!important;pointer-events:none!important;cursor:default!important;}\n"
+"            .mobile_link a[href^=\"tel\"], .mobile_link a[href^=\"sms\"] {text-decoration:none!important;color:#606060!important;pointer-events:auto!important;cursor:default!important;}\n"
+"\n"
+"\n"
+"            @media only screen and (max-width: 480px){\n"
+"\n"
+"                table[id=\"emailHeader\"],\n"
+"                table[id=\"emailBody\"],\n"
+"                table[id=\"emailFooter\"],\n"
+"                table[class=\"flexibleContainer\"],\n"
+"                td[class=\"flexibleContainerCell\"] {width:100% !important;}\n"
+"                td[class=\"flexibleContainerBox\"], td[class=\"flexibleContainerBox\"] table {display: block;width: 100%;text-align: left;}\n"
+"\n"
+"                td[class=\"imageContent\"] img {height:auto !important; width:100% !important; max-width:100% !important; }\n"
+"                img[class=\"flexibleImage\"]{height:auto !important; width:100% !important;max-width:100% !important;}\n"
+"                img[class=\"flexibleImageSmall\"]{height:auto !important; width:auto !important;}\n"
+"\n"
+"\n"
+"                \n"
+"                table[class=\"flexibleContainerBoxNext\"]{padding-top: 10px !important;}\n"
+"\n"
+"                \n"
+"                table[class=\"emailButton\"]{width:100% !important;}\n"
+"                td[class=\"buttonContent\"]{padding:0 !important;}\n"
+"                td[class=\"buttonContent\"] a{padding:15px !important;}\n"
+"\n"
+"            }\n"
+"\n"
+"            \n"
+"\n"
+"            @media only screen and (-webkit-device-pixel-ratio:.75){\n"
+"            }\n"
+"\n"
+"            @media only screen and (-webkit-device-pixel-ratio:1){\n"
+"            }\n"
+"\n"
+"            @media only screen and (-webkit-device-pixel-ratio:1.5){\n"
+"            }\n"
+"            \n"
+"            @media only screen and (min-device-width : 320px) and (max-device-width:568px) {\n"
+"\n"
+"            }\n"
+"        </style>\n"
+"\n"
+"    </head>\n"
+"                <p>لقد تم ارسال تذكرة الدعم لك</p>\n"
+"                <hr/>\n"
+"                <b>رقم التذكرة:</b> ${object.ticket_number or object.id}<br/>\n"
+"                <b>الفئة:</b> \n"
+"                % if object.category.name :\n"
+"                    ${object.category.name}\n"
+"                % endif\n"
+"                <br/>\n"
+"                <b>الوصف:</b><br/>\n"
+"                ${object.description|safe}\n"
+"                \n"
+"            \n"
+"            "
+msgstr "\n"
+"<head>\n"
+"        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\n"
+"        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n"
+"        <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\" />\n"
+"        <meta name=\"format-detection\" content=\"telephone=no\" /> <!-- disable auto telephone linking in iOS -->\n"
+"        <title>Trjmaty website</title>\n"
+"        <style type=\"text/css\">\n"
+"            html { background-color:#AF8B6D; margin:0; padding:0; }\n"
+"            body, #bodyTable, #bodyCell, #bodyCell{height:100% !important; margin:0; padding:0; width:100% !important;font-family:Helvetica, Arial, \"Lucida Grande\", sans-serif;}\n"
+"            table{border-collapse:collapse;}\n"
+"            table[id=bodyTable] {width:100%!important;margin:auto;max-width:500px!important;color:#7A7A7A;font-weight:normal;}\n"
+"            img, a img{border:0; outline:none; text-decoration:none;height:auto; line-height:100%;}\n"
+"            a {text-decoration:none !important;border-bottom: 1px solid;}\n"
+"            h1, h2, h3, h4, h5, h6{color:#5F5F5F; font-weight:normal; font-family:Helvetica; font-size:20px; line-height:125%; text-align:Left; letter-spacing:normal;margin-top:0;margin-right:0;margin-bottom:10px;margin-left:0;padding-top:0;padding-bottom:0;padding-left:0;padding-right:0;}\n"
+"\n"
+"            .ReadMsgBody{width:100%;} .ExternalClass{width:100%;} \n"
+"            .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div{line-height:100%;} \n"
+"            table, td{mso-table-lspace:0pt; mso-table-rspace:0pt;} \n"
+"            #outlook a{padding:0;} \n"
+"            img{-ms-interpolation-mode: bicubic;display:block;outline:none; text-decoration:none;} \n"
+"            body, table, td, p, a, li, blockquote{-ms-text-size-adjust:100%; -webkit-text-size-adjust:100%; font-weight:normal!important;border-radius: 10px 10px 0 0;} \n"
+"            .ExternalClass td[class=\"ecxflexibleContainerBox\"] h3 {padding-top: 10px !important;} \n"
+"\n"
+"            h1{display:block;font-size:26px;font-style:normal;font-weight:normal;line-height:100%;}\n"
+"            h2{display:block;font-size:20px;font-style:normal;font-weight:normal;line-height:120%;}\n"
+"            h3{display:block;font-size:17px;font-style:normal;font-weight:normal;line-height:110%;}\n"
+"            h4{display:block;font-size:18px;font-style:italic;font-weight:normal;line-height:100%;}\n"
+"            .flexibleImage{height:auto;}\n"
+"            .linkRemoveBorder{border-bottom:0 !important;}\n"
+"            table[class=flexibleContainerCellDivider] {padding-bottom:0 !important;padding-top:0 !important;}\n"
+"\n"
+"            body, #bodyTable{background-color:#E9DFD8;}\n"
+"            #emailHeader{background-color:#E9DFD8;}\n"
+"            #emailBody{background-color:#FFFFFF;}\n"
+"            #emailFooter{background-color:#E9DFD8;}\n"
+"            .nestedContainer{background-color:#F8F8F8; border:1px solid #CCCCCC;}\n"
+"            .emailButton{background-color:#205478; border-collapse:separate;border-radius: 22px;}\n"
+"            .buttonContent{color:#FFFFFF; font-family:Helvetica; font-size:18px; font-weight:bold; line-height:100%; padding:15px; text-align:center;}\n"
+"            .buttonContent a{color:#FFFFFF; display:block; text-decoration:none!important; border:0!important;}\n"
+"            .emailCalendar{background-color:#FFFFFF; border:1px solid #CCCCCC;}\n"
+"            .emailCalendarMonth{background-color:#205478; color:#FFFFFF; font-family:Helvetica, Arial, sans-serif; font-size:16px; font-weight:bold; padding-top:10px; padding-bottom:10px; text-align:center;}\n"
+"            .emailCalendarDay{color:#205478; font-family:Helvetica, Arial, sans-serif; font-size:60px; font-weight:bold; line-height:100%; padding-top:20px; padding-bottom:20px; text-align:center;}\n"
+"            .imageContentText {margin-top: 10px;line-height:0;}\n"
+"            .imageContentText a {line-height:0;}\n"
+"            #invisibleIntroduction {display:none !important;} \n"
+"\n"
+"            span[class=ios-color-hack] a {color:#275100!important;text-decoration:none!important;} /* Remove all link colors in IOS (below are duplicates based on the color preference) */\n"
+"            span[class=ios-color-hack2] a {color:#205478!important;text-decoration:none!important;}\n"
+"            span[class=ios-color-hack3] a {color:#8B8B8B!important;text-decoration:none!important;}\n"
+"\n"
+"            .a[href^=\"tel\"], a[href^=\"sms\"] {text-decoration:none!important;color:#606060!important;pointer-events:none!important;cursor:default!important;}\n"
+"            .mobile_link a[href^=\"tel\"], .mobile_link a[href^=\"sms\"] {text-decoration:none!important;color:#606060!important;pointer-events:auto!important;cursor:default!important;}\n"
+"\n"
+"\n"
+"            @media only screen and (max-width: 480px){\n"
+"\n"
+"                table[id=\"emailHeader\"],\n"
+"                table[id=\"emailBody\"],\n"
+"                table[id=\"emailFooter\"],\n"
+"                table[class=\"flexibleContainer\"],\n"
+"                td[class=\"flexibleContainerCell\"] {width:100% !important;}\n"
+"                td[class=\"flexibleContainerBox\"], td[class=\"flexibleContainerBox\"] table {display: block;width: 100%;text-align: left;}\n"
+"\n"
+"                td[class=\"imageContent\"] img {height:auto !important; width:100% !important; max-width:100% !important; }\n"
+"                img[class=\"flexibleImage\"]{height:auto !important; width:100% !important;max-width:100% !important;}\n"
+"                img[class=\"flexibleImageSmall\"]{height:auto !important; width:auto !important;}\n"
+"\n"
+"\n"
+"                \n"
+"                table[class=\"flexibleContainerBoxNext\"]{padding-top: 10px !important;}\n"
+"\n"
+"                \n"
+"                table[class=\"emailButton\"]{width:100% !important;}\n"
+"                td[class=\"buttonContent\"]{padding:0 !important;}\n"
+"                td[class=\"buttonContent\"] a{padding:15px !important;}\n"
+"\n"
+"            }\n"
+"\n"
+"            \n"
+"\n"
+"            @media only screen and (-webkit-device-pixel-ratio:.75){\n"
+"            }\n"
+"\n"
+"            @media only screen and (-webkit-device-pixel-ratio:1){\n"
+"            }\n"
+"\n"
+"            @media only screen and (-webkit-device-pixel-ratio:1.5){\n"
+"            }\n"
+"            \n"
+"            @media only screen and (min-device-width : 320px) and (max-device-width:568px) {\n"
+"\n"
+"            }\n"
+"        </style>\n"
+"\n"
+"    </head>\n"
+"                <p>لقد تم ارسال تذكرة الدعم لك</p>\n"
+"                <hr/>\n"
+"                <b>رقم التذكرة:</b> ${object.ticket_number or object.id}<br/>\n"
+"                <b>الفئة:</b> \n"
+"                % if object.category.name :\n"
+"                    ${object.category.name}\n"
+"                % endif\n"
+"                <br/>\n"
+"                <b>الوصف:</b><br/>\n"
+"                ${object.description|safe}\n"
+"                \n"
+"            \n"
+"            "
+
+#. module: website_support
+#: model:mail.template,body_html:website_support.support_ticket_closed
+msgid "\n"
+"<head>\n"
+"        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\n"
+"        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n"
+"        <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\" />\n"
+"        <meta name=\"format-detection\" content=\"telephone=no\" /> <!-- disable auto telephone linking in iOS -->\n"
+"        <title>Trjmaty website</title>\n"
+"        <style type=\"text/css\">\n"
+"            html { background-color:#AF8B6D; margin:0; padding:0; }\n"
+"            body, #bodyTable, #bodyCell, #bodyCell{height:100% !important; margin:0; padding:0; width:100% !important;font-family:Helvetica, Arial, \"Lucida Grande\", sans-serif;}\n"
+"            table{border-collapse:collapse;}\n"
+"            table[id=bodyTable] {width:100%!important;margin:auto;max-width:500px!important;color:#7A7A7A;font-weight:normal;}\n"
+"            img, a img{border:0; outline:none; text-decoration:none;height:auto; line-height:100%;}\n"
+"            a {text-decoration:none !important;border-bottom: 1px solid;}\n"
+"            h1, h2, h3, h4, h5, h6{color:#5F5F5F; font-weight:normal; font-family:Helvetica; font-size:20px; line-height:125%; text-align:Left; letter-spacing:normal;margin-top:0;margin-right:0;margin-bottom:10px;margin-left:0;padding-top:0;padding-bottom:0;padding-left:0;padding-right:0;}\n"
+"\n"
+"            .ReadMsgBody{width:100%;} .ExternalClass{width:100%;} \n"
+"            .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div{line-height:100%;} \n"
+"            table, td{mso-table-lspace:0pt; mso-table-rspace:0pt;} \n"
+"            #outlook a{padding:0;} \n"
+"            img{-ms-interpolation-mode: bicubic;display:block;outline:none; text-decoration:none;} \n"
+"            body, table, td, p, a, li, blockquote{-ms-text-size-adjust:100%; -webkit-text-size-adjust:100%; font-weight:normal!important;border-radius: 10px 10px 0 0;} \n"
+"            .ExternalClass td[class=\"ecxflexibleContainerBox\"] h3 {padding-top: 10px !important;} \n"
+"\n"
+"            h1{display:block;font-size:26px;font-style:normal;font-weight:normal;line-height:100%;}\n"
+"            h2{display:block;font-size:20px;font-style:normal;font-weight:normal;line-height:120%;}\n"
+"            h3{display:block;font-size:17px;font-style:normal;font-weight:normal;line-height:110%;}\n"
+"            h4{display:block;font-size:18px;font-style:italic;font-weight:normal;line-height:100%;}\n"
+"            .flexibleImage{height:auto;}\n"
+"            .linkRemoveBorder{border-bottom:0 !important;}\n"
+"            table[class=flexibleContainerCellDivider] {padding-bottom:0 !important;padding-top:0 !important;}\n"
+"\n"
+"            body, #bodyTable{background-color:#E9DFD8;}\n"
+"            #emailHeader{background-color:#E9DFD8;}\n"
+"            #emailBody{background-color:#FFFFFF;}\n"
+"            #emailFooter{background-color:#E9DFD8;}\n"
+"            .nestedContainer{background-color:#F8F8F8; border:1px solid #CCCCCC;}\n"
+"            .emailButton{background-color:#205478; border-collapse:separate;border-radius: 22px;}\n"
+"            .buttonContent{color:#FFFFFF; font-family:Helvetica; font-size:18px; font-weight:bold; line-height:100%; padding:15px; text-align:center;}\n"
+"            .buttonContent a{color:#FFFFFF; display:block; text-decoration:none!important; border:0!important;}\n"
+"            .emailCalendar{background-color:#FFFFFF; border:1px solid #CCCCCC;}\n"
+"            .emailCalendarMonth{background-color:#205478; color:#FFFFFF; font-family:Helvetica, Arial, sans-serif; font-size:16px; font-weight:bold; padding-top:10px; padding-bottom:10px; text-align:center;}\n"
+"            .emailCalendarDay{color:#205478; font-family:Helvetica, Arial, sans-serif; font-size:60px; font-weight:bold; line-height:100%; padding-top:20px; padding-bottom:20px; text-align:center;}\n"
+"            .imageContentText {margin-top: 10px;line-height:0;}\n"
+"            .imageContentText a {line-height:0;}\n"
+"            #invisibleIntroduction {display:none !important;} \n"
+"\n"
+"            span[class=ios-color-hack] a {color:#275100!important;text-decoration:none!important;} /* Remove all link colors in IOS (below are duplicates based on the color preference) */\n"
+"            span[class=ios-color-hack2] a {color:#205478!important;text-decoration:none!important;}\n"
+"            span[class=ios-color-hack3] a {color:#8B8B8B!important;text-decoration:none!important;}\n"
+"\n"
+"            .a[href^=\"tel\"], a[href^=\"sms\"] {text-decoration:none!important;color:#606060!important;pointer-events:none!important;cursor:default!important;}\n"
+"            .mobile_link a[href^=\"tel\"], .mobile_link a[href^=\"sms\"] {text-decoration:none!important;color:#606060!important;pointer-events:auto!important;cursor:default!important;}\n"
+"\n"
+"\n"
+"            @media only screen and (max-width: 480px){\n"
+"\n"
+"                table[id=\"emailHeader\"],\n"
+"                table[id=\"emailBody\"],\n"
+"                table[id=\"emailFooter\"],\n"
+"                table[class=\"flexibleContainer\"],\n"
+"                td[class=\"flexibleContainerCell\"] {width:100% !important;}\n"
+"                td[class=\"flexibleContainerBox\"], td[class=\"flexibleContainerBox\"] table {display: block;width: 100%;text-align: left;}\n"
+"\n"
+"                td[class=\"imageContent\"] img {height:auto !important; width:100% !important; max-width:100% !important; }\n"
+"                img[class=\"flexibleImage\"]{height:auto !important; width:100% !important;max-width:100% !important;}\n"
+"                img[class=\"flexibleImageSmall\"]{height:auto !important; width:auto !important;}\n"
+"\n"
+"\n"
+"                \n"
+"                table[class=\"flexibleContainerBoxNext\"]{padding-top: 10px !important;}\n"
+"\n"
+"                \n"
+"                table[class=\"emailButton\"]{width:100% !important;}\n"
+"                td[class=\"buttonContent\"]{padding:0 !important;}\n"
+"                td[class=\"buttonContent\"] a{padding:15px !important;}\n"
+"\n"
+"            }\n"
+"\n"
+"            \n"
+"\n"
+"            @media only screen and (-webkit-device-pixel-ratio:.75){\n"
+"            }\n"
+"\n"
+"            @media only screen and (-webkit-device-pixel-ratio:1){\n"
+"            }\n"
+"\n"
+"            @media only screen and (-webkit-device-pixel-ratio:1.5){\n"
+"            }\n"
+"            \n"
+"            @media only screen and (min-device-width : 320px) and (max-device-width:568px) {\n"
+"\n"
+"            }\n"
+"        </style>\n"
+"\n"
+"    </head>\n"
+"                <p>لقد تم اغلاق تذكرة الدعم الخاصه بك من قبل موظفينا</p>\n"
+"                <p>${object.close_comment or ''}</p>\n"
+"                <hr/>\n"
+"                <b>رقم التذكرة:</b> ${object.ticket_number or object.id}<br/>\n"
+"                <b>الفئة:</b> \n"
+"                % if object.category.name :\n"
+"                    ${object.category.name}\n"
+"                % endif\n"
+"                <br/>\n"
+"                <b>الوصف:</b><br/>\n"
+"                ${object.description|safe}\n"
+"                \n"
+"            \n"
+"            "
+msgstr "\n"
+"<head>\n"
+"        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\n"
+"        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n"
+"        <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\" />\n"
+"        <meta name=\"format-detection\" content=\"telephone=no\" /> <!-- disable auto telephone linking in iOS -->\n"
+"        <title>Trjmaty website</title>\n"
+"        <style type=\"text/css\">\n"
+"            html { background-color:#AF8B6D; margin:0; padding:0; }\n"
+"            body, #bodyTable, #bodyCell, #bodyCell{height:100% !important; margin:0; padding:0; width:100% !important;font-family:Helvetica, Arial, \"Lucida Grande\", sans-serif;}\n"
+"            table{border-collapse:collapse;}\n"
+"            table[id=bodyTable] {width:100%!important;margin:auto;max-width:500px!important;color:#7A7A7A;font-weight:normal;}\n"
+"            img, a img{border:0; outline:none; text-decoration:none;height:auto; line-height:100%;}\n"
+"            a {text-decoration:none !important;border-bottom: 1px solid;}\n"
+"            h1, h2, h3, h4, h5, h6{color:#5F5F5F; font-weight:normal; font-family:Helvetica; font-size:20px; line-height:125%; text-align:Left; letter-spacing:normal;margin-top:0;margin-right:0;margin-bottom:10px;margin-left:0;padding-top:0;padding-bottom:0;padding-left:0;padding-right:0;}\n"
+"\n"
+"            .ReadMsgBody{width:100%;} .ExternalClass{width:100%;} \n"
+"            .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div{line-height:100%;} \n"
+"            table, td{mso-table-lspace:0pt; mso-table-rspace:0pt;} \n"
+"            #outlook a{padding:0;} \n"
+"            img{-ms-interpolation-mode: bicubic;display:block;outline:none; text-decoration:none;} \n"
+"            body, table, td, p, a, li, blockquote{-ms-text-size-adjust:100%; -webkit-text-size-adjust:100%; font-weight:normal!important;border-radius: 10px 10px 0 0;} \n"
+"            .ExternalClass td[class=\"ecxflexibleContainerBox\"] h3 {padding-top: 10px !important;} \n"
+"\n"
+"            h1{display:block;font-size:26px;font-style:normal;font-weight:normal;line-height:100%;}\n"
+"            h2{display:block;font-size:20px;font-style:normal;font-weight:normal;line-height:120%;}\n"
+"            h3{display:block;font-size:17px;font-style:normal;font-weight:normal;line-height:110%;}\n"
+"            h4{display:block;font-size:18px;font-style:italic;font-weight:normal;line-height:100%;}\n"
+"            .flexibleImage{height:auto;}\n"
+"            .linkRemoveBorder{border-bottom:0 !important;}\n"
+"            table[class=flexibleContainerCellDivider] {padding-bottom:0 !important;padding-top:0 !important;}\n"
+"\n"
+"            body, #bodyTable{background-color:#E9DFD8;}\n"
+"            #emailHeader{background-color:#E9DFD8;}\n"
+"            #emailBody{background-color:#FFFFFF;}\n"
+"            #emailFooter{background-color:#E9DFD8;}\n"
+"            .nestedContainer{background-color:#F8F8F8; border:1px solid #CCCCCC;}\n"
+"            .emailButton{background-color:#205478; border-collapse:separate;border-radius: 22px;}\n"
+"            .buttonContent{color:#FFFFFF; font-family:Helvetica; font-size:18px; font-weight:bold; line-height:100%; padding:15px; text-align:center;}\n"
+"            .buttonContent a{color:#FFFFFF; display:block; text-decoration:none!important; border:0!important;}\n"
+"            .emailCalendar{background-color:#FFFFFF; border:1px solid #CCCCCC;}\n"
+"            .emailCalendarMonth{background-color:#205478; color:#FFFFFF; font-family:Helvetica, Arial, sans-serif; font-size:16px; font-weight:bold; padding-top:10px; padding-bottom:10px; text-align:center;}\n"
+"            .emailCalendarDay{color:#205478; font-family:Helvetica, Arial, sans-serif; font-size:60px; font-weight:bold; line-height:100%; padding-top:20px; padding-bottom:20px; text-align:center;}\n"
+"            .imageContentText {margin-top: 10px;line-height:0;}\n"
+"            .imageContentText a {line-height:0;}\n"
+"            #invisibleIntroduction {display:none !important;} \n"
+"\n"
+"            span[class=ios-color-hack] a {color:#275100!important;text-decoration:none!important;} /* Remove all link colors in IOS (below are duplicates based on the color preference) */\n"
+"            span[class=ios-color-hack2] a {color:#205478!important;text-decoration:none!important;}\n"
+"            span[class=ios-color-hack3] a {color:#8B8B8B!important;text-decoration:none!important;}\n"
+"\n"
+"            .a[href^=\"tel\"], a[href^=\"sms\"] {text-decoration:none!important;color:#606060!important;pointer-events:none!important;cursor:default!important;}\n"
+"            .mobile_link a[href^=\"tel\"], .mobile_link a[href^=\"sms\"] {text-decoration:none!important;color:#606060!important;pointer-events:auto!important;cursor:default!important;}\n"
+"\n"
+"\n"
+"            @media only screen and (max-width: 480px){\n"
+"\n"
+"                table[id=\"emailHeader\"],\n"
+"                table[id=\"emailBody\"],\n"
+"                table[id=\"emailFooter\"],\n"
+"                table[class=\"flexibleContainer\"],\n"
+"                td[class=\"flexibleContainerCell\"] {width:100% !important;}\n"
+"                td[class=\"flexibleContainerBox\"], td[class=\"flexibleContainerBox\"] table {display: block;width: 100%;text-align: left;}\n"
+"\n"
+"                td[class=\"imageContent\"] img {height:auto !important; width:100% !important; max-width:100% !important; }\n"
+"                img[class=\"flexibleImage\"]{height:auto !important; width:100% !important;max-width:100% !important;}\n"
+"                img[class=\"flexibleImageSmall\"]{height:auto !important; width:auto !important;}\n"
+"\n"
+"\n"
+"                \n"
+"                table[class=\"flexibleContainerBoxNext\"]{padding-top: 10px !important;}\n"
+"\n"
+"                \n"
+"                table[class=\"emailButton\"]{width:100% !important;}\n"
+"                td[class=\"buttonContent\"]{padding:0 !important;}\n"
+"                td[class=\"buttonContent\"] a{padding:15px !important;}\n"
+"\n"
+"            }\n"
+"\n"
+"            \n"
+"\n"
+"            @media only screen and (-webkit-device-pixel-ratio:.75){\n"
+"            }\n"
+"\n"
+"            @media only screen and (-webkit-device-pixel-ratio:1){\n"
+"            }\n"
+"\n"
+"            @media only screen and (-webkit-device-pixel-ratio:1.5){\n"
+"            }\n"
+"            \n"
+"            @media only screen and (min-device-width : 320px) and (max-device-width:568px) {\n"
+"\n"
+"            }\n"
+"        </style>\n"
+"\n"
+"    </head>\n"
+"                <p>لقد تم اغلاق تذكرة الدعم الخاصه بك من قبل موظفينا</p>\n"
+"                <p>${object.close_comment or ''}</p>\n"
+"                <hr/>\n"
+"                <b>رقم التذكرة:</b> ${object.ticket_number or object.id}<br/>\n"
+"                <b>الفئة:</b> \n"
+"                % if object.category.name :\n"
+"                    ${object.category.name}\n"
+"                % endif\n"
+"                <br/>\n"
+"                <b>الوصف:</b><br/>\n"
+"                ${object.description|safe}\n"
+"                \n"
+"            \n"
+"            "
+
+#. module: website_support
+#: model:mk.sms_template,sms_text:website_support.sms_template_support
+msgid " تم إغلاق تذكرة الدعم الخاصة بك من قبل موظفينا "
+msgstr " تم إغلاق تذكرة الدعم الخاصة بك من قبل موظفينا "
+
+#. module: website_support
+#: model:mk.sms_template,sms_text:website_support.sms_template_support_open
+msgid " لقد تم استقبال تذكرة الدعم وسوف يتم الرجوع لك في اقرب وقت "
+msgstr " لقد تم استقبال تذكرة الدعم وسوف يتم الرجوع لك في اقرب وقت "
+
+#. module: website_support
+#: model:mk.sms_template,sms_text:website_support.sms_template_support_reply
+msgid " لقد تم الرد علي تذكرة الدعم الخاص بك "
+msgstr " لقد تم الرد علي تذكرة الدعم الخاص بك "
+
+#. module: website_support
+#: model:mail.template,subject:website_support.support_ticket_reply_wrapper
+msgid "${object.subject}"
+msgstr "${object.subject}"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_settings_close_ticket_email_template_id
+msgid "(OBSOLETE)Close Ticket Email Template"
+msgstr "(OBSOLETE)Close Ticket Email Template"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_subcategory_additional_field_ids
+msgid "Additional Fields"
+msgstr "Additional Fields"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_settings_allow_user_signup
+msgid "Allow User Signup"
+msgstr "Allow User Signup"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_compose_answer_id
+msgid "Answer ID"
+msgstr "Answer ID"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_answer
+msgid "Answers"
+msgstr "الردود"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_user_id
+msgid "Assigned User"
+msgstr "مسندة الي المستخدم"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_attachment_filename
+msgid "Attachment Filename"
+msgstr "Attachment Filename"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_attachment
+msgid "Attachments"
+msgstr "المُرفقات"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_settings_auto_send_survey
+msgid "Auto Send Survey"
+msgstr "Auto Send Survey"
+
+#. module: website_support
+#: model:website.support.ticket.categories,name:website_support.website_support_billing_issues
+msgid "Billing Issues"
+msgstr "Billing Issues"
+
+#. module: website_support
+#: selection:website.support.ticket.subcategory,category_type:0
+msgid "Both"
+msgstr "اﻷثنان معا"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_email_template_preview_built_in
+#: model:ir.model.fields,field_description:website_support.field_mail_template_built_in
+msgid "Built in"
+msgstr "Built in"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_message_by
+msgid "By"
+msgstr "بواسطة"
+
+#. module: website_support
+#: model:ir.model.fields,help:website_support.field_res_partner_stp_ids
+#: model:ir.model.fields,help:website_support.field_res_users_stp_ids
+msgid "Can view support tickets from other contacts"
+msgstr "Can view support tickets from other contacts"
+
+#. module: website_support
+#: model:ir.ui.view,arch_db:website_support.website_support_ticket_close_view_form
+#: model:ir.ui.view,arch_db:website_support.website_support_ticket_compose_view_form
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: website_support
+#: model:ir.ui.menu,name:website_support.website_support_ticket_categories_menu
+msgid "Categories"
+msgstr "الفئات"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_category
+#: model:ir.ui.view,arch_db:website_support.website_support_ticket_view_search
+msgid "Category"
+msgstr "الفئة"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_categories_name
+msgid "Category Name"
+msgstr "إسم الفئة"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_subcategory_category_type
+msgid "Category Type"
+msgstr "التصنيف"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_res_users_cat_user_ids
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_categories_cat_user_ids
+msgid "Category Users"
+msgstr "Category Users"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_center_id
+msgid "Center"
+msgstr "المركز"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_center_user
+msgid "Center User"
+msgstr "Center User"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_settings_change_user_email_template_id
+msgid "Change User Email Template"
+msgstr "Change User Email Template"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_close_comment
+msgid "Close Comment"
+msgstr "تعليقات الاغلاق"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_close_date
+msgid "Close Date"
+msgstr "تاريخ الإغلاق"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_close_message
+msgid "Close Message"
+msgstr "Close Message"
+
+#. module: website_support
+#: model:ir.ui.view,arch_db:website_support.website_support_ticket_close_view_form
+#: model:ir.ui.view,arch_db:website_support.website_support_ticket_view_form
+msgid "Close Ticket"
+msgstr "اغلاق الحالة"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_close_time
+msgid "Close Time"
+msgstr "تاريخ الاغلاق"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_closed_by_id
+msgid "Closed By"
+msgstr "Closed By"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_priority_color
+msgid "Color"
+msgstr "اللون"
+
+#. module: website_support
+#: model:ir.model,name:website_support.model_res_company
+msgid "Companies"
+msgstr "الشركات"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_company_id
+msgid "Company"
+msgstr "الشركة"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_submit_partner_id
+msgid "Contact"
+msgstr "جهة الاتصال"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_submit_ticket_contact_ids
+msgid "Contact Submitted Tickets"
+msgstr "Contact Submitted Tickets"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_submit_ticket_contact_month_ids
+msgid "Contact Submitted Tickets Month"
+msgstr "Contact Submitted Tickets Month"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_submit_ticket_contact_week_ids
+msgid "Contact Submitted Tickets Week"
+msgstr "اتصل الأسبوع التذاكر"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_partner_ids
+msgid "Contacts"
+msgstr "جهات الاتصال"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_page_content
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_message_content
+msgid "Content"
+msgstr "المحتوى"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_conversation_history
+msgid "Conversation History"
+msgstr "Conversation History"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_subcategory_count
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_submit_count
+msgid "Count"
+msgstr "Count"
+
+#. module: website_support
+#: model:ir.ui.view,arch_db:website_support.website_support_ticket_view_graph
+msgid "Create Date"
+msgstr "Create Date"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_create_user_id
+msgid "Create User"
+msgstr "إسم المستخدم"
+
+#. module: website_support
+#: model:ir.actions.act_window,help:website_support.website_support_ticket_categories_action
+msgid "Create new category"
+msgstr "Create new category"
+
+#. module: website_support
+#: model:ir.actions.act_window,help:website_support.website_support_ticket_subcategory_action
+msgid "Create new sub category"
+msgstr "Create new sub category"
+
+#. module: website_support
+#: model:ir.actions.act_window,help:website_support.website_support_ticket_states_action
+msgid "Create support ticket state"
+msgstr "Create support ticket state"
+
+#. module: website_support
+#: model:res.groups,comment:website_support.support_group
+msgid "Created an account through the website, has no portal (/web) access"
+msgstr "Created an account through the website, has no portal (/web) access"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_contact_create_uid
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_create_uid
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_role_create_uid
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_subcategory_create_uid
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_submit_create_uid
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_groups_create_uid
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_page_create_uid
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_page_feedback_create_uid
+#: model:ir.model.fields,field_description:website_support.field_website_support_settings_create_uid
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_categories_create_uid
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_close_create_uid
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_compose_create_uid
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_create_uid
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_field_create_uid
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_message_create_uid
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_priority_create_uid
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_states_create_uid
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_subcategory_create_uid
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_subcategory_field_create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_contact_create_date
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_create_date
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_role_create_date
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_subcategory_create_date
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_submit_create_date
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_groups_create_date
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_page_create_date
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_page_feedback_create_date
+#: model:ir.model.fields,field_description:website_support.field_website_support_settings_create_date
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_categories_create_date
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_close_create_date
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_compose_create_date
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_create_date
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_field_create_date
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_message_create_date
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_priority_create_date
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_states_create_date
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_subcategory_create_date
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_subcategory_field_create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: website_support
+#: selection:website.support.ticket.message,by:0
+msgid "Customer"
+msgstr "Customer"
+
+#. module: website_support
+#: model:website.support.ticket.states,name:website_support.website_ticket_state_customer_replied
+msgid "Customer Replied"
+msgstr "Customer Replied"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_contact_wsd_id
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_subcategory_wsd_id
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_subcategory_wsd_month_id
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_subcategory_wsd_week_id
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_submit_wsd_id
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_submit_wsd_month_id
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_submit_wsd_week_id
+msgid "Department"
+msgstr "القسم"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_description
+msgid "Description"
+msgstr "الوصف"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_contact_display_name
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_display_name
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_role_display_name
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_subcategory_display_name
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_submit_display_name
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_groups_display_name
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_page_display_name
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_page_feedback_display_name
+#: model:ir.model.fields,field_description:website_support.field_website_support_settings_display_name
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_categories_display_name
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_close_display_name
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_compose_display_name
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_display_name
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_field_display_name
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_message_display_name
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_priority_display_name
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_states_display_name
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_subcategory_display_name
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_subcategory_field_display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_compose_email
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_email
+msgid "Email"
+msgstr "البريد الإلكتروني"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_settings_email_default_category_id
+msgid "Email Default Category"
+msgstr "Email Default Category"
+
+#. module: website_support
+#: model:ir.model,name:website_support.model_mail_template
+msgid "Email Templates"
+msgstr "قوالب البريد"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_extra_field_ids
+msgid "Extra Details"
+msgstr "Extra Details"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_page_feedback_ids
+msgid "Feedback"
+msgstr "Feedback"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_page_feedback_average
+msgid "Feedback Average Rating"
+msgstr "Feedback Average Rating"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_page_feedback_count
+msgid "Feedback Count"
+msgstr "Feedback Count"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_page_feedback_feedback_rating
+msgid "Feedback Rating"
+msgstr "Feedback Rating"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_page_feedback_feedback_text
+msgid "Feedback Text"
+msgstr "Feedback Text"
+
+#. module: website_support
+#: selection:website.support.ticket.subcategory,category_type:0
+msgid "From System"
+msgstr "من النظام"
+
+#. module: website_support
+#: selection:website.support.ticket.subcategory,category_type:0
+msgid "From Website"
+msgstr "من الموقع"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_page_group_id
+msgid "Group"
+msgstr "المجموعة"
+
+#. module: website_support
+#. openerp-web
+#: code:addons/website_support/static/src/js/website_support.editor.js:61
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_groups_name
+#, python-format
+msgid "Help Group"
+msgstr "Help Group"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_page_feedback_hp_id
+msgid "Help Page"
+msgstr "Help Page"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_contact_id
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_id
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_role_id
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_subcategory_id
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_submit_id
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_groups_id
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_page_feedback_id
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_page_id
+#: model:ir.model.fields,field_description:website_support.field_website_support_settings_id
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_categories_id
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_close_id
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_compose_id
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_field_id
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_id
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_message_id
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_priority_id_5495
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_states_id
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_subcategory_field_id
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_subcategory_id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: website_support
+#: model:ir.model.fields,help:website_support.field_website_support_ticket_unattended
+msgid "In 'Open' state or 'Customer Replied' state taken into consideration name changes"
+msgstr "In 'Open' state or 'Customer Replied' state taken into consideration name changes"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_field_name
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_subcategory_field_name
+msgid "Label"
+msgstr "Label"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_department___last_update
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_contact___last_update
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_role___last_update
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_subcategory___last_update
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_submit___last_update
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_groups___last_update
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_page___last_update
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_page_feedback___last_update
+#: model:ir.model.fields,field_description:website_support.field_website_support_settings___last_update
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket___last_update
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_categories___last_update
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_close___last_update
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_compose___last_update
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_field___last_update
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_message___last_update
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_priority___last_update
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_states___last_update
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_subcategory___last_update
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_subcategory_field___last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_contact_write_uid
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_role_write_uid
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_subcategory_write_uid
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_submit_write_uid
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_write_uid
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_groups_write_uid
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_page_feedback_write_uid
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_page_write_uid
+#: model:ir.model.fields,field_description:website_support.field_website_support_settings_write_uid
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_categories_write_uid
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_close_write_uid
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_compose_write_uid
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_field_write_uid
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_message_write_uid
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_priority_write_uid
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_states_write_uid
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_subcategory_field_write_uid
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_subcategory_write_uid
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_contact_write_date
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_role_write_date
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_subcategory_write_date
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_submit_write_date
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_write_date
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_groups_write_date
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_page_feedback_write_date
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_page_write_date
+#: model:ir.model.fields,field_description:website_support.field_website_support_settings_write_date
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_categories_write_date
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_close_write_date
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_compose_write_date
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_field_write_date
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_message_write_date
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_priority_write_date
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_states_write_date
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_subcategory_field_write_date
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_subcategory_write_date
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_compose_template_id
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_states_mail_template_id
+msgid "Mail Template"
+msgstr "نموذج البريد الإلكتروني"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_manager_ids
+msgid "Managers"
+msgstr "Managers"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_settings_max_ticket_attachment_filesize
+msgid "Max Ticket Attachment Filesize (KB)"
+msgstr "Max Ticket Attachment Filesize (KB)"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_settings_max_ticket_attachments
+msgid "Max Ticket Attachments"
+msgstr "Max Ticket Attachments"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_attachment_ids
+msgid "Media Attachments"
+msgstr "Media Attachments"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_compose_text
+msgid "Message"
+msgstr "الرسالة"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_compose_body
+msgid "Message Body"
+msgstr "الرد علي المشكلة"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_name
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_role_name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: website_support
+#. openerp-web
+#: code:addons/website_support/static/src/js/website_support.editor.js:60
+#, python-format
+msgid "New Help Group"
+msgstr "New Help Group"
+
+#. module: website_support
+#. openerp-web
+#: code:addons/website_support/static/src/js/website_support.editor.js:28
+#, python-format
+msgid "New Help Page"
+msgstr "New Help Page"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_res_partner_new_support_ticket_count
+#: model:ir.model.fields,field_description:website_support.field_res_users_new_support_ticket_count
+msgid "New Ticket Count"
+msgstr "New Ticket Count"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_res_company_next_support_ticket_number
+msgid "Next Support Ticket Number"
+msgstr "Next Support Ticket Number"
+
+#. module: website_support
+#: model:ir.actions.act_window,help:website_support.website_support_ticket_action
+#: model:ir.actions.act_window,help:website_support.website_support_ticket_action_partner
+msgid "No Support Tickets found"
+msgstr "No Support Tickets found"
+
+#. module: website_support
+#: model:ir.actions.act_window,help:website_support.website_support_ticket_priority_action
+msgid "No Support Tickets priorities found"
+msgstr "No Support Tickets priorities found"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_groups_page_count
+msgid "Number of Pages"
+msgstr "Number of Pages"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_page_name
+msgid "Page Name"
+msgstr "Page Name"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_page_url
+msgid "Page URL"
+msgstr "Page URL"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_groups_page_ids
+msgid "Pages"
+msgstr "Pages"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_subcategory_parent_category_id
+msgid "Parent Category"
+msgstr "الفئة الأم"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_compose_partner_id
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_partner_id
+msgid "Partner"
+msgstr "الشريك"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_person_name
+msgid "Person Name"
+msgstr "Person Name"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_portal_access_key
+msgid "Portal Access Key"
+msgstr "Portal Access Key"
+
+#. module: website_support
+#: model:ir.ui.menu,name:website_support.website_support_ticket_priority_menu
+msgid "Priorities"
+msgstr "الأولويات"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_priority_id
+#: model:ir.ui.view,arch_db:website_support.website_support_ticket_view_search
+msgid "Priority"
+msgstr "الأولوية"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_priority_name
+msgid "Priority Name"
+msgstr "اسم الأولوية"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_groups_partner_ids
+msgid "Privilege Contacts"
+msgstr "Privilege Contacts"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_groups_group_ids
+msgid "Privilege Groups"
+msgstr "Privilege Groups"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_groups_website_published
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_page_website_published
+msgid "Published"
+msgstr "منشور"
+
+#. module: website_support
+#: model:ir.ui.view,arch_db:website_support.website_support_ticket_view_form
+msgid "Reply"
+msgstr "إضافة رد"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_contact_role
+msgid "Role"
+msgstr "Role"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_states_sms_template_id
+msgid "SMS Template"
+msgstr "قالب الرسالة القصيرة"
+
+#. module: website_support
+#: model:ir.ui.view,arch_db:website_support.website_support_ticket_compose_view_form
+msgid "Send"
+msgstr "إرسال"
+
+#. module: website_support
+#: model:ir.model.fields,help:website_support.field_email_template_preview_built_in
+#: model:ir.model.fields,help:website_support.field_mail_template_built_in
+msgid "Seperates email templates created by modules and ones created by users"
+msgstr "Seperates email templates created by modules and ones created by users"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_groups_sequence
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_page_sequence
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_categories_sequence
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_priority_sequence
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_subcategory_sequence
+msgid "Sequence"
+msgstr "التسلسل"
+
+#. module: website_support
+#: model:ir.ui.view,arch_db:website_support.website_support_ticket_view_form
+msgid "Set to draft"
+msgstr "عدم تفعيل"
+
+#. module: website_support
+#: selection:website.support.ticket.message,by:0
+msgid "Staff"
+msgstr "Staff"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_settings_staff_reply_email_template_id
+msgid "Staff Reply Email Template"
+msgstr "Staff Reply Email Template"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_state
+#: model:ir.ui.view,arch_db:website_support.website_support_ticket_view_search
+msgid "State"
+msgstr "المحافظة"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_states_name
+msgid "State Name"
+msgstr "اسم المحافظة"
+
+#. module: website_support
+#: model:ir.ui.menu,name:website_support.website_support_ticket_states_menu
+msgid "States"
+msgstr "الحالات"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_sub_category_ids
+#: model:ir.ui.menu,name:website_support.website_support_ticket_subcategory_menu
+msgid "Sub Categories"
+msgstr "الفئات الفرعية"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_sub_category_month_ids
+msgid "Sub Categories Month"
+msgstr "Sub Categories Month"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_sub_category_week_ids
+msgid "Sub Categories Week"
+msgstr "الفئات الأسبوع الفرعية "
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_subcategory_subcategory_id
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_sub_category_id
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_subcategory_field_wsts_id
+msgid "Sub Category"
+msgstr "الفئة الفرعية"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_subcategory_name
+msgid "Sub Category Name"
+msgstr "إسم الفئة الفرعية"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_compose_subject
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_subject
+msgid "Subject"
+msgstr "المقرر"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_support_comment
+msgid "Support Comment"
+msgstr "Support Comment"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_support_email
+msgid "Support Email"
+msgstr "Support Email"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_support_rating
+msgid "Support Rating"
+msgstr "Support Rating"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_field_wst_id
+msgid "Support Ticket"
+msgstr "Support Ticket"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_res_partner_stp_ids
+#: model:ir.model.fields,field_description:website_support.field_res_users_stp_ids
+msgid "Support Ticket Access Accounts"
+msgstr "Support Ticket Access Accounts"
+
+#. module: website_support
+#: model:ir.actions.act_window,name:website_support.website_support_ticket_categories_action
+msgid "Support Ticket Categories"
+msgstr "فئات تذاكر الدعم الفني"
+
+#. module: website_support
+#: model:ir.actions.act_window,name:website_support.website_support_ticket_priority_action
+msgid "Support Ticket Priorities"
+msgstr "أولويات حالات الدعم الفني"
+
+#. module: website_support
+#: model:ir.actions.act_window,name:website_support.website_support_ticket_states_action
+msgid "Support Ticket States"
+msgstr "حالات تذاكر الدعم الفني"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_res_partner_support_ticket_string
+#: model:ir.model.fields,field_description:website_support.field_res_users_support_ticket_string
+msgid "Support Ticket String"
+msgstr "Support Ticket String"
+
+#. module: website_support
+#: model:ir.actions.act_window,name:website_support.website_support_ticket_subcategory_action
+msgid "Support Ticket Subcategory"
+msgstr "الفئات الفرعية/ الدعم الفني"
+
+#. module: website_support
+#: model:mail.template,subject:website_support.support_ticket_survey
+msgid "Support Ticket Survey (#${object.ticket_number or object.id})"
+msgstr "Support Ticket Survey (#${object.ticket_number or object.id})"
+
+#. module: website_support
+#: model:ir.actions.act_window,name:website_support.website_support_ticket_action
+#: model:ir.actions.act_window,name:website_support.website_support_ticket_action_partner
+#: model:ir.ui.menu,name:website_support.website_support_ticket_menu
+msgid "Support Tickets"
+msgstr "تذاكر الدعم الفني"
+
+#. module: website_support
+#: model:ir.actions.act_window,name:website_support.website_support_ticket_compose_action
+msgid "Support Tickets Compose"
+msgstr "الرد علي التذكرة"
+
+#. module: website_support
+#: model:ir.ui.menu,name:website_support.website_support_parent_menu_main
+#: model:website.support.ticket.categories,name:website_support.website_support_tech_support
+msgid "Technical Support"
+msgstr "الدعم الفني"
+
+#. module: website_support
+#: selection:website.support.ticket.subcategory.field,type:0
+msgid "Textbox"
+msgstr "Textbox"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_ticket_color
+msgid "Ticket Color"
+msgstr "Ticket Color"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_res_partner_support_ticket_count
+#: model:ir.model.fields,field_description:website_support.field_res_users_support_ticket_count
+msgid "Ticket Count"
+msgstr "Ticket Count"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_close_ticket_id
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_compose_ticket_id
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_message_ticket_id
+msgid "Ticket ID"
+msgstr "Ticket ID"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_ticket_number
+msgid "Ticket Number"
+msgstr "رقم التذكرة"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_ticket_number_display
+msgid "Ticket Number Display"
+msgstr "رقم التذكرة"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_res_partner_support_ticket_ids
+#: model:ir.model.fields,field_description:website_support.field_res_users_support_ticket_ids
+msgid "Tickets"
+msgstr "Tickets"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_time_to_close
+msgid "Time to close (seconds)"
+msgstr "Time to close (seconds)"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_subcategory_field_type
+msgid "Type"
+msgstr "النوع"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_help_page_url_generated
+msgid "URL"
+msgstr "رابط ويب"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_unattended
+msgid "Unattended"
+msgstr "Unattended"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_contact_user_id
+#: model:ir.ui.view,arch_db:website_support.website_support_ticket_view_search
+msgid "User"
+msgstr "المستخدم"
+
+#. module: website_support
+#: model:ir.model,name:website_support.model_res_users
+msgid "Users"
+msgstr "المستخدمون"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_field_value
+msgid "Value"
+msgstr "القيمة"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_department_role_view_department_tickets
+msgid "View Department Tickets"
+msgstr "View Department Tickets"
+
+#. module: website_support
+#: model:res.groups,name:website_support.support_group
+msgid "Website Support"
+msgstr "Website Support"
+
+#. module: website_support
+#: model:ir.model,name:website_support.model_website_support_ticket
+msgid "Website Support Ticket"
+msgstr "Website Support Ticket"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_check
+msgid "check"
+msgstr "check"
+
+#. module: website_support
+#: model:ir.model.fields,field_description:website_support.field_website_support_ticket_employee_id
+msgid "emplyee"
+msgstr "emplyee"
+
+#. module: website_support
+#: model:ir.model,name:website_support.model_res_partner
+msgid "parents profile"
+msgstr "parents profile"
+
+#. module: website_support
+#: model:ir.model,name:website_support.model_website_support_department
+msgid "website.support.department"
+msgstr "website.support.department"
+
+#. module: website_support
+#: model:ir.model,name:website_support.model_website_support_department_contact
+msgid "website.support.department.contact"
+msgstr "website.support.department.contact"
+
+#. module: website_support
+#: model:ir.model,name:website_support.model_website_support_department_role
+msgid "website.support.department.role"
+msgstr "website.support.department.role"
+
+#. module: website_support
+#: model:ir.model,name:website_support.model_website_support_department_subcategory
+msgid "website.support.department.subcategory"
+msgstr "website.support.department.subcategory"
+
+#. module: website_support
+#: model:ir.model,name:website_support.model_website_support_department_submit
+msgid "website.support.department.submit"
+msgstr "website.support.department.submit"
+
+#. module: website_support
+#: model:ir.model,name:website_support.model_website_support_help_groups
+msgid "website.support.help.groups"
+msgstr "website.support.help.groups"
+
+#. module: website_support
+#: model:ir.model,name:website_support.model_website_support_help_page
+msgid "website.support.help.page"
+msgstr "website.support.help.page"
+
+#. module: website_support
+#: model:ir.model,name:website_support.model_website_support_help_page_feedback
+msgid "website.support.help.page.feedback"
+msgstr "website.support.help.page.feedback"
+
+#. module: website_support
+#: model:ir.model,name:website_support.model_website_support_settings
+msgid "website.support.settings"
+msgstr "website.support.settings"
+
+#. module: website_support
+#: model:ir.model,name:website_support.model_website_support_ticket_categories
+msgid "website.support.ticket.categories"
+msgstr "website.support.ticket.categories"
+
+#. module: website_support
+#: model:ir.model,name:website_support.model_website_support_ticket_close
+msgid "website.support.ticket.close"
+msgstr "website.support.ticket.close"
+
+#. module: website_support
+#: model:ir.model,name:website_support.model_website_support_ticket_compose
+msgid "website.support.ticket.compose"
+msgstr "website.support.ticket.compose"
+
+#. module: website_support
+#: model:ir.model,name:website_support.model_website_support_ticket_field
+msgid "website.support.ticket.field"
+msgstr "website.support.ticket.field"
+
+#. module: website_support
+#: model:ir.model,name:website_support.model_website_support_ticket_message
+msgid "website.support.ticket.message"
+msgstr "website.support.ticket.message"
+
+#. module: website_support
+#: model:ir.model,name:website_support.model_website_support_ticket_priority
+msgid "website.support.ticket.priority"
+msgstr "website.support.ticket.priority"
+
+#. module: website_support
+#: model:ir.model,name:website_support.model_website_support_ticket_states
+msgid "website.support.ticket.states"
+msgstr "website.support.ticket.states"
+
+#. module: website_support
+#: model:ir.model,name:website_support.model_website_support_ticket_subcategory
+msgid "website.support.ticket.subcategory"
+msgstr "website.support.ticket.subcategory"
+
+#. module: website_support
+#: model:ir.model,name:website_support.model_website_support_ticket_subcategory_field
+msgid "website.support.ticket.subcategory.field"
+msgstr "website.support.ticket.subcategory.field"
+
+#. module: website_support
+#: model:mk.sms_template,name:website_support.sms_template_support
+#: model:mk.sms_template,name:website_support.sms_template_support_open
+#: model:mk.sms_template,name:website_support.sms_template_support_reply
+msgid "الدعم الفني"
+msgstr "الدعم الفني"
+
+#. module: website_support
+#: model:website.support.ticket.states,name:website_support.website_ticket_state_staff_closed
+msgid "الغاء بواسطه الموظفين"
+msgstr "التذكرة مغلقة"
+
+#. module: website_support
+#: model:mail.template,subject:website_support.new_support_ticket_category
+msgid "تم إنشاء تذكرة دعم جديدة في فئة تتابعها"
+msgstr "تم إنشاء تذكرة دعم جديدة في فئة تتابعها"
+
+#. module: website_support
+#: model:website.support.ticket.priority,name:website_support.urgent
+msgid "حرج"
+msgstr "حرج"
+
+#. module: website_support
+#: model:website.support.ticket.states,name:website_support.website_ticket_state_staff_replied
+msgid "رد الموظفين"
+msgstr "رد الموظفين"
+
+#. module: website_support
+#: model:website.support.ticket.priority,name:website_support.normal
+msgid "عادي"
+msgstr "عادي"
+
+#. module: website_support
+#: model:website.support.ticket.priority,name:website_support.high
+msgid "عالي"
+msgstr "عالي"
+
+#. module: website_support
+#: model:mail.template,subject:website_support.support_ticket_user_change
+msgid "لقد تم ارسال تذكرة الدعم لك"
+msgstr "لقد تم ارسال تذكرة الدعم لك"
+
+#. module: website_support
+#: model:mail.template,subject:website_support.support_ticket_new
+msgid "لقد تم استقبال تذكرة الدعم '${object.subject}' وسوف يتم الرجوع لك في اقرب وقت"
+msgstr "لقد تم استقبال تذكرة الدعم '${object.subject}' وسوف يتم الرجوع لك في اقرب وقت"
+
+#. module: website_support
+#: model:mail.template,subject:website_support.support_ticket_closed
+msgid "لقد تم اغلاق تذكرة الدعم"
+msgstr "لقد تم اغلاق تذكرة الدعم"
+
+#. module: website_support
+#: model:mail.template,subject:website_support.new_support_ticket_category_change
+msgid "لقد تم تحديث تذكرة الدعم"
+msgstr "لقد تم تحديث تذكرة الدعم"
+
+#. module: website_support
+#: model:website.support.ticket.priority,name:website_support.moderately
+msgid "معتدل"
+msgstr "معتدل"
+
+#. module: website_support
+#: model:website.support.ticket.states,name:website_support.website_ticket_state_open
+msgid "مفتوح"
+msgstr "مفتوح"
+
+#. module: website_support
+#: model:website.support.ticket.priority,name:website_support.low
+msgid "منخفض"
+msgstr "منخفض"
+
+#. module: website_support
+#: model:res.groups,name:website_support.all_write
+msgid "‫‪all "
+msgstr "‫‪جميع صلاحيات الدعم الفني"
+
+#. module: website_support
+#: model:website.support.ticket.categories,name:website_support.website_support_complaints
+msgid "Teacher application's complaints"
+msgstr "شكاوى تطبيق المعلم"

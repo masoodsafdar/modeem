@@ -1,0 +1,241 @@
+<odoo>
+    <data>
+    
+    	<!--======================================================
+    	                           Episode
+    	    ====================================================== -->
+    	    
+		<record id="mk_episode_tree_view" model="ir.ui.view">
+			<field name="name">Episode Tree View</field>
+               <field name="model">mk.episode</field>
+			<field name="arch" type="xml">
+				<tree string="الحلقات" create="false" delete="false" decoration-info="state == 'draft'" decoration-success="state == 'accept'">
+					<field name="display_name" />
+					<field name="episode_type"   invisible="1" options="{'no_open':1,'no_create':1}"/>
+					<field name="episode_work"   invisible="1" options="{'no_open':1,'no_create':1}"/>
+					<field name="program_id"   options="{'no_create': True,'no_open': True,}" string="نوع البرنامج"/>
+                    <field name="approache_id" options="{'no_create': True,'no_open': True,}" string="البرنامج"/>
+					<field name="mosque_id"      options="{'no_open':1,'no_create':1}"/>
+					<field name="study_class_id" options="{'no_open':1,'no_create':1}"/>
+					<field name="academic_id"    options="{'no_open':1,'no_create':1}"/>
+					<field name="state"/>
+				</tree>
+			</field>
+		</record>
+
+		<record id="mk_episode_form_view" model="ir.ui.view">
+			<field name="name">Episode Form View</field>
+			<field name="model">mk.episode</field>
+			<field name="arch" type="xml">
+				<form string="الحلقات" create="false" delete="false">
+	                <header>
+	                	<field name="state" widget="statusbar" statusbar_visible="draft,accept,reject"/>
+						<field name="active" invisible="1"/>
+						<button name="update_period_wizard_action" type="object" string="تعديل الفترة" groups="mk_episode_management.edit_or_modify_episode"/>
+	                </header>
+                   	<sheet>
+                       	<group col="4">
+                            <h2><field name="display_name"  placeholder="Episode name"/></h2>
+                       	</group>
+
+                       	<group string="بيانات الحلقة">
+                       		<group>
+                       			<field name="company_id"      readonly="1" options="{'no_open':1,'no_create':1}"/>
+                       			<field name="mosque_id"       readonly="1" options="{'no_open':1,'no_create':1}" string="المسجد"/>
+                       			<field name="parent_episode"  readonly="1" options="{'no_open':1,'no_create':1}"/>
+                       			<field name="selected_period" readonly="1"/>
+                       			<field name="is_online" attrs="{'readonly': ['|',('state','in',('reject','done')),('active','!=',True)]}"/>
+                       			<field name="send_time" attrs="{'readonly': ['|',('state','in',('reject','done')),('active','!=',True)]}"/>
+                       		</group>
+                       		<group>
+                           		<field name="academic_id"       options="{'no_open':1,'no_create':1}" readonly="1"/>
+                           		<field name="study_class_id"    options="{'no_open':1,'no_create':1}" readonly="1"/>
+                           		<field name="teacher_id"        options="{'no_open':1,'no_create':1}" attrs="{'readonly': [('active','!=',True)]}"/>
+                           		<field name="teacher_assist_id" options="{'no_open':1,'no_create':1}" attrs="{'readonly': ['|',('state','in',('reject','done')),('active','!=',True)]}"/>
+                           		<field name="grade_ids"         options="{'no_open':1,'no_create':1}" attrs="{'readonly': ['|',('state','in',('reject','done')),('active','!=',True)]}" widget="many2many_tags" string="المراحل الدراسية/الفئة"/>
+
+                           		<field name="episode_type"      invisible="1" options="{'no_open':1,'no_create':1}" attrs="{'readonly': ['|',('state','in',('reject','done')),('active','!=',True)]}"/>
+                           		<field name="episode_work"      invisible="1" options="{'no_open':1,'no_create':1}" attrs="{'readonly': ['|',('state','in',('reject','done')),('active','!=',True)]}" domain="[('type_episode_id','=',episode_type)]"/>
+
+                           		<field name="program_id"   string="Programs"  options="{'no_open':1,'no_create':1}"        attrs="{'readonly': ['|',('state','in',('reject','done')),('active','!=',True)]}"  domain="[('is_required', '=', True), ('state', '=', 'active'),('program_gender', '=', women_or_men),('program_type','=','open')]"/>
+                           		<field name="approache_id" string="Approaches" options="{'no_open':1,'no_create':1}"        attrs="{'readonly': ['|',('state','in',('reject','done')),('active','!=',True)]}" domain="[('program_id','=',program_id),('program_type','=','open')]"/>
+								<field name="episode_path_id"  				   options="{'no_create':True,'no_open':True}"  attrs="{'readonly': ['|',('state','in',('reject','done')),('active','!=',True)]}" domain="[('approach_id','=',approache_id)]"/>
+
+								<field name="episode_season_type" invisible="1"/>
+                       		</group>
+                       	</group>
+
+                       	<notebook>
+                           	<page string="episode Information">
+                               	<group>
+                                   	<group>
+                                   		<label for="women_or_men"     style="font-weight: bold; width:200px"/>
+                                   		<field name="women_or_men"     nolabel="1"  attrs="{'readonly': ['|',('state','in',('reject','done')),('active','!=',True)]}" widget="radio"/>
+                                   	</group>
+
+                                   	<group>
+                                       	<field name="start_date" required="1" string="تاريخ البداية"        attrs="{'readonly': ['|',('state','in',('reject','done')),('active','!=',True)]}"/>
+                                       	<field name="end_date"   required="1"                               attrs="{'readonly': ['|',('state','in',('reject','done')),('active','!=',True)]}"/>                                       	
+                                       	<field name="error_register"                                        attrs="{'readonly': ['|',('state','in',('reject','done')),('active','!=',True)]}"/>
+                                   	</group>
+                               	</group>
+                   			</page>
+
+                   			<page string="work days" colspan="2">
+								<field name="episode_days" widget="many2many_checkboxes" options="{'no_open': True,'no_create': True}"/><!-- attrs="{'readonly': ['|',('state','in',('reject','done')),('active','!=',True)]}"/-->
+                   			</page>
+                   			
+                   			<page string="Target jobs">
+                       			<group>
+                       				<field name="job_ids" widget="many2many_tags" options="{'no_open': True,'no_create': True}" attrs="{'readonly': ['|',('state','in',('reject','done')),('active','!=',True)]}"/>
+                       			</group>
+                   			</page>
+                   			
+                   			<page string="Grades" invisible="1">
+                       			<group>
+                           			
+                       			</group>
+                   			</page>
+
+							<page string="جدولة الاختبارات">
+								<field name="day_schedule_test_ids" attrs="{'readonly': ['|',('state','in',('reject','done')),('active','!=',True)]}">
+									<tree>
+										<field name="date_test"/>
+										<field name="type_schedule"/>
+										<field name="period_schedule"/>
+										<field name="nbr_period"/>
+									</tree>
+									<form>
+										<group>
+											<group>
+												<field name="date_test" groups="mk_episode_management.edit_or_modify_episode"/>
+												<field name="type_schedule"   readonly="1"/>
+											</group>
+											<group>
+												<field name="period_schedule" readonly="1"/>
+												<field name="nbr_period"      readonly="1"/>
+											</group>
+										</group>
+									</form>
+									</field>
+		              		</page>
+               			</notebook>
+           			</sheet>
+					<div class="oe_chatter">
+						<field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+						<field name="message_ids" widget="mail_thread"/>
+					</div>
+				</form>
+			</field>
+		</record>
+                
+        <record id="mk_episode_search_view" model="ir.ui.view">
+            <field name="name">Episode Search View</field>
+            <field name="model">mk.episode</field>
+            <field name="arch" type="xml">
+                <search string="Episode ">
+                    <field name="name" string="Episode "/>
+                    <field name="academic_id"/>
+                    <field name="study_class_id"/>
+                    <field name="mosque_id"/>
+                    <field name="teacher_id"/>
+                    <field name="episode_type"/>
+                    <field name="episode_work"/>
+                    <field name="department_id"/>
+                    <field name="grade_ids"/>
+                    <field name="is_online"/>
+					<field name="episode_period"/>
+
+                    <separator/>
+                    <filter name="for-men"   string="رجالي" domain="[('women_or_men','=','men')]"/>
+                    <filter name="for-women" string="نسائي" domain="[('women_or_men','=','women')]"/>
+                    <separator/>
+                    <filter name="subh"   string="الصبح"  domain="[('selected_period','=','subh')]"/>
+                    <filter name="zuhr"   string="الظهر"  domain="[('selected_period','=','zuhr')]"/>
+                    <filter name="aasr"   string="العصر"  domain="[('selected_period','=','aasr')]"/>
+                    <filter name="magreb" string="المغرب" domain="[('selected_period','=','magreb')]"/>
+                    <filter name="esha"   string="العشاء"  domain="[('selected_period','=','esha')]"/>
+                    <separator/>
+                    <separator/>
+                    <filter name="draft"  string="مبدئي" domain="[('state','=','draft')]"/>
+                    <filter name="accept" string="مقبول" domain="[('state','=','accept')]"/>
+                    <filter name="done"   string="مجمد"  domain="[('state','=','done')]"/>
+                    <filter name="reject" string="مرفوض" domain="[('state','=','reject')]"/>
+                    <separator/>
+                    <filter name="unactive" string="Un Active" domain="[('active', '=',False)]"/>
+					<separator/>
+                    <filter name="is_online" string="عن بعد" domain="[('is_online', '=',True)]"/>
+					<separator/>
+                    <filter name="morning_period" string="Morning" domain="[('episode_period', '=','morning')]"/>
+                    <filter name="evening_period" string="Evening" domain="[('episode_period', '=','evening')]"/>
+
+                    <group>
+	                    <filter name="academic_id"           string="العام الدراسي"    context="{'group_by': 'academic_id'}"/>
+	                    <filter name="study_class_id"        string="الفصل الدراسي"    context="{'group_by': 'study_class_id'}"/>
+	                    <filter name="mosque_id"             string="المسجد"           context="{'group_by': 'mosque_id'}"/>
+	                    <filter name="teacher_id"            string="المعلم/ المعلمة"  context="{'group_by': 'teacher_id'}"/>
+	                    <filter name="department_id"         string="المركز"           context="{'group_by': 'department_id'}"/>
+	                    <filter name="episode_type"          string="نوع الحلقة"        context="{'group_by': 'episode_type'}"/>
+	                    <filter name="state"                 string="الحالة"            context="{'group_by': 'state'}"/>
+	                    <filter name="episode_work"          string="أعمال الحلقة"      context="{'group_by': 'episode_work'}"/>
+	                    <filter name="episode_period"        string="Episode Period"    context="{'group_by': 'episode_period'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+      	
+		<record id="action_episode" model="ir.actions.act_window">
+			<field name="name">فترات الحلقات</field>
+            <field name="res_model">mk.episode</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="binding_view_types">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('is_episode_meqraa', '=', False)]</field>
+            <field name="context">{}</field>
+            <field name="search_view_id" ref="mk_episode_search_view"/>
+        </record>        		        
+        
+		<menuitem id="mk_episode_management_menu"       name="Episode Management" web_icon="web_rtl,static/src/img/calsses.png" sequence="10"/>
+		<menuitem id="mk_episode_management_menu_title" name="Episode Management" parent="mk_episode_management_menu"           sequence="10"/>
+    	<menuitem id="menu_mk_episodes"                 name="فترات الحلقات"      parent="mk_episode_management_menu_title"     sequence="50" action="action_episode"/>       	
+      	
+    	<!--======================================================
+    	                       Episode Season
+    	    ====================================================== -->
+    	    
+		<record id="episode_season_tree_view" model="ir.ui.view">
+			<field name= "name">Episode Season Types</field>
+          	<field name= "model">mk.episode.season</field>
+          	<field name="arch" type="xml">
+				<tree>
+					<field name="name"/>
+				</tree>
+			</field>
+		</record>    	          	
+
+		<record id="episode_season_form_view" model="ir.ui.view">
+			<field name= "name">mk.episode.season</field>
+           	<field name= "model">mk.episode.season</field>
+            <field name= "arch"  type="xml"> 
+				<form>
+					<sheet>
+						<group>
+                           	<field name="name"/>
+                        </group>
+                    </sheet>
+                </form>
+           </field>
+		</record>
+
+		<record id="episode_season_action" model="ir.actions.act_window">
+			<field name="name">Episode Season Types</field>
+            <field name="res_model">mk.episode.season</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="binding_view_types">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+    	<menuitem id="episode_season_menu" name="Episodes Season Types" action="episode_season_action" parent="mk_episode_management.mk_episode_management_menu_title"/>
+    	
+    </data>  
+</odoo>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="mk_notification_form_view" model="ir.ui.view">
+        <field name="name">notification form View</field>
+        <field name="model">mk.notification</field>
+        <field name="arch" type="xml">
+            <form string="Notifications">
+                <header>
+                    <button name="action_confirm" string="Confirm employee list" type="object" states="draft"     class="oe_highlight" groups="mk_notification.confirm_employee_list_send_notif"/>
+                    <button name="action_send"    string="Send"                  type="object" states="confirmed" class="oe_highlight" groups="mk_notification.confirm_employee_list_send_notif"/>
+                    <field name="state" widget="statusbar" statusbar_visible="draft,confirmed,sent"/>
+                </header>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name" attrs="{'readonly':[('state','!=','draft')]}"/>
+                            <field name="description"/>
+                        </group>
+                        <group>
+                            <field name="department_id"     attrs="{'readonly':[('state','!=','draft')]}" options="{'no_create': True,'no_open': True,}"/>
+                            <field name="category"          attrs="{'readonly':[('state','!=','draft')]}"/>
+                            <field name="type_notification" attrs="{'readonly':[('state','!=','draft')]}"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Employees list">
+                            <field name="employee_ids" attrs="{'readonly':[('state','!=','draft')]}" domain="[('department_id','=',department_id),('category','=',category)]"/>
+                        </page>
+                        <page string="Employee notifications" attrs="{'invisible':[('state','!=','sent')]}">
+                            <field name="notification_lines_ids" readonly="1"/>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="mk_notification_tree_view" model="ir.ui.view">
+        <field name="name">notification tree view</field>
+        <field name="model">mk.notification</field>
+        <field name="arch" type="xml">
+            <tree string="Notifications" delete="0">
+                <field name="date_notification"/>
+                <field name="name"/>
+                <field name="department_id"/>
+                <field name="category"/>
+                <field name="type_notification"/>
+                <field name="state"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="mk_notification_search_view" model="ir.ui.view">
+            <field name="name">notification Search View</field>
+            <field name="model">mk.notification</field>
+            <field name="arch" type="xml">
+                <search string="Notifications">
+                    <field name="name"/>
+                    <field name="department_id"/>
+                    <field name="category"/>
+                    <field name="type_notification"/>
+                    <field name="state"/>
+                    <group>
+                        <filter name="group_name"              string="Name"               context="{'group_by': 'name'}"/>
+                        <filter name="group_department_id"     string="Department"         context="{'group_by': 'department_id'}"/>
+                        <filter name="group_category"          string="Category"           context="{'group_by': 'category'}"/>
+                        <filter name="group_type_notification" string="Notififcation type" context="{'group_by': 'type_notification'}"/>
+                        <filter name="group_state"             string="State"              context="{'group_by': 'state'}"/>
+                    </group>
+                    <filter name="draft"     string="Draft"                 domain="[('state','=','draft')]"/>
+                    <filter name="confirmed" string="Confirm employee list" domain="[('state','=','confirmed')]"/>
+                    <filter name="sended"    string="Sended"                domain="[('state','=','sended')]"/>
+                </search>
+            </field>
+        </record>
+
+    <record id="mk_notification_action" model="ir.actions.act_window">
+            <field name="name">Notifications</field>
+            <field name="res_model">mk.notification</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+        </record>
+
+    <menuitem id="mk_notification_root_menu" name="Notifications"
+              groups="mk_notification.read_notification,mk_notification.create_write_notification,mk_notification.delete_notification,mk_notification.read_employee_notification,mk_notification.create_write_employee_notification,mk_notification.delete_employee_notification"/>
+
+    <menuitem id="mk_notification_menu" name="Notifications" parent="mk_notification_root_menu" action="mk_notification_action" sequence="1"
+              groups="mk_notification.read_notification,mk_notification.create_write_notification,mk_notification.delete_notification"/>
+</odoo>

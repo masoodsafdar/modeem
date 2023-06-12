@@ -1,0 +1,82 @@
+<odoo>
+  <data>
+   
+   <record model="ir.ui.view" id="mk_episode_attendace_form">
+    <field name="name">mk.episode.attendace form</field>
+    <field name="model">mk.episode.attendace</field>
+    <field name="arch" type="xml">
+
+    <form string="student attendace">
+
+    <sheet>
+  <group>
+    <group col="4" colspan="2">
+    <field name="teacher" options="{'no_create': 1, 'no_create_edit': 1}"/>
+    <field name="date"/>
+    <field name="masjed"/>
+    </group>
+    <group col="4" colspan="2" >
+      <field name="episode" required="1"/>
+    </group>
+      <group col="6" colspan="2" string="Episode Peirods" attrs="{'invisible':[('episode','=',False)]}">
+                    <field name="period_subh" invisible="1"/>
+                    <field name="period_zuhr" invisible="1"/>
+                    <field name="period_aasr" invisible="1"/>
+                    <field name="period_magrib" invisible="1"/>
+                    <field name="period_esha" invisible="1"/>
+                    <field name="subh" attrs="{'invisible':[('period_subh','!=','s')],'readonly':['|','|','|',('zuhr','=',True),('aasr','=',True),('magrib','=',True),('esha','=',True)]}"/>
+                    <field name="zuhr" attrs="{'invisible':[('period_zuhr','!=','z')],'readonly':['|','|','|',('aasr','=',True),('subh','=',True),('magrib','=',True),('esha','=',True)]}"/>
+                    <field name="aasr" attrs="{'invisible':[('period_aasr','!=','a')],'readonly':['|','|','|',('zuhr','=',True),('subh','=',True),('magrib','=',True),('esha','=',True)]}"/>
+                    <field name="magrib" attrs="{'invisible':[('period_magrib','!=','m')],'readonly':['|','|','|',('zuhr','=',True),('subh','=',True),('aasr','=',True),('esha','=',True)]}"/>
+                    <field name="esha" attrs="{'invisible':[('period_esha','!=','e')],'readonly':['|','|','|',('zuhr','=',True),('subh','=',True),('magrib','=',True),('aasr','=',True)]}"/>
+              </group>
+
+    </group>
+    <notebook>
+    <page string="students">
+      <field name="student_ids" context="{'default_episode':episode,'default_subh':subh,'default_zuhr':zuhr,
+        'default_magrib':magrib,'default_aasr':aasr,'default_esha':esha}" >
+    <tree string="students" editable="bottom">
+      <field name="zuhr" invisible="1"/>
+      <field name="magrib" invisible="1"/>
+      <field name="esha" invisible="1"/>
+      <field name="aasr" invisible="1"/>
+      <field name="subh" invisible="1"/>
+      <field name="student" required="1" options="{'no_create': 1, 'no_create_edit': 1}"/>
+      <field name="state" required="1"/>
+      <field name="episode" required="1"/>
+      <field name="absence_request" attrs=" { 'readonly': [('state', '!=','leave')] }"/>
+    </tree> 
+      </field>
+      </page>
+      </notebook>
+       
+    </sheet>
+    </form>
+    </field>
+    </record>
+    
+    <record model="ir.ui.view" id="mk_episode_attendace_tree">
+    <field name="name">mk.episode.attendace tree</field>
+    <field name="model">mk.episode.attendace</field>
+    <field name="arch" type="xml">
+    <tree>
+    <field name="date"/>
+    <field name="episode"/>
+    <field name="masjed"/>
+    </tree>
+    </field>
+  </record>
+
+    <record id="action_mk_episode_attendace" model="ir.actions.act_window">
+      <field name="name">Episode Attendace</field>
+      <field name="res_model">mk.episode.attendace</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+     <menuitem id="student_attendace_menu" name="Attendace" parent="manage_student_menu" 
+      action="action_mk_episode_attendace" />
+
+
+</data>
+</odoo>

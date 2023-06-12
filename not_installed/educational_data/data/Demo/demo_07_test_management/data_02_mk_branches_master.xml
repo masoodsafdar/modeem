@@ -1,0 +1,246 @@
+<odoo>
+	<data noupdate="1">
+		<record model="mk.branches.master" id="mk_branches_master3">
+			<field name="test_name" ref="mk_test_names2"/>
+			<field name="from_surah" ref="mk_surah114"/>
+			<field name="to_surah" ref="mk_surah1"/>
+			<field name="subject_id" ref="educational_data.mk_memorize_method1"/>
+			<field name="order">1</field>
+			<field name="name">الفرع الأول</field>
+			<field name="trackk">down</field>
+			<field name="age_fillter">open</field>
+			<field name="contsets">0</field>
+			<field name="courses">0</field>
+			<field name="general">1</field>
+			<field name="preliminary">0</field>
+			<field name="duration">30</field>
+			<field name="branch_group">student</field>
+			<field name="maximum_degree">100</field>
+			<field name="minumim_degree">70</field>
+			<field name="quations_method">subject</field>
+			<field name="qu_number_per_part">5</field>
+			<field name="select_parts">1</field>
+		</record>
+
+		<record model="mk.branches.master" id="mk_branches_master6">
+			<field name="test_name" ref="mk_test_names2"/>
+			<field name="from_surah" ref="mk_surah114"/>
+			<field name="to_surah" ref="mk_surah1"/>
+			<field name="subject_id" ref="educational_data.mk_memorize_method1"/>
+			<field name="order">2</field>
+			<field name="name">الفرع الثاني</field>
+			<field name="trackk">down</field>
+			<field name="age_fillter">open</field>
+			<field name="contsets">0</field>
+			<field name="courses">0</field>
+			<field name="general">1</field>
+			<field name="preliminary">0</field>
+			<field name="duration">30</field>
+			<field name="branch_group">student</field>
+			<field name="maximum_degree">100</field>
+			<field name="minumim_degree">70</field>
+			<field name="quations_method">subject</field>
+			<field name="qu_number_per_part">5</field>
+			<field name="select_parts">1</field>
+
+		</record>
+		<record model="mk.branches.master" id="mk_branches_master7">
+			<field name="test_name" ref="mk_test_names2"/>
+			<field name="from_surah" ref="mk_surah114"/>
+			<field name="to_surah" ref="mk_surah1"/>
+			<field name="subject_id" ref="educational_data.mk_memorize_method1"/>
+			<field name="order">3</field>
+			<field name="name">الفرع الثالث</field>
+			<field name="trackk">down</field>
+			<field name="age_fillter">open</field>
+			<field name="contsets">0</field>
+			<field name="courses">0</field>
+			<field name="general">1</field>
+			<field name="preliminary">0</field>
+			<field name="duration">30</field>
+			<field name="branch_group">student</field>
+			<field name="maximum_degree">100</field>
+			<field name="minumim_degree">70</field>
+			<field name="quations_method">subject</field>
+			<field name="qu_number_per_part">5</field>
+			<field name="select_parts">1</field>
+
+		</record>
+		<record model="mk.branches.master" id="mk_branches_master8">
+			<field name="test_name" ref="mk_test_names2"/>
+			<field name="from_surah" ref="mk_surah114"/>
+			<field name="to_surah" ref="mk_surah1"/>
+			<field name="subject_id" ref="educational_data.mk_memorize_method1"/>
+			<field name="order">4</field>
+			<field name="name">الفرع الرابع</field>
+			<field name="trackk">down</field>
+			<field name="age_fillter">open</field>
+			<field name="contsets">0</field>
+			<field name="courses">0</field>
+			<field name="general">1</field>
+			<field name="preliminary">0</field>
+			<field name="duration">30</field>
+			<field name="branch_group">student</field>
+			<field name="maximum_degree">100</field>
+			<field name="minumim_degree">70</field>
+			<field name="quations_method">subject</field>
+			<field name="qu_number_per_part">5</field>
+			<field name="select_parts">1</field>
+
+		</record>
+		<record model="mk.branches.master" id="mk_branches_master9">
+			<field name="test_name" ref="mk_test_names2"/>
+			<field name="from_surah" ref="mk_surah114"/>
+			<field name="to_surah" ref="mk_surah1"/>
+			<field name="subject_id" ref="educational_data.mk_memorize_method1"/>
+			<field name="order">5</field>
+			<field name="name">الفرع الخامس</field>
+			<field name="trackk">down</field>
+			<field name="age_fillter">open</field>
+			<field name="contsets">0</field>
+			<field name="courses">0</field>
+			<field name="general">1</field>
+			<field name="preliminary">0</field>
+			<field name="duration">30</field>
+			<field name="branch_group">student</field>
+			<field name="maximum_degree">100</field>
+			<field name="minumim_degree">70</field>
+			<field name="quations_method">subject</field>
+			<field name="qu_number_per_part">5</field>
+			<field name="select_parts">1</field>
+
+		</record>
+		<record model="mk.branches.master" id="mk_branches_master10">
+			<field name="test_name" ref="mk_test_names2"/>
+			<field name="from_surah" ref="mk_surah114"/>
+			<field name="to_surah" ref="mk_surah1"/>
+			<field name="subject_id" ref="educational_data.mk_memorize_method1"/>
+			<field name="order">6</field>
+			<field name="name">الفرع السادس</field>
+			<field name="trackk">down</field>
+			<field name="age_fillter">open</field>
+			<field name="contsets">0</field>
+			<field name="courses">0</field>
+			<field name="general">1</field>
+			<field name="preliminary">0</field>
+			<field name="duration">30</field>
+			<field name="branch_group">student</field>
+			<field name="maximum_degree">100</field>
+			<field name="minumim_degree">70</field>
+			<field name="quations_method">subject</field>
+			<field name="qu_number_per_part">5</field>
+			<field name="select_parts">1</field>
+
+		</record>
+		<record model="mk.branches.master" id="mk_branches_master11">
+			<field name="test_name" ref="mk_test_names2"/>
+			<field name="from_surah" ref="mk_surah114"/>
+			<field name="to_surah" ref="mk_surah1"/>
+			<field name="subject_id" ref="educational_data.mk_memorize_method1"/>
+			<field name="order">7</field>
+			<field name="name">الفرع السابع</field>
+			<field name="trackk">down</field>
+			<field name="age_fillter">open</field>
+			<field name="contsets">0</field>
+			<field name="courses">0</field>
+			<field name="general">1</field>
+			<field name="preliminary">0</field>
+			<field name="duration">30</field>
+			<field name="branch_group">student</field>
+			<field name="maximum_degree">100</field>
+			<field name="minumim_degree">70</field>
+			<field name="quations_method">subject</field>
+			<field name="qu_number_per_part">5</field>
+			<field name="select_parts">1</field>
+
+		</record>
+		<record model="mk.branches.master" id="mk_branches_master12">
+			<field name="test_name" ref="mk_test_names2"/>
+			<field name="from_surah" ref="mk_surah114"/>
+			<field name="to_surah" ref="mk_surah1"/>
+			<field name="subject_id" ref="educational_data.mk_memorize_method1"/>
+			<field name="order">8</field>
+			<field name="name">الفرع الثامن</field>
+			<field name="trackk">down</field>
+			<field name="age_fillter">open</field>
+			<field name="contsets">0</field>
+			<field name="courses">0</field>
+			<field name="general">1</field>
+			<field name="preliminary">0</field>
+			<field name="duration">30</field>
+			<field name="branch_group">student</field>
+			<field name="maximum_degree">100</field>
+			<field name="minumim_degree">70</field>
+			<field name="quations_method">subject</field>
+			<field name="qu_number_per_part">5</field>
+			<field name="select_parts">1</field>
+
+		</record>
+		<record model="mk.branches.master" id="mk_branches_master13">
+			<field name="test_name" ref="mk_test_names2"/>
+			<field name="from_surah" ref="mk_surah114"/>
+			<field name="to_surah" ref="mk_surah1"/>
+			<field name="subject_id" ref="educational_data.mk_memorize_method1"/>
+			<field name="order">9</field>
+			<field name="name">الفرع التاسع</field>
+			<field name="trackk">down</field>
+			<field name="age_fillter">open</field>
+			<field name="contsets">0</field>
+			<field name="courses">0</field>
+			<field name="general">1</field>
+			<field name="preliminary">0</field>
+			<field name="duration">30</field>
+			<field name="branch_group">student</field>
+			<field name="maximum_degree">100</field>
+			<field name="minumim_degree">70</field>
+			<field name="quations_method">subject</field>
+			<field name="qu_number_per_part">5</field>
+			<field name="select_parts">1</field>
+		</record>
+
+		<record model="mk.branches.master" id="mk_branches_master4">
+			<field name="test_name" ref="mk_test_names3"/>
+			<field name="from_surah" ref="mk_surah114"/>
+			<field name="to_surah" ref="mk_surah1"/>
+			<field name="subject_id" ref="educational_data.mk_memorize_method12"/>
+			<field name="order">10</field>
+			<field name="name">إختبار الخاتمين نهائي</field>
+			<field name="trackk">down</field>
+			<field name="age_fillter">open</field>
+			<field name="contsets">0</field>
+			<field name="courses">0</field>
+			<field name="general">1</field>
+			<field name="preliminary">0</field>
+			<field name="duration">30</field>
+			<field name="branch_group">student</field>
+			<field name="maximum_degree">100</field>
+			<field name="minumim_degree">80</field>
+			<field name="quations_method">subject</field>
+			<field name="qu_number_per_part">5</field>
+			<field name="select_parts">1</field>
+		</record>
+
+		<record model="mk.branches.master" id="mk_branches_master5">
+			<field name="test_name" ref="mk_test_names4"/>
+			<field name="from_surah" ref="mk_surah114"/>
+			<field name="to_surah" ref="mk_surah1"/>
+			<field name="subject_id" ref="educational_data.mk_memorize_method12"/>
+			<field name="order">11</field>
+			<field name="name">الفرع الأول</field>
+			<field name="trackk">down</field>
+			<field name="age_fillter">open</field>
+			<field name="contsets">0</field>
+			<field name="courses">0</field>
+			<field name="general">1</field>
+			<field name="preliminary">0</field>
+			<field name="duration">30</field>
+			<field name="branch_group">employee</field>
+			<field name="maximum_degree">100</field>
+			<field name="minumim_degree">80</field>
+			<field name="quations_method">subject</field>
+			<field name="qu_number_per_part">5</field>
+			<field name="select_parts">1</field>
+		</record>
+
+	</data>  
+</odoo>

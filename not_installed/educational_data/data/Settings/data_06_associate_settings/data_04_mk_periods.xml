@@ -1,0 +1,23 @@
+<odoo>
+    <data noupdate="1">
+        <record id="mk_periods1" model="mk.periods">
+            <field name="name">الفترات</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="subh_period" eval="True"/>
+            <field name="zuhr_period" eval="True"/>
+            <field name="aasr_period" eval="True"/>
+            <field name="magrib_period" eval="True"/>
+            <field name="esha_period" eval="True"/>
+            <field name="subh_period_from">4</field>
+            <field name="zuhr_period_from">12</field>
+            <field name="aasr_period_from">3</field>
+            <field name="magrib_period_from">6</field>
+            <field name="esha_period_from">8</field>
+            <field name="subh_period_to">11</field>
+            <field name="zuhr_period_to">3</field>
+            <field name="aasr_period_to">5</field>
+            <field name="magrib_period_to">7</field>
+            <field name="esha_period_to">10</field>
+        </record>
+    </data>
+</odoo>

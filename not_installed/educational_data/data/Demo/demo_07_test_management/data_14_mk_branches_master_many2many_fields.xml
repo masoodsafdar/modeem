@@ -1,0 +1,163 @@
+<odoo>
+    <data noupdate="1">
+        <record model="mk.branches.master" id="mk_branches_master3">
+            <field name="parts_ids" eval="[(4,ref('educational_data.mk_parts1')),(4,ref('educational_data.mk_parts2')),
+                                                (4,ref('educational_data.mk_parts3'))]"/>
+            <field name="passing_items" eval="[(4,ref('educational_data.mk_passing_items4')),(4,ref('educational_data.mk_passing_items5')),
+                                                (4,ref('educational_data.mk_passing_items6')),(4,ref('educational_data.mk_passing_items7'))]"/>
+            <field name="reward_items" eval="[(4,ref('educational_data.mk_reward_items4')),(4,ref('educational_data.mk_reward_items5')),
+                                                (4,ref('educational_data.mk_reward_items6'))]"/>
+            <field name="evaluation_items" eval="[(4,ref('educational_data.mk_evaluation_items2'))]"/>
+        </record>
+        <record model="mk.branches.master" id="mk_branches_master6">
+            <field name="parts_ids" eval="[(4, ref('educational_data.mk_parts1')),(4, ref('educational_data.mk_parts2')),
+                                           (4, ref('educational_data.mk_parts3')),(4, ref('educational_data.mk_parts4')),(4, ref('educational_data.mk_parts5')),
+                                           (4, ref('educational_data.mk_parts6'))]"/>
+            <field name="passing_items" eval="[(4,ref('educational_data.mk_passing_items4')),(4,ref('educational_data.mk_passing_items5')),
+                                         (4,ref('educational_data.mk_passing_items6')),(4,ref('educational_data.mk_passing_items7'))]"/>
+            <field name="reward_items" eval="[(4,ref('educational_data.mk_reward_items4')),(4,ref('educational_data.mk_reward_items5')),
+                                         (4,ref('educational_data.mk_reward_items6'))]"/>
+            <field name="evaluation_items" eval="[(4,ref('educational_data.mk_evaluation_items2'))]"/>
+        </record>
+        <record model="mk.branches.master" id="mk_branches_master7">
+            <field name="parts_ids" eval="[(4, ref('educational_data.mk_parts1')),(4, ref('educational_data.mk_parts2')),
+                                            (4, ref('educational_data.mk_parts3')),(4, ref('educational_data.mk_parts4')),(4, ref('educational_data.mk_parts5')),
+                                            (4, ref('educational_data.mk_parts6')),(4, ref('educational_data.mk_parts7')),(4, ref('educational_data.mk_parts8')),
+                                            (4, ref('educational_data.mk_parts9'))]"/>
+            <field name="passing_items" eval="[(4,ref('educational_data.mk_passing_items4')),(4,ref('educational_data.mk_passing_items5')),
+                                         (4,ref('educational_data.mk_passing_items6')),(4,ref('educational_data.mk_passing_items7'))]"/>
+            <field name="reward_items" eval="[(4,ref('educational_data.mk_reward_items4')),(4,ref('educational_data.mk_reward_items5')),
+                                         (4,ref('educational_data.mk_reward_items6'))]"/>
+            <field name="evaluation_items" eval="[(4,ref('educational_data.mk_evaluation_items2'))]"/>
+        </record>
+        <record model="mk.branches.master" id="mk_branches_master8">
+            <field name="parts_ids" eval="[(4, ref('educational_data.mk_parts1')),(4, ref('educational_data.mk_parts2')),
+                                            (4, ref('educational_data.mk_parts3')),(4, ref('educational_data.mk_parts4')),(4, ref('educational_data.mk_parts5')),
+                                            (4, ref('educational_data.mk_parts6')),(4, ref('educational_data.mk_parts7')),(4, ref('educational_data.mk_parts8')),
+                                            (4, ref('educational_data.mk_parts9')),(4, ref('educational_data.mk_parts10')),(4, ref('educational_data.mk_parts11')),
+                                            (4, ref('educational_data.mk_parts12'))]"/>
+            <field name="passing_items" eval="[(4,ref('educational_data.mk_passing_items4')),(4,ref('educational_data.mk_passing_items5')),
+                                         (4,ref('educational_data.mk_passing_items6')),(4,ref('educational_data.mk_passing_items7'))]"/>
+            <field name="reward_items" eval="[(4,ref('educational_data.mk_reward_items4')),(4,ref('educational_data.mk_reward_items5')),
+                                         (4,ref('educational_data.mk_reward_items6'))]"/>
+            <field name="evaluation_items" eval="[(4,ref('educational_data.mk_evaluation_items2'))]"/>
+        </record>
+        <record model="mk.branches.master" id="mk_branches_master9">
+            <field name="parts_ids" eval="[(4, ref('educational_data.mk_parts1')),(4, ref('educational_data.mk_parts2')),
+                                            (4, ref('educational_data.mk_parts3')),(4, ref('educational_data.mk_parts4')),(4, ref('educational_data.mk_parts5')),
+                                            (4, ref('educational_data.mk_parts6')),(4, ref('educational_data.mk_parts7')),(4, ref('educational_data.mk_parts8')),
+                                            (4, ref('educational_data.mk_parts9')),(4, ref('educational_data.mk_parts10')),(4, ref('educational_data.mk_parts11')),
+                                            (4, ref('educational_data.mk_parts12')),(4, ref('educational_data.mk_parts13')),(4, ref('educational_data.mk_parts14')),
+                                            (4, ref('educational_data.mk_parts15'))]"/>
+            <field name="passing_items" eval="[(4,ref('educational_data.mk_passing_items4')),(4,ref('educational_data.mk_passing_items5')),
+                                         (4,ref('educational_data.mk_passing_items6')),(4,ref('educational_data.mk_passing_items7'))]"/>
+            <field name="reward_items" eval="[(4,ref('educational_data.mk_reward_items4')),(4,ref('educational_data.mk_reward_items5')),
+                                         (4,ref('educational_data.mk_reward_items6'))]"/>
+            <field name="evaluation_items" eval="[(4,ref('educational_data.mk_evaluation_items2'))]"/>
+        </record>
+        <record model="mk.branches.master" id="mk_branches_master10">
+            <field name="parts_ids" eval="[(4, ref('educational_data.mk_parts1')),(4, ref('educational_data.mk_parts2')),
+                                                    (4, ref('educational_data.mk_parts3')),(4, ref('educational_data.mk_parts4')),(4, ref('educational_data.mk_parts5')),
+                                                    (4, ref('educational_data.mk_parts6')),(4, ref('educational_data.mk_parts7')),(4, ref('educational_data.mk_parts8')),
+                                                    (4, ref('educational_data.mk_parts9')),(4, ref('educational_data.mk_parts10')),(4, ref('educational_data.mk_parts11')),
+                                                    (4, ref('educational_data.mk_parts12')),(4, ref('educational_data.mk_parts13')),(4, ref('educational_data.mk_parts14')),
+                                                    (4, ref('educational_data.mk_parts15')),(4, ref('educational_data.mk_parts16')),(4, ref('educational_data.mk_parts17')),
+                                                    (4, ref('educational_data.mk_parts18'))]"/>
+            <field name="passing_items" eval="[(4,ref('educational_data.mk_passing_items4')),(4,ref('educational_data.mk_passing_items5')),
+                                         (4,ref('educational_data.mk_passing_items6')),(4,ref('educational_data.mk_passing_items7'))]"/>
+            <field name="reward_items" eval="[(4,ref('educational_data.mk_reward_items4')),(4,ref('educational_data.mk_reward_items5')),
+                                         (4,ref('educational_data.mk_reward_items6'))]"/>
+            <field name="evaluation_items" eval="[(4,ref('educational_data.mk_evaluation_items2'))]"/>
+        </record>
+        <record model="mk.branches.master" id="mk_branches_master11">
+            <field name="parts_ids" eval="[(4, ref('educational_data.mk_parts1')),(4, ref('educational_data.mk_parts2')),
+                                                (4, ref('educational_data.mk_parts3')),(4, ref('educational_data.mk_parts4')),(4, ref('educational_data.mk_parts5')),
+                                                (4, ref('educational_data.mk_parts6')),(4, ref('educational_data.mk_parts7')),(4, ref('educational_data.mk_parts8')),
+                                                (4, ref('educational_data.mk_parts9')),(4, ref('educational_data.mk_parts10')),(4, ref('educational_data.mk_parts11')),
+                                                (4, ref('educational_data.mk_parts12')),(4, ref('educational_data.mk_parts13')),(4, ref('educational_data.mk_parts14')),
+                                                (4, ref('educational_data.mk_parts15')),(4, ref('educational_data.mk_parts16')),(4, ref('educational_data.mk_parts17')),
+                                                (4, ref('educational_data.mk_parts18')),(4, ref('educational_data.mk_parts19')),(4, ref('educational_data.mk_parts20')),
+                                                (4, ref('educational_data.mk_parts21'))]"/>
+            <field name="passing_items" eval="[(4,ref('educational_data.mk_passing_items4')),(4,ref('educational_data.mk_passing_items5')),
+                                         (4,ref('educational_data.mk_passing_items6')),(4,ref('educational_data.mk_passing_items7'))]"/>
+            <field name="reward_items" eval="[(4,ref('educational_data.mk_reward_items4')),(4,ref('educational_data.mk_reward_items5')),
+                                         (4,ref('educational_data.mk_reward_items6'))]"/>
+            <field name="evaluation_items" eval="[(4,ref('educational_data.mk_evaluation_items2'))]"/>
+        </record>
+        <record model="mk.branches.master" id="mk_branches_master12">
+            <field name="parts_ids" eval="[(4, ref('educational_data.mk_parts1')),(4, ref('educational_data.mk_parts2')),
+                                                    (4, ref('educational_data.mk_parts3')),(4, ref('educational_data.mk_parts4')),(4, ref('educational_data.mk_parts5')),
+                                                    (4, ref('educational_data.mk_parts6')),(4, ref('educational_data.mk_parts7')),(4, ref('educational_data.mk_parts8')),
+                                                    (4, ref('educational_data.mk_parts9')),(4, ref('educational_data.mk_parts10')),(4, ref('educational_data.mk_parts11')),
+                                                    (4, ref('educational_data.mk_parts12')),(4, ref('educational_data.mk_parts13')),(4, ref('educational_data.mk_parts14')),
+                                                    (4, ref('educational_data.mk_parts15')),(4, ref('educational_data.mk_parts16')),(4, ref('educational_data.mk_parts17')),
+                                                    (4, ref('educational_data.mk_parts18')),(4, ref('educational_data.mk_parts19')),(4, ref('educational_data.mk_parts20')),
+                                                    (4, ref('educational_data.mk_parts21')),(4, ref('educational_data.mk_parts22')),(4, ref('educational_data.mk_parts23')),
+                                                    (4, ref('educational_data.mk_parts24'))]"/>
+            <field name="passing_items" eval="[(4,ref('educational_data.mk_passing_items4')),(4,ref('educational_data.mk_passing_items5')),
+                                         (4,ref('educational_data.mk_passing_items6')),(4,ref('educational_data.mk_passing_items7'))]"/>
+            <field name="reward_items" eval="[(4,ref('educational_data.mk_reward_items4')),(4,ref('educational_data.mk_reward_items5')),
+                                         (4,ref('educational_data.mk_reward_items6'))]"/>
+            <field name="evaluation_items" eval="[(4,ref('educational_data.mk_evaluation_items2'))]"/>
+        </record>
+        <record model="mk.branches.master" id="mk_branches_master13">
+            <field name="parts_ids" eval="[(4, ref('educational_data.mk_parts1')),(4, ref('educational_data.mk_parts2')),
+                                                    (4, ref('educational_data.mk_parts3')),(4, ref('educational_data.mk_parts4')),(4, ref('educational_data.mk_parts5')),
+                                                    (4, ref('educational_data.mk_parts6')),(4, ref('educational_data.mk_parts7')),(4, ref('educational_data.mk_parts8')),
+                                                    (4, ref('educational_data.mk_parts9')),(4, ref('educational_data.mk_parts10')),(4, ref('educational_data.mk_parts11')),
+                                                    (4, ref('educational_data.mk_parts12')),(4, ref('educational_data.mk_parts13')),(4, ref('educational_data.mk_parts14')),
+                                                    (4, ref('educational_data.mk_parts15')),(4, ref('educational_data.mk_parts16')),(4, ref('educational_data.mk_parts17')),
+                                                    (4, ref('educational_data.mk_parts18')),(4, ref('educational_data.mk_parts19')),(4, ref('educational_data.mk_parts20')),
+                                                    (4, ref('educational_data.mk_parts21')),(4, ref('educational_data.mk_parts22')),(4, ref('educational_data.mk_parts23')),
+                                                    (4, ref('educational_data.mk_parts24')),(4, ref('educational_data.mk_parts25')),(4, ref('educational_data.mk_parts26')),
+                                                    (4, ref('educational_data.mk_parts27'))]"/>
+            <field name="passing_items" eval="[(4,ref('educational_data.mk_passing_items4')),(4,ref('educational_data.mk_passing_items5')),
+                                         (4,ref('educational_data.mk_passing_items6')),(4,ref('educational_data.mk_passing_items7'))]"/>
+            <field name="reward_items" eval="[(4,ref('educational_data.mk_reward_items4')),(4,ref('educational_data.mk_reward_items5')),
+                                         (4,ref('educational_data.mk_reward_items6'))]"/>
+            <field name="evaluation_items" eval="[(4,ref('educational_data.mk_evaluation_items2'))]"/>
+        </record>
+        <record model="mk.branches.master" id="mk_branches_master4">
+            <field name="parts_ids" eval="[(4, ref('educational_data.mk_parts1')),(4, ref('educational_data.mk_parts2')),
+                                            (4, ref('educational_data.mk_parts3')),(4, ref('educational_data.mk_parts4')),(4, ref('educational_data.mk_parts5')),
+                                            (4, ref('educational_data.mk_parts6')),(4, ref('educational_data.mk_parts7')),(4, ref('educational_data.mk_parts8')),
+                                            (4, ref('educational_data.mk_parts9')),(4, ref('educational_data.mk_parts10')),(4, ref('educational_data.mk_parts11')),
+                                            (4, ref('educational_data.mk_parts12')),(4, ref('educational_data.mk_parts13')),(4, ref('educational_data.mk_parts14')),
+                                            (4, ref('educational_data.mk_parts15')),(4, ref('educational_data.mk_parts16')),(4, ref('educational_data.mk_parts17')),
+                                            (4, ref('educational_data.mk_parts18')),(4, ref('educational_data.mk_parts19')),(4, ref('educational_data.mk_parts20')),
+                                            (4, ref('educational_data.mk_parts21')),(4, ref('educational_data.mk_parts22')),(4, ref('educational_data.mk_parts23')),
+                                            (4, ref('educational_data.mk_parts24')),(4, ref('educational_data.mk_parts25')),(4, ref('educational_data.mk_parts26')),
+                                            (4, ref('educational_data.mk_parts27')),(4, ref('educational_data.mk_parts28')),(4, ref('educational_data.mk_parts29')),
+                                            (4, ref('educational_data.mk_parts30'))]"/>
+            <field name="passing_items" eval="[(4,ref('educational_data.mk_passing_items5')),
+                                         (4,ref('educational_data.mk_passing_items6')),(4,ref('educational_data.mk_passing_items7'))]"/>
+            <field name="reward_items" eval="[(4,ref('educational_data.mk_reward_items4')),(4,ref('educational_data.mk_reward_items5')),
+                                         (4,ref('educational_data.mk_reward_items6'))]"/>
+            <field name="evaluation_items" eval="[(4,ref('educational_data.mk_evaluation_items2'))]"/>
+        </record>
+        <record model="mk.branches.master" id="mk_branches_master5">
+            <field name="parts_ids" eval="[(4, ref('educational_data.mk_parts1')),(4, ref('educational_data.mk_parts2')),
+                                            (4, ref('educational_data.mk_parts3')),(4, ref('educational_data.mk_parts4')),(4, ref('educational_data.mk_parts5')),
+                                            (4, ref('educational_data.mk_parts6')),(4, ref('educational_data.mk_parts7')),(4, ref('educational_data.mk_parts8')),
+                                            (4, ref('educational_data.mk_parts9')),(4, ref('educational_data.mk_parts10')),(4, ref('educational_data.mk_parts11')),
+                                            (4, ref('educational_data.mk_parts12')),(4, ref('educational_data.mk_parts13')),(4, ref('educational_data.mk_parts14')),
+                                            (4, ref('educational_data.mk_parts15')),(4, ref('educational_data.mk_parts16')),(4, ref('educational_data.mk_parts17')),
+                                            (4, ref('educational_data.mk_parts18')),(4, ref('educational_data.mk_parts19')),(4, ref('educational_data.mk_parts20')),
+                                            (4, ref('educational_data.mk_parts21')),(4, ref('educational_data.mk_parts22')),(4, ref('educational_data.mk_parts23')),
+                                            (4, ref('educational_data.mk_parts24')),(4, ref('educational_data.mk_parts25')),(4, ref('educational_data.mk_parts26')),
+                                            (4, ref('educational_data.mk_parts27')),(4, ref('educational_data.mk_parts28')),(4, ref('educational_data.mk_parts29')),
+                                            (4, ref('educational_data.mk_parts30'))]"/>
+            <field name="passing_items" eval="[(4,ref('educational_data.mk_passing_items5')),
+                                         (4,ref('educational_data.mk_passing_items6')),(4,ref('educational_data.mk_passing_items7'))]"/>
+            <field name="reward_items" eval="[(4,ref('educational_data.mk_reward_items4')),(4,ref('educational_data.mk_reward_items5')),
+                                         (4,ref('educational_data.mk_reward_items6'))]"/>
+            <field name="evaluation_items" eval="[(4,ref('educational_data.mk_evaluation_items2'))]"/>
+            <field name="employee_items" eval="[(4,ref('educational_data.employee_items2'))]"/>
+            <field name="job_id" eval="[(4,ref('educational_data.Job1')),(4,ref('educational_data.Job2')),
+                                        (4,ref('educational_data.Job5')),(4,ref('educational_data.Job9')),(4,ref('educational_data.Job11')),
+                                        (4,ref('educational_data.Job12')),(4,ref('educational_data.Job24')),(4,ref('educational_data.Job47')),
+                                        (4,ref('educational_data.Job401'))]"/>
+        </record>
+
+    </data>
+</odoo>

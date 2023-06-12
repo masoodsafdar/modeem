@@ -1,0 +1,39 @@
+<odoo>
+   <data>
+    <record id="employee_sms_form" model="ir.ui.view">
+        <field name="name">mk.employee.sms</field>
+        <field name="model">mk.employee.sms</field>
+        <field eval="20" name="priority"/>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                        <field name="is_user_department" invisible="1"/>
+                        <field name="department_id" options="{'no_create': True, 'no_open': True}"/>
+                        <field name="mosque_ids"    options="{'no_create': True, 'no_open': True}" widget="many2many_tags"/>
+                        <field name="job_ids"       options="{'no_create': True, 'no_open': True}" widget="many2many_tags"/>
+                </group>
+                    <separator string="Employees"/>
+                    <field name="employee_ids" no_label="1"/>
+                <group>
+                    <field name="message"  placeholder="نص الرسالة"/>
+               </group>
+                <footer>
+                    <button name="ok" string="OK" type="object" class="oe_highlight" />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_employee_sms_form">
+        <field name="name">employee sms </field>
+        <field name="res_model">mk.employee.sms</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="employee_sms_form" />
+        <field name="target">new</field>
+    </record>
+
+ <menuitem name="إرسال رسائل نصية للموظفين " id="employee_sms_menu1" sequence="1" parent="sms_center" action="action_employee_sms_form" groups="group_sms_employee"/> 
+
+ </data>
+</odoo>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="motivate_config_view_form" model="ir.ui.view">
+            <field name="name">Motivation Configuration Form</field>
+            <field name="model">standard.items</field>
+            <field name="arch" type="xml">
+                <form >
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <button name="toggle_active"  type="object" class="oe_stat_button" icon="fa-archive">
+                                <field name="active_bool" widget="boolean_button" options='{"terminology": "archive"}'/>
+                            </button>
+                        </div>
+                        <group col="4" colspan="2">
+                            <field name="name"   required="1"/>
+                            <field name="points" required="1"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="motivate_config_tree_view" model="ir.ui.view">
+            <field name="name">standard.items.tree</field>
+            <field name="model">standard.items</field>
+            <field name="arch" type="xml">
+                <tree delete="0" >
+                    <field name="name"/>
+                    <field name="points"/>
+                    <field name="active_bool"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="mk_standard_items_search_view" model="ir.ui.view">
+            <field name="name">standard items search</field>
+            <field name="model">standard.items</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name"/>
+                    <field name="points"/>
+                </search>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_standard_items_action">
+            <field name="name">Standard Items</field>
+            <field name="res_model">standard.items</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- Students Points-->
+        <record id="students_points_view_form" model="ir.ui.view">
+            <field name="name">Students Points Form</field>
+            <field name="model">student.points</field>
+            <field name="arch" type="xml">
+                <form >
+                    <sheet>
+                        <group col="4" colspan="2">
+                            <field name="name"         required="1" options="{'no_create': True, 'no_open':True}"/>
+                            <field name="total_points" required="1"/>
+                        </group>
+                        <field name="items_ids" >
+                            <tree editable="bottom">
+                                <field name="item_id" required="1"/>
+                                <field name="point" required="1"/>
+                            </tree>
+                        </field>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="students_points_tree_view" model="ir.ui.view">
+            <field name="name">student.points.tree</field>
+            <field name="model">student.points</field>
+            <field name="arch" type="xml">
+                <tree delete="0" >
+                    <field name="name"/>
+                    <field name="total_points"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="mk_student_points_search_view" model="ir.ui.view">
+            <field name="name">student points search</field>
+            <field name="model">student.points</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name"/>
+                    <field name="total_points"/>
+                    <group expand="0" string="Group By">
+                        <filter name="name"  string="اسم الطالب" context="{'group_by': 'name'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_students_points_action">
+            <field name="name">Students Points</field>
+            <field name="res_model">student.points</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem name="Motivation"
+                id="menu_motivation_root"                
+                web_icon="students_motivation,static/description/icon.png"
+                groups="students_motivation.group_motivation_request_management,students_motivation.accept_refuse_motivation_request,students_motivation.deliver_motivation_request,students_motivation.read_markdown_points,students_motivation.create_write_markdown_points,students_motivation.delete_markdown_points,students_motivation.confirm_markdown_points,students_motivation.read_students_points,students_motivation.create_write_students_points,students_motivation.delete_students_points,students_motivation.product_management,students_motivation.read_standard_items,students_motivation.create_write_standard_items,students_motivation.delete_standard_items"/>
+
+        <menuitem id="menu_students_points"
+                name="Students Points"
+                parent="menu_motivation_root"
+                action="action_students_points_action"
+                sequence="3"
+                groups="students_motivation.read_students_points,students_motivation.create_write_students_points,students_motivation.delete_students_points"/>
+
+        <menuitem id="menu_motivate_configuration"
+                name="Configurations"
+                parent="menu_motivation_root"
+                sequence="4"
+                groups="students_motivation.product_management,students_motivation.read_standard_items,students_motivation.create_write_standard_items,students_motivation.delete_standard_items"/>
+                
+
+        <menuitem id="menu_standard_items"
+                name="Standard Items"
+                parent="menu_motivate_configuration"
+                action="action_standard_items_action"
+                groups="students_motivation.read_standard_items,students_motivation.create_write_standard_items,students_motivation.delete_standard_items"/>
+    </data>
+</odoo>

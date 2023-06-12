@@ -1,0 +1,151 @@
+<odoo>
+    <data noupdate="1">
+        <record id="mk_approache1" model="mk.approaches">
+            <field name="company_id" ref="base.main_company"/>
+            <field name="mosque_id" ref="mk_mosque1"/>
+            <field name="name">منهج الحفظ</field>
+            <field name="active" eval="True"/>
+            <field name="state">active</field>
+            <field name="program_id" ref="mk_program1"/>
+            <field name="program_type">open</field>
+            <field name="is_previous_approach" eval="False"/>
+            <field name="required_mosques" eval="False"/>
+            <field name="lessons_minimum_audit">5</field>
+            <field name="quantity_minimum_audit">10</field>
+            <field name="deduct_qty_small_review">1</field>
+            <field name="memorize_minimum_audit">10</field>
+            <field name="deduct_memor_sml_review">1</field>
+            <field name="mastering_minimum_audit">10</field>
+            <field name="deduct_tjwd_sml_review">1</field>
+            <field name="lessons_maximum_audit">10</field>
+            <field name="quantity_maximum_audit">10</field>
+            <field name="deduct_qty_big_review">1</field>
+            <field name="memorize_maximum_audit">10</field>
+            <field name="deduct_memor_big_review">1</field>
+            <field name="mastering_maximum_audit">10</field>
+            <field name="deduct_tjwd_big_review">1</field>
+            <field name="lessons_reading">1</field>
+            <field name="quantity_reading">10</field>
+            <field name="deduct_qty_reading">1</field>
+            <field name="memorize_reading">10</field>
+            <field name="deduct_memor_reading">1</field>
+            <field name="mastering_reading">10</field>
+            <field name="deduct_tjwd_reading">1</field>
+            <field name="lessons_memorize">10</field>
+            <field name="quantity_memorize">10</field>
+            <field name="deduct_qty_memorize">1</field>
+            <field name="memorize_degree">10</field>
+            <field name="deduct_memor_memorize">1</field>
+            <field name="mastering_memorize">10</field>
+            <field name="deduct_tjwd_memorize">1</field>
+            <field name="preparation_degree">10</field>
+            <field name="late_deduct">0.25</field>
+            <field name="excused_absence_deduct">0</field>
+            <field name="no_excused_absence_deduct">0.5</field>
+            <field name="behavior_degree">10</field>
+            <field name="test_degree">70</field>
+            <field name="nbr_question_test">5</field>
+            <field name="qty_question_test">qty025</field>
+            <field name="deduction_test">7</field>
+            <field name="exam_degree">30</field>
+            <field name="nbr_question_exam">7</field>
+            <field name="qty_question_exam">qty025</field>
+            <field name="deduction_exam">3</field>
+            <field name="age_category_ids" eval="[(4,ref('mk_episode_management.mk_age_category1')),(4,ref('mk_episode_management.mk_age_category2')),
+                                                  (4,ref('mk_episode_management.mk_age_category3')),(4,ref('mk_episode_management.mk_age_category4')),
+                                                  (4,ref('mk_episode_management.mk_age_category5')),(4,ref('mk_episode_management.mk_age_category6')),
+                                                  (4,ref('mk_episode_management.mk_age_category7')),(4,ref('mk_episode_management.mk_age_category8')),
+                                                  (4,ref('mk_episode_management.mk_age_category9')),(4,ref('mk_episode_management.mk_age_category10')),]"/>
+            <field name="stage_ids" eval="[(4,ref('mk_episode_management.mk_grade1')),(4,ref('mk_episode_management.mk_grade2')),(4,ref('mk_episode_management.mk_grade3')),
+                                           (4,ref('mk_episode_management.mk_grade4')),(4,ref('mk_episode_management.mk_grade5')),(4,ref('mk_episode_management.mk_grade6')),
+                                           (4,ref('mk_episode_management.mk_grade7')),(4,ref('mk_episode_management.mk_grade8')),(4,ref('mk_episode_management.mk_grade9')),
+                                           (4,ref('mk_episode_management.mk_grade10')),(4,ref('mk_episode_management.mk_grade11')),(4,ref('mk_episode_management.mk_grade12')),
+                                           (4,ref('mk_episode_management.mk_grade13')),(4,ref('mk_episode_management.mk_grade14')),(4,ref('mk_episode_management.mk_grade15')),
+                                           (4,ref('mk_episode_management.mk_grade16')),(4,ref('mk_episode_management.mk_grade17')),(4,ref('mk_episode_management.mk_grade18')),
+                                           (4,ref('mk_episode_management.mk_grade19')),(4,ref('mk_episode_management.mk_grade23'))]"/>
+            <field name="job_ids" eval="[(4,ref('educational_data.mk_job1')),(4,ref('educational_data.mk_job2')),
+                                         (4,ref('educational_data.mk_job3')),(4,ref('educational_data.mk_job4')),
+                                         (4,ref('educational_data.mk_job5')),(4,ref('educational_data.mk_job6'))]"/>
+            <field name="part_ids" eval="[(4, ref('educational_data.mk_parts1')),(4, ref('educational_data.mk_parts2')),
+                        (4, ref('educational_data.mk_parts3')),(4, ref('educational_data.mk_parts4')),(4, ref('educational_data.mk_parts5')),
+                        (4, ref('educational_data.mk_parts6')),(4, ref('educational_data.mk_parts7')),(4, ref('educational_data.mk_parts8')),
+                        (4, ref('educational_data.mk_parts9')),(4, ref('educational_data.mk_parts10')),(4, ref('educational_data.mk_parts11')),
+                        (4, ref('educational_data.mk_parts12')),(4, ref('educational_data.mk_parts13')),(4, ref('educational_data.mk_parts14')),
+                        (4, ref('educational_data.mk_parts15')),(4, ref('educational_data.mk_parts16')),(4, ref('educational_data.mk_parts17')),
+                        (4, ref('educational_data.mk_parts18')),(4, ref('educational_data.mk_parts19')),(4, ref('educational_data.mk_parts20')),
+                        (4, ref('educational_data.mk_parts21')),(4, ref('educational_data.mk_parts22')),(4, ref('educational_data.mk_parts23')),
+                        (4, ref('educational_data.mk_parts24')),(4, ref('educational_data.mk_parts25')),(4, ref('educational_data.mk_parts26')),
+                        (4, ref('educational_data.mk_parts27')),(4, ref('educational_data.mk_parts28')),(4, ref('educational_data.mk_parts29')),
+                        (4, ref('educational_data.mk_parts30')),]"/>
+            <field name="is_test" eval="False"/>
+        </record>
+        <record id="mk_approache2" model="mk.approaches">
+            <field name="company_id" ref="base.main_company"/>
+            <field name="mosque_id" ref="mk_mosque1"/>
+            <field name="name">منهج نحو الجنان</field>
+            <field name="active" eval="True"/>
+            <field name="state">active</field>
+            <field name="program_id" ref="mk_program2"/>
+            <field name="program_type">close</field>
+            <field name="is_previous_approach" eval="False"/>
+            <field name="required_mosques" eval="False"/>
+            <field name="lessons_minimum_audit">10</field>
+            <field name="quantity_minimum_audit">10</field>
+            <field name="deduct_qty_small_review">1</field>
+            <field name="memorize_minimum_audit">10</field>
+            <field name="deduct_memor_sml_review">1</field>
+            <field name="mastering_minimum_audit">10</field>
+            <field name="deduct_tjwd_sml_review">1</field>
+            <field name="lessons_maximum_audit">10</field>
+            <field name="quantity_maximum_audit">10</field>
+            <field name="deduct_qty_big_review">1</field>
+            <field name="memorize_maximum_audit">10</field>
+            <field name="deduct_memor_big_review">1</field>
+            <field name="mastering_maximum_audit">10</field>
+            <field name="deduct_tjwd_big_review">1</field>
+            <field name="lessons_reading">1</field>
+            <field name="quantity_reading">10</field>
+            <field name="deduct_qty_reading">1</field>
+            <field name="memorize_reading">10</field>
+            <field name="deduct_memor_reading">1</field>
+            <field name="mastering_reading">10</field>
+            <field name="deduct_tjwd_reading">1</field>
+            <field name="lessons_memorize">10</field>
+            <field name="quantity_memorize">10</field>
+            <field name="deduct_qty_memorize">1</field>
+            <field name="memorize_degree">10</field>
+            <field name="deduct_memor_memorize">1</field>
+            <field name="mastering_memorize">10</field>
+            <field name="deduct_tjwd_memorize">10</field>
+            <field name="preparation_degree">10</field>
+            <field name="late_deduct">0.25</field>
+            <field name="excused_absence_deduct">0</field>
+            <field name="no_excused_absence_deduct">1</field>
+            <field name="behavior_degree">2</field>
+            <field name="test_degree">30</field>
+            <field name="nbr_question_test">5</field>
+            <field name="qty_question_test">qty100</field>
+            <field name="deduction_test">3</field>
+            <field name="exam_degree">70</field>
+            <field name="nbr_question_exam">7</field>
+            <field name="qty_question_exam">qty100</field>
+            <field name="deduction_exam">5</field>
+            <field name="age_category_ids" eval="[(4,ref('mk_episode_management.mk_age_category1')),(4,ref('mk_episode_management.mk_age_category2')),
+                                                  (4,ref('mk_episode_management.mk_age_category3')),(4,ref('mk_episode_management.mk_age_category4')),
+                                                  (4,ref('mk_episode_management.mk_age_category5')),(4,ref('mk_episode_management.mk_age_category6')),
+                                                  (4,ref('mk_episode_management.mk_age_category7')),(4,ref('mk_episode_management.mk_age_category8')),
+                                                  (4,ref('mk_episode_management.mk_age_category9')),(4,ref('mk_episode_management.mk_age_category10')),]"/>
+            <field name="stage_ids" eval="[(4,ref('mk_episode_management.mk_grade1')),(4,ref('mk_episode_management.mk_grade2')),(4,ref('mk_episode_management.mk_grade3')),
+                                           (4,ref('mk_episode_management.mk_grade4')),(4,ref('mk_episode_management.mk_grade5')),(4,ref('mk_episode_management.mk_grade6')),
+                                           (4,ref('mk_episode_management.mk_grade7')),(4,ref('mk_episode_management.mk_grade8')),(4,ref('mk_episode_management.mk_grade9')),
+                                           (4,ref('mk_episode_management.mk_grade10')),(4,ref('mk_episode_management.mk_grade11')),(4,ref('mk_episode_management.mk_grade12')),
+                                           (4,ref('mk_episode_management.mk_grade13')),(4,ref('mk_episode_management.mk_grade14')),(4,ref('mk_episode_management.mk_grade15')),
+                                           (4,ref('mk_episode_management.mk_grade16')),(4,ref('mk_episode_management.mk_grade17')),(4,ref('mk_episode_management.mk_grade18')),
+                                           (4,ref('mk_episode_management.mk_grade19')),(4,ref('mk_episode_management.mk_grade23'))]"/>
+            <field name="job_ids" eval="[(4,ref('educational_data.mk_job1')),(4,ref('educational_data.mk_job2')),
+                                         (4,ref('educational_data.mk_job3')),(4,ref('educational_data.mk_job4')),
+                                         (4,ref('educational_data.mk_job5')),(4,ref('educational_data.mk_job6'))]"/>
+            <field name="is_test" eval="False"/>
+        </record>
+    </data>
+</odoo>

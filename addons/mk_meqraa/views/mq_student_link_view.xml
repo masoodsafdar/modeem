@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+        
+		<record id="view_mq_student_link_form" model="ir.ui.view">
+			<field name="name">view.student.link.form</field>
+			<field name="model">mk.link</field>
+			<field name="arch" type="xml">
+				<form string="Link student acceptance">
+					<script>
+						$(document).ready(function(){
+						$('.modal-dialog').css({'width': '97%', 'height': '100%'});
+						$('.modal-content').css({'height': '100%'});
+						$('.modal-body').css({'height': '100%'});
+						});
+					</script>
+
+					<header>
+						<button name="action_reject" type="object" string="Reject" attrs="{'invisible':['|',('action_done','!=',False),('state', 'in', ['done','reject'])]}" groups="mk_meqraa.group_administration_meqraa"/>
+						<button name="mq_action_accept" type="object" string="Accept" attrs="{'invisible':['|',('state', '!=', 'draft')]}" groups="mk_meqraa.group_administration_meqraa"/>
+						<field name="state" widget="statusbar" statusbar_visible="draft,accept,done,reject"/>
+					</header>
+
+					<sheet>
+						<group string="Registeration Info">
+							<group>
+								<field name="student_id" options="{'no_create': 1, 'no_open':1}" required="True" readonly="1"/>
+								<field name="registeration_code" />
+								<field name="academic_id" options="{'no_create': 1, 'no_open':1}" />
+								<field name="registeration_date" attrs="{'readonly':[('state','!=','draft')]}" required="1" />
+								<field name="preparation_id" attrs="{'invisible':[('preparation_id','=',False)]}" readonly="1" options="{'no_create': 1, 'no_open':0}" />
+								<field name="selected_period" invisible="1" />
+								<field name="part_id" invisible="1"	widget="many2many_tags" options="{'no_create': 1,'no_open': 1}" />
+							</group>
+
+							<group>
+								<field name="riwaya" readonly="1"/>
+								<field name="khota_type" readonly="1" invisible="0"/>
+								<field name="episode_id" options="{'no_create': 1, 'no_open':1}" required="1" domain="[('riwaya','=',riwaya),('is_episode_meqraa','=','True')]" attrs="{'readonly':[('state','!=','draft')]}" />
+								<field name="is_tlawa" invisible="1" />
+								<field name="is_big_review" invisible="1" />
+								<field name="type_order" invisible="1" />
+								<field name="action_done" invisible="1" />
+							</group>
+						</group>
+
+						<notebook>
+							<page string="approache setting">
+								<group colspan="2" col="6" attrs="{'readonly':[('state','!=','draft')]}">
+									<field name="program_type" readonly="1" options="{'no_create': 1, 'no_open':1}" />
+									<field name="program_id"   readonly="1" options="{'no_create': 1, 'no_open':1}" />
+									<field name="approache" domain="[('program_id','=',program_id)]" readonly="1" options="{'no_create': 1, 'no_open':1}" />
+								</group>
+
+								<group string="إعدادات البرنامج" attrs="{'invisible': [('program_id','=',False)]}">
+									<line>
+										<label for="is_memorize" />
+										<field name="is_memorize" readonly="1" />									
+									</line>
+								</group>
+
+								<group colspan="4" col="6">
+									<label string="" />
+									<label for="memory_direction" string="المسار" />
+									<label for="page_id" string="المقرر" />
+									<label for="surah_from_prg_id" string="من السورة" />
+									<label for="aya_from_prg_id" string="من الآية" />
+									<label for="save_start_point" string="نقطة البداية" />
+
+									<label string="الحفظ" />
+									<field name="memory_direction"  nolabel="1" readonly="1"/>
+									<field name="page_id" 		    nolabel="1" readonly="1" options="{'no_create': 1, 'no_open':1}" style="width: 90%"/>
+									<field name="surah_from_mem_id" nolabel="1" readonly="1" options="{'no_create': 1, 'no_open':1}"  style="width: 90%"/>
+									<field name="aya_from_mem_id"   nolabel="1" attrs="{'readonly':[('state','not in','draft')], 'required':[('program_type','=','open'),('state','=','draft')]}" options="{'no_create': 1, 'no_open':1}"  domain="[('surah_id','=',surah_from_mem_id)]" style="width: 90%"/>
+									<field name="save_start_point"  nolabel="1" attrs="{'readonly':[('state','not in','draft')], 'required':[('program_type','=','open'),('state','=','draft')]}" options="{'no_create': 1, 'no_open':1}"  domain="[('from_surah','=',surah_from_mem_id), ('subject_page_id','=',page_id)]"/>
+								</group>
+							</page>
+						</notebook>
+					</sheet>
+				</form>
+			</field>
+		</record>
+
+		 <record id="view_student_link_inherit_form" model="ir.ui.view">
+            <field name="name">view.student.link.form.inherit</field>
+            <field name="model">mk.link</field>
+            <field name="inherit_id" ref="mk_student_register.view_student_link_form"/>
+            <field name="arch" type="xml">
+				<xpath expr="//field[@name='mosq_id']" position="replace">
+					<field name="is_episode_meqraa" invisible="1"/>
+					<field name="mosq_id" attrs="{'readonly':['|',('action_done','!=',False),('state','!=','draft')], 'required':[('is_episode_meqraa','=',False)]}" options="{'no_create': 1, 'no_open':1}"/>
+				</xpath>
+            </field>
+       </record>
+	</data>
+</odoo>

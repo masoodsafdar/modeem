@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <report id="summer_episodes_report"
+            string="إحصائية الدورات المكثفة"
+            model="mk.course.request"
+            report_type="xlsx"
+            name="mk_intensive_courses.report_summer_episodes"
+            file="إحصائية الدورات المكثفة"/>
+</odoo>

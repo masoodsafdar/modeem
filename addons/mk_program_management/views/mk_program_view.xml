@@ -1,0 +1,175 @@
+<odoo>
+    <data>
+    
+ 	<record id="mk_program_form_view" model="ir.ui.view">
+          <field name="name">Program Form View</field>
+          <field name="model">mk.program</field>
+          <field name="arch" type="xml">
+              <form string = "Program">
+		  <header>
+			<button name="%(mk_program_plan_action)d" string="Build Plan" type="action"/>
+		  </header>
+		  <sheet>
+			  <group>
+				<field name="name" required="1"/>  
+			  </group>
+			  <group>
+			  	<group>
+			  		<field name="approach_id" options="{'no_open': True, 'no_create':True}"/>
+		  		</group>
+			  	<group>
+			  		<field name="level_id"    options="{'no_create': True,'no_open': True,}"/>
+				</group>
+		  	</group>
+		  	<group>
+			  	<group>
+					<field name="full_preparation_mark"/>
+					<field name="excused_absence_deduct"/>
+					<field name="level_type"/>
+					<field name="test_mark"/>
+					<field name="registeration_fees"/>
+				 </group>
+				 <group>
+				 	<field name="late_deduct"/>
+					<field name="no_excused_absence_deduct"/>
+					<field name="reading_mark"/>
+					<field name="behavior_mark"/>
+				 </group>
+			 </group>
+		  	
+		  	<separator string="Following Type"/>
+			  	<group>
+				  	<group>
+						<field name="saving"/> 
+						<field name="minimum_audit"/> 
+						<field name="maximum_audit"/>  
+					 </group>
+					 <group>
+						<field name="reading"/> 
+						<field name="all"/>  
+					 </group>
+				 </group>
+	  		<separator string="Mobile Messages"/>
+			  	<group>
+				  	<group>
+						<field name="excused_absence"/> 
+						<field name="comments"/> 
+						<field name="late"/>  
+					 </group>
+					 <group>
+						<field name="no_excused_absence"/> 
+						<field name="not_saving"/>
+						<field name="all_message"/>
+					 </group>
+				 </group>
+			 <notebook>
+			 	<page string="Saving" attrs="{'invisible':[('saving','!=',True),('all','!=',True)]}">
+	 			  	<group>
+					  	<group>
+							<field name="saving_lines_number"/>
+							<field name="saving_full_quantity_mark"/>
+							<field name="saving_from_surah" options="{'no_create': True,'no_open': True,}"/>
+							<field name="saving_to_surah" attrs="{'invisible':[('level_type','!=','s')]}" options="{'no_create': True,'no_open': True,}"/>
+						 </group>
+						 
+						 <group>
+						 	<field name="saving_direction"/>
+						 	<field name="saving_full_mastery_mark"/>							
+							<field name="saving_from_verses"/>
+							<field name="saving_to_verses" attrs="{'invisible':[('level_type','!=','s')]}"/>
+						 </group>
+					 </group>
+			 	</page>
+			 	<page string="Minimum Audit" attrs="{'invisible':[('minimum_audit','!=',True),('all','!=',True)]}">
+	 			  	<group>
+					  	<group>
+							<field name="minimum_audit_lines_number"/>
+							<field name="minimum_audit_full_quantity_mark"/>
+							<field name="minimum_audit_from_surah" options="{'no_create': True,'no_open': True,}"/>
+							<field name="minimum_audit_to_surah" attrs="{'invisible':[('level_type','!=','s')]}" options="{'no_create': True,'no_open': True,}"/>
+						 </group>
+						 <group>
+						 	<field name="minimum_audit_direction"/>
+						 	<field name="minimum_audit_full_mastery_mark"/>							
+							<field name="minimum_audit_from_verses"/>
+							<field name="minimum_audit_to_verses" attrs="{'invisible':[('level_type','!=','s')]}"/>
+						 </group>
+					 </group>
+			 	
+			 	</page>
+			 	<page string="Maximum Audit" attrs="{'invisible':[('maximum_audit','!=',True),('all','!=',True)]}">
+	 			  	<group>
+					  	<group>
+							<field name="maximum_audit_lines_number"/>
+							<field name="maximum_audit_full_quantity_mark"/>
+							<field name="maximum_audit_from_surah" options="{'no_create': True,'no_open': True,}"/>
+							<field name="maximum_audit_to_surah" attrs="{'invisible':[('level_type','!=','s')]}" options="{'no_create': True,'no_open': True,}"/>
+						 </group>
+						 <group>
+						 	<field name="maximum_audit_direction"/>
+						 	<field name="maximum_audit_full_mastery_mark"/>							
+							<field name="maximum_audit_from_verses"/>
+							<field name="maximum_audit_to_verses" attrs="{'invisible':[('level_type','!=','s')]}"/>
+						 </group>
+					 </group>
+			 	
+			 	</page>
+			 	<page string="Reading" attrs="{'invisible':[('reading','!=',True),('all','!=',True)]}">
+	 			  	<group>
+					  	<group>
+							<field name="reading_lines_number"/>
+							<field name="reading_full_quantity_mark"/>
+							<field name="reading_from_surah" options="{'no_create': True,'no_open': True,}"/>
+							<field name="reading_to_surah" attrs="{'invisible':[('level_type','!=','s')]}" options="{'no_create': True,'no_open': True,}"/>
+						 </group>
+						 <group>
+						 	<field name="reading_full_mastery_mark"/>
+							<field name="reading_direction"/>
+							<field name="reading_from_verses"/>
+							<field name="reading_to_verses" attrs="{'invisible':[('level_type','!=','s')]}"/>
+						 </group>
+					 </group>
+			 	</page>
+			 </notebook>
+	  	</sheet>
+              </form>
+             </field>
+         </record>
+
+        <record id="mk_program_tree_view" model="ir.ui.view">
+            <field name="name">Program Tree View</field>
+            <field name="model">mk.program</field>
+            <field name="arch" type="xml">
+                <tree delete="0" string="Program">
+                	<field name="name"/>
+                	<field name="approach_id" options="{'no_create': True,'no_open': True,}"/>
+                	<field name="level_id"    options="{'no_create': True,'no_open': True,}"/>
+                </tree>
+            </field>
+        </record>
+        
+        <record id="mk_program_search_view" model="ir.ui.view">
+            <field name="name">Program Search View</field>
+            <field name="model">mk.program</field>
+            <field name="arch" type="xml">
+                <search string="Program">
+                    <field name="name" string="Program" filter_domain="[('name','ilike', self)]"/>
+                </search>
+            </field>
+        </record>
+        
+        <record id="mk_program_action" model="ir.actions.act_window">
+            <field name="name">Program</field>
+            <field name="res_model">mk.program</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+            <field name="search_view_id" ref="mk_program_search_view"/>
+        </record>
+
+	<menuitem name="البرامج المفتوحة" id="mk_program_management_menu" sequence="5" parent="mk_programs_menu" action="mk_program_action"/>    
+
+    </data>  
+</odoo>

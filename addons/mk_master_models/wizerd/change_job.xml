@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <data>
+
+<record id="change_employee_job_wizerd" model="ir.ui.view">
+                <field name="name">change Job</field>
+                <field name="model">change.job</field>
+                <field name="arch" type="xml">
+                <form string="Change Job">
+                        <group col="4" colspan="4">
+                        <field name="employee_id" readonly="1"/>
+                        <field name="category2" required="True"/>
+                        <field name="responsible_id" attrs="{'invisible':[('flage2','=',False)]}"/>
+                        <field name="job_id" required="True" options="{'no_open':1,'no_create':1}"/>
+                        <field name="department_id" options="{'no_create': 1,'no_open':1}"  attrs="{'invisible':[('flage2','=',True)]}"/>
+                        <field name="mosque_id2" widget="many2many_tags" invisible="True" />
+                        <field name="mosque_id"   widget="many2many_tags" domain="[('center_department_id','=',department_id)]" attrs="{'invisible':[('flage2','=',True)]}"/>
+                        <field name="flage" invisible="True"/> 
+                        <field name="flage2" invisible="True"/>                                               
+                    </group>
+                    <notebook>
+                        <page attrs="{'invisible':[('flage','!=',True)]}">
+                            <field name="list_append" options="{'no_create': 1}" >
+                                <tree editable="bottom" >
+
+                                    <field name="ep_id"/>
+                                    <field name="employee_id"/>
+                                </tree>
+</field>
+                        </page>
+                    </notebook>
+                   
+                    <footer>
+    <p>
+       هل تريد تغيير الوظيفة للموظف
+    <button name="yes" type="object" string="yes" class="oe_highlight"/>
+    <button string="no" class="oe_link" special="cancel"/>
+    </p>
+
+        </footer>
+                </form>
+                </field>
+            </record>
+
+
+<record id="change_emp_job_action" model="ir.actions.act_window">
+                <field name="name"> </field>
+                <field name="res_model">change.job</field>
+                <!-- <field name="view_type">form</field> -->
+                <field name="view_mode">form</field>
+                <field name="view_id" ref="change_employee_job_wizerd"/>
+                <field name="target">new</field>
+</record>
+
+</data>
+</odoo>

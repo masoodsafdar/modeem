@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="student_course_subscription_wizard_form" model="ir.ui.view">
+        <field name="name">student.course.subscription.form</field>
+        <field name="model">student.course.subscription</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <group>
+                        <field name="branch_id" required="1" options="{'no_create': True,'no_open': True}"/>
+                    </group>
+                    <group>
+                        <field name="course_id" invisible="1"/>
+                        <field name="type_branch_path"/>
+                    </group>
+                    <label string="الطلاب/الطالبات"/>
+                    <field name="student_ids">
+                        <tree>
+                            <field name="display_name"/>
+                        </tree>
+                    </field>
+                </group>
+                <footer>
+                    <button name="action_students_course_register" string="تسجيل" type="object" default_focus="1" class="oe_highlight"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+
+
+</odoo>

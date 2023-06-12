@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="mk_user_guide_form_view" model="ir.ui.view">
+            <field name="name">user guide form</field>
+            <field name="model">mk.user.guide</field>
+            <field name="arch" type="xml">
+                <form>
+                    <field name="name" required="1"/>
+                    <field name="portal_true" required="1"/>
+                    <field name="active"/>
+                    <field name="info">
+                        <tree editable="botton">
+                            <field name="sequence" widget="handle"/>
+                            <field name="name" required="1"/>
+                            <field name="description" required="1"/>
+                            <field name="attachment" required="1" widget="many2many_binary"/>
+                            <field name="video" required="1"/>
+                        </tree>
+                    </field>
+
+                </form>
+            </field>
+        </record>
+
+        <record id="mk_user_guide_tree_view" model="ir.ui.view">
+            <field name="name">mk user guide tree</field>
+            <field name="model">mk.user.guide</field>
+            <field name="arch" type="xml">
+                <tree delete="0" string="user guide">
+                    <field name="sequence" widget="handle"/>
+                    <field name="name"/>
+                    <field name="info"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="mk_user_guide_action" model="ir.actions.act_window">
+            <field name="name">user guide</field>
+            <field name="res_model">mk.user.guide</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+        </record>
+
+        <menuitem name="user guide" id="mk_user_guide_main_menu"/>
+        <menuitem name="user guide" id="mk_user_guide_menu" parent="mk_user_guide_main_menu"/>
+
+        <menuitem id="user_guide_menu" action="mk_user_guide_action" parent="mk_user_guide_menu"/>
+
+    </data>
+</odoo>
+

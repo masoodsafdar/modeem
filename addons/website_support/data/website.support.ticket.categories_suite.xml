@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="website_support_complaints" model="website.support.ticket.categories">
+            <field name="name">Teacher application's complaints</field>
+        </record>
+            
+    </data>     
+</odoo>

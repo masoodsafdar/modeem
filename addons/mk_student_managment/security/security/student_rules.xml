@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+		<record model="ir.rule" id="internal_transfer_rule">
+		      <field name="name">internal_transfer  rules</field>
+		      <field name="model_id" ref="model_mk_internal_transfer"/>
+		      <field name="domain_force">['|',('from_episode.mosque_id.id','in',[user.mosque_ids.id]),('from_episode.mosque_id.center_department_id.id','in',user.department_ids.ids)]</field>
+
+
+		</record>
+
+		<record model="ir.rule" id="external_transfer_rule">
+		      <field name="name">external_transfer  rules</field>
+		      <field name="model_id" ref="model_mk_internal_transfer"/>
+		      <field name="domain_force">['|','|','|',('from_mosque.id','in',[user.mosque_ids.id]),('to_mosque.id','in',[user.mosque_ids.id]),('from_mosque.center_department_id.id','in',[user.department_ids.id]),('to_mosque.center_department_id.id','in',[user.department_ids.id])]</field>
+
+
+		</record>
+
+		<record model="ir.rule" id="mk_student_prepare_rule">
+		      <field name="name">mk student prepare  rules</field>
+		      <field name="model_id" ref="model_mk_student_prepare"/>
+		      <field name="domain_force">['|',('stage_pre_id.mosque_id.id','in',[user.mosque_ids.id]),('stage_pre_id.mosque_id.center_department_id.id','in',[user.department_ids.id])]</field>
+
+
+		</record>
+
+		<record model="ir.rule" id="mk_student_absence_rule">
+		      <field name="name">mk mk_student_absence  rules</field>
+		      <field name="model_id" ref="model_mk_student_absence"/>
+		      <field name="domain_force">['|',('mosque_id.id','in',[user.mosque_ids.id]),('mosque_id.center_department_id.id','in',[user.department_ids.id])]</field>
+
+
+		</record>
+
+		<record model="ir.rule" id="mk_clearance_rule">
+		      <field name="name">mk clearance  rules</field>
+		      <field name="model_id" ref="model_mk_clearance"/>
+		      <field name="domain_force">['|',('mosque_id.id','in',[user.mosque_ids.id]),('mosque_id.center_department_id.id','in',[user.department_ids.id])]</field>
+
+
+		</record>
+
+		<record model="ir.rule" id="comments_behavior_students_rule">
+		      <field name="name">mk comments_behavior_students  rules</field>
+		      <field name="model_id" ref="model_mk_comments_behavior_students"/>
+		      <field name="domain_force">['|',('masjed.id','in',[user.mosque_ids.id]),('masjed.center_department_id.id','in',[user.department_ids.id])]</field>
+
+
+		</record>
+
+	</data>
+</odoo>

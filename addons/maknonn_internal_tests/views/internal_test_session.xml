@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<openerp>
+		<data>
+		    <record model="ir.actions.act_window" id="in_test_action_mistake_tree1">
+		          <field name="name"> </field>
+		          <field name="res_model">question.error</field>
+		          <field name="view_mode">tree</field>
+		          <field name="type">ir.actions.act_window</field> 
+		          <field name="target">new</field>
+		          <field name="domain">[('question_id','=',active_id)]</field>
+		          <field name="context">{'group_by': 'item'}</field>
+		    </record>
+
+			<record id="student_inte_test_session_form_view" model="ir.ui.view">
+			    <field name= "name">Student Test Session </field>
+			    <field name= "model">episode.student.test.session</field>
+			    <field name= "arch"  type="xml"> 
+			         <form  create="1" delete="0" edit="1">
+			             <sheet>
+			             	<header>
+			             		<button type="object" name="start_exam" string="start session" 
+			             			attrs="{'invisible':[('state','not in',('draft'))]}"
+			             			/>
+			             			<button type="object" name="end_exam" string="end session" 
+			             			attrs="{'invisible':[('state','not in',('start'))]}"
+			             			/>
+			             		<field name="state" widget="statusbar"/>
+			             	</header>
+			             	<group>
+
+			             		<group>
+			             			<field name="student_id"/>
+			             		</group>
+			             		<group>
+			             			<field name="create_date" string="session date"/>
+			             		</group>
+			             		<group>
+			             			<field name="test_id"/>
+			             		</group>
+
+
+			     
+			             	</group>
+			             	<notebook>
+			             	<page string="save questions" attrs="{'invisible':[('state','in',('draft'))]}">
+			             		<field name="test_question">
+			             			<tree>
+			             				<field name="from_surah" options="{'no_create': True,'no_open': True,}"/>
+			             				<field name="from_aya"   options="{'no_create': True,'no_open': True,}"/>
+			             				<field name="to_surah"   options="{'no_create': True,'no_open': True,}"/>
+			             				<field name="to_aya"     options="{'no_create': True,'no_open': True,}"/>
+			             				<field name="text"/>
+			             				<button string="add error" type="action" name="%(in_add_error_actoin)d" 
+			             					context="{'default_question_id':active_id}" 
+			             					
+			             					/>
+			             			
+			             		<button string="view details" type="action" name="%(in_test_action_mistake_tree1)d"
+			        					/>
+			             			</tree>
+			             		</field>
+			             	</page>
+			             	<page string="big review questions" attrs="{'invisible':[('state','in',('draft'))]}">
+			             		<field name="test_question_big">
+			             			<tree>
+			             				<field name="from_surah" options="{'no_create': True,'no_open': True,}"/>
+			             				<field name="from_aya"   options="{'no_create': True,'no_open': True,}"/>
+			             				<field name="to_surah"   options="{'no_create': True,'no_open': True,}"/>
+			             				<field name="to_aya"     options="{'no_create': True,'no_open': True,}"/>
+			             				<field name="text"/>
+			             				<button string="add error"    type="action" name="%(in_add_error_actoin)d" context="{'default_question_id':active_id}"/>
+			             				<button string="view details" type="action" name="%(in_test_action_mistake_tree1)d"/>			             			
+			             			</tree>
+			             		</field>
+			             	</page>
+			             	<page string="Exam Result" attrs="{'invisible':[('state','not in',('done'))]}">
+			             		<group>
+			             		<group>
+			             			<field name="maximum_degree"/>
+			             		</group>
+			             		<group>
+			             			<field name="degree"/>
+			             		</group>
+			            		<group>
+			             			<field name="appreciation"/>
+			             		</group>
+			             	</group>
+
+			             	</page>
+			             
+			             </notebook>
+			             </sheet>
+			         </form>
+			    </field>
+			 </record>
+		
+
+			 <record id="in_student_test_session__tree_view" model="ir.ui.view">
+			    <field name= "name">Student Test Session</field>
+			    <field name= "model">episode.student.test.session</field>
+			   	<field name="arch" type="xml">
+			        <tree create="true">
+
+						<field name="student_id"/>
+						<field name="test_id"/>
+						<field name="state"/>
+				    </tree>
+			   </field>
+			 </record>
+
+			 <record id="st_test_session_action" model="ir.actions.act_window">
+				<field name="name">Student Test Session</field>
+				<field name="res_model">episode.student.test.session</field>
+				<field name="type">ir.actions.act_window</field>
+				<field name="view_type">form</field>
+				<field name="view_mode">tree,form</field>
+				<!--<field name="domain">[]</field>
+				<field name="context">{}</field>
+				<field name="search_view_id" ref="mk_contests_regulatoins_preparation_search_view"/> -->
+		    </record>
+
+
+
+    <!--<record model="ir.ui.view" id="test_mistake_tree">
+          <field name="name">test.mistake.tree</field>
+          <field name="model">question.error</field>
+          <field name="arch" type="xml">
+             <tree editable="bottom">
+                  <field name="item"/>
+                  <field name="value"/>
+              </tree>
+         </field>
+      </record>
+		-->
+
+		   <menuitem
+              id="in_student_test_session_menu"
+              name="Student internal Test Session"
+              action="st_test_session_action"
+              parent="mk_student_managment.manage_student_menu"
+              sequence="2"
+            />	
+
+            </data>
+         </openerp>
+
+
+
+

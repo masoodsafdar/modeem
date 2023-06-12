@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+<template id="maknoon_icons.layout" inherit_id="web.layout" name="maknoon_favicon">
+            <xpath expr="//head//link" position="replace">
+
+                <link type="image/x-icon" rel="shortcut icon" t-att-href="x_icon or 'maknoon_icons/static/src/img/favicon.ico'"/>
+            </xpath>
+</template>
+</odoo>
+

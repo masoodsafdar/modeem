@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data noupdate="1">
+
+
+
+
+<record model="ir.module.category" id="episode_master">
+  <field name="name">Episode Master</field>
+  <field name="description">User access level for this module</field>
+  <field name="sequence">3</field>
+</record>
+
+
+
+<record id="episode_creation" model="res.groups">
+     <field name="name">Episode Creation</field>
+     <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+     <field name="users" eval="[(4, ref('base.user_root'))]"/>
+     <field name="category_id" ref="episode_master"/>
+</record>
+
+
+
+<record id="edit_or_modify_episode" model="res.groups">
+     <field name="name">Edit or Modify Episode</field>
+     <field name="implied_ids" eval="[(4, ref('base.group_user')),(4, ref('mk_program_management.mk_episode_path_write_group'))]"/>
+     <field name="users" eval="[(4, ref('base.user_root'))]"/>
+     <field name="category_id" ref="episode_master"/>
+</record>
+
+
+
+<record id="read_episode" model="res.groups">
+     <field name="name">Read Episode</field>
+     <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+     <field name="users" eval="[(4, ref('base.user_root'))]"/>
+     <field name="category_id" ref="episode_master"/>
+</record>
+
+
+
+<record id="accept_deny_inactivate" model="res.groups">
+     <field name="name">Accept Deny Inactivate</field>
+     <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+     <field name="users" eval="[(4, ref('base.user_root'))]"/>
+     <field name="category_id" ref="episode_master"/>
+</record>
+
+
+
+<record id="students_activate" model="res.groups">
+     <field name="name">Students Activate</field>
+     <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+     <field name="users" eval="[(4, ref('base.user_root'))]"/>
+     <field name="category_id" ref="episode_master"/>
+</record>
+
+
+
+<record id="students_placement_to_episode" model="res.groups">
+     <field name="name">Students Placement to Episode</field>
+     <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+     <field name="users" eval="[(4, ref('base.user_root'))]"/>
+     <field name="category_id" ref="episode_master"/>
+</record>
+
+
+
+<record id="episode_settings" model="res.groups">
+     <field name="name">Episode Settings</field>
+     <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+     <field name="users" eval="[(4, ref('base.user_root'))]"/>
+     <field name="category_id" ref="episode_master"/>
+</record>
+
+</data>
+</openerp>

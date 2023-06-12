@@ -1,0 +1,184 @@
+<odoo>
+    <data noupdate="1">
+        <record id="mk_link1" model="mk.link">
+            <field name="student_id" ref="mk_student_register1"/>
+            <field name="year" ref="mk_study_year1"/>
+            <field name="registeration_date">2020-10-27</field>
+            <field name="mosq_id" ref="mk_mosque1"/>
+            <field name="episode_id" ref="mk_episode01"/>
+            <field name="type_order">assign_ep</field>
+            <field name="program_type">open</field>
+            <field name="program_id" ref="mk_program1"/>
+            <field name="approach_id"/>
+            <field name="is_memorize" eval="True"/>
+            <field name="page_id" ref="mk_memorize_method1"/>
+            <field name="surah_from_mem_id" ref="mk_surah2"/>
+            <field name="aya_from_mem_id" ref="mk_surah_verses1"/>
+            <field name="memory_direction">up</field>
+            <field name="save_start_point" ref="mk_subject_page6238"/>
+            <field name="is_big_review" eval="True"/>
+            <field name="qty_review_id" ref="mk_memorize_method2"/>
+            <field name="qty_read_id" ref="mk_memorize_method2"/>
+            <field name="surah_from_rev_id" ref="mk_surah2"/>
+            <field name="aya_from_rev_id" ref="mk_surah_verses1"/>
+            <field name="review_direction">up</field>
+            <field name="start_point" ref="mk_subject_page6238"/>
+            <field name="is_min_review" eval="True"/>
+            <field name="is_tlawa" eval="True"/>
+            <field name="surah_from_read_id" ref="mk_surah2"/>
+            <field name="aya_from_read_id" ref="mk_surah_verses1"/>
+            <field name="read_direction">up</field>
+            <field name="read_start_point" ref="mk_subject_page6238"/>
+            <field name="state">accept</field>
+            <field name="selected_period">aasr</field>
+            <field name="subh" eval="False"/>
+            <field name="zuhr" eval="False"/>
+            <field name="aasr" eval="False"/>
+            <field name="magrib" eval="False"/>
+            <field name="esha" eval="False"/>
+            <field name="approache" ref="mk_approache1"/>
+            <field name="gender">men</field>
+            <field name="domain_days" eval="[(4, ref('educational_data.mk_work_days1')),
+                    (4, ref('educational_data.mk_work_days2')), (4, ref('educational_data.mk_work_days3')),
+                    (4, ref('educational_data.mk_work_days4')),(4, ref('educational_data.mk_work_days5'))]"/>
+            <field name="student_days" eval="[(4, ref('educational_data.mk_work_days1')),
+                    (4, ref('educational_data.mk_work_days2')), (4, ref('educational_data.mk_work_days3')),
+                    (4, ref('educational_data.mk_work_days4')),(4, ref('educational_data.mk_work_days5'))]"/>
+        </record>
+        <record id="mk_link2" model="mk.link">
+            <field name="student_id" ref="mk_student_register2"/>
+            <field name="year" ref="mk_study_year1"/>
+            <field name="registeration_date">2020-10-27</field>
+            <field name="mosq_id" ref="mk_mosque1"/>
+            <field name="episode_id" ref="mk_episode01"/>
+            <field name="type_order">assign_ep</field>
+            <field name="program_type">open</field>
+            <field name="program_id" ref="mk_program1"/>
+            <field name="approach_id"/>
+            <field name="is_memorize" eval="True"/>
+            <field name="page_id" ref="mk_memorize_method1"/>
+            <field name="surah_from_mem_id" ref="mk_surah2"/>
+            <field name="aya_from_mem_id" ref="mk_surah_verses1"/>
+            <field name="memory_direction">up</field>
+            <field name="save_start_point" ref="mk_subject_page6238"/>
+            <field name="is_big_review" eval="True"/>
+            <field name="qty_review_id"  ref="mk_memorize_method2"/>
+            <field name="qty_read_id" ref="mk_memorize_method2"/>
+            <field name="surah_from_rev_id" ref="mk_surah2"/>
+            <field name="aya_from_rev_id" ref="mk_surah_verses1"/>
+            <field name="review_direction">up</field>
+            <field name="start_point" ref="mk_subject_page6238"/>
+            <field name="is_min_review" eval="True"/>
+            <field name="is_tlawa" eval="True"/>
+            <field name="surah_from_read_id" ref="mk_surah2"/>
+            <field name="aya_from_read_id" ref="mk_surah_verses1"/>
+            <field name="read_direction">up</field>
+            <field name="read_start_point" ref="mk_subject_page6238"/>
+            <field name="state">accept</field>
+            <field name="selected_period">aasr</field>
+            <field name="subh" eval="False"/>
+            <field name="zuhr" eval="False"/>
+            <field name="aasr" eval="False"/>
+            <field name="magrib" eval="False"/>
+            <field name="esha" eval="False"/>
+            <field name="approache" ref="mk_approache1"/>
+            <field name="gender">men</field>
+            <field name="domain_days" eval="[(4, ref('educational_data.mk_work_days1')),
+                    (4, ref('educational_data.mk_work_days2')), (4, ref('educational_data.mk_work_days3')),
+                    (4, ref('educational_data.mk_work_days4')),(4, ref('educational_data.mk_work_days5'))]"/>
+            <field name="student_days" eval="[(4, ref('educational_data.mk_work_days1')),
+                    (4, ref('educational_data.mk_work_days2')), (4, ref('educational_data.mk_work_days3')),
+                    (4, ref('educational_data.mk_work_days4')),(4, ref('educational_data.mk_work_days5'))]"/>
+        </record>
+        <record id="mk_link3" model="mk.link">
+            <field name="student_id" ref="mk_student_register3"/>
+            <field name="year" ref="mk_study_year1"/>
+            <field name="registeration_date">2020-10-27</field>
+            <field name="mosq_id" ref="mk_mosque2"/>
+            <field name="episode_id" ref="mk_episode03"/>
+            <field name="type_order">assign_ep</field>
+            <field name="program_type">open</field>
+            <field name="program_id" ref="mk_program1"/>
+            <field name="approach_id"/>
+            <field name="is_memorize" eval="True"/>
+            <field name="page_id" ref="mk_memorize_method9"/>
+            <field name="surah_from_mem_id" ref="mk_surah2"/>
+            <field name="aya_from_mem_id" ref="mk_surah_verses8"/>
+            <field name="memory_direction">down</field>
+            <field name="save_start_point" ref="mk_subject_page21574"/>
+            <field name="is_big_review" eval="True"/>
+            <field name="qty_review_id" ref="mk_memorize_method12"/>
+            <field name="qty_read_id" ref="mk_memorize_method12"/>
+            <field name="surah_from_rev_id" ref="mk_surah2"/>
+            <field name="aya_from_rev_id" ref="mk_surah_verses8"/>
+            <field name="review_direction">down</field>
+            <field name="start_point" ref="mk_subject_page21574"/>
+            <field name="is_min_review" eval="True"/>
+            <field name="is_tlawa" eval="True"/>
+            <field name="surah_from_read_id" ref="mk_surah2"/>
+            <field name="aya_from_read_id" ref="mk_surah_verses8"/>
+            <field name="read_direction">down</field>
+            <field name="read_start_point" ref="mk_subject_page21574"/>
+            <field name="state">accept</field>
+            <field name="selected_period">aasr</field>
+            <field name="subh" eval="False"/>
+            <field name="zuhr" eval="False"/>
+            <field name="aasr" eval="False"/>
+            <field name="magrib" eval="False"/>
+            <field name="esha" eval="False"/>
+            <field name="approache" ref="mk_approache1"/>
+            <field name="gender">men</field>
+            <field name="domain_days" eval="[(4, ref('educational_data.mk_work_days1')),
+                    (4, ref('educational_data.mk_work_days2')), (4, ref('educational_data.mk_work_days3')),
+                    (4, ref('educational_data.mk_work_days4')),(4, ref('educational_data.mk_work_days5'))]"/>
+            <field name="student_days" eval="[(4, ref('educational_data.mk_work_days1')),
+                    (4, ref('educational_data.mk_work_days2')), (4, ref('educational_data.mk_work_days3')),
+                    (4, ref('educational_data.mk_work_days4')),(4, ref('educational_data.mk_work_days5'))]"/>
+        </record>
+        <record id="mk_link4" model="mk.link">
+            <field name="student_id" ref="mk_student_register4"/>
+            <field name=" year" ref="mk_study_year1"/>
+            <field name="registeration_date">2020-10-27</field>
+            <field name="mosq_id" ref="mk_mosque2"/>
+            <field name="episode_id" ref="mk_episode03"/>
+            <field name="type_order">assign_ep</field>
+            <field name="program_type">open</field>
+            <field name="program_id" ref="mk_program1"/>
+            <field name="approach_id"/>
+            <field name="is_memorize" eval="True"/>
+            <field name="page_id" ref="mk_memorize_method9"/>
+            <field name="surah_from_mem_id" ref="mk_surah2"/>
+            <field name="aya_from_mem_id" ref="mk_surah_verses8"/>
+            <field name="memory_direction">down</field>
+            <field name="save_start_point" ref="mk_subject_page21574"/>
+            <field name="is_big_review" eval="True"/>
+            <field name="qty_review_id" ref="mk_memorize_method12"/>
+            <field name="qty_read_id" ref="mk_memorize_method12"/>
+            <field name="surah_from_rev_id" ref="mk_surah2"/>
+            <field name="aya_from_rev_id" ref="mk_surah_verses8"/>
+            <field name="review_direction">down</field>
+            <field name="start_point" ref="mk_subject_page21574"/>
+            <field name="is_min_review" eval="True"/>
+            <field name="is_tlawa" eval="True"/>
+            <field name="surah_from_read_id" ref="mk_surah2"/>
+            <field name="aya_from_read_id" ref="mk_surah_verses8"/>
+            <field name="read_direction">down</field>
+            <field name="read_start_point" ref="mk_subject_page21574"/>
+            <field name="state">accept</field>
+            <field name="selected_period">aasr</field>
+            <field name="subh" eval="False"/>
+            <field name="zuhr" eval="False"/>
+            <field name="aasr" eval="False"/>
+            <field name="magrib" eval="False"/>
+            <field name="esha" eval="False"/>
+            <field name="approache" ref="mk_approache1"/>
+            <field name="gender">men</field>
+            <field name="domain_days" eval="[(4, ref('educational_data.mk_work_days1')),
+                    (4, ref('educational_data.mk_work_days2')), (4, ref('educational_data.mk_work_days3')),
+                    (4, ref('educational_data.mk_work_days4')),(4, ref('educational_data.mk_work_days5'))]"/>
+            <field name="student_days" eval="[(4, ref('educational_data.mk_work_days1')),
+                    (4, ref('educational_data.mk_work_days2')), (4, ref('educational_data.mk_work_days3')),
+                    (4, ref('educational_data.mk_work_days4')),(4, ref('educational_data.mk_work_days5'))]"/>
+        </record>
+    </data>
+</odoo>

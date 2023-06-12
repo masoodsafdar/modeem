@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="1">
+		<record id="sms_template_support" model="mk.sms_template">
+		    <field name="name">الدعم الفني</field>
+		    <field name="code">mk_send_support</field>
+		    <field name="sms_text"> تم إغلاق تذكرة الدعم الخاصة بك من قبل موظفينا </field>
+		</record>
+
+<record id="sms_template_support_open" model="mk.sms_template">
+		    <field name="name">الدعم الفني</field>
+		    <field name="code">mk_send_support_open</field>
+		    <field name="sms_text"> لقد تم استقبال تذكرة الدعم وسوف يتم الرجوع لك في اقرب وقت </field>
+		</record>
+<record id="sms_template_support_reply" model="mk.sms_template">
+		    <field name="name">الدعم الفني</field>
+		    <field name="code">mk_send_support_reply</field>
+		    <field name="sms_text"> لقد تم الرد علي تذكرة الدعم الخاص بك </field>
+		</record>
+
+	</data>
+</openerp>

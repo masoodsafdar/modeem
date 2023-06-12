@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+    	<!--record model="educational_supervison.edu_field" id="0">
+            <field name="name">permision_requests</field>
+            <field name="number">0</field>   
+        </record-->
+    	<record model="edu.criterion" id="2120">
+            <field name="criterion_number">0</field>
+            <field name="name">التصاريح والتكاليف</field>
+            <!--field name="field">0</field>
+            <field name="criterion_weight">0.00</field-->
+        </record>
+    	<!--record model="educational_supervison.edu_item" id="0">
+            <field name="name">permision_requests</field>
+            <field name="item_degree">0</field>
+            <field name="item_description">permision_requests</field>
+            <field name="item_type">permision_requests</field>
+        </record-->
+</data>
+</odoo>
+
+
+

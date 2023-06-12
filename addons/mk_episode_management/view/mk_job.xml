@@ -1,0 +1,31 @@
+<odoo>
+    <data>
+ 		<record model="ir.ui.view" id="view_hr_job_form_inherit2">
+    		<field name="name">view_hr_job_form.inherit2</field>
+    		<field name="model">hr.job</field>
+    		<field name="inherit_id" ref="hr.view_hr_job_form"/>
+    		<field name="arch" type="xml">            
+				<field name="educational_job"  position="before">                         
+					<field name="is_role" string="مرتبط بدور وظيفي"/>
+					<field name="role_id" string="الدور الوظيفي" options="{'no_create': 1, 'no_open':1}"/>
+            	</field>
+     		</field>
+    	</record>
+    	
+		<record model='ir.ui.menu' id='hr_recruitment.menu_hr_recruitment_root'>
+			<field name='groups_id' eval="[(6,0,[ref('hr_recruitment.group_hr_recruitment_manager')])]"/>
+		</record>
+
+        <record model="ir.ui.view" id="view_job_search_role">
+            <field name="name">hr.job.search.role.inherit</field>
+            <field name="model">hr.job</field>
+            <field name="inherit_id" ref="hr.view_job_filter"/>
+            <field name="arch" type="xml">
+                <group position="inside">                        
+                      <filter name="is_role" string="لها دور وظيفي" domain="[('is_role','=',True)]"/>
+                </group>
+            </field>
+        </record>
+
+    </data>  
+</odoo>

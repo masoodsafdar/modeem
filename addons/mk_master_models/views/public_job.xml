@@ -1,0 +1,60 @@
+<odoo>
+    <data>    
+		<record id="mk_job_form_view" model="ir.ui.view">
+        	<field name="name">Job Form View</field>
+          	<field name="model">mk.job</field>
+          	<field name="arch" type="xml">
+            	<form string = "Job ">
+		  			<header>		    
+		  			</header>
+		  			
+		  			<sheet>
+			  			<group>
+			  				<field name="name" colspan="1" style="width:50%"/>
+			  				<field name="age_categories" widget="many2many_tags" colspan="3"/>
+			  			</group>
+	  				</sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+              	</form>
+             </field>
+         </record>
+
+        <record id="mk_job_tree_view" model="ir.ui.view">
+            <field name="name">Job Tree View</field>
+            <field name="model">mk.job</field>
+            <field name="arch" type="xml">
+                <tree delete="0" string="Job ">
+                	<field name="name" />
+                	<field name="age_categories" widget="many2many_tags"/>
+                </tree>
+            </field>
+        </record>
+        
+        <record id="mk_job_search_view" model="ir.ui.view">
+            <field name="name">Job Search View</field>
+            <field name="model">mk.job</field>
+            <field name="arch" type="xml">
+                <search string="Job ">
+                    <field name="name" string="Job " filter_domain="[('name','ilike', self)]"/>
+                </search>
+            </field>
+        </record>
+        
+        <record id="mk_job_action" model="ir.actions.act_window">
+            <field name="name">public jobs </field>
+            <field name="res_model">mk.job</field>
+            <field name="type">ir.actions.act_window</field>
+            <!-- <field name="view_type">form</field> -->
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+            <field name="search_view_id" ref="mk_job_search_view"/>
+        </record>
+
+		<menuitem name="Public Jobs" id="mk_job_menu" sequence="5" parent="mk_associate_management_settings_menu" action="mk_job_action"/>    
+
+    </data>  
+</odoo>

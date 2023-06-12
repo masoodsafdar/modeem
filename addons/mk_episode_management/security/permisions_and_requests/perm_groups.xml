@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data noupdate="1">
+		<record model="ir.module.category" id="permisions_and_requests">
+			<field name="name">permisions  and  requests</field>
+			<field name="description">User access level for this module</field>
+			<field name="sequence">3</field>
+		</record>
+
+		<record id="read_mosque_eval" model="res.groups">
+			<field name="name">read mosque eval</field>
+			<field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+			<field name="users" eval="[(4, ref('base.user_root'))]"/>
+			<field name="category_id" ref="permisions_and_requests"/>
+		</record>
+
+		<record id="create_mosque_eval" model="res.groups">
+			<field name="name">create mosque evaln</field>
+			<field name="implied_ids" eval="[(4, ref('read_mosque_eval'))]"/>
+			<field name="users" eval="[(4, ref('base.user_root'))]"/>
+			<field name="category_id" ref="permisions_and_requests"/>
+		</record>
+
+		<record id="edit_mosque_eval" model="res.groups">
+			<field name="name">Edit mosque eval</field>
+			<field name="implied_ids" eval="[(4, ref('read_mosque_eval'))]"/>
+			<field name="users" eval="[(4, ref('base.user_root'))]"/>
+			<field name="category_id" ref="permisions_and_requests"/>
+		</record>
+
+		<record id="read_mosque_eval_location" model="res.groups">
+			<field name="name">read mosque eval location</field>
+			<field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+			<field name="users" eval="[(4, ref('base.user_root'))]"/>
+			<field name="category_id" ref="permisions_and_requests"/>
+		</record>
+
+		<record id="create_mosque_eval_location" model="res.groups">
+			<field name="name">create mosque eval location</field>
+			<field name="implied_ids" eval="[(4, ref('read_mosque_eval_location'))]"/>
+			<field name="users" eval="[(4, ref('base.user_root'))]"/>
+			<field name="category_id" ref="permisions_and_requests"/>
+		</record>
+
+		<record id="edit_mosque_eval_location" model="res.groups">
+			<field name="name">edit mosque eval location</field>
+			<field name="implied_ids" eval="[(4, ref('read_mosque_eval_location'))]"/>
+			<field name="users" eval="[(4, ref('base.user_root'))]"/>
+			<field name="category_id" ref="permisions_and_requests"/>
+		</record>
+
+		<record id="read_mosque_permision" model="res.groups">
+			<field name="name">read mosque permision</field>
+			<field name="implied_ids" eval="[(4, ref('base.group_user'),ref('read_mosque_eval'),ref('read_mosque_eval_location'))]"/>
+			<field name="users" eval="[(4, ref('base.user_root'))]"/>
+			<field name="category_id" ref="permisions_and_requests"/>
+		</record>
+
+		<record id="create_mosque_permision" model="res.groups">
+			<field name="name">create mosque permision</field>
+			<field name="implied_ids" eval="[(4, ref('read_mosque_permision'),ref('read_mosque_eval'),ref('read_mosque_eval_location'))]"/>
+			<field name="users" eval="[(4, ref('base.user_root'))]"/>
+			<field name="category_id" ref="permisions_and_requests"/>
+		</record>
+
+		<record id="edit_mosque_permision" model="res.groups">
+			<field name="name">Edit mosque permision</field>
+			<field name="implied_ids" eval="[(4, ref('read_mosque_permision'),ref('read_mosque_eval'),ref('read_mosque_eval_location'))]"/>
+			<field name="users" eval="[(4, ref('base.user_root'))]"/>
+			<field name="category_id" ref="permisions_and_requests"/>
+		</record>
+
+		<record id="supervisor_visit_mosque_permision" model="res.groups">
+			<field name="name">supervisor visit mosque permision</field>
+			<field name="implied_ids" eval="[(4, ref('read_mosque_permision'))]"/>
+			<field name="users" eval="[(4, ref('base.user_root'))]"/>
+			<field name="category_id" ref="permisions_and_requests"/>
+		</record>
+
+		<record id="temporary_mosque_permision" model="res.groups">
+			<field name="name">temporary mosque permision</field>
+			<field name="implied_ids" eval="[(4, ref('read_mosque_permision'))]"/>
+			<field name="users" eval="[(4, ref('base.user_root'))]"/>
+			<field name="category_id" ref="permisions_and_requests"/>
+		</record>
+
+		<record id="permanent_mosque_permision" model="res.groups">
+			<field name="name">permanent mosque permision</field>
+			<field name="implied_ids" eval="[(4, ref('read_mosque_permision'))]"/>
+			<field name="users" eval="[(4, ref('base.user_root'))]"/>
+			<field name="category_id" ref="permisions_and_requests"/>
+		</record>
+		
+		<record id="action_validation_mosque_permision" model="res.groups">
+			<field name="name">إعتماد تصريح المسجد</field>
+			<field name="implied_ids" eval="[(4, ref('edit_mosque_permision'))]"/>
+			<field name="users" eval="[(4, ref('base.user_root'))]"/>
+			<field name="category_id" ref="permisions_and_requests"/>
+		</record>
+		
+		<record id="action_unvalid_mosque_permision" model="res.groups">
+			<field name="name">إلغاء إعتماد تصريح المسجد</field>
+			<field name="implied_ids" eval="[(4, ref('edit_mosque_permision'))]"/>
+			<field name="users" eval="[(4, ref('base.user_root'))]"/>
+			<field name="category_id" ref="permisions_and_requests"/>
+		</record>		
+
+		<record id="transfer_mosque_permision" model="res.groups">
+			<field name="name">transfer mosque permision</field>
+			<field name="implied_ids" eval="[(4, ref('read_mosque_permision'))]"/>
+			<field name="users" eval="[(4, ref('base.user_root'))]"/>
+			<field name="category_id" ref="permisions_and_requests"/>
+		</record>
+
+		<record id="renew_mosque_permision" model="res.groups">
+			<field name="name">renew mosque permision</field>
+			<field name="implied_ids" eval="[(4, ref('read_mosque_permision'))]"/>
+			<field name="users" eval="[(4, ref('base.user_root'))]"/>
+			<field name="category_id" ref="permisions_and_requests"/>
+		</record>
+
+		<record id="frize_mosque_permision" model="res.groups">
+			<field name="name">frize mosque permision</field>
+			<field name="implied_ids" eval="[(4, ref('read_mosque_permision'))]"/>
+			<field name="users" eval="[(4, ref('base.user_root'))]"/>
+			<field name="category_id" ref="permisions_and_requests"/>
+		</record>
+
+		<record id="exption_mosque_permision" model="res.groups">
+			<field name="name">exption mosque permision</field>
+			<field name="implied_ids" eval="[(4, ref('read_mosque_permision'))]"/>
+			<field name="users" eval="[(4, ref('base.user_root'))]"/>
+			<field name="category_id" ref="permisions_and_requests"/>
+		</record>
+
+		<record id="reject_mosque_permision" model="res.groups">
+			<field name="name">reject mosque permision</field>
+			<field name="implied_ids" eval="[(4, ref('read_mosque_permision'))]"/>
+			<field name="users" eval="[(4, ref('base.user_root'))]"/>
+			<field name="category_id" ref="permisions_and_requests"/>
+		</record>
+
+		<record id="set_draft_mosque_permision" model="res.groups">
+			<field name="name">ارجاع التصريح الي حالة مبدئي</field>
+			<field name="implied_ids" eval="[(4, ref('read_mosque_permision'))]"/>
+			<field name="users" eval="[(4, ref('base.user_root'))]"/>
+			<field name="category_id" ref="permisions_and_requests"/>
+		</record>
+
+		<record id="read_mosque_supervisor_requests" model="res.groups">
+			<field name="name">read mosque supervisor requests</field>
+			<field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+			<field name="users" eval="[(4, ref('base.user_root'))]"/>
+			<field name="category_id" ref="permisions_and_requests"/>
+		</record>
+
+		<record id="create_mosque_supervisor_requests" model="res.groups">
+			<field name="name">create mosque supervisor requests</field>
+			<field name="implied_ids" eval="[(4, ref('read_mosque_supervisor_requests'))]"/>
+			<field name="users" eval="[(4, ref('base.user_root'))]"/>
+			<field name="category_id" ref="permisions_and_requests"/>
+		</record>
+
+		<record id="edit_mosque_supervisor_requests" model="res.groups">
+			<field name="name">edit mosque supervisor requests</field>
+			<field name="implied_ids" eval="[(4, ref('read_mosque_supervisor_requests'))]"/>
+			<field name="users" eval="[(4, ref('base.user_root'))]"/>
+			<field name="category_id" ref="permisions_and_requests"/>
+		</record>
+		
+		<record id="action_validation_mosque_supervisor_request" model="res.groups">
+			<field name="name">إعتماد تكليف المشرف</field>
+			<field name="implied_ids" eval="[(4, ref('mk_episode_management.edit_mosque_supervisor_requests'))]"/>
+			<field name="users" eval="[(4, ref('base.user_root'))]"/>
+			<field name="category_id" ref="permisions_and_requests"/>
+		</record>
+		
+		<record id="action_unvalid_mosque_supervisor_request" model="res.groups">
+			<field name="name">إلغاء إعتماد تكليف المشرف</field>
+			<field name="implied_ids" eval="[(4, ref('mk_episode_management.edit_mosque_supervisor_requests'))]"/>
+			<field name="users" eval="[(4, ref('base.user_root'))]"/>
+			<field name="category_id" ref="permisions_and_requests"/>
+		</record>				
+
+		<record id="read_mosque_supervisor_reports" model="res.groups">
+			<field name="name">read mosque supervisor reports</field>
+			<field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+			<field name="users" eval="[(4, ref('base.user_root'))]"/>
+			<field name="category_id" ref="permisions_and_requests"/>
+		</record>
+
+		<record id="create_mosque_supervisor_reports" model="res.groups">
+			<field name="name">create mosque supervisor reports</field>
+			<field name="implied_ids" eval="[(4, ref('read_mosque_supervisor_reports'))]"/>
+			<field name="users" eval="[(4, ref('base.user_root'))]"/>
+			<field name="category_id" ref="permisions_and_requests"/>
+		</record>
+
+		<record id="edit_mosque_supervisor_reports" model="res.groups">
+			<field name="name">edit mosque supervisor report</field>
+			<field name="implied_ids" eval="[(4, ref('read_mosque_supervisor_reports'))]"/>
+			<field name="users" eval="[(4, ref('base.user_root'))]"/>
+			<field name="category_id" ref="permisions_and_requests"/>
+		</record>
+
+		<record id="search_mosque_supervisor_reports" model="res.groups">
+			<field name="name">search mosque supervisor reports</field>
+			<field name="implied_ids" eval="[(4, ref('read_mosque_supervisor_reports'))]"/>
+			<field name="users" eval="[(4, ref('base.user_root'))]"/>
+			<field name="category_id" ref="permisions_and_requests"/>
+		</record>
+
+		<record id="mosque_supervisor_menu_reports" model="res.groups">
+		    <field name="name"> menu mosque supervisor requests</field>
+		    <field name="implied_ids" eval="[(4, ref('read_mosque_supervisor_reports'))]"/>
+		    <field name="users" eval="[(4, ref('base.user_root'))]"/>
+		    <field name="category_id" ref="permisions_and_requests"/>
+		</record>
+
+		<record id="all_write" model="res.groups">
+			<field name="name">‫‪all</field>
+			<field name="users" eval="[(4, ref('base.user_root'))]"/>
+			<field name="implied_ids" eval="[(6,0,[ref('create_mosque_eval'),ref('create_mosque_eval_location'),ref('create_mosque_permision'),ref('supervisor_visit_mosque_permision'),ref('temporary_mosque_permision'),ref('permanent_mosque_permision'),ref('transfer_mosque_permision'), ref('renew_mosque_permision') , ref('frize_mosque_permision'), ref('exption_mosque_permision'), ref('reject_mosque_permision'), ref('create_mosque_supervisor_requests'), ref('create_mosque_supervisor_reports'), ref('search_mosque_supervisor_reports'), ref('mosque_supervisor_menu_reports')])]"/>
+			<field name="category_id" ref="permisions_and_requests"/>
+		</record>
+
+		<record id="read_mosque_supervisor_requests_and_permissions" model="res.groups">
+			<field name="name">الاطلاع على تصاريح المسجد و تكاليف المشرف</field>
+			<field name="implied_ids" eval="[(6,0,[ref('read_mosque_supervisor_requests'),ref('read_mosque_permision')])]"/>
+			<field name="users" eval="[(4, ref('base.user_root'))]"/>
+			<field name="category_id" ref="permisions_and_requests"/>
+		</record>
+
+		<record id="update_mosque_center" model="res.groups">
+			<field name="name">update mosque center</field>
+			<field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+			<field name="users" eval="[(4, ref('base.user_root'))]"/>
+			<field name="category_id" ref="permisions_and_requests"/>
+		</record>
+	</data>
+</openerp>

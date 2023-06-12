@@ -1,0 +1,136 @@
+<openerp>
+    <data>
+    
+        <record id="mk_mk_course_calibration_tree_view" model="ir.ui.view">
+            <field name="name">course calibration Tree View</field>
+            <field name="model">mk.course.calibration</field>
+            <field name="arch" type="xml">
+                <tree delete="0" string="course calibration ">
+                	<field name="course_id"/>
+                    <field name="students_no"/>
+                    <field name="teachers_no"/>
+                </tree>
+            </field>
+        </record>
+                
+		<record id="mk_course_calibration_form_view" model="ir.ui.view">
+			<field name="name">course calibration Form View</field>
+          	<field name="model">mk.course.calibration</field>
+          	<field name="arch" type="xml">
+				<form string = "course calibration " delete="0">
+					<header>                   
+						<button name="accept_validate" string="Validate"     type="object" class="btn btn-sm oe_button" attrs="{'invisible':['|',('state', 'in', ('accept','reject'))]}" groups="mk_intensive_courses.accept_reject_course_calibration"/> 
+                   		<button name="reject_validate" string="reject"       type="object" class="btn btn-sm oe_button" attrs="{'invisible':['|',('state', 'in', ('accept','reject'))]}" groups="mk_intensive_courses.accept_reject_course_calibration"/>
+                   		<button name="draft_validate"  string="Set to draft" type="object" class="oe_highlight"         attrs="{'invisible':['|',('state', 'not in', ('reject'))]}" />
+                   		
+                   		<field name="state" widget="statusbar"/>
+                 	</header>
+                 	
+                 	<sheet>
+                   		<group>
+                   			<group>
+	                   			<field name="type_course_id" options="{'no_create': 1, 'no_open':1}"/>
+	                   			<field name="mosque_ids"     options="{'no_create': 1, 'no_open':1}" invisible="1" widget="many2many_tags"/>
+	                   			<field name="mosque_id"      options="{'no_create': 1, 'no_open':1}" domain="[('id','in',mosque_ids)]"/>
+	                     		<field name="course_id"      options="{'no_create': 1, 'no_open':1}" domain="[('course','=',type_course_id),
+	                     																					  ('state','=','accept'),
+	                     																					  ('mosque_id','=',mosque_id)]" string="الدورة"/>
+	                     		<field name="students_no"/>
+	                     		<field name="teachers_no"/>	                     		                   			
+                   			</group>
+
+							<group>
+								<line>
+									<label for="subh"/>
+									<field name="subh"/>
+									
+									<label for="zaher"/>
+									<field name="zaher"/>
+									
+									<label for="asor"/>
+									<field name="asor"/>
+									
+									<label for="mog"/>
+									<field name="mog"/>
+						
+									<label for="esha"/>
+									<field name="esha"/>
+								</line>							
+							</group>
+ 						</group>
+                                     
+                    	<group>
+                      		<field name="standards_id">
+                        		<tree string="standards" editable="top">
+		                          <field name="evaluation"   options="{'no_create': 1, 'no_open':1}"/>
+		                          <field name="standard_ids" options="{'no_create': 1, 'no_open':1}" domain="[('course_id', '=', evaluation)]" widget="many2many_tags"/>
+		                          <field name="degree"/>
+		                          <field name="due" required="True"/>
+		                          <field name="desc"/>
+		                          <field name="check_atta" invisible="1"/>
+		                          <field name="attach"  filename="file_name" string="attach file"/>
+                        		</tree>
+                      		</field>
+                    	</group>
+                    	
+                    	<group>
+                    		<field name="total"/>
+                    	</group>              
+              		</sheet>
+					<div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+           		</form>
+        	</field>
+    	</record>
+       
+		<record id="mk_coursr_calibration_search_view" model="ir.ui.view">
+	       <field name="name">mk course calibration search</field>
+	   	   <field name="model">mk.course.calibration</field>
+	       <field name="arch" type="xml">
+		    	<search>
+		    		<field name="type_course_id"/> 
+		    		<field name="mosque_id"/> 
+		    		<field name="course_id"/>
+		    		<field name="students_no"/>
+		    		<field name="teachers_no"/> 
+					
+					<filter name="subh"          string="الفجر"           domain="[('subh', '=',True)]"/>
+		    		<separator/>
+					<filter name="zaher"         string="الظهر"           domain="[('zaher', '=',True)]"/>
+					<separator/>
+					<filter name="asor"          string="العصر"           domain="[('asor', '=',True)]"/>
+					<separator/>
+					<filter name="mog"           string="المغرب"          domain="[('mog', '=',True)]"/>
+					<separator/>
+					<filter name="esha"          string="العشاء"          domain="[('esha', '=',True)]"/>
+					<separator/>
+					<filter name="draft"         string="مبدئي"           domain="[('state','=','draft')]"/>
+                    <filter name="accept"        string="موافقة"          domain="[('state','=','accept')]"/>
+                    <filter name="reject"        string="رفض"             domain="[('state','=','reject')]"/> 
+		    	
+		    		<group expand="0" string="Group By">
+	                    <filter name="type_course_id"    string="نوع الدورة" context="{'group_by': 'type_course_id'}"/>   
+	                    <filter name="course_id"         string="الدورة"     context="{'group_by': 'course_id'}"/>   
+	                    <filter name="mosque_id"         string="المسجد/المدرسة"     context="{'group_by': 'mosque_id'}"/>
+	               	</group>
+		    	</search>
+	       </field>
+		</record>
+			
+        <record id="mk_course_calibration_action" model="ir.actions.act_window">
+            <field name="name">course calibration </field>
+            <field name="res_model">mk.course.calibration</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+            <!--<field name="search_view_id" ref="mk_course_calibration_search_view"/>-->
+        </record>
+
+  		<menuitem name="course calibration" id="mk_course_calibration_menu" sequence="3" parent="mk_courses_eval_menu_in" groups="mk_intensive_courses.read_course_calibration,mk_intensive_courses.edit_course_calibration,mk_intensive_courses.write_course_calibration,mk_intensive_courses.accept_reject_course_calibration" action="mk_course_calibration_action"/>
+
+    </data>  
+</openerp>

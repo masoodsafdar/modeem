@@ -1,0 +1,128 @@
+<openerp>
+    <data>
+        <record id="mk_productivity_form_view" model="ir.ui.view">
+            <field name="name">productivity Form View</field>
+            <field name="model">mk.productivity</field>
+            <field name="arch" type="xml">
+                <form string="Productivity">
+                    <header>
+                        <field name="state" widget="statusbar" statusbar_visible="draft,confirmed,prod_count_done"/>
+                        <button name="action_confirm" string="Confirm" type="object" states="draft" class="oe_highlight"/>
+                        <button name="action_done" string="Productivity count" type="object" states="confirmed" class="oe_highlight"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="teacher_id" options="{'no_create': True,'no_open': True,}"/>
+                            </group>
+                            <group>
+                                <field name="study_year_id" options="{'no_create': True,'no_open': True,}"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="الانتاجية" attrs="{'invisible':[('state','!=','prod_count_done')]}">
+                                <field name="episode_productivity_ids" attrs="{'invisible':[('state','!=','prod_count_done')]}">
+                                    <tree>
+                                        <field name="episode_ids" widget="many2many_tags"/>
+                                        <field name="type_episode_id" options="{'no_create': True,'no_open': True,}"/>
+                                        <field name="productivity"/>
+                                        <field name="type_mark"/>
+                                        <field name="incentive_id" options="{'no_create': True,'no_open': True,}"/>
+                                    </tree>
+                                    <form string="">
+                                        <group>
+                                            <group>
+                                                <field name="episode_ids" widget="many2many_tags"/>
+                                                <field name="type_episode_id" options="{'no_create': True,'no_open': True,}"/>
+                                                <field name="type_test"/>
+                                                <field name="min_students_number"/>
+                                            </group>
+                                            <group>
+                                                <field name="students_number"/>
+                                                <field name="productivity"/>
+                                                <field name="type_mark"/>
+                                                <field name="incentive_id" options="{'no_create': True,'no_open': True,}"/>
+                                            </group>
+                                        </group>
+                                        <separator string="Students tests"/>
+                                        <field name="student_test_ids">
+                                            <tree>
+                                                <field name="student_name"/>
+                                                <field name="masjed_name"/>
+                                                <field name="branch"/>
+                                                <field name="center_id"/>
+                                                <field name="test_time"/>
+                                                <field name="state"/>
+                                            </tree>
+                                        </field>
+                                        <separator string="Teachers tests" attrs="{'invisible':[('type_test','!=','diploma')]}"/>
+                                        <field name="teacher_test_ids" attrs="{'invisible':[('type_test','!=','diploma')]}">
+                                            <tree>
+                                                <field name="emp_id"/>
+                                                <field name="center_id"/>
+                                                <field name="test_name"/>
+                                                <field name="branch"/>
+                                                <field name="date"/>
+                                                <field name="state"/>
+                                            </tree>
+                                        </field>
+                                    </form>
+                                </field>
+                            </page>
+                            <page string="الحلقات" attrs="{'invisible':[('state','==','draft')]}">
+                                <field name="episode_ids" attrs="{'invisible':[('state','==','draft')]}"
+                                       options="{'no_create': True,'no_open': True}"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="mk_productivity_tree_view" model="ir.ui.view">
+            <field name="name">productivity Tree View</field>
+            <field name="model">mk.productivity</field>
+            <field name="arch" type="xml">
+                <tree string="Productivity">
+                    <field name="name"/>
+                    <field name="teacher_id"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="mk_productivity_search_view" model="ir.ui.view">
+            <field name="name">productivity Search View</field>
+            <field name="model">mk.productivity</field>
+            <field name="arch" type="xml">
+                <search string="Productivity">
+                    <field name="name"/>
+                    <field name="teacher_id"/>
+                    <field name="state"/>
+                    <group>
+                        <filter name="group_name" string="الاسم" context="{'group_by': 'name'}"/>
+                        <filter name="group_teacher_id" string="المعلم / المعلمة" context="{'group_by': 'teacher_id'}"/>
+                        <filter name="group_state" string="الحالة" context="{'group_by': 'state'}"/>
+                    </group>
+                    <filter name="draft" string="مبدئي" domain="[('state','=','draft')]"/>
+                    <filter name="confirm" string="مؤكد" domain="[('state','=','confirm')]"/>
+                    <filter name="done" string="منتهي" domain="[('state','=','done')]"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="mk_productivity_action" model="ir.actions.act_window">
+            <field name="name">Productivity management</field>
+            <field name="res_model">mk.productivity</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+        </record>
+
+        <menuitem id="mk_productivity_menu" name="Productivity" parent="mk_productivity_root_menu"
+                  action="mk_productivity_action" sequence="1"/>
+
+    </data>
+</openerp>

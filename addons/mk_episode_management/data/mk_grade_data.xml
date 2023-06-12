@@ -1,0 +1,174 @@
+<odoo>
+    <data noupdate="1">
+        <record id="mk_grade1" model="mk.grade">
+            <field name="name">الحضانة</field>
+            <field name="age_categories" eval="[(4, ref('mk_age_category1'))]"/>
+            <field name="is_parent" eval="False"/>
+            <field name="is_episode" eval="True"/>
+            <field name="type_level">preliminary</field>
+        </record>
+        <record id="mk_grade2" model="mk.grade">
+            <field name="name">تمهيدي</field>
+            <field name="age_categories" eval="[(4, ref('mk_age_category2'))]"/>
+            <field name="is_parent" eval="False"/>
+            <field name="is_episode" eval="True"/>
+            <field name="type_level">preliminary</field>
+        </record>
+        <record id="mk_grade3" model="mk.grade">
+            <field name="name">روضة</field>
+            <field name="age_categories" eval="[(4, ref('mk_age_category2'))]"/>
+            <field name="is_parent" eval="False"/>
+            <field name="is_episode" eval="True"/>
+            <field name="type_level">preliminary</field>
+        </record>
+        <record id="mk_grade4" model="mk.grade">
+            <field name="name">أول إبتدائي</field>
+            <field name="age_categories" eval="[(4, ref('mk_age_category3'))]"/>
+            <field name="is_parent" eval="False"/>
+            <field name="type_level">primary</field>
+        </record>
+        <record id="mk_grade5" model="mk.grade">
+            <field name="name">ثاني إبتدائي</field>
+            <field name="age_categories" eval="[(4, ref('mk_age_category3'))]"/>
+            <field name="is_parent" eval="False"/>
+            <field name="type_level">primary</field>
+        </record>
+        <record id="mk_grade6" model="mk.grade">
+            <field name="name">ثالث إبتدائي</field>
+            <field name="age_categories" eval="[(4, ref('mk_age_category3'))]"/>
+            <field name="is_parent" eval="False"/>
+            <field name="type_level">primary</field>
+        </record>
+        <record id="mk_grade7" model="mk.grade">
+            <field name="name">رابع إبتدائي</field>
+            <field name="age_categories" eval="[(4, ref('mk_age_category4'))]"/>
+            <field name="is_parent" eval="False"/>
+            <field name="type_level">primary</field>
+        </record>
+        <record id="mk_grade8" model="mk.grade">
+            <field name="name">خامس إبتدائي</field>
+            <field name="age_categories" eval="[(4, ref('mk_age_category4'))]"/>
+            <field name="is_parent" eval="False"/>
+            <field name="type_level">primary</field>
+        </record>
+        <record id="mk_grade9" model="mk.grade">
+            <field name="name">سادس إبتدائي</field>
+            <field name="age_categories" eval="[(4, ref('mk_age_category4'))]"/>
+            <field name="is_parent" eval="False"/>
+            <field name="type_level">primary</field>
+        </record>
+        <record id="mk_grade10" model="mk.grade">
+            <field name="name">أول متوسط</field>
+            <field name="age_categories" eval="[(4, ref('mk_age_category5'))]"/>
+            <field name="is_parent" eval="False"/>
+            <field name="type_level">medium</field>
+        </record>
+        <record id="mk_grade11" model="mk.grade">
+            <field name="name">ثاني متوسط</field>
+            <field name="age_categories" eval="[(4, ref('mk_age_category5'))]"/>
+            <field name="is_parent" eval="False"/>
+            <field name="type_level">medium</field>
+        </record>
+        <record id="mk_grade12" model="mk.grade">
+            <field name="name">ثالث متوسط</field>
+            <field name="age_categories" eval="[(4, ref('mk_age_category5'))]"/>
+            <field name="is_parent" eval="False"/>
+            <field name="type_level">medium</field>
+        </record>
+        <record id="mk_grade13" model="mk.grade">
+            <field name="name">أول ثانوي</field>
+            <field name="age_categories" eval="[(4, ref('mk_age_category6'))]"/>
+            <field name="is_parent" eval="False"/>
+            <field name="type_level">secondary</field>
+        </record>
+        <record id="mk_grade14" model="mk.grade">
+            <field name="name">ثاني ثانوي</field>
+            <field name="age_categories" eval="[(4, ref('mk_age_category6'))]"/>
+            <field name="is_parent" eval="False"/>
+            <field name="type_level">secondary</field>
+        </record>
+        <record id="mk_grade15" model="mk.grade">
+            <field name="name">ثالث ثانوي</field>
+            <field name="age_categories" eval="[(4, ref('mk_age_category6'))]"/>
+            <field name="is_parent" eval="False"/>
+            <field name="type_level">secondary</field>
+        </record>
+        <record id="mk_grade16" model="mk.grade">
+            <field name="name">جامعي</field>
+            <field name="age_categories" eval="[(4, ref('mk_age_category7'))]"/>
+            <field name="is_parent" eval="True"/>
+            <field name="is_episode" eval="True"/>
+            <field name="type_level">academic</field>
+        </record>
+        <record id="mk_grade17" model="mk.grade">
+            <field name="name">موظف</field>
+            <field name="age_categories"
+                   eval="[(4, ref('mk_age_category8')),(4, ref('mk_age_category9')),(4, ref('mk_age_category10'))]"/>
+            <field name="is_parent" eval="False"/>
+            <field name="is_episode" eval="True"/>
+            <field name="type_level">other</field>
+        </record>
+        <record id="mk_grade18" model="mk.grade">
+            <field name="name">متقاعد</field>
+            <field name="age_categories"/>
+            <field name="is_parent" eval="False"/>
+            <field name="is_episode" eval="True"/>
+            <field name="type_level">other</field>
+        </record>
+        <record id="mk_grade19" model="mk.grade">
+            <field name="name">أمهات قارئات</field>
+            <field name="age_categories"
+                   eval="[(4, ref('mk_age_category8')),(4, ref('mk_age_category9')),(4, ref('mk_age_category10'))]"/>
+            <field name="is_parent" eval="False"/>
+            <field name="type_level">other</field>
+        </record>
+        <record id="mk_grade20" model="mk.grade">
+            <field name="name">ثانوي</field>
+            <field name="age_categories"/>
+            <field name="is_parent" eval="True"/>
+            <field name="is_episode" eval="True"/>
+            <field name="type_level">secondary</field>
+        </record>
+        <record id="mk_grade21" model="mk.grade">
+            <field name="name">متوسط</field>
+            <field name="age_categories"/>
+            <field name="is_parent" eval="True"/>
+            <field name="is_episode" eval="True"/>
+            <field name="type_level">medium</field>
+        </record>
+        <record id="mk_grade22" model="mk.grade">
+            <field name="name">إبتدائي</field>
+            <field name="age_categories"/>
+            <field name="is_parent" eval="True"/>
+            <field name="type_level">primary</field>
+        </record>
+        <record id="mk_grade23" model="mk.grade">
+            <field name="name">أمهات غير قارئات</field>
+            <field name="age_categories"/>
+            <field name="is_parent" eval="False"/>
+            <field name="type_level">other</field>
+        </record>
+        
+        <record id="mk_grade24" model="mk.grade">
+            <field name="name">إبتدائي دنيا</field>
+            <field name="age_categories"/>
+            <field name="is_episode" eval="True"/>
+            <field name="type_level">primary</field>
+        </record>
+        
+        <record id="mk_grade25" model="mk.grade">
+            <field name="name">إبتدائي عليا</field>
+            <field name="age_categories"/>
+            <field name="is_episode" eval="True"/>
+            <field name="type_level">primary</field>
+        </record>
+        
+        <record id="mk_grade26" model="mk.grade">
+            <field name="name">أمهات</field>
+            <field name="age_categories"/>
+            <field name="is_episode" eval="True"/>
+            <field name="type_level">primary</field>
+        </record>
+
+    </data>
+</odoo>

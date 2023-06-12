@@ -1,0 +1,1830 @@
+<odoo>
+    <data noupdate="1">
+        <record id="mk_district1" model="res.country.state">
+            <field name="name">الملك عبدالله</field>
+            <field name="code">01</field>
+            <field name="center_department_id" ref="mk_hr_department1"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.7447777777778</field>
+            <field name="longitude">24.7345</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district2" model="res.country.state">
+            <field name="name">النسيم الشرقي</field>
+            <field name="code">01</field>
+            <field name="center_department_id" ref="mk_hr_department4"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.8458055555556</field>
+            <field name="longitude">24.7352222222222</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district3" model="res.country.state">
+            <field name="name">إسكان الحرس الوطني بديراب</field>
+            <field name="code">01</field>
+            <field name="center_department_id" ref="mk_hr_department2"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.8303211</field>
+            <field name="longitude">24.7042365</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district4" model="res.country.state">
+            <field name="name">المونسية</field>
+            <field name="code">01</field>
+            <field name="center_department_id" ref="mk_hr_department3"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.6821944444444</field>
+            <field name="longitude">24.8308611111111</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district5" model="res.country.state">
+            <field name="name">الناصرية</field>
+            <field name="code">01</field>
+            <field name="center_department_id" ref="mk_hr_department7"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.6361388888889</field>
+            <field name="longitude">24.6489444444444</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district6" model="res.country.state">
+            <field name="name">سلطانة</field>
+            <field name="code">01</field>
+            <field name="center_department_id" ref="mk_hr_department6"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.67939</field>
+            <field name="longitude">24.6064124</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district7" model="res.country.state">
+            <field name="name">النخيل</field>
+            <field name="code">02</field>
+            <field name="center_department_id" ref="mk_hr_department1"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.6826111111111</field>
+            <field name="longitude">24.7453888888889</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district8" model="res.country.state">
+            <field name="name">البديعة</field>
+            <field name="code">02</field>
+            <field name="center_department_id" ref="mk_hr_department7"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude"></field>
+            <field name="longitude"></field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district9" model="res.country.state">
+            <field name="name">شبرا</field>
+            <field name="code">02</field>
+            <field name="center_department_id" ref="mk_hr_department6"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.6470097</field>
+            <field name="longitude">24.5745301</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district10" model="res.country.state">
+            <field name="name">النسيم الغربي</field>
+            <field name="code">02</field>
+            <field name="center_department_id" ref="mk_hr_department4"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.8244444444445</field>
+            <field name="longitude">24.72425</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district11" model="res.country.state">
+            <field name="name">النهضة</field>
+            <field name="code">02</field>
+            <field name="center_department_id" ref="mk_hr_department3"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">24.6351388888889</field>
+            <field name="longitude">24.7618611111111</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district12" model="res.country.state">
+            <field name="name">احد</field>
+            <field name="code">02</field>
+            <field name="center_department_id" ref="mk_hr_department2"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.6339722222222</field>
+            <field name="longitude">24.4913611111111</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district13" model="res.country.state">
+            <field name="name">النظيم</field>
+            <field name="code">03</field>
+            <field name="center_department_id" ref="mk_hr_department4"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.9749722222222</field>
+            <field name="longitude">24.8662222222222</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district14" model="res.country.state">
+            <field name="name">الندى</field>
+            <field name="code">03</field>
+            <field name="center_department_id" ref="mk_hr_department1"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.6487777777778</field>
+            <field name="longitude">24.8061944444444</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district15" model="res.country.state">
+            <field name="name">الوزارات</field>
+            <field name="code">03</field>
+            <field name="center_department_id" ref="mk_hr_department7"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">
+                46.6988611111111
+            </field>
+            <field name="longitude">24.6773055555556</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district16" model="res.country.state">
+            <field name="name">اليرموك</field>
+            <field name="code">03</field>
+            <field name="center_department_id" ref="mk_hr_department3"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.7171111111111</field>
+            <field name="longitude">24.80925</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district17" model="res.country.state">
+            <field name="name">اسكان القوات البحرية طريق الخرج</field>
+            <field name="code">03</field>
+            <field name="center_department_id" ref="mk_hr_department2"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.8408055555555</field>
+            <field name="longitude">24.5642777777778</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district18" model="res.country.state">
+            <field name="name">طويق</field>
+            <field name="code">03</field>
+            <field name="center_department_id" ref="mk_hr_department6"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.8364444444445</field>
+            <field name="longitude">24.5692777777778</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district19" model="res.country.state">
+            <field name="name">خشم العان</field>
+            <field name="code">04</field>
+            <field name="center_department_id" ref="mk_hr_department4"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.6181111111111</field>
+            <field name="longitude">24.6748888888889</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district20" model="res.country.state">
+            <field name="name">النرجس</field>
+            <field name="code">04</field>
+            <field name="center_department_id" ref="mk_hr_department1"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.7080833333333</field>
+            <field name="longitude">24.8817222222222</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district21" model="res.country.state">
+            <field name="name">الوشام</field>
+            <field name="code">04</field>
+            <field name="center_department_id" ref="mk_hr_department7"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.6894992</field>
+            <field name="longitude">24.6436841</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district22" model="res.country.state">
+            <field name="name">البويب</field>
+            <field name="code">04</field>
+            <field name="center_department_id" ref="mk_hr_department3"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.8360988</field>
+            <field name="longitude">24.7092286</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district23" model="res.country.state">
+            <field name="name">المنصورة</field>
+            <field name="code">04</field>
+            <field name="center_department_id" ref="mk_hr_department2"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.772</field>
+            <field name="longitude">24.6108611111111</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district24" model="res.country.state">
+            <field name="name">ظهرة البديعة</field>
+            <field name="code">04</field>
+            <field name="center_department_id" ref="mk_hr_department6"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.6853333333333</field>
+            <field name="longitude">24.6195555555556</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district25" model="res.country.state">
+            <field name="name">غرناطة</field>
+            <field name="code">05</field>
+            <field name="center_department_id" ref="mk_hr_department3"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.7534722222222</field>
+            <field name="longitude">24.7966666666667</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district26" model="res.country.state">
+            <field name="name">ظهرة لبن</field>
+            <field name="code">05</field>
+            <field name="center_department_id" ref="mk_hr_department6"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.6149166666667</field>
+            <field name="longitude">24.6250555555556</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district27" model="res.country.state">
+            <field name="name">النزهة</field>
+            <field name="code">05</field>
+            <field name="center_department_id" ref="mk_hr_department1"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.6740833333333</field>
+            <field name="longitude">24.7553055555556</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district28" model="res.country.state">
+            <field name="name">اليمامة</field>
+            <field name="code">05</field>
+            <field name="center_department_id" ref="mk_hr_department7"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.65875</field>
+            <field name="longitude">24.5969166666667</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district29" model="res.country.state">
+            <field name="name">الروابي</field>
+            <field name="code">05</field>
+            <field name="center_department_id" ref="mk_hr_department4"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.7911568</field>
+            <field name="longitude">24.6949938</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district30" model="res.country.state">
+            <field name="name">النور</field>
+            <field name="code">05</field>
+            <field name="center_department_id" ref="mk_hr_department2"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.6459444444445</field>
+            <field name="longitude">24.6351388888889</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district31" model="res.country.state">
+            <field name="name">الجزيرة</field>
+            <field name="code">06</field>
+            <field name="center_department_id" ref="mk_hr_department4"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.7993888888889</field>
+            <field name="longitude">24.662</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district32" model="res.country.state">
+            <field name="name">قرطبة</field>
+            <field name="code">06</field>
+            <field name="center_department_id" ref="mk_hr_department3"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.3673333333333</field>
+            <field name="longitude">24.8175277777778</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district33" model="res.country.state">
+            <field name="name">ظهرة نمار</field>
+            <field name="code">06</field>
+            <field name="center_department_id" ref="mk_hr_department6"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.7078888888889</field>
+            <field name="longitude">24.5538888888889</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district34" model="res.country.state">
+            <field name="name">ثليم</field>
+            <field name="code">06</field>
+            <field name="center_department_id" ref="mk_hr_department7"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.7001388888889</field>
+            <field name="longitude">24.6410833333333</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district35" model="res.country.state">
+            <field name="name">النفل</field>
+            <field name="code">06</field>
+            <field name="center_department_id" ref="mk_hr_department1"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.692</field>
+            <field name="longitude">24.7816666666667</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district36" model="res.country.state">
+            <field name="name">بدر</field>
+            <field name="code">06</field>
+            <field name="center_department_id" ref="mk_hr_department2"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">45.8675277777778</field>
+            <field name="longitude">24.5446944444444</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district37" model="res.country.state">
+            <field name="name">ظهرة وادي لبن الاحمدية</field>
+            <field name="code">07</field>
+            <field name="center_department_id" ref="mk_hr_department6"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.5439114</field>
+            <field name="longitude">24.6065693</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district38" model="res.country.state">
+            <field name="name">جبرة</field>
+            <field name="code">07</field>
+            <field name="center_department_id" ref="mk_hr_department7"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.7504444444444</field>
+            <field name="longitude">24.62475</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district39" model="res.country.state">
+            <field name="name">خنشليلة</field>
+            <field name="code">07</field>
+            <field name="center_department_id" ref="mk_hr_department2"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.7293514</field>
+            <field name="longitude">24.6081794</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district40" model="res.country.state">
+            <field name="name">الربوة</field>
+            <field name="code">07</field>
+            <field name="center_department_id" ref="mk_hr_department4"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.7602777777778</field>
+            <field name="longitude">24.69525</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district41" model="res.country.state">
+            <field name="name">الجنادرية</field>
+            <field name="code">07</field>
+            <field name="center_department_id" ref="mk_hr_department3"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.9139444444445</field>
+            <field name="longitude">24.8805555555556</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district42" model="res.country.state">
+            <field name="name">الهدا</field>
+            <field name="code">07</field>
+            <field name="center_department_id" ref="mk_hr_department1"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.7164722222222</field>
+            <field name="longitude">24.6633055555555</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district43" model="res.country.state">
+            <field name="name">الحمرا</field>
+            <field name="code">08</field>
+            <field name="center_department_id" ref="mk_hr_department3"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.7528055555555</field>
+            <field name="longitude">24.7759166666667</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district44" model="res.country.state">
+            <field name="name">الدريهمية</field>
+            <field name="code">08</field>
+            <field name="center_department_id" ref="mk_hr_department6"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.6909722222222</field>
+            <field name="longitude">24.5899444444444</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district45" model="res.country.state">
+            <field name="name">الواحة</field>
+            <field name="code">08</field>
+            <field name="center_department_id" ref="mk_hr_department1"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.6909444444444</field>
+            <field name="longitude">24.74075</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district46" model="res.country.state">
+            <field name="name">ديراب</field>
+            <field name="code">08</field>
+            <field name="center_department_id" ref="mk_hr_department2"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.5806142</field>
+            <field name="longitude">24.5114707</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district47" model="res.country.state">
+            <field name="name">جرير</field>
+            <field name="code">08</field>
+            <field name="center_department_id" ref="mk_hr_department7"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.5833194</field>
+            <field name="longitude">24.6638335</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district48" model="res.country.state">
+            <field name="name">الريان</field>
+            <field name="code">09</field>
+            <field name="center_department_id" ref="mk_hr_department4"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">5.85275</field>
+            <field name="longitude">24.3141111111111</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district49" model="res.country.state">
+            <field name="name">الوادي</field>
+            <field name="code">09</field>
+            <field name="center_department_id" ref="mk_hr_department1"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.7116666666667</field>
+            <field name="longitude">24.78975</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district50" model="res.country.state">
+            <field name="name">عكاظ</field>
+            <field name="code">09</field>
+            <field name="center_department_id" ref="mk_hr_department2"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.6844722222222</field>
+            <field name="longitude">24.5164166666667</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district51" model="res.country.state">
+            <field name="name">الخليج</field>
+            <field name="code">09</field>
+            <field name="center_department_id" ref="mk_hr_department3"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.8044444444444</field>
+            <field name="longitude">24.7766388888889</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district52" model="res.country.state">
+            <field name="name">الرفيعة</field>
+            <field name="code">09</field>
+            <field name="center_department_id" ref="mk_hr_department6"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.6630277777778</field>
+            <field name="longitude">24.6409722222222</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district53" model="res.country.state">
+            <field name="name">صياح</field>
+            <field name="code">09</field>
+            <field name="center_department_id" ref="mk_hr_department7"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.6926402</field>
+            <field name="longitude">24.6080637</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district54" model="res.country.state">
+            <field name="name">الرمال</field>
+            <field name="code">10</field>
+            <field name="center_department_id" ref="mk_hr_department3"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.6196454</field>
+            <field name="longitude">24.9226474</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district55" model="res.country.state">
+            <field name="name">غبيرة</field>
+            <field name="code">10</field>
+            <field name="center_department_id" ref="mk_hr_department2"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.7276537</field>
+            <field name="longitude">24.6206558</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district56" model="res.country.state">
+            <field name="name">السعادة</field>
+            <field name="code">10</field>
+            <field name="center_department_id" ref="mk_hr_department4"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.8398333333333</field>
+            <field name="longitude">24.6940555555556</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district57" model="res.country.state">
+            <field name="name">الورود</field>
+            <field name="code">10</field>
+            <field name="center_department_id" ref="mk_hr_department1"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.6776388888889</field>
+            <field name="longitude">24.7247777777778</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district58" model="res.country.state">
+            <field name="name">عتيقة</field>
+            <field name="code">10</field>
+            <field name="center_department_id" ref="mk_hr_department7"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.5892777777778</field>
+            <field name="longitude">24.5989444444444</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district59" model="res.country.state">
+            <field name="name">الزهرة</field>
+            <field name="code">10</field>
+            <field name="center_department_id" ref="mk_hr_department6"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.6457777777778</field>
+            <field name="longitude">24.5778888888889</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district60" model="res.country.state">
+            <field name="name">السويدي</field>
+            <field name="code">11</field>
+            <field name="center_department_id" ref="mk_hr_department6"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.6713888888889</field>
+            <field name="longitude">24.59225</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district61" model="res.country.state">
+            <field name="name">السلام</field>
+            <field name="code">11</field>
+            <field name="center_department_id" ref="mk_hr_department4"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.8109722222222</field>
+            <field name="longitude">24.7069722222222</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district62" model="res.country.state">
+            <field name="name">نمار</field>
+            <field name="code">11</field>
+            <field name="center_department_id" ref="mk_hr_department2"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.662846</field>
+            <field name="longitude">24.5672913</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district63" model="res.country.state">
+            <field name="name">الرماية</field>
+            <field name="code">11</field>
+            <field name="center_department_id" ref="mk_hr_department3"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.8686666666667</field>
+            <field name="longitude">24.7695277777778</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district64" model="res.country.state">
+            <field name="name">عليشة</field>
+            <field name="code">11</field>
+            <field name="center_department_id" ref="mk_hr_department7"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.7380555555555</field>
+            <field name="longitude">24.6305</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district65" model="res.country.state">
+            <field name="name">الياسمين</field>
+            <field name="code">11</field>
+            <field name="center_department_id" ref="mk_hr_department1"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.6244529</field>
+            <field name="longitude">24.8229609</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district66" model="res.country.state">
+            <field name="name">معكال</field>
+            <field name="code">12</field>
+            <field name="center_department_id" ref="mk_hr_department7"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.7104795</field>
+            <field name="longitude">24.6230239</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district67" model="res.country.state">
+            <field name="name">ضاحية نمار</field>
+            <field name="code">12</field>
+            <field name="center_department_id" ref="mk_hr_department2"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude"></field>
+            <field name="longitude"></field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district68" model="res.country.state">
+            <field name="name">السلي</field>
+            <field name="code">12</field>
+            <field name="center_department_id" ref="mk_hr_department4"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.8385</field>
+            <field name="longitude">24.6542777777778</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district69" model="res.country.state">
+            <field name="name">السويدي الغربي</field>
+            <field name="code">12</field>
+            <field name="center_department_id" ref="mk_hr_department6"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.6253055555556</field>
+            <field name="longitude">24.5755277777778</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district70" model="res.country.state">
+            <field name="name">الروضة</field>
+            <field name="code">12</field>
+            <field name="center_department_id" ref="mk_hr_department3"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.7643611111111</field>
+            <field name="longitude">24.7329444444444</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district71" model="res.country.state">
+            <field name="name">ام الحمام الشرقية</field>
+            <field name="code">12</field>
+            <field name="center_department_id" ref="mk_hr_department1"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.64525</field>
+            <field name="longitude">24.6856111111111</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district72" model="res.country.state">
+            <field name="name">اسكان وزارة الداخلية</field>
+            <field name="code">13</field>
+            <field name="center_department_id" ref="mk_hr_department2"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude"></field>
+            <field name="longitude"></field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district73" model="res.country.state">
+            <field name="name">منفوحة</field>
+            <field name="code">13</field>
+            <field name="center_department_id" ref="mk_hr_department7"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.7200277777778</field>
+            <field name="longitude">24.5990555555556</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district74" model="res.country.state">
+            <field name="name">ام الحمام الغربية</field>
+            <field name="code">13</field>
+            <field name="center_department_id" ref="mk_hr_department1"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.6962777777778</field>
+            <field name="longitude">24.6886388888889</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district75" model="res.country.state">
+            <field name="name">اشبيلية</field>
+            <field name="code">13</field>
+            <field name="center_department_id" ref="mk_hr_department3"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.7923888888889</field>
+            <field name="longitude">24.7930277777778</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district76" model="res.country.state">
+            <field name="name">الصفا</field>
+            <field name="code">13</field>
+            <field name="center_department_id" ref="mk_hr_department4"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.764</field>
+            <field name="longitude">24.6670555555556</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district77" model="res.country.state">
+            <field name="name">العريجاء</field>
+            <field name="code">13</field>
+            <field name="center_department_id" ref="mk_hr_department6"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.6597777777778</field>
+            <field name="longitude">24.6252222222222</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district78" model="res.country.state">
+            <field name="name">النموذجية</field>
+            <field name="code">14</field>
+            <field name="center_department_id" ref="mk_hr_department7"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.8198055555556</field>
+            <field name="longitude">24.6564444444444</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district79" model="res.country.state">
+            <field name="name">العريجاء الغربية</field>
+            <field name="code">14</field>
+            <field name="center_department_id" ref="mk_hr_department6"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.5991666666667</field>
+            <field name="longitude">24.5913611111111</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district80" model="res.country.state">
+            <field name="name">التعاون</field>
+            <field name="code">14</field>
+            <field name="center_department_id" ref="mk_hr_department1"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.6990555555556</field>
+            <field name="longitude">24.7737777777778</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district81" model="res.country.state">
+            <field name="name">العماجية</field>
+            <field name="code">14</field>
+            <field name="center_department_id" ref="mk_hr_department2"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.9782777777778</field>
+            <field name="longitude">24.4411944444444</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district82" model="res.country.state">
+            <field name="name">الفاروق</field>
+            <field name="code">14</field>
+            <field name="center_department_id" ref="mk_hr_department4"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.77375</field>
+            <field name="longitude">24.6526944444444</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district83" model="res.country.state">
+            <field name="name">الأندلس</field>
+            <field name="code">14</field>
+            <field name="center_department_id" ref="mk_hr_department3"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.7905555555556</field>
+            <field name="longitude">24.7437222222222</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district84" model="res.country.state">
+            <field name="name">الفيحاء</field>
+            <field name="code">15</field>
+            <field name="center_department_id" ref="mk_hr_department4"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.8134444444444</field>
+            <field name="longitude">24.6807222222222</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district85" model="res.country.state">
+            <field name="name">القادسية</field>
+            <field name="code">15</field>
+            <field name="center_department_id" ref="mk_hr_department3"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.8228333333333</field>
+            <field name="longitude">24.8219166666667</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district86" model="res.country.state">
+            <field name="name">العريجاء الوسطى</field>
+            <field name="code">15</field>
+            <field name="center_department_id" ref="mk_hr_department6"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.6381111111111</field>
+            <field name="longitude">24.6072222222222</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district87" model="res.country.state">
+            <field name="name">ام سليم</field>
+            <field name="code">15</field>
+            <field name="center_department_id" ref="mk_hr_department1"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.71625</field>
+            <field name="longitude">24.6339166666667</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district88" model="res.country.state">
+            <field name="name">الجرادية</field>
+            <field name="code">15</field>
+            <field name="center_department_id" ref="mk_hr_department7"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">42.9135555555555</field>
+            <field name="longitude">16.5829444444444</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district89" model="res.country.state">
+            <field name="name">المصفاة</field>
+            <field name="code">15</field>
+            <field name="center_department_id" ref="mk_hr_department2"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.8683055555556</field>
+            <field name="longitude">24.5223055555556</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district90" model="res.country.state">
+            <field name="name">حطين</field>
+            <field name="code">16</field>
+            <field name="center_department_id" ref="mk_hr_department1"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.5833614</field>
+            <field name="longitude">24.7619394</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district91" model="res.country.state">
+            <field name="name">القدس</field>
+            <field name="code">16</field>
+            <field name="center_department_id" ref="mk_hr_department3"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.75525</field>
+            <field name="longitude">24.7564166666667</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district92" model="res.country.state">
+            <field name="name">الغنامية</field>
+            <field name="code">16</field>
+            <field name="center_department_id" ref="mk_hr_department2"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude"></field>
+            <field name="longitude"></field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district93" model="res.country.state">
+            <field name="name">الفيصلية</field>
+            <field name="code">16</field>
+            <field name="center_department_id" ref="mk_hr_department4"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.7806388888889</field>
+            <field name="longitude">24.6363055555556</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district94" model="res.country.state">
+            <field name="name">الغروب</field>
+            <field name="code">16</field>
+            <field name="center_department_id" ref="mk_hr_department6"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.6725904</field>
+            <field name="longitude">24.6907633</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district95" model="res.country.state">
+            <field name="name">الخالدية</field>
+            <field name="code">16</field>
+            <field name="center_department_id" ref="mk_hr_department7"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.75425</field>
+            <field name="longitude">24.6237777777778</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district96" model="res.country.state">
+            <field name="name">الدوبية</field>
+            <field name="code">17</field>
+            <field name="center_department_id" ref="mk_hr_department1"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude"></field>
+            <field name="longitude"></field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district97" model="res.country.state">
+            <field name="name">صلاح الدين</field>
+            <field name="code">18</field>
+            <field name="center_department_id" ref="mk_hr_department1"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.6882145</field>
+            <field name="longitude">24.7328672</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district98" model="res.country.state">
+            <field name="name">الحائر</field>
+            <field name="code">17</field>
+            <field name="center_department_id" ref="mk_hr_department2"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.813</field>
+            <field name="longitude">24.449</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district99" model="res.country.state">
+            <field name="name">المعيزلية</field>
+            <field name="code">17</field>
+            <field name="center_department_id" ref="mk_hr_department3"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">45.1744622</field>
+            <field name="longitude">23.8021434</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district100" model="res.country.state">
+            <field name="name">المؤتمرات</field>
+            <field name="code">17</field>
+            <field name="center_department_id" ref="mk_hr_department6"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.6865</field>
+            <field name="longitude">24.6709722222222</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district101" model="res.country.state">
+            <field name="name">المنار</field>
+            <field name="code">17</field>
+            <field name="center_department_id" ref="mk_hr_department4"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.7981666666667</field>
+            <field name="longitude">24.7247777777778</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district102" model="res.country.state">
+            <field name="name">البطيحا</field>
+            <field name="code">17</field>
+            <field name="center_department_id" ref="mk_hr_department7"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.7190118</field>
+            <field name="longitude">24.6218585</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district103" model="res.country.state">
+            <field name="name">الحزم</field>
+            <field name="code">18</field>
+            <field name="center_department_id" ref="mk_hr_department2"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.6461388888889</field>
+            <field name="longitude">24.5371111111111</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district104" model="res.country.state">
+            <field name="name">الرائد</field>
+            <field name="code">19</field>
+            <field name="center_department_id" ref="mk_hr_department1"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.6381944444444</field>
+            <field name="longitude">24.7073055555555</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district105" model="res.country.state">
+            <field name="name">الملك فيصل</field>
+            <field name="code">18</field>
+            <field name="center_department_id" ref="mk_hr_department3"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.7750555555555</field>
+            <field name="longitude">24.7629722222222</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district106" model="res.country.state">
+            <field name="name">الديرة</field>
+            <field name="code">18</field>
+            <field name="center_department_id" ref="mk_hr_department7"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.7093611111111</field>
+            <field name="longitude">24.6324444444444</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district107" model="res.country.state">
+            <field name="name">الدارالبيضاء</field>
+            <field name="code">19</field>
+            <field name="center_department_id" ref="mk_hr_department2"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.7961388888889</field>
+            <field name="longitude">24.5681388888889</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district108" model="res.country.state">
+            <field name="name">الزهراء</field>
+            <field name="code">19</field>
+            <field name="center_department_id" ref="mk_hr_department7"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.7297222222222</field>
+            <field name="longitude">24.6856666666667</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district109" model="res.country.state">
+            <field name="name">الربيع</field>
+            <field name="code">20</field>
+            <field name="center_department_id" ref="mk_hr_department1"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.6576388888889</field>
+            <field name="longitude">24.7911944444445</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district110" model="res.country.state">
+            <field name="name">الرحمانية</field>
+            <field name="code">21</field>
+            <field name="center_department_id" ref="mk_hr_department1"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.6596666666667</field>
+            <field name="longitude">24.7163055555556</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district111" model="res.country.state">
+            <field name="name">الشعلان</field>
+            <field name="code">20</field>
+            <field name="center_department_id" ref="mk_hr_department2"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.6417472</field>
+            <field name="longitude">24.6662665</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district112" model="res.country.state">
+            <field name="name">الشميسي</field>
+            <field name="code">20</field>
+            <field name="center_department_id" ref="mk_hr_department7"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.7009722222222</field>
+            <field name="longitude">24.6239444444444</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district113" model="res.country.state">
+            <field name="name">اسكان قوات الامن الخاصة</field>
+            <field name="code">22</field>
+            <field name="center_department_id" ref="mk_hr_department1"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">6.66152777777778</field>
+            <field name="longitude">24.6867777777778</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district114" model="res.country.state">
+            <field name="name">الصالحية</field>
+            <field name="code">21</field>
+            <field name="center_department_id" ref="mk_hr_department7"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.734</field>
+            <field name="longitude">24.6320555555556</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district115" model="res.country.state">
+            <field name="name">الشفا</field>
+            <field name="code">21</field>
+            <field name="center_department_id" ref="mk_hr_department2"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.697</field>
+            <field name="longitude">24.5663611111111</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district116" model="res.country.state">
+            <field name="name">الصناعية القديمة</field>
+            <field name="code">22</field>
+            <field name="center_department_id" ref="mk_hr_department7"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.7480555555556</field>
+            <field name="longitude">24.6413055555556</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district117" model="res.country.state">
+            <field name="name">العزيزية</field>
+            <field name="code">22</field>
+            <field name="center_department_id" ref="mk_hr_department2"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.7686388888889</field>
+            <field name="longitude">24.58825</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district118" model="res.country.state">
+            <field name="name">السليمانية</field>
+            <field name="code">23</field>
+            <field name="center_department_id" ref="mk_hr_department1"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.7053888888889</field>
+            <field name="longitude">24.7022222222222</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district119" model="res.country.state">
+            <field name="name">الشرفية</field>
+            <field name="code">24</field>
+            <field name="center_department_id" ref="mk_hr_department1"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.6693888888889</field>
+            <field name="longitude">24.6585833333333</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district120" model="res.country.state">
+            <field name="name">الفواز</field>
+            <field name="code">23</field>
+            <field name="center_department_id" ref="mk_hr_department2"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.6256666666667</field>
+            <field name="longitude">24.5012222222222</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district121" model="res.country.state">
+            <field name="name">الضباط</field>
+            <field name="code">23</field>
+            <field name="center_department_id" ref="mk_hr_department7"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.7224722222222</field>
+            <field name="longitude">24.6760277777778</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district122" model="res.country.state">
+            <field name="name">المروة</field>
+            <field name="code">24</field>
+            <field name="center_department_id" ref="mk_hr_department2"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.6769166666667</field>
+            <field name="longitude">24.5413611111111</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district123" model="res.country.state">
+            <field name="name">الطويلعة</field>
+            <field name="code">24</field>
+            <field name="center_department_id" ref="mk_hr_department7"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.6480349</field>
+            <field name="longitude">24.7849991</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district124" model="res.country.state">
+            <field name="name">اسكان مطار الملك خالد</field>
+            <field name="code">25</field>
+            <field name="center_department_id" ref="mk_hr_department1"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.5983869</field>
+            <field name="longitude">24.9126791</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district125" model="res.country.state">
+            <field name="name">الصحافة</field>
+            <field name="code">26</field>
+            <field name="center_department_id" ref="mk_hr_department1"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.63875</field>
+            <field name="longitude">24.8001388888889</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district126" model="res.country.state">
+            <field name="name">العمل</field>
+            <field name="code">25</field>
+            <field name="center_department_id" ref="mk_hr_department7"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.7229166666667</field>
+            <field name="longitude">24.6449722222222</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district127" model="res.country.state">
+            <field name="name">المصانع</field>
+            <field name="code">25</field>
+            <field name="center_department_id" ref="mk_hr_department2"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.7430833333333</field>
+            <field name="longitude">24.5625277777778</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district128" model="res.country.state">
+            <field name="name">العود</field>
+            <field name="code">26</field>
+            <field name="center_department_id" ref="mk_hr_department7"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.7263333333333</field>
+            <field name="longitude">24.6261388888889</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district129" model="res.country.state">
+            <field name="name">العقيق</field>
+            <field name="code">27</field>
+            <field name="center_department_id" ref="mk_hr_department1"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.63075</field>
+            <field name="longitude">24.7740555555556</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district130" model="res.country.state">
+            <field name="name">المناخ ( الجبس )</field>
+            <field name="code">26</field>
+            <field name="center_department_id" ref="mk_hr_department2"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.7431666666667</field>
+            <field name="longitude">24.6123055555556</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district131" model="res.country.state">
+            <field name="name">الفاخرية</field>
+            <field name="code">27</field>
+            <field name="center_department_id" ref="mk_hr_department7"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.6827222222222</field>
+            <field name="longitude">24.6409722222222</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district132" model="res.country.state">
+            <field name="name">العليا</field>
+            <field name="code">28</field>
+            <field name="center_department_id" ref="mk_hr_department1"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.6838333333333</field>
+            <field name="longitude">24.6887777777778</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district133" model="res.country.state">
+            <field name="name">الغدير</field>
+            <field name="code">29</field>
+            <field name="center_department_id" ref="mk_hr_department1"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.6564722222222</field>
+            <field name="longitude">24.774</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district134" model="res.country.state">
+            <field name="name">الفوطة</field>
+            <field name="code">28</field>
+            <field name="center_department_id" ref="mk_hr_department7"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.7091666666667</field>
+            <field name="longitude">24.6411111111111</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district135" model="res.country.state">
+            <field name="name">المربع</field>
+            <field name="code">29</field>
+            <field name="center_department_id" ref="mk_hr_department7"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.7063611111111</field>
+            <field name="longitude">24.66175</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district136" model="res.country.state">
+            <field name="name">الفلاح</field>
+            <field name="code">30</field>
+            <field name="center_department_id" ref="mk_hr_department1"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.7109166666667</field>
+            <field name="longitude">24.7957222222222</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district137" model="res.country.state">
+            <field name="name">المرقب</field>
+            <field name="code">30</field>
+            <field name="center_department_id" ref="mk_hr_department7"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.7231944444445</field>
+            <field name="longitude">24.636</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district138" model="res.country.state">
+            <field name="name">قاعدة الرياض الجوية</field>
+            <field name="code">31</field>
+            <field name="center_department_id" ref="mk_hr_department1"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude"></field>
+            <field name="longitude"></field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district139" model="res.country.state">
+            <field name="name">الملز</field>
+            <field name="code">31</field>
+            <field name="center_department_id" ref="mk_hr_department7"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.7346388888889</field>
+            <field name="longitude">24.6652222222222</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district140" model="res.country.state">
+            <field name="name">القيروان</field>
+            <field name="code">32</field>
+            <field name="center_department_id" ref="mk_hr_department1"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.5659166666667</field>
+            <field name="longitude">24.8765555555556</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district141" model="res.country.state">
+            <field name="name">الملك عبدالعزيز</field>
+            <field name="code">32</field>
+            <field name="center_department_id" ref="mk_hr_department7"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.6735</field>
+            <field name="longitude">25.8614722222222</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district142" model="res.country.state">
+            <field name="name">الازدهار</field>
+            <field name="code">33</field>
+            <field name="center_department_id" ref="mk_hr_department1"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.7181944444444</field>
+            <field name="longitude">24.7814444444444</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district143" model="res.country.state">
+            <field name="name">المحمدية</field>
+            <field name="code">34</field>
+            <field name="center_department_id" ref="mk_hr_department1"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.6503611111111</field>
+            <field name="longitude">24.7315</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district144" model="res.country.state">
+            <field name="name">المرسلات</field>
+            <field name="code">35</field>
+            <field name="center_department_id" ref="mk_hr_department1"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.6906111111111</field>
+            <field name="longitude">24.7482777777778</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district145" model="res.country.state">
+            <field name="name">المروج</field>
+            <field name="code">36</field>
+            <field name="center_department_id" ref="mk_hr_department1"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.66275</field>
+            <field name="longitude">24.7569444444444</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district146" model="res.country.state">
+            <field name="name">المصيف</field>
+            <field name="code">37</field>
+            <field name="center_department_id" ref="mk_hr_department1"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.681</field>
+            <field name="longitude">24.7661944444444</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district147" model="res.country.state">
+            <field name="name">المعذر</field>
+            <field name="code">38</field>
+            <field name="center_department_id" ref="mk_hr_department1"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.6776111111111</field>
+            <field name="longitude">24.6671111111111</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district148" model="res.country.state">
+            <field name="name">المعذر الجنوبي</field>
+            <field name="code">39</field>
+            <field name="center_department_id" ref="mk_hr_department1"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.6680122</field>
+            <field name="longitude">24.6660254</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district149" model="res.country.state">
+            <field name="name">المعذر الشمالي</field>
+            <field name="code">40</field>
+            <field name="center_department_id" ref="mk_hr_department1"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.6628333333333</field>
+            <field name="longitude">24.6991388888889</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district150" model="res.country.state">
+            <field name="name">المغرزات</field>
+            <field name="code">41</field>
+            <field name="center_department_id" ref="mk_hr_department1"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.6042777777778</field>
+            <field name="longitude">24.7654166666667</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district151" model="res.country.state">
+            <field name="name">الملقا</field>
+            <field name="code">42</field>
+            <field name="center_department_id" ref="mk_hr_department1"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">43.5009166666667</field>
+            <field name="longitude">24.8023888888889</field>
+            <field name="type_location">district</field>
+        </record>
+        <record id="mk_district152" model="res.country.state">
+            <field name="name">الملك فهد</field>
+            <field name="code">43</field>
+            <field name="center_department_id" ref="mk_hr_department1"/>
+            <field name="enable" eval="True"/>
+            <field name="area_id" eval="mk_area1"/>
+            <field name="district_id" eval="mk_city1"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="latitude">46.8011666666667</field>
+            <field name="longitude">24.7408055555556</field>
+            <field name="type_location">district</field>
+        </record>
+    </data>
+</odoo>

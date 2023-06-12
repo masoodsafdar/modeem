@@ -1,0 +1,64 @@
+<odoo>
+    <data>
+
+        <record id="mk_age_category_form_view" model="ir.ui.view">
+            <field name="name">Age Category Form View</field>
+            <field name="model">mk.age.category</field>
+            <field name="arch" type="xml">
+                <form string="Age Category">
+                    <header>
+
+                    </header>
+                    <sheet>
+                        <group>
+                            <field name="name" invisible="1"/>
+                            <field name="from_age" required="1"/>
+                            <field name="to_age" required="1"/>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+						<field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+						<field name="message_ids"          widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="mk_age_category_tree_view" model="ir.ui.view">
+            <field name="name">Age Category Tree View</field>
+            <field name="model">mk.age.category</field>
+            <field name="arch" type="xml">
+                <tree delete="0" string="Age Category">
+                    <field name="name" invisible="1"/>
+                    <field name="from_age" required="1"/>
+                    <field name="to_age" required="1"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="mk_age_category_search_view" model="ir.ui.view">
+            <field name="name">Age Category Search View</field>
+            <field name="model">mk.age.category</field>
+            <field name="arch" type="xml">
+                <search string="Age Category ">
+                    <field name="name" string="Age Category" filter_domain="[('name','ilike', self)]"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="mk_age_category_action" model="ir.actions.act_window">
+            <field name="name">Age Category</field>
+            <field name="res_model">mk.age.category</field>
+            <field name="type">ir.actions.act_window</field>
+            <!-- <field name="view_type">form</field> -->
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+            <field name="search_view_id" ref="mk_age_category_search_view"/>
+        </record>
+
+        <menuitem name="Age Category" id="mk_age_category_menu" sequence="5"
+                  parent="mk_master_models.mk_student_management_settings_menu" action="mk_age_category_action"/>
+
+    </data>
+</odoo>

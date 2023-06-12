@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+mk_smsclient_config_ma,smsclient config mosq_admin,general_sending.model_mk_smsclient_config,,1,0,1,0
+mk_smsclient_config_madmin,smsclient config admin,general_sending.model_mk_smsclient_config,,1,1,1,1
+mk_smsclient_config_ca,smsclient config center admin,general_sending.model_mk_smsclient_config,,1,1,1,0
+mk_smsclient_config_cam,smsclient config center admin male,general_sending.model_mk_smsclient_config,,1,1,1,0
+mk_smsclient_config_caf,smsclient config center admin female,general_sending.model_mk_smsclient_config,,1,1,1,0

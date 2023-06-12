@@ -1,0 +1,37 @@
+<odoo>
+    <data>
+
+        <record id="report_test_template_paperformat" model="report.paperformat">
+            <field name="name">Maknon Tests</field>
+            <field name="default" eval="True"/>
+            <field name="format">A4</field>
+            <field name="page_height">0</field>
+            <field name="page_width">0</field>
+            <field name="orientation">Landscape</field>
+            <field name="margin_top">12</field>
+            <field name="margin_right">5</field>
+            <field name="margin_bottom">10</field>
+            <field name="margin_left">5</field>
+            <field name="header_line" eval="False"/>
+            <field name="header_spacing">30</field>
+            <field name="dpi">90</field>
+        </record>
+
+        <report id="test_report"
+            string="tests sesstion report"
+            model="tests.sesstion.wizard"
+            report_type="qweb-pdf"
+            name="maknon_tests.report_tests_template"
+            file="تقارير الاختبارات"
+            paperformat="report_test_template_paperformat" />
+
+          <report id="test_excel_report"
+            string="tests sesstion excel report"
+            model="tests.sesstion.wizard"
+            report_type="xlsx"
+            name="maknon_tests.test_excel_report_template"
+            file="تقارير الاختبارات"
+            paperformat="report_test_template_paperformat"/>
+
+    </data>
+</odoo>

@@ -1,0 +1,195 @@
+<odoo>
+    <template id="renew_assigne_supervisore_report">
+      <t t-foreach="docs" t-as="o">
+        <t t-call="web.external_layout">
+                   <link rel="stylesheet" href="/mk_master_models/static/src/font.css"/>
+                <div class="footer">
+        <div >
+
+        </div>
+    </div>
+
+   <xpath expr="//div[@class='header']" position="replace">
+                </xpath>
+          <div class="oe_structure"/>
+          <div class="row mt32 mb32">
+            <div class="page">
+ 
+   
+              <t t-if="o.categ_id.name=='مجمع تعليمي'">
+              <div style="background-image:url(/mk_master_models/static/src/img/assigne_education_.jpg);background-size:200mm 290mm; width:200mm; height:285mm;">
+<br></br>
+                  <br></br>
+   <br></br>
+                  <br></br>   <br></br>
+                  <br></br>
+   <br></br>
+                  <br></br>   <br></br>
+                   <br></br>
+                <p class="text-right" style="font-size:20px; font-family:Neo Sans Arabic">
+                  <br>..الحمدلله وحده , والصلاة والسلام على من لا نبي بعده</br>
+                   <br></br>..وبعد
+                   <br> فإن مدير <span t-field="o.center_department_id"/> التابع لجمعية مكنون لتحفيظ</br>
+                   <br></br> القرآن الكريم في منطقة الرياض, وبناءً على ماله من
+                  <br></br> صلاحية, وبعد الاطلاع على التصريح رقم (<span t-field="o.center_department_id.code"></span>-<span t-field="o.district_id.code"></span>-<span t-field="o.register_code"></span>) القاضي بافتتاح
+                  <br> :حلقة/مدرسة) لتحفيظ القرآن الكريم باسم حلقة/ مدرسة)</br>
+                  <br>(<span t-field="o.name"/>) الواقعة في مدينة الرياض حي(<span t-field="o.district_id"/>)</br>
+                </p>
+                <p class="text-center" style="font-size:20px; font-family:Neo Sans Arabic">:يقرر مايلي</p>
+                <p class="text-right" style="font-size:20px; font-family:Neo Sans Arabic">
+                <br><b>أولاً</b>: يجدد تكليف الشيخ /(<span t-field="o.responsible_id"/>) بالاشراف على حلقات/مدرسة</br>
+                <br>(<span t-field="o.name"/>)</br>
+                <br><b>ثانياً</b>:يلتزم المشرف بالمسئوليات المناطة به, والقيام بكافة</br>
+                <br>المهام المكلف بها من قبل الجمعية, الموضحة في لائحة </br>
+                <br> الحلقات القرآنية, والتواصل المستمر مع المركز, ورفع تقرير</br>
+                <br> .الحلقة قبل نهاية العام الدراسي</br>
+                <br>,,,هذا ونسأل الله التوفيق والإعانة والسداد</br>
+
+              </p>
+           </div>
+      </t>
+              <t t-elif="o.categ_id.name=='مجمع نموذجي'">
+              <div style="background-image:url(/mk_master_models/static/src/img/assign_education_model.jpg);background-size:200mm 290mm; width:200mm; height:285mm;">
+ <br></br>
+                  <br></br>
+   <br></br>
+                  <br></br>   <br></br>
+                  <br></br>
+   <br></br>
+                  <br></br>   <br></br>
+
+   
+                <p class="text-right" style="font-size:20px; font-family:Neo Sans Arabic">
+                  <br>..الحمدلله وحده , والصلاة والسلام على من لا نبي بعده</br>
+                   <br></br>..وبعد
+                   <br> فإن مدير <span t-field="o.center_department_id"/> التابع لجمعية مكنون لتحفيظ</br>
+                   <br></br> القرآن الكريم في منطقة الرياض, وبناءً على ماله من
+                  <br></br> صلاحية, وبعد الاطلاع على التصريح رقم (<span t-field="o.center_department_id.code"></span>-<span t-field="o.district_id.code"></span>-<span t-field="o.register_code"></span>) القاضي بافتتاح
+                  <br> :حلقة/مدرسة) لتحفيظ القرآن الكريم باسم حلقة/ مدرسة)</br>
+                  <br>(<span t-field="o.name"/>) الواقعة في مدينة الرياض حي(<span t-field="o.district_id"/>)</br>
+                </p>
+                <p class="text-center" style="font-size:20px; font-family:Neo Sans Arabic">:يقرر مايلي</p>
+                <p class="text-right" style="font-size:20px; font-family:Neo Sans Arabic">
+                <br><b>أولاً</b>: يجدد تكليف الشيخ /(<span t-field="o.responsible_id"/>) بالاشراف على حلقات/مدرسة</br>
+                <br>(<span t-field="o.name"/>)</br>
+                <br><b>ثانياً</b>:يلتزم المشرف بالمسئوليات المناطة به, والقيام بكافة</br>
+                <br>المهام المكلف بها من قبل الجمعية, الموضحة في لائحة </br>
+                <br> الحلقات القرآنية, والتواصل المستمر مع المركز, ورفع تقرير</br>
+                <br> .الحلقة قبل نهاية العام الدراسي</br>
+                <br>,,,هذا ونسأل الله التوفيق والإعانة والسداد</br>
+              </p>
+           </div>
+      </t>
+
+
+              <t t-elif="o.categ_id.name=='مجمع قرآني'">
+              <div style="background-image:url(/mk_master_models/static/src/img/assign_quran.jpg);background-size:200mm 290mm; width:200mm; height:285mm;">
+
+                  <br></br>
+   <br></br>
+                  <br></br>   <br></br>
+                  <br></br>
+   <br></br>
+                  <br></br>   <br></br>
+                  <br></br>
+   <br></br>
+                  
+                <p class="text-right" style="font-size:20px; font-family:Neo Sans Arabic">
+                  <br>..الحمدلله وحده , والصلاة والسلام على من لا نبي بعده</br>
+                   <br></br>..وبعد
+                   <br> فإن مدير <span t-field="o.center_department_id"/> التابع لجمعية مكنون لتحفيظ</br>
+                   <br></br> القرآن الكريم في منطقة الرياض, وبناءً على ماله من
+                  <br></br> صلاحية, وبعد الاطلاع على التصريح رقم (<span t-field="o.center_department_id.code"></span>-<span t-field="o.district_id.code"></span>-<span t-field="o.register_code"></span>) القاضي بافتتاح
+                  <br> :حلقة/مدرسة) لتحفيظ القرآن الكريم باسم حلقة/ مدرسة)</br>
+                  <br>(<span t-field="o.name"/>) الواقعة في مدينة الرياض حي(<span t-field="o.district_id"/>)</br>
+                </p>
+                <p class="text-center" style="font-size:20px; font-family:Neo Sans Arabic">:يقرر مايلي</p>
+                <p class="text-right" style="font-size:20px; font-family:Neo Sans Arabic">
+                <br><b>أولاً</b>: يجدد تكليف الشيخ /(<span t-field="o.responsible_id"/>) بالاشراف على حلقات/مدرسة</br>
+                <br>(<span t-field="o.name"/>)</br>
+                <br><b>ثانياً</b>:يلتزم المشرف بالمسئوليات المناطة به, والقيام بكافة</br>
+                <br>المهام المكلف بها من قبل الجمعية, الموضحة في لائحة </br>
+                <br> الحلقات القرآنية, والتواصل المستمر مع المركز, ورفع تقرير</br>
+                <br> .الحلقة قبل نهاية العام الدراسي</br>
+                <br>,,,هذا ونسأل الله التوفيق والإعانة والسداد</br>
+              </p>
+           </div>
+      </t>
+
+
+              <t t-elif="o.categ_id.name=='مجمع' or o.categ_id.name=='حلقات اعتيادية' and o.categ_id.mosque_type=='male' ">
+              <div style="background-image:url(/mk_master_models/static/src/img/assign_quran.jpg);background-size:200mm 290mm; width:200mm; height:285mm;">
+ <br></br>
+
+   <br></br>
+                  <br></br>   <br></br>
+                  <br></br>
+   <br></br>
+                  <br></br>   <br></br>
+                  <br></br>
+   <br></br>
+                  
+                <p class="text-right" style="font-size:20px; font-family:Neo Sans Arabic">
+                  <br>..الحمدلله وحده , والصلاة والسلام على من لا نبي بعده</br>
+                   <br></br>..وبعد
+                   <br> فإن مدير <span t-field="o.center_department_id"/> التابع لجمعية مكنون لتحفيظ</br>
+                   <br></br> القرآن الكريم في منطقة الرياض, وبناءً على ماله من
+                  <br></br> صلاحية, وبعد الاطلاع على التصريح رقم (<span t-field="o.center_department_id.code"></span>-<span t-field="o.district_id.code"></span>-<span t-field="o.register_code"></span>) القاضي بافتتاح
+                  <br> :حلقة/مدرسة) لتحفيظ القرآن الكريم باسم حلقة/ مدرسة)</br>
+                  <br>(<span t-field="o.name"/>) الواقعة في مدينة الرياض حي(<span t-field="o.district_id"/>)</br>
+                </p>
+                <p class="text-center" style="font-size:20px; font-family:Neo Sans Arabic">:يقرر مايلي</p>
+                <p class="text-right" style="font-size:20px; font-family:Neo Sans Arabic">
+                <br><b>أولاً</b>: يجدد تكليف الشيخ /(<span t-field="o.responsible_id"/>) بالاشراف على حلقات/مدرسة</br>
+                <br>(<span t-field="o.name"/>)</br>
+                <br><b>ثانياً</b>:يلتزم المشرف بالمسئوليات المناطة به, والقيام بكافة</br>
+                <br>المهام المكلف بها من قبل الجمعية, الموضحة في لائحة </br>
+                <br> الحلقات القرآنية, والتواصل المستمر مع المركز, ورفع تقرير</br>
+                <br> .الحلقة قبل نهاية العام الدراسي</br>
+                <br>,,,هذا ونسأل الله التوفيق والإعانة والسداد</br>
+
+              </p>
+           </div>
+      </t>
+
+              <t t-elif="o.categ_id.name=='مجمع' or o.categ_id.name=='حلقات اعتيادية' and o.categ_id.mosque_type=='female' ">
+              <div style="background-image:url(/mk_master_models/static/src/img/renew_f.jpg);background-size:200mm 290mm; width:200mm; height:285mm;">
+ <br></br>
+
+   <br></br>
+                  <br></br>   <br></br>
+                  <br></br>
+   <br></br>
+                  <br></br>   <br></br>
+                  <br></br>
+   <br></br>
+                 
+                <p class="text-right" style="font-size:20px; font-family:Neo Sans Arabic">
+                  <br>..الحمدلله وحده , والصلاة والسلام على من لا نبي بعده</br>
+                   <br></br>..وبعد
+                   <br> فإن مدير <span t-field="o.center_department_id"/> التابع لجمعية مكنون لتحفيظ</br>
+                   <br></br> القرآن الكريم في منطقة الرياض, وبناءً على ماله من
+                  <br></br> صلاحية, وبعد الاطلاع على التصريح رقم (<span t-field="o.center_department_id.code"></span>-<span t-field="o.district_id.code"></span>-<span t-field="o.register_code"></span>) القاضي بافتتاح
+                  <br> :حلقة/مدرسة) لتحفيظ القرآن الكريم باسم حلقة/ مدرسة)</br>
+                  <br>(<span t-field="o.name"/>) الواقعة في مدينة الرياض حي(<span t-field="o.district_id"/>)</br>
+                </p>
+                <p class="text-center" style="font-size:20px; font-family:Neo Sans Arabic">:يقرر مايلي</p>
+                <p class="text-right" style="font-size:20px; font-family:Neo Sans Arabic">
+                <br><b>أولاً</b>: يجدد تكليف الشيخ /(<span t-field="o.responsible_id"/>) بالاشراف على حلقات/مدرسة</br>
+                <br>(<span t-field="o.name"/>)</br>
+                <br><b>ثانياً</b>:يلتزم المشرف بالمسئوليات المناطة به, والقيام بكافة</br>
+                <br>المهام المكلف بها من قبل الجمعية, الموضحة في لائحة </br>
+                <br> الحلقات القرآنية, والتواصل المستمر مع المركز, ورفع تقرير</br>
+                <br> .الحلقة قبل نهاية العام الدراسي</br>
+                <br> ,,,هذا ونسأل الله التوفيق والإعانة والسداد</br>
+              </p>
+           </div>
+      </t>
+
+
+           </div>
+        </div>
+      </t>
+    </t>
+  </template>
+</odoo>

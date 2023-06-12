@@ -1,0 +1,49 @@
+<odoo>
+    <data noupdate="1">
+        <record id="mk_job1" model="mk.job">
+            <field name="name">طالب/ة</field>
+            <field name="age_categories" eval="[(4, ref('mk_episode_management.mk_age_category1')), (4, ref('mk_episode_management.mk_age_category2')),
+                                                       (4, ref('mk_episode_management.mk_age_category3')), (4, ref('mk_episode_management.mk_age_category4')),
+                                                       (4, ref('mk_episode_management.mk_age_category5')), (4, ref('mk_episode_management.mk_age_category6')),
+                                                       (4, ref('mk_episode_management.mk_age_category7'))]"/>
+            <field name="active" eval="True"/>
+        </record>
+        <record id="mk_job2" model="mk.job">
+            <field name="name">متقاعد/ة</field>
+            <field name="age_categories" eval="[(4, ref('mk_episode_management.mk_age_category7')), (4, ref('mk_episode_management.mk_age_category8')),
+                                                (4, ref('mk_episode_management.mk_age_category9')), (4, ref('mk_episode_management.mk_age_category10'))]"/>
+            <field name="active" eval="True"/>
+        </record>
+        <record id="mk_job3" model="mk.job">
+            <field name="name">موظف/ة</field>
+            <field name="age_categories"/>
+            <field name="active" eval="True"/>
+        </record>
+        <record id="mk_job4" model="mk.job">
+            <field name="name">طبيب/ة</field>
+            <field name="age_categories"/>
+            <field name="active" eval="True"/>
+        </record>
+        <record id="mk_job5" model="mk.job">
+            <field name="name">أكاديمي/ة</field>
+            <field name="age_categories"/>
+            <field name="active" eval="True"/>
+        </record>
+        <record id="mk_job6" model="mk.job">
+            <field name="name">سيد/ة أعمال</field>
+            <field name="age_categories"/>
+            <field name="active" eval="True"/>
+        </record>
+        <record id="mk_job7" model="mk.job">
+            <field name="name">ناطق/ة بغير العربية</field>
+            <field name="age_categories"/>
+            <field name="active" eval="True"/>
+        </record>
+        <record id="mk_job8" model="mk.job">
+            <field name="name">أخرى</field>
+            <field name="age_categories"/>
+            <field name="active" eval="True"/>
+        </record>
+    </data>
+</odoo>
+

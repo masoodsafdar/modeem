@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record model="ir.actions.act_window" id="mq_prepration_student_action">
+			<field name="name">Prepration Student</field>
+			<field name="res_model">mk.student.prepare</field>
+			<field name="view_mode">tree,form</field>
+			<field name="search_view_id" ref="mk_student_managment.mk_student_prepare_search_view" />
+			<field name="domain">[('link_id.student_id.is_student_meqraa','=', True)]</field>
+		</record>
+	</data>
+</odoo>
+    

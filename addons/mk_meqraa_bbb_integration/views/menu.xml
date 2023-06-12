@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+
+		<!--********Config Menu ************** -->
+	<menuitem id="menu_settings_main" parent="mk_meqraa.menu_meqraa_main" groups="mk_meqraa_bbb_integration.config_meqraa_group" name="Settings" sequence="100"/>
+	
+	<menuitem id="menu_config" parent="menu_settings_main" name="Educational Settings" sequence="100" action="maqraa_base_config_settings_action" web_icon="mk_meqraa,static/description/icone ta3limi.png" groups="mk_meqraa_bbb_integration.config_meqraa_group"/>
+
+
+		<!--******** Session Menu ************** -->
+	<menuitem id="menu_session_main" parent="mk_meqraa.menu_meqraa_main" groups="mk_meqraa.group_administration_meqraa" name="Session" sequence="3"/>
+	<menuitem id="sub_menu_session" parent="menu_session_main" groups="mk_meqraa.group_administration_meqraa" name="Session" sequence="10" action="session_session_act"/>
+
+
+
+	</data>
+</odoo>

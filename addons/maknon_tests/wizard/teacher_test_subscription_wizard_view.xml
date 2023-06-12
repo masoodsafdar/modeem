@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+            <!-- teacher_test_register_from wizard form view-->
+   <record id="teacher_test_register_from" model="ir.ui.view">
+        <field name="name">teacher.test.register.form</field>
+        <field name="model">test.register</field>
+        <field name="arch" type="xml">
+				<form>
+					<script>
+						$(document).ready(function(){
+						$('.modal-dialog').css({'width': '85%', 'height': '100%'});
+						$('.modal-content').css({'height': '100%'});
+						$('.modal-body').css({'height': '100%'});
+						});
+					</script>
+					<group>
+						<group>
+							<field name="avalible_minutes" readonly="1" string="السعة الاستعابية / الدقائق"/>
+						</group>
+
+						<group>
+							<field name="masjed"  string="المسجد/المدرسة" required="1" options="{'no_create':True,'no_open':True}"/>
+							<field name="episode" string="الحلقة"    invisible="1"      options="{'no_create':True,'no_open':True}" domain="[('mosque_id','=',masjed),
+							                                                                                                        ('study_class_id.is_default','=',True),
+							                                                                                                        ('state','=','accept'),
+							                                                                                                        ('active','=',True)]"/>
+						</group>
+
+						<group>
+							<field name="avalible_teacher" invisible="1"/>
+						</group>
+						<group>
+							<field name="total_minutes" invisible="1" readonly="1"/>
+							<field name="test_time"     invisible="1"/>
+							<field name="center_tests"  invisible="1"/>
+						</group>
+					</group>
+					<field name="set_b" invisible="1"/>
+
+					<group>
+						<group>
+							<field name="employee_id" string="الموظف" required="1" options="{'no_create':True,'no_open':True}"/>
+						</group>
+						<group></group>
+					</group>
+
+					<group colspan="2" col="6" attrs="{'invisible': [('set_b','=',False)]}" string="إعدادات موحدة">
+						<field name="test_name" options="{'no_open':1,'no_create':1}" string="نوع الاختبار" domain="[('id','in',center_tests)]"/>
+						<field name="trackk"/>
+						<field name="branch"    options="{'no_open':1,'no_create':1}" string="الفرع"       domain="[('test_name','=',test_name), ('trackk','=',trackk)]"/>
+					</group>
+
+					<span style="margin-right:300px;">
+						<button name="set_employee_branch" type="object" string="للتحقق" attrs="{'invisible':[('set_b','=',False)]}" icon="fa-arrow-down"/>
+					</span>
+
+					<br></br><br></br><br></br>
+
+					<field name="student_id" attrs="{'invisible':[('hide','=',0)]}" required="1"  context="{'default_avalible_minutes':avalible_minutes,'group_by':'student_id'}">
+						<tree editable="bottom" edit="true" create="false" decoration-danger="flag==False">
+							<field name="employee_id" string="الموظف(ة)" required="1" options="{'no_create':True,'no_open':True}"/>
+							<field name="avalible_minutes" invisible="1"/>
+							<field name="center_tests"     invisible="1"/>
+							<field name="test_name"        required="1" options="{'no_open':1,'no_create':1}"             string="نوع الاختبار" domain="[('id','in',center_tests)]"/>
+							<field name="trackk"/>
+							<field name="branch"           required="1" options="{'no_open':1,'no_create':1,'no_edit':1}" string="الفرع"       domain="[('test_name','=',test_name), ('trackk','=',trackk)]"/>
+							<field name="branch_duration" string="مدة الفرع"/>
+							<field name="massege" string="الرسالة"/>
+							<field name="flag"           invisible="1"/>
+							<field name="academic_id"    invisible="1" options="{'no_open':1,'no_create':1}"/>
+							<field name="study_class_id" invisible="1" options="{'no_open':1,'no_create':1}"/>
+						</tree>
+					</field>
+
+					<group>
+						<field name="counter" string="عدد الطلاب المستوفين للشروط"/>
+						<field name="hide" invisible="1"/>
+					</group>
+					<footer>
+						<button name="teacher_ok" type="object" string="تسجيل" class="oe_highlight"/>
+						<button special="cancel" string="الغاء" class="oe_link"/>
+					</footer>
+				</form>
+        </field>
+    </record>
+</odoo>

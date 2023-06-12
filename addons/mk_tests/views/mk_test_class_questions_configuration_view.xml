@@ -1,0 +1,76 @@
+<odoo>
+    <data>
+    
+ 	<record id="mk_test_class_questions_configuration_form_view" model="ir.ui.view">
+          <field name="name">Test Class Question Confiquration Form View</field>
+          <field name="model">mk.test.class.questions.configuration</field>
+          <field name="arch" type="xml">
+              <form string = "Test Class Question Confiquration">
+		  <header>
+		    
+		  </header>
+		  <sheet>
+			  <group>
+			  	<group>
+			  		<field name="company_id"     required="1" options="{'no_open':1,'no_create':1}"/>
+				  	<field name="study_year_id"  required="1" domain="[('company_id','=',company_id)]"       options="{'no_open':1,'no_create':1}"/>
+				  	<field name="study_class_id" required="1" domain="[('study_year_id','=',study_year_id)]" options="{'no_open':1,'no_create':1}"/>
+				  	<field name="test_type_id"   required="1" domain="[('company_id','=',company_id)]"       options="{'no_open':1,'no_create':1}"/>
+				  	<field name="test_class_id"  domain="[('test_type_id','=',test_type_id)]" attrs="{'invisible':[('test_type','=','o')],'required':[('test_type','!=','o')]}"/>
+				  	<field name="test_type"  invisible="1"/>
+				  	<field name="test_scope" invisible="1"/>
+			  	</group>
+			  	<group>
+			  	</group>
+		  	</group>
+		  	<field name="part_ids" attrs="{'invisible':[('test_scope','not in',['a','s'])]}">
+		  		<tree editable="top" create="false" delete="false">
+			  		<field name="part_id"         required="1" readonly="1" options="{'no_create': True,'no_open': True,}"/>
+			  		<field name="easy"            required="1" sum="easy"/>
+			  		<field name="middle"          required="1" sum="middle"/>
+			  		<field name="difficult"       required="1" sum="difficult"/>
+					<field name="question_number" required="1" sum="question_number"/>
+		  		</tree>
+		  	</field>
+	  	</sheet>
+              </form>
+             </field>
+         </record>
+
+        <record id="mk_test_class_questions_configuration_tree_view" model="ir.ui.view">
+            <field name="name">Test Class Question Confiquration Tree View</field>
+            <field name="model">mk.test.class.questions.configuration</field>
+            <field name="arch" type="xml">
+                <tree delete="0" string="Test Class Question Confiquration">
+                	<field name="company_id"     required="1" options="{'no_open':1,'no_create':1}"/>
+                	<field name="study_year_id"  required="1" options="{'no_open':1,'no_create':1}"/>
+                	<field name="study_class_id" required="1" options="{'no_open':1,'no_create':1}"/>
+                	<field name="test_type_id"   required="1" options="{'no_open':1,'no_create':1}"/>
+                	<field name="test_class_id" options="{'no_open':1,'no_create':1}"/>
+                </tree>
+            </field>
+        </record>
+        
+        <record id="mk_test_class_questions_configuration_search_view" model="ir.ui.view">
+            <field name="name">Test Class Question Confiquration Search View</field>
+            <field name="model">mk.test.class.questions.configuration</field>
+            <field name="arch" type="xml">
+                <search string="Test Class Question Confiquration ">
+                </search>
+            </field>
+        </record>
+        
+        <record id="mk_test_class_questions_configuration_action" model="ir.actions.act_window">
+            <field name="name">Test Class Question Confiquration </field>
+            <field name="res_model">mk.test.class.questions.configuration</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+            <field name="search_view_id" ref="mk_test_class_questions_configuration_search_view"/>
+        </record>
+
+	
+    </data>  
+</odoo>

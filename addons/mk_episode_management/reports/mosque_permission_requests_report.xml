@@ -1,0 +1,53 @@
+<odoo>
+    <data>
+
+        <record id="report_mosque_permission_request_paperformat" model="report.paperformat">
+            <field name="name">Mosque permission/requests report paperformat</field>
+            <field name="default" eval="True"/>
+            <field name="format">A4</field>
+            <field name="page_height">0</field>
+            <field name="page_width">0</field>
+            <field name="orientation">Landscape</field>
+            <field name="margin_top">12</field>
+            <field name="margin_right">5</field>
+            <field name="margin_bottom">10</field>
+            <field name="margin_left">5</field>
+            <field name="header_line" eval="False"/>
+            <field name="header_spacing">30</field>
+            <field name="dpi">90</field>
+        </record>
+
+        <report id="permission_finished_excel_report"
+                string="finished permission report"
+                model="mosque.permision"
+                report_type="xlsx"
+                name="mk_episode_management.finished_permission_excel_report"
+                file="تقرير التصاريح المنتهية"
+                paperformat="report_mosque_permission_request_paperformat"/>
+
+        <report id="permission_almost_finished_excel_report"
+                string="almost finished permission report"
+                model="mosque.permision"
+                report_type="xlsx"
+                name="mk_episode_management.almost_finished_perm_excel_report"
+                file="تقرير التصاريح المقاربة للنهاية (3 أشهر وأقل)"
+                paperformat="report_mosque_permission_request_paperformat"/>
+
+        <report id="super_req_finished_excel_report"
+                string="finished supervisor request report"
+                model="mosque.supervisor.request"
+                report_type="xlsx"
+                name="mk_episode_management.super_req_finished_excel_report"
+                file="تقرير التكاليف المنتهية"
+                paperformat="report_mosque_permission_request_paperformat"/>
+
+        <report id="almost_finished_super_req_report"
+                string="almost finished supervisor request report"
+                model="mosque.supervisor.request"
+                report_type="xlsx"
+                name="mk_episode_management.almost_finished_super_req_report"
+                file="تقرير التكاليف المقاربة للنهاية (3 أشهر وأقل)"
+                paperformat="report_mosque_permission_request_paperformat"/>
+
+    </data>
+</odoo>

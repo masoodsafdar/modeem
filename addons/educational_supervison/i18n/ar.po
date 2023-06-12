@@ -1,0 +1,1210 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* educational_supervison
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0-20180627\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-09-24 07:11+0000\n"
+"PO-Revision-Date: 2019-09-24 07:11+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: educational_supervison
+#: selection:supervisor.item,supervisor_decision:0
+msgid "Accept"
+msgstr "Accept"
+
+#. module: educational_supervison
+#: model:ir.model.fields,field_description:educational_supervison.field_supervisor_item_actual_date
+msgid "Actual Date"
+msgstr "التاريخ الفعلي"
+
+#. module: educational_supervison
+#: model:ir.model.fields,field_description:educational_supervison.field_edu_item_type_approval
+msgid "Approval Type"
+msgstr "نوع التوثيق"
+
+#. module: educational_supervison
+#: model:ir.actions.act_window,name:educational_supervison.action_approve
+msgid "Approves"
+msgstr "أنواع التوثيق"
+
+#. module: educational_supervison
+#: model:ir.model.fields,field_description:educational_supervison.field_supervisor_item_center
+msgid "Center"
+msgstr "المركز"
+
+#. module: educational_supervison
+#: model:ir.model.fields,field_description:educational_supervison.field_one_center_assign_center_required_pointers
+msgid "Center Required Pointers"
+msgstr "المؤشر المطلوب من المركز"
+
+#. module: educational_supervison
+#: model:ir.model.fields,field_description:educational_supervison.field_parent_item_center_required_pointers
+msgid "Center Required Pointers"
+msgstr "المؤشر المطلوب"
+
+#. module: educational_supervison
+#: model:ir.model.fields,field_description:educational_supervison.field_supervisor_item_crateria_done_degree
+msgid "Crateria Done Degree"
+msgstr "نسبة إنجاز المعيار"
+
+#. module: educational_supervison
+#: model:ir.model.fields,field_description:educational_supervison.field_center_item_create_uid
+#: model:ir.model.fields,field_description:educational_supervison.field_comapany_pointers_create_uid
+#: model:ir.model.fields,field_description:educational_supervison.field_edu_approve_create_uid
+#: model:ir.model.fields,field_description:educational_supervison.field_edu_criterion_create_uid
+#: model:ir.model.fields,field_description:educational_supervison.field_edu_field_create_uid
+#: model:ir.model.fields,field_description:educational_supervison.field_edu_item_create_uid
+#: model:ir.model.fields,field_description:educational_supervison.field_edu_name_create_uid
+#: model:ir.model.fields,field_description:educational_supervison.field_edu_visit_create_uid
+#: model:ir.model.fields,field_description:educational_supervison.field_one_center_assign_create_uid
+#: model:ir.model.fields,field_description:educational_supervison.field_one_sup_assign_create_uid
+#: model:ir.model.fields,field_description:educational_supervison.field_parent_item_create_uid
+#: model:ir.model.fields,field_description:educational_supervison.field_sup_assign_create_uid
+#: model:ir.model.fields,field_description:educational_supervison.field_supervisor_item_create_uid
+#: model:ir.model.fields,field_description:educational_supervison.field_supervisor_pointer_create_uid
+#: model:ir.model.fields,field_description:educational_supervison.field_visits_managment_create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: educational_supervison
+#: model:ir.model.fields,field_description:educational_supervison.field_center_item_create_date
+#: model:ir.model.fields,field_description:educational_supervison.field_comapany_pointers_create_date
+#: model:ir.model.fields,field_description:educational_supervison.field_edu_approve_create_date
+#: model:ir.model.fields,field_description:educational_supervison.field_edu_criterion_create_date
+#: model:ir.model.fields,field_description:educational_supervison.field_edu_field_create_date
+#: model:ir.model.fields,field_description:educational_supervison.field_edu_item_create_date
+#: model:ir.model.fields,field_description:educational_supervison.field_edu_name_create_date
+#: model:ir.model.fields,field_description:educational_supervison.field_edu_visit_create_date
+#: model:ir.model.fields,field_description:educational_supervison.field_one_center_assign_create_date
+#: model:ir.model.fields,field_description:educational_supervison.field_one_sup_assign_create_date
+#: model:ir.model.fields,field_description:educational_supervison.field_parent_item_create_date
+#: model:ir.model.fields,field_description:educational_supervison.field_sup_assign_create_date
+#: model:ir.model.fields,field_description:educational_supervison.field_supervisor_item_create_date
+#: model:ir.model.fields,field_description:educational_supervison.field_supervisor_pointer_create_date
+#: model:ir.model.fields,field_description:educational_supervison.field_visits_managment_create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: educational_supervison
+#: model:ir.model.fields,field_description:educational_supervison.field_edu_item_criterion_id
+msgid "Criterion"
+msgstr "المعيار"
+
+#. module: educational_supervison
+#: model:ir.model.fields,field_description:educational_supervison.field_edu_criterion_criterion_number
+msgid "Criterion Number"
+msgstr "رقم المعيار"
+
+#. module: educational_supervison
+#: model:ir.model.fields,field_description:educational_supervison.field_edu_criterion_criterion_weight
+#: model:ir.model.fields,field_description:educational_supervison.field_supervisor_item_criterion_weight
+msgid "Criterion Weight"
+msgstr "وزن المعيار"
+
+#. module: educational_supervison
+#: model:ir.model.fields,field_description:educational_supervison.field_one_center_assign_departments
+#: model:ir.model.fields,field_description:educational_supervison.field_parent_item_center_ids
+msgid "Departments"
+msgstr "مراكز الاشراف"
+
+#. module: educational_supervison
+#: model:ir.model.fields,field_description:educational_supervison.field_parent_item_select_all_centers
+msgid "Select All Centers"
+msgstr "جميع المراكز"
+
+#. module: educational_supervison
+#: model:ir.model.fields,field_description:educational_supervison.field_supervisor_item_deserved_degree
+msgid "Deserved Degree"
+msgstr "الدرجة المستحقة"
+
+#. module: educational_supervison
+#: model:ir.model.fields,field_description:educational_supervison.field_center_item_display_name
+#: model:ir.model.fields,field_description:educational_supervison.field_comapany_pointers_display_name
+#: model:ir.model.fields,field_description:educational_supervison.field_edu_approve_display_name
+#: model:ir.model.fields,field_description:educational_supervison.field_edu_criterion_display_name
+#: model:ir.model.fields,field_description:educational_supervison.field_edu_field_display_name
+#: model:ir.model.fields,field_description:educational_supervison.field_edu_item_display_name
+#: model:ir.model.fields,field_description:educational_supervison.field_edu_name_display_name
+#: model:ir.model.fields,field_description:educational_supervison.field_edu_visit_display_name
+#: model:ir.model.fields,field_description:educational_supervison.field_one_center_assign_display_name
+#: model:ir.model.fields,field_description:educational_supervison.field_one_sup_assign_display_name
+#: model:ir.model.fields,field_description:educational_supervison.field_parent_item_display_name
+#: model:ir.model.fields,field_description:educational_supervison.field_sup_assign_display_name
+#: model:ir.model.fields,field_description:educational_supervison.field_supervisor_item_display_name
+#: model:ir.model.fields,field_description:educational_supervison.field_supervisor_pointer_display_name
+#: model:ir.model.fields,field_description:educational_supervison.field_visits_managment_display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: educational_supervison
+#: model:ir.model.fields,field_description:educational_supervison.field_center_item_distribuation_method
+#: model:ir.model.fields,field_description:educational_supervison.field_one_center_assign_distribuation_method
+#: model:ir.model.fields,field_description:educational_supervison.field_one_sup_assign_distribuation_method
+#: model:ir.model.fields,field_description:educational_supervison.field_parent_item_distribuation_method
+#: model:ir.model.fields,field_description:educational_supervison.field_sup_assign_distribuation_method
+msgid "Distribuation Method"
+msgstr "التوزيع على المراكز"
+
+#. module: educational_supervison
+#: selection:parent.item,state:0
+msgid "Distributed to centers"
+msgstr "تم التوزيع علي المراكز"
+
+#. module: educational_supervison
+#: selection:center.item,state:0
+#: selection:parent.item,state:0
+msgid "Distributed to supervisors"
+msgstr "تم التوزيع علي المشرفين"
+
+#. module: educational_supervison
+#: model:ir.model.fields,field_description:educational_supervison.field_supervisor_pointer_don_pointer
+msgid "Don Pointer"
+msgstr "المؤشر المتحقق"
+
+#. module: educational_supervison
+#: selection:center.item,state:0
+#: selection:parent.item,state:0
+#: selection:supervisor.item,state:0
+msgid "Done"
+msgstr "تمت الزيارة"
+
+#. module: educational_supervison
+#: model:ir.module.category,name:educational_supervison.edu
+msgid "EDU"
+msgstr "صلاحيات الإشراف التربوي"
+
+#. module: educational_supervison
+#: model:ir.model,name:educational_supervison.model_hr_employee
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: educational_supervison
+#: model:ir.model.fields,field_description:educational_supervison.field_supervisor_item_eval_lines
+msgid "Evaluation Result"
+msgstr "نتيجة التقييم"
+
+#. module: educational_supervison
+#: model:ir.model.fields,field_description:educational_supervison.field_edu_criterion_field_id
+msgid "Field"
+msgstr "المجال"
+
+#. module: educational_supervison
+#: model:ir.actions.act_window,name:educational_supervison.action_field
+msgid "Fields"
+msgstr "مجالات اﻹﺷﺮاﻑ اﻟﺘﺮﺑﻮﻱ"
+
+#. module: educational_supervison
+#: model:ir.model.fields,field_description:educational_supervison.field_parent_item_flag
+msgid "Flag"
+msgstr "إختيار"
+
+#. module: educational_supervison
+#: model:ir.model.fields,field_description:educational_supervison.field_center_item_id
+#: model:ir.model.fields,field_description:educational_supervison.field_comapany_pointers_id
+#: model:ir.model.fields,field_description:educational_supervison.field_edu_approve_id
+#: model:ir.model.fields,field_description:educational_supervison.field_edu_criterion_id
+#: model:ir.model.fields,field_description:educational_supervison.field_edu_field_id
+#: model:ir.model.fields,field_description:educational_supervison.field_edu_item_id
+#: model:ir.model.fields,field_description:educational_supervison.field_edu_name_id
+#: model:ir.model.fields,field_description:educational_supervison.field_edu_visit_id
+#: model:ir.model.fields,field_description:educational_supervison.field_one_center_assign_id
+#: model:ir.model.fields,field_description:educational_supervison.field_one_sup_assign_id
+#: model:ir.model.fields,field_description:educational_supervison.field_parent_item_id
+#: model:ir.model.fields,field_description:educational_supervison.field_sup_assign_id
+#: model:ir.model.fields,field_description:educational_supervison.field_supervisor_item_id
+#: model:ir.model.fields,field_description:educational_supervison.field_supervisor_pointer_id
+#: model:ir.model.fields,field_description:educational_supervison.field_visits_managment_id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: educational_supervison
+#: model:ir.model.fields,field_description:educational_supervison.field_center_item_item_crateria_id
+#: model:ir.model.fields,field_description:educational_supervison.field_parent_item_item_crateria_id
+#: model:ir.model.fields,field_description:educational_supervison.field_supervisor_item_item_crateria_id
+msgid "ITEM CRATERIA"
+msgstr "المعيار"
+
+#. module: educational_supervison
+#: model:ir.model.fields,field_description:educational_supervison.field_center_item_item_field_id
+#: model:ir.model.fields,field_description:educational_supervison.field_parent_item_item_field_id
+#: model:ir.model.fields,field_description:educational_supervison.field_supervisor_item_item_field
+msgid "ITEM DOMAIN"
+msgstr "المجال"
+
+#. module: educational_supervison
+#: model:ir.model.fields,field_description:educational_supervison.field_center_item_item_id
+#: model:ir.model.fields,field_description:educational_supervison.field_edu_item_item_id
+#: model:ir.model.fields,field_description:educational_supervison.field_parent_item_item_id
+#: model:ir.model.fields,field_description:educational_supervison.field_supervisor_item_item_id
+msgid "Item"
+msgstr "البنود"
+
+#. module: educational_supervison
+#: model:ir.model.fields,field_description:educational_supervison.field_center_item_item_degree
+#: model:ir.model.fields,field_description:educational_supervison.field_edu_item_item_degree
+#: model:ir.model.fields,field_description:educational_supervison.field_parent_item_is_item_degree
+#: model:ir.model.fields,field_description:educational_supervison.field_supervisor_item_item_degree
+msgid "Item Degree"
+msgstr "درجة البند"
+
+#. module: educational_supervison
+#: model:ir.model.fields,field_description:educational_supervison.field_center_item_item_description
+#: model:ir.model.fields,field_description:educational_supervison.field_edu_item_item_description
+#: model:ir.model.fields,field_description:educational_supervison.field_parent_item_item_description
+#: model:ir.model.fields,field_description:educational_supervison.field_supervisor_item_item_description
+msgid "Item Description"
+msgstr "شرح البند"
+
+#. module: educational_supervison
+#: model:ir.model.fields,field_description:educational_supervison.field_supervisor_item_item_done_degree
+msgid "Item Done Degree"
+msgstr "Item Done Degree"
+
+#. module: educational_supervison
+#: model:ir.model.fields,field_description:educational_supervison.field_supervisor_item_item_done_percent
+msgid "Item Done Percent"
+msgstr "نسبة إنجاز المجال"
+
+#. module: educational_supervison
+#: model:ir.model.fields,field_description:educational_supervison.field_supervisor_item_evaluation_status
+msgid "Evaluation Status"
+msgstr "التقييم"
+
+#. module: educational_supervison
+#: selection:supervisor.item,evaluation_status:0
+msgid "In Progress"
+msgstr "قيد العمل"
+
+#. module: educational_supervison
+#: selection:supervisor.item,evaluation_status:0
+msgid "Not Verified"
+msgstr "غير متحقق"
+
+#. module: educational_supervison
+#: selection:supervisor.item,evaluation_status:0
+msgid "Verified"
+msgstr "متحقق"
+
+#. module: educational_supervison
+#: model:ir.model.fields,field_description:educational_supervison.field_supervisor_item_supervisor_notes
+msgid "Supervisor Notes"
+msgstr "ملحوظات المشرف/ة"
+
+#. module: educational_supervison
+#: model:ir.model.fields,field_description:educational_supervison.field_supervisor_item_mosque_notes
+msgid "Mosque/School Notes"
+msgstr "ملحوظات المدرسة"
+
+#. module: educational_supervison
+#: model:ir.model.fields,field_description:educational_supervison.field_visits_managment_item_name
+msgid "Item Name"
+msgstr "Item Name"
+
+#. module: educational_supervison
+#: model:ir.model.fields,field_description:educational_supervison.field_center_item_item_type
+#: model:ir.model.fields,field_description:educational_supervison.field_edu_item_type_item
+#: model:ir.model.fields,field_description:educational_supervison.field_supervisor_item_item_type
+msgid "Item Type"
+msgstr "نوع البند"
+
+#. module: educational_supervison
+#: model:ir.model.fields,field_description:educational_supervison.field_parent_item_item_type
+msgid "Item Type"
+msgstr "آلية القياس"
+
+#. module: educational_supervison
+#: model:ir.model.fields,field_description:educational_supervison.field_edu_criterion_item_ids
+msgid "Items"
+msgstr "البنود"
+
+#. module: educational_supervison
+#: model:ir.actions.act_window,name:educational_supervison.master_item_action
+msgid "Items"
+msgstr "بنود الإشراف"
+
+#. module: educational_supervison
+#: model:ir.actions.act_window,name:educational_supervison.action_item
+msgid "Items managment"
+msgstr "إدارة المؤشرات والبنود"
+
+#. module: educational_supervison
+#: model:ir.model.fields,field_description:educational_supervison.field_comapany_pointers_date_start
+msgid "Start Date"
+msgstr "تاريخ بدء التقييم"
+
+#. module: educational_supervison
+#: model:ir.model.fields,field_description:educational_supervison.field_comapany_pointers_date_end
+msgid "Start End"
+msgstr "تاريخ انتهاء التقييم"
+
+#. module: educational_supervison
+#: model:ir.model.fields,field_description:educational_supervison.field_center_item___last_update
+#: model:ir.model.fields,field_description:educational_supervison.field_comapany_pointers___last_update
+#: model:ir.model.fields,field_description:educational_supervison.field_edu_approve___last_update
+#: model:ir.model.fields,field_description:educational_supervison.field_edu_criterion___last_update
+#: model:ir.model.fields,field_description:educational_supervison.field_edu_field___last_update
+#: model:ir.model.fields,field_description:educational_supervison.field_edu_item___last_update
+#: model:ir.model.fields,field_description:educational_supervison.field_edu_name___last_update
+#: model:ir.model.fields,field_description:educational_supervison.field_edu_visit___last_update
+#: model:ir.model.fields,field_description:educational_supervison.field_one_center_assign___last_update
+#: model:ir.model.fields,field_description:educational_supervison.field_one_sup_assign___last_update
+#: model:ir.model.fields,field_description:educational_supervison.field_parent_item___last_update
+#: model:ir.model.fields,field_description:educational_supervison.field_sup_assign___last_update
+#: model:ir.model.fields,field_description:educational_supervison.field_supervisor_item___last_update
+#: model:ir.model.fields,field_description:educational_supervison.field_supervisor_pointer___last_update
+#: model:ir.model.fields,field_description:educational_supervison.field_visits_managment___last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: educational_supervison
+#: model:ir.model.fields,field_description:educational_supervison.field_center_item_write_uid
+#: model:ir.model.fields,field_description:educational_supervison.field_comapany_pointers_write_uid
+#: model:ir.model.fields,field_description:educational_supervison.field_edu_approve_write_uid
+#: model:ir.model.fields,field_description:educational_supervison.field_edu_criterion_write_uid
+#: model:ir.model.fields,field_description:educational_supervison.field_edu_field_write_uid
+#: model:ir.model.fields,field_description:educational_supervison.field_edu_item_write_uid
+#: model:ir.model.fields,field_description:educational_supervison.field_edu_name_write_uid
+#: model:ir.model.fields,field_description:educational_supervison.field_edu_visit_write_uid
+#: model:ir.model.fields,field_description:educational_supervison.field_one_center_assign_write_uid
+#: model:ir.model.fields,field_description:educational_supervison.field_one_sup_assign_write_uid
+#: model:ir.model.fields,field_description:educational_supervison.field_parent_item_write_uid
+#: model:ir.model.fields,field_description:educational_supervison.field_sup_assign_write_uid
+#: model:ir.model.fields,field_description:educational_supervison.field_supervisor_item_write_uid
+#: model:ir.model.fields,field_description:educational_supervison.field_supervisor_pointer_write_uid
+#: model:ir.model.fields,field_description:educational_supervison.field_visits_managment_write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: educational_supervison
+#: model:ir.model.fields,field_description:educational_supervison.field_center_item_write_date
+#: model:ir.model.fields,field_description:educational_supervison.field_comapany_pointers_write_date
+#: model:ir.model.fields,field_description:educational_supervison.field_edu_approve_write_date
+#: model:ir.model.fields,field_description:educational_supervison.field_edu_criterion_write_date
+#: model:ir.model.fields,field_description:educational_supervison.field_edu_field_write_date
+#: model:ir.model.fields,field_description:educational_supervison.field_edu_item_write_date
+#: model:ir.model.fields,field_description:educational_supervison.field_edu_name_write_date
+#: model:ir.model.fields,field_description:educational_supervison.field_edu_visit_write_date
+#: model:ir.model.fields,field_description:educational_supervison.field_one_center_assign_write_date
+#: model:ir.model.fields,field_description:educational_supervison.field_one_sup_assign_write_date
+#: model:ir.model.fields,field_description:educational_supervison.field_parent_item_write_date
+#: model:ir.model.fields,field_description:educational_supervison.field_sup_assign_write_date
+#: model:ir.model.fields,field_description:educational_supervison.field_supervisor_item_write_date
+#: model:ir.model.fields,field_description:educational_supervison.field_supervisor_pointer_write_date
+#: model:ir.model.fields,field_description:educational_supervison.field_visits_managment_write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: educational_supervison
+#: model:ir.model.fields,field_description:educational_supervison.field_center_item_lines
+msgid "Lines"
+msgstr "البنود"
+
+#. module: educational_supervison
+#: model:ir.model.fields,field_description:educational_supervison.field_supervisor_item_location_id
+msgid "Location Evalution"
+msgstr "Location Evalution"
+
+#. module: educational_supervison
+#: selection:center.item,gender:0
+#: selection:parent.item,gender:0
+#: selection:supervisor.item,gender:0
+#: selection:visits.managment,gender:0
+msgid "Men"
+msgstr "رجالي"
+
+#. module: educational_supervison
+#: selection:center.item,gender:0
+#: selection:parent.item,gender:0
+#: selection:supervisor.item,gender:0
+#: selection:visits.managment,gender:0
+msgid "Men and Women"
+msgstr "رجالي و نسائي"
+
+#. module: educational_supervison
+#: model:ir.model.fields,field_description:educational_supervison.field_supervisor_item_mosque_permision_id
+msgid "Mosque Permision"
+msgstr "Mosque Permision"
+
+#. module: educational_supervison
+#: model:ir.model.fields,field_description:educational_supervison.field_edu_approve_name
+#: model:ir.model.fields,field_description:educational_supervison.field_edu_criterion_name
+#: model:ir.model.fields,field_description:educational_supervison.field_edu_field_name
+#: model:ir.model.fields,field_description:educational_supervison.field_edu_item_name
+#: model:ir.model.fields,field_description:educational_supervison.field_edu_name_name
+#: model:ir.model.fields,field_description:educational_supervison.field_edu_visit_name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: educational_supervison
+#: model:ir.actions.act_window,name:educational_supervison.action_name
+msgid "Names"
+msgstr "مسميات الإشراف التربوي"
+
+#. module: educational_supervison
+#: model:ir.model.fields,field_description:educational_supervison.field_center_item_is_need_approve
+#: model:ir.model.fields,field_description:educational_supervison.field_edu_item_is_need_approve
+#: model:ir.model.fields,field_description:educational_supervison.field_parent_item_is_need_approve
+#: model:ir.model.fields,field_description:educational_supervison.field_supervisor_item_is_need_approve
+msgid "Need Approve"
+msgstr "يحتاج إلى توثيق"
+
+#. module: educational_supervison
+#: selection:center.item,state:0
+#: selection:parent.item,state:0
+#: selection:supervisor.item,state:0
+msgid "New"
+msgstr "مبدئي"
+
+#. module: educational_supervison
+#: model:ir.model.fields,field_description:educational_supervison.field_supervisor_item_note
+#: model:ir.model.fields,field_description:educational_supervison.field_visits_managment_notes
+msgid "Notes"
+msgstr "ملاحظات"
+
+#. module: educational_supervison
+#: model:ir.model.fields,field_description:educational_supervison.field_edu_approve_number
+#: model:ir.model.fields,field_description:educational_supervison.field_edu_field_number
+#: model:ir.model.fields,field_description:educational_supervison.field_edu_name_number
+#: model:ir.model.fields,field_description:educational_supervison.field_edu_visit_number
+msgid "Number"
+msgstr "الرقم"
+
+#. module: educational_supervison
+#: model:ir.model.fields,field_description:educational_supervison.field_supervisor_item_permision_requests
+msgid "Permision Requests"
+msgstr "Permision Requests"
+
+#. module: educational_supervison
+#: model:ir.model.fields,field_description:educational_supervison.field_one_center_assign_pointer
+msgid "Pointer"
+msgstr "المؤشر"
+
+#. module: educational_supervison
+#: selection:supervisor.item,supervisor_decision:0
+msgid "Reject"
+msgstr "Reject"
+
+#. module: educational_supervison
+#: model:ir.model.fields,field_description:educational_supervison.field_supervisor_pointer_required_pointer
+msgid "Required Pointer"
+msgstr "المؤشر المطلوب"
+
+#. module: educational_supervison
+#: model:res.groups,name:educational_supervison.select_all
+msgid "Select All"
+msgstr "إختيار الكل"
+
+#. module: educational_supervison
+#: model:ir.model.fields,field_description:educational_supervison.field_center_item_state
+#: model:ir.model.fields,field_description:educational_supervison.field_parent_item_state
+#: model:ir.model.fields,field_description:educational_supervison.field_supervisor_item_state
+#: model:ir.model.fields,field_description:educational_supervison.field_visits_managment_state
+msgid "State"
+msgstr "المحافظة"
+
+#. module: educational_supervison
+#: model:ir.model.fields,field_description:educational_supervison.field_supervisor_item_student_no
+msgid "Student No"
+msgstr "عدد الطلاب"
+
+#. module: educational_supervison
+#: model:ir.model.fields,field_description:educational_supervison.field_edu_visit_is_suddenly
+msgid "Is suddenly"
+msgstr "زيارة مفاجئة"
+
+#. module: educational_supervison
+#: model:ir.model.fields,field_description:educational_supervison.field_comapany_pointers_type_evaluation
+#: model:ir.model.fields,field_description:educational_supervison.field_edu_field_type_evaluation
+#: model:ir.model.fields,field_description:educational_supervison.field_supervisor_item_evaluation_type
+msgid "Evaluation Type"
+msgstr "آلية التقييم"
+
+#. module: educational_supervison
+#: selection:comapany.pointers,type_evaluation:0
+#: selection:supervisor.item,evaluation_type:0
+msgid "Initial"
+msgstr "مبدئي"
+
+#. module: educational_supervison
+#: selection:comapany.pointers,type_evaluation:0
+#: selection:supervisor.item,evaluation_type:0
+msgid "Final"
+msgstr "نهائي"
+
+#. module: educational_supervison
+#: selection:edu.field,type_evaluation:0
+#: selection:supervisor.item,evaluation_method:0
+msgid "Grade Input"
+msgstr "إدخال درجة مستحقة"
+
+#. module: educational_supervison
+#: selection:edu.field,type_evaluation:0
+#: selection:supervisor.item,evaluation_method:0
+msgid "Multiple Choice"
+msgstr "قائمة باختيارات متعددة"
+
+
+#. module: educational_supervison
+#: model:ir.model.fields,field_description:educational_supervison.field_center_item_sup_count
+msgid "Sup Count"
+msgstr "Sup Count"
+
+#. module: educational_supervison
+#: model:ir.model.fields,field_description:educational_supervison.field_supervisor_item_sup_required_pointer
+msgid "Sup Required Pointer"
+msgstr "المؤشر المطلوب من المشرف"
+
+#. module: educational_supervison
+#: model:ir.model.fields,field_description:educational_supervison.field_supervisor_item_supervisor_decision
+msgid "Supervisior Decision"
+msgstr "قرار المشرف التربوي"
+
+#. module: educational_supervison
+#: model:ir.model.fields,field_description:educational_supervison.field_supervisor_item_supervisor_id
+#: model:ir.model.fields,field_description:educational_supervison.field_supervisor_pointer_supervisor_id
+#: model:ir.model.fields,field_description:educational_supervison.field_visits_managment_supervisor_id
+msgid "Supervisor"
+msgstr "المشرف/ المشرفة"
+
+#. module: educational_supervison
+#: model:ir.ui.view,arch_db:educational_supervison.tree_master_criterion
+#: model:ir.ui.view,arch_db:educational_supervison.tree_master_item
+msgid "Total"
+msgstr "الإجمالي "
+
+#. module: educational_supervison
+#: model:ir.model.fields,field_description:educational_supervison.field_edu_criterion_total_items_weight
+msgid "Total Items Weight"
+msgstr "Total Items Weight"
+
+#. module: educational_supervison
+#: model:ir.model.fields,field_description:educational_supervison.field_comapany_pointers_total_items
+msgid "Total items"
+msgstr "اجمالي البنود"
+
+#. module: educational_supervison
+#: model:ir.model.fields,field_description:educational_supervison.field_supervisor_item_visit_date
+#: model:ir.model.fields,field_description:educational_supervison.field_visits_managment_visit_date
+msgid "Visit Date"
+msgstr "تاريخ الزيارة"
+
+#. module: educational_supervison
+#: model:ir.model.fields,field_description:educational_supervison.field_visits_managment_visit_type
+msgid "Visit Type"
+msgstr "نوع الزيارة"
+
+#. module: educational_supervison
+#: model:ir.actions.act_window,name:educational_supervison.action_visit
+msgid "Visits"
+msgstr "أنواع الزيارات"
+
+#. module: educational_supervison
+#: selection:center.item,gender:0
+#: selection:parent.item,gender:0
+#: selection:supervisor.item,gender:0
+#: selection:visits.managment,gender:0
+msgid "Women"
+msgstr "نسائي"
+
+#. module: educational_supervison
+#: model:ir.model.fields,field_description:educational_supervison.field_center_item_women_men
+#: model:ir.model.fields,field_description:educational_supervison.field_supervisor_item_women_men
+#: model:ir.model.fields,field_description:educational_supervison.field_visits_managment_women_men
+msgid "Women Men"
+msgstr "رجالي/نسائي"
+
+#. module: educational_supervison
+#: model:ir.model.fields,field_description:educational_supervison.field_parent_item_indicator_level
+msgid "Indicator Level"
+msgstr "مستوى تحقق المؤشر"
+
+#. module: educational_supervison
+#: selection:parent.item,indicator_level:0
+msgid "School"
+msgstr "مدرسة"
+
+#. module: educational_supervison
+#: selection:parent.item,indicator_level:0
+msgid "Supervisory"
+msgstr "مركز إشراف"
+
+#. module: educational_supervison
+#: selection:parent.item,indicator_level:0
+msgid "Mosque"
+msgstr "مسجد"
+
+#. module: educational_supervison
+#: model:ir.model.fields,field_description:educational_supervison.field_parent_item_gender
+msgid "Gender"
+msgstr "رجالي/نسائي"
+
+#. module: educational_supervison
+#: selection:one.center.assign,distribuation_method:0
+#: selection:one.sup.assign,distribuation_method:0
+#: selection:sup.assign,distribuation_method:0
+msgid "all centers"
+msgstr "الجميع"
+
+#. module: educational_supervison
+#: selection:center.item,distribuation_method:0
+#: selection:parent.item,distribuation_method:0
+msgid "all supervisors"
+msgstr "جميع المشرفين"
+
+#. module: educational_supervison
+#: model:ir.model.fields,field_description:educational_supervison.field_center_item_assigned_item_number
+#: model:ir.model.fields,field_description:educational_supervison.field_parent_item_assigned_item_number
+msgid "assigned items"
+msgstr "المسند"
+
+#. module: educational_supervison
+#: model:ir.model.fields,field_description:educational_supervison.field_supervisor_pointer_center
+msgid "center"
+msgstr "center"
+
+#. module: educational_supervison
+#: model:ir.model.fields,field_description:educational_supervison.field_supervisor_item_center_parent
+msgid "center parent"
+msgstr "center parent"
+
+#. module: educational_supervison
+#: model:ir.model,name:educational_supervison.model_center_assign
+msgid "center.assign"
+msgstr "center.assign"
+
+#. module: educational_supervison
+#: model:ir.model,name:educational_supervison.model_center_item
+msgid "center.item"
+msgstr "center.item"
+
+#. module: educational_supervison
+#: model:ir.model.fields,field_description:educational_supervison.field_center_item_center_required_pointers
+msgid "center_required_pointers"
+msgstr "المؤشر المطلوب"
+
+#. module: educational_supervison
+#: model:ir.model.fields,field_description:educational_supervison.field_center_item_code
+#: model:ir.model.fields,field_description:educational_supervison.field_parent_item_code
+#: model:ir.model.fields,field_description:educational_supervison.field_supervisor_item_code
+msgid "code"
+msgstr "رقم البند"
+
+#. module: educational_supervison
+#: model:ir.model,name:educational_supervison.model_comapany_pointers
+msgid "comapany.pointers"
+msgstr "comapany.pointers"
+
+#. module: educational_supervison
+#: model:ir.actions.act_window,name:educational_supervison.master_crateria
+msgid "crateria"
+msgstr "المعايير"
+
+#. module: educational_supervison
+#: model:ir.ui.view,arch_db:educational_supervison.tree_master_criterion
+msgid "criterion_name"
+msgstr "اسم المعيار"
+
+#. module: educational_supervison
+#: model:ir.model.fields,field_description:educational_supervison.field_comapany_pointers_date
+msgid "date"
+msgstr "التاريخ"
+
+#. module: educational_supervison
+#: model:ir.ui.view,arch_db:educational_supervison.supervisor_item_managment_form
+msgid "decision_date"
+msgstr "تاريخ إتاخذ القرار"
+
+#. module: educational_supervison
+#: model:ir.ui.view,arch_db:educational_supervison.supervisor_item_managment_form
+msgid "degree_sup"
+msgstr "degree_sup"
+
+#. module: educational_supervison
+#: model:ir.model.fields,field_description:educational_supervison.field_center_item_center_id
+msgid "department"
+msgstr "المركز"
+
+#. module: educational_supervison
+#: model:ir.ui.view,arch_db:educational_supervison.item_distrbuted_center_form
+#: model:ir.ui.view,arch_db:educational_supervison.item_distrbuted_form
+msgid "distribute"
+msgstr "توزيع"
+
+#. module: educational_supervison
+#: model:ir.ui.view,arch_db:educational_supervison.supervisor_item_managment_form
+msgid "done"
+msgstr "منجز"
+
+#. module: educational_supervison
+#: selection:center.item,item_type:0
+#: selection:edu.item,type_item:0
+#: model:ir.model.fields,field_description:educational_supervison.field_supervisor_item_done_date
+#: selection:parent.item,item_type:0
+#: selection:supervisor.item,item_type:0
+msgid "done date"
+msgstr "تاريخ الانجاز"
+
+#. module: educational_supervison
+#: selection:parent.item,item_type:0
+msgid "done date"
+msgstr "بيانات النظام - إنجاز"
+
+#. module: educational_supervison
+#: model:ir.model.fields,field_description:educational_supervison.field_center_item_done_pointers
+#: model:ir.model.fields,field_description:educational_supervison.field_parent_item_done_pointers
+#: model:ir.model.fields,field_description:educational_supervison.field_supervisor_item_done_pointers
+msgid "done pointers"
+msgstr "المتحقق"
+
+#. module: educational_supervison
+#: model:ir.ui.view,arch_db:educational_supervison.visit_managment_tree
+msgid "done visit"
+msgstr "تمت الزيارة"
+
+#. module: educational_supervison
+#: model:ir.model,name:educational_supervison.model_edu_approve
+msgid "edu.approve"
+msgstr "edu.approve"
+
+#. module: educational_supervison
+#: model:ir.model,name:educational_supervison.model_edu_criterion
+msgid "edu.criterion"
+msgstr "edu.criterion"
+
+#. module: educational_supervison
+#: model:ir.model,name:educational_supervison.model_edu_field
+msgid "edu.field"
+msgstr "edu.field"
+
+#. module: educational_supervison
+#: model:ir.model,name:educational_supervison.model_edu_item
+msgid "edu.item"
+msgstr "edu.item"
+
+#. module: educational_supervison
+#: model:ir.model,name:educational_supervison.model_edu_name
+msgid "edu.name"
+msgstr "edu.name"
+
+#. module: educational_supervison
+#: model:ir.model,name:educational_supervison.model_edu_visit
+msgid "edu.visit"
+msgstr "edu.visit"
+
+#. module: educational_supervison
+#: model:ir.model.fields,field_description:educational_supervison.field_center_item_flag
+msgid "flag"
+msgstr "إختيار"
+
+#. module: educational_supervison
+#: model:res.groups,name:educational_supervison.group_create_comapany_pointers
+msgid "group_create_comapany_pointers"
+msgstr "إضافة وتعديل سجل إدارة المؤشرات والبنود"
+
+#. module: educational_supervison
+#: model:res.groups,name:educational_supervison.group_create_edu_approve
+msgid "group_create_edu_approve"
+msgstr "إنشاء نوع توثيق الإشراف التربوي"
+
+#. module: educational_supervison
+#: model:res.groups,name:educational_supervison.group_create_edu_criterion
+msgid "group_create_edu_criterion"
+msgstr "تإضافة وتعديل معيار"
+
+#. module: educational_supervison
+#: model:res.groups,name:educational_supervison.group_create_edu_field
+msgid "group_create_edu_field"
+msgstr "إنشاء مجالات الإشراف التربوي"
+
+#. module: educational_supervison
+#: model:res.groups,name:educational_supervison.group_create_edu_name
+msgid "group_create_edu_name"
+msgstr "إنشاء مسميات الإشراف التربوي"
+
+#. module: educational_supervison
+#: model:res.groups,name:educational_supervison.group_create_edu_visit
+msgid "group_create_edu_visit"
+msgstr "إنشاء زيارات الإشراف التربوي"
+
+#. module: educational_supervison
+#: model:res.groups,name:educational_supervison.group_create_item
+msgid "group_create_item"
+msgstr "إضافة وتعديل البنود"
+
+#. module: educational_supervison
+#: model:res.groups,name:educational_supervison.group_distribute_comapany_pointers
+msgid "group_distribute_comapany_pointers"
+msgstr "توزيع مؤشرات الإشراف التربوي على مراكز الإشراف"
+
+#. module: educational_supervison
+#: model:res.groups,name:educational_supervison.group_edit_comapany_pointers
+msgid "group_edit_comapany_pointers"
+msgstr "التعديل على حقول إدارة المؤشرات والنود"
+
+#. module: educational_supervison
+#: model:res.groups,name:educational_supervison.group_edit_edu_approve
+msgid "group_edit_edu_approve"
+msgstr "التعديل على انواع توثيق الإشراف التربوي"
+
+#. module: educational_supervison
+#: model:res.groups,name:educational_supervison.group_edit_edu_criterion
+msgid "group_edit_edu_criterion"
+msgstr "التعديل على المعايير"
+
+#. module: educational_supervison
+#: model:res.groups,name:educational_supervison.group_edit_edu_name
+msgid "group_edit_edu_name"
+msgstr "التعديل على مسميات الإشراف التربوي"
+
+#. module: educational_supervison
+#: model:res.groups,name:educational_supervison.group_edit_item
+msgid "group_edit_item"
+msgstr "التعديل على البنود"
+
+#. module: educational_supervison
+#: model:res.groups,name:educational_supervison.group_name_distribute_supervisor_item
+msgid "group_name_distribute_supervisor_item"
+msgstr "توزيع مؤشرات الإشراف التربوي علي المشرفين التربويين"
+
+#. module: educational_supervison
+#: model:res.groups,name:educational_supervison.group_name_write_supervisor_item
+msgid "group_name_write_supervisor_item"
+msgstr "التعديل على حقول إدارة البنود للمشرفين"
+
+#. module: educational_supervison
+#: model:res.groups,name:educational_supervison.group_name_create_supervisor_item
+msgid "group_name_create_supervisor_item"
+msgstr "الإضافة على حقول إدارة البنود للمشرفين"
+
+#. module: educational_supervison
+#: model:res.groups,name:educational_supervison.group_read_center_item
+msgid "group_read_center_item"
+msgstr "القراءة والإطلاع علي حقول توزيع المؤشرات على المشرفين"
+
+#. module: educational_supervison
+#: model:res.groups,name:educational_supervison.group_read_edu_approve
+msgid "group_read_edu_approve"
+msgstr "القراءة والإطلاع على انواع توثيق الإشراف التربوي"
+
+#. module: educational_supervison
+#: model:res.groups,name:educational_supervison.group_read_edu_criterion
+msgid "group_read_edu_criterion"
+msgstr "القراءة والإطلاع على المعايير"
+
+#. module: educational_supervison
+#: model:res.groups,name:educational_supervison.group_read_edu_field
+msgid "group_read_edu_field"
+msgstr "القراءة والإطلاع على مجالات الإشراف التربوي"
+
+#. module: educational_supervison
+#: model:res.groups,name:educational_supervison.group_read_edu_name
+msgid "group_read_edu_name"
+msgstr "القراءة والإطلاع على مسميات الإشراف التربوي"
+
+#. module: educational_supervison
+#: model:res.groups,name:educational_supervison.group_read_edu_visit
+msgid "group_read_edu_visit"
+msgstr "القراءة والإطلاع علي زيارات الإشراف التربوي"
+
+#. module: educational_supervison
+#: model:res.groups,name:educational_supervison.group_read_item
+msgid "group_read_item"
+msgstr "القراءة والإطلاع على البنود"
+
+#. module: educational_supervison
+#: model:res.groups,name:educational_supervison.group_read_comapany_pointers
+msgid "group_read_omapany_pointers"
+msgstr "القراءة والإطلاع على حقول إدارة المؤشرات والبنود"
+
+#. module: educational_supervison
+#: model:res.groups,name:educational_supervison.group_read_supervisor_item
+msgid "group_read_supervisor_item"
+msgstr "القراءة والإطلاع على حقول إدارة البنود للمشرفين"
+
+#. module: educational_supervison
+#: model:res.groups,name:educational_supervison.group_read_visits_managment
+msgid "group_read_visits_managment"
+msgstr "القراءة والإطلاع على إدارة الزيارات"
+
+#. module: educational_supervison
+#: model:res.groups,name:educational_supervison.group_write_center_item
+msgid "group_write_center_item"
+msgstr "إضافة والتعديل على حقول توزيع المؤشرات علي المشرفين"
+
+#. module: educational_supervison
+#: model:res.groups,name:educational_supervison.group_write_edu_field
+msgid "group_write_edu_field"
+msgstr "التعديل على مسميات الإشراف التربوي"
+
+#. module: educational_supervison
+#: model:res.groups,name:educational_supervison.group_write_edu_visit
+msgid "group_write_edu_visit"
+msgstr "التعديل زيارات الإشراف التربوي"
+
+#. module: educational_supervison
+#: model:res.groups,name:educational_supervison.group_write_visits_managment
+msgid "group_write_visits_managment"
+msgstr "إضافة وتعديل حقول إدارة الزيارات"
+
+#. module: educational_supervison
+#: selection:center.item,distribuation_method:0
+#: selection:one.center.assign,distribuation_method:0
+#: selection:one.sup.assign,distribuation_method:0
+#: selection:parent.item,distribuation_method:0
+#: selection:sup.assign,distribuation_method:0
+msgid "internal"
+msgstr "توزيع داخلي"
+
+#. module: educational_supervison
+#: model:ir.model.fields,field_description:educational_supervison.field_one_sup_assign_item
+#: model:ir.model.fields,field_description:educational_supervison.field_sup_assign_item
+#: model:ir.model.fields,field_description:educational_supervison.field_visits_managment_item
+msgid "item"
+msgstr "البند"
+
+#. module: educational_supervison
+#: model:ir.ui.view,arch_db:educational_supervison.tree_master_item
+msgid "item name"
+msgstr "اسم البند"
+
+#. module: educational_supervison
+#: model:ir.model.fields,field_description:educational_supervison.field_comapany_pointers_lines
+#: model:ir.model.fields,field_description:educational_supervison.field_one_center_assign_lines
+#: model:ir.ui.view,arch_db:educational_supervison.item_distrbuted_form
+msgid "items"
+msgstr "البنود"
+
+#. module: educational_supervison
+#: model:ir.model,name:educational_supervison.model_mk_mosque
+msgid "mk.mosque"
+msgstr "mk.mosque"
+
+#. module: educational_supervison
+#: model:ir.model.fields,field_description:educational_supervison.field_supervisor_item_masjed_id
+#: model:ir.model.fields,field_description:educational_supervison.field_visits_managment_masjed_id
+msgid "mosque"
+msgstr "المسجد/ المدرسة"
+
+#. module: educational_supervison
+#: model:ir.model.fields,field_description:educational_supervison.field_supervisor_item_mosque_permision
+msgid "mosque_permision"
+msgstr "mosque_permision"
+
+#. module: educational_supervison
+#: model:ir.ui.view,arch_db:educational_supervison.supervisor_item_managment_form
+#: model:ir.ui.view,arch_db:educational_supervison.visit_managment_tree
+msgid "n sup"
+msgstr "المشرف"
+
+#. module: educational_supervison
+#: model:ir.model,name:educational_supervison.model_one_center_assign
+msgid "one.center.assign"
+msgstr "one.center.assign"
+
+#. module: educational_supervison
+#: model:ir.model,name:educational_supervison.model_one_sup_assign
+msgid "one.sup.assign"
+msgstr "one.sup.assign"
+
+#. module: educational_supervison
+#: model:ir.model.fields,field_description:educational_supervison.field_center_item_parent_item
+msgid "parent"
+msgstr "parent"
+
+#. module: educational_supervison
+#: model:ir.model,name:educational_supervison.model_parent_item
+msgid "parent.item"
+msgstr "parent.item"
+
+#. module: educational_supervison
+#: model:ir.ui.view,arch_db:educational_supervison.supervisor_item_managment_form
+msgid "permision_requests_locations"
+msgstr "معلومات موقع المسجد"
+
+#. module: educational_supervison
+#: model:ir.ui.view,arch_db:educational_supervison.supervisor_item_managment_form
+msgid "permision_requests_visit"
+msgstr "معلومات المسجد"
+
+#. module: educational_supervison
+#: model:ir.model.fields,field_description:educational_supervison.field_parent_item_company_pointer
+msgid "pointer"
+msgstr "المؤشر"
+
+#. module: educational_supervison
+#: model:ir.model.fields,field_description:educational_supervison.field_center_item_supervisors_pointers
+#: model:ir.model.fields,field_description:educational_supervison.field_parent_item_centers_pointer
+msgid "pointers"
+msgstr "المؤشرات"
+
+#. module: educational_supervison
+#: model:ir.model.fields,field_description:educational_supervison.field_one_sup_assign_required_of_pointers
+#: model:ir.model.fields,field_description:educational_supervison.field_parent_item_required_pointers
+#: model:ir.model.fields,field_description:educational_supervison.field_sup_assign_required_of_pointers
+msgid "required pointers number"
+msgstr "المؤشر المطلوب"
+
+#. module: educational_supervison
+#: model:ir.ui.view,arch_db:educational_supervison._supervisor_item_managment_tree
+#: model:ir.ui.view,arch_db:educational_supervison.item_distrbuted_center_tree
+#: model:ir.ui.view,arch_db:educational_supervison.item_distrbuted_form
+#: model:ir.ui.view,arch_db:educational_supervison.supervisor_item_managment_form
+#: model:ir.ui.view,arch_db:educational_supervison.visit_managment_tree
+msgid "status"
+msgstr "الحالة"
+
+#. module: educational_supervison
+#: model:ir.model,name:educational_supervison.model_sup_assign
+msgid "sup.assign"
+msgstr "sup.assign"
+
+#. module: educational_supervison
+#: model:ir.actions.act_window,name:educational_supervison.supervisor_item_managment_action
+msgid "supervisor Items managment"
+msgstr "تقييم البنود للمشرفي"
+
+#. module: educational_supervison
+#: model:ir.model,name:educational_supervison.model_supervisor_item
+msgid "supervisor.item"
+msgstr "supervisor.item"
+
+#. module: educational_supervison
+#: model:ir.model,name:educational_supervison.model_supervisor_pointer
+msgid "supervisor.pointer"
+msgstr "supervisor.pointer"
+
+#. module: educational_supervison
+#: model:ir.model.fields,field_description:educational_supervison.field_center_item_total_supervisors
+#: model:ir.model.fields,field_description:educational_supervison.field_one_sup_assign_supervisors
+#: model:ir.model.fields,field_description:educational_supervison.field_sup_assign_supervisors
+#: model:ir.ui.view,arch_db:educational_supervison.item_distrbuted_center_form
+msgid "supervisors"
+msgstr "المشرفين/ المشرفات"
+
+#. module: educational_supervison
+#: model:ir.actions.act_window,name:educational_supervison.action_item_center
+msgid "supervisors distribuation"
+msgstr "التوزيع للمشرفين"
+
+#. module: educational_supervison
+#: selection:center.item,item_type:0
+#: selection:edu.item,type_item:0
+#: selection:supervisor.item,item_type:0
+msgid "visit"
+msgstr "زيارة"
+
+#. module: educational_supervison
+#: selection:parent.item,item_type:0
+msgid "visit"
+msgstr "زيارة - اطلاع على مرفق"
+
+#. module: educational_supervison
+#: model:ir.ui.view,arch_db:educational_supervison.supervisor_item_managment_form
+msgid "visit_date"
+msgstr "visit_date"
+
+#. module: educational_supervison
+#: model:ir.model.fields,field_description:educational_supervison.field_supervisor_item_visits
+msgid "visits"
+msgstr "الزيارات"
+
+#. module: educational_supervison
+#: model:ir.actions.act_window,name:educational_supervison.visits_managment_action
+msgid "visits managment"
+msgstr "اداره الزيارات"
+
+#. module: educational_supervison
+#: model:ir.ui.view,arch_db:educational_supervison.supervisor_item_managment_form
+msgid "visits plan"
+msgstr "خطة الزيارت"
+
+#. module: educational_supervison
+#: model:ir.model,name:educational_supervison.model_visits_managment
+msgid "visits.managment"
+msgstr "visits.managment"
+
+#. module: educational_supervison
+#: model:ir.ui.menu,name:educational_supervison.visits_managment
+msgid "أدارة الزيارات"
+msgstr "أدارة الزيارات"
+
+#. module: educational_supervison
+#: model:ir.ui.menu,name:educational_supervison.menu_approve
+msgid "أنواع التوثيق"
+msgstr "أنواع التوثيق"
+
+#. module: educational_supervison
+#: model:ir.ui.menu,name:educational_supervison.menu_visit
+msgid "أنواع الزيارات"
+msgstr "أنواع الزيارات"
+
+#. module: educational_supervison
+#: model:ir.ui.menu,name:educational_supervison.menu_pointer_management
+msgid "إدارة المؤشرات والبنود"
+msgstr "إدارة المؤشرات والبنود"
+
+#. module: educational_supervison
+#: model:ir.ui.menu,name:educational_supervison.menu_settings
+msgid "الإعدادات"
+msgstr "الإعدادات"
+
+#. module: educational_supervison
+#: model:ir.ui.view,arch_db:educational_supervison.master_form_criterion
+msgid "البنود"
+msgstr "البنود"
+
+#. module: educational_supervison
+#: model:ir.ui.menu,name:educational_supervison.master_crateria_menn
+msgid "المعايير"
+msgstr "المعايير"
+
+#. module: educational_supervison
+#: model:ir.ui.menu,name:educational_supervison.menu_root
+#: model:ir.ui.menu,name:educational_supervison.menu_supervision
+msgid "اﻹﺷﺮاﻑ اﻟﺘﺮﺑﻮﻱ"
+msgstr "اﻹﺷﺮاﻑ اﻟﺘﺮﺑﻮﻱ"
+
+#. module: educational_supervison
+#: model:ir.ui.menu,name:educational_supervison.master_item_menu
+msgid "بنود الإشراف"
+msgstr "بنود الإشراف"
+
+#. module: educational_supervison
+#: selection:visits.managment,state:0
+msgid "تمت الزيارة"
+msgstr "تمت الزيارة"
+
+#. module: educational_supervison
+#: model:ir.ui.menu,name:educational_supervison.menu_mosque
+msgid "توزيع المؤشرات علي المشرفين"
+msgstr "توزيع المؤشرات علي المشرفين"
+
+#. module: educational_supervison
+#: code:addons/educational_supervison/models/pointer_line.py:609
+#, python-format
+msgid "خطة الزيارات"
+msgstr "خطة الزيارات"
+
+#. module: educational_supervison
+#: selection:visits.managment,state:0
+msgid "لم تتم الزيارة"
+msgstr "لم تتم الزيارة"
+
+#. module: educational_supervison
+#: model:ir.ui.menu,name:educational_supervison.menu_field
+msgid "مجالات اﻹﺷﺮاﻑ اﻟﺘﺮﺑﻮﻱ"
+msgstr "مجالات اﻹﺷﺮاﻑ اﻟﺘﺮﺑﻮﻱ"
+
+#. module: educational_supervison
+#: model:ir.ui.menu,name:educational_supervison.menu_name
+msgid "مسميات اﻹﺷﺮاﻑ اﻟﺘﺮﺑﻮﻱ"
+msgstr "مسميات اﻹﺷﺮاﻑ اﻟﺘﺮﺑﻮﻱ"
+

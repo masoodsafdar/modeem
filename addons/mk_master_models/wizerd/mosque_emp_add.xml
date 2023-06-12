@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <data>
+
+<record id="add_employee_to_mos_wizerd" model="ir.ui.view">
+                <field name="name">episode student link</field>
+                <field name="model">add.mosque</field>
+                <field name="arch" type="xml">
+                <form string="Link students at period">
+                        <group col="4" colspan="4">
+                        <field name="employee_id" readonly="1"/>
+                        <field name="department_id" attrs="{'readonly':[('is_dept', '=',True)]}"/>
+                        <field name="is_dept" invisible="1"/>
+                        </group>
+                        
+                        <notebook>
+                        <page string="chose mosque">    
+                        <field name="mosque_id"  options="{'no_create': 1, 'no_create_edit': 1,'no_open':1}">
+                            <tree>
+                                <field name="name"/>
+                                <field name="register_code"/>
+                                <field name="responsible_id" string="current mosque responsiable"/>
+                            </tree>
+                        </field>
+                    </page>
+                        </notebook>
+                        
+
+
+                   
+                    <footer>
+    <p>
+       هل تريد حقا تنسيب هذا الموظف الي المساجد /المسجد المختاره
+    <button name="yes" type="object" string="yes" class="oe_highlight"/>
+    <button string="no" class="oe_link" special="cancel"/>
+    </p>
+
+        </footer>
+                </form>
+                </field>
+            </record>
+
+
+
+<record id="add_employee_mosque_actoin" model="ir.actions.act_window">
+                <field name="name"> </field>
+                <field name="res_model">add.mosque</field>
+                <field name="view_type">form</field>
+                <field name="view_mode">form</field>
+                <field name="view_id" ref="add_employee_to_mos_wizerd"/>
+                <field name="target">new</field>
+</record>
+
+</data>
+</odoo>

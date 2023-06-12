@@ -1,0 +1,24 @@
+<odoo>
+	<data noupdate="1">
+		<record model="mak.test.center" id="mak_test_center4">
+			<field name="academic_id" ref="mk_study_year1"/>
+			<field name="study_class_id" ref="mk_study_class1"/>
+			<field name="name">مركز إختبار الأجزاء طلاب</field>
+			<field name="center_id" ref="mk_hr_department7"/>
+			<field name="test_group">student</field>
+			<field name="all_branches">1</field>
+
+			<field name="registeration_start_date">2020-12-01</field>
+			<field name="registeration_end_date">2020-12-31</field>
+
+			<field name="exam_start_date">2020-12-01</field>
+			<field name="exam_end_date">2020-12-31</field>
+
+			<field name="gender">male</field>
+			
+			<!-- field name="department_ids-->
+			<!-- field name="test_names-->
+			<!-- field name="branches_ids-->
+		</record>
+	</data>  
+</odoo>

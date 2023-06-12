@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+		<record id="grade_18" model="mk.grade">
+		    <field name="name">غير محدد</field>
+		    <field name="active" eval="False"/>
+		</record>
+<!--		new hr.job  -->
+		<record id="job_teacher_that_hear_session_Over_the_Phone"model="hr.job">
+		    <field name="name">Teacher that hear session  Over the Phone</field>
+		    <field name="state">recruit</field>
+		</record>
+		<record id="job_indoctrinationEpisode_teacher" model="hr.job">
+		    <field name="name">Indoctrination Episode Teacher</field>
+			<field name="state">recruit</field>
+
+		</record>
+		<record id="job_administrative_monitoring" model="hr.job">
+		    <field name="name">Administrative Monitoring</field>
+			<field name="state">recruit</field>
+		</record>
+		<record id="job_test_officer" model="hr.job">
+		    <field name="name">Test Officer</field>
+			<field name="state">recruit</field>
+		</record>
+
+<!--		old data-->
+		<record id="Job_1" model="hr.job">
+		    <field name="name">مشرف/ ـة مقيم/ ـة</field>
+			<field name="state">recruit</field>
+		</record>
+		<record id="Job_6" model="hr.job">
+		    <field name="name">سائق</field>
+			<field name="state">recruit</field>
+		</record>
+
+		<record id="Job_77" model="hr.job">
+		    <field name="name">مشرف/ـة باص</field>
+			<field name="state">recruit</field>
+		</record>
+
+		<record id="Job_7" model="hr.job">
+		    <field name="name">حارس</field>
+			<field name="state">recruit</field>
+		</record>
+		<record id="Job_12" model="hr.job">
+		    <field name="name">محاسب / ـة</field>
+			<field name="state">recruit</field>
+		</record>
+		<record id="Job_13" model="hr.job">
+		    <field name="name">حاضنة</field>
+			<field name="state">recruit</field>
+		</record>
+		<record id="Job_24" model="hr.job">
+		    <field name="name">مشرفة تربوية مسائية</field>
+			<field name="state">recruit</field>
+		</record>
+		<record id="Job_62" model="hr.job">
+		    <field name="name">مشرفة مقيمة بالمدرسة</field>
+			<field name="state">recruit</field>
+		</record>
+		<record id="hr_job_1283" model="hr.job">
+		    <field name="name">معلم / ـة تصحيح تلاوة</field>
+			<field name="state">recruit</field>
+		</record>
+		<record id="hr_job_1211" model="hr.job">
+		    <field name="name">معلم / ـه المرحلة الثانوية</field>
+			<field name="state">recruit</field>
+		</record>
+	</data>
+</odoo>

@@ -1,0 +1,8 @@
+<odoo>
+	<data noupdate="1">
+		<record model="mk.virtual_room.provider" id="virtual_room_provider1">
+			<field name="name">زووم</field>
+			<field name="type_subscription">room</field>
+		</record>
+	</data>  
+</odoo>

@@ -1,0 +1,34 @@
+<odoo>
+    <data noupdate="1">
+        <record id="mk_test_type1" model="mk.test.type">
+            <field name="name">اختبارات خاتمين</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="duration">40</field>
+            <field name="test_type">s</field>
+            <field name="target">s</field>
+            <field name="test_methodology">a</field>
+            <field name="follow_super">test_cmp</field>
+            <field name="check_img" eval="True"/>
+        </record>
+        <record id="mk_test_type2" model="mk.test.type">
+            <field name="name">اختبرات اجزاء</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="duration">40</field>
+            <field name="test_type">s</field>
+            <field name="target">s</field>
+            <field name="test_methodology">a</field>
+            <field name="follow_super"></field>
+            <field name="check_img" eval="True"/>
+        </record>
+        <record id="mk_test_type3" model="mk.test.type">
+            <field name="name">اختبار الاجازات</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="duration">60</field>
+            <field name="test_type">s</field>
+            <field name="target">s</field>
+            <field name="test_methodology">a</field>
+            <field name="follow_super">test_mosq</field>
+            <field name="check_img" eval="True"/>
+        </record>
+    </data>
+</odoo>

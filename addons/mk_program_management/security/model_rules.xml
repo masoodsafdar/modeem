@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+<record model="ir.rule" id="user_create_program_permision">
+      <field name="name"> programs rule </field>
+      <field name="model_id" ref="mk_program_management.model_mk_programs"/>
+<!--      <field name="domain_force">['|',('center_department_id','=',False),-->
+<!--                                      '|',('mosque_id','in',user.mosque_ids.ids),-->
+<!--                                         '|',('mosque_id.center_department_id.id','in',user.department_ids.ids),-->
+<!--                                              '&amp;',('center_department_id.id','in',user.department_ids.ids),('mosque_id','=',False)]</field>      -->
+    <field name="domain_force">['|',('gender','=', user.gender),
+                                    '|',('gender','=', False),
+                                    ('gender','in',(str(user.gender)).split(","))]</field>
+    <field name="groups" eval="[(4, ref('group_read_level_program')),(4, ref('group_read_level_program_close'))]"/>
+</record>
+
+
+<record model="ir.rule" id="user_create_approach_permision">
+      <field name="name">create approach</field>
+      <field name="model_id" ref="mk_program_management.model_mk_approaches"/>
+<!--      <field name="domain_force">['|',('program_id.center_department_id','=',False),-->
+<!--                                     '|',('program_id.mosque_id','in',user.mosque_ids.ids),-->
+<!--                                        '|',('program_id.mosque_id.center_department_id.id','in',user.department_ids.ids),-->
+<!--                                           '&amp;',('program_id.center_department_id.id','in',user.department_ids.ids),('program_id.mosque_id','=',False)]</field>-->
+        <field name="domain_force">['|',('program_id.gender','=', user.gender),
+                                       '|', ('program_id.gender','=', False),
+                                         ('program_id.gender','in',(str(user.gender)).split(","))]</field>
+      <field name="groups" eval="[(4, ref('read_curriculum_level')),(4, ref('read_curriculum_level_close'))]"/>
+</record>
+</data>
+</openerp>

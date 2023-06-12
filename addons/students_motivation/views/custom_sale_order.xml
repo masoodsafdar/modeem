@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+		<record id="sale_order_view_form" model="ir.ui.view">
+			<field name="name">Sale Order Form</field>
+			<field name="model">sale.order</field>
+			<field name="arch" type="xml">
+			<form>
+				<header>
+					<button name="mosque_approve_action" string="Approve"      states="draft,"                       type="object" groups="students_motivation.accept_refuse_motivation_request" class="oe_highlight" />
+					<button name="refuse_action"         string="Refuse"       states="draft,mosque_approve_action," type="object" groups="students_motivation.accept_refuse_motivation_request" class="oe_highlight" />
+					<button name="has_deliverd_action"   string="Has Delivred" states="mosque_approve,"              type="object" groups="students_motivation.deliver_motivation_request"       class="oe_highlight" />
+					<button name="draft_action"          string="Set To Draft" states="refused"                      type="object" class="oe_highlight" />
+					<field name="state" widget="statusbar"/>
+				</header>
+				<sheet>
+					<div>
+						<field name="name" readonly="1"/>
+					</div>
+					<group col="4" colspan="2">
+						<field name="order_date"  readonly="1"/>
+						<field name="has_delivered" invisible="1" />
+						<field name="student_id"  required="1" options="{'no_create': True, 'no_open':True}"/>
+						<field name="mosque_id"   readonly="1" options="{'no_create': True, 'no_open':True}"/>
+						<field name="total_prize_points" readonly="1"/>
+					</group>
+					<notebook>
+						<page string="Order Lines">
+							<field name="order_line">
+								<tree editable="bottom">
+									<field name="product_updatable" invisible="1" />
+									<field name="product_id"      string="Prize" context="{'form_view_ref': 'students_motivation.products_tem_view_form'}"/>
+									<field name="product_uom_qty" string="Ordered Quantity" />
+									<field name="total_points" readonly="1" />
+								</tree>
+							</field>
+						</page>
+						<page string="Refuse Reasons">
+							<group>
+								<field name="refuse_reason" />
+							</group>
+						</page>
+					</notebook>
+				</sheet>
+			</form>
+			</field>
+		</record>
+
+		<record id="motivate_order_tree_view" model="ir.ui.view">
+			<field name="name">sale.order.tree</field>
+			<field name="model">sale.order</field>
+			<field name="arch" type="xml">
+				<tree>
+					<field name="name"/>
+					<field name="order_date"/>
+					<field name="student_id"/>
+					<field name="state"/>
+					<field name="has_delivered"/>
+				</tree>
+			</field>
+		</record>
+
+		<!--   action for sale order -->
+		<record model="ir.actions.act_window" id="action_motivate_order_action">
+			<field name="name">Motivation Order</field>
+			<field name="res_model">sale.order</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+		<record id="action_motivate_order_tree" model="ir.actions.act_window.view">
+			<field eval="1" name="sequence" />
+			<field name="view_mode">tree</field>
+			<field name="view_id" ref="motivate_order_tree_view" />
+			<field name="act_window_id" ref="action_motivate_order_action" />
+		 </record>
+
+		<record id="action_motivate_order_form" model="ir.actions.act_window.view">
+			<field eval="2" name="sequence" />
+			<field name="view_mode">form</field>
+			<field name="view_id" ref="sale_order_view_form" />
+			<field name="act_window_id" ref="action_motivate_order_action" />
+		</record>
+
+		<menuitem id="menu_motivate_order_root"
+			name="Motivation Orders"
+			parent="menu_motivation_root"
+			action="action_motivate_order_action"
+			groups="students_motivation.group_motivation_request_management"
+			sequence="1"/>
+
+		<menuitem id="menu_motivate_order"
+			name="Motivation Orders"
+			parent="menu_motivate_order_root"
+			action="action_motivate_order_action"
+			groups="students_motivation.group_motivation_request_management"
+			sequence="1"/>
+			
+    </data>
+</odoo>

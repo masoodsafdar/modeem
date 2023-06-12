@@ -1,0 +1,179 @@
+<odoo>
+    <data>
+    
+		<record id="mk_programs_form_view" model="ir.ui.view">
+			<field name="name">Programs Configuration Form View</field>
+			<field name="model">mk.programs</field>
+			<field name="arch" type="xml">
+				<form string = "Programs Configuration">
+					<header>
+						<field name="state" widget="statusbar" statusbar_visible="draft,active"/>
+						<button name="act_draft"  string="عدم التفعيل"        type="object" states="active" class="oe_highlight" groups="mk_program_management.group_activate_program_close,mk_program_management.group_activate_program" />
+						<button name="act_active" string="Set to Active" type="object" states="draft"  class="oe_highlight" groups="mk_program_management.group_activate_program_close,mk_program_management.group_activate_program"/>
+
+					</header>
+				<sheet>
+					<div class="oe_button_box" name="button_box">
+						<button name="toggle_active" type="object" class="oe_stat_button" icon="fa-archive">
+							<field name="active" widget="boolean_button" options='{"terminology": "archive"}'/>
+						</button>
+					</div>
+				<group>
+				<group colspan="2" col="4">
+				<field name="name" required="1"/>
+				<field name="program_type" readonly="1"/>
+				<field name="create_uid"   readonly="1"/>
+				</group>
+
+				</group>
+
+				<group>
+				<group colspan="2" col="4">
+
+				<field name="center" invisible="1"/>
+				<field name="masjed" invisible="1"/>
+
+				<field name="center_department_id" domain="[('level_type','=','c')]" options="{'no_create_edit': True, 'no_create':True ,'no_open':True}" attrs="{'required':[('center','=',True)]}"/>
+				<field name="mosque_id" options="{'no_create_edit': True, 'no_create':True}"  attrs="{'required':[('masjed','=',True)]}"/>
+				</group>
+				</group>
+
+				<notebook>
+					<page string="program setting">
+						<group>
+							<group string="Program Parts">
+							<field name="memorize"/>
+							<field name="minimum_audit"/>
+							<field name="maximum_audit"/>
+							<field name="reading"/>
+						</group>
+						<group string="Target Type">
+						<field name="mail"/>
+						<field name="femail"/>
+						<field name="program_gender" invisible="1"/>
+						</group>
+						</group>
+						<group>
+							<group>
+								<field name="is_required"/>
+							</group>
+							<group>
+							</group>
+						</group>
+					</page>
+
+					<page string="Teacher Specification">
+						<group colspan="2" col="6">
+							<field name="recruitment_ids"    widget="many2many_tags" options="{'no_create': True,'no_open': True,}"/>
+							<field name="specialization_ids" widget="many2many_tags" options="{'no_create': True,'no_open': True,}"/>
+							<field name="experience_years"/>
+						</group>
+					</page>
+
+					<page string="Program Approches">
+						<field name="program_approches" readonly="1">
+							<tree>
+								<field name="name"/>
+								<field name="state"/>
+							</tree>
+						</field>
+					</page>
+
+				</notebook>
+				</sheet>
+					<div class="oe_chatter">
+						<field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+						<field name="message_ids" widget="mail_thread"/>
+					</div>
+				</form>
+			</field>
+		</record>
+
+        <record id="mk_programs_tree_view" model="ir.ui.view">
+            <field name="name">Programs Configuration Tree View</field>
+            <field name="model">mk.programs</field>
+            <field name="arch" type="xml">
+                <tree delete="0" string="Programs Configuration" colors="red:state=='draft';blue:state=='active'">
+                	<field name="company_id" invisible="1" options="{'no_open':1,'no_create':1}"/>
+			 		<field name="name"/>
+			 		<field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="mk_programs_search_view" model="ir.ui.view">
+            <field name="name">Programs Configuration Search View</field>
+            <field name="model">mk.programs</field>
+            <field name="arch" type="xml">
+                <search string="Programs Configuration">
+               		 <field name="name"/>
+              	  	 <field name="mosque_id" 			string="المسجد/المدرسة"/>
+              	  	 <field name="center_department_id" string="المركز"/>
+              	  	 <field name="create_uid"  			string="أنشئ بواسطة"/>
+              	  	 <field name="program_gender"  		string="الجنس"/>
+                     <separator/>
+	                 <filter string="درجة الحفظ"     name="is_memorize"    domain="[('memorize', '=',True)]"/>
+	                 <filter string="Active"     name="active"    domain="[('active', '=',True)]"/>
+	                 <separator/>
+	                 <filter string="مراجعة صغرى"    name="is_min_review"  domain="[('minimum_audit', '=',True)]"/>
+	                 <separator/>
+	                 <filter string="مراجعة كبرى"    name="is_max_review"  domain="[('maximum_audit', '=',True)]"/>
+	                 <separator/>
+	                 <filter string="تلاوة"           name="is_reading"     domain="[('reading', '=',True)]"/>
+	                 <separator/>
+	                 <filter string="الظهور في الحلقات التابعة" name="is_required"    domain="[('is_required', '=',True)]"/>
+	                 <separator/>
+	                 <filter string="ذكور"                      name="is_male"  	  domain="[('mail', '=',True)]"/>
+	                 <separator/>
+	                 <filter string="إناث"   				    name="is_female"      domain="[('femail', '=',True)]"/>
+	                 <group expand="0" string="Group By">
+		                     <filter name="active"   string="Active"      context="{'group_by': 'active'}"/>
+		                     <filter name="center_department_id"   string="المركز"      context="{'group_by': 'center_department_id'}"/>
+		                     <filter name="mosque_id"              string="المسجد"      context="{'group_by': 'mosque_id'}"/>
+		                     <filter name="program_id"             string="أنشئ بواسطة" context="{'group_by': 'create_uid'}"/>
+		                     <filter name="groupby_state" 		   string="state"       context="{'group_by':'state'}"/>
+		                     <filter name="groupby_program_gender" string="الجنس"       context="{'group_by':'program_gender'}"/>
+		             </group>
+				</search>
+            </field>
+        </record>
+
+		<!-- <record id="mk_programs_action" model="ir.actions.act_window">
+            <field name="name">Programs Configuration</field>
+            <field name="res_model">mk.programs</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+            <field name="search_view_id" ref="mk_programs_search_view"/>
+        </record>
+		-->
+        <record id="opened_programs_action" model="ir.actions.act_window">
+            <field name="name">البرامج المفتوحة</field>
+            <field name="res_model">mk.programs</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('program_type','=','open')]</field>
+            <field name="context">{'default_program_type':'open'}</field>
+        </record>
+
+<!--        <record id="closed_programs_action" model="ir.actions.act_window">-->
+<!--            <field name="name">البرامج المحددة</field>-->
+<!--            <field name="res_model">mk.programs</field>-->
+<!--            <field name="type">ir.actions.act_window</field>-->
+<!--            <field name="view_type">form</field>-->
+<!--            <field name="view_mode">tree,form</field>-->
+<!--            <field name="domain">[('program_type','=','close')]</field>-->
+<!--            <field name="context">{'default_program_type':'close'}</field>-->
+<!--        </record>-->
+
+
+	<menuitem name="إعدادات البرامج" id="mk_programs_configuration_menu" sequence="5" parent="mk_programs_main_menu"/>
+
+	<menuitem name="البرامج المفتوحة" id="mk_opened_programs_menu" sequence="4" parent="mk_programs_configuration_menu" action="opened_programs_action" groups="mk_program_management.group_read_level_program,mk_program_management.group_create_open_program_association,mk_program_management.group_create_open_center_program,mk_program_management.group_create_open_program_mosque,mk_program_management.group_edit_level_program,mk_program_management.group_delete_program,mk_program_management.group_activate_program"/> 
+<!--	<menuitem name="البرامج المحددة"  id="mk_closed_programs_menu" sequence="5" parent="mk_programs_configuration_menu" action="closed_programs_action" groups="mk_program_management.group_read_level_program_close,mk_program_management.group_create_close_program_association,mk_program_management.group_create_close_center_program,mk_program_management.group_create_close_program_mosque,mk_program_management.group_edit_level_program_close,mk_program_management.group_delete_program_close,mk_program_management.group_activate_program_close"/>-->
+	    
+    </data>  
+</odoo>

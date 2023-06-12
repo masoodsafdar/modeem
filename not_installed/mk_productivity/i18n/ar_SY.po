@@ -1,0 +1,498 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* mk_productivity
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-05 18:35+0000\n"
+"PO-Revision-Date: 2020-10-05 18:35+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: mk_productivity
+#: selection:mk.episode_type,type_categ:0
+msgid "All segments of society from the age of nine and above"
+msgstr "جميـع فئـات المجتمـع مـن سـن التاسـعة فمـا فـوق"
+
+#. module: mk_productivity
+#: selection:mk.episode_type,type_task:0
+msgid "Awarding prizes"
+msgstr "منـح الإجـازات القرآنيـة"
+
+#. module: mk_productivity
+#: selection:mk.episode_productivity,type_test:0
+#: selection:mk.episode_type,type_test:0
+msgid "Contest"
+msgstr "مسابقات"
+
+#. module: mk_productivity
+#: selection:mk.episode_type,type_task:0
+msgid "Correction of the recitation of the Holy Quran"
+msgstr "تصحيـح تلاوة القـرآن الكريـم"
+
+#. module: mk_productivity
+#: model:ir.model.fields,field_description:mk_productivity.field_mk_episode_productivity_create_uid
+#: model:ir.model.fields,field_description:mk_productivity.field_mk_incentive_create_uid
+#: model:ir.model.fields,field_description:mk_productivity.field_mk_productivity_create_uid
+#: model:ir.model.fields,field_description:mk_productivity.field_mk_productivity_incentive_create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: mk_productivity
+#: model:ir.model.fields,field_description:mk_productivity.field_mk_episode_productivity_create_date
+#: model:ir.model.fields,field_description:mk_productivity.field_mk_incentive_create_date
+#: model:ir.model.fields,field_description:mk_productivity.field_mk_productivity_create_date
+#: model:ir.model.fields,field_description:mk_productivity.field_mk_productivity_incentive_create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: mk_productivity
+#: model:ir.model.fields,field_description:mk_productivity.field_mk_episode_productivity_display_name
+#: model:ir.model.fields,field_description:mk_productivity.field_mk_incentive_display_name
+#: model:ir.model.fields,field_description:mk_productivity.field_mk_productivity_display_name
+#: model:ir.model.fields,field_description:mk_productivity.field_mk_productivity_incentive_display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: mk_productivity
+#: model:ir.ui.view,arch_db:mk_productivity.mk_productivity_form_view
+#: selection:mk.productivity,state:0
+msgid "Done"
+msgstr "منتهي"
+
+#. module: mk_productivity
+#: selection:mk.productivity,state:0
+msgid "Draft"
+msgstr "مبدئي"
+
+#. module: mk_productivity
+#: model:ir.model.fields,field_description:mk_productivity.field_mk_episode_productivity_episode_id
+msgid "Episode"
+msgstr "الحلقة/ الفصل"
+
+#. module: mk_productivity
+#: model:ir.model.fields,field_description:mk_productivity.field_mk_productivity_episode_productivity_ids
+msgid "Episode productivities"
+msgstr "الانتاجية"
+
+#. module: mk_productivity
+#: model:ir.model,name:mk_productivity.model_mk_episode_productivity
+msgid "Episode productivity"
+msgstr "الانتاجية"
+
+#. module: mk_productivity
+#: model:ir.model.fields,field_description:mk_productivity.field_mk_episode_productivity_type_episode_id
+#: model:ir.model.fields,field_description:mk_productivity.field_mk_productivity_incentive_type_episode_id
+msgid "Episode type"
+msgstr "نوع الحلقة"
+
+#. module: mk_productivity
+#: model:ir.model.fields,field_description:mk_productivity.field_mk_episode_productivity_episode_ids
+#: model:ir.model.fields,field_description:mk_productivity.field_mk_episode_type_episode_ids
+#: model:ir.model.fields,field_description:mk_productivity.field_mk_productivity_episode_ids
+msgid "Episodes"
+msgstr "الحلقات"
+
+#. module: mk_productivity
+#: model:ir.model.fields,field_description:mk_productivity.field_mk_episode_productivity_min_students_number
+msgid "Minimum number of students"
+msgstr "الحد الادنى لعدد الطلاب / الطالبات"
+
+#. module: mk_productivity
+#: model:ir.model.fields,field_description:mk_productivity.field_mk_episode_productivity_students_number
+msgid "Students number"
+msgstr "عدد الطلاب / الطالبات"
+
+#. module: mk_productivity
+#: model:ir.ui.view,arch_db:mk_productivity.mk_productivity_form_view
+msgid "Students tests"
+msgstr "جلسات اختبار الطلاب"
+
+#. module: mk_productivity
+#: model:ir.ui.view,arch_db:mk_productivity.mk_productivity_form_view
+msgid "Teachers tests"
+msgstr "جلسات اختبار المعلمين"
+
+#. module: mk_productivity
+#: selection:mk.episode_productivity,type_mark:0
+#: selection:mk.productivity_incentive,type_mark:0
+msgid "Excellent"
+msgstr "ممتاز"
+
+#. module: mk_productivity
+#: selection:mk.episode_type,type_categ:0
+msgid "Excellent students"
+msgstr "الطلاب والطالبـات المتميزين"
+
+#. module: mk_productivity
+#: selection:mk.episode_productivity,type_test:0
+#: selection:mk.episode_type,type_test:0
+msgid "Final"
+msgstr "اختبارات الخاتمين"
+
+#. module: mk_productivity
+#: selection:mk.episode_productivity,type_test:0
+#: selection:mk.episode_type,type_test:0
+msgid "Diploma"
+msgstr "الحصول على إجازة"
+
+#. module: mk_productivity
+#: selection:mk.episode_productivity,type_mark:0
+#: selection:mk.productivity_incentive,type_mark:0
+msgid "Good"
+msgstr "جيد"
+
+#. module: mk_productivity
+#: model:ir.model.fields,field_description:mk_productivity.field_mk_episode_productivity_id_18506
+#: model:ir.model.fields,field_description:mk_productivity.field_mk_incentive_id
+#: model:ir.model.fields,field_description:mk_productivity.field_mk_productivity_id
+#: model:ir.model.fields,field_description:mk_productivity.field_mk_productivity_incentive_id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: mk_productivity
+#: model:ir.actions.act_window,name:mk_productivity.mk_incentive_action
+#: model:ir.model,name:mk_productivity.model_mk_incentive
+#: model:ir.model.fields,field_description:mk_productivity.field_mk_episode_productivity_incentive_id
+#: model:ir.model.fields,field_description:mk_productivity.field_mk_incentive_name
+#: model:ir.model.fields,field_description:mk_productivity.field_mk_productivity_incentive_incentive_id
+#: model:ir.ui.view,arch_db:mk_productivity.mk_incentive_form_view
+#: model:ir.ui.view,arch_db:mk_productivity.mk_incentive_tree_view
+#: model:ir.ui.view,arch_db:mk_productivity.mk_productivity_incentive_search_view
+msgid "Incentive"
+msgstr "الحوافز"
+
+#. module: mk_productivity
+#: model:ir.model.fields,field_description:mk_productivity.field_mk_episode_type_incentive_ids
+#: model:ir.ui.menu,name:mk_productivity.mk_incentives_menu
+msgid "Incentives"
+msgstr "الحوافز"
+
+#. module: mk_productivity
+#: model:ir.ui.menu,name:mk_productivity.mk_productivity_incentives_menu
+msgid "Incentives configuration"
+msgstr "اعدادات الانتاجية"
+
+#. module: mk_productivity
+#: model:ir.model.fields,field_description:mk_productivity.field_mk_episode_productivity___last_update
+#: model:ir.model.fields,field_description:mk_productivity.field_mk_incentive___last_update
+#: model:ir.model.fields,field_description:mk_productivity.field_mk_productivity___last_update
+#: model:ir.model.fields,field_description:mk_productivity.field_mk_productivity_incentive___last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: mk_productivity
+#: model:ir.model.fields,field_description:mk_productivity.field_mk_episode_productivity_write_uid
+#: model:ir.model.fields,field_description:mk_productivity.field_mk_incentive_write_uid
+#: model:ir.model.fields,field_description:mk_productivity.field_mk_productivity_incentive_write_uid
+#: model:ir.model.fields,field_description:mk_productivity.field_mk_productivity_write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: mk_productivity
+#: model:ir.model.fields,field_description:mk_productivity.field_mk_episode_productivity_write_date
+#: model:ir.model.fields,field_description:mk_productivity.field_mk_incentive_write_date
+#: model:ir.model.fields,field_description:mk_productivity.field_mk_productivity_incentive_write_date
+#: model:ir.model.fields,field_description:mk_productivity.field_mk_productivity_write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: mk_productivity
+#: selection:mk.episode_productivity,type_mark:0
+#: selection:mk.productivity_incentive,type_mark:0
+msgid "Low"
+msgstr "منخفض"
+
+#. module: mk_productivity
+#: model:ir.model.fields,field_description:mk_productivity.field_mk_productivity_incentive_type_mark
+#: model:ir.ui.view,arch_db:mk_productivity.mk_productivity_incentive_search_view
+msgid "Mark"
+msgstr "الاداء"
+
+#. module: mk_productivity
+#: model:ir.model.fields,field_description:mk_productivity.field_mk_productivity_incentive_max_nbr_part
+msgid "Maximum number part"
+msgstr "الحد الأقصى للاجزاء"
+
+#. module: mk_productivity
+#: selection:mk.episode_type,type_task:0
+msgid "Memorizing the holly Quran"
+msgstr "حفـظ القـرآن الكريـم"
+
+#. module: mk_productivity
+#: model:ir.model.fields,field_description:mk_productivity.field_mk_productivity_incentive_min_nbr_part
+msgid "Minimum number part"
+msgstr "الحد الأدنى للاجزاء"
+
+#. module: mk_productivity
+#: model:ir.model.fields,field_description:mk_productivity.field_mk_productivity_incentive_name
+#: model:ir.model.fields,field_description:mk_productivity.field_mk_productivity_name
+#: model:ir.ui.view,arch_db:mk_productivity.mk_productivity_incentive_search_view
+msgid "Name"
+msgstr "الاسم"
+
+#. module: mk_productivity
+#: selection:mk.episode_type,type_categ:0
+msgid "Non-readers,  and children under the age of nine"
+msgstr "غيــر القارئيــن والقارئــات ولألطفــال دون ســن التاســعة"
+
+#. module: mk_productivity
+#: selection:mk.episode_productivity,type_test:0
+#: selection:mk.episode_type,type_test:0
+msgid "Parts"
+msgstr "اختبارات الأجزاء"
+
+#. module: mk_productivity
+#: selection:mk.episode_productivity,type_test:0
+#: selection:mk.episode_type,type_test:0
+msgid "Parts and Final"
+msgstr "اختبارات الخاتمين و الأجزاء"
+
+#. module: mk_productivity
+#: selection:mk.episode_productivity,type_mark:0
+#: selection:mk.productivity_incentive,type_mark:0
+msgid "Perfect"
+msgstr "متميز"
+
+#. module: mk_productivity
+#: model:ir.model.fields,field_description:mk_productivity.field_mk_episode_productivity_id
+#: model:ir.model.fields,field_description:mk_productivity.field_mk_episode_productivity_productivity
+#: model:ir.model.fields,field_description:mk_productivity.field_mk_episode_productivity_productivity_id
+#: model:ir.ui.menu,name:mk_productivity.mk_productivity_menu
+#: model:ir.ui.view,arch_db:mk_productivity.mk_productivity_form_view
+#: model:ir.ui.view,arch_db:mk_productivity.mk_productivity_search_view
+#: model:ir.ui.view,arch_db:mk_productivity.mk_productivity_tree_view
+msgid "Productivity"
+msgstr "الانتاجية"
+
+#. module: mk_productivity
+#: model:ir.ui.menu,name:mk_productivity.mk_productivity_configuration_menu
+msgid "Productivity configuration"
+msgstr "الاعدادات"
+
+#. module: mk_productivity
+#: model:ir.actions.act_window,name:mk_productivity.mk_productivity_incentive_action
+#: model:ir.ui.view,arch_db:mk_productivity.mk_productivity_incentive_form_view
+#: model:ir.ui.view,arch_db:mk_productivity.mk_productivity_incentive_search_view
+#: model:ir.ui.view,arch_db:mk_productivity.mk_productivity_incentive_tree_view
+msgid "Productivity incentive"
+msgstr "الحوافز"
+
+#. module: mk_productivity
+#: model:ir.actions.act_window,name:mk_productivity.mk_productivity_action
+#: model:ir.module.category,name:mk_productivity.mk_productivity_management
+#: model:ir.ui.menu,name:mk_productivity.mk_productivity_root_menu
+msgid "Productivity management"
+msgstr "إدارة الانتاجية"
+
+#. module: mk_productivity
+#: selection:mk.episode_type,type_task:0
+msgid "Receive the Holy Quran and memorize it"
+msgstr "تلقيــن القــرآن الكريــم وحفظــه"
+
+#. module: mk_productivity
+#: model:ir.model.fields,field_description:mk_productivity.field_mk_productivity_state
+msgid "State"
+msgstr "الحالة"
+
+#. module: mk_productivity
+#: model:ir.model.fields,field_description:mk_productivity.field_mk_episode_productivity_student_test_ids
+msgid "Student tests"
+msgstr "إختبارات الطلاب"
+
+#. module: mk_productivity
+#: model:ir.model.fields,field_description:mk_productivity.field_mk_productivity_study_year_id
+msgid "Study year"
+msgstr "العام الدراسي"
+
+#. module: mk_productivity
+#: model:ir.model.fields,field_description:mk_productivity.field_mk_episode_type_type_categ
+#: model:ir.model.fields,field_description:mk_productivity.field_mk_episode_type_type_task
+msgid "Task type"
+msgstr "أعمال الحلقة"
+
+#. module: mk_productivity
+#: model:ir.model.fields,field_description:mk_productivity.field_mk_productivity_teacher_id
+msgid "Teacher"
+msgstr "المعلم/ المعلمة"
+
+#. module: mk_productivity
+#: model:ir.model.fields,field_description:mk_productivity.field_mk_episode_productivity_type_test
+#: model:ir.model.fields,field_description:mk_productivity.field_mk_episode_type_type_test
+msgid "Test type"
+msgstr "نوع الاختبار"
+
+#. module: mk_productivity
+#: model:ir.model.fields,field_description:mk_productivity.field_mk_episode_productivity_type_mark
+msgid "Type Mark"
+msgstr "الاداء"
+
+#. module: mk_productivity
+#: model:ir.ui.view,arch_db:mk_productivity.mk_productivity_incentive_search_view
+msgid "Type episode"
+msgstr "نوع الحلقة/ الفصل"
+
+#. module: mk_productivity
+#: selection:mk.episode_productivity,type_mark:0
+#: selection:mk.productivity_incentive,type_mark:0
+msgid "Very Good"
+msgstr "جيد جدا"
+
+#. module: mk_productivity
+#: selection:mk.episode_type,type_categ:0
+msgid "Who finished the quran"
+msgstr "الخاتميـن والخاتمـات"
+
+#. module: mk_productivity
+#: model:ir.model,name:mk_productivity.model_mk_episode_type
+msgid "episode_type"
+msgstr "نوع الحلقة/ الفصل"
+
+#. module: mk_productivity
+#: code:addons/mk_productivity/models/mk_productivity_incentive.py:42
+#, python-format
+msgid " Min/Max parts must be different from others in the same episode type"
+msgstr " الحد الأدنى و الأقصى للاجزاء يجب أن يكونا مختلفين عن الحد الأدنى و الأقصى في نفس نوع الحلقة"
+
+#. module: mk_productivity
+#: code:addons/mk_productivity/models/mk_productivity.py:59
+#, python-format
+msgid " Productivity for the same teacher and study year already exist"
+msgstr " لقد تم احتساب الانتاجية لهذا المعلم/ المعلمة   في نفس هذا العام الدراسي "
+
+#. module: mk_productivity
+#: model:ir.model,name:mk_productivity.model_mk_episode
+msgid "mk.episode"
+msgstr "mk.episode"
+
+#. module: mk_productivity
+#: model:ir.model,name:mk_productivity.model_mk_productivity
+msgid "productivity Management"
+msgstr "إدارة الانتاجية"
+
+
+#. module: mk_productivity
+#: model:res.groups,name:mk_productivity.create_edit_productivity
+msgid "Create Edit Productivity"
+msgstr "إنشاء و تعديل علي الانتاجية"
+
+#. module: mk_productivity
+#: model:res.groups,name:mk_productivity.delete_productivity
+msgid "Delete Productivity"
+msgstr "حذف الانتاجية"
+
+#. module: mk_productivity
+#: model:res.groups,name:mk_productivity.productivity_settings
+msgid "Productivity Settings"
+msgstr "اعدادت الانتاجية"
+
+#. module: mk_productivity
+#: model:res.groups,name:mk_productivity.read_productivity
+msgid "Read Productivity"
+msgstr "القراءة او الإطلاع علي الانتاجية"
+
+#. module: mk_productivity
+#: model:ir.model,name:mk_productivity.model_mk_productivity_incentive
+msgid "productivity incentive"
+msgstr "الحوافز"
+
+#. module: mk_productivity
+#: model:ir.ui.view,arch_db:mk_productivity.mk_productivity_form_view
+msgid "Confirm"
+msgstr "تأكيد"
+
+#. module: mk_productivity
+#: model:ir.ui.view,arch_db:mk_productivity.mk_productivity_form_view
+msgid "Productivity count"
+msgstr "حساب الانتاجية"
+
+#. module: mk_productivity
+#: selection:mk.productivity,state:0
+msgid "Confirmed"
+msgstr "مؤكد"
+
+#. module: mk_productivity
+#: selection:mk.productivity,state:0
+msgid "productivity count done"
+msgstr "تم حساب الانتاجية"
+
+#. module: mk_productivity
+#: model:ir.ui.view,arch_db:mk_productivity.mk_episode_type_view_update_inherit
+msgid "الأداء"
+msgstr "الأداء"
+
+#. module: mk_productivity
+#: model:ir.ui.view,arch_db:mk_productivity.mk_productivity_search_view
+msgid "الاسم"
+msgstr "الاسم"
+
+#. module: mk_productivity
+#: model:ir.ui.view,arch_db:mk_productivity.mk_productivity_form_view
+msgid "الانتاجية"
+msgstr "الانتاجية"
+
+#. module: mk_productivity
+#: model:ir.ui.view,arch_db:mk_productivity.mk_productivity_search_view
+msgid "الحالة"
+msgstr "الحالة"
+
+#. module: mk_productivity
+#: model:ir.ui.view,arch_db:mk_productivity.mk_episode_type_view_update_inherit
+msgid "الحوافز"
+msgstr "الحوافز"
+
+#. module: mk_productivity
+#: model:ir.ui.view,arch_db:mk_productivity.mk_productivity_search_view
+msgid "المعلم / المعلمة"
+msgstr "المعلم / المعلمة"
+
+#. module: mk_productivity
+#: model:mk.episode_type,name:mk_productivity.episode_type5
+msgid "المقارىء"
+msgstr "المقارىء"
+
+#. module: mk_productivity
+#: model:mk.episode_type,name:mk_productivity.episode_type2
+msgid "تأسيس و تلقين"
+msgstr "تأسيس و تلقين"
+
+#. module: mk_productivity
+#: model:mk.episode_type,name:mk_productivity.episode_type3
+msgid "تصحيح التلاوة"
+msgstr "تصحيح التلاوة"
+
+#. module: mk_productivity
+#: model:ir.ui.view,arch_db:mk_productivity.mk_productivity_form_view
+msgid "حلقات المعلم"
+msgstr "حلقات المعلم"
+
+#. module: mk_productivity
+#: model:mk.episode_type,name:mk_productivity.episode_type1
+msgid "عامة"
+msgstr "عامة"
+
+#. module: mk_productivity
+#: model:ir.ui.view,arch_db:mk_productivity.mk_productivity_search_view
+msgid "مؤكد"
+msgstr "مؤكد"
+
+#. module: mk_productivity
+#: model:ir.ui.view,arch_db:mk_productivity.mk_productivity_search_view
+msgid "مبدئي"
+msgstr "مبدئي"
+
+#. module: mk_productivity
+#: model:ir.ui.view,arch_db:mk_productivity.mk_productivity_search_view
+msgid "منتهي"
+msgstr "منتهي"
+
+#. module: mk_productivity
+#: model:mk.episode_type,name:mk_productivity.episode_type4
+msgid "نوعي"
+msgstr "نوعي"

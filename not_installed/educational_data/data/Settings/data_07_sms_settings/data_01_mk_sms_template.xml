@@ -1,0 +1,34 @@
+<odoo>
+    <data noupdate="1">
+        <record id="mk_sms_template1" model="mk.sms_template">
+            <field name="name">نسيت كلمة المرور</field>
+            <field name="code">mk_send_pass</field>
+            <field name="sms_text">كلمة مرورك هي val1</field>
+        </record>
+        <record id="mk_sms_template2" model="mk.sms_template">
+            <field name="name">الدعم الفني</field>
+            <field name="code">mk_send_support</field>
+            <field name="sms_text">تم إغلاق تذكرة الدعم الخاصة بك من قبل موظفينا</field>
+        </record>
+        <record id="mk_sms_template3" model="mk.sms_template">
+            <field name="name">الدعم الفني</field>
+            <field name="code">mk_send_support_open</field>
+            <field name="sms_text">لقد تم استقبال تذكرة الدعم وسوف يتم الرجوع لك في اقرب وقت</field>
+        </record>
+        <record id="mk_sms_template4" model="mk.sms_template">
+            <field name="name">الدعم الفني</field>
+            <field name="code">mk_send_support_reply</field>
+            <field name="sms_text">لقد تم الرد علي تذكرة الدعم الخاص بك</field>
+        </record>
+        <record id="mk_sms_template5" model="mk.sms_template">
+            <field name="name">تذكير</field>
+            <field name="code">mk_send_reminder</field>
+            <field name="sms_text">سيكون إجتماع val1 في يوم val2 عند الساعة val3</field>
+        </record>
+        <record id="mk_sms_template6" model="mk.sms_template">
+            <field name="name">تذكير</field>
+            <field name="code">mk_send_reminder</field>
+            <field name="sms_text">سيكون إجتماع val1 في يوم val2 عند الساعة val3</field>
+        </record>
+    </data>
+</odoo>

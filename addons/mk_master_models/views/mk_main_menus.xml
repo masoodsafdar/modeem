@@ -1,0 +1,18 @@
+<odoo>
+    <data>
+    
+
+		<!--<menuitem name="Master Models" id="mk_master_main_menu"/>  
+		<menuitem name="Master Models" id="mk_master_menu" parent="mk_master_main_menu"/>  -->
+		
+		<menuitem id="mk_master_menu" name="Configuration" parent="" web_icon="web_rtl,static/src/img/setting.png" sequence="6"/>
+
+		<!-- Menue View MK Master Data-->
+		<menuitem id="mk_student_management_settings_menu"   name="Location settings"             parent="mk_master_menu" sequence="1"/>
+        <menuitem id="mk_student_setting_menu"               name="Student settings"              parent="mk_master_menu" sequence="2" />
+		<menuitem id="mk_episode_management_settings_menu"   name="Episodes management settings"  parent="mk_master_menu" sequence="2"/>
+		<menuitem id="mk_associate_management_settings_menu" name="Associate management settings" parent="mk_master_menu" sequence="3"/>
+        <menuitem id="mk_program_management_settings_menu"   name="Program management settings"   parent="mk_master_menu" sequence="3"/>
+        
+    </data>  
+</odoo>

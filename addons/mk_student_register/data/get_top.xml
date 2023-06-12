@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data noupdate="0">
+        <record id="ir_cron_get_top_five_actionn" model="ir.cron">
+            <field name="name">top five</field>
+            <field name="interval_number">3</field>
+            <field name="interval_type">months</field>
+            <field name="numbercall">-1</field>
+            <field eval="True" name="doall"/>
+            <field ref="base.user_root" name="user_id"/>
+            <field name="state">code</field>
+            <field ref="mk_student_register.model_top_five" name="model_id"/>
+            <field  name="code">
+rec=env['top.five'].create({})
+rec.get_best_studant_episode_dashboard()
+</field>
+            <field eval="'()'" name="args"/>
+        </record>
+    </data>
+</odoo>

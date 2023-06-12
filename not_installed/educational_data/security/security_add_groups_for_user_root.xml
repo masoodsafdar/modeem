@@ -1,0 +1,393 @@
+<odoo>
+    <data noupdate="1">
+        <!--       Permissions             -->
+        <record id="base_user_role.create_permission_group" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="base_user_role.write_permission_group" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="base_user_role.read_permission_group" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="base_user_role.select_all_permissions" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <!--       Technical Settings             -->
+
+        <!--       Events Management             -->
+        <record id="mk_events.accept_deny_event" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="mk_events.create_event" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="mk_events.events_status_manage" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="mk_events.read_events" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="mk_events.select_all_mk_event_selectall_group" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="mk_events.send_reminder_event" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="mk_events.write_events" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="mk_events.create_attendance" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="mk_events.association_info_manage" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="mk_events.events_types_manage" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="mk_events.read_attendance" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="mk_events.send_recommondation" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="mk_events.start_end_event" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <!--  Mk open or selected curriculum-->
+        <record id="mk_program_management.create_an_close_curriculum_association_level" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="mk_program_management.delete" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="mk_program_management.read_curriculum_level_close" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="mk_program_management.update_curriculum_level" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="mk_program_management.create_an_open_curriculum_association_level" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="mk_program_management.delete_close" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="mk_program_management.read_curriculum_level" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="mk_program_management.update_curriculum_level_close" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <!--        صلاحيات الرسائل القصيرة    -->
+        <record id="mk_student_register.group_sms_template_config" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <!--  MK Employee  -->
+        <record id="mk_master_models.group_Acceptance_employee" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="mk_master_models.group_Not_activated_employee" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="mk_master_models.group_change_job_hr" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="mk_master_models.group_Edit_employee" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="mk_master_models.group_read_employee_admins" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="mk_master_models.group_read_employee_edu_sup" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="mk_master_models.add_mosques_for_employee_group" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="mk_master_models.group_Send_password_employee" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="mk_master_models.group_Create_employee" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="mk_master_models.group_read_employee_center_assistant" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="mk_master_models.group_read_center" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="mk_master_models.group_read_employee" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <!--        MK center   -->
+        <record id="mk_master_models.group_Create_center" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="mk_master_models.group_Edit_center" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="mk_master_models.group_read_center" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <!--     MK open programs Data   -->
+        <record id="mk_program_management.group_activate_program" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="mk_program_management.group_create_close_center_program" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="mk_program_management.group_create_close_program_association" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="mk_program_management.group_create_open_program_mosque" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="mk_program_management.group_delete_program" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="mk_program_management.group_edit_level_program" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="mk_program_management.group_Program_settings" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="mk_program_management.group_read_level_program_close" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="mk_program_management.group_activate_program_close" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="mk_program_management.group_create_close_program_mosque" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="mk_program_management.group_create_open_center_program" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="mk_program_management.group_create_open_program_association" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="mk_program_management.group_delete_program_close" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="mk_program_management.group_edit_level_program_close" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="mk_program_management.group_read_level_program" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <!--   Test Setting / Types Tests     -->
+        <record id="maknon_tests.group_types_tests_archives" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="maknon_tests.group_types_tests_delete" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="maknon_tests.group_types_tests_read" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="maknon_tests.group_types_tests_create" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="maknon_tests.group_types_tests_edit" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <!--   Test Setting / Test Branches     -->
+        <record id="maknon_tests.group_tests_branches_archives" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="maknon_tests.group_tests_branches_delete" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="maknon_tests.group_tests_branches_read" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="maknon_tests.group_tests_branches_create" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="maknon_tests.group_tests_branches_edit" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <!--   Test Setting / Passing Items     -->
+        <record id="maknon_tests.group_passing_items_archives" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="maknon_tests.group_passing_items_delete" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="maknon_tests.group_passing_items_read" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="maknon_tests.group_passing_items_create" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="maknon_tests.group_passing_items_edit" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <!--   Test Setting / Reward Items     -->
+        <record id="maknon_tests.group_reward_items_read" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="maknon_tests.group_reward_items_create" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="maknon_tests.group_reward_items_edit" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="maknon_tests.group_reward_items_archives" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="maknon_tests.group_reward_items_delete" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <!--   Test Setting / Evaluation Items     -->
+        <record id="maknon_tests.group_evaluation_items_archives" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="maknon_tests.group_evaluation_items_delete" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="maknon_tests.group_evaluation_items_read" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="maknon_tests.group_evaluation_items_create" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="maknon_tests.group_evaluation_items_edit" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <!--   Test Setting / Mak Test Center     -->
+        <record id="maknon_tests.group_mak_test_center_read" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="maknon_tests.group_mak_test_center_create" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="maknon_tests.group_mak_test_center_edit" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="maknon_tests.group_mak_test_center_archives" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="maknon_tests.group_mak_test_center_delete" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <!--   Test Setting / Test Period     -->
+        <record id="maknon_tests.group_test_period_archives" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="maknon_tests.group_test_period_delete" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="maknon_tests.group_test_period_read" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="maknon_tests.group_test_period_create" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="maknon_tests.group_test_period_edit" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <!--   Test Setting / Employee Items     -->
+        <record id="maknon_tests.group_employee_items_archives" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="maknon_tests.group_employee_items_delete" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="maknon_tests.group_employee_items_read" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="maknon_tests.group_employee_items_create" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="maknon_tests.group_employee_items_edit" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <!--   Test / Student Test     -->
+        <record id="maknon_tests.create_student_test_session" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="maknon_tests.create_tests_time_tables" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="maknon_tests.delete_tests_time_tables" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="maknon_tests.read_student_test_session" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="maknon_tests.read_tests_time_tables" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="maknon_tests.session_exiaminer" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="maknon_tests.update_tests_centers" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="maknon_tests.create_tests_centers" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="maknon_tests.delete_student_test_session" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="maknon_tests.delete_tests_centers" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="maknon_tests.read_tests_centers" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="maknon_tests.select_exiaminer_session" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="maknon_tests.update_student_test_session" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="maknon_tests.update_tests_time_tables" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <!--   Test / Employee Tests     -->
+        <record id="maknon_tests.create_teacher_test_session" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="maknon_tests.delete_teacher_test_session" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="maknon_tests.emp_session_exiaminer" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="maknon_tests.read_teachers_tests_centers" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="maknon_tests.update_teacher_test_session" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="maknon_tests.create_teachers_tests_centers" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="maknon_tests.delete_teachers_tests_centers" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="maknon_tests.read_teacher_test_session" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="maknon_tests.select_exiaminer_emp_session" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="maknon_tests.update_teachers_tests_centers" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <!--   archives     -->
+        <record id="maknon_tests.student_test_session_archive" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="maknon_tests.tests_time_tables_archive" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="maknon_tests.tests_centers_archive" model="res.groups">
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+    </data>
+</odoo>

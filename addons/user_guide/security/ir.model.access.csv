@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_user_guide_manager,user_guide.manager,model_user_guide,user_guide.user_guide_group_manager,1,1,1,1
+access_user_guide_manager_category,user_guide.category.manager,model_user_guide_category,user_guide.user_guide_group_manager,1,1,1,1
+access_user_guide_user,user_guide.user,model_user_guide,base.group_user,1,0,0,0

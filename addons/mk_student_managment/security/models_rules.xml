@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+<record model="ir.rule" id="mosque_student_prepare_id">
+      <field name="name">mosque student prepare</field>
+      <field name="model_id" ref="model_mk_student_prepare"/>
+      <field name="domain_force">['|',('link_id.student_id.is_student_meqraa','=',True),
+                                   '&amp;',('stage_pre_id.mosque_id.categ_id.mosque_type','in',str(user.gender).split(",")),
+                                       '|', ('stage_pre_id.mosque_id.id','in',user.mosque_ids.ids),
+                                            ('stage_pre_id.mosque_id.center_department_id.id','in',user.department_ids.ids)]</field>
+
+</record>
+<record model="ir.rule" id="mosque_student_mk_student_prepare_presence_id">
+          <field name="name">mosque student prepare presence</field>
+          <field name="model_id" ref="model_mk_student_prepare_presence"/>
+          <field name="domain_force">['|',('link_id.student_id.is_student_meqraa','=',True),
+                                   '&amp;',('episode_id.mosque_id.categ_id.mosque_type','in',str(user.gender).split(",")),
+                                       '|', ('episode_id.mosque_id.id','in',user.mosque_ids.ids),
+                                            ('episode_id.mosque_id.center_department_id.id','in',user.department_ids.ids)]</field>
+
+</record>
+<record model="ir.rule" id="mosque_student_mk_listen_line_id">
+          <field name="name">student listen line</field>
+          <field name="model_id" ref="model_mk_listen_line"/>
+          <field name="domain_force">['|',('student_id.student_id.is_student_meqraa','=',True),
+                                       '&amp;',('episode.mosque_id.categ_id.mosque_type','in',str(user.gender).split(",")),
+                                           '|', ('episode.mosque_id.id','in',user.mosque_ids.ids),
+                                                ('episode.mosque_id.center_department_id.id','in',user.department_ids.ids)]</field>
+</record>
+
+<record model="ir.rule" id="mosque_episode_search_id">
+      <field name="name">mosque episode search</field>
+      <field name="model_id" ref="model_mk_episode_search_transfer"/>
+      <field name="domain_force">['&amp;',('from_episode.mosque_id.categ_id.mosque_type','in',str(user.gender).split(",")),'|',
+            ('from_episode.mosque_id.id','in',user.mosque_ids.ids),('from_episode.center_department_id.id','in',user.department_ids.ids)
+]</field>
+
+</record>
+
+<record model="ir.rule" id="absence_request_id">
+      <field name="name">mosque absence request</field>
+      <field name="model_id" ref="model_mk_student_absence"/>
+      <field name="domain_force">['&amp;',('mosque_id.categ_id.mosque_type','in',str(user.gender).split(",")),'|',
+            ('mosque_id.id','in',user.mosque_ids.ids),('mosque_id.center_department_id.id','in',user.department_ids.ids)
+]</field>
+
+</record>
+
+<record model="ir.rule" id="clearance_request_id">
+      <field name="name">mosque clearance request</field>
+      <field name="model_id" ref="model_mk_clearance"/>
+      <field name="domain_force">['|',('user_id','=',user.id),
+                                      '&amp;',('mosque_id.categ_id.mosque_type','in',str(user.gender).split(",")),
+      									  	  '|',('mosque_id.id','in',user.mosque_ids.ids),
+      									          ('mosque_id.center_department_id.id','in',user.department_ids.ids)]
+	  </field>
+</record>
+
+<record model="ir.rule" id="behavior_and_comments_id">
+      <field name="name">mosque behavior and comments</field>
+      <field name="model_id" ref="model_mk_comments_behavior_students"/>
+      <field name="domain_force">['&amp;',('masjed.categ_id.mosque_type','in',str(user.gender).split(",")),'|',
+            ('masjed.id','in',user.mosque_ids.ids),('masjed.center_department_id.id','in',user.department_ids.ids)
+]</field>
+
+</record>
+
+<record model="ir.rule" id="student_external_transfer_id">
+      <field name="name">mosque student external transfer</field>
+      <field name="model_id" ref="model_mk_external_transfer"/>
+      <field name="domain_force">['|','&amp;',('to_mosque.categ_id.mosque_type','in',str(user.gender).split(",")),'|',
+            ('to_mosque.id','in',user.mosque_ids.ids),
+('to_mosque.center_department_id.id','in',user.department_ids.ids),'&amp;',('from_mosque.categ_id.mosque_type','in',(str(user.gender)).split(",")),'|',('from_mosque.id','in',user.mosque_ids.ids),('from_mosque.center_department_id.id','in',user.department_ids.ids)
+]</field>
+
+</record>
+
+<record model="ir.rule" id="internal_students_transfer">
+            <field name="name">Internal Students Transfer</field>
+            <field name="model_id" ref="mk_student_managment.model_mk_internal_transfer"/>
+            <field name="domain_force">
+            ['&amp;',('to_episode.mosque_id.categ_id.mosque_type','in',str(user.gender).split(",")),'|',('to_episode.mosque_id.id','in',user.mosque_ids.ids),('to_episode.mosque_id.center_department_id.id','in',user.department_ids.ids)]</field>
+         </record>
+   </data>
+</odoo>

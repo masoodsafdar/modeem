@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="close_certificate">
+
+        <t t-foreach="docs" t-as="o">
+            <t t-call="web.external_layout">
+                <t t-set="mosque" t-value="o.mosque_id.display_name"/>
+                <t t-set="mosque_gender" t-value="o.mosque_id.categ_id.mosque_type"/>
+                <t t-set="course_type" t-value="o.course.name"/>
+                <t t-set="hijri_start_date" t-value="str(o.hijri_start_date.replace('0','٠').replace('1','١').replace('2','٢').replace('3','٣').replace('4','٤').replace('5','٥').replace('6','٦').replace('7','٧').replace('8','٨').replace('9','٩'))"/>
+                <t t-set="hijri_end_date" t-value="str(o.hijri_end_date.replace('0','٠').replace('1','١').replace('2','٢').replace('3','٣').replace('4','٤').replace('5','٥').replace('6','٦').replace('7','٧').replace('8','٨').replace('9','٩'))"/>
+                <t t-set="name" t-value="o.course_name"/>
+                <div class="page">
+                    <div style="background-image: url('/mk_intensive_courses/static/src/img/background_intensive.png');background-size:480mm 338mm; width:480mm; height:338mm;">
+                        <div style="font-size:40px;line-height:1.7;text-align:center;direction:rtl;font-family:Neo Sans Arabic;">
+                            <t t-if="mosque_gender == 'male'">
+                                <p style="text-align:center;color:#2a836c;padding-top:550px;padding-right:420px">
+                                    <b>
+                                        <span t-esc="'لحلقات/  '"/>
+                                        <span t-esc="'  '+mosque+'  '"/>
+                                        <span t-esc="'  وفقهم اللّه '"/>
+                                    </b>
+                                </p>
+                                <p style="  padding-top:95px;padding-right:420px">
+                                    <span t-esc="name + '  ' +'بتاريخ:'+'  '+ context_timestamp(datetime.datetime.now()).strftime('%Y/%m/%d').replace('0','٠').replace('1','١').replace('2','٢').replace('3','٣').replace('4','٤').replace('5','٥').replace('6','٦').replace('7','٧').replace('8','٨').replace('9','٩')"/>
+                                </p>
+                            </t>
+                            <t t-else="">
+                                <p style="text-align:center;color:#2a836c;padding-top:550px;padding-right:420px">
+                                    <b>
+                                        <span t-esc="'لمدرسة/  '"/>
+                                        <span t-esc="'  '+mosque+'  '"/>
+                                    </b>
+                                </p>
+
+                                <p style="  padding-top:95px;padding-right:420px">
+                                    <span t-esc="course_type + '  ' +'خلال المدة:'+' ( '+ hijri_start_date + '-'+ hijri_end_date+ ' ) '"/>
+                                </p>
+                            </t>
+                        </div>
+                    </div>
+                </div>
+            </t>
+        </t>
+
+    </template>
+
+
+</odoo>

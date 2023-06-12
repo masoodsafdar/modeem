@@ -1,0 +1,1847 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* mk_student_managment
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0-20180703\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-12-13 10:40+0000\n"
+"PO-Revision-Date: 2018-12-13 10:40+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: mk_student_managment
+#: model:ir.actions.act_window,name:mk_student_managment.action_mistake_form
+#: model:ir.actions.act_window,name:mk_student_managment.action_mistake_tree
+msgid " Mistake"
+msgstr " Mistake"
+
+#. module: mk_student_managment
+#: model:ir.ui.view,arch_db:mk_student_managment.student_attendance_report_temp
+msgid "<strong>Epsoide:</strong>"
+msgstr "<strong>Epsoide:</strong>"
+
+#. module: mk_student_managment
+#: model:ir.ui.view,arch_db:mk_student_managment.student_attendance_report_temp
+msgid "<strong>From:</strong>"
+msgstr "<strong>From:</strong>"
+
+#. module: mk_student_managment
+#: model:ir.ui.view,arch_db:mk_student_managment.student_attendance_report_temp
+msgid "<strong>Purphase:</strong>"
+msgstr "<strong>Purphase:</strong>"
+
+#. module: mk_student_managment
+#: model:ir.ui.view,arch_db:mk_student_managment.student_attendance_report_temp
+msgid "<strong>Student:</strong>"
+msgstr "<strong>Student:</strong>"
+
+#. module: mk_student_managment
+#: model:ir.ui.view,arch_db:mk_student_managment.student_attendance_report_temp
+msgid "<strong>To:</strong>"
+msgstr "<strong>To:</strong>"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_episode_attendace_aasr
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_episode_attendace_period_aasr
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_episode_search_lines_aasr
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_episode_search_lines_aasr_t
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_episode_search_transfer_aasr_serach
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_external_transfer_aasr
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_internal_transfer_aasr
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_listen_line_aasr
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_student_attendace_aasr
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_student_prepare_aasr
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_student_prepare_period_aasr
+#: selection:mk.comments.behavior.students,Period:0
+msgid "Aasr"
+msgstr "العصر"
+
+#. module: mk_student_managment
+#: model:ir.ui.view,arch_db:mk_student_managment.mk_studen_prepration_form
+#: selection:mk.listen.line,state:0
+#: selection:mk.test.line,state:0
+msgid "Absent"
+msgstr "غياب"
+
+#. module: mk_student_managment
+#: model:ir.ui.view,arch_db:mk_student_managment.mk_external_transfer_form
+#: model:ir.ui.view,arch_db:mk_student_managment.mk_internal_transfer_form
+#: selection:mk.clearance,state:0
+#: selection:mk.external_transfer,state:0
+#: selection:mk.internal_transfer,state:0
+msgid "Accept"
+msgstr "قبول"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_external_transfer_clearance_visible
+msgid "Accept clearance"
+msgstr "Accept clearance"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_external_transfer_accept_visible
+msgid "Accept visible"
+msgstr "Accept visible"
+
+#. module: mk_student_managment
+#: selection:mk.student.suspend.resume,state:0
+#: selection:mk.student_absence,state:0
+msgid "Accepted"
+msgstr "مقبول"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_report_purphose_active
+msgid "Active"
+msgstr "نشط"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_listen_line_actual_date
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_test_line_actual_date
+msgid "Actual Date"
+msgstr "التاريخ"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_listen_line_actual_day
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_test_line_actual_day
+msgid "Actual Day"
+msgstr "اليوم الفعلي"
+
+#. module: mk_student_managment
+#: model:ir.actions.act_window,name:mk_student_managment.action_all_behaviors
+msgid "All Behaviors"
+msgstr "All Behaviors"
+
+#. module: mk_student_managment
+#: model:ir.ui.view,arch_db:mk_student_managment.view_mk_mosque_inherit_form_view
+msgid "Approaches"
+msgstr "البرنامج"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_internal_transfer_approache
+msgid "Approaches"
+msgstr "مناهج"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_internal_transfer_approache
+msgid "Approaches"
+msgstr "مناهج"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_student_prepare_archived
+msgid "Archived"
+msgstr "Archived"
+
+#. module: mk_student_managment
+#: model:res.groups,name:mk_student_managment.association_settings
+msgid "Association configuration"
+msgstr "إعدادات الجمعية"
+
+#. module: mk_student_managment
+#: model:ir.ui.view,arch_db:mk_student_managment.view_serach_for_episode_transfer_form
+msgid "Avialable Episodes"
+msgstr "الحلقات المتاحة"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_details_mistake_aya_id
+msgid "Aya"
+msgstr "ايه"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_student_behaviors_name
+msgid "Behavior name"
+msgstr "عنوان السلوك"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_student_prepare_big_review_ids
+#: model:ir.ui.view,arch_db:mk_student_managment.mk_studen_prepration_form
+#: selection:mk.listen.line,type_follow:0
+msgid "Big Review"
+msgstr "مراجعه كبرى"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_listen_line_br_line_id
+msgid "Big Review Line"
+msgstr "Big Review Line"
+
+#. module: mk_student_managment
+#: model:ir.ui.view,arch_db:mk_student_managment.attendance_certificate_wizerd_form_view
+#: model:ir.ui.view,arch_db:mk_student_managment.student_prepare_report_form
+#: model:ir.ui.view,arch_db:mk_student_managment.view_serach_for_episode_transfer_form
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_external_transfer_center_name
+msgid "Center name"
+msgstr "المركز  / المراكز"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_student_prepare_check_max
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_student_prepare_check_minimum
+msgid "Check Minimum"
+msgstr "Check Minimum"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_student_prepare_check_memory
+msgid "Check Program"
+msgstr "Check Program"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_student_prepare_check_read
+msgid "Check Reading"
+msgstr "Check Reading"
+
+#. module: mk_student_managment
+#: code:addons/mk_student_managment/models/models.py:1794
+#, python-format
+msgid "Check your previous Tests."
+msgstr "تأكد من اجتياز الاختبار السابق"
+
+#. module: mk_student_managment
+#: code:addons/mk_student_managment/controllers/controllers.py:1161
+#: code:addons/mk_student_managment/controllers/controllers.py:1182
+#: code:addons/mk_student_managment/models/models.py:422
+#: code:addons/mk_student_managment/models/models.py:443
+#, python-format
+msgid "Check your previous preprations."
+msgstr "تأكد من الحضور السابق"
+
+#. module: mk_student_managment
+#: code:addons/mk_student_managment/controllers/controllers.py:1171
+#: code:addons/mk_student_managment/controllers/controllers.py:1192
+#: code:addons/mk_student_managment/models/models.py:433
+#: code:addons/mk_student_managment/models/models.py:453
+#, python-format
+msgid "Check your previous tests."
+msgstr "تأكد من اجتياز الاختبار السابق"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_external_transfer_clearance_id
+#: model:ir.model.fields,field_description:mk_student_managment.field_wizard_message_clearance_id
+msgid "Clearance"
+msgstr "خلو الطرف"
+
+#. module: mk_student_managment
+#: model:ir.actions.act_window,name:mk_student_managment.action_mk_comments_and_behavior
+#: model:ir.ui.menu,name:mk_student_managment.mk_comments_and_behavior_menu
+msgid "Comments and Behavior"
+msgstr "الملاحظات والسلوك"
+
+#. module: mk_student_managment
+#: model:ir.ui.view,arch_db:mk_student_managment.mk_comments_and_behavior_form
+msgid "Comments and behavior"
+msgstr "الملاحظات والسلوك"
+
+#. module: mk_student_managment
+#: model:ir.ui.view,arch_db:mk_student_managment.edit_holiday_new
+msgid "Confirm"
+msgstr "تأكيد"
+
+#. module: mk_student_managment
+#: model:res.groups,name:mk_student_managment.confirm_clearance_request
+msgid "Confirm clearance request"
+msgstr "تأكيد طلب إخلاء طرف"
+
+#. module: mk_student_managment
+#: model:res.groups,name:mk_student_managment.create_clearance_request
+msgid "Create clearance request"
+msgstr "إنشاء طلب إخلاء طرف"
+
+#. module: mk_student_managment
+#: model:res.groups,name:mk_student_managment.create_comments_and_behaviors
+msgid "Create comments and behaviors"
+msgstr "إنشاء الملاحظات والسلوك"
+
+#. module: mk_student_managment
+#: model:res.groups,name:mk_student_managment.create_student_absence
+msgid "Create student absence"
+msgstr "إنشاء طلب إستئذان للطالب"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_attendance_certificate_create_uid
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_clearance_create_uid
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_comments_behavior_student_lines_create_uid
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_comments_behavior_students_create_uid
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_details_mistake_create_uid
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_episode_attendace_create_uid
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_episode_search_lines_create_uid
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_episode_search_transfer_create_uid
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_external_transfer_create_uid
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_internal_transfer_create_uid
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_listen_line_create_uid
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_question_mistake_create_uid
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_report_purphose_create_uid
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_student_absence_create_uid
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_student_attendace_create_uid
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_student_behaviors_create_uid
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_student_prepare_create_uid
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_student_suspend_resume_create_uid
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_suspend_resume_type_create_uid
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_test_line_create_uid
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_test_question_create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_attendance_certificate_create_date
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_clearance_create_date
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_comments_behavior_student_lines_create_date
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_comments_behavior_students_create_date
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_details_mistake_create_date
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_episode_attendace_create_date
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_episode_search_lines_create_date
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_episode_search_transfer_create_date
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_external_transfer_create_date
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_internal_transfer_create_date
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_listen_line_create_date
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_question_mistake_create_date
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_report_purphose_create_date
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_student_absence_create_date
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_student_attendace_create_date
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_student_behaviors_create_date
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_student_prepare_create_date
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_student_suspend_resume_create_date
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_suspend_resume_type_create_date
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_test_line_create_date
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_test_question_create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_comments_behavior_students_date
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_episode_attendace_date
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_listen_line_date
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_student_suspend_resume_sus_date
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_test_line_date
+#: model:ir.ui.view,arch_db:mk_student_managment.student_attendance_report_temp
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_student_absence_date_from
+msgid "Date from"
+msgstr "من"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_student_absence_date_to
+msgid "Date to"
+msgstr "الي"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_listen_line_day
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_test_line_day
+msgid "Day"
+msgstr "اليوم"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_listen_line_day_subject
+msgid "Day Subject"
+msgstr "الايام"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_student_behaviors_Dedect_grade
+msgid "Deduction grade"
+msgstr "درجة الخصم"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_listen_line_degree
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_test_line_degree
+msgid "Degree"
+msgstr "الدرجة"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_listen_line_delay
+msgid "Delay"
+msgstr "التأخير"
+
+#. module: mk_student_managment
+#: model:res.groups,name:mk_student_managment.deny_clearance_request
+msgid "Deny clearance request"
+msgstr "رفض طلب إخلاء الطرف"
+
+#. module: mk_student_managment
+#: model:ir.model,name:mk_student_managment.model_mk_details_mistake
+#: model:ir.model,name:mk_student_managment.model_mk_question_mistake
+#: model:ir.model,name:mk_student_managment.model_mk_test_line
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_student_absence_description
+msgid "Description"
+msgstr "الوصف"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_student_suspend_resume_details
+msgid "Details"
+msgstr "التفاصيل"
+
+#. module: mk_student_managment
+#: model:ir.ui.view,arch_db:mk_student_managment.mk_listening_mistake_form
+msgid "Details Mistake"
+msgstr "تفاصيل الاخطاء"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_episode_search_lines_zuhr
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_episode_search_lines_zuhr_t
+msgid "Dhuhr"
+msgstr "ظهر"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_attendance_certificate_display_name
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_comments_behavior_student_lines_display_name
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_comments_behavior_students_display_name
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_details_mistake_display_name
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_episode_attendace_display_name
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_episode_search_lines_display_name
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_episode_search_transfer_display_name
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_external_transfer_display_name
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_listen_line_display_name
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_question_mistake_display_name
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_report_purphose_display_name
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_student_absence_display_name
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_student_attendace_display_name
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_student_behaviors_display_name
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_student_prepare_display_name
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_student_suspend_resume_display_name
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_suspend_resume_type_display_name
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_test_line_display_name
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_test_question_display_name
+#: model:ir.model.fields,field_description:mk_student_managment.field_report_mk_student_managment_student_attendance_report_temp_display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: mk_student_managment
+#: model:ir.ui.view,arch_db:mk_student_managment.mk_studen_prepration_form
+#: selection:mk.listen.line,state:0
+#: selection:mk.test.line,state:0
+msgid "Done"
+msgstr "اكتمل"
+
+#. module: mk_student_managment
+#: selection:mk.clearance,state:0
+#: selection:mk.external_transfer,state:0
+#: selection:mk.internal_transfer,state:0
+#: selection:mk.listen.line,state:0
+#: selection:mk.student.suspend.resume,state:0
+#: selection:mk.student_absence,state:0
+#: selection:mk.test.line,state:0
+msgid "Draft"
+msgstr "مبدئي"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_episode_search_lines_esha
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_episode_search_lines_esha_t
+msgid "Eisha"
+msgstr "العشاء"
+
+#. module: mk_student_managment
+#: model:ir.model,name:mk_student_managment.model_hr_employee
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_attendance_certificate_episode
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_clearance_episode_id
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_comments_behavior_students_episode
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_episode_attendace_episode
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_episode_search_lines_episode_id
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_student_absence_episode_id
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_student_prepare_stage_pre_id
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_student_suspend_resume_episode
+msgid "Episode"
+msgstr "حلقة/ الفصل"
+
+#. module: mk_student_managment
+#: model:ir.ui.view,arch_db:mk_student_managment.mk_comments_and_behavior_form
+msgid "Episode Period"
+msgstr "الفتره"
+
+#. module: mk_student_managment
+#: code:addons/mk_student_managment/controllers/controllers.py:1161
+#: code:addons/mk_student_managment/controllers/controllers.py:1171
+#: code:addons/mk_student_managment/controllers/controllers.py:1182
+#: code:addons/mk_student_managment/controllers/controllers.py:1192
+#: code:addons/mk_student_managment/models/models.py:422
+#: code:addons/mk_student_managment/models/models.py:433
+#: code:addons/mk_student_managment/models/models.py:443
+#: code:addons/mk_student_managment/models/models.py:453
+#: code:addons/mk_student_managment/models/models.py:1794
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_details_mistake_name_mistake_id
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_question_mistake_name_mistake_id
+#, python-format
+msgid "Error"
+msgstr "اسم الخطأ"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_episode_attendace_esha
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_episode_attendace_period_esha
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_episode_search_transfer_esha_serach
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_internal_transfer_esha
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_listen_line_esha
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_student_attendace_esha
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_student_prepare_esha
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_student_prepare_period_esha
+#: selection:mk.comments.behavior.students,Period:0
+msgid "Esha"
+msgstr "العشاء"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_external_transfer_flag2
+msgid "Flag"
+msgstr "إختيار"
+
+#. module: mk_student_managment
+#: code:addons/mk_student_managment/report/attendance_report_init.py:48
+#, python-format
+msgid "Form content is missing, this report cannot be printed."
+msgstr "Form content is missing, this report cannot be printed."
+
+#. module: mk_student_managment
+#: selection:mk.listen.line,actual_day:0
+#: selection:mk.listen.line,day:0
+#: selection:mk.test.line,actual_day:0
+#: selection:mk.test.line,day:0
+msgid "Friday"
+msgstr "الجمعة"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_attendance_certificate_date_from
+msgid "From"
+msgstr "مِن"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_details_mistake_from_aya
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_listen_line_from_aya
+msgid "From Aya"
+msgstr "من آية"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_details_mistake_from_surah
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_listen_line_from_surah
+msgid "From Sura"
+msgstr "من سورة"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_test_question_from_surah
+msgid "From: Surah"
+msgstr "من السورة"
+
+#. module: mk_student_managment
+#: model:ir.model,name:mk_student_managment.model_hr_department
+msgid "HR Department"
+msgstr "قسم الموارد البشرية"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_attendance_certificate_id
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_clearance_id
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_comments_behavior_student_lines_id
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_comments_behavior_students_id
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_details_mistake_id
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_episode_attendace_id
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_episode_search_lines_id
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_episode_search_transfer_id
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_external_transfer_id
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_internal_transfer_id
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_listen_line_id
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_question_mistake_id
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_report_purphose_id
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_student_absence_id
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_student_attendace_id
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_student_behaviors_id
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_student_prepare_id
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_student_suspend_resume_id
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_suspend_resume_type_id
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_test_line_id
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_test_question_id
+#: model:ir.model.fields,field_description:mk_student_managment.field_report_mk_student_managment_student_attendance_report_temp_id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_external_transfer_identity_no
+msgid "Identity No"
+msgstr "رقم اﻹقامة / الهوية"
+
+#. module: mk_student_managment
+#: code:addons/mk_student_managment/models/student_absence.py:121
+#, python-format
+msgid "Invalid Date To"
+msgstr "عذرا . تاريخ نهاية اﻹذن غير صالح"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_external_transfer_ishaa
+msgid "Ishaa"
+msgstr "العشاء"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_attendance_certificate___last_update
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_clearance___last_update
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_comments_behavior_student_lines___last_update
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_comments_behavior_students___last_update
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_details_mistake___last_update
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_episode_attendace___last_update
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_episode_search_lines___last_update
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_episode_search_transfer___last_update
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_external_transfer___last_update
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_internal_transfer___last_update
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_listen_line___last_update
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_question_mistake___last_update
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_report_purphose___last_update
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_student_absence___last_update
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_student_attendace___last_update
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_student_behaviors___last_update
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_student_prepare___last_update
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_student_suspend_resume___last_update
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_suspend_resume_type___last_update
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_test_line___last_update
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_test_question___last_update
+#: model:ir.model.fields,field_description:mk_student_managment.field_report_mk_student_managment_student_attendance_report_temp___last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_attendance_certificate_write_uid
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_clearance_write_uid
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_comments_behavior_student_lines_write_uid
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_comments_behavior_students_write_uid
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_details_mistake_write_uid
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_episode_attendace_write_uid
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_episode_search_lines_write_uid
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_episode_search_transfer_write_uid
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_external_transfer_write_uid
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_internal_transfer_write_uid
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_listen_line_write_uid
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_question_mistake_write_uid
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_report_purphose_write_uid
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_student_absence_write_uid
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_student_attendace_write_uid
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_student_behaviors_write_uid
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_student_prepare_write_uid
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_student_suspend_resume_write_uid
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_suspend_resume_type_write_uid
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_test_line_write_uid
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_test_question_write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_attendance_certificate_write_date
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_clearance_write_date
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_comments_behavior_student_lines_write_date
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_comments_behavior_students_write_date
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_details_mistake_write_date
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_episode_attendace_write_date
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_episode_search_lines_write_date
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_episode_search_transfer_write_date
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_external_transfer_write_date
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_internal_transfer_write_date
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_listen_line_write_date
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_question_mistake_write_date
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_report_purphose_write_date
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_student_absence_write_date
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_student_attendace_write_date
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_student_behaviors_write_date
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_student_prepare_write_date
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_student_suspend_resume_write_date
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_suspend_resume_type_write_date
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_test_line_write_date
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_test_question_write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_student_absence_leave_type
+msgid "Leave type"
+msgstr "نوع الاذن"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_student_prepare_test_ids
+msgid "Line Test"
+msgstr "Line Test"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_listen_line_save_id
+msgid "Link std_save_ids"
+msgstr "Link std_save_ids"
+
+#. module: mk_student_managment
+#: model:ir.ui.view,arch_db:mk_student_managment.view_serach_for_episode_transfer_form
+msgid "Link student acceptance"
+msgstr "تصديق طلب إنضمام طالب لحلقة مسجد"
+
+#. module: mk_student_managment
+#: selection:mk.listen.line,type_follow:0
+msgid "Listening"
+msgstr "تسميع"
+
+#. module: mk_student_managment
+#: model:ir.actions.act_window,name:mk_student_managment.action_details_mistake_form
+#: model:ir.ui.view,arch_db:mk_student_managment.mk_listening_mistake_form
+msgid "Listening Mistake"
+msgstr "الاخطاء"
+
+#. module: mk_student_managment
+#: model:ir.actions.act_window,name:mk_student_managment.action_details_mistake_menu
+msgid "Listening Mistake Tree"
+msgstr "عرض تفاصيل الاخطاء"
+
+#. module: mk_student_managment
+#: model:ir.model,name:mk_student_managment.model_mk_listen_line
+msgid "MK Listen Lin"
+msgstr "MK Listen Lin"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_episode_search_lines_magrib
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_episode_search_lines_magrib_t
+msgid "Magherib"
+msgstr "المغرب"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_external_transfer_maghrib
+msgid "Maghrib"
+msgstr "المغرب"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_episode_attendace_magrib
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_episode_attendace_period_magrib
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_episode_search_transfer_magrib_search
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_internal_transfer_magrib
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_listen_line_magrib
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_student_attendace_magrib
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_student_prepare_magrib
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_student_prepare_period_magrib
+#: selection:mk.comments.behavior.students,Period:0
+msgid "Magrib"
+msgstr "المغرب"
+
+#. module: mk_student_managment
+#: model:ir.model,name:mk_student_managment.model_mk_student_behaviors
+msgid "Maknoon student Behavior"
+msgstr "Maknoon student Behavior"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_hr_department_masjed
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_student_suspend_resume_masjed
+msgid "Masjed"
+msgstr "المسجد/المدرسة"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_listen_line_check
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_test_line_check
+msgid "Matching"
+msgstr "المطابقة"
+
+#. module: mk_student_managment
+#: model:ir.ui.view,arch_db:mk_student_managment.mk_studen_prepration_form
+msgid "Memorize"
+msgstr "حفظ"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_listen_line_mistake_line_ids
+#: model:ir.ui.view,arch_db:mk_student_managment.mk_mistake_form
+msgid "Mistake"
+msgstr "عرض الاخطاء"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_details_mistake_mistake_id
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_question_mistake_mistake_id
+msgid "Mistake Details"
+msgstr "تفاصيل الاخطاء"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_listen_line_mistake
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_test_question_mistake
+msgid "Mistaks"
+msgstr "الاخطاء"
+
+#. module: mk_student_managment
+#: selection:mk.listen.line,actual_day:0
+#: selection:mk.listen.line,day:0
+#: selection:mk.test.line,actual_day:0
+#: selection:mk.test.line,day:0
+msgid "Monday"
+msgstr "اﻷثنين"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_student_absence_mosque_id
+#: model:ir.ui.view,arch_db:mk_student_managment.mk_listenline_search_view
+msgid "Mosque"
+msgstr "المسجد"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_external_transfer_mosque_name
+msgid "Mosque name"
+msgstr "المسجد/المدرسة "
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_clearance_display_name
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_internal_transfer_display_name
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_report_purphose_name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: mk_student_managment
+#: selection:mk.external_transfer,new_transfer:0
+msgid "New"
+msgstr "جديد"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_external_transfer_new_transfer
+msgid "New transfer"
+msgstr "نقل / جديد"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_external_transfer_no_identity
+msgid "No Identity"
+msgstr "لا توجد إقامة"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_details_mistake_number_mistake
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_question_mistake_number_mistake
+msgid "Number of Error"
+msgstr "عدد لاخطاء"
+
+#. module: mk_student_managment
+#: model:ir.ui.view,arch_db:mk_student_managment.view_serach_for_episode_transfer_form
+msgid "OK"
+msgstr "تأكيد"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_listen_line_order
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_test_line_order
+msgid "Order"
+msgstr "الترتيب"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_external_transfer_passport_no
+msgid "Passport No"
+msgstr "رقم جواز السفر"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_comments_behavior_students_Period
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_comments_behavior_students_period_id
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_episode_attendace_period_id
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_external_transfer_period
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_student_prepare_period_id
+msgid "Period"
+msgstr "الفترة"
+
+#. module: mk_student_managment
+#: model:ir.ui.view,arch_db:mk_student_managment.view_serach_result_for_episode_lines
+msgid "Periods"
+msgstr "الفترات"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_listen_line_permission_id
+msgid "Permission"
+msgstr "استئذان"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_student_prepare_prepare_date
+msgid "Prepration Date"
+msgstr "تاريخ التحضير"
+
+#. module: mk_student_managment
+#: model:ir.actions.act_window,name:mk_student_managment.action_prepration_student
+#: model:ir.ui.view,arch_db:mk_student_managment.mk_studen_prepration_form
+msgid "Prepration Student"
+msgstr "تحضير الطالب/الطالبة"
+
+#. module: mk_student_managment
+#: model:ir.model,name:mk_student_managment.model_mk_student_prepare
+#: model:ir.ui.menu,name:mk_student_managment.prepare_student_menu
+msgid "Prepration Students"
+msgstr "تحضير الطلاب/الطالبات"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_listen_line_program_id
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_student_prepare_history_program_id
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_student_prepare_program_id
+msgid "Program"
+msgstr "البرنامج"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_test_question_question_id
+msgid "Question"
+msgstr "سؤال"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_test_question_quest_mistake_ids
+msgid "Question Mistake"
+msgstr "الاخطاء"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_test_line_test_question_ids
+#: model:ir.ui.view,arch_db:mk_student_managment.mk_studen_prepration_form
+msgid "Questions Test"
+msgstr "اسئلة الاختبار"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_listen_line_reci_line_id
+msgid "REcitaition Line"
+msgstr "REcitaition Line"
+
+#. module: mk_student_managment
+#: model:res.groups,name:mk_student_managment.read_clearance_request
+msgid "Read clearance request"
+msgstr "القراءة أو الإطلاع علي طلب إخلاء الطرف"
+
+#. module: mk_student_managment
+#: model:res.groups,name:mk_student_managment.read_student_behavior_and_comments
+msgid "Read student behavior and comments"
+msgstr "القراءة أو الإطلاع علي ملاحظات والسلوك"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_student_prepare_recitation_ids
+#: model:ir.ui.view,arch_db:mk_student_managment.mk_studen_prepration_form
+#: selection:mk.listen.line,type_follow:0
+msgid "Recitation"
+msgstr "التجويد"
+
+#. module: mk_student_managment
+#: model:ir.ui.view,arch_db:mk_student_managment.edit_holiday_new
+msgid "Refuse"
+msgstr "رفض"
+
+#. module: mk_student_managment
+#: model:ir.ui.view,arch_db:mk_student_managment.mk_internal_transfer_form
+#: selection:mk.clearance,state:0
+#: selection:mk.external_transfer,state:0
+#: selection:mk.internal_transfer,state:0
+msgid "Reject"
+msgstr "رفض"
+
+#. module: mk_student_managment
+#: selection:mk.student.suspend.resume,state:0
+#: selection:mk.student_absence,state:0
+msgid "Rejected"
+msgstr "مرفوض"
+
+#. module: mk_student_managment
+#: selection:mk.student.suspend.resume,state:0
+msgid "Resumed"
+msgstr "استئناف"
+
+#. module: mk_student_managment
+#: selection:mk.listen.line,actual_day:0
+#: selection:mk.listen.line,day:0
+#: selection:mk.test.line,actual_day:0
+#: selection:mk.test.line,day:0
+msgid "Saturday"
+msgstr "السبت"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_student_prepare_std_save_ids
+msgid "Save"
+msgstr "حفظ"
+
+#. module: mk_student_managment
+#: model:ir.actions.act_window,name:mk_student_managment.mk_serach_episode_transfer_action
+msgid "Search For Avialable Episodes"
+msgstr "تنسيب الطالب/الطالبة لحلقة"
+
+#. module: mk_student_managment
+#: model:ir.ui.menu,name:mk_student_managment.student_search_episode_transfer_menu
+msgid "Search episodes/ student transfer"
+msgstr "بحث الحلقات المتاحة / نقل الطلاب/الطالبات"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_external_transfer_select_period
+msgid "Select period"
+msgstr "الفترة"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_student_prepare_smal_review_ids
+msgid "Smal Review "
+msgstr "مراجعه صغرى"
+
+#. module: mk_student_managment
+#: model:ir.ui.view,arch_db:mk_student_managment.mk_studen_prepration_form
+msgid "Small Review"
+msgstr "مراجعه صغرى"
+
+#. module: mk_student_managment
+#: selection:mk.listen.line,type_follow:0
+msgid "Smll Review"
+msgstr "مراجعه صغرى"
+
+#. module: mk_student_managment
+#: selection:mk.test.line,state:0
+msgid "Start Test"
+msgstr "بداية الاختبار"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_clearance_state
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_external_transfer_state
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_internal_transfer_state
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_student_absence_state
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_student_suspend_resume_state
+msgid "State"
+msgstr "المحافظة"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_listen_line_state
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_test_line_state
+#: model:ir.ui.view,arch_db:mk_student_managment.student_attendance_report_temp
+msgid "Status"
+msgstr "الحالة "
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_clearance_student
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_comments_behavior_student_lines_student
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_episode_search_lines_student_id
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_episode_search_lines_student_ids
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_episode_search_transfer_student_id
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_external_transfer_student_id
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_internal_transfer_student
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_listen_line_student_id
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_student_absence_student_id
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_student_attendace_student
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_student_suspend_resume_student
+#: model:ir.model.fields,field_description:mk_student_managment.field_wizard_message_student_id
+msgid "Student"
+msgstr "اسم الطالب"
+
+#. module: mk_student_managment
+#: model:ir.ui.menu,name:mk_student_managment.attendance_report_wizerd
+msgid "Student Attendance Report "
+msgstr "إستخراج شهادة الحضور "
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_student_prepare_link_id
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_student_prepare_student_register_id
+msgid "Student Link"
+msgstr "الطالب/الطالبة"
+
+#. module: mk_student_managment
+#: model:ir.module.category,name:mk_student_managment.module_category_student_management
+msgid "Student Management"
+msgstr "إدارة الطلاب/الطالبات"
+
+#. module: mk_student_managment
+#: model:res.groups,name:mk_student_managment.student_prepare_read
+msgid "Student Prepare read"
+msgstr "القراءة أو الإطلاع علي تحضير الطلاب"
+
+#. module: mk_student_managment
+#: model:res.groups,name:mk_student_managment.student_absence_read
+msgid "Student absence read"
+msgstr "القراءة أو الإطلاع علي طلبات الإستئذان"
+
+#. module: mk_student_managment
+#: model:ir.ui.view,arch_db:mk_student_managment.edit_holiday_new
+msgid "Student clearance"
+msgstr "إخلاء طرف الطالب/الطالبة"
+
+#. module: mk_student_managment
+#: model:res.groups,name:mk_student_managment.episode_search_student_transfer
+msgid "Student episode search transfer"
+msgstr "بحث الحلقات المتاحة لنقل الطالب"
+
+#. module: mk_student_managment
+#: model:res.groups,name:mk_student_managment.student_external_transfer_read
+msgid "Student external transfer read"
+msgstr "القراءة  والإطلاع علي النقل الخارجي للطالب"
+
+#. module: mk_student_managment
+#: model:ir.ui.view,arch_db:mk_student_managment.mk_external_transfer_form
+msgid "Student information"
+msgstr "معلومات الطالب/الطالبة"
+
+#. module: mk_student_managment
+#: model:ir.ui.menu,name:mk_student_managment.menu_root
+msgid "Student managment"
+msgstr "إدارة الطلاب/الطالبات"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_external_transfer_student_name
+msgid "Student name"
+msgstr "اسم الطالب/الطالبة"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_external_transfer_preparation_id
+msgid "Student preparation"
+msgstr "تحضير الطالب/الطالبة"
+
+#. module: mk_student_managment
+#: model:ir.ui.view,arch_db:mk_student_managment.view_serach_for_episode_transfer_form
+msgid "Students"
+msgstr "الطلاب/الطالبات"
+
+#. module: mk_student_managment
+#: model:ir.ui.menu,name:mk_student_managment.student_behaviors
+msgid "Students Behaviors"
+msgstr "سلوكيات الطلاب/الطالبات"
+
+#. module: mk_student_managment
+#: model:ir.ui.view,arch_db:mk_student_managment.mk_student_managment_form
+msgid "Students behaviors"
+msgstr "سلوكيات الطلاب/الطالبات"
+
+#. module: mk_student_managment
+#: model:ir.ui.view,arch_db:mk_student_managment.mk_external_transfer_form
+msgid "Students external transfer"
+msgstr "النقل الخارجي"
+
+#. module: mk_student_managment
+#: model:ir.ui.menu,name:mk_student_managment.student_external_transfer_menu2
+msgid "Students external_transfer transfer"
+msgstr "Students external_transfer transfer"
+
+#. module: mk_student_managment
+#: model:ir.ui.menu,name:mk_student_managment.student_internal_transfer_menu
+#: model:ir.ui.view,arch_db:mk_student_managment.mk_internal_transfer_form
+msgid "Students internal transfer"
+msgstr "التحويل الداخلي للطلاب"
+
+#. module: mk_student_managment
+#: model:ir.ui.menu,name:mk_student_managment.manage_student_menu
+msgid "Students managment"
+msgstr "إدارة الطلاب/الطالبات"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_student_suspend_resume_study_class_id
+msgid "Study Class"
+msgstr "الفصل الدراسي"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_clearance_year
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_episode_search_transfer_year
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_internal_transfer_year
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_student_suspend_resume_year
+msgid "Study Year"
+msgstr "العام الدراسي"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_clearance_study_class_id
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_episode_search_transfer_study_class_id
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_internal_transfer_study_class_id
+msgid "Study class"
+msgstr "الفصل الدراسي"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_episode_search_lines_study_year
+msgid "Study year"
+msgstr "العام الدراسي"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_episode_attendace_period_subh
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_episode_attendace_subh
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_episode_search_lines_subh
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_episode_search_lines_subh_t
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_episode_search_transfer_subh_search
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_external_transfer_subh
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_internal_transfer_subh
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_listen_line_subh
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_student_attendace_subh
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_student_prepare_period_subh
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_student_prepare_subh
+#: selection:mk.comments.behavior.students,Period:0
+msgid "Subh"
+msgstr "الصبح"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_listen_line_subject_id
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_test_line_subject_id
+msgid "Subject"
+msgstr "الموضوع"
+
+#. module: mk_student_managment
+#: model:ir.model,name:mk_student_managment.model_mk_test_question
+msgid "Subjects Pages Configuration"
+msgstr "اعدادات صفحات المقررات"
+
+#. module: mk_student_managment
+#: selection:mk.listen.line,actual_day:0
+#: selection:mk.listen.line,day:0
+#: selection:mk.test.line,actual_day:0
+#: selection:mk.test.line,day:0
+msgid "Sunday"
+msgstr "اﻷحد"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_details_mistake_surah_id
+msgid "Surah"
+msgstr "سورة"
+
+#. module: mk_student_managment
+#: selection:mk.student.suspend.resume,state:0
+msgid "Suspended"
+msgstr "موقوف"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_comments_behavior_students_teacher
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_episode_attendace_teacher
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_student_prepare_name
+msgid "Teacher"
+msgstr "المعلم/ المعلمة"
+
+#. module: mk_student_managment
+#: model:ir.ui.view,arch_db:mk_student_managment.mk_studen_prepration_form
+msgid "Test"
+msgstr "اختبار"
+
+#. module: mk_student_managment
+#: selection:mk.listen.line,actual_day:0
+#: selection:mk.listen.line,day:0
+#: selection:mk.test.line,actual_day:0
+#: selection:mk.test.line,day:0
+msgid "Thursday"
+msgstr "الخميس"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_attendance_certificate_date_to
+msgid "To"
+msgstr "إلى"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_details_mistake_to_aya
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_listen_line_to_aya
+msgid "To Aya"
+msgstr "إلى آية"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_details_mistake_to_surah
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_listen_line_to_surah
+msgid "To Sura"
+msgstr "إلى سورة"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_external_transfer_to_episode
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_internal_transfer_to_episode
+msgid "To episode"
+msgstr "إلى حلقة"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_external_transfer_to_mosque
+#: model:ir.model.fields,field_description:mk_student_managment.field_wizard_message_to_mosque
+msgid "To mosque"
+msgstr "إلى مسجد/مدرسة"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_test_question_to_surah
+msgid "To: Surah"
+msgstr "الى السورة"
+
+#. module: mk_student_managment
+#: selection:mk.external_transfer,new_transfer:0
+msgid "Transfer"
+msgstr "نقل"
+
+#. module: mk_student_managment
+#: selection:mk.listen.line,actual_day:0
+#: selection:mk.listen.line,day:0
+#: selection:mk.test.line,actual_day:0
+#: selection:mk.test.line,day:0
+msgid "Tuseday"
+msgstr "الثلاثاء"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_student_suspend_resume_suspend_type
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_suspend_resume_type_name
+msgid "Type"
+msgstr "النوع"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_listen_line_type_follow
+msgid "Type of Follow"
+msgstr "نوع المتابعة"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_test_question_from_verse
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_test_question_to_verse
+msgid "Verse"
+msgstr "الآية"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_student_behaviors_Warning_type
+msgid "Warning type"
+msgstr "نوع التنبيه"
+
+#. module: mk_student_managment
+#: selection:mk.listen.line,actual_day:0
+#: selection:mk.listen.line,day:0
+#: selection:mk.test.line,actual_day:0
+#: selection:mk.test.line,day:0
+msgid "Wednsday"
+msgstr "اﻷربعاء"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_episode_attendace_period_zuhr
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_episode_attendace_zuhr
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_episode_search_transfer_zuhr_search
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_external_transfer_zuhr
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_internal_transfer_zuhr
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_listen_line_zuhr
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_student_attendace_zuhr
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_student_prepare_period_zuhr
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_student_prepare_zuhr
+#: selection:mk.comments.behavior.students,Period:0
+msgid "Zuhr"
+msgstr "الظهر"
+
+#. module: mk_student_managment
+#: selection:mk.external_transfer,period:0
+#: selection:mk.external_transfer,select_period:0
+msgid "aasr"
+msgstr "العصر"
+
+#. module: mk_student_managment
+#: model:ir.actions.act_window,name:mk_student_managment.mk_absence_request_action
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_student_attendace_absence_request
+msgid "absence request"
+msgstr "طلبات الاستئذان"
+
+#. module: mk_student_managment
+#: code:addons/mk_student_managment/models/student_absence.py:124
+#, python-format
+msgid "absence request must be within episode study class period"
+msgstr "تاريخ اﻹذن يجب أن يكون داخل الفصل الدراسية"
+
+#. module: mk_student_managment
+#: model:ir.ui.menu,name:mk_student_managment.mk_absence_request_menu
+msgid "absence requests"
+msgstr "طلب استئذان"
+
+#. module: mk_student_managment
+#: selection:mk.student.attendace,state:0
+msgid "absent"
+msgstr "غائب"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_episode_search_lines_almanhaj
+msgid "almanhaj"
+msgstr "المنهج"
+
+#. module: mk_student_managment
+#: model:ir.actions.act_window,name:mk_student_managment.report_wizerd_form_action
+#: model:ir.actions.report,name:mk_student_managment.attendance_certificate
+msgid "attendance certificate"
+msgstr "شهادة الحضور"
+
+#. module: mk_student_managment
+#: model:ir.model,name:mk_student_managment.model_attendance_certificate
+msgid "attendance.certificate"
+msgstr "attendance.certificate"
+
+#. module: mk_student_managment
+#: selection:mk.student.attendace,state:0
+msgid "attended"
+msgstr "حاضر"
+
+#. module: mk_student_managment
+#: model:ir.actions.act_window,name:mk_student_managment.mk_clearance_request_action
+#: selection:mk.external_transfer,state:0
+msgid "clearance request"
+msgstr "طلبات إخلاء الطرف"
+
+#. module: mk_student_managment
+#: model:ir.ui.menu,name:mk_student_managment.mk_clearance_request_menu
+msgid "clearance requests"
+msgstr "طلبات إخلاء الطرف"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_comments_behavior_student_lines_comment_id
+msgid "comment"
+msgstr "الملاحظة"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_comments_behavior_student_lines_link_id
+msgid "comment and behavior"
+msgstr "الملاحظات والسلوك"
+
+#. module: mk_student_managment
+#: selection:mk.student.behaviors,Warning_type:0
+msgid "commitment warning"
+msgstr "تنبيهات التعهدات"
+
+#. module: mk_student_managment
+#: model:res.groups,name:mk_student_managment.confirm_or_deny_student_external_transfer
+msgid "confirm or deny student external transfer"
+msgstr "قبول او رفض النقل الخارجي للطالب"
+
+#. module: mk_student_managment
+#: model:ir.ui.view,arch_db:mk_student_managment.mk_studen_prepration_form
+msgid "create"
+msgstr "انشاء خطاء"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_episode_search_lines_episode_current_program
+msgid "current program"
+msgstr "البرنامج الحالي"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_listen_line_episode
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_student_attendace_episode
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_student_attendace_episode_attendace_id
+msgid "episode"
+msgstr "الحلقة/ الفصل"
+
+#. module: mk_student_managment
+#: selection:mk.external_transfer,period:0
+#: selection:mk.external_transfer,select_period:0
+msgid "esha"
+msgstr "العشاء"
+
+#. module: mk_student_managment
+#: selection:mk.student.behaviors,Warning_type:0
+msgid "first warning"
+msgstr "التنبيهات الاولي"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_episode_search_lines_flag
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_episode_search_transfer_flag
+msgid "flag"
+msgstr "إختيار"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_episode_search_transfer_from_episode
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_external_transfer_from_episode
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_internal_transfer_from_episode
+#: model:ir.model.fields,field_description:mk_student_managment.field_wizard_message_from_episode
+#: model:ir.model.fields,field_description:mk_student_managment.field_wizard_message_to_episode
+msgid "from episode"
+msgstr "من حلقة/ الفصل"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_external_transfer_from_mosque
+#: model:ir.model.fields,field_description:mk_student_managment.field_wizard_message_from_mosque
+msgid "from mosque"
+msgstr "من مسجد/مدرسة"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_listen_line_is_test
+msgid "is test"
+msgstr "اختبار"
+
+#. module: mk_student_managment
+#: selection:mk.student.attendace,state:0
+msgid "leave"
+msgstr "طلب استئذان"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_test_line_line_id
+msgid "line"
+msgstr "line"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_episode_search_transfer_epi_link
+msgid "link"
+msgstr "link"
+
+#. module: mk_student_managment
+#: selection:mk.external_transfer,period:0
+#: selection:mk.external_transfer,select_period:0
+msgid "magrib"
+msgstr "المغرب"
+
+#. module: mk_student_managment
+#: model:ir.model,name:mk_student_managment.model_mk_clearance
+msgid "mk.clearance"
+msgstr "mk.clearance"
+
+#. module: mk_student_managment
+#: model:ir.model,name:mk_student_managment.model_mk_comments_behavior_student_lines
+msgid "mk.comments.behavior.student.lines"
+msgstr "mk.comments.behavior.student.lines"
+
+#. module: mk_student_managment
+#: model:ir.model,name:mk_student_managment.model_mk_comments_behavior_students
+msgid "mk.comments.behavior.students"
+msgstr "mk.comments.behavior.students"
+
+#. module: mk_student_managment
+#: model:ir.model,name:mk_student_managment.model_mk_episode_attendace
+msgid "mk.episode.attendace"
+msgstr "mk.episode.attendace"
+
+#. module: mk_student_managment
+#: model:ir.model,name:mk_student_managment.model_mk_episode_search_lines
+msgid "mk.episode_search_lines"
+msgstr "mk.episode_search_lines"
+
+#. module: mk_student_managment
+#: model:ir.model,name:mk_student_managment.model_mk_episode_search_transfer
+msgid "mk.episode_search_transfer"
+msgstr "mk.episode_search_transfer"
+
+#. module: mk_student_managment
+#: model:ir.model,name:mk_student_managment.model_mk_external_transfer
+msgid "mk.external_transfer"
+msgstr "mk.external_transfer"
+
+#. module: mk_student_managment
+#: model:ir.model,name:mk_student_managment.model_mk_internal_transfer
+msgid "mk.internal_transfer"
+msgstr "mk.internal_transfer"
+
+#. module: mk_student_managment
+#: model:ir.model,name:mk_student_managment.model_mk_report_purphose
+msgid "mk.report.purphose"
+msgstr "mk.report.purphose"
+
+#. module: mk_student_managment
+#: model:ir.model,name:mk_student_managment.model_mk_student_attendace
+msgid "mk.student.attendace"
+msgstr "mk.student.attendace"
+
+#. module: mk_student_managment
+#: model:ir.model,name:mk_student_managment.model_mk_student_suspend_resume
+msgid "mk.student.suspend.resume"
+msgstr "mk.student.suspend.resume"
+
+#. module: mk_student_managment
+#: model:ir.model,name:mk_student_managment.model_mk_suspend_resume_type
+msgid "mk.suspend.resume.type"
+msgstr "mk.suspend.resume.type"
+
+#. module: mk_student_managment
+#: model:ir.model,name:mk_student_managment.model_mk_test_error
+msgid "mk.test.error"
+msgstr "mk.test.error"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_clearance_mosque_id
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_comments_behavior_students_masjed
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_episode_attendace_masjed
+msgid "mosque"
+msgstr "المسجد/ المدرسة"
+
+#. module: mk_student_managment
+#: selection:mk.student.behaviors,Warning_type:0
+msgid "oral warning"
+msgstr "التنبيهات الشفوية"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_comments_behavior_students_period_time
+msgid "period time"
+msgstr "زمن الفتره"
+
+#. module: mk_student_managment
+#: model:ir.ui.view,arch_db:mk_student_managment.attendance_certificate_wizerd_form_view
+msgid "print_report"
+msgstr "طباعة التقرير"
+
+#. module: mk_student_managment
+#: model:ir.ui.view,arch_db:mk_student_managment.student_prepare_report_form
+msgid "Print"
+msgstr "طباعة"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_comments_behavior_student_lines_punishment_id
+msgid "punishment"
+msgstr "العقوبة"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_attendance_certificate_title
+msgid "purphase"
+msgstr "الغرض"
+
+#. module: mk_student_managment
+#: model:ir.model,name:mk_student_managment.model_report_mk_student_managment_student_attendance_report_temp
+msgid "report.mk_student_managment.student_attendance_report_temp"
+msgstr "report.mk_student_managment.student_attendance_report_temp"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_external_transfer_same_period
+msgid "same"
+msgstr "same"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_external_transfer_listen_rate
+msgid "saving per%"
+msgstr "% نسبة الحفظ"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_episode_search_lines_search_id
+msgid "search"
+msgstr "بحث"
+
+#. module: mk_student_managment
+#: selection:mk.student.behaviors,Warning_type:0
+msgid "second warning"
+msgstr "التنبيهات الثانية"
+
+#. module: mk_student_managment
+#: model:ir.ui.view,arch_db:mk_student_managment.mk_external_transfer_form
+msgid "send request"
+msgstr "إرسال طلب إخلاء طرف"
+
+#. module: mk_student_managment
+#: model:ir.ui.view,arch_db:mk_student_managment.mk_internal_transfer_form
+msgid "set as draft"
+msgstr "عدم تفعيل"
+
+#. module: mk_student_managment
+#: model:ir.ui.view,arch_db:mk_student_managment.mk_studen_prepration_form
+msgid "show"
+msgstr "عرض الاخطاء"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_listen_line_sr_line_id
+msgid "smal Review Line"
+msgstr "مراجعة صغرى"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_student_attendace_state
+msgid "state"
+msgstr "الحالة"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_attendance_certificate_student_id
+#: model:ir.model.fields,field_description:mk_student_managment.field_student_prepare_report_student_id
+msgid "student"
+msgstr "الطالب"
+
+#. module: mk_student_managment
+#: model:ir.ui.view,arch_db:mk_student_managment.student_attendance_report_temp
+msgid "student Attendance"
+msgstr "student Attendance"
+
+#. module: mk_student_managment
+#: model:ir.actions.act_window,name:mk_student_managment.action_behavior_configuration
+msgid "student behaviors"
+msgstr "أنواع السلوك"
+
+#. module: mk_student_managment
+#: model:ir.ui.view,arch_db:mk_student_managment.mk_episode_tree_view
+msgid "student clearance"
+msgstr "طلبات إخلاء الطرف"
+
+#. module: mk_student_managment
+#: model:ir.actions.act_window,name:mk_student_managment.action_external_transfer
+msgid "student external transfer"
+msgstr "النقل الخارجي للطلاب/للطالبات"
+
+#. module: mk_student_managment
+#: model:res.groups,name:mk_student_managment.student_external_transfer_record_create
+msgid "student external transfer record create"
+msgstr "إنشاء سجل النقل الخارجي للطلاب/الطالبات"
+
+#. module: mk_student_managment
+#: model:res.groups,name:mk_student_managment.student_external_transfer_update
+msgid "student external transfer update"
+msgstr "التعديل علي النقل الخارجي للطلاب/الطالبات"
+
+#. module: mk_student_managment
+#: model:ir.actions.act_window,name:mk_student_managment.action_internal_transfer
+msgid "student internal transfer"
+msgstr "التحويل الداخلي للطلاب/للطالبات"
+
+#. module: mk_student_managment
+#: model:ir.model,name:mk_student_managment.model_mk_student_absence
+msgid "student_absence"
+msgstr "student_absence"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_comments_behavior_students_student_ids
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_episode_attendace_student_ids
+#: model:ir.ui.view,arch_db:mk_student_managment.mk_comments_and_behavior_form
+msgid "students"
+msgstr "قائمة الطلاب/الطالبات"
+
+#. module: mk_student_managment
+#: selection:mk.external_transfer,period:0
+#: selection:mk.external_transfer,select_period:0
+msgid "subh"
+msgstr "الصبح"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_episode_search_lines_episode_to
+msgid "to Episode"
+msgstr "إلى حلقة"
+
+#. module: mk_student_managment
+#: model:ir.ui.view,arch_db:mk_student_managment.view_serach_result_for_episode_lines
+msgid "transfer student acceptance"
+msgstr "تصديق التحويل الداخلي للطلاب/للطالبات"
+
+#. module: mk_student_managment
+#: model:ir.ui.view,arch_db:mk_student_managment.view_serach_result_for_episode_lines
+msgid "transfer student to this episode"
+msgstr "نقل الطالب/الطالبة إلى هذه الحلقة"
+
+#. module: mk_student_managment
+#: model:ir.model,name:mk_student_managment.model_wizard_message
+msgid "wizard.message"
+msgstr "wizard.message"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_episode_search_lines_student_days
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_episode_search_transfer_episode_days
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_external_transfer_student_days
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_internal_transfer_student_days
+msgid "work days"
+msgstr "الايام"
+
+#. module: mk_student_managment
+#: selection:mk.external_transfer,period:0
+#: selection:mk.external_transfer,select_period:0
+msgid "zuhr"
+msgstr "الظهر"
+
+#. module: mk_student_managment
+#: sql_constraint:mk.student.behaviors:0
+msgid "عذرا اسم السلوك يجب ألا يتكرر"
+msgstr "عذرا اسم السلوك يجب ألا يتكرر"
+
+#. module: mk_student_managment
+#: code:addons/mk_student_managment/models/external_transfer.py:351
+#, python-format
+msgid "عذرا! لم يتم قبول طلب خلو الطرف بعد"
+msgstr "عذرا! لم يتم قبول طلب خلو الطرف بعد"
+
+#. module: mk_student_managment
+#: code:addons/mk_student_managment/models/external_transfer.py:353
+#, python-format
+msgid "عذرا! يجب ارسال طلب خلو الطرف لنقل الطالب بفتره مشابهة"
+msgstr "عذرا! يجب ارسال طلب خلو الطرف لنقل الطالب بفتره مشابهة"
+
+#. module: mk_student_managment
+#: code:addons/mk_student_managment/models/models.py:50
+#, python-format
+msgid "فضلا رقم الهوية المدخل لابد ان يتكون من ارقام فقط"
+msgstr "فضلا رقم الهوية المدخل لابد ان يتكون من ارقام فقط"
+
+#. module: mk_student_managment
+#: code:addons/mk_student_managment/models/models.py:47
+#, python-format
+msgid "فضلا رقم الهوية لابد ان بتكون من 10 ارقام"
+msgstr "فضلا رقم الهوية لابد ان بتكون من 10 ارقام"
+
+#. module: mk_student_managment
+#: code:addons/mk_student_managment/models/episode_search.py:236
+#, python-format
+msgid "لا يمكنك إختيار أكثر من حلقة"
+msgstr "لا يمكنك إختيار أكثر من حلقة"
+
+#. module: mk_student_managment
+#: code:addons/mk_student_managment/models/student_absence.py:22
+#: code:addons/mk_student_managment/models/student_suspend_resume.py:23
+#: code:addons/mk_student_managment/models/student_transfer.py:17
+#, python-format
+msgid "لا يمكنك حذف سجل تم تأكيده"
+msgstr "لا يمكنك حذف سجل تم تأكيده"
+
+#. module: mk_student_managment
+#: code:addons/mk_student_managment/models/student_absence.py:27
+#: code:addons/mk_student_managment/models/student_suspend_resume.py:28
+#: code:addons/mk_student_managment/models/student_transfer.py:22
+#, python-format
+msgid "لا يمكنك حذف هذا السجل لإرتباطه بسجلات أخرى"
+msgstr "لا يمكنك حذف هذا السجل لإرتباطه بسجلات أخرى"
+
+#. module: mk_student_managment
+#: model:ir.ui.view,arch_db:mk_student_managment.mk_external_transfer_form
+msgid "لنقل طالب لفتره مماثله في مسجد اخر يجب ارسال طلب خلو الطرف الي المسجد الاصل"
+msgstr "لنقل طالب لفتره مماثله في مسجد اخر يجب ارسال طلب خلو الطرف الي المسجد الاصل"
+
+#. module: mk_student_managment
+#: sql_constraint:mk.test.error:0
+msgid "موجود مسبقاً !"
+msgstr "موجود مسبقاً !"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_student_prepare_behavior_send_to_parent
+msgid "Send to parent"
+msgstr "ابلاغ ولي الأمر بالسلوك"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_student_prepare_behavior_send_to_teacher
+msgid "Send to teacher"
+msgstr "ارسال السلوك لمشرف الحلقة"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_student_prepare_listen_ids
+#: model:ir.ui.view,arch_db:mk_student_managment.view_mk_link_inherit_form
+msgid "Listen lines"
+msgstr "تسميع الطالب"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_link_listen_lines_ids
+msgid "Listen lines list"
+msgstr "تسميع الطالب"
+
+#. module: mk_student_managment
+#: model:ir.ui.view,arch_db:mk_student_managment.mk_listenline_search_view
+msgid "type follow"
+msgstr "نوع المتابعة"
+
+#. module: mk_student_managment
+#: model:ir.ui.view,arch_db:mk_student_managment.mk_listenline_search_view
+msgid "listen"
+msgstr "حفظ"
+
+#. module: mk_student_managment
+#: model:ir.ui.view,arch_db:mk_student_managment.mk_listenline_search_view
+msgid "small review"
+msgstr "مراجعة صغرى"
+
+#. module: mk_student_managment
+#: model:ir.ui.view,arch_db:mk_student_managment.mk_listenline_search_view
+msgid "big review"
+msgstr "مراجعة كبرى"
+
+#. module: mk_student_managment
+#: model:ir.ui.view,arch_db:mk_student_managment.mk_listenline_search_view
+msgid "tlawa"
+msgstr "تلاوة"
+
+#. module: mk_student_managment
+#: model:ir.ui.view,arch_db:mk_student_managment.view_mk_link_inherit_form
+msgid "Student presence"
+msgstr "حضور الطالب"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_student_prepare_update_program_type
+msgid "Programe type"
+msgstr "نوع البرنامج"
+
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_student_prepare_history_approache_id
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_student_prepare_update_approache_id
+msgid "Approach"
+msgstr "المنهج"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_student_prepare_update_program_id
+msgid "Program name"
+msgstr "نوع البرنامج"
+
+#. module: mk_student_managment
+#: model:ir.ui.view,arch_db:mk_student_managment.view_mk_approach_inherit_form_view
+msgid "Trajectories"
+msgstr "المسارات"
+
+#. module: mk_student_managment
+#: model:ir.ui.view,arch_db:mk_student_managment.view_mk_mosque_inherit_form_view
+msgid "Programs"
+msgstr "نوع البرنامج"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_student_prepare_history_is_tlawa
+msgid "Tlawa"
+msgstr "التلاوة"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_student_prepare_history_is_big_review
+msgid "Big review"
+msgstr "المراجعة الكبرى"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_student_prepare_history_is_min_review
+msgid "Min review"
+msgstr "المراجعة الصغرى"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_student_prepare_history_is_memorize
+msgid "Memorize"
+msgstr "الحفظ"
+
+#. module: mk_student_managment
+#: model:ir.model.fields,field_description:mk_student_managment.field_mk_student_prepare_history_preparation_id
+msgid "Preparation"
+msgstr "التحضير"

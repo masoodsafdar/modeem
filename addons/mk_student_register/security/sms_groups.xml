@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record model="ir.module.category" id="module_category_sms">
+            <field name="name">صلاحيات الرسائل القصيرة</field>
+            <field name="sequence">5</field>
+        </record>
+
+        <record id="group_sms_configuration" model="res.groups">
+            <field name="name">إعدادات الرسائل</field>
+            <field name="category_id" ref="module_category_sms" />
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+
+        <record id="group_sms_employee" model="res.groups">
+            <field name="name">إرسال رسائل نصية للموظفين</field>
+            <field name="category_id" ref="module_category_sms" />
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+
+        <record id="group_sms_student" model="res.groups">
+            <field name="name">إرسال رسائل نصية للطلاب</field>
+            <field name="category_id" ref="module_category_sms" />
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+
+        <record id="group_sms_general_config" model="res.groups">
+            <field name="name">رسائل الجمعية</field>
+            <field name="category_id" ref="module_category_sms"/>
+            <field name="implied_ids" eval="[(4, ref('group_sms_student'))]"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+
+        <!-- Group sms template config Data    -->
+        <record id="group_sms_template_config" model="res.groups">
+            <field name="name">قوالب الرسائل القصيرة</field>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+            <field name="category_id" ref="module_category_sms" />
+        </record>
+
+        <!-- sms template menuitem  -->
+        <record model='ir.ui.menu' id='mk_master_models.mk_sms_configuration_menu'>
+            <field name='groups_id' eval="[(6,0,[ref('group_sms_template_config')])]"/>
+        </record>
+
+        <!-- Group Select All SMS-->
+        <record id="group_sms_select_all" model="res.groups">
+            <field name="name">SMS Select All</field>
+            <field name="implied_ids" eval="[(4, ref('group_sms_configuration')), (4, ref('group_sms_employee')),
+                                                     (4, ref('group_sms_student')),(4, ref('group_sms_template_config'))]"/>
+            <field name="category_id" ref="module_category_sms" />
+        </record>
+
+    </data>
+</odoo>

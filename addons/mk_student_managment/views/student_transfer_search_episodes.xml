@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <data>
+		<record id="view_serach_for_episode_transfer_form" model="ir.ui.view">
+			<field name="name">view.search.transfer.form</field>
+			<field name="model">mk.episode_search_transfer</field>
+			<field name="arch" type="xml">
+         		<form string="Link student acceptance" >
+         			<header>
+         			</header>
+                 	<sheet>
+						<group>
+							<field name="from_episode"/>
+							<field name="year" options="{'no_open':1,'no_create':1}"/>
+							<field name="study_class_id" options="{'no_open':1,'no_create':1}"/>       
+						</group>
+                     	<line>
+                      		<group string="Students">
+                         		<field name="student_id" options="{'no_create': 1, 'no_create_edit': 1}"/>
+                      		</group>
+                 		</line>
+						<line>
+                     		<group string="Avialable Episodes">
+								<field name="epi_link"  nolabel="1" widget="one2many_list">
+                     				<tree editable="top"  create="false">
+										<field name="id" invisible="1"/>
+										<field name="student_ids" invisible="1"/>
+										<field name="episode_to"/>
+										<field name="subh_t"   readonly="1"/>
+										<field name="zuhr_t"   readonly="1"/>
+										<field name="aasr_t"   readonly="1"/>
+										<field name="magrib_t" readonly="1"/>
+										<field name="esha_t"   readonly="1"/>
+										<field name="student_days" widget="many2many_tags" readonly="1" options="{'no_create': True, 'no_open': True}"/>
+										<field name="flag" />
+										<button name="status" icon="fa-check text-success" attrs="{'invisible':[('flag','=',False)]}"/>
+                     				</tree>
+                     			</field>
+							</group> 
+						</line>  
+					</sheet>
+					<footer>
+					    <button name="ok" type="object" string="OK" class="oe_highlight"/>                       
+					    <button special="cancel" string="Cancel" class="oe_link"/>
+					</footer>
+             	</form>
+			</field>
+        </record>
+
+        <record id="view_serach_result_for_episode_lines" model="ir.ui.view">
+	        <field name="name">view.mk.episode_search.lines.form</field>
+	        <field name="model">mk.episode_search_lines</field>
+	        <field name="arch" type="xml">
+		        <form string="transfer student acceptance" >
+					<group>
+						<group>
+						    <field name="episode_id"/>
+						    <field name="episode_to" />
+						</group>
+	                        
+	                    <group string="Periods">
+							<line>
+		                        <field name="subh_t" invisible="1"/>
+		                        <field name="zuhr_t" invisible="1"/>
+		                        <field name="aasr_t" invisible="1"/>
+		                        <field name="magrib_t" invisible="1"/>
+		                        <field name="esha_t" invisible="1"/>
+		                        <field name="flag" />
+		                        <label for="subh"/>
+		                        <field name="subh" attrs="{'readonly':[('subh_t','=',False)]}"/>
+		                        <label for="zuhr"/>
+		                        <field name="zuhr" attrs="{'readonly':[('zuhr_t','=',False)]}"/>
+		                        <label for="aasr"/>
+		                        <field name="aasr" attrs="{'readonly':[('aasr_t','=',False)]}"/>
+		                        <label for="magrib"/>
+		                        <field name="magrib" attrs="{'readonly':[('magrib_t','=',False)]}"/>
+		                        <label for="esha"/>
+		                        <field name="esha" attrs="{'readonly':[('esha_t','=',False)]}"/>
+	                        </line>
+	                    </group>
+	                    
+					</group>
+					<group>
+						<group>        
+	                   		<field name="student_days" options="{'no_create': True, 'no_open': True}" widget="many2many_tags"/>
+	                   		<field name="flag" string="transfer student to this episode"  readonly="False"/>
+						</group>
+					</group>
+				</form>
+			</field>
+        </record>
+
+        <record id="mk_serach_episode_transfer_action" model="ir.actions.act_window">
+			<field name="name">Search For Avialable Episodes</field>
+			<field name="res_model">mk.episode_search_transfer</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">form</field>
+			<field name="view_id" ref="view_serach_for_episode_transfer_form"/>
+			<field name="target">new</field>
+        </record>
+
+        <menuitem id="student_search_episode_transfer_menu" name="Search episodes/ student transfer" action="mk_serach_episode_transfer_action" 
+        parent="manage_student_menu" sequence="3" groups="episode_search_student_transfer" />
+
+    </data>
+</odoo>

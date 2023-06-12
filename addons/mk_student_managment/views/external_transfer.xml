@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+  <data>
+    
+    <record model="ir.ui.view" id="mk_external_transfer_list">
+      <field name="name">mk.external.transfer list</field>
+      <field name="model">mk.external_transfer</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="student_id"/>
+          <field name="to_episode"/>
+          <field name="from_episode"/>
+        </tree>
+      </field>
+    </record>
+    
+
+      <record model="ir.ui.view" id="mk_external_transfer_form">
+      <field name="name">Mk.external_transfer form</field>
+      <field name="model">mk.external_transfer</field>
+      <field name="arch" type="xml">
+
+        <form string="Students external transfer">
+           <header>
+
+
+                  <!-- <button name="action_reject" type="object" string="Reject" attrs="{'invisible':['|',('state', '!=', 'draft')]}"/>
+                  -->
+                 <!-- <button name="action_accept_transfer" type="object" string="Accept"
+                   attrs="{'invisible':['|',('state', 'not in', ('draft'))]}"/>-->
+                   <button name="action_accept_transfer" type="object" string="Accept"
+                   attrs="{'invisible':[('accept_visible', '!=', True)]}" groups="mk_student_managment.confirm_or_deny_student_external_transfer"/>
+                  
+             <!-- <button name="send_clearnce_request" type="object" string="send_request" attrs="{'invisible':['|',('same_period', '=', False),('clearance_id','!=','False')]}"/>-->
+
+             <button name="send_clearnce_request" type="object" string="send request" attrs="{'invisible':[('clearance_visible', '!=', True)]}"  groups="mk_student_managment.create_clearance_request" />
+                   
+                  <!--
+                  <button name="action_draft" type="object" string="set as draft" attrs="{'invisible':[('state', '=', 'reject')]}"/>
+                -->
+
+                   <field name="state" widget="statusbar" statusbar_visible="draft,accept,reject"/> 
+                </header>
+            <sheet>
+              <div>
+                <group invisible="1">
+
+                  <field name="clearance_visible" invisible="1" />
+                  <field name="accept_visible" invisible="1" />
+                </group>
+                <group attrs="{'invisible':[('same_period','=', False)]}">
+                    <p> لنقل طالب لفتره مماثله في مسجد اخر يجب ارسال طلب خلو الطرف الي المسجد الاصل</p>
+                </group> 
+              </div>
+               <group>
+                             <field name="identity_no" attrs=
+                                        "{'required':[('no_identity','=', False)], 
+                                        'invisible':[('no_identity','=',True)]}"  style="width:50%;"/>
+
+                                       
+                                        
+                            <field name="passport_no" attrs="{'invisible':[('no_identity','=',False)],
+                             'required': [('no_identity', '=', True)]}"
+                              />
+                            <field name="no_identity"/>
+                          
+
+                        </group>
+
+                          <group attrs="{'invisible': [('flag2','=',False)]}" string="Student information" style="width:70%;"> 
+
+                           <field name="flag2" invisible="1"/> 
+
+                          <!-- <field name="create_date" invisible="1"/> -->
+                          <!--  <label>this student is registered in this mosque  </label>-->
+                       </group>
+
+
+                           <group  style="width:50%;">
+                           <field name="student_id"/>
+                           <field name="same_period" invisible="1" />
+                          <!-- <field name="student_name"  attrs="{'invisible': [('flag2','=',False)]}"/> -->
+                          
+                         </group>
+                        <group colspan="4" col="4">
+                           <field name="mosque_name"  attrs="{'invisible': [('flag2','=',False)]}"/> 
+                           <field name="center_name"  attrs="{'invisible': [('flag2','=',False)]}"/> 
+                           <!--<field name="new_transfer" attrs="{'invisible': [('flag2','=',False)]}"/>-->
+                           
+                           </group>
+
+                           
+                          <!-- <field name="mosque"/>-->
+                          <group colspan="4" col="4">
+                            <field name="from_mosque"  attrs="{'invisible': [('flag2','=',False)]}"/> 
+                          <field name="to_mosque"  attrs="{'invisible': [('flag2','=',False)]}"/>
+                          </group>
+
+                          <group colspan="4" col="4">
+                           <field name="from_episode"  attrs="{'invisible': [('flag2','=',False)]}"/> 
+                          <field name="to_episode"  attrs="{'invisible': [('flag2','=',False)]}"/>
+                        </group>
+                          <group colspan="4" col="4">
+
+                          <field name="period"/>
+                          <field name="select_period" />
+
+                          <!--line>
+                          <label for name="subh"/>
+                          <field name="subh"/>
+                          <label for name="zuhr"/>
+
+                          <field name="zuhr"/>
+                          <label for name="aasr"/>
+
+                          <field name="aasr"/>
+                           <label for name="maghrib"/>
+
+                          <field name="maghrib"/>
+                          <label for name="ishaa"/>
+
+                          <field name="ishaa"/>
+                          </line-->
+                          <field name="clearance_id" readonly="1" attrs="{'invisible': [('same_period','=',False)]}"/>
+                         
+                          
+                        </group>
+
+                        <group colspan="4" col="4">
+                          <field name="listen_rate"/>
+                          <field name="preparation_id" readonly="1"/>
+                         </group>
+
+
+
+                           
+                   
+         
+            </sheet>
+        </form>
+      </field>
+      </record>
+
+
+    <record id="action_external_transfer" model="ir.actions.act_window">
+      <field name="name">student external transfer</field>
+      <field name="res_model">mk.external_transfer</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+  
+    <!-- menuitem name="Students external_transfer transfer" id="student_external_transfer_menu2" parent="mk_student_register.student_management_view_menu" action="action_external_transfer"
+         groups="student_external_transfer_read,student_external_transfer_record_create,student_external_transfer_update,confirm_or_deny_student_external_transfer"/-->
+    
+  </data>
+</odoo>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="close_course_data__form" model="ir.ui.view">
+        <field name="name">close.course.data.form</field>
+        <field name="model">close.course.data</field>
+        <field name="arch" type="xml">
+            <form string="Closed course data">
+                <group>
+                    <field name="mosque_id" invisible="1"/>
+                    <field name="gender_mosque" invisible="1"/>
+                 	<separator string="عدد حلقات الدورة"/>
+                    <br/>
+                    <field name="course_episode_nbr" nolabel="1"/><br/>
+
+                    <separator string="عدد الطلاب/الطالبات"/>
+                    <br/>
+                    <field name="course_students_nbr" nolabel="1"/><br/>
+
+                    <separator string="عدد المعلمات" attrs="{'invisible': [('gender_mosque', '!=', 'female')]}"/>
+                    <br attrs="{'invisible': [('gender_mosque', '!=', 'female')]}"/>
+                    <field name="course_teachers_nbr" nolabel="1" attrs="{'invisible': [('gender_mosque', '!=', 'female')], 'required': [('gender_mosque', '=', 'female')]}"/>
+                    <br attrs="{'invisible': [('gender_mosque', '!=', 'female')]}"/>
+
+                    <separator string="عدد الاداريات" attrs="{'invisible': [('gender_mosque', '!=', 'female')]}"/>
+                    <br attrs="{'invisible': [('gender_mosque', '!=', 'female')]}"/>
+                    <field name="course_administrators_nbr" nolabel="1" attrs="{'invisible': [('gender_mosque', '!=', 'female')], 'required': [('gender_mosque', '=', 'female')]}"/>
+                    <br attrs="{'invisible': [('gender_mosque', '!=', 'female')]}"/>
+
+                    <separator string="عدد الساعات (إجمالي عدد ساعات الدورة)"/>
+                    <br/>
+                    <div style="color: grey;"><p>عدد ساعات الدورة اليومية × عدد الأيام الفعلية للدورة</p></div>
+                    <br/>
+                    <field name="close_total_hours" nolabel="1"/><br/>
+
+                    <separator string="عدد الأوجه المسمعة" attrs="{'invisible': [('gender_mosque', '=', 'female')]}"/>
+                    <br attrs="{'invisible': [('gender_mosque', '=', 'female')]}"/>
+                    <div style="color: grey;" attrs="{'invisible': [('gender_mosque', '=', 'female')], 'required': [('gender_mosque', '=', 'male')]}">
+                        <p>يضاف للرقم أوجه التلاوة الخاصة بحلقات تصحيح التلاوة</p>
+                    </div>
+                    <br attrs="{'invisible': [('gender_mosque', '=', 'female')]}"/>
+                    <field name="parts_nbr" nolabel="1" attrs="{'invisible': [('gender_mosque', '=', 'female')], 'required': [('gender_mosque', '=', 'male')]}"/>
+                    <br attrs="{'invisible': [('gender_mosque', '=', 'female')]}"/>
+
+                    <separator string="عدد الأوجه المسمعة (إجمالي عدد الوجه المسمعة من جميع الطالبات)" attrs="{'invisible': [('gender_mosque', '!=', 'female')]}"/>
+                    <br attrs="{'invisible': [('gender_mosque', '!=', 'female')]}"/>
+                    <field name="parts_female_total_nbr" nolabel="1" attrs="{'invisible': [('gender_mosque', '!=', 'female')], 'required': [('gender_mosque', '=', 'female')]}"/>
+                    <br attrs="{'invisible': [('gender_mosque', '!=', 'female')]}"/>
+
+                    <separator string="عدد الأجزاء المسمعة (تلقائي -إجمالي عدد الأجزاء المكتملة)" attrs="{'invisible': [('gender_mosque', '!=', 'female')]}"/>
+                    <br attrs="{'invisible': [('gender_mosque', '!=', 'female')]}"/>
+                    <field name="parts_female_total_done_nbr" nolabel="1" attrs="{'invisible': [('gender_mosque', '!=', 'female')], 'required': [('gender_mosque', '=', 'female')]}"/>
+                    <br attrs="{'invisible': [('gender_mosque', '!=', 'female')]}"/>
+
+                    <separator string="عدد الطلاب الخاتمين" attrs="{'invisible': [('gender_mosque', '=', 'female')]}"/>
+                    <br attrs="{'invisible': [('gender_mosque', '=', 'female')]}"/>
+                    <div style="color: grey;" attrs="{'invisible': [('gender_mosque', '=', 'female')]}">
+                        <p>المقصود به الطلاب المشاركين في فرع القرآن كاملاً (إنجاز المقرر)</p>
+                    </div>
+                    <br attrs="{'invisible': [('gender_mosque', '=', 'female')]}"/>
+                    <field name="students_finals_nbr" nolabel="1" attrs="{'invisible': [('gender_mosque', '=', 'female')], 'required': [('gender_mosque', '=', 'male')]}"/>
+                    <br attrs="{'invisible': [('gender_mosque', '=', 'female')]}"/>
+
+                    <separator string="عدد الطلاب/الطالبات المشاركين في اختبارات الخاتمين"/>
+                    <br/>
+                    <field name="students_final_tests_nbr" nolabel="1"/><br/>
+
+                    <separator string="عدد الطلاب/الطالبات المشاركين في اختبارات الأجزاء"/>
+                    <br/>
+                    <field name="students_parts_tests_nbr" nolabel="1"/><br/>
+                </group>
+                <footer>
+                    <button name="action_confirm" string="حفظ" type="object" default_focus="1" class="oe_highlight"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>

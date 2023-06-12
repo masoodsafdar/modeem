@@ -1,0 +1,110 @@
+<odoo>
+    <data>
+        <record id="mk_episode_management.mk_grade1" model="mk.grade">
+            <field name="name">الحضانة</field>
+            <field name="order_grade">1</field>
+            <field name="age_categories" eval="[(4, ref('mk_episode_management.mk_age_category1'))]"/>
+            <field name="is_parent" eval="False"/>
+            <field name="is_episode" eval="True"/>
+            <field name="type_level">preliminary</field>
+            <field name="active" eval="True"/>
+        </record>
+        <record id="mk_episode_management.mk_grade3" model="mk.grade">
+            <field name="name">روضة</field>
+            <field name="order_grade">2</field>
+            <field name="age_categories" eval="[(4, ref('mk_episode_management.mk_age_category2'))]"/>
+            <field name="is_parent" eval="False"/>
+            <field name="is_episode" eval="True"/>
+            <field name="type_level">preliminary</field>
+            <field name="active" eval="True"/>
+        </record>
+        <record id="mk_episode_management.mk_grade2" model="mk.grade">
+            <field name="name">تمهيدي</field>
+            <field name="order_grade">3</field>
+            <field name="age_categories" eval="[(4, ref('mk_episode_management.mk_age_category2'))]"/>
+            <field name="is_parent" eval="False"/>
+            <field name="is_episode" eval="True"/>
+            <field name="type_level">preliminary</field>
+            <field name="active" eval="True"/>
+        </record>
+        <record id="mk_episode_management.mk_grade24" model="mk.grade">
+            <field name="name">إبتدائي دنيا</field>
+            <field name="order_grade">4</field>
+            <field name="age_categories"/>
+            <field name="is_episode" eval="True"/>
+            <field name="type_level">primary</field>
+            <field name="active" eval="True"/>
+        </record>
+        <record id="mk_episode_management.mk_grade25" model="mk.grade">
+            <field name="name">إبتدائي عليا</field>
+            <field name="order_grade">5</field>
+            <field name="age_categories"/>
+            <field name="is_episode" eval="True"/>
+            <field name="type_level">primary</field>
+            <field name="active" eval="True"/>
+        </record>
+        <record id="mk_episode_management.mk_grade21" model="mk.grade">
+            <field name="name">متوسط</field>
+            <field name="order_grade">6</field>
+            <field name="age_categories"/>
+            <field name="is_parent" eval="True"/>
+            <field name="is_episode" eval="True"/>
+            <field name="type_level">medium</field>
+            <field name="active" eval="True"/>
+        </record>
+        <record id="mk_episode_management.mk_grade20" model="mk.grade">
+            <field name="name">ثانوي</field>
+            <field name="order_grade">7</field>
+            <field name="age_categories"/>
+            <field name="is_parent" eval="True"/>
+            <field name="is_episode" eval="True"/>
+            <field name="type_level">secondary</field>
+            <field name="active" eval="True"/>
+        </record>
+        <record id="mk_episode_management.mk_grade16" model="mk.grade">
+            <field name="name">جامعي</field>
+            <field name="order_grade">8</field>
+            <field name="age_categories" eval="[(4, ref('mk_episode_management.mk_age_category7'))]"/>
+            <field name="is_parent" eval="True"/>
+            <field name="is_episode" eval="True"/>
+            <field name="type_level">academic</field>
+            <field name="active" eval="True"/>
+        </record>
+        <record id="mk_episode_management.mk_grade17" model="mk.grade">
+            <field name="name">موظف/موظفة</field>
+            <field name="order_grade">9</field>
+            <field name="age_categories"
+                   eval="[(4, ref('mk_age_category8')),(4, ref('mk_age_category9')),(4, ref('mk_age_category10'))]"/>
+            <field name="is_parent" eval="False"/>
+            <field name="is_episode" eval="True"/>
+            <field name="type_level">other</field>
+            <field name="active" eval="True"/>
+        </record>
+        <record id="mk_episode_management.mk_grade23" model="mk.grade">
+            <field name="name">أمهات غير قارئات</field>
+            <field name="order_grade">10</field>
+            <field name="age_categories"/>
+            <field name="is_parent" eval="False"/>
+            <field name="type_level">other</field>
+            <field name="active" eval="True"/>
+        </record>
+        <record id="mk_episode_management.mk_grade19" model="mk.grade">
+            <field name="name">أمهات قارئات</field>
+            <field name="order_grade">11</field>
+            <field name="age_categories"
+                   eval="[(4, ref('mk_episode_management.mk_age_category8')),(4, ref('mk_episode_management.mk_age_category9')),(4, ref('mk_episode_management.mk_age_category10'))]"/>
+            <field name="is_parent" eval="False"/>
+            <field name="type_level">other</field>
+            <field name="active" eval="True"/>
+        </record>
+        <record id="mk_episode_management.mk_grade18" model="mk.grade">
+            <field name="name">متقاعد</field>
+            <field name="order_grade">12</field>
+            <field name="age_categories"/>
+            <field name="is_parent" eval="False"/>
+            <field name="is_episode" eval="True"/>
+            <field name="type_level">other</field>
+            <field name="active" eval="True"/>
+        </record>
+    </data>
+</odoo>

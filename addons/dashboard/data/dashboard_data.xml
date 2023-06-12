@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+        <record id="dashboard_kanban_object" model="dashboard.dashboard">
+            <field name="name">DashBoard</field>
+        </record>
+        <record id="setting_object" model="dashboard.settings">
+            <field name="name">لوحات المعلومات</field>
+        </record>
+    </data>
+</odoo>

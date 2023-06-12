@@ -1,0 +1,1760 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* mk_student_register
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0-20180528\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-12-13 10:59+0000\n"
+"PO-Revision-Date: 2018-12-13 10:59+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: mk_student_register
+#: code:addons/mk_student_register/models/student_link.py:570
+#, python-format
+msgid " الطالب موجود مسبقا في هذه الحلقة"
+msgstr " الطالب موجود مسبقا في هذه الحلقة"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_episode_search_aasr
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_episode_search_aasr_t
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_link_aasr
+msgid "Aasr"
+msgstr "العصر"
+
+#. module: mk_student_register
+#: model:ir.ui.view,arch_db:mk_student_register.view_student_link_form
+#: selection:mk.link,state:0
+msgid "Accept"
+msgstr "قبول"
+
+#. module: mk_student_register
+#: model:ir.ui.view,arch_db:mk_student_register.view_student_link_form
+msgid "Set to draft"
+msgstr "إرجاع إلى مبدئي"
+
+#. module: mk_student_register
+#: model:res.groups,name:mk_student_register.accept_or_deny_internal_students_transfer
+msgid "Accept or Deny Internal Students Transfer Read"
+msgstr "قبول أو  رفض التحويل الداخلي للطلاب"
+
+#. module: mk_student_register
+#: model:res.groups,name:mk_student_register.accept_or_deny_student_confirmation_to_episode
+msgid "Accept or Deny Student Confirmation to Episode"
+msgstr "قبول أو  رفض طلب إنضمام طالب لحلقة"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_account_bank_account_no
+msgid "Account No"
+msgstr "رقم الحساب"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_res_partner_property_account_payable_id
+#: model:ir.model.fields,field_description:mk_student_register.field_res_users_property_account_payable_id
+msgid "Account Payable"
+msgstr "Account Payable"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_res_partner_property_account_receivable_id
+#: model:ir.model.fields,field_description:mk_student_register.field_res_users_property_account_receivable_id
+msgid "Account Receivable"
+msgstr "Account Receivable"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_account_bank_account_owner
+#: model:ir.model.fields,field_description:mk_student_register.field_account_bank_student_id
+msgid "Account owner"
+msgstr "إسم صاحب الحساب"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_account_bank_account_owner_name
+msgid "Account owner name"
+msgstr "إسم صاحب الحساب"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_student_register_active
+msgid "Active"
+msgstr "نشط"
+
+#. module: mk_student_register
+#: model:ir.ui.view,arch_db:mk_student_register.parent_profile_form
+#: model:ir.ui.view,arch_db:mk_student_register.view_student_register_form
+msgid "Address Detail"
+msgstr "تفاصيل العنوان"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_link_approach_id
+msgid "Approach"
+msgstr "المنهج"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_link_approache
+msgid "Approaches"
+msgstr "مناهج"
+
+#. module: mk_student_register
+#: model:ir.ui.view,arch_db:mk_student_register.view_student_register_form
+msgid "Are you sure you want to do this?"
+msgstr "هل تود إضافة الطالب/الطالبة في هذا المسجد/المدرسة ؟"
+
+#. module: mk_student_register
+#: model:ir.ui.view,arch_db:mk_student_register.parent_profile_form
+msgid "Area"
+msgstr "منطقة"
+
+#. module: mk_student_register
+#: model:ir.ui.view,arch_db:mk_student_register.view_serach_for_episode_form
+msgid "Avialable Episodes"
+msgstr "الحلقات المتاحة"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_account_bank_bank_id
+msgid "Bank"
+msgstr "البنك"
+
+#. module: mk_student_register
+#: model:ir.model,name:mk_student_register.model_account_bank
+msgid "Bank accounts"
+msgstr "الحسابات البنكية"
+
+#. module: mk_student_register
+#: model:ir.ui.view,arch_db:mk_student_register.parent_profile_form
+#: model:ir.ui.view,arch_db:mk_student_register.view_student_register_form
+msgid "Banking accounts"
+msgstr "الحسابات البنكية"
+
+#. module: mk_student_register
+#: model:ir.ui.view,arch_db:mk_student_register.parent_profile_form
+#: model:ir.ui.view,arch_db:mk_student_register.view_student_register_form
+msgid "Basic Info"
+msgstr "المعلومات اﻷساسية"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_top_five_best_episodes
+msgid "Best episode"
+msgstr "أفضل حلقة"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_top_five_best_students
+msgid "Best students"
+msgstr "أفضل الطلاب"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_top_five_best_teachers
+msgid "Best teachers"
+msgstr "أفضل المعلمين"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_episode_searc_review_direction
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_link_review_direction
+msgid "Big review direction"
+msgstr "اتجاه المراجعة الكبرى"
+
+#. module: mk_student_register
+#: model:ir.ui.view,arch_db:mk_student_register.view_serach_result_for_episode_form
+msgid "Big review setting"
+msgstr "إعدادات المراجعة الكبري"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_student_register_birthdate
+msgid "Birthdate"
+msgstr "تاريخ الميلاد"
+
+#. module: mk_student_register
+#: model:ir.ui.view,arch_db:mk_student_register.mk_parent_search_view
+#: model:ir.ui.view,arch_db:mk_student_register.mk_student_search_view
+msgid "By  Area"
+msgstr "تجميع بالمناطق"
+
+#. module: mk_student_register
+#: model:ir.ui.view,arch_db:mk_student_register.mk_student_link_search_view
+msgid "By  Episode"
+msgstr "الحلقة"
+
+#. module: mk_student_register
+#: model:ir.ui.view,arch_db:mk_student_register.mk_parent_search_view
+#: model:ir.ui.view,arch_db:mk_student_register.mk_student_search_view
+msgid "By  district"
+msgstr "تجميع بالاحياء"
+
+#. module: mk_student_register
+#: model:ir.ui.view,arch_db:mk_student_register.mk_parent_search_view
+#: model:ir.ui.view,arch_db:mk_student_register.mk_student_search_view
+msgid "By  job"
+msgstr "الوظيفة"
+
+#. module: mk_student_register
+#: model:ir.ui.view,arch_db:mk_student_register.mk_parent_search_view
+#: model:ir.ui.view,arch_db:mk_student_register.mk_student_search_view
+msgid "By Gender"
+msgstr "الجنس"
+
+#. module: mk_student_register
+#: model:ir.ui.view,arch_db:mk_student_register.mk_student_search_view
+msgid "By Grade"
+msgstr "المرحلة الدراسية"
+
+#. module: mk_student_register
+#: model:ir.ui.view,arch_db:mk_student_register.mk_student_link_search_view
+msgid "By mosque"
+msgstr "المسجد/المدرسة"
+
+#. module: mk_student_register
+#: model:ir.ui.view,arch_db:mk_student_register.episode_students_link_wizerd
+#: model:ir.ui.view,arch_db:mk_student_register.import_students_wizard
+#: model:ir.ui.view,arch_db:mk_student_register.student_report_wizard
+#: model:ir.ui.view,arch_db:mk_student_register.view_serach_for_episode_form
+#: model:ir.ui.view,arch_db:mk_student_register.view_student_link_form
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: mk_student_register
+#: selection:mk.link,state:0
+msgid "Canceled"
+msgstr "ملغى"
+
+#. module: mk_student_register
+#: model:res.groups,name:mk_student_register.cancel_student_link_to_episode
+msgid "Cancel student link to episode"
+msgstr "الغاء تنسيب الطالب الى الحلقة"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_student_register_center_name
+msgid "Center name"
+msgstr "المركز  / المراكز"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_student_register_check_filter
+msgid "Check filter"
+msgstr "Check filter"
+
+#. module: mk_student_register
+#: model:ir.ui.view,arch_db:mk_student_register.parent_profile_form
+msgid "City"
+msgstr "المدينة"
+
+#. module: mk_student_register
+#: model:res.groups,name:mk_student_register.confirm_student_placement_to_episode_create
+msgid "Confirm Student Placement to Episode Create"
+msgstr "التعديل او الكتابة تصديق طلب إنضمام طالب لحلقة"
+
+#. module: mk_student_register
+#: model:res.groups,name:mk_student_register.confirm_student_placement_to_episode_read
+msgid "Confirm Student Placement to Episode Read"
+msgstr "القراءة والإطلاع علي تصديق طلب إنضمام طالب لحلقة "
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_student_register_country_id
+msgid "Country"
+msgstr "دولة"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_account_bank_create_uid
+#: model:ir.model.fields,field_description:mk_student_register.field_episode_student_link_create_uid
+#: model:ir.model.fields,field_description:mk_student_register.field_get_top_five_episode_create_uid
+#: model:ir.model.fields,field_description:mk_student_register.field_get_top_five_student_create_uid
+#: model:ir.model.fields,field_description:mk_student_register.field_get_top_five_teacher_create_uid
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_episode_searc_create_uid
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_episode_search_create_uid
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_link_create_uid
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_search_episode_create_uid
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_student_register_create_uid
+#: model:ir.model.fields,field_description:mk_student_register.field_top_five_create_uid
+#: model:ir.model.fields,field_description:mk_student_register.field_wizard_message_create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_account_bank_create_date
+#: model:ir.model.fields,field_description:mk_student_register.field_episode_student_link_create_date
+#: model:ir.model.fields,field_description:mk_student_register.field_get_top_five_episode_create_date
+#: model:ir.model.fields,field_description:mk_student_register.field_get_top_five_student_create_date
+#: model:ir.model.fields,field_description:mk_student_register.field_get_top_five_teacher_create_date
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_episode_searc_create_date
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_episode_search_create_date
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_link_create_date
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_search_episode_create_date
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_student_register_create_date
+#: model:ir.model.fields,field_description:mk_student_register.field_top_five_create_date
+#: model:ir.model.fields,field_description:mk_student_register.field_wizard_message_create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: mk_student_register
+#: model:ir.ui.view,arch_db:mk_student_register.view_serach_result_for_episode_form
+#: model:ir.ui.view,arch_db:mk_student_register.view_student_link_form
+msgid "Days"
+msgstr "الأيام"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_episode_search_zuhr
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_episode_search_zuhr_t
+msgid "Dhuhr"
+msgstr "ظهر"
+
+#. module: mk_student_register
+#: selection:account.bank,state:0
+msgid "Disabled"
+msgstr "معطل"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_account_bank_display_name
+#: model:ir.model.fields,field_description:mk_student_register.field_episode_student_link_display_name
+#: model:ir.model.fields,field_description:mk_student_register.field_get_top_five_episode_display_name
+#: model:ir.model.fields,field_description:mk_student_register.field_get_top_five_student_display_name
+#: model:ir.model.fields,field_description:mk_student_register.field_get_top_five_teacher_display_name
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_episode_searc_display_name
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_episode_search_display_name
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_link_display_name
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_search_episode_display_name
+#: model:ir.model.fields,field_description:mk_student_register.field_top_five_display_name
+#: model:ir.model.fields,field_description:mk_student_register.field_wizard_message_display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: mk_student_register
+#: model:ir.ui.view,arch_db:mk_student_register.parent_profile_form
+msgid "District"
+msgstr "الحي"
+
+#. module: mk_student_register
+#: selection:mk.student.register,marital_status:0
+#: selection:res.partner,marital_status:0
+msgid "Divorced"
+msgstr "مطلق"
+
+#. module: mk_student_register
+#: selection:mk.link,state:0
+msgid "Draft"
+msgstr "مبدئي"
+
+#. module: mk_student_register
+#: model:ir.ui.view,arch_db:mk_student_register.episode_form_inherited_view
+msgid "Draft\n"
+"                 <br/>\n"
+"                 period students<br/>"
+msgstr "قائمة\n"
+"                 <br/>\n"
+"                 الطلاب الغير مفعلين<br/>"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_episode_search_esha
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_episode_search_esha_t
+msgid "Eisha"
+msgstr "العشاء"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_student_register_email
+msgid "Email"
+msgstr "البريد الإلكتروني"
+
+#. module: mk_student_register
+#: selection:mk.student.register,job_type:0
+msgid "Employee"
+msgstr "موظف"
+
+#. module: mk_student_register
+#: selection:account.bank,state:0
+msgid "Enabled"
+msgstr "مفعل"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_search_episode_epi_link
+msgid "Epi Link"
+msgstr "ربط الطالب/الطالبة بهذه الحلقة/ الفصل"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_episode_student_link_episode_id
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_episode_searc_episode_id
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_episode_search_episode_id
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_link_episode_id
+msgid "Episode"
+msgstr "حلقة/ الفصل"
+
+#. module: mk_student_register
+#: model:ir.ui.view,arch_db:mk_student_register.view_student_register_form
+msgid "Episode Details"
+msgstr "حلقات الطالب/الطالبة"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_student_register_link_ids
+msgid "Episodes"
+msgstr "إسم الحلقات/ إسم الفصول"
+
+#. module: mk_student_register
+#: code:addons/mk_student_register/wizards/student_sms_send.py:46
+#: code:addons/mk_student_register/wizards/student_sms_send.py:118
+#, python-format
+msgid "Error"
+msgstr "خطأ"
+
+#. module: mk_student_register
+#: code:addons/mk_student_register/models/mk_student_register.py:713
+#, python-format
+msgid "Error !"
+msgstr "!خطأ"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_link_esha
+msgid "Esha"
+msgstr "العشاء"
+
+#. module: mk_student_register
+#: selection:mk.student.register,gender:0
+#: selection:res.partner,gender:0
+msgid "Female"
+msgstr "أنثى"
+
+#. module: mk_student_register
+#: model:ir.ui.view,arch_db:mk_student_register.parent_profile_form
+#: model:ir.ui.view,arch_db:mk_student_register.view_student_register_form
+msgid "First Name"
+msgstr "الاسم الاول"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_student_register_flag2
+msgid "Flag"
+msgstr "إختيار"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_student_register_fourth_name
+#: model:ir.model.fields,field_description:mk_student_register.field_res_partner_fourth_name
+#: model:ir.model.fields,field_description:mk_student_register.field_res_users_fourth_name
+#: model:ir.ui.view,arch_db:mk_student_register.parent_profile_form
+#: model:ir.ui.view,arch_db:mk_student_register.view_student_register_form
+msgid "Fourth Name"
+msgstr "العائلة"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_student_register_gender
+#: model:ir.model.fields,field_description:mk_student_register.field_res_partner_gender
+#: model:ir.model.fields,field_description:mk_student_register.field_res_users_gender
+msgid "Gender"
+msgstr "الجنس"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_student_register_grade_id
+#: model:ir.model.fields,field_description:mk_student_register.field_res_partner_grade_id
+#: model:ir.model.fields,field_description:mk_student_register.field_res_users_grade_id
+msgid "Grade"
+msgstr "المرحلة"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_account_bank_id
+#: model:ir.model.fields,field_description:mk_student_register.field_episode_student_link_id
+#: model:ir.model.fields,field_description:mk_student_register.field_get_top_five_episode_id
+#: model:ir.model.fields,field_description:mk_student_register.field_get_top_five_student_id
+#: model:ir.model.fields,field_description:mk_student_register.field_get_top_five_teacher_id
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_episode_searc_id
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_episode_search_id
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_link_id
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_search_episode_id
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_student_register_id
+#: model:ir.model.fields,field_description:mk_student_register.field_top_five_id
+#: model:ir.model.fields,field_description:mk_student_register.field_wizard_message_id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_account_bank_identity_no
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_student_register_identity_no
+#: model:ir.model.fields,field_description:mk_student_register.field_res_partner_identity_no
+#: model:ir.model.fields,field_description:mk_student_register.field_res_users_identity_no
+msgid "Identity No"
+msgstr "رقم اﻹقامة / الهوية"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_student_register_image
+msgid "Image"
+msgstr "الصورة"
+
+#. module: mk_student_register
+#: model:res.groups,name:mk_student_register.internal_students_transfer_read
+msgid "Internal Students Transfer Read"
+msgstr "القراءة والإطلاع علي التحويل الداخلي للطلاب"
+
+#. module: mk_student_register
+#: model:res.groups,name:mk_student_register.internal_students_transfer_create
+msgid "Internal Students Transfer create"
+msgstr "التعديل او الكتابة التحويل الداخلي للطلاب"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_student_register_iqama_expire
+#: model:ir.model.fields,field_description:mk_student_register.field_res_partner_iqama_expire
+#: model:ir.model.fields,field_description:mk_student_register.field_res_users_iqama_expire
+msgid "Iqama Expire"
+msgstr "تاريخ إنتهاء اﻹقامة"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_student_register_is_student
+#: model:ir.model.fields,field_description:mk_student_register.field_res_partner_is_student
+#: model:ir.model.fields,field_description:mk_student_register.field_res_users_is_student
+msgid "Is student"
+msgstr "الطالب/الطالبة مسؤول عن نفسة"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_student_register_job_id
+#: model:ir.model.fields,field_description:mk_student_register.field_res_partner_job_id
+#: model:ir.model.fields,field_description:mk_student_register.field_res_users_job_id
+msgid "Job"
+msgstr "الوظيفة"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_student_register_job_type
+msgid "Job type"
+msgstr "الفئة"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_account_bank___last_update
+#: model:ir.model.fields,field_description:mk_student_register.field_episode_student_link___last_update
+#: model:ir.model.fields,field_description:mk_student_register.field_get_top_five_episode___last_update
+#: model:ir.model.fields,field_description:mk_student_register.field_get_top_five_student___last_update
+#: model:ir.model.fields,field_description:mk_student_register.field_get_top_five_teacher___last_update
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_episode_searc___last_update
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_episode_search___last_update
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_link___last_update
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_search_episode___last_update
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_student_register___last_update
+#: model:ir.model.fields,field_description:mk_student_register.field_top_five___last_update
+#: model:ir.model.fields,field_description:mk_student_register.field_wizard_message___last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_account_bank_write_uid
+#: model:ir.model.fields,field_description:mk_student_register.field_episode_student_link_write_uid
+#: model:ir.model.fields,field_description:mk_student_register.field_get_top_five_episode_write_uid
+#: model:ir.model.fields,field_description:mk_student_register.field_get_top_five_student_write_uid
+#: model:ir.model.fields,field_description:mk_student_register.field_get_top_five_teacher_write_uid
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_episode_searc_write_uid
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_episode_search_write_uid
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_link_write_uid
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_search_episode_write_uid
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_student_register_write_uid
+#: model:ir.model.fields,field_description:mk_student_register.field_top_five_write_uid
+#: model:ir.model.fields,field_description:mk_student_register.field_wizard_message_write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_account_bank_write_date
+#: model:ir.model.fields,field_description:mk_student_register.field_episode_student_link_write_date
+#: model:ir.model.fields,field_description:mk_student_register.field_get_top_five_episode_write_date
+#: model:ir.model.fields,field_description:mk_student_register.field_get_top_five_student_write_date
+#: model:ir.model.fields,field_description:mk_student_register.field_get_top_five_teacher_write_date
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_episode_searc_write_date
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_episode_search_write_date
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_link_write_date
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_search_episode_write_date
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_student_register_write_date
+#: model:ir.model.fields,field_description:mk_student_register.field_top_five_write_date
+#: model:ir.model.fields,field_description:mk_student_register.field_wizard_message_write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_student_register_latitude
+#: model:ir.model.fields,field_description:mk_student_register.field_res_partner_latitude
+#: model:ir.model.fields,field_description:mk_student_register.field_res_users_latitude
+msgid "Latitude"
+msgstr "خط العرض"
+
+#. module: mk_student_register
+#: model:ir.ui.view,arch_db:mk_student_register.view_serach_for_episode_form
+#: model:ir.ui.view,arch_db:mk_student_register.view_serach_result_for_episode_form
+#: model:ir.ui.view,arch_db:mk_student_register.view_student_link_form
+msgid "Link student acceptance"
+msgstr "تصديق طلب إنضمام طالب لحلقة مسجد"
+
+#. module: mk_student_register
+#: model:ir.ui.view,arch_db:mk_student_register.episode_students_link_wizerd
+msgid "Link students at period"
+msgstr "ربط الطلاب/ الطالبات بالفتره"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_student_register_longitude
+#: model:ir.model.fields,field_description:mk_student_register.field_res_partner_longitude
+#: model:ir.model.fields,field_description:mk_student_register.field_res_users_longitude
+msgid "Longitude"
+msgstr "خط الطول"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_episode_search_magrib
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_episode_search_magrib_t
+msgid "Magherib"
+msgstr "المغرب"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_link_magrib
+msgid "Magrib"
+msgstr "المغرب"
+
+#. module: mk_student_register
+#: model:ir.ui.menu,name:mk_student_register.maknoon_main_menu
+msgid "Maknoon"
+msgstr "ادارة الطلاب"
+
+#. module: mk_student_register
+#: selection:mk.student.register,gender:0
+#: selection:res.partner,gender:0
+msgid "Male"
+msgstr "ذكر"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_student_register_marital_status
+#: model:ir.model.fields,field_description:mk_student_register.field_res_partner_marital_status
+#: model:ir.model.fields,field_description:mk_student_register.field_res_users_marital_status
+msgid "Marital status"
+msgstr "الحالة اﻹجتماعية"
+
+#. module: mk_student_register
+#: selection:mk.student.register,marital_status:0
+#: selection:res.partner,marital_status:0
+msgid "Married"
+msgstr "متزوج"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_student_register_image_medium
+msgid "Medium-sized image"
+msgstr "صورة متوسطة الحجم"
+
+#. module: mk_student_register
+#: model:ir.model.fields,help:mk_student_register.field_mk_student_register_image_medium
+msgid "Medium-sized image of this contact. It is automatically resized as a 128x128px image, with aspect ratio preserved. Use this field in form views or some kanban views."
+msgstr "Medium-sized image of this contact. It is automatically resized as a 128x128px image, with aspect ratio preserved. Use this field in form views or some kanban views."
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_student_register_mobile
+msgid "Mobile"
+msgstr "الجوال"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_link_mosq_id
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_link_mosque_id
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_student_register_mosque_id
+msgid "Mosque"
+msgstr "المسجد"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_student_register_mosque_name
+msgid "Mosque name"
+msgstr "المسجد/المدرسة "
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_get_top_five_episode_name
+#: model:ir.model.fields,field_description:mk_student_register.field_get_top_five_student_name
+#: model:ir.model.fields,field_description:mk_student_register.field_get_top_five_teacher_name
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_import_student_name
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_student_register_display_name
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_student_register_name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: mk_student_register
+#: code:addons/mk_student_register/wizards/student_sms_send.py:118
+#, python-format
+msgid "No Gateway Found"
+msgstr "No Gateway Found"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_student_register_no_identity
+#: model:ir.model.fields,field_description:mk_student_register.field_res_partner_no_identity
+#: model:ir.model.fields,field_description:mk_student_register.field_res_users_no_identity
+msgid "No Identity"
+msgstr "لا توجد إقامة"
+
+#. module: mk_student_register
+#: model:ir.ui.view,arch_db:mk_student_register.mk_student_search_view
+msgid "Not updated"
+msgstr "غير محدث"
+
+#. module: mk_student_register
+#: code:addons/mk_student_register/models/mk_student_register.py:713
+#, python-format
+msgid "Number of Students Biger than remain number"
+msgstr "عدد الطلاب اكبر من من العدد المسموح به في هذة المرحلة"
+
+#. module: mk_student_register
+#: model:ir.ui.view,arch_db:mk_student_register.episode_students_link_wizerd
+#: model:ir.ui.view,arch_db:mk_student_register.view_serach_for_episode_form
+#: model:ir.ui.view,arch_db:mk_student_register.warning_form
+msgid "OK"
+msgstr "تأكيد"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_episode_student_link_page_id
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_episode_searc_page_id
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_link_page_id
+msgid "Page"
+msgstr "الصفحة"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_student_register_st_parent_id
+#: model:ir.model.fields,field_description:mk_student_register.field_res_partner_student_ids
+#: model:ir.model.fields,field_description:mk_student_register.field_res_users_student_ids
+msgid "Parent"
+msgstr "الأصل"
+
+#. module: mk_student_register
+#: model:ir.actions.act_window,name:mk_student_register.mk_parent_profile_action
+msgid "Parent Profile"
+msgstr "الملف التعريفي لولي الأمر"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_student_register_parent_identity
+msgid "Parent identity"
+msgstr "رقم الهوية لولي الأمر"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_student_register_passport_no
+#: model:ir.model.fields,field_description:mk_student_register.field_res_partner_passport_no
+#: model:ir.model.fields,field_description:mk_student_register.field_res_users_passport_no
+msgid "Passport No"
+msgstr "رقم جواز السفر"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_student_register_passwd
+#: model:ir.model.fields,field_description:mk_student_register.field_res_partner_passwd
+#: model:ir.model.fields,field_description:mk_student_register.field_res_users_passwd
+msgid "Passwd"
+msgstr "كلمة المرور"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_link_period_id
+msgid "Period"
+msgstr "الفترة"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_get_top_five_episode_rate
+#: model:ir.model.fields,field_description:mk_student_register.field_get_top_five_student_rate
+#: model:ir.model.fields,field_description:mk_student_register.field_get_top_five_teacher_rate
+msgid "Rate"
+msgstr "السعر"
+
+#. module: mk_student_register
+#: model:ir.ui.menu,name:mk_student_register.student_management_view_menu
+msgid "Register Student"
+msgstr "تسجيل الطالب/الطالبة"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_link_registeration_code
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_student_register_registeration_code
+#: model:ir.model.fields,field_description:mk_student_register.field_res_partner_registeration_code
+#: model:ir.model.fields,field_description:mk_student_register.field_res_users_registeration_code
+msgid "Registeration Code"
+msgstr "رقم التسجيل"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_link_registeration_date
+msgid "Registeration Date"
+msgstr "تاريخ التسجيل"
+
+#. module: mk_student_register
+#: model:ir.ui.view,arch_db:mk_student_register.view_student_link_form
+msgid "Registeration Info"
+msgstr "بيانات التسجيل"
+
+#. module: mk_student_register
+#: model:ir.ui.view,arch_db:mk_student_register.view_student_link_form
+#: selection:mk.link,state:0
+msgid "Reject"
+msgstr "رفض"
+
+#. module: mk_student_register
+#: model:ir.actions.act_window,name:mk_student_register.mk_serach_episode_action
+#: model:ir.ui.menu,name:mk_student_register.search_for_epispdes_menu
+#: model:ir.ui.view,arch_db:mk_student_register.view_student_register_form
+msgid "Search For Avialable Episodes"
+msgstr "تنسيب الطالب/الطالبة لحلقة"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_student_register_second_name
+#: model:ir.model.fields,field_description:mk_student_register.field_res_partner_second_name
+#: model:ir.model.fields,field_description:mk_student_register.field_res_users_second_name
+#: model:ir.ui.view,arch_db:mk_student_register.parent_profile_form
+#: model:ir.ui.view,arch_db:mk_student_register.view_student_register_form
+msgid "Second Name"
+msgstr "اسم الأب"
+
+#. module: mk_student_register
+#: selection:mk.student.register,marital_status:0
+#: selection:res.partner,marital_status:0
+msgid "Single"
+msgstr "عازب"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_student_register_image_small
+msgid "Small-sized image"
+msgstr "صورة مصغرة"
+
+#. module: mk_student_register
+#: model:ir.model.fields,help:mk_student_register.field_mk_student_register_image_small
+msgid "Small-sized image of this contact. It is automatically resized as a 64x64px image, with aspect ratio preserved. Use this field anywhere a small image is required."
+msgstr "Small-sized image of this contact. It is automatically resized as a 64x64px image, with aspect ratio preserved. Use this field anywhere a small image is required."
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_link_state
+msgid "State"
+msgstr "الحالة"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_student_register_is_send_to_mosque_admin_flag
+msgid "Send to mosque admin"
+msgstr "إعلام المدير(ة)"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_episode_student_link_students_ids
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_episode_searc_student_id
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_episode_search_student_id
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_link_student_id
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_search_episode_student_id
+#: selection:mk.student.register,job_type:0
+msgid "Student"
+msgstr "طالب"
+
+#. module: mk_student_register
+#: model:ir.ui.view,arch_db:mk_student_register.episode_form_inherited_view
+msgid "Student List"
+msgstr "قائمة الطلاب/الطالبات"
+
+#. module: mk_student_register
+#: model:res.groups,name:mk_student_register.group_student_parent_create
+msgid "Student Parent Create"
+msgstr "إنشاء ملف تعريفي لولي امر"
+
+#. module: mk_student_register
+#: model:res.groups,name:mk_student_register.group_student_parent_read
+msgid "Student Parent Read"
+msgstr "القراءة  والإطلاع علي الملف التعريفي لولي الامر"
+
+#. module: mk_student_register
+#: model:res.groups,name:mk_student_register.group_student_parent_update
+msgid "Student Parent Update"
+msgstr "تعديل ملف تعريفي لولي امر"
+
+#. module: mk_student_register
+#: model:ir.actions.act_window,name:mk_student_register.mk_student_profile_sec_action
+msgid "Student Profile"
+msgstr "الملف التعريفي للطالب/للطالبة"
+
+#. module: mk_student_register
+#: model:res.groups,name:mk_student_register.group_student_profile_create
+msgid "Student Profile Create"
+msgstr "إنشاء ملف تعريفي لطالب /طالبة"
+
+#. module: mk_student_register
+#: model:res.groups,name:mk_student_register.group_student_profile_read
+msgid "Student Profile Read"
+msgstr "القراءة  والإطلاع علي االملف التعريفي للطالب"
+
+#. module: mk_student_register
+#: model:res.groups,name:mk_student_register.group_student_profile_update
+msgid "Student Profile Update"
+msgstr "التعديل او الكتابة في الملف التعريفي للطالب"
+
+#. module: mk_student_register
+#: model:ir.ui.view,arch_db:mk_student_register.view_student_register_form
+msgid "Student Register"
+msgstr "تسجيل الطالب/الطالبة"
+
+#. module: mk_student_register
+#: model:ir.module.category,name:mk_student_register.module_category_student
+msgid "Student Registration Group"
+msgstr "صلاحيات تسجيل الطلاب"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_student_register_student_age
+msgid "Student age"
+msgstr "عمر الطالب/الطالبة"
+
+#. module: mk_student_register
+#: model:ir.ui.view,arch_db:mk_student_register.view_student_register_form
+msgid "Student information"
+msgstr "معلومات الطالب/الطالبة"
+
+#. module: mk_student_register
+#: model:ir.actions.act_window,name:mk_student_register.mk_student_link_accept_action
+msgid "Student link acceptance"
+msgstr "تصديق طلب إنضمام لحلقة مسجد/مدرسة"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_student_register_student_name
+msgid "Student name"
+msgstr "اسم الطالب/الطالبة"
+
+#. module: mk_student_register
+#: model:ir.ui.menu,name:mk_student_register.student_profile_partner_menu
+msgid "Student profile"
+msgstr "الملف التعريفي للطالب/للطالبة"
+
+#. module: mk_student_register
+#: model:ir.model,name:mk_student_register.model_mk_student_register
+msgid "Students  profile"
+msgstr "الملف التعريفي للطالب/للطالبات"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_mosque_students_no
+msgid "Students no"
+msgstr "رقم الطالب/الطالبة"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_link_year
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_search_episode_year
+msgid "Study Year"
+msgstr "العام الدراسي"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_top_five_study_class
+msgid "Study class"
+msgstr "الفصل الدراسي"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_episode_searc_study_year
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_episode_search_study_year
+msgid "Study year"
+msgstr "العام الدراسي"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_episode_search_subh
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_episode_search_subh_t
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_link_subh
+msgid "Subh"
+msgstr "الصبح"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_student_register_third_name
+#: model:ir.model.fields,field_description:mk_student_register.field_res_partner_third_name
+#: model:ir.model.fields,field_description:mk_student_register.field_res_users_third_name
+#: model:ir.ui.view,arch_db:mk_student_register.parent_profile_form
+#: model:ir.ui.view,arch_db:mk_student_register.view_student_register_form
+msgid "Third Name"
+msgstr "اسم الجد"
+
+#. module: mk_student_register
+#: model:ir.model.fields,help:mk_student_register.field_res_partner_property_account_payable_id
+#: model:ir.model.fields,help:mk_student_register.field_res_users_property_account_payable_id
+msgid "This account will be used instead of the default one as the payable account for the current partner"
+msgstr "This account will be used instead of the default one as the payable account for the current partner"
+
+#. module: mk_student_register
+#: model:ir.model.fields,help:mk_student_register.field_res_partner_property_account_receivable_id
+#: model:ir.model.fields,help:mk_student_register.field_res_users_property_account_receivable_id
+msgid "This account will be used instead of the default one as the receivable account for the current partner"
+msgstr "This account will be used instead of the default one as the receivable account for the current partner"
+
+#. module: mk_student_register
+#: model:ir.model.fields,help:mk_student_register.field_mk_student_register_image
+msgid "This field holds the image used as avatar for this contact, limited to 1024x1024px"
+msgstr "This field holds the image used as avatar for this contact, limited to 1024x1024px"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_get_top_five_episode_top_five
+#: model:ir.model.fields,field_description:mk_student_register.field_get_top_five_student_top_five
+#: model:ir.model.fields,field_description:mk_student_register.field_get_top_five_teacher_top_five
+msgid "Top Five"
+msgstr "Top Five"
+
+#. module: mk_student_register
+#: model:ir.ui.view,arch_db:mk_student_register.mk_student_search_view
+msgid "Un Active"
+msgstr "المؤرشفة"
+
+#. module: mk_student_register
+#: model:ir.actions.act_window,name:mk_student_register.action_warning
+#: model:ir.model.fields,field_description:mk_student_register.field_wizard_message_name
+#: model:ir.ui.view,arch_db:mk_student_register.warning_form
+msgid "Warning"
+msgstr "تحذير"
+
+#. module: mk_student_register
+#: selection:mk.student.register,marital_status:0
+#: selection:res.partner,marital_status:0
+msgid "Widower"
+msgstr "أرمل"
+
+#. module: mk_student_register
+#: code:addons/mk_student_register/wizards/student_sms_send.py:46
+#, python-format
+msgid "You can only select one student"
+msgstr "You can only select one student"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_link_zuhr
+msgid "Zuhr"
+msgstr "الظهر"
+
+#. module: mk_student_register
+#: selection:mk.link,selected_period:0
+msgid "aasr"
+msgstr "العصر"
+
+#. module: mk_student_register
+#: model:ir.ui.view,arch_db:mk_student_register.episode_form_inherited_view
+msgid "accepted students"
+msgstr "الطلاب المقبولين"
+
+#. module: mk_student_register
+#: model:ir.ui.view,arch_db:mk_student_register.view_student_register_form
+msgid "add"
+msgstr "إضافة"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_episode_student_link_almanhaj
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_episode_searc_almanhaj
+msgid "almanhaj"
+msgstr "المنهج"
+
+#. module: mk_student_register
+#: model:ir.ui.view,arch_db:mk_student_register.view_serach_result_for_episode_form
+msgid "almanhaj and programs setting"
+msgstr "إعدادات البرنامج والمنهج"
+
+#. module: mk_student_register
+#: model:ir.ui.view,arch_db:mk_student_register.view_student_link_form
+msgid "approache setting"
+msgstr "إعدادات المنهج"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_student_register_area_id
+#: model:ir.model.fields,field_description:mk_student_register.field_res_partner_area_id
+#: model:ir.model.fields,field_description:mk_student_register.field_res_users_area_id
+msgid "area"
+msgstr "المنطقة"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_student_register_banking_accounts
+#: model:ir.model.fields,field_description:mk_student_register.field_res_partner_banking_accounts
+#: model:ir.model.fields,field_description:mk_student_register.field_res_users_banking_accounts
+msgid "banking accounts"
+msgstr "الحسابات البنكية"
+
+#. module: mk_student_register
+#: model:ir.ui.view,arch_db:mk_student_register.view_serach_result_for_episode_form
+msgid "big_review_parts"
+msgstr "الاجزاء المحفوظة مسبقا"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_student_register_city_id
+#: model:ir.model.fields,field_description:mk_student_register.field_res_partner_city_id
+#: model:ir.model.fields,field_description:mk_student_register.field_res_users_city_id
+msgid "city"
+msgstr "المدينة"
+
+#. module: mk_student_register
+#: selection:episode.student.link,program_type:0
+#: selection:mk.episode_searc,program_type:0
+msgid "close"
+msgstr "محدد"
+
+#. module: mk_student_register
+#: code:addons/mk_student_register/models/mk_student_register.py:243
+#, python-format
+msgid "country code must contain 3 digits"
+msgstr "country code must contain 3 digits"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_episode_student_link_episode_current_program
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_episode_searc_episode_current_program
+msgid "current program"
+msgstr "البرنامج الحالي"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_episode_student_link_flag
+msgid "determaine program for all student"
+msgstr "اختيار البرنامج"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_student_register_district_id
+#: model:ir.model.fields,field_description:mk_student_register.field_res_partner_district_id
+#: model:ir.model.fields,field_description:mk_student_register.field_res_users_district_id
+msgid "district"
+msgstr "الحي"
+
+#. module: mk_student_register
+#: selection:mk.episode_searc,review_direction:0
+#: selection:mk.link,review_direction:0
+msgid "down"
+msgstr "من الناس للفاتحة"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_episode_student_link_empty_seats
+msgid "empty seats"
+msgstr "اعلدد الشاغر"
+
+#. module: mk_student_register
+#: model:ir.model,name:mk_student_register.model_episode_student_link
+msgid "episode.student.link"
+msgstr "episode.student.link"
+
+#. module: mk_student_register
+#: selection:mk.link,selected_period:0
+msgid "esha"
+msgstr "العشاء"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_episode_searc_flag
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_search_episode_flag
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_student_register_flag
+msgid "flag"
+msgstr "إختيار"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_episode_searc_start_point
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_link_start_point
+msgid "from subject"
+msgstr "نقطة بداية المراجعة"
+
+#. module: mk_student_register
+#: model:ir.model,name:mk_student_register.model_get_top_five_episode
+msgid "get.top.five.episode"
+msgstr "get.top.five.episode"
+
+#. module: mk_student_register
+#: model:ir.model,name:mk_student_register.model_get_top_five_student
+msgid "get.top.five.student"
+msgstr "get.top.five.student"
+
+#. module: mk_student_register
+#: model:ir.model,name:mk_student_register.model_get_top_five_teacher
+msgid "get.top.five.teacher"
+msgstr "get.top.five.teacher"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_episode_searc_is_big_review
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_link_is_big_review
+msgid "is big review"
+msgstr "is big review"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_episode_student_link_is_tlawa
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_episode_searc_is_tlawa
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_link_is_tlawa
+msgid "is tlawa"
+msgstr "is tlawa"
+
+#. module: mk_student_register
+#: model:ir.actions.act_window,name:mk_student_register.episode_setting_actoin
+#: model:ir.actions.act_window,name:mk_student_register.episode_student_actoin
+msgid "link"
+msgstr "ربط الطلاب بالحلقة"
+
+#. module: mk_student_register
+#: model:ir.ui.view,arch_db:mk_student_register.view_serach_result_for_episode_form
+msgid "link student with this episode"
+msgstr "تأكيد ربط الطالب/الطالبة بهذة الحلقة"
+
+#. module: mk_student_register
+#: model:ir.model,name:mk_student_register.model_mk_link
+msgid "link students to stages"
+msgstr "ربط الطلاب/الطالبات بالحلقات"
+
+#. module: mk_student_register
+#: model:ir.ui.menu,name:mk_student_register.student_link_accept_menu
+msgid "linking student acceptance"
+msgstr "تصديق طلب إنضمام لمسجد/مدرسة"
+
+#. module: mk_student_register
+#: selection:mk.link,selected_period:0
+msgid "magrib"
+msgstr "المغرب"
+
+#. module: mk_student_register
+#: model:ir.model,name:mk_student_register.model_mk_employee_sms
+msgid "mk.employee.sms"
+msgstr "mk.employee.sms"
+
+#. module: mk_student_register
+#: model:ir.model,name:mk_student_register.model_mk_episode
+msgid "mk.episode"
+msgstr "mk.episode"
+
+#. module: mk_student_register
+#: model:ir.model,name:mk_student_register.model_mk_episode_searc
+msgid "mk.episode_searc"
+msgstr "mk.episode_searc"
+
+#. module: mk_student_register
+#: model:ir.model,name:mk_student_register.model_mk_episode_search
+msgid "mk.episode_search"
+msgstr "mk.episode_search"
+
+#. module: mk_student_register
+#: model:ir.model,name:mk_student_register.model_mk_mosque
+msgid "mk.mosque"
+msgstr "mk.mosque"
+
+#. module: mk_student_register
+#: model:ir.model,name:mk_student_register.model_mk_search_episode
+msgid "mk.search.episode"
+msgstr "mk.search.episode"
+
+#. module: mk_student_register
+#: model:ir.model,name:mk_student_register.model_mk_student_sms
+msgid "mk.student.sms"
+msgstr "mk.student.sms"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_student_register_mosque_new
+msgid "new mosque"
+msgstr "إضافة الطالب/الطالبة لمسجد"
+
+#. module: mk_student_register
+#: selection:episode.student.link,program_type:0
+#: selection:mk.episode_searc,program_type:0
+msgid "open"
+msgstr "مفتوح"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_res_partner_parent
+#: model:ir.model.fields,field_description:mk_student_register.field_res_users_parent
+#: model:ir.ui.view,arch_db:mk_student_register.mk_parent_search_view
+msgid "parent"
+msgstr "parent"
+
+#. module: mk_student_register
+#: model:ir.ui.menu,name:mk_student_register.parent_profile_menu
+msgid "parent profile"
+msgstr "الملف التعريفي لولي اﻷمر"
+
+#. module: mk_student_register
+#: model:ir.model,name:mk_student_register.model_res_partner
+msgid "parents profile"
+msgstr "الملف التعريفي لولي الامر"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_episode_student_link_part_id
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_episode_searc_big_part_ids
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_episode_searc_part_id
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_link_part_id
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_student_register_part_id
+msgid "part"
+msgstr "اجزاء التلاوة"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_student_register_partner_id
+msgid "partner"
+msgstr "الجهة"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_link_selected_period
+msgid "period"
+msgstr "الفترة"
+
+#. module: mk_student_register
+#: model:ir.actions.act_window,name:mk_student_register.mk_student_link_draft_record_action2
+msgid "period draft student "
+msgstr "قائمة الطلاب الغير مقبولين"
+
+#. module: mk_student_register
+#: code:addons/mk_student_register/models/mk_student_register.py:240
+#, python-format
+msgid "phone number must not be 0 at first digit"
+msgstr "عذرا ، أدخل رقم الهاتف من دون أول صفر مثال: 551234567"
+
+#. module: mk_student_register
+#: code:addons/mk_student_register/models/mk_student_register.py:237
+#, python-format
+msgid "phone number of parent must contain 9 digits"
+msgstr "رقم الهاتف يجب أن يتكون من 9 خانات"
+
+#. module: mk_student_register
+#: code:addons/mk_student_register/models/mk_student_register.py:234
+#, python-format
+msgid "please insert parent phone number and country phone code"
+msgstr "رجاء، ادخل رقم الهاتف و مفتاح الدولة"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_link_program_id
+#: model:ir.ui.view,arch_db:mk_student_register.episode_students_link_wizerd
+#: model:ir.ui.view,arch_db:mk_student_register.view_serach_result_for_episode_form
+#: model:ir.ui.view,arch_db:mk_student_register.view_student_link_form
+msgid "program name"
+msgstr "اسم البرنامج"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_episode_student_link_program_type
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_episode_searc_program_type
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_link_program_type
+msgid "program type"
+msgstr "نوع البرنامج"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_episode_searc_save_start_point
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_link_save_start_point
+msgid "save start point"
+msgstr "نقطة بداية الحفظ"
+
+#. module: mk_student_register
+#: model:ir.ui.view,arch_db:mk_student_register.view_student_register_form
+msgid "saved parts"
+msgstr "مقدار الحفظ"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_student_register_mobile_add
+#: model:ir.model.fields,field_description:mk_student_register.field_res_partner_mobile_add
+#: model:ir.model.fields,field_description:mk_student_register.field_res_users_mobile_add
+msgid "second Mobile"
+msgstr "رقم الجوال الثاني"
+
+#. module: mk_student_register
+#: model:ir.ui.view,arch_db:mk_student_register.parent_profile_form
+#: model:ir.ui.view,arch_db:mk_student_register.view_student_register_form
+msgid "send password"
+msgstr "استعادة كلمة المرور"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_episode_st_id
+msgid "st"
+msgstr "st"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_account_bank_state
+msgid "state"
+msgstr "الحالة"
+
+#. module: mk_student_register
+#: model:ir.ui.view,arch_db:mk_student_register.mk_student_link_search_view
+#: model:ir.ui.view,arch_db:mk_student_register.mk_student_search_view
+msgid "student"
+msgstr "طالب"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_episode_students_list
+msgid "students list"
+msgstr "قائمة الطلاب"
+
+#. module: mk_student_register
+#: selection:mk.link,selected_period:0
+msgid "subh"
+msgstr "الصبح"
+
+#. module: mk_student_register
+#: model:ir.actions.server,name:mk_student_register.ir_cron_get_top_five_actionn_ir_actions_server
+#: model:ir.cron,cron_name:mk_student_register.ir_cron_get_top_five_actionn
+#: model:ir.cron,name:mk_student_register.ir_cron_get_top_five_actionn
+msgid "top five"
+msgstr "top five"
+
+#. module: mk_student_register
+#: model:ir.model,name:mk_student_register.model_top_five
+msgid "top.five"
+msgstr "top.five"
+
+#. module: mk_student_register
+#: selection:mk.episode_searc,review_direction:0
+#: selection:mk.link,review_direction:0
+msgid "up"
+msgstr "من الفاتحة للناس"
+
+#. module: mk_student_register
+#: model:ir.model,name:mk_student_register.model_wizard_message
+msgid "wizard.message"
+msgstr "wizard.message"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_episode_searc_student_days
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_episode_search_student_days
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_link_student_days
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_search_episode_episode_days
+msgid "work days"
+msgstr "الايام"
+
+#. module: mk_student_register
+#: code:addons/mk_student_register/models/mk_student_profile.py:878
+#: code:addons/mk_student_register/models/mk_student_profile.py:925
+#: code:addons/mk_student_register/models/mk_student_profile.py:972
+#: code:addons/mk_student_register/models/mk_student_register.py:274
+#: code:addons/mk_student_register/models/mk_student_register.py:318
+#: code:addons/mk_student_register/models/mk_student_register.py:362
+#, python-format
+msgid "you do not have permission to do this operation"
+msgstr "عذرا، لاتملك الصلاحيات  ﻹجراء هذه العملية"
+
+#. module: mk_student_register
+#: selection:mk.link,selected_period:0
+msgid "zuhr"
+msgstr "الظهر"
+
+#. module: mk_student_register
+#: model:ir.ui.view,arch_db:mk_student_register.mk_student_search_view
+msgid "إناث"
+msgstr "إناث"
+
+#. module: mk_student_register
+#: code:addons/mk_student_register/models/mk_student_profile.py:44
+#: code:addons/mk_student_register/models/mk_student_profile.py:59
+#, python-format
+msgid "الرقم المدخل خطأ ﻷنه أصفار من فضلك أدخل الرقم الصحيح من واقع البطاقة"
+msgstr "الرقم المدخل خطأ ﻷنه أصفار من فضلك أدخل الرقم الصحيح من واقع البطاقة"
+
+#. module: mk_student_register
+#: model:ir.ui.view,arch_db:mk_student_register.view_serach_for_episode_form
+msgid "الية البحث عن الحلقات تعتمد علي نوع الطالب (ذكر / انثى) في ايجاد الحلقة المناسبة للطالب"
+msgstr "الية البحث عن الحلقات تعتمد علي نوع الطالب (ذكر / انثى) في ايجاد الحلقة المناسبة للطالب"
+
+#. module: mk_student_register
+#: model:ir.ui.view,arch_db:mk_student_register.mk_student_search_view
+msgid "ذكور"
+msgstr "ذكور"
+
+#. module: mk_student_register
+#: code:addons/mk_student_register/models/student_link.py:197
+#, python-format
+msgid "عذرا ! لابد من اختيار معلم للحلقة أولا"
+msgstr "عذرا ! لابد من اختيار معلم للحلقة أولا"
+
+#. module: mk_student_register
+#: code:addons/mk_student_register/models/mk_student_profile.py:61
+#, python-format
+msgid "عذراٍ رقم الجواز موجود مسبقا"
+msgstr "عذراٍ رقم الجواز موجود مسبقا"
+
+#. module: mk_student_register
+#: code:addons/mk_student_register/models/mk_student_profile.py:46
+#, python-format
+msgid "عذراٍ رقم الهوية موجود مسبقا"
+msgstr "عذراٍ رقم الهوية موجود مسبقا"
+
+#. module: mk_student_register
+#: code:addons/mk_student_register/models/mk_student_profile.py:48
+#, python-format
+msgid "عذراٍ لابد من إدخال رقم هوية من 10 خانات"
+msgstr "عذراٍ لابد من إدخال رقم هوية من 10 خانات"
+
+#. module: mk_student_register
+#: code:addons/mk_student_register/models/mk_student_profile.py:727
+#, python-format
+msgid "عمر الطالب اقل من 4 سنوات لايمكن ان يكون مسؤول عن نفسه"
+msgstr "عمر الطالب اقل من 4 سنوات لايمكن ان يكون مسؤول عن نفسه"
+
+#. module: mk_student_register
+#: code:addons/mk_student_register/models/mk_student_profile.py:51
+#, python-format
+msgid "فضلا رقم الهوية المدخل لابد ان يتكون من ارقام فقط"
+msgstr "فضلا رقم الهوية المدخل لابد ان يتكون من ارقام فقط"
+
+#. module: mk_student_register
+#: code:addons/mk_student_register/models/student_link.py:140
+#, python-format
+msgid "لا يمكنك حذف هذا    لإرتباطه بسجلات أخرى"
+msgstr "لا يمكنك حذف هذا    لإرتباطه بسجلات أخرى"
+
+#. module: mk_student_register
+#: code:addons/mk_student_register/models/mk_parent_profile.py:25
+#: code:addons/mk_student_register/models/mk_student_profile.py:772
+#: code:addons/mk_student_register/models/mk_student_register.py:405
+#, python-format
+msgid "لا يمكنك حذف هذا السجل لإرتباطه بسجلات أخرى"
+msgstr "لا يمكنك حذف هذا السجل لإرتباطه بسجلات أخرى"
+
+#. module: mk_student_register
+#: selection:mk.link,program_type:0
+msgid "محدد"
+msgstr "محدد"
+
+#. module: mk_student_register
+#: selection:mk.link,program_type:0
+msgid "مفتوح"
+msgstr "مفتوح"
+
+#. module: mk_student_register
+#: model:ir.actions.report,name:mk_student_register.students_report
+msgid "student report wizard"
+msgstr "تقرير الطلاب"
+
+#. module: mk_student_register
+#: model:ir.ui.menu,name:mk_student_register.action_tests_session_wizard_menu
+msgid "Student report "
+msgstr "تقرير الطلاب"
+
+#. module: mk_student_register
+#: model:ir.actions.act_window,name:mk_student_register.action_student_report_wizard
+msgid "Student report"
+msgstr "تقرير الطلاب"
+
+#. module: mk_student_register
+#: model:ir.ui.view,arch_db:mk_student_register.student_report_wizard
+msgid "Student Report"
+msgstr "تقرير الطلاب"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_student_report_wizard_academic_id
+msgid "Academic"
+msgstr "العام الدراسي"
+
+#. module: mk_student_register
+#: selection:student.report.wizard,type_filter:0
+msgid "Center"
+msgstr "مركز الاختبار"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_student_report_wizard_center_id
+msgid "center"
+msgstr "مركز الاختبار"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_student_report_wizard_mosque_category_id
+msgid "Mosque Category"
+msgstr "تصنيف المسجد / المدرسة"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_student_register_categ_mosque_id
+msgid "Mosque category"
+msgstr "تصنيف المسجد / المدرسة"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_employee_sms_mosque
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_link_mosq_id
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_link_mosque_id
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_student_register_mosque_id
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_student_sms_mosque
+#: model:ir.model.fields,field_description:mk_student_register.field_student_report_wizard_mosque_id
+#: selection:student.report.wizard,type_filter:0
+msgid "Mosque"
+msgstr "المسجد"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_student_report_wizard_gender_type
+msgid "Gender Type"
+msgstr "الجنس"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_student_report_wizard_teacher_id
+#: selection:student.report.wizard,type_filter:0
+msgid "Teacher"
+msgstr "المعلم/ المعلمة"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_student_report_wizard_report_type
+msgid "Report Type"
+msgstr "نوع التقرير"
+
+#. module: mk_student_register
+#: selection:student.report.wizard,report_type:0
+msgid "Totals"
+msgstr "اجمالي"
+
+#. module: mk_student_register
+#: selection:student.report.wizard,report_type:0
+msgid "Detailed"
+msgstr "تفصيلي"
+
+#. module: mk_student_register
+#: model:ir.ui.view,arch_db:mk_student_register.student_report_wizard
+msgid "Print"
+msgstr "طباعة"
+
+#. module: mk_student_register
+#: model:ir.ui.view,arch_db:mk_student_register.episode_students_link_wizerd
+#: model:ir.ui.view,arch_db:mk_student_register.student_report_wizard
+#: model:ir.ui.view,arch_db:mk_student_register.view_serach_for_episode_form
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: mk_student_register
+#: selection:mk.student.register,gender:0
+#: selection:res.partner,gender:0
+#: selection:res.users,gender:0
+#: selection:student.report.wizard,gender_type:0
+msgid "Female"
+msgstr "نسائي"
+
+#. module: mk_student_register
+#: selection:mk.student.register,gender:0
+#: selection:res.partner,gender:0
+#: selection:res.users,gender:0
+#: selection:student.report.wizard,gender_type:0
+msgid "Male"
+msgstr "رجالي"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_student_report_wizard_study_class_id
+msgid "Study Class"
+msgstr "الفصل الدراسي"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_smsclient_config_response_success
+msgid "Response Success"
+msgstr "الرد في حالة النجاح ارسال الرسالة"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_employee_sms_department_id
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_student_sms_department_id
+msgid "Department"
+msgstr "القسم"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_employee_sms_mosque_ids
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_student_sms_mosque_ids
+msgid "Mosques"
+msgstr "المساجد"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_student_sms_client_type
+msgid "Client type"
+msgstr "ارسال الى"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_mosque_student_ids
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_student_sms_student_ids
+#: model:ir.ui.view,arch_db:mk_student_register.student_sms_form
+#: selection:mk.student.sms,client_type:0
+msgid "Students"
+msgstr "الطلاب"
+
+#. module: mk_student_register
+#: model:ir.ui.view,arch_db:mk_student_register.parent_profile_form
+msgid "Students"
+msgstr "الطلاب/الطالبات"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_student_sms_parents_ids
+#: model:ir.ui.view,arch_db:mk_student_register.student_sms_form
+#: selection:mk.student.sms,client_type:0
+msgid "Parents"
+msgstr "الأولياء"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_employee_sms_job_ids
+msgid "Jobs"
+msgstr "المناصب الوظيفية"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_employee_sms_employee_ids
+#: model:ir.ui.view,arch_db:mk_student_register.employee_sms_form
+msgid "Employees"
+msgstr "الموظفون"
+
+#. module: mk_student_register
+#: model:ir.actions.act_window,name:mk_student_register.my_config_window2
+#: model:ir.ui.menu,name:mk_student_register.menuitem_import_students
+#: model:ir.ui.view,arch_db:mk_student_register.import_students_wizard
+msgid "Import Students"
+msgstr "استيراد الطلاب"
+
+#. module: mk_student_register
+#: model:ir.ui.view,arch_db:mk_student_register.import_students_wizard
+msgid "Import"
+msgstr "استيراد"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_import_student_file
+msgid "XLS File"
+msgstr "الملف"
+
+#. module: mk_student_register
+#: model:ir.actions.act_window,name:mk_student_register.add_student_profile_action
+#: model:ir.ui.menu,name:mk_student_register.add_student_profile_menu
+msgid "Add Student"
+msgstr "التسجيل السريع للطلاب"
+
+#. module: mk_student_register
+#: model:ir.ui.view,arch_db:mk_student_register.view_student_link_form
+msgid "Mosque Accept"
+msgstr "قبول في المسجد"
+
+#. module: mk_student_register
+#: selection:mk.link,state:0
+msgid "Mosque accept"
+msgstr "مقبول في المسجد"
+
+#. module: mk_student_register
+#: model:res.groups,name:mk_student_register.accept_or_deny_student_confirmation_to_mosque
+msgid "Accept or Deny Student Confirmation to Mosque"
+msgstr "قبول الطالب في المسجد"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_student_register_episode_type_id
+msgid "Episode Type"
+msgstr "نوع الحلقة"
+
+#. module: mk_student_register
+#: model:ir.ui.view,arch_db:mk_student_register.view_student_link_form
+msgid "Return to accept"
+msgstr "رجوع للحضور"
+
+
+#. module: mk_student_register
+#: model:ir.ui.view,arch_db:mk_student_register.view_student_link_form
+msgid "Stop"
+msgstr "إيقاف الطالب"
+
+#. module: mk_student_register
+#: selection:mk.link,state:0
+msgid "Stopped"
+msgstr "ايقاف"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_student_register_residence_country_id
+msgid "Residence Country"
+msgstr "بلد الاقامة"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_student_register_notes
+msgid "Notes"
+msgstr "ملاحظات"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_student_register_recruit_id
+msgid "Recruit"
+msgstr "المؤهل"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_student_register_is_online_student
+#: model:ir.ui.view,arch_db:mk_student_register.mk_student_search_view
+msgid "Online"
+msgstr "عن بعد"
+
+#. module: mk_student_register
+#: code:addons/mk_student_register/models/mk_student_profile.py:538
+#, python-format
+msgid "Please enter valid date !"
+msgstr "الرجاء إدخال تاريخ ميلاد صحيح"
+
+#. module: mk_student_register
+#: code:addons/mk_student_register/models/mk_student_profile.py:540
+#, python-format
+msgid "Date of birth must be lower than actual date !"
+msgstr "يجب أن يكون تاريخ الميلاد قبل من التاريخ الحالي"
+
+#. module: mk_student_register
+#: model:ir.ui.view,arch_db:mk_student_register.mk_student_search_view
+msgid "Employee student"
+msgstr "طالب مرتبط بموظف"
+
+#. module: mk_student_register
+#: model:ir.ui.view,arch_db:mk_student_register.mk_student_search_view
+msgid "Student"
+msgstr "طالب"
+
+#. module: mk_student_register
+#: model:ir.ui.view,arch_db:mk_student_register.mk_student_search_view
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_student_register_is_current_study_class
+msgid "Current study class"
+msgstr "ألفصل الدراسي الحالي"
+
+#. module: mk_student_register
+#: model:ir.model.fields,field_description:mk_student_register.field_mk_student_register_is_duplicated_identity
+msgid "duplicated student identity"
+msgstr "طلاب بنفس الهوية"
+
+#. module: mk_student_register
+#: model:ir.ui.view,arch_db:mk_student_register.episode_form_inherited_view
+msgid "Listen lines"
+msgstr "تسميع الطلاب"
+
+#. module: mk_student_register
+#: model:ir.ui.view,arch_db:mk_student_register.view_student_register_form
+msgid "Listen lines"
+msgstr "تسميع الطالب"
+
+#. module: mk_student_register
+#: model:res.groups,name:mk_student_register.update_student_listen_lines
+msgid "Update student listen lines"
+msgstr "التعديل على تسميع الطلاب"

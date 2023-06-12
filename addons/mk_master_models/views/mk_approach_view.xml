@@ -1,0 +1,57 @@
+<odoo>
+    <data>
+    
+ 	<record id="mk_approach_form_view" model="ir.ui.view">
+          <field name="name">Approach Form View</field>
+          <field name="model">mk.approach</field>
+          <field name="arch" type="xml">
+              <form string = "Approach ">
+		  <header>
+		    
+		  </header>
+		  <sheet>
+			  <group>
+			  	<field name="name"      required="1"/>
+			  	<field name="level_ids" required="1" options="{'no_create': True,'no_open': True,}"/>
+			  </group>
+	  	</sheet>
+              </form>
+             </field>
+         </record>
+
+        <record id="mk_approach_tree_view" model="ir.ui.view">
+            <field name="name">Approach Tree View</field>
+            <field name="model">mk.approach</field>
+            <field name="arch" type="xml">
+                <tree delete="0" string="Approach ">
+                	<field name="name"      required="1"/>
+                	<field name="level_ids" required="1" options="{'no_create': True,'no_open': True,}"/>
+                </tree>
+            </field>
+        </record>
+        
+        <record id="mk_approach_search_view" model="ir.ui.view">
+            <field name="name">Approach Search View</field>
+            <field name="model">mk.approach</field>
+            <field name="arch" type="xml">
+                <search string="Approach ">
+                    <field name="name" string="Approach " filter_domain="[('name','ilike', self)]"/>
+                </search>
+            </field>
+        </record>
+        
+        <record id="mk_approach_action" model="ir.actions.act_window">
+            <field name="name">Approach </field>
+            <field name="res_model">mk.approach</field>
+            <field name="type">ir.actions.act_window</field>
+            <!-- <field name="view_type">form</field> -->
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+            <field name="search_view_id" ref="mk_approach_search_view"/>
+        </record>
+
+	<menuitem name="Approach " id="mk_approach_menu" sequence="5" parent="mk_program_management_settings_menu" action="mk_approach_action"/>    
+
+    </data>  
+</odoo>

@@ -1,0 +1,204 @@
+<odoo>
+    <data noupdate="1">
+        <record id="mk_manual_plan1" model="mk.manual.plan">
+            <field name="is_test" eval="False"/>
+            <field name="from_surah" ref="mk_surah2"/>
+            <field name="from_aya" ref="mk_surah_verses8"/>
+            <field name="to_surah" ref="mk_surah2"/>
+            <field name="to_aya" ref="mk_surah_verses19"/>
+            <field name="order">1</field>
+            <field name="type_follow">listen</field>
+            <field name="approche_id" ref="mk_approache2"/>
+        </record>
+        <record id="mk_manual_plan2" model="mk.manual.plan">
+            <field name="is_test" eval="False"/>
+            <field name="from_surah" ref="mk_surah2"/>
+            <field name="from_aya" ref="mk_surah_verses20"/>
+            <field name="to_surah" ref="mk_surah2"/>
+            <field name="to_aya" ref="mk_surah_verses27"/>
+            <field name="order">2</field>
+            <field name="type_follow">listen</field>
+            <field name="approche_id" ref="mk_approache2"/>
+        </record>
+        <record id="mk_manual_plan3" model="mk.manual.plan">
+            <field name="is_test" eval="False"/>
+            <field name="from_surah" ref="mk_surah2"/>
+            <field name="from_aya" ref="mk_surah_verses28"/>
+            <field name="to_surah" ref="mk_surah2"/>
+            <field name="to_aya" ref="mk_surah_verses32"/>
+            <field name="order">3</field>
+            <field name="type_follow">listen</field>
+            <field name="approche_id" ref="mk_approache2"/>
+        </record>
+        <record id="mk_manual_plan4" model="mk.manual.plan">
+            <field name="is_test" eval="False"/>
+            <field name="from_surah" ref="mk_surah2"/>
+            <field name="from_aya" ref="mk_surah_verses33"/>
+            <field name="to_surah" ref="mk_surah2"/>
+            <field name="to_aya" ref="mk_surah_verses37"/>
+            <field name="order">4</field>
+            <field name="type_follow">listen</field>
+            <field name="approche_id" ref="mk_approache2"/>
+        </record>
+        <record id="mk_manual_plan5" model="mk.manual.plan">
+            <field name="is_test" eval="False"/>
+            <field name="from_surah" ref="mk_surah2"/>
+            <field name="from_aya" ref="mk_surah_verses38"/>
+            <field name="to_surah" ref="mk_surah2"/>
+            <field name="to_aya" ref="mk_surah_verses44"/>
+            <field name="order">5</field>
+            <field name="type_follow">listen</field>
+            <field name="approche_id" ref="mk_approache2"/>
+        </record>
+        <record id="mk_manual_plan6" model="mk.manual.plan">
+            <field name="is_test" eval="False"/>
+            <field name="from_surah" ref="mk_surah2"/>
+            <field name="from_aya" ref="mk_surah_verses45"/>
+            <field name="to_surah" ref="mk_surah2"/>
+            <field name="to_aya" ref="mk_surah_verses55"/>
+            <field name="order">6</field>
+            <field name="type_follow">listen</field>
+            <field name="approche_id" ref="mk_approache2"/>
+        </record>
+        <record id="mk_manual_plan7" model="mk.manual.plan">
+            <field name="is_test" eval="False"/>
+            <field name="from_surah" ref="mk_surah2"/>
+            <field name="from_aya" ref="mk_surah_verses56"/>
+            <field name="to_surah" ref="mk_surah2"/>
+            <field name="to_aya" ref="mk_surah_verses64"/>
+            <field name="order">7</field>
+            <field name="type_follow">listen</field>
+            <field name="approche_id" ref="mk_approache2"/>
+        </record>
+        <record id="mk_manual_plan8" model="mk.manual.plan">
+            <field name="is_test" eval="False"/>
+            <field name="from_surah" ref="mk_surah2"/>
+            <field name="from_aya" ref="mk_surah_verses65"/>
+            <field name="to_surah" ref="mk_surah2"/>
+            <field name="to_aya" ref="mk_surah_verses68"/>
+            <field name="order">8</field>
+            <field name="type_follow">listen</field>
+            <field name="approche_id" ref="mk_approache2"/>
+        </record>
+        <record id="mk_manual_plan9" model="mk.manual.plan">
+            <field name="is_test" eval="False"/>
+            <field name="from_surah" ref="mk_surah2"/>
+            <field name="from_aya" ref="mk_surah_verses77"/>
+            <field name="to_surah" ref="mk_surah2"/>
+            <field name="to_aya" ref="mk_surah_verses83"/>
+            <field name="order">10</field>
+            <field name="type_follow">listen</field>
+            <field name="approche_id" ref="mk_approache2"/>
+        </record>
+        <record id="mk_manual_plan10" model="mk.manual.plan">
+            <field name="is_test" eval="False"/>
+            <field name="from_surah" ref="mk_surah2"/>
+            <field name="from_aya" ref="mk_surah_verses84"/>
+            <field name="to_surah" ref="mk_surah2"/>
+            <field name="to_aya" ref="mk_surah_verses90"/>
+            <field name="order">11</field>
+            <field name="type_follow">listen</field>
+            <field name="approche_id" ref="mk_approache2"/>
+        </record>
+        <record id="mk_manual_plan11" model="mk.manual.plan">
+            <field name="is_test" eval="False"/>
+            <field name="from_surah" ref="mk_surah2"/>
+            <field name="from_aya" ref="mk_surah_verses69"/>
+            <field name="to_surah" ref="mk_surah2"/>
+            <field name="to_aya" ref="mk_surah_verses76"/>
+            <field name="order">9</field>
+            <field name="type_follow">listen</field>
+            <field name="approche_id" ref="mk_approache2"/>
+        </record>
+        <record id="mk_manual_plan12" model="mk.manual.plan">
+            <field name="is_test" eval="False"/>
+            <field name="from_surah" ref="mk_surah2"/>
+            <field name="from_aya" ref="mk_surah_verses91"/>
+            <field name="to_surah" ref="mk_surah2"/>
+            <field name="to_aya" ref="mk_surah_verses95"/>
+            <field name="order">12</field>
+            <field name="type_follow">listen</field>
+            <field name="approche_id" ref="mk_approache2"/>
+        </record>
+        <record id="mk_manual_plan13" model="mk.manual.plan">
+            <field name="is_test" eval="False"/>
+            <field name="from_surah" ref="mk_surah2"/>
+            <field name="from_aya" ref="mk_surah_verses96"/>
+            <field name="to_surah" ref="mk_surah2"/>
+            <field name="to_aya" ref="mk_surah_verses100"/>
+            <field name="order">13</field>
+            <field name="type_follow">listen</field>
+            <field name="approche_id" ref="mk_approache2"/>
+        </record>
+        <record id="mk_manual_plan14" model="mk.manual.plan">
+            <field name="is_test" eval="False"/>
+            <field name="from_surah" ref="mk_surah2"/>
+            <field name="from_aya" ref="mk_surah_verses101"/>
+            <field name="to_surah" ref="mk_surah2"/>
+            <field name="to_aya" ref="mk_surah_verses108"/>
+            <field name="order">14</field>
+            <field name="type_follow">listen</field>
+            <field name="approche_id" ref="mk_approache2"/>
+        </record>
+        <record id="mk_manual_plan15" model="mk.manual.plan">
+            <field name="is_test" eval="False"/>
+            <field name="from_surah" ref="mk_surah2"/>
+            <field name="from_aya" ref="mk_surah_verses109"/>
+            <field name="to_surah" ref="mk_surah2"/>
+            <field name="to_aya" ref="mk_surah_verses112"/>
+            <field name="order">15</field>
+            <field name="type_follow">listen</field>
+            <field name="approche_id" ref="mk_approache2"/>
+        </record>
+        <record id="mk_manual_plan16" model="mk.manual.plan">
+            <field name="is_test" eval="False"/>
+            <field name="from_surah" ref="mk_surah2"/>
+            <field name="from_aya" ref="mk_surah_verses113"/>
+            <field name="to_surah" ref="mk_surah2"/>
+            <field name="to_aya" ref="mk_surah_verses119"/>
+            <field name="order">16</field>
+            <field name="type_follow">listen</field>
+            <field name="approche_id" ref="mk_approache2"/>
+        </record>
+        <record id="mk_manual_plan17" model="mk.manual.plan">
+            <field name="is_test" eval="False"/>
+            <field name="from_surah" ref="mk_surah2"/>
+            <field name="from_aya" ref="mk_surah_verses120"/>
+            <field name="to_surah" ref="mk_surah2"/>
+            <field name="to_aya" ref="mk_surah_verses126"/>
+            <field name="order">17</field>
+            <field name="type_follow">listen</field>
+            <field name="approche_id" ref="mk_approache2"/>
+        </record>
+        <record id="mk_manual_plan18" model="mk.manual.plan">
+            <field name="is_test" eval="False"/>
+            <field name="from_surah" ref="mk_surah2"/>
+            <field name="from_aya" ref="mk_surah_verses127"/>
+            <field name="to_surah" ref="mk_surah2"/>
+            <field name="to_aya" ref="mk_surah_verses133"/>
+            <field name="order">18</field>
+            <field name="type_follow">listen</field>
+            <field name="approche_id" ref="mk_approache2"/>
+        </record>
+        <record id="mk_manual_plan19" model="mk.manual.plan">
+            <field name="is_test" eval="False"/>
+            <field name="from_surah" ref="mk_surah2"/>
+            <field name="from_aya" ref="mk_surah_verses134"/>
+            <field name="to_surah" ref="mk_surah2"/>
+            <field name="to_aya" ref="mk_surah_verses141"/>
+            <field name="order">19</field>
+            <field name="type_follow">listen</field>
+            <field name="approche_id" ref="mk_approache2"/>
+        </record>
+        <record id="mk_manual_plan20" model="mk.manual.plan">
+            <field name="is_test" eval="False"/>
+            <field name="from_surah" ref="mk_surah2"/>
+            <field name="from_aya" ref="mk_surah_verses142"/>
+            <field name="to_surah" ref="mk_surah2"/>
+            <field name="to_aya" ref="mk_surah_verses148"/>
+            <field name="order">20</field>
+            <field name="type_follow">listen</field>
+            <field name="approche_id" ref="mk_approache2"/>
+        </record>
+    </data>
+</odoo>

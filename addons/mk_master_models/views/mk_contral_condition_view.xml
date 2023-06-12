@@ -1,0 +1,110 @@
+<odoo>
+    <data>
+        <record id="mk_contral_form_view" model="ir.ui.view">
+            <field name="name">Contral Form View</field>
+            <field name="model">mk.contral.condition</field>
+            <field name="arch" type="xml">
+                <form string="Contral / Condition">
+                    <sheet>
+                        <group>
+                            <field name="type_id"/>
+                        </group>
+                        <group col="4">
+                            <field name="address_contral"/>
+                            <field name="order"/>
+                        </group>
+                        <group>
+                            <field name="note"/>
+                            <field name="active"/>
+                        </group>
+                        <separator string="Interrelated Species" colspan="4"/>
+                        <group col="8">
+                            <field name="check_episode"/>
+                            <field name="check_courses"/>
+                            <field name="check_summer"/>
+                            <field name="check_test"/>
+                            <field name="check_compet"/>
+                        </group>
+                        <group col="4">
+                            <group>
+
+                            </group>
+                            <group>
+                                <field name="categ_type" attrs="{'invisible':[('check_courses','=',False)], 'required':[('check_courses','=',True)]}"/>
+                                <field name="course_request_type" attrs="{'invisible':[('check_courses','=',False)],'required':[('check_courses','=',True), ('categ_type','=','female')]}"/>
+                            </group>
+
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+        <record id="mk_contral_tree_view" model="ir.ui.view">
+            <field name="name">ContralTree View</field>
+            <field name="model">mk.contral.condition</field>
+            <field name="arch" type="xml">
+                <tree delete="0" string="mosque ">
+                    <field name="address_contral"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="mk_contral_search_view" model="ir.ui.view">
+            <field name="name">contral condition Search View</field>
+            <field name="model">mk.contral.condition</field>
+            <field name="arch" type="xml">
+                <search string="Subjects and Pages">
+                    <field name="type_id"/>
+                    <field name="address_contral"/>
+                    <field name="order"/>
+
+                    <filter name="check_episode" string="إسم الحلقات/ إسم الفصول"
+                            domain="[('check_episode','=',True)]"/>
+                    <separator/>
+                    <filter name="check_courses" string="الدورات المكثفة" domain="[('check_courses','=',True)]"/>
+                    <separator/>
+                    <filter name="check_summer" string="الدورات الصيفية" domain="[('check_summer','=',True)]"/>
+                    <separator/>
+                    <filter name="check_test" string="الاختبارات" domain="[('check_test','=',True)]"/>
+                    <separator/>
+                    <filter name="check_compet" string="المسابقات" domain="[('check_compet','=',True)]"/>
+
+                    <group expand="0" string="Group By">
+                        <filter name="type_id" string="النوع" context="{'group_by': 'type_id'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record id="mk_contral_action" model="ir.actions.act_window">
+            <field name="name">Contral / Condition</field>
+            <field name="res_model">mk.contral.condition</field>
+            <field name="type">ir.actions.act_window</field>
+            <!-- <field name="view_type">form</field> -->
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="view_mk_contral_condition_search" model="ir.ui.view">
+            <field name="name">view.mk.contral.condition.search</field>
+            <field name="model">mk.contral.condition</field>
+            <field name="arch" type="xml">
+                <search string="contral condition">
+                    <field name="type_id"/>
+                    <field name="address_contral"/>
+                    <group string="Filter By">
+                        <filter name="active" string="Active" domain="[('active','=',True)]"/>
+                        <filter name="un active" string="Un active" domain="[('active','=',False)]"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <menuitem name="Contral / Condition" id="mk_contral_menu" sequence="12"
+                  parent="mk_associate_management_settings_menu" action="mk_contral_action"/>
+
+    </data>
+</odoo>

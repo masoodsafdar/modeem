@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <menuitem action="import_mosques_action" id="menuitem_import_mosq" string="Import Mosques" parent="mk_episode_management.mk_episode_management_menu"/>
+
+</odoo>

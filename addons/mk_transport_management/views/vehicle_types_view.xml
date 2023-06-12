@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  <data>
+
+	<record id="vehicle_types_form_view" model="ir.ui.view">
+		<field name="name">vehicle types form</field>
+		<field name="model">vehicle.types</field>
+		<field name="arch" type="xml">
+			<form string = "vehicle types">
+			   <sheet>
+			   	  <group>
+			   	  	<group><field name="name"  required="1"/></group>
+			  	    <group><field name="code" required="1"/></group>
+			      </group>
+				</sheet>
+			</form>
+	    </field>
+	</record>
+
+	<record id="vehicle_types_tree_view" model="ir.ui.view">
+		<field name="name">vehicle types tree</field>
+		<field name="model">vehicle.types</field>
+		<field name="arch" type="xml">
+			<tree>
+			  <field name="code"/>
+			  <field name="name"/>
+			</tree>
+		</field>
+	</record>
+
+	<record id="vehicle_types_action" model="ir.actions.act_window">
+		<field name="name">vehicle types</field>
+		<field name="res_model">vehicle.types</field>
+		<field name="view_type">form</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+
+	<menuitem
+       id="vehicle_types_menu"
+       name="Vehicle Types"
+       action="vehicle_types_action"
+       parent="transport_config_main_menu"
+       groups="vehicle_types_manage"/>	
+  </data>
+</odoo>

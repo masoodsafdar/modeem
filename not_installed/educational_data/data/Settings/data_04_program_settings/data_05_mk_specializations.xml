@@ -1,0 +1,8 @@
+<odoo>
+    <data noupdate="1">
+        <record id="mk_specializations1" model="mk.specializations">
+            <field name="name">جميع التخصصات</field>
+            <field name="job_id" ref="Job13"/>
+        </record>
+    </data>
+</odoo>

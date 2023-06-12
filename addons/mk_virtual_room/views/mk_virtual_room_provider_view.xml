@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	 <data>
+        <record id="mk_virtual_room_provider_tree_view" model="ir.ui.view">
+			<field name="name">Virtual room provider tree view</field>
+            <field name="model">mk.virtual_room.provider</field>
+            <field name="arch" type="xml">
+                <tree delete="0" string="Virtual room provider">
+                	<field name="name"/>
+                	<field name="type_subscription" string="نوع الخدمة"/>
+                </tree>
+            </field>
+        </record>
+        
+	 	<record id="mk_virtual_room_provider_form_view" model="ir.ui.view">
+			<field name="name">Virtual room provider form view</field>
+	        <field name="model">mk.virtual_room.provider</field>
+	        <field name="arch" type="xml">
+				<form string="Virtual room provider">
+					<sheet>
+						<group>
+							<group>
+								<field name="name"/>
+							</group> 
+							<group>
+								<field name="type_subscription" string="نوع الخدمة"/>
+							</group> 
+						</group>
+						
+						<separator string="الباقات"/>
+						<field name="virtual_room_package_ids">
+							<tree editable="bottom">
+								<field name="name" invisible="1"/>
+							    <field name="type_subscription_duration"/>
+							    <field name="number_room"/>
+							    <field name="number_participant" string="عدد المشاركين"/>
+							    <field name="cost"/>
+							</tree>
+						</field> 						
+					</sheet>
+					 <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+				</form>
+			</field>
+		</record>
+	
+        <record id="mk_virtual_room_provider_search_view" model="ir.ui.view">
+            <field name="name">Virtual room provider search view</field>
+            <field name="model">mk.virtual_room.provider</field>
+            <field name="arch" type="xml">
+                <search string="Virtual room provider">
+                    <field name="name"/>
+                </search>
+            </field>
+        </record>
+	        
+        <record id="action_mk_virtual_room_provider" model="ir.actions.act_window">
+            <field name="name">Virtual room provider</field>
+            <field name="res_model">mk.virtual_room.provider</field>
+            <field name="type">ir.actions.act_window</field> 
+            <field name="view_mode">tree,form</field>
+        </record>
+	
+        <menuitem name="Virtual room provider" id="mk_virtual_room_provider_menu" sequence="10" parent="mk_virtual_room.virtual_room_settings_menu"
+	              action="action_mk_virtual_room_provider"/>
+
+	</data>
+</odoo>

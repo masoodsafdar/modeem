@@ -1,0 +1,93 @@
+<odoo>
+    <data>
+    
+ 		<record id="mk_study_class_form_view" model="ir.ui.view">
+        	<field name="name">Study Class Form View</field>
+          	<field name="model">mk.study.class</field>
+          	<field name="arch" type="xml">
+            	<form string = "Study Class">
+		  			<header>		    
+		  			</header>
+		  			
+		  			<sheet>			  		
+			  			<group>
+		  	  				<group>
+						  		<field name="name"  required="1"/>
+					  			<field name="order" required="1"/>		
+					  			<field name="is_default"/>  	  						  				
+			  				</group>
+			  				
+				  			<group>
+				  				<field name="study_year_id" required="1" domain="[('company_id','=',company_id)]" options="{'no_open':1,'no_create':1}"/>
+				  				<field name="active"/>
+				  				<field name="company_id" required="1"  options="{'no_open':1,'no_create':1}" invisible="1"/>
+				  			</group>
+						</group>
+
+						<group>
+			  				<group>
+			  					<field name="start_date" required="1"/>
+			  					<!-- field name="islamic_start_date" required="1"/-->			  		
+			  				</group>
+			  				<group>
+			  					<field name="end_date" required="1"/>
+			  					<!-- field name="islamic_end_date" required="1"/-->
+			  				</group>
+			  			</group>
+	  				</sheet>
+					<div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+              	</form>
+             </field>
+         </record>
+
+        <record id="mk_study_class_tree_view" model="ir.ui.view">
+            <field name="name">Study Class Tree View</field>
+            <field name="model">mk.study.class</field>
+            <field name="arch" type="xml">
+                <tree delete="0" string="Study Class">
+                	<field name="company_id" required="1"  options="{'no_open':1,'no_create':1}" invisible="1"/>
+                	<field name="study_year_id" required="1" options="{'no_open':1,'no_create':1}"/>
+                	<field name="name"          required="1"/>
+                	<field name="order"         required="1"/>
+                	<field name="start_date"    required="1"/>
+                	<field name="end_date"      required="1"/>
+                </tree>
+            </field>
+        </record>
+        
+        <record id="mk_study_class_search_view" model="ir.ui.view">
+            <field name="name">Study Class Search View</field>
+            <field name="model">mk.study.class</field>
+            <field name="arch" type="xml">
+                <search string="Study Class ">
+                     <field name="name" string="Study Class" filter_domain="[('name','ilike', self)]"/>
+                     <field name="order"/>
+                     
+                     <filter domain="[('is_default','=',True)]" name="is_default" string="الفصل الحالي"/>
+                     <filter domain="[('active','=',False)]"    name="active"     string="Un Active"/>
+                     
+                     <group expand="0" string="Group By">
+		                     <filter name="study_year_id"        string="العام الدراسي" context="{'group_by': 'study_year_id'}"/>
+		             </group> 
+                </search>
+            </field>
+        </record>
+        
+        <record id="mk_study_class_action" model="ir.actions.act_window">
+            <field name="name">Study Class </field>
+            <field name="res_model">mk.study.class</field>
+            <field name="type">ir.actions.act_window</field>
+            <!-- <field name="view_type">form</field> -->
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+            <field name="search_view_id" ref="mk_study_class_search_view"/>
+        </record>
+
+	<menuitem name="Study Class " id="mk_study_class_menu" sequence="5" parent="mk_associate_management_settings_menu" action="mk_study_class_action"/>    
+
+    </data>  
+</odoo>

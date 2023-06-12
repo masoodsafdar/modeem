@@ -1,0 +1,37 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_event_type_id,access_event_type,model_event_type,events_types_manage,1,1,1,1
+access_event_type_mail,access_event_type,event.model_event_type_mail,base.group_user,1,1,1,0
+event_status_management_id,event_status_management,model_event_status,events_status_manage,1,1,1,1
+association_info_management_id,association_info_management,model_res_company,association_info_manage,1,1,0,0
+read_events_mee,access events_events_read,mk_events.model_event_event,read_events,1,0,0,0
+read_events_mes,access events_status_read,mk_events.model_event_status,read_events,1,0,0,0
+read_events_met,access events_type_read,mk_events.model_event_type,read_events,1,0,0,0
+read_events_mhe,access events_hr_employee_read,hr.model_hr_employee,read_events,1,0,0,0
+read_events_mmm,access events_mk_mosque_read,mk_master_models.model_mk_mosque,read_events,1,0,0,0
+read_events_mhj,access events_hr_job_read,mk_master_models.model_hr_job,read_events,1,0,0,0
+read_events_mea,access events_attendee_read,mk_events.model_event_attendee,read_events,1,0,0,0
+read_events_meg,access events_guest_read,mk_events.model_event_guest,read_events,1,0,0,0
+read_events_mei,access events_invite_read,mk_events.model_event_invite,read_events,1,0,0,0
+send_reminder_event_id,send_reminder_event,mk_master_models.model_mk_sms_template,send_reminder_event,1,0,0,0
+create_event_id,create_event,model_event_event,create_event,1,1,1,1
+create_event_registration_id,create_event_registration,model_event_registrations,create_event,0,0,1,0
+create_event_invite_id,create_event_invite,model_event_invite,create_event,1,1,1,0
+create_event_atendance_id,create_event_atendance,model_event_attendee,create_event,0,0,1,0
+read_event_registration_id,read_event_registration,model_event_registrations,read_attendance,1,0,0,0
+event_invite_registration_id,event_invite_registration,model_event_invite,read_attendance,1,1,0,0
+read_atendance_id,event_read_atendance,model_event_attendee,read_attendance,1,1,0,0
+accept_deny_event_mee,access events_events_accept_deny,mk_events.model_event_event,accept_deny_event,1,1,0,0
+write_event_mee,access events_events_write,mk_events.model_event_event,write_events,1,1,0,0
+accept_deny_event_mes,access events_status_accept_deny,mk_events.model_event_status,accept_deny_event,1,1,0,0
+accept_deny_event_met,access events_type_accept_deny,mk_events.model_event_type,accept_deny_event,1,1,0,0
+accept_deny_event_mhe,access events_hr_employee_accept_deny,hr.model_hr_employee,accept_deny_event,1,1,0,0
+accept_deny_event_mmm,access events_mk_mosque_accept_deny,mk_master_models.model_mk_mosque,accept_deny_event,1,1,0,0
+accept_deny_event_mhj,access events_hr_job_accept_deny,mk_master_models.model_hr_job,accept_deny_event,1,1,0,0
+accept_deny_event_mea,access events_attendee_accept_deny,mk_events.model_event_attendee,accept_deny_event,1,1,0,0
+accept_deny_event_meg,access events_guest_accept_deny,mk_events.model_event_guest,accept_deny_event,1,1,0,0
+accept_deny_event_mei,access events_invite_accept_deny,mk_events.model_event_invite,accept_deny_event,1,1,0,0
+create_attendance_mer,access events_registratio_create_attendance,mk_events.model_event_registrations,create_attendance,1,1,1,1
+create_attendance_mee,access events_event_create_attendance,mk_events.model_event_event,create_attendance,1,1,0,0
+create_attendance_mhe,access events_hr_employee_create_attendance,hr.model_hr_employee,create_attendance,1,1,1,1
+base_user_mhe,access events_hr_employee_create_attendance,base.model_res_users,base.group_user,1,0,0,0
+event_mail_mhe,access events_hr_employee_create_attendance,event.model_event_mail,base.group_user,1,0,0,0

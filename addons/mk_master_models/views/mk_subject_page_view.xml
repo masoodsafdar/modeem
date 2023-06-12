@@ -1,0 +1,82 @@
+<odoo>
+    <data>
+    
+		<record id="view_mk_subject_page_form" model="ir.ui.view">
+			<field name="name">view.subject.page.form</field>
+			<field name="model">mk.subject.page</field>
+			<field name="arch" type="xml">
+		   		<form string="Subjects and Pages" delete="0" create="0" edit="0">
+                	<sheet>
+	    		    	<group>
+			  				<field name="subject_page_id" required="True" options="{'no_create': True,'no_open': True,}"/>
+			    		</group>
+			    		<group colspan="2" col="4">
+							<field name="from_surah" required="True"/>
+							<field name="from_verse" domain="[('surah_id','=',from_surah)]" required="True" options="{'no_create': True,'no_open': True,}"/>
+							<field name="to_surah"                                          required="True" options="{'no_create': True,'no_open': True,}"/>
+							<field name="to_verse"   domain="[('surah_id','=',to_surah)]"   required="True" options="{'no_create': True,'no_open': True,}"/>
+			    			<field name="order"/>
+			    			<field name="is_test"/>
+			    		</group>
+                    </sheet>
+					<div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+			</field>
+		</record>
+
+		<record id="view_mk_subject_page_tree" model="ir.ui.view">
+			<field name="name">view.subject.page.tree</field>
+			<field name="model">mk.subject.page</field>
+			<field name="arch" type="xml">
+		   		<tree delete="0" create="0">
+       				<field name="subject_page_id" required="True" options="{'no_create': True,'no_open': True,}"/>
+	      			<field name="from_surah"      required="True" options="{'no_create': True,'no_open': True,}"/>
+			  		<field name="from_verse"      required="True" options="{'no_create': True,'no_open': True,}" domain="[('surah_id','=',from_surah)]"/>
+			  		<field name="to_surah"        required="True" options="{'no_create': True,'no_open': True,}"/>
+			  		<field name="to_verse"        required="True" options="{'no_create': True,'no_open': True,}" domain="[('surah_id','=',to_surah)]"/>
+					<field name="order"/>
+			    	<field name="is_test"/>
+	    		</tree>
+			</field>
+		</record>
+
+        
+        <record id="mk_subject_page_search_view" model="ir.ui.view">
+            <field name="name">Subjects and Pages Search View</field>
+            <field name="model">mk.subject.page</field>
+            <field name="arch" type="xml">
+                <search string="Subjects and Pages">
+                    <field name="subject_page_id"   string="Subjects and Pages" filter_domain="[('subject_page_id','ilike', self)]"/> 
+                    <field name="part_id"           string="Parts"              filter_domain="[('part_id','ilike', self)]"/>
+                    <field name="from_surah"        string="From Surah"         filter_domain="[('from_surah','ilike', self)]"/> 
+                    <field name="to_surah"          string="To Surah"           filter_domain="[('to_surah','ilike', self)]"/>
+                    
+                    <filter name="is_test"          string="اختبار"             domain="[('is_test','=',True)]"/>
+                    
+                    <group expand="0" string="Group By"> 
+	                    <filter name="group_subject"    string="مقرر او صفحة"  context="{'group_by': 'subject_page_id'}"/>
+	                    <filter name="group_from_surah" string="من السورة"     context="{'group_by': 'from_surah'}"/>
+	                    <filter name="group_to_surah"   string="الى السورة"    context="{'group_by': 'to_surah'}"/>
+                	</group>
+                </search>
+            </field>
+        </record>
+        
+        <record id="mk_mk_subject_page_action" model="ir.actions.act_window">
+            <field name="name">خطط المقررات</field>
+            <field name="res_model">mk.subject.page</field>
+            <field name="type">ir.actions.act_window</field>
+            <!-- <field name="view_type">form</field> -->
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+            <field name="search_view_id" ref="mk_subject_page_search_view"/>
+        </record>
+
+		<menuitem id="mk_mk_subject_page_menu" name="خطط المقررات" action="mk_mk_subject_page_action" parent="mk_associate_management_settings_menu" sequence='7' />
+		
+    </data>  
+</odoo>

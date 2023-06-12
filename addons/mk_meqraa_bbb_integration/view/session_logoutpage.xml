@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<template id="session_logoutpage" name="Session Join Url Response">
+			
+<html>
+<head>
+   <meta name="viewport" content="width=device-width, initial-scale=1"/>
+   <link rel="stylesheet" href="/mk_meqraa_bbb_integration/static/src/css/web_logout_style.css"/>
+</head>
+ 
+ <body>
+  <div class="logout">
+    <div class="container_lp">
+    
+    <img src="/mk_meqraa_bbb_integration/static/src/images/logo.png" alt="Logo" class="logo_lp"/> 
+      <form> 
+        <a href="https://www.qk.org.sa/" class="button">الرجوع للصفحة الرئيسية</a> 
+      </form>
+       
+      
+    </div>  
+</div>
+  
+</body> 
+</html> 
+		</template>
+	</data>
+</odoo>

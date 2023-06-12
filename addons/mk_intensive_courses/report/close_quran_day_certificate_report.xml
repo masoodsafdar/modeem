@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+
+    <record model="report.paperformat" id="paperformat_quran_day_close_course">
+        <field name="name">paperformat report</field>
+        <field name="default" eval="True"/>
+        <field name="format">A4</field>
+        <field name="page_width">0</field>
+        <field name="page_height">0</field>
+        <field name="orientation">Landscape</field>
+        <field name="margin_top">0</field>
+        <field name="margin_right">0</field>
+        <field name="margin_bottom">0</field>
+        <field name="margin_left">0</field>
+        <field name="header_line" eval="False"/>
+        <field name="header_spacing">30</field>
+        <field name="dpi">90</field>
+    </record>
+
+     <report id="close_quran_day_course_data_id"
+                string="شهادة اغلاق يوم قراني"
+                model="mk.course.request"
+                report_type="qweb-pdf"
+                name="mk_intensive_courses.close_quran_day_certificate"
+                file="mk_intensive_courses.close_quran_day_certificate"
+                paperformat="paperformat_quran_day_close_course"
+    />
+
+</odoo>

@@ -1,0 +1,9 @@
+<odoo>
+    <data>
+    
+
+	<menuitem name="Tests Management" id="mk_tests_main_menu" parent="resource.menu_resource_config"/>    
+	<menuitem name="Tests Management" id="mk_tests_menu" parent="mk_tests_main_menu"/>    
+    <menuitem id="mk_tests_settings_menu" name="Tests settings" parent="mk_master_models.mk_master_menu" sequence="3"/>
+    </data>  
+</odoo>

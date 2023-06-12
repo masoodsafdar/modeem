@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data noupdate="1">
+
+
+
+
+<record model="ir.module.category" id="mk_episode_management">
+  <field name="name">إدارة الحلقات </field>
+  <field name="description">User access level for episode_managment module</field>
+  <field name="sequence">3</field>
+</record>
+<record model="ir.module.category" id="mk_masjed_management">
+  <field name="name">إدارة المساجد </field>
+  <field name="description">User access level for mk_masjed_management module</field>
+  <field name="sequence">3</field>
+</record>
+
+
+<!-- episode groups-->
+
+<record id="read_episode" model="res.groups">
+     <field name="name">Read Episode</field>
+     <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+     <field name="users" eval="[(4, ref('base.user_root'))]"/>
+     <field name="category_id" ref="mk_episode_management"/>
+</record>
+
+<record id="episode_creation" model="res.groups">
+     <field name="name">Episode Creation</field>
+     <field name="implied_ids" eval="[(4, ref('read_episode'))]"/>
+     <field name="users" eval="[(4, ref('base.user_root'))]"/>
+     <field name="category_id" ref="mk_episode_management"/>
+</record>
+
+
+
+<record id="edit_or_modify_episode" model="res.groups">
+     <field name="name">Edit or Modify Episode</field>
+     <field name="implied_ids" eval="[(4, ref('read_episode'))]"/>
+     <field name="users" eval="[(4, ref('base.user_root'))]"/>
+     <field name="category_id" ref="mk_episode_management"/>
+</record>
+
+
+
+<record id="accept_deny_inactivate" model="res.groups">
+     <field name="name">Accept Deny Inactivate</field>
+     <field name="implied_ids" eval="[(4, ref('read_episode'))]"/>
+     <field name="users" eval="[(4, ref('base.user_root'))]"/>
+     <field name="category_id" ref="mk_episode_management"/>
+</record>
+
+
+
+<record id="students_activate" model="res.groups">
+     <field name="name">Students Activate</field>
+     <field name="implied_ids" eval="[(4, ref('read_episode'))]"/>
+     <field name="users" eval="[(4, ref('base.user_root'))]"/>
+     <field name="category_id" ref="mk_episode_management"/>
+</record>
+
+
+
+<record id="students_placement_to_episode" model="res.groups">
+     <field name="name">Students Placement to Episode</field>
+     <field name="implied_ids" eval="[(4, ref('read_episode'))]"/>
+     <field name="users" eval="[(4, ref('base.user_root'))]"/>
+     <field name="category_id" ref="mk_episode_management"/>
+</record>
+
+
+
+<record id="episode_settings" model="res.groups">
+     <field name="name">Episode Settings</field>
+     <field name="implied_ids" eval="[(4, ref('read_episode'))]"/>
+     <field name="users" eval="[(4, ref('base.user_root'))]"/>
+     <field name="category_id" ref="mk_episode_management"/>
+</record>
+
+<!-- group of select all -->
+          <record id="select_episode_selectall_group" model="res.groups">
+            <field name="name">Select All</field>
+            <field name="implied_ids" eval="[(4, ref('read_episode')),
+              (4, ref('episode_creation')),
+              (4, ref('edit_or_modify_episode')),
+              (4, ref('accept_deny_inactivate')),
+              (4, ref('students_activate')),
+              (4, ref('students_placement_to_episode')),
+              (4, ref('episode_settings'))]"/>
+            <field name="category_id" ref="mk_episode_management"/>
+          </record>
+
+
+
+<!-- msjed groups-->
+
+
+<record id="group_mosque_read" model="res.groups">
+      <field name="name">read mosque</field>
+      <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+     <field name="users" eval="[(4, ref('base.user_root'))]"/>
+      <field name="category_id" ref="mk_masjed_management"/>
+</record>
+
+
+<record id="group_mosque_create" model="res.groups">
+     <field name="name">create mosque</field>
+     <field name="implied_ids" eval="[(4, ref('group_mosque_read'))]"/>
+     <field name="users" eval="[(4, ref('base.user_root'))]"/>
+     <field name="category_id" ref="mk_masjed_management"/>
+</record>
+
+<record id="group_mosque_edit" model="res.groups">
+      <field name="name">edit mosque</field>
+      <field name="implied_ids" eval="[(4, ref('group_mosque_read'))]"/>
+     <field name="users" eval="[(4, ref('base.user_root'))]"/>
+      <field name="category_id" ref="mk_masjed_management"/>
+</record>
+
+
+<record id="group_mosque_confirm" model="res.groups">
+      <field name="name">confirm mosque</field>
+      <field name="implied_ids" eval="[(4, ref('group_mosque_read'))]"/>
+     <field name="users" eval="[(4, ref('base.user_root'))]"/>
+      <field name="category_id" ref="mk_masjed_management"/>
+</record>
+<record id="group_mosque_reject" model="res.groups">
+      <field name="name">reject mosque</field>
+      <field name="implied_ids" eval="[(4, ref('group_mosque_read'))]"/>
+     <field name="users" eval="[(4, ref('base.user_root'))]"/>
+      <field name="category_id" ref="mk_masjed_management"/>
+</record>
+
+<record id="group_mosque_event_read" model="res.groups">
+      <field name="name">read mosque event</field>
+      <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+     <field name="users" eval="[(4, ref('base.user_root'))]"/>
+      <field name="category_id" ref="mk_masjed_management"/>
+</record>
+
+
+<record id="group_mosque_event_create" model="res.groups">
+      <field name="name">create mosque event</field>
+      <field name="implied_ids" eval="[(4, ref('group_mosque_event_read'))]"/>
+     <field name="users" eval="[(4, ref('base.user_root'))]"/>
+      <field name="category_id" ref="mk_masjed_management"/>
+</record>
+
+<record id="group_mosque_event_accept" model="res.groups">
+      <field name="name">accept mosque event</field>
+      <field name="implied_ids" eval="[(4, ref('group_mosque_event_read'))]"/>
+     <field name="users" eval="[(4, ref('base.user_root'))]"/>
+      <field name="category_id" ref="mk_masjed_management"/>
+</record>
+
+
+<record id="group_mosque_event_edit" model="res.groups">
+      <field name="name">edit mosque event</field>
+      <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+     <!-- field name="users" eval="[(4, ref('group_mosque_event_read'))]"/ -->
+      <field name="category_id" ref="mk_masjed_management"/>
+</record>
+
+
+<record id="group_maknoon_configration" model="res.groups">
+      <field name="name">maknoon configration</field>
+      <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+     <field name="users" eval="[(4, ref('base.user_root'))]"/>
+      <field name="category_id" ref="mk_masjed_management"/>
+</record>
+
+    <!-- group Edit mosque name -->
+        <record id="group_mosque_name_edit" model="res.groups">
+          <field name="name">Edit mosque name</field>
+          <field name="users" eval="[(4, ref('base.user_root'))]"/>
+          <field name="category_id" ref="mk_masjed_management"/>
+        </record>
+
+<!-- group of select all -->
+          <record id="select_masjed_selectall_groups" model="res.groups">
+            <field name="name">Select all</field>
+            <field name="implied_ids" eval="[(4, ref('group_mosque_read')),
+              (4, ref('group_mosque_create')),
+              (4, ref('group_mosque_edit')),
+              (4, ref('group_mosque_confirm')),
+              (4, ref('group_mosque_reject')),
+              (4, ref('group_mosque_event_read')),
+              (4, ref('group_mosque_event_create')),
+              (4, ref('group_mosque_event_accept')),
+              (4, ref('group_mosque_event_edit'))
+            ]"/>
+            <field name="category_id" ref="mk_masjed_management"/>
+          </record>
+
+</data>
+</openerp>

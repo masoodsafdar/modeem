@@ -1,0 +1,35 @@
+<odoo>
+    <record model="report.paperformat" id="paperformat_test_report_permission">
+        <field name="name">paperformat permision reports</field>
+        <field name="default" eval="True"/>
+        <field name="format">A4</field>
+        <field name="page_width">0</field>
+        <field name="page_height">0</field>
+        <field name="orientation">Landscape</field>
+        <field name="margin_top">0</field>
+        <field name="margin_right">0</field>
+        <field name="margin_bottom">0</field>
+        <field name="margin_left">0</field>
+        <field name="header_line" eval="False"/>
+        <field name="header_spacing">35</field>
+        <field name="dpi">90</field>
+    </record>
+    
+   <!-- report string="تصريح مؤقت"
+           id="report_temporary_permition"
+           model="mosque.permision"
+           report_type="qweb-pdf"
+           name="mk_episode_management.report_mosque_permitions"
+           file="mk_episode_management.report_permitions_template"
+           paperformat="paperformat_test_report_permission"/-->
+    
+    <!--report
+           string="تصريح مؤقت ( من غير كليشة("
+           id="report_temporary_permition_without_background"
+           model="mosque.permision"
+           report_type="qweb-pdf"
+           name="mk_episode_management.report_mosque_permitions_k"
+           file="mk_episode_management.report_permitions_template_without_background"
+           paperformat="paperformat_test_report_permission"
+       /-->
+</odoo>

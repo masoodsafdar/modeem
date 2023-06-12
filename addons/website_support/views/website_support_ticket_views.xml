@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="website_support_ticket_view_form" model="ir.ui.view">
+            <field name="name">website.support.ticket.form.view</field>
+            <field name="model">website.support.ticket</field>
+            <field name="arch" type="xml">
+                <form delete="0" create="0" edit= "0">
+                    <header>
+                        <button type="action" name="%(website_support_ticket_compose_action)d" context="{'default_ticket_id': active_id,  'default_email':email, 'default_subject':subject}" string="Reply" groups="website_support.group_technical_support_reply"/>
+                        <button type="object" name="open_close_ticket_wizard" string="Close Ticket"  groups="website_support.group_technical_support_close"/>
+                        <button type="object" name="set_to_draft" string="Set to draft" attrs="{'invisible' :[('check', '=', False)]}"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <field name="center_id"      options="{'no_create': True,'no_open': True,}"/>
+                            <field name="check"          invisible="1"/>
+                            <field name="category_emp"   invisible="1"/>
+                            <field name="create_user_id" options="{'no_create': True,'no_open': True}" readonly="True"/>
+                            <field name="ticket_number"  readonly="True"/>
+                            <field name="priority_id"    options="{'no_create': True,'no_open': True}"/>
+                            <field name="user_id"        options="{'no_create': True,'no_open': True}" groups="website_support.group_technical_support_close,website_support.group_technical_support_reply"/>
+                            <field name="email"/>
+                            <field name="category" options="{'no_create': True,'no_open': True}"/>
+                            <field name="sub_category_id" domain="[('parent_category_id','=',category)]"  options="{'no_create': True,'no_open': True,}"/>
+                            <field name="state"/>
+                            <field name="subject" required="True"/>
+
+                            <field name="attachment" filename="attachment_filename" attrs="{'invisible' :[('attachment', '=', False)]}"/>
+                            <field name="attachment_filename" invisible="True"/>
+                            <field name="attachment_ids" attrs="{'invisible' :[('attachment_ids', '=', [])]}">
+                                <tree>
+                                    <field name="datas_fname"/>
+                                </tree>
+                            </field>
+                            <field name="extra_field_ids" attrs="{'invisible' :[('extra_field_ids', '=', [])]}">
+                                <tree editable="bottom">
+                                    <field name="name"/>
+                                    <field name="value"/>
+                                </tree>
+                            </field>
+                            <field name="description" widget="html"/>
+                            <!--field name="support_rating" readonly="1"/-->
+                        </group>
+                        <line>
+                            <group>
+                                <field name="answer" widget="one2many_list" readonly="1" >
+                                    <tree editable="bottom">
+                                        <!--field name="text" /-->
+                                        <field name="body" />
+                                    </tree>
+                                </field>
+                            </group>
+                        </line>
+                        <group>
+                            <field name="close_comment"  readonly="1"/>
+                            <field name="close_time"  readonly="1"/>
+                            <field name="closed_by_id" readonly="1"/>
+                            <field name="no_hours" groups="website_support.group_technical_support_close"/>
+                        </group>
+                    </sheet>
+                    <!--div class="oe_chatter">
+                        <style>
+                            .o_chatter_button_new_message {
+                            display: none;
+                            }
+                        </style>
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div-->
+                </form>
+            </field>
+        </record>
+
+        <record id="website_support_ticket_view_search" model="ir.ui.view">
+            <field name="name">website.support.ticket.form.search</field>
+            <field name="model">website.support.ticket</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="state"/>
+                    <field name="category" options="{'no_create': True,'no_open': True,}"/>
+                    <field name="user_id"/>
+                    <field name="create_user_id"/>
+                    <field name="priority_id"        options="{'no_create': True,'no_open': True,}"/>
+                    <filter name="group_by_category" string="Category" domain="[]"  context="{'group_by':'category'}"/>
+                    <filter name="group_by_user"     string="User" domain="[]"  context="{'group_by':'user_id'}"/>
+                    <filter name="group_by_state"    string="State" domain="[]"  context="{'group_by':'state'}"/>
+                    <filter name="group_by_state"    string="Priority" domain="[]"  context="{'group_by':'priority_id'}"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="website_support_ticket_view_graph" model="ir.ui.view">
+            <field name="name">website.support.ticket.form.graph</field>
+            <field name="model">website.support.ticket</field>
+            <field name="arch" type="xml">
+                <graph stacked="False">
+                    <field name="create_date" interval="day" string="Create Date"/>
+                </graph>
+            </field>
+        </record>
+
+        <record id="website_support_ticket_view_tree" model="ir.ui.view">
+            <field name="name">website.support.ticket tree view</field>
+            <field name="model">website.support.ticket</field>
+            <field name="arch" type="xml">
+                <tree delete="0" create="0" edit= "0" colors="black:ticket_color==False">
+                    <field name="create_date"/>
+                    <field name="create_user_id" invisible="True"/>
+                    <field name="ticket_color" invisible="True"/>
+                    <field name="ticket_number"/>
+                    <field name="priority_id" options="{'no_create': True,'no_open': True,}"/>
+                    <field name="category"    options="{'no_create': True,'no_open': True,}"/>
+                    <field name="state"/>
+                    <field name="email"/>
+                    <field name="subject"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="website_support_ticket_action_partner" model="ir.actions.act_window">
+            <field name="name">Support Tickets</field>
+            <field name="res_model">website.support.ticket</field>
+            <field name="view_mode">tree,form,graph</field>
+            <field name="help" type="html">
+                <p>
+                    No Support Tickets found
+                </p>
+            </field>
+        </record>
+
+        <record id="website_support_ticket_action" model="ir.actions.act_window">
+            <field name="name">Support Tickets</field>
+            <field name="res_model">website.support.ticket</field>
+            <field name="view_mode">tree,form,graph</field>
+            <field name="context">{"search_default_unattended_tickets":1, 'auto_refresh': 1, 'default_create_user_id': uid}</field>
+            <field name="domain">[('visible_ticket', '=', True)]</field>
+            <field name="help" type="html">
+                <p style="white-space: nowrap;">
+                    بإمكانك رفع طلب الدعم الفني عن طريق نظام خدمات المستفيدين على الرابط الخاص بالمالي والإداري
+                </p>
+            </field>
+        </record>
+
+        <!--menuitem id="website_support_parent_menu" name="Technical Support" parent="website_support.website_support_parent_menu_main" sequence="90" /-->
+        <menuitem id="website_support_ticket_menu" name="Support Tickets" action="website_support_ticket_action" sequence="10"     web_icon="static/description/icon.png" />
+        <!--menuitem id="website_support_config_parent_menu" name="Support Tickets" parent="crm.crm_menu_config" sequence="80"/-->
+
+    </data>
+</odoo>

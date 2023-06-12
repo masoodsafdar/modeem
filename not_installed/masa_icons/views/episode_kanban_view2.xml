@@ -1,0 +1,367 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="mk_episode_master_inherit_kanban_view" model="ir.ui.view">
+        <field name="name">Master episode kanban View</field>
+        <field name="model">mk.episode.master</field>
+        <field name="inherit_id" ref="mk_episode_management.mk_epsiode_master_kanban_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//kanban" position="replace">
+                <kanban class="o_mk_parent_kanban">
+                    <field name="id"/>
+                    <field name="name"/>
+                    <field name="subh"/>
+                    <field name="zuhr"/>
+                    <field name="magrib"/>
+                    <field name="aasr"/>
+                    <field name="esha"/>
+                    <field name="active"/>
+                    <field name="state"/>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div class="oe_kanban_global_click" style=" width:auto;
+    bottom:0;
+    left:10px;
+    right:10px;
+    -moz-border-radius:100px / 10px;
+    border-radius:100px / 10px;
+ -webkit-box-shadow:0 0 15px rgba(0,0,0,0.6);
+    -moz-box-shadow:0 0 15px rgba(0,0,0,0.6);
+    box-shadow:0 0 15px rgba(0,0,0,0.6);
+    -moz-border-radius:10px / 100px;
+    border-radius:10px / 100px;
+height: 262px;background-image:url('/masa_icons/static/src/img/icones/iconeview2/bg_h.png');background-repeat:no-repeat">
+                                <div>
+                                    <center>
+                                        <img src="/masa_icons/static/src/img/icones/iconeview2/iconegroupe.png"
+                                             width="80px" height="80px" style=" margin: 1em auto;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-border-radius: 99em;
+  -moz-border-radius: 99em;
+  border-radius: -99em;
+
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);"/>
+                                    </center>
+
+
+                                </div>
+                                <div>
+                                    <center>
+                                        <span style="font-size:22px;color:#325d79">
+                                            <b>
+                                                <field name="name"/>
+                                            </b>
+                                        </span>
+                                    </center>
+                                </div>
+
+                                <center>
+                                    <div class="oe_kanban_details2" style="text-align:right;padding-bottom:5px;clear:both; vertical-align:right;margin-top: 7px;
+    margin-right: -45px;width:54%;">
+                                        <div class="oe_period">
+                                            <t t-if="record.esha.raw_value==true">
+                                                <a type="object" name="go_to_esha_period">
+
+                                                    <div class=" oe_icon bg_photo"
+                                                         style="margin-right: 104px;margin-top:  -6px;height:46px;width:57px">
+                                                        <br></br>
+
+                                                        <br></br>
+                                                        <span style="color: #325d79;font-weight: bold;">العشاء</span>
+                                                        <!-- <span class="h_counter">
+                                                             <b><i class="fa fa-plus"></i></b>
+                                                         </span>-->
+                                                    </div>
+                                                </a>
+                                                <!--	<a type="object" name="go_to_esha_period" >
+                                                        <img class="oe_icon" src="/masa_icons/static/src/img/icones/iconeview2/echa.png"  style="height: 60px;
+            width: 75px;border-radius:5px;box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);margin-right: 118px;
+            margin-top: 81px;"/>
+                                                    </a>-->
+                                            </t>
+
+                                            <t t-if="record.esha.raw_value!=true and record.active.raw_value==true and record.state.raw_value=='active'">
+                                                <a type="action"
+                                                   name="%(mk_episode_management.new_period_wizard_action)d"
+                                                   context="{'default_selected_period':'esha','default_episode_id':active_id}">
+
+                                                    <div class=" oe_icon bg2_photo"
+                                                         style="margin-right: 104px;margin-top:  -6px;height:46px;width:57px">
+                                                        <br></br>
+
+                                                        <br></br>
+                                                        <span style="color: #325d79;font-weight: bold;">العشاء</span>
+                                                        <span class="h_counter">
+                                                            <b>
+                                                                <i class="fa fa-plus"></i>
+                                                            </b>
+                                                        </span>
+                                                    </div>
+                                                </a>
+                                                <!--<a type="action" name="%(mk_episode_management.new_period_wizard_action)d" context="{'default_selected_period':'esha','default_episode_id':active_id}" >
+                                                    <img class="oe_icon sobeh" src="/masa_icons/static/src/img/icones/iconeview2/sobeh.png" style="height: 60px;
+        width: 75px;
+        border-radius:13px;
+        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+         margin-right: 67px"/>
+                                                </a>-->
+                                            </t>
+
+                                            <t t-if="record.esha.raw_value!=true and (record.active.raw_value!=true or record.state.raw_value!='active')">
+                                                <a>
+
+                                                    <div class=" oe_icon bg2_photo"
+                                                         style="margin-right: 104px;margin-top:  -6px;height:46px;width:57px">
+                                                        <br></br>
+
+                                                        <br></br>
+                                                        <span style="color: #325d79;font-weight: bold;">العشاء</span>
+                                                        <span class="h_counter">
+                                                            <b>
+                                                                <i class="fa fa-plus"></i>
+                                                            </b>
+                                                        </span>
+                                                    </div>
+                                                </a>
+                                            </t>
+                                        </div>
+
+                                        <div class="oe_period">
+                                            <t t-if="record.magrib.raw_value==true">
+                                                <a type="object" name="go_to_magrib_period">
+
+                                                    <div class=" oe_icon bg_maghreb_photo"
+                                                         style="margin-right: 118px;margin-top:  -6px;height:46px;width:57px">
+                                                        <br></br>
+
+                                                        <br></br>
+                                                        <span style="color: #325d79;font-weight: bold;">المغرب</span>
+                                                        <!-- <span class="h_counter">
+                                                                <b><i class="fa fa-plus"></i></b>
+                                                            </span>-->
+                                                    </div>
+                                                </a>
+                                            </t>
+
+                                            <t t-if="record.magrib.raw_value!=true and record.active.raw_value==true and record.state.raw_value=='active'">
+                                                <a type="action"
+                                                   name="%(mk_episode_management.new_period_wizard_action)d"
+                                                   context="{'default_selected_period':'magrib','default_episode_id':active_id}">
+
+                                                    <div class=" oe_icon bg_maghreb_a_photo"
+                                                         style="margin-right: 118px;margin-top:  -6px;height:46px;width:57px">
+                                                        <br></br>
+
+                                                        <br></br>
+                                                        <span style="color: #325d79;font-weight: bold;">المغرب</span>
+                                                        <span class="h_counter">
+                                                            <b>
+                                                                <i class="fa fa-plus"></i>
+                                                            </b>
+                                                        </span>
+                                                    </div>
+                                                </a>
+                                            </t>
+
+                                            <t t-if="record.magrib.raw_value!=true and (record.active.raw_value!=true or record.state.raw_value!='active')">
+                                                <a>
+
+                                                    <div class=" oe_icon bg_maghreb_a_photo"
+                                                         style="margin-right: 118px;margin-top:  -6px;height:46px;width:57px">
+                                                        <br></br>
+
+                                                        <br></br>
+                                                        <span style="color: #325d79;font-weight: bold;">المغرب</span>
+                                                        <span class="h_counter">
+                                                            <b>
+                                                                <i class="fa fa-plus"></i>
+                                                            </b>
+                                                        </span>
+                                                    </div>
+                                                </a>
+                                            </t>
+                                        </div>
+
+                                        <div class="oe_period">
+                                            <t t-if="record.aasr.raw_value==true">
+                                                <a type="object" name="go_to_asaar_period">
+
+                                                    <div class=" oe_icon bg_aser_photo" style="margin-right: -40px;
+    margin-top: -75px;height:46px;width:57px">
+                                                        <br></br>
+
+                                                        <br></br>
+                                                        <span style="color: #325d79;font-weight: bold;">العصر</span>
+                                                        <!-- <span class="h_counter">
+                                                                <b><i class="fa fa-plus"></i></b>
+                                                            </span>-->
+                                                    </div>
+                                                </a>
+
+                                            </t>
+
+                                            <t t-if="record.aasr.raw_value!=true and record.active.raw_value==true and record.state.raw_value=='active'">
+                                                <a type="action"
+                                                   name="%(mk_episode_management.new_period_wizard_action)d"
+                                                   context="{'default_selected_period':'aasr','default_episode_id':active_id}">
+
+                                                    <div class=" oe_icon bg_aser_a_photo" style="margin-right: -40px;
+    margin-top: -75px;height:46px;width:57px">
+                                                        <br></br>
+
+                                                        <br></br>
+                                                        <span style="color: #325d79;font-weight: bold;">العصر</span>
+                                                        <span class="h_counter">
+                                                            <b>
+                                                                <i class="fa fa-plus"></i>
+                                                            </b>
+                                                        </span>
+                                                    </div>
+                                                </a>
+
+                                            </t>
+
+                                            <t t-if="record.aasr.raw_value!=true and (record.active.raw_value!=true or record.state.raw_value!='active')">
+                                                <a>
+
+                                                    <div class=" oe_icon bg_aser_a_photo" style="margin-right: -40px;
+    margin-top: -75px;height:46px;width:57px">
+                                                        <br></br>
+
+                                                        <br></br>
+                                                        <span style="color: #325d79;font-weight: bold;">العصر</span>
+                                                        <span class="h_counter">
+                                                            <b>
+                                                                <i class="fa fa-plus"></i>
+                                                            </b>
+                                                        </span>
+                                                    </div>
+                                                </a>
+                                            </t>
+                                        </div>
+
+                                        <div class="oe_period">
+                                            <t t-if="record.zuhr.raw_value==true">
+                                                <a type="object" name="go_to_zuhr_period">
+
+                                                    <div class=" oe_icon bg_dhoher_photo"
+                                                         style="margin-right: -28px;margin-top: -75px;height:46px;width:57px">
+                                                        <br></br>
+
+                                                        <br></br>
+                                                        <span style="color: #325d79;font-weight: bold;">الظهر</span>
+                                                        <!-- <span class="h_counter">
+                                                                <b><i class="fa fa-plus"></i></b>
+                                                            </span>-->
+                                                    </div>
+                                                </a>
+
+                                            </t>
+                                            <t t-if="record.zuhr.raw_value!=true and record.active.raw_value==true and record.state.raw_value=='active'">
+                                                <a type="action"
+                                                   name="%(mk_episode_management.new_period_wizard_action)d"
+                                                   context="{'default_selected_period':'zuhr','default_episode_id':active_id}">
+
+                                                    <div class=" oe_icon bg_dhoher_a_photo"
+                                                         style="margin-right: -28px;margin-top: -75px;height:46px;width:57px">
+                                                        <br></br>
+
+                                                        <br></br>
+                                                        <span style="color: #325d79;font-weight: bold;">الظهر</span>
+                                                        <span class="h_counter">
+                                                            <b>
+                                                                <i class="fa fa-plus"></i>
+                                                            </b>
+                                                        </span>
+                                                    </div>
+                                                </a>
+
+                                            </t>
+
+                                            <t t-if="record.zuhr.raw_value!=true and (record.active.raw_value!=true or record.state.raw_value!='active')">
+                                                <a>
+
+                                                    <div class=" oe_icon bg_dhoher_a_photo"
+                                                         style="margin-right: -28px;margin-top: -75px;height:46px;width:57px">
+                                                        <br></br>
+
+                                                        <br></br>
+                                                        <span style="color: #325d79;font-weight: bold;">الظهر</span>
+                                                        <span class="h_counter">
+                                                            <b>
+                                                                <i class="fa fa-plus"></i>
+                                                            </b>
+                                                        </span>
+                                                    </div>
+                                                </a>
+                                            </t>
+                                        </div>
+
+                                        <div class="oe_period">
+                                            <t t-if="record.subh.raw_value==true">
+                                                <a type="object" name="go_to_subh_period">
+
+                                                    <div class=" oe_icon bg_sobeh_photo"
+                                                         style="margin-right: -184px;margin-top: -143px;height:46px;width:57px">
+                                                        <br></br>
+
+                                                        <br></br>
+                                                        <span style="color: #325d79;font-weight: bold;">الصبح</span>
+                                                        <!-- <span class="h_counter">
+                                                                <b><i class="fa fa-plus"></i></b>
+                                                            </span>-->
+                                                    </div>
+                                                </a>
+                                            </t>
+
+                                            <t t-if="record.subh.raw_value!=true and record.active.raw_value==true and record.state.raw_value=='active'">
+                                                <a type="action"
+                                                   name="%(mk_episode_management.new_period_wizard_action)d"
+                                                   context="{'default_selected_period':'subh','default_episode_id':active_id}">
+
+                                                    <div class=" oe_icon bg_sobeh_a_photo"
+                                                         style="margin-right: -184px;margin-top: -143px;height:46px;width:57px">
+                                                        <br></br>
+
+                                                        <br></br>
+                                                        <span style="color: #325d79;font-weight: bold;">الصبح</span>
+                                                        <span class="h_counter">
+                                                            <b>
+                                                                <i class="fa fa-plus"></i>
+                                                            </b>
+                                                        </span>
+                                                    </div>
+                                                </a>
+                                            </t>
+
+                                            <t t-if="record.subh.raw_value!=true and (record.active.raw_value!=true or record.state.raw_value!='active')">
+                                                <a>
+                                                    <div class=" oe_icon bg_sobeh_a_photo"
+                                                         style="margin-right: -184px;margin-top: -143px;height:46px;width:57px">
+                                                        <br></br>
+
+                                                        <br></br>
+                                                        <span style="color: #325d79;font-weight: bold;">الصبح</span>
+                                                        <span class="h_counter">
+                                                            <b>
+                                                                <i class="fa fa-plus"></i>
+                                                            </b>
+                                                        </span>
+                                                    </div>
+                                                </a>
+                                            </t>
+                                        </div>
+                                    </div>
+                                </center>
+                            </div>
+
+                        </t>
+
+                    </templates>
+
+                </kanban>
+            </xpath>
+        </field>
+    </record>
+</odoo>

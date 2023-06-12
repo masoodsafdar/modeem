@@ -1,0 +1,1346 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* mk_intensive_courses
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-01-17 06:31+0000\n"
+"PO-Revision-Date: 2019-01-17 06:31+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: mk_intensive_courses
+#: model:ir.ui.view,arch_db:mk_intensive_courses.mk_courses_request_form_view
+msgid "<span> : Lat : </span>"
+msgstr "<span> : خط العرض : </span>"
+
+#. module: mk_intensive_courses
+#: model:ir.ui.view,arch_db:mk_intensive_courses.mk_courses_request_form_view
+msgid "<span> ;  Long:  </span>"
+msgstr "<span> ;  خط الطول:  </span>"
+
+#. module: mk_intensive_courses
+#: selection:mk.course.calibration,state:0
+#: selection:mk.course.request,state:0
+msgid "Accept"
+msgstr "موافقة"
+
+#. module: mk_intensive_courses
+#: selection:mk.course.emp,category_id:0
+msgid "Admin"
+msgstr "اداري"
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_branch_courses_age_id
+msgid "Age"
+msgstr "العمر"
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_branch_courses_age_range
+msgid "Age Range"
+msgstr "نطاق العمر"
+
+#. module: mk_intensive_courses
+#: model:ir.ui.view,arch_db:mk_intensive_courses.mk_courses_request_form_view
+msgid "Approve"
+msgstr "موافقه"
+
+#. module: mk_intensive_courses
+#: selection:mk.branch.courses,order:0
+msgid "Ascanding"
+msgstr "تصاعدي"
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_calibration_asor
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_request_asor
+msgid "Asor"
+msgstr "العصر"
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_calibration_standard_attach
+msgid "Attach"
+msgstr "ارفاق"
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_standard_attach
+msgid "Attachment"
+msgstr "المرفقات"
+
+#. module: mk_intensive_courses
+#: model:ir.ui.view,arch_db:mk_intensive_courses.mk_courses_request_form_view
+msgid "Basic Info"
+msgstr "المعلومات اﻷساسية"
+
+#. module: mk_intensive_courses
+#: model:ir.ui.view,arch_db:mk_intensive_courses.mk_branch_courses_form_view
+msgid "Branch Courses"
+msgstr "فروع الدورة"
+
+#. module: mk_intensive_courses
+#: model:ir.ui.view,arch_db:mk_intensive_courses.mk_branch_courses_tree_view
+msgid "Branch Curses"
+msgstr "فروع الدورة"
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_branch_courses_num_branch
+msgid "Branch No"
+msgstr "رقم الفرع"
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_calibration_standard_calibration_id
+msgid "Calibration"
+msgstr "المعيار"
+
+#. module: mk_intensive_courses
+#: code:addons/mk_intensive_courses/models/courses_evaluation.py:44
+#, python-format
+msgid "Cannot contact geolocation servers. Please make sure that your Internet connection is up and running (%s)."
+msgstr "Cannot contact geolocation servers. Please make sure that your Internet connection is up and running (%s)."
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_emp_category_id
+msgid "Category"
+msgstr "الفئة"
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_certification_certificate_ids
+msgid "Certificate"
+msgstr "الشهادة"
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_certification_line_state_certificate
+msgid "Certificate State"
+msgstr "حالة الشهادة"
+
+#. module: mk_intensive_courses
+#: model:ir.actions.act_window,name:mk_intensive_courses.mk_certification_action
+#: model:ir.ui.menu,name:mk_intensive_courses.certificate_menu
+#: model:ir.ui.view,arch_db:mk_intensive_courses.mk_certification_form
+#: model:ir.ui.view,arch_db:mk_intensive_courses.mk_certification_tree
+msgid "Certification"
+msgstr "اصدار الشهادات "
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_request_commit
+msgid "Commit"
+msgstr "تعهد"
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_request_cost
+msgid "Cost"
+msgstr "التكلفة"
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_calibration_course_id
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_request_course
+msgid "Course"
+msgstr "نوع البرنامج"
+
+#. module: mk_intensive_courses
+#: model:ir.ui.menu,name:mk_intensive_courses.mk_courses_eval_menu_in
+msgid "Course Evaluation"
+msgstr "البرامج المكثفة"
+
+#. module: mk_intensive_courses
+#: model:ir.ui.menu,name:mk_intensive_courses.mk_courses_config_menu
+msgid "Course Intensive"
+msgstr "اعدادات البرامج المكثفة"
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_certification_type_course
+msgid "Course Type"
+msgstr "نوع الدورة"
+
+#. module: mk_intensive_courses
+#: model:ir.ui.view,arch_db:mk_intensive_courses.mk_courses_eval_form_view
+#: model:ir.ui.view,arch_db:mk_intensive_courses.mk_courses_eval_tree_view
+#: model:ir.ui.view,arch_db:mk_intensive_courses.mk_courses_request_form_view
+msgid "Courses Evaluation"
+msgstr "تقويم الدورة"
+
+#. module: mk_intensive_courses
+#: model:ir.actions.act_window,name:mk_intensive_courses.mk_courses_eval_action
+#: model:ir.ui.menu,name:mk_intensive_courses.mk_courses_eval_menu
+msgid "Courses Evaluation "
+msgstr " جوانب تقويم الدورة"
+
+#. module: mk_intensive_courses
+#: model:ir.ui.menu,name:mk_intensive_courses.courses_items_menu
+#: model:ir.ui.view,arch_db:mk_intensive_courses.mk_courses__items_form_view
+msgid "Courses Items"
+msgstr "بنود الدورات"
+
+#. module: mk_intensive_courses
+#: model:ir.actions.act_window,name:mk_intensive_courses.mk_courses_items_action
+msgid "Courses Items "
+msgstr "بنود الدورات "
+
+#. module: mk_intensive_courses
+#: model:ir.ui.view,arch_db:mk_intensive_courses.mk_courses_request_tree_view
+msgid "Courses Request"
+msgstr "طلب الدورة"
+
+#. module: mk_intensive_courses
+#: model:ir.actions.act_window,name:mk_intensive_courses.mk_courses_request_action
+#: model:ir.ui.menu,name:mk_intensive_courses.mk_courses_request_menu
+msgid "Courses Request "
+msgstr "طلب الدورة "
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_branch_courses_create_uid
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_certification_create_uid
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_certification_line_create_uid
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_calibration_create_uid
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_calibration_standard_create_uid
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_emp_create_uid
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_request_create_uid
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_standard_create_uid
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_student_create_uid
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_courses_evalution_create_uid
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_courses_items_create_uid
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_types_courses_create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_branch_courses_create_date
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_certification_create_date
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_certification_line_create_date
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_calibration_create_date
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_calibration_standard_create_date
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_emp_create_date
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_request_create_date
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_standard_create_date
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_student_create_date
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_courses_evalution_create_date
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_courses_items_create_date
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_types_courses_create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_certification_date
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_request_day_ids
+msgid "Days"
+msgstr "الايام للبرنامج"
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_calibration_standard_degree
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_standard_degree
+msgid "Degree"
+msgstr "الدرجة"
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_request_department_id
+msgid "Department"
+msgstr "مركز إشراف"
+
+#. module: mk_intensive_courses
+#: selection:mk.branch.courses,order:0
+msgid "Descanding"
+msgstr "تنازلي"
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_calibration_standard_desc
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_standard_desc
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_courses_items_description
+msgid "Description"
+msgstr "الوصف"
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_branch_courses_display_name
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_certification_display_name
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_certification_line_display_name
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_calibration_display_name
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_calibration_standard_display_name
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_emp_display_name
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_request_display_name
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_standard_display_name
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_student_display_name
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_courses_evalution_display_name
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_courses_items_display_name
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_types_courses_display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_courses_evalution_domain
+msgid "Domain"
+msgstr "النطاق"
+
+#. module: mk_intensive_courses
+#: selection:mk.course.calibration,state:0
+#: selection:mk.course.request,state:0
+msgid "Draft"
+msgstr "مبدئي"
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_emp_emp_id
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_request_emp_ids
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_request_employee_id
+msgid "Employee"
+msgstr "مشرف البرنامج"
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_emp_emp_type
+msgid "Employee Type"
+msgstr "تصنيف الموظف"
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_course_request_update_wizard_end_date
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_request_end_date
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_courses_evalution_end_date
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_types_courses_end_date
+msgid "End Date"
+msgstr "تاريخ الإنتهاء"
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_request_epsoide_ids
+msgid "Episode"
+msgstr "حلقة/ الفصل"
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_calibration_esha
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_request_esha
+msgid "Esha"
+msgstr "العشاء"
+
+#. module: mk_intensive_courses
+#: selection:mk.course.emp,emp_type:0
+#: selection:mk.course.request,location:0
+msgid "External"
+msgstr "خارج المدرسة"
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_branch_courses_id
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_certification_id
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_certification_line_id
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_calibration_id
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_calibration_standard_id
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_emp_id
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_request_id
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_standard_id
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_student_id
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_courses_evalution_id
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_courses_items_id
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_types_courses_id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: mk_intensive_courses
+#: selection:mk.certification,type_course:0
+#: selection:mk.course.request,type_course:0
+#: selection:mk.courses.items,type_course:0
+msgid "Intensive"
+msgstr "مكثفة"
+
+#. module: mk_intensive_courses
+#: model:ir.ui.menu,name:mk_intensive_courses.mk_courses_settings_menu
+msgid "Intensive Courses"
+msgstr "البرامج المكثفة"
+
+#. module: mk_intensive_courses
+#: selection:mk.course.emp,emp_type:0
+#: selection:mk.course.request,location:0
+msgid "Internal"
+msgstr "داخل المدرسة"
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_branch_courses___last_update
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_certification___last_update
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_certification_line___last_update
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_calibration___last_update
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_calibration_standard___last_update
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_emp___last_update
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_request___last_update
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_standard___last_update
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_student___last_update
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_courses_evalution___last_update
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_courses_items___last_update
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_types_courses___last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_branch_courses_write_uid
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_certification_line_write_uid
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_certification_write_uid
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_calibration_standard_write_uid
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_calibration_write_uid
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_emp_write_uid
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_request_write_uid
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_standard_write_uid
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_student_write_uid
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_courses_evalution_write_uid
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_courses_items_write_uid
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_types_courses_write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_branch_courses_write_date
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_certification_line_write_date
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_certification_write_date
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_calibration_standard_write_date
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_calibration_write_date
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_emp_write_date
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_request_write_date
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_standard_write_date
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_student_write_date
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_courses_evalution_write_date
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_courses_items_write_date
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_types_courses_write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_request_partner_longitude
+msgid "Latitude"
+msgstr "خط العرض"
+
+#. module: mk_intensive_courses
+#: selection:mk.branch.courses,age_range:0
+msgid "Limited"
+msgstr "محدود"
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_course_request_update_wizard_location
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_request_location
+msgid "Location"
+msgstr "مقر البرنامج"
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_request_partner_latitude
+msgid "Longitude"
+msgstr "خط الطول"
+
+#. module: mk_intensive_courses
+#: model:ir.ui.view,arch_db:mk_intensive_courses.mk_courses_request_form_view
+msgid "Map"
+msgstr "موقع الدورة"
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_request_mobile
+msgid "Mobile"
+msgstr "الجوال"
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_request_mobile_admin
+msgid "Mobile admin"
+msgstr "جوال مسؤول المسجد/المدرسة"
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_request_mobile_company
+msgid "Mobile company"
+msgstr "رقم هاتف للتواصل"
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_close_course_data_mosque_id
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_certification_line_mosque_id
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_calibration_mosque_ids
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_request_mosque_id
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_student_mosque_id
+msgid "Mosque"
+msgstr "المسجد/المدرسة"
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_request_admin_id
+msgid "Mosque Admin"
+msgstr "مسؤول المسجد/المدرسة"
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_branch_courses_name
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_certification_course_id
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_types_courses_name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_courses_items_name
+msgid "Name course"
+msgstr "إسم الدورة"
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_request_no
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_request_no_ep
+msgid "No"
+msgstr "لا"
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_request_no_day
+msgid "No Of Days"
+msgstr "عدد الايام الفعلية"
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_request_no_hours
+msgid "No Of Hours"
+msgstr "عدد الساعات"
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_request_no_student
+msgid "No Of Student"
+msgstr "عدد الطلاب"
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_request_no_teacher
+msgid "No Of Teachers"
+msgstr "عدد المعلمين المتوقع"
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_request_no_supervisor
+msgid "No Of supervisor"
+msgstr "عدد المشرفين"
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_request_note
+#: model:ir.ui.view,arch_db:mk_intensive_courses.mk_courses_request_form_view
+msgid "Note"
+msgstr "الشروط"
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_types_courses_number
+msgid "Number"
+msgstr "الرقم"
+
+#. module: mk_intensive_courses
+#: selection:mk.branch.courses,age_range:0
+msgid "Open"
+msgstr "مفتوح"
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_branch_courses_order
+msgid "Order"
+msgstr "الترتيب"
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_branch_courses_part_from_id
+msgid "Part From"
+msgstr "من جزء "
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_branch_courses_part_to_id
+msgid "Part To"
+msgstr "الي جزء"
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_certification_line_pass_test
+msgid "Pass Test"
+msgstr "اجتياز الاختبار"
+
+#. module: mk_intensive_courses
+#: selection:mk.course.calibration,state:0
+#: selection:mk.course.request,state:0
+msgid "Reject"
+msgstr "رفض"
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_emp_request_id
+msgid "Request"
+msgstr "طلب"
+
+#. module: mk_intensive_courses
+#: model:ir.ui.view,arch_db:mk_intensive_courses.mk_courses_request_form_view
+#: selection:mk.course.request,state:0
+msgid "Send"
+msgstr "إرسال"
+
+#. module: mk_intensive_courses
+#: model:ir.ui.view,arch_db:mk_intensive_courses.mk_course_calibration_form_view
+#: model:ir.ui.view,arch_db:mk_intensive_courses.mk_courses_request_form_view
+msgid "Set to draft"
+msgstr "ارجاع الى مبدئي"
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_standard_standard
+msgid "Standard"
+msgstr "المعيار"
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_calibration_standard_standard_id
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_standard_course_id
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_courses_evalution_standard_ids
+msgid "Standars"
+msgstr "المعايير"
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_course_request_update_wizard_start_date
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_request_start_date
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_courses_evalution_start_date
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_types_courses_start_date
+msgid "Start Date"
+msgstr "تاريخ البدء"
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_calibration_state
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_request_state
+msgid "State"
+msgstr "الحالة"
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_certification_line_student_id
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_student_student_id
+msgid "Student"
+msgstr "الطالب"
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_request_student_ids
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_student_request_st_id
+#: model:ir.ui.view,arch_db:mk_intensive_courses.mk_certification_form
+msgid "Students"
+msgstr "الطلاب"
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_certification_students_no
+msgid "Students Number"
+msgstr "عدد الطلاب"
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_calibration_students_no
+msgid "Students no"
+msgstr "عدد الطلاب"
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_calibration_subh
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_request_subh
+msgid "Subah"
+msgstr "الفجر"
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_courses_evalution_degree
+msgid "Sum of Degree"
+msgstr "مجموع الدرجات"
+
+#. module: mk_intensive_courses
+#: selection:mk.certification,type_course:0
+#: selection:mk.course.request,type_course:0
+#: selection:mk.courses.items,type_course:0
+msgid "Summer"
+msgstr "صيفية"
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_calibration_teachers_no
+msgid "Teachers no"
+msgstr "عدد المعلمين"
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_types_courses_test_end_date
+msgid "Test End Date"
+msgstr "تاريخ  نهاية الاختبار"
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_types_courses_test_str_date
+msgid "Test Start Date"
+msgstr "تاريخ   بداية  الاختبار"
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_calibration_total
+msgid "Total"
+msgstr "الإجمالي "
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_courses_items_type_course
+msgid "Type Course"
+msgstr "نوع الدورة"
+
+#. module: mk_intensive_courses
+#: model:ir.ui.view,arch_db:mk_intensive_courses.mk_types_courses_form_view
+msgid "Type Courses"
+msgstr "نوع الدورة"
+
+#. module: mk_intensive_courses
+#: model:ir.ui.menu,name:mk_intensive_courses.types_courses_menu
+#: model:ir.ui.view,arch_db:mk_intensive_courses.mk_courses__items_tree_view
+#: model:ir.ui.view,arch_db:mk_intensive_courses.mk_types_courses_tree_view
+msgid "Types Courses"
+msgstr "انواع الدورات"
+
+#. module: mk_intensive_courses
+#: model:ir.actions.act_window,name:mk_intensive_courses.mk_types_courses_action
+msgid "Types Courses "
+msgstr "بيانات الدورات المكثفة"
+
+#. module: mk_intensive_courses
+#: model:ir.ui.view,arch_db:mk_intensive_courses.mk_course_calibration_form_view
+msgid "Validate"
+msgstr "اعتماد "
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_request_yes
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_request_yes_ep
+msgid "Yes"
+msgstr "نعم"
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_calibration_zaher
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_request_zaher
+msgid "Zaher"
+msgstr "الظهر"
+
+#. module: mk_intensive_courses
+#: model:ir.ui.view,arch_db:mk_intensive_courses.mk_course_calibration_form_view
+msgid "attach file"
+msgstr "ارفاق ملف"
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_student_attende
+msgid "attendance"
+msgstr "حضور"
+
+#. module: mk_intensive_courses
+#: model:ir.ui.menu,name:mk_intensive_courses.mk_course_calibration_menu
+#: model:ir.ui.view,arch_db:mk_intensive_courses.mk_course_calibration_form_view
+#: model:ir.ui.view,arch_db:mk_intensive_courses.mk_mk_course_calibration_tree_view
+msgid "course calibration"
+msgstr "تقويم الدورة"
+
+#. module: mk_intensive_courses
+#: model:ir.actions.act_window,name:mk_intensive_courses.mk_course_calibration_action
+msgid "course calibration "
+msgstr "تقويم الدورة"
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_request_type_course
+msgid "courses Type"
+msgstr "انواع الدورة"
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_calibration_standard_evaluation
+msgid "courses evaluations"
+msgstr "جوانب تقويم الدورات"
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_courses_items_type_courses_ids
+msgid "courses types"
+msgstr "انواع الدورة"
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_calibration_standard_due
+msgid "due"
+msgstr "المستحق"
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_request_employee_id2
+msgid "employee"
+msgstr "مشرف البرنامج"
+
+#. module: mk_intensive_courses
+#: model:ir.ui.view,arch_db:mk_intensive_courses.mk_courses_request_form_view
+msgid "for supervisior"
+msgstr "خاص بالمشرفين"
+
+#. module: mk_intensive_courses
+#: model:ir.module.category,name:mk_intensive_courses.mk_intensive_courses
+msgid "intensiven courses"
+msgstr "الدورات المكثفة"
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_certification_line_line_id
+msgid "line certificate"
+msgstr "الشهادات"
+
+#. module: mk_intensive_courses
+#: model:ir.model,name:mk_intensive_courses.model_mk_branch_courses
+msgid "mk.branch.courses"
+msgstr "mk.branch.courses"
+
+#. module: mk_intensive_courses
+#: model:ir.model,name:mk_intensive_courses.model_mk_certification
+msgid "mk.certification"
+msgstr "mk.certification"
+
+#. module: mk_intensive_courses
+#: model:ir.model,name:mk_intensive_courses.model_mk_certification_line
+msgid "mk.certification.line"
+msgstr "mk.certification.line"
+
+#. module: mk_intensive_courses
+#: model:ir.model,name:mk_intensive_courses.model_mk_course_calibration
+msgid "mk.course.calibration"
+msgstr "mk.course.calibration"
+
+#. module: mk_intensive_courses
+#: model:ir.model,name:mk_intensive_courses.model_mk_course_calibration_standard
+msgid "mk.course.calibration.standard"
+msgstr "mk.course.calibration.standard"
+
+#. module: mk_intensive_courses
+#: model:ir.model,name:mk_intensive_courses.model_mk_course_emp
+msgid "mk.course.emp"
+msgstr "mk.course.emp"
+
+#. module: mk_intensive_courses
+#: model:ir.model,name:mk_intensive_courses.model_mk_course_request
+msgid "mk.course.request"
+msgstr "mk.course.request"
+
+#. module: mk_intensive_courses
+#: model:ir.model,name:mk_intensive_courses.model_mk_course_standard
+msgid "mk.course.standard"
+msgstr "mk.course.standard"
+
+#. module: mk_intensive_courses
+#: model:ir.model,name:mk_intensive_courses.model_mk_course_student
+msgid "mk.course.student"
+msgstr "mk.course.student"
+
+#. module: mk_intensive_courses
+#: model:ir.model,name:mk_intensive_courses.model_mk_courses_evalution
+msgid "mk.courses.evalution"
+msgstr "mk.courses.evalution"
+
+#. module: mk_intensive_courses
+#: model:ir.model,name:mk_intensive_courses.model_mk_courses_items
+msgid "mk.courses.items"
+msgstr "mk.courses.items"
+
+#. module: mk_intensive_courses
+#: model:ir.model,name:mk_intensive_courses.model_mk_types_courses
+msgid "mk.types.courses"
+msgstr "mk.types.courses"
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_calibration_mog
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_request_mogreb
+msgid "mogreb"
+msgstr "المغرب"
+
+#. module: mk_intensive_courses
+#: model:ir.ui.view,arch_db:mk_intensive_courses.mk_course_calibration_form_view
+#: model:ir.ui.view,arch_db:mk_intensive_courses.mk_courses_request_form_view
+msgid "reject"
+msgstr "رفض"
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_calibration_standards_id
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_calibration_standard_standard_ids
+#: model:ir.ui.view,arch_db:mk_intensive_courses.mk_course_calibration_form_view
+msgid "standards"
+msgstr "المعايير"
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_request_state_id
+msgid "state"
+msgstr "الحي"
+
+#. module: mk_intensive_courses
+#: selection:mk.course.emp,category_id:0
+msgid "teacher"
+msgstr "معلم"
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_request_user_id
+msgid "user"
+msgstr "user"
+
+#. module: mk_intensive_courses
+#: model:ir.ui.view,arch_db:mk_intensive_courses.mk_courses_request_form_view
+msgid "أتعهد بالالتزام بأنظمة‬ ‫الجمعية فيما‬  ‫يتعلق  ‫بالشروط‬ و ‫البنود   ‫الخاصة ‫بالدورات ‫المكثفة‬‬‬"
+msgstr "أتعهد بالالتزام بأنظمة‬ ‫الجمعية فيما‬  ‫يتعلق  ‫بالشروط‬ و ‫البنود   ‫الخاصة ‫بالدورات ‫المكثفة‬‬‬"
+
+#. module: mk_intensive_courses
+#: model:ir.ui.view,arch_db:mk_intensive_courses.mk_courses_request_form_view
+msgid "اوقات الدورة"
+msgstr "اوقات الدورة"
+
+#. module: mk_intensive_courses
+#: model:ir.ui.view,arch_db:mk_intensive_courses.mk_courses_request_form_view
+msgid "هل سبق اقامة دورة في المسجد/المدرسة"
+msgstr "هل سبق اقامة دورة في المسجد/المدرسة"
+
+#. module: mk_intensive_courses
+#: model:ir.ui.view,arch_db:mk_intensive_courses.mk_courses_request_form_view
+msgid "هل يوجد أدارة حلقات بالمسجد/المدرسة‬ ‬‬"
+msgstr "هل يوجد أدارة حلقات بالمسجد/المدرسة‬ ‬‬"
+
+#. module: mk_intensive_courses
+#: model:res.groups,name:mk_intensive_courses.accept_reject_course_request
+msgid "‫‪accept course erequest"
+msgstr "‫‪قبول او رفض طلبات الدورات المكثفة"
+
+#. module: mk_intensive_courses
+#: model:res.groups,name:mk_intensive_courses.accept_reject_course_calibration
+msgid "‫‪accept or reject course calibration"
+msgstr "‫‪قبول او رفض تقويم الدورات المكثفة"
+
+#. module: mk_intensive_courses
+#: model:res.groups,name:mk_intensive_courses.all_read
+msgid "‫‪all courses read"
+msgstr "صلاحية الإطلاع علي كل إجراءات الدورات المكثفة"
+
+#. module: mk_intensive_courses
+#: model:res.groups,name:mk_intensive_courses.all_write
+msgid "‫‪all courses write"
+msgstr "‫‪جميع صلاحيات الدورات المكثفة"
+
+#. module: mk_intensive_courses
+#: model:res.groups,name:mk_intensive_courses.edit_course_calibration
+msgid "‫‪edit course calibration"
+msgstr "‫‪التعديل على تقويم الدورات المكثفة"
+
+#. module: mk_intensive_courses
+#: model:res.groups,name:mk_intensive_courses.edit_course_certificat
+msgid "‫‪edit course certificat"
+msgstr "‫‪التعديل على شهادات طلاب الدورات المكثفة"
+
+#. module: mk_intensive_courses
+#: model:res.groups,name:mk_intensive_courses.edit_course_evalution
+msgid "‫‪edit course evalution"
+msgstr "‫‪التعديل على جوانب تقويم الدورات المكثفة"
+
+#. module: mk_intensive_courses
+#: model:res.groups,name:mk_intensive_courses.edit_course_items
+msgid "‫‪edit course items"
+msgstr "‫‪التعديل على بنود الدورات المكثفة"
+
+#. module: mk_intensive_courses
+#: model:res.groups,name:mk_intensive_courses.edit_course_request
+msgid "‫‪edit course request"
+msgstr "‫‪التعديل على طلبات الدورات المكثفة"
+
+#. module: mk_intensive_courses
+#: model:res.groups,name:mk_intensive_courses.delete_course_request
+msgid "delete course request"
+msgstr "حذف طلبات الدورات المكثفة"
+
+#. module: mk_intensive_courses
+#: model:res.groups,name:mk_intensive_courses.edit_type_course
+msgid "‫‪edit type course"
+msgstr "‫‪التعديل على نوع الدورات المكثفة"
+
+#. module: mk_intensive_courses
+#: model:res.groups,name:mk_intensive_courses.read_course_calibration
+msgid "‫‪read course calibration"
+msgstr "‫‪القراءة والإطلاع على تقويم الدورات المكثفة"
+
+#. module: mk_intensive_courses
+#: model:res.groups,name:mk_intensive_courses.read_course_certificat
+msgid "‫‪read course certificat"
+msgstr "‫‪القراءة والإطلاع على شهادات طلاب الدورات المكثفة"
+
+#. module: mk_intensive_courses
+#: model:res.groups,name:mk_intensive_courses.read_course_evalution
+msgid "‫‪read course evalution"
+msgstr "‫‪القراءة والإطلاع على جوانب تقويم الدورات المكثفة"
+
+#. module: mk_intensive_courses
+#: model:res.groups,name:mk_intensive_courses.read_course_items
+msgid "‫‪read course items"
+msgstr "‫‪القراءة والإطلاع على بنود الدورات المكثفة"
+
+#. module: mk_intensive_courses
+#: model:res.groups,name:mk_intensive_courses.read_course_request
+msgid "‫‪read course request"
+msgstr "القراءة والإطلاع على طلب الدورات المكثفة"
+
+#. module: mk_intensive_courses
+#: model:res.groups,name:mk_intensive_courses.read_type_course
+msgid "‫‪read type course"
+msgstr "‫‪القراءة والإطلاع على انواع الدورات المكثفة"
+
+#. module: mk_intensive_courses
+#: model:res.groups,name:mk_intensive_courses.send_course_request
+msgid "‫‪send course erequest"
+msgstr " ‪إرسال طلب دورة مكثفة"
+
+#. module: mk_intensive_courses
+#: model:res.groups,name:mk_intensive_courses.write_course_calibration
+msgid "‫‪write course calibration"
+msgstr "إنشاء تقويم الدورات المكثفة"
+
+#. module: mk_intensive_courses
+#: model:res.groups,name:mk_intensive_courses.write_course_certificat
+msgid "‫‪write course certificat"
+msgstr "إنشاء شهادات طلاب الدورات المكثفة"
+
+#. module: mk_intensive_courses
+#: model:res.groups,name:mk_intensive_courses.write_course_evalution
+msgid "‫‪write course evalution"
+msgstr "‫‪إنشاء جوانب تقويم الدورات المكثفة"
+
+#. module: mk_intensive_courses
+#: model:res.groups,name:mk_intensive_courses.write_course_items
+msgid "‫‪write course items"
+msgstr "‫‪إنشاء بنود الدورات المكثفة"
+
+#. module: mk_intensive_courses
+#: model:res.groups,name:mk_intensive_courses.write_course_request
+msgid "‫‪write course request"
+msgstr "إنشاء طلبات الدورات المكثفة"
+
+#. module: mk_intensive_courses
+#: model:res.groups,name:mk_intensive_courses.write_type_course
+msgid "‫‪write type course"
+msgstr "‫‪إنشاء انواع الدورات المكثفة"
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_request_course_name
+msgid "course Name"
+msgstr "اسم الدورة"
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_request_course_request_code
+msgid "Course request code"
+msgstr "رقم التصريح"
+
+#. module: mk_intensive_courses
+#: model:ir.actions.report,name:mk_intensive_courses.summer_episodes_report
+msgid "Summer Episodes report"
+msgstr "إحصائية الدورات المكثفة"
+
+#. module: mk_intensive_courses
+#: model:ir.ui.view,arch_db:mk_intensive_courses.close_course_data_form
+#: model:ir.ui.view,arch_db:mk_intensive_courses.mk_courses_request_form_view
+msgid "Closed course data"
+msgstr "بيانات اقفال الدورة"
+
+#. module: mk_intensive_courses
+#: model:ir.actions.act_window,name:mk_intensive_courses.close_course_data_wizard_act
+msgid "Data close course"
+msgstr "بيانات اقفال الدورة"
+
+#. module: mk_intensive_courses
+#: selection:mk.course.request,state:0
+msgid "Closed"
+msgstr "مقفل"
+
+#. module: mk_intensive_courses
+#: model:ir.ui.view,arch_db:mk_intensive_courses.mk_courses_request_form_view
+msgid "Close"
+msgstr "إقفال"
+
+#. module: mk_intensive_courses
+#: model:ir.ui.view,arch_db:mk_intensive_courses.close_course_data_form
+msgid "Confirm"
+msgstr "تأكيد"
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_close_course_data_course_episode_nbr
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_request_course_episode_nbr
+#: model:ir.ui.view,arch_db:mk_intensive_courses.close_course_data__form
+msgid "Course Episodes"
+msgstr "عدد حلقات الدورة"
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_close_course_data_course_students_nbr
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_request_course_students_nbr
+#: model:ir.ui.view,arch_db:mk_intensive_courses.close_course_data__form
+msgid "Course Students"
+msgstr "عدد الطلاب/الطالبات"
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_close_course_data_close_total_hours
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_request_close_total_hours
+#: model:ir.ui.view,arch_db:mk_intensive_courses.close_course_data__form
+msgid "Total hours"
+msgstr "عدد الساعات(اجمالي عدد ساعات االدورة"
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_close_course_data_parts_nbr
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_request_parts_nbr
+#: model:ir.ui.view,arch_db:mk_intensive_courses.close_course_data__form
+msgid "Parts nbr"
+msgstr "عدد الأوجه"
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_close_course_data_students_finals_nbr
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_request_students_finals_nbr
+#: model:ir.ui.view,arch_db:mk_intensive_courses.close_course_data__form
+msgid "Students finals"
+msgstr "عدد الطلاب الخاتمين"
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_close_course_data_students_final_tests_nbr
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_request_students_final_tests_nbr
+#: model:ir.ui.view,arch_db:mk_intensive_courses.close_course_data__form
+msgid "Students in final tests"
+msgstr "عدد الطلاب/الطالبات المشاركين في اختبارات الخاتمين"
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_close_course_data_students_parts_tests_nbr
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_request_students_parts_tests_nbr
+#: model:ir.ui.view,arch_db:mk_intensive_courses.close_course_data__form
+msgid "Students in parts tests"
+msgstr "عدد الطلاب/الطالبات المشاركين في اختبارات الأجزاء"
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_types_courses_minimum_no_day
+msgid "Minimum No Of Days"
+msgstr "الحد الأدنى للـأيام"
+
+#. module: mk_intensive_courses
+#: selection:mk.course.request,location:0
+msgid "Remotly"
+msgstr "عن بعد"
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_request_course_request_type
+msgid "Course request type"
+msgstr "نوع الدورة"
+
+#. module: mk_intensive_courses
+#: selection:mk.certification,type_course:0
+#: selection:mk.course.request,course_request_type:0
+msgid "Quran day"
+msgstr "يوم قراني"
+
+#. module: mk_intensive_courses
+#: selection:mk.certification,type_course:0
+#: selection:mk.course.request,course_request_type:0
+msgid "Intensive course"
+msgstr "دورة مكثفة"
+
+#. module: mk_intensive_courses
+#: selection:mk.certification,type_course:0
+#: selection:mk.course.request,course_request_type:0
+msgid "Ramadan course"
+msgstr "دورة رمضانية"
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_request_image
+msgid "Image"
+msgstr "الصورة"
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_request_course_request_url
+msgid "Course link"
+msgstr "رابط الدورة المكثفة"
+
+#. module: mk_intensive_courses
+#: model:ir.ui.view,arch_db:mk_intensive_courses.mk_courses_request_form_view
+#: model:ir.ui.view,arch_db:mk_intensive_courses.mk_student_course_form_view
+#: model:ir.ui.view,arch_db:mk_intensive_courses.mk_student_course_tree_view
+msgid "Student courses"
+msgstr "المسجلين"
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_student_identity_no
+msgid "Identity No"
+msgstr "رقم اﻹقامة / الهوية"
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_student_email
+msgid "Email"
+msgstr "البريد الإلكتروني"
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_request_mobile
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_student_mobile
+msgid "Mobile"
+msgstr "الجوال"
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_student_nationality
+msgid "الجنسية"
+msgstr "الجنسية"
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_student_attende
+msgid "attendance"
+msgstr "الحضور"
+
+#. module: mk_intensive_courses
+#: model:ir.ui.view,arch_db:mk_intensive_courses.mk_student_course_view_search
+#: selection:mk.course.student,gender:0
+msgid "Male"
+msgstr "ذكر"
+
+#. module: mk_intensive_courses
+#: model:ir.ui.view,arch_db:mk_intensive_courses.mk_student_course_view_search
+#: selection:mk.course.student,gender:0
+msgid "Female"
+msgstr "أنثى"
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_student_gender
+msgid "Gender"
+msgstr "الجنس"
+
+#. module: mk_intensive_courses
+#: model:ir.ui.view,arch_db:mk_intensive_courses.mk_student_course_view_search
+msgid "Present"
+msgstr "حاضر"
+
+#. module: mk_intensive_courses
+#: model:ir.ui.view,arch_db:mk_intensive_courses.mk_student_course_view_search
+msgid "Absent"
+msgstr "غائب"
+
+#. module: mk_intensive_courses
+#: model:ir.ui.view,arch_db:mk_intensive_courses.mk_student_course_view_search
+msgid "By attende"
+msgstr "الحضور"
+
+#. module: mk_intensive_courses
+#: model:ir.ui.view,arch_db:mk_intensive_courses.mk_student_course_view_search
+msgid "By mosque"
+msgstr "المسجد/المدرسة"
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_student_passport_no
+msgid "Passport No"
+msgstr "رقم جواز السفر"
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_student_birthdate
+msgid "Birthdate"
+msgstr "تاريخ الميلاد"
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_student_no_identity
+msgid "No Identity"
+msgstr "لا توجد إقامة"
+
+#. module: mk_intensive_courses
+#: model:ir.ui.view,arch_db:mk_intensive_courses.mk_student_course_view_search
+msgid "By request course"
+msgstr "البرنامج المكثف"
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_student_branch_path_type
+msgid "Branch Path"
+msgstr "المسار"
+
+#. module: mk_intensive_courses
+#: selection:mk.course.student,branch_path_type:0
+msgid "Correct recitation"
+msgstr "تصحيح تلاوة"
+
+#. module: mk_intensive_courses
+#: selection:mk.course.student,branch_path_type:0
+msgid "Momorize"
+msgstr "حفظ"
+
+#. module: mk_intensive_courses
+#: selection:mk.course.student,branch_path_type:0
+msgid "Reveiw"
+msgstr "مراجعة"
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_close_course_data_course_teachers_nbr
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_request_course_teachers_nbr
+msgid "Course Teachers"
+msgstr "عددالمعلمات"
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_close_course_data_course_administrators_nbr
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_request_course_administrators_nbr
+msgid "Course Administrators"
+msgstr "عدد الإداريات"
+
+#. module: mk_intensive_courses
+#: code:addons/mk_intensive_courses/wizard/close_course_data_wizard.py:59
+#, python-format
+msgid "You must fill in number of course administrators."
+msgstr "يجب تحديد عدد الاداريات"
+
+#. module: mk_intensive_courses
+#: code:addons/mk_intensive_courses/wizard/close_course_data_wizard.py:38
+#, python-format
+msgid "You must fill in number of course episode."
+msgstr "يجب تحديد عدد حلقات الدورة"
+
+#. module: mk_intensive_courses
+#: code:addons/mk_intensive_courses/wizard/close_course_data_wizard.py:40
+#, python-format
+msgid "You must fill in number of course students."
+msgstr "يجب تحديد عدد الطلاب/الطالبات"
+
+#. module: mk_intensive_courses
+#: code:addons/mk_intensive_courses/wizard/close_course_data_wizard.py:57
+#, python-format
+msgid "You must fill in number of course teachers."
+msgstr "يجب تحديد عدد المعلمات"
+
+#. module: mk_intensive_courses
+#: code:addons/mk_intensive_courses/wizard/close_course_data_wizard.py:74
+#, python-format
+msgid "You must fill in number of final students."
+msgstr "يجب تحديد عدد الطلاب الخاتمين"
+
+#. module: mk_intensive_courses
+#: code:addons/mk_intensive_courses/wizard/close_course_data_wizard.py:79
+#, python-format
+msgid "You must fill in number of final tests students."
+msgstr "يجب تحديد عدد الطلاب/الطالبات المشاركين في اختبارات الخاتمين"
+
+#. module: mk_intensive_courses
+#: code:addons/mk_intensive_courses/wizard/close_course_data_wizard.py:81
+#, python-format
+msgid "You must fill in number of parts tests students."
+msgstr "يجب تحديد عدد الطلاب/الطالبات المشاركين في اختبارات الأجزاء"
+
+#. module: mk_intensive_courses
+#: code:addons/mk_intensive_courses/wizard/close_course_data_wizard.py:72
+#, python-format
+msgid "You must fill in number of parts."
+msgstr "يجب تحديد عدد الأوجه المسمعة"
+
+#. module: mk_intensive_courses
+#: code:addons/mk_intensive_courses/wizard/close_course_data_wizard.py:42
+#, python-format
+msgid "You must fill in total hours."
+msgstr "يجب تحديد إجمالي عدد ساعات الدورة"
+
+#. module: mk_intensive_courses
+#: code:addons/mk_intensive_courses/wizard/close_course_data_wizard.py:63
+#, python-format
+msgid "You must fill in total number of done female parts."
+msgstr "يجب تحديد عدد الأجزاء المسمعة"
+
+#. module: mk_intensive_courses
+#: code:addons/mk_intensive_courses/wizard/close_course_data_wizard.py:61
+#, python-format
+msgid "You must fill in total number of female parts."
+msgstr "يجب تحديد عدد الأوجه المسمعة"
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_close_course_data_parts_female_total_nbr
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_request_parts_female_total_nbr
+msgid "Parts female total nbr"
+msgstr "عدد الأوجه المسمعة"
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_close_course_data_parts_female_total_done_nbr
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_request_parts_female_total_done_nbr
+msgid "Parts female total done nbr"
+msgstr "عدد الأجزاء المسمعة"
+
+#. module: mk_intensive_courses
+#: model:ir.ui.view,arch_db:mk_intensive_courses.mk_courses_request_form_view
+msgid "Reset accept"
+msgstr "ارجاع الى موافقة"
+
+#. module: mk_intensive_courses
+#: model:ir.model.fields,field_description:mk_intensive_courses.field_mk_course_request_nbr_student_courses
+msgid "student_courses"
+msgstr "عدد الطلاب المسجلين"
+
+#. module: mk_intensive_courses
+#: model:ir.ui.view,arch_db:mk_intensive_courses.mk_courses_request_form_view
+msgid "Center review"
+msgstr "ارجاع الى مرسل"
+
+#. module: mk_intensive_courses
+#: model:res.groups,name:mk_intensive_courses.update_center_review_group
+msgid "Center review"
+msgstr "ارجاع الى مرسل"
+
+#. module: mk_intensive_courses
+#: model:res.groups,name:mk_intensive_courses.update_student_course_branch
+msgid "update course sudent branch "
+msgstr "التعديل على فروع الطلاب"
+
+#. module: mk_intensive_courses
+#: model:res.groups,name:mk_intensive_courses.delete_course_student
+msgid "Delete sudent courses"
+msgstr "الغاء تسجيل الطلاب"

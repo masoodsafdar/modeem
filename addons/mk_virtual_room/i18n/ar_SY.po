@@ -1,0 +1,440 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* mk_virtual_room
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0-20200724\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-08-19 14:50+0000\n"
+"PO-Revision-Date: 2020-08-19 14:50+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: mk_virtual_room
+#: model:ir.model.fields,field_description:mk_virtual_room.field_mk_virtual_room_admin_link
+msgid "Admin link"
+msgstr "رابط الادارة"
+
+#. module: mk_virtual_room
+#: model:ir.model.fields,field_description:mk_virtual_room.field_mk_virtual_room_subscription_attachment
+msgid "Attachement"
+msgstr "ارفاق المستند"
+
+#. module: mk_virtual_room
+#: model:ir.model.fields,field_description:mk_virtual_room.field_mk_virtual_room_subscription_bank_id
+msgid "Bank"
+msgstr "البنك"
+
+#. module: mk_virtual_room
+#: model:ir.model.fields,field_description:mk_virtual_room.field_mk_virtual_room_subscription_number_account
+msgid "Bank account number"
+msgstr "رقم الحساب البنكي"
+
+#. module: mk_virtual_room
+#: selection:mk.virtual_room.subscription,type_payment_method:0
+msgid "Cash deposit"
+msgstr "ايداع نقدي"
+
+#. module: mk_virtual_room
+#: model:ir.ui.view,arch_db:mk_virtual_room.mk_virtual_room_subscription_form_view
+#: model:ir.ui.view,arch_db:mk_virtual_room.virtual_room_form_view
+#: selection:mk.virtual_room,state:0
+msgid "Confirm"
+msgstr "تأكيد"
+
+#. module: mk_virtual_room
+#: model:ir.model.fields,field_description:mk_virtual_room.field_mk_virtual_room_provider_package_cost
+#: model:ir.model.fields,field_description:mk_virtual_room.field_mk_virtual_room_subscription_cost
+msgid "Cost"
+msgstr "التكلفة"
+
+#. module: mk_virtual_room
+#: model:ir.model.fields,field_description:mk_virtual_room.field_mk_virtual_room_create_uid
+#: model:ir.model.fields,field_description:mk_virtual_room.field_mk_virtual_room_provider_create_uid
+#: model:ir.model.fields,field_description:mk_virtual_room.field_mk_virtual_room_provider_package_create_uid
+#: model:ir.model.fields,field_description:mk_virtual_room.field_mk_virtual_room_subscription_create_uid
+#: model:ir.model.fields,field_description:mk_virtual_room.field_mk_virtual_room_type_create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: mk_virtual_room
+#: model:ir.model.fields,field_description:mk_virtual_room.field_mk_virtual_room_create_date
+#: model:ir.model.fields,field_description:mk_virtual_room.field_mk_virtual_room_provider_create_date
+#: model:ir.model.fields,field_description:mk_virtual_room.field_mk_virtual_room_provider_package_create_date
+#: model:ir.model.fields,field_description:mk_virtual_room.field_mk_virtual_room_subscription_create_date
+#: model:ir.model.fields,field_description:mk_virtual_room.field_mk_virtual_room_type_create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: mk_virtual_room
+#: model:ir.model.fields,field_description:mk_virtual_room.field_mk_virtual_room_subscription_date_end
+msgid "Date End"
+msgstr "تاريخ الانتهاء"
+
+#. module: mk_virtual_room
+#: model:ir.model.fields,field_description:mk_virtual_room.field_mk_virtual_room_subscription_date_start
+msgid "Date start"
+msgstr "تاريخ البدء"
+
+#. module: mk_virtual_room
+#: model:ir.model.fields,field_description:mk_virtual_room.field_mk_virtual_room_display_name
+#: model:ir.model.fields,field_description:mk_virtual_room.field_mk_virtual_room_provider_display_name
+#: model:ir.model.fields,field_description:mk_virtual_room.field_mk_virtual_room_provider_package_display_name
+#: model:ir.model.fields,field_description:mk_virtual_room.field_mk_virtual_room_subscription_display_name
+#: model:ir.model.fields,field_description:mk_virtual_room.field_mk_virtual_room_type_display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: mk_virtual_room
+#: selection:mk.virtual_room,state:0
+#: selection:mk.virtual_room.subscription,state:0
+msgid "Draft"
+msgstr "مبدئي"
+
+#. module: mk_virtual_room
+#: selection:mk.virtual_room.provider.package,type_subscription_duration:0
+#: selection:mk.virtual_room.subscription,type_subscription_duration:0
+msgid "Eight-month academic year"
+msgstr "ثمانية اشهر سنة دراسية"
+
+#. module: mk_virtual_room
+#: selection:mk.virtual_room.provider.package,type_subscription_duration:0
+#: selection:mk.virtual_room.subscription,type_subscription_duration:0
+msgid "Four-month semester"
+msgstr "اربعة اشهر فصل دراسي"
+
+#. module: mk_virtual_room
+#: model:ir.model.fields,field_description:mk_virtual_room.field_mk_virtual_room_from_day_id
+msgid "From day"
+msgstr "من يوم"
+
+#. module: mk_virtual_room
+#: model:ir.model.fields,field_description:mk_virtual_room.field_mk_episode_time_from
+msgid "From time"
+msgstr "الوقت من"
+
+#. module: mk_virtual_room
+#: model:ir.model.fields,field_description:mk_virtual_room.field_mk_episode_time_to
+msgid "To time"
+msgstr "الى"
+
+#. module: mk_virtual_room
+#: model:ir.model.fields,field_description:mk_virtual_room.field_mk_virtual_room_id
+#: model:ir.model.fields,field_description:mk_virtual_room.field_mk_virtual_room_provider_id
+#: model:ir.model.fields,field_description:mk_virtual_room.field_mk_virtual_room_provider_package_id
+#: model:ir.model.fields,field_description:mk_virtual_room.field_mk_virtual_room_subscription_id
+#: model:ir.model.fields,field_description:mk_virtual_room.field_mk_virtual_room_type_id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: mk_virtual_room
+#: model:ir.model.fields,field_description:mk_virtual_room.field_mk_virtual_room___last_update
+#: model:ir.model.fields,field_description:mk_virtual_room.field_mk_virtual_room_provider___last_update
+#: model:ir.model.fields,field_description:mk_virtual_room.field_mk_virtual_room_provider_package___last_update
+#: model:ir.model.fields,field_description:mk_virtual_room.field_mk_virtual_room_subscription___last_update
+#: model:ir.model.fields,field_description:mk_virtual_room.field_mk_virtual_room_type___last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: mk_virtual_room
+#: model:ir.model.fields,field_description:mk_virtual_room.field_mk_virtual_room_provider_package_write_uid
+#: model:ir.model.fields,field_description:mk_virtual_room.field_mk_virtual_room_provider_write_uid
+#: model:ir.model.fields,field_description:mk_virtual_room.field_mk_virtual_room_subscription_write_uid
+#: model:ir.model.fields,field_description:mk_virtual_room.field_mk_virtual_room_type_write_uid
+#: model:ir.model.fields,field_description:mk_virtual_room.field_mk_virtual_room_write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: mk_virtual_room
+#: model:ir.model.fields,field_description:mk_virtual_room.field_mk_virtual_room_provider_package_write_date
+#: model:ir.model.fields,field_description:mk_virtual_room.field_mk_virtual_room_provider_write_date
+#: model:ir.model.fields,field_description:mk_virtual_room.field_mk_virtual_room_subscription_write_date
+#: model:ir.model.fields,field_description:mk_virtual_room.field_mk_virtual_room_type_write_date
+#: model:ir.model.fields,field_description:mk_virtual_room.field_mk_virtual_room_write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: mk_virtual_room
+#: selection:mk.virtual_room.provider.package,type_subscription_duration:0
+msgid "Month"
+msgstr "شهر"
+
+#. module: mk_virtual_room
+#: model:ir.model.fields,field_description:mk_virtual_room.field_mk_virtual_room_mosque_id
+#: model:ir.model.fields,field_description:mk_virtual_room.field_mk_virtual_room_subscription_mosque_id
+msgid "Mosque"
+msgstr "المسجد"
+
+#. module: mk_virtual_room
+#: model:ir.model.fields,field_description:mk_virtual_room.field_mk_virtual_room_name
+#: model:ir.model.fields,field_description:mk_virtual_room.field_mk_virtual_room_provider_name
+#: model:ir.model.fields,field_description:mk_virtual_room.field_mk_virtual_room_provider_package_name
+#: model:ir.model.fields,field_description:mk_virtual_room.field_mk_virtual_room_subscription_name
+#: model:ir.model.fields,field_description:mk_virtual_room.field_mk_virtual_room_type_name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: mk_virtual_room
+#: model:ir.model.fields,field_description:mk_virtual_room.field_mk_virtual_room_subscription_note
+msgid "Note"
+msgstr "ضوابط الدورة"
+
+#. module: mk_virtual_room
+#: model:ir.model.fields,field_description:mk_virtual_room.field_mk_virtual_room_provider_package_number_participant
+#: model:ir.model.fields,field_description:mk_virtual_room.field_mk_virtual_room_subscription_number_participant
+msgid "Number participants"
+msgstr "عدد المشاركين"
+
+#. module: mk_virtual_room
+#: model:ir.model.fields,field_description:mk_virtual_room.field_mk_virtual_room_provider_package_number_room
+msgid "Number room"
+msgstr "عدد القاعات"
+
+#. module: mk_virtual_room
+#: model:ir.model.fields,field_description:mk_virtual_room.field_mk_virtual_room_type_order_type
+msgid "Order"
+msgstr "الترتيب"
+
+#. module: mk_virtual_room
+#: model:ir.model.fields,field_description:mk_virtual_room.field_mk_virtual_room_provider_virtual_room_package_ids
+#, python-format
+msgid "Package"
+msgstr "الباقات"
+
+#. module: mk_virtual_room
+#: code:addons/mk_virtual_room/models/mk_virtual_room.py:26
+#, python-format
+msgid "Package"
+msgstr "الباقات "
+
+#. module: mk_virtual_room
+#: model:ir.model.fields,field_description:mk_virtual_room.field_mk_virtual_room_participant_link
+msgid "Participant link"
+msgstr "رابط المشارك"
+
+#. module: mk_virtual_room
+#: model:ir.model.fields,field_description:mk_virtual_room.field_mk_virtual_room_subscription_type_payment_method
+msgid "Payment method"
+msgstr "طريقة الدفع"
+
+#. module: mk_virtual_room
+#: code:addons/mk_virtual_room/models/mk_virtual_room.py:122
+#, python-format
+msgid "Please check with the bank!"
+msgstr "الرجاء التأكد من البنك!"
+
+#. module: mk_virtual_room
+#: code:addons/mk_virtual_room/models/mk_virtual_room.py:120
+#, python-format
+msgid "Please confirm the payment method!"
+msgstr "الرجاء التأكد من طريقة الدفع!"
+
+#. module: mk_virtual_room
+#: code:addons/mk_virtual_room/models/mk_virtual_room.py:124
+#, python-format
+msgid "Please verify the bank account number!"
+msgstr "الرجاء التأكد من رقم الحساب البنكي!"
+
+#. module: mk_virtual_room
+#: model:ir.ui.view,arch_db:mk_virtual_room.mk_virtual_room_subscription_form_view
+#: selection:mk.virtual_room.subscription,state:0
+msgid "Refused"
+msgstr "مرفوض"
+
+#. module: mk_virtual_room
+#: selection:mk.virtual_room.provider,type_subscription:0
+msgid "Room"
+msgstr "قاعات"
+
+#. module: mk_virtual_room
+#: model:ir.model.fields,field_description:mk_virtual_room.field_mk_virtual_room_type_room_id
+msgid "Room Type"
+msgstr "نوع القاعة"
+
+#. module: mk_virtual_room
+#: model:ir.model.fields,field_description:mk_virtual_room.field_mk_virtual_room_room_objective
+msgid "Room objective"
+msgstr "هدف القاعة"
+
+#. module: mk_virtual_room
+#: selection:mk.virtual_room.provider,type_subscription:0
+msgid "Server"
+msgstr "سرفر"
+
+#. module: mk_virtual_room
+#: model:ir.ui.menu,name:mk_virtual_room.virtual_room_settings_menu
+msgid "Setting"
+msgstr "الاعدادات"
+
+#. module: mk_virtual_room
+#: model:ir.model.fields,field_description:mk_virtual_room.field_mk_virtual_room_state
+#: model:ir.model.fields,field_description:mk_virtual_room.field_mk_virtual_room_subscription_state
+msgid "State"
+msgstr "المحافظة"
+
+#. module: mk_virtual_room
+#: model:ir.ui.view,arch_db:mk_virtual_room.virtual_room_form_view
+#: selection:mk.virtual_room,state:0
+msgid "Stopped"
+msgstr "إيقاف"
+
+#. module: mk_virtual_room
+#: model:ir.ui.view,arch_db:mk_virtual_room.virtual_room_form_view
+msgid "Timing"
+msgstr "التوقيت"
+
+#. module: mk_virtual_room
+#: model:ir.ui.view,arch_db:mk_virtual_room.virtual_room_form_view
+msgid "Payment method"
+msgstr "طريقة الدفع"
+
+#. module: mk_virtual_room
+#: model:ir.model.fields,field_description:mk_virtual_room.field_mk_virtual_room_date_expiration
+msgid "Subscription expiration date"
+msgstr "انتهاء الاشتراك"
+
+#. module: mk_virtual_room
+#: selection:mk.virtual_room.provider.package,type_subscription_duration:0
+#: selection:mk.virtual_room.subscription,type_subscription_duration:0
+msgid "Three months"
+msgstr "ثلاثة اشهر"
+
+#. module: mk_virtual_room
+#: model:ir.model.fields,field_description:mk_virtual_room.field_mk_virtual_room_to_day_id
+msgid "To day"
+msgstr "الى يوم"
+
+#. module: mk_virtual_room
+#: selection:mk.virtual_room.provider.package,type_subscription_duration:0
+#: selection:mk.virtual_room.subscription,type_subscription_duration:0
+msgid "Two months"
+msgstr "شهرين"
+
+#. module: mk_virtual_room
+#: model:ir.model.fields,field_description:mk_virtual_room.field_mk_virtual_room_provider_package_type_subscription_duration
+#: model:ir.model.fields,field_description:mk_virtual_room.field_mk_virtual_room_provider_type_subscription
+#: model:ir.model.fields,field_description:mk_virtual_room.field_mk_virtual_room_subscription_type_subscription_duration
+msgid "Type subscription"
+msgstr "مدة الاشتراك"
+
+#. module: mk_virtual_room
+#: model:ir.ui.view,arch_db:mk_virtual_room.mk_virtual_room_subscription_form_view
+#: selection:mk.virtual_room.subscription,state:0
+msgid "Under the procedure"
+msgstr "ارسال الطلب"
+
+#. module: mk_virtual_room
+#: model:ir.model,name:mk_virtual_room.model_mk_virtual_room
+msgid "Virtual Room"
+msgstr "القاعات الافتراضية"
+
+#. module: mk_virtual_room
+#: model:ir.actions.act_window,name:mk_virtual_room.action_virtual_room
+#: model:ir.ui.menu,name:mk_virtual_room.virtual_room_menu
+#: model:ir.ui.view,arch_db:mk_virtual_room.virtual_room_form_view
+#: model:ir.ui.view,arch_db:mk_virtual_room.virtual_room_search_view
+#: model:ir.ui.view,arch_db:mk_virtual_room.virtual_room_tree_view
+#: model:ir.ui.view,arch_db:mk_virtual_room.episode_form_inherited_view
+#: model:ir.model.fields,field_description:mk_virtual_room.field_mk_episode_virtual_room_id
+msgid "Virtual room"
+msgstr "القاعات الافتراضية"
+
+#. module: mk_virtual_room
+#: model:ir.model.fields,field_description:mk_virtual_room.field_mk_episode_room_day_ids
+msgid "work days"
+msgstr "الايام"
+
+#. module: mk_virtual_room
+#: model:ir.ui.menu,name:mk_virtual_room.virtual_room_basic_menu
+msgid "Virtual room basic"
+msgstr "القاعات الافتراضية"
+
+#. module: mk_virtual_room
+#: model:ir.ui.view,arch_db:mk_virtual_room.mk_virtual_room_type_tree_view
+msgid "Virtual room day"
+msgstr "Virtual room day"
+
+#. module: mk_virtual_room
+#: model:ir.model.fields,field_description:mk_virtual_room.field_mk_virtual_room_subscription_virtual_room_package_id
+msgid "Virtual room package"
+msgstr "الباقة"
+
+#. module: mk_virtual_room
+#: model:ir.model.fields,field_description:mk_virtual_room.field_mk_virtual_room_virtual_room_package_id
+msgid "Virtual room package"
+msgstr "الباقة"
+
+#. module: mk_virtual_room
+#: model:ir.actions.act_window,name:mk_virtual_room.action_mk_virtual_room_provider
+#: model:ir.model,name:mk_virtual_room.model_mk_virtual_room_provider
+#: model:ir.model.fields,field_description:mk_virtual_room.field_mk_virtual_room_provider_package_virtual_room_provider_id
+#: model:ir.model.fields,field_description:mk_virtual_room.field_mk_virtual_room_subscription_virtual_room_provider_id
+#: model:ir.model.fields,field_description:mk_virtual_room.field_mk_virtual_room_virtual_room_provider_id
+#: model:ir.ui.menu,name:mk_virtual_room.mk_virtual_room_provider_menu
+#: model:ir.ui.view,arch_db:mk_virtual_room.mk_virtual_room_provider_form_view
+#: model:ir.ui.view,arch_db:mk_virtual_room.mk_virtual_room_provider_search_view
+#: model:ir.ui.view,arch_db:mk_virtual_room.mk_virtual_room_provider_tree_view
+msgid "Virtual room provider"
+msgstr "مزود الخدمة"
+
+#. module: mk_virtual_room
+#: model:ir.model,name:mk_virtual_room.model_mk_virtual_room_provider_package
+msgid "Virtual room provider package"
+msgstr "Virtual room provider package"
+
+#. module: mk_virtual_room
+#: model:ir.actions.act_window,name:mk_virtual_room.action_virtual_room_subscription
+#: model:ir.model,name:mk_virtual_room.model_mk_virtual_room_subscription
+#: model:ir.model.fields,field_description:mk_virtual_room.field_mk_virtual_room_virtual_room_subscription_id
+#: model:ir.ui.menu,name:mk_virtual_room.mk_virtual_room_subscription_menu
+#: model:ir.ui.view,arch_db:mk_virtual_room.mk_virtual_room_subscription_form_view
+#: model:ir.ui.view,arch_db:mk_virtual_room.mk_virtual_room_subscription_search_view
+#: model:ir.ui.view,arch_db:mk_virtual_room.mk_virtual_room_subscription_tree_view
+msgid "Virtual room subscription"
+msgstr "الاشتراكات"
+
+#. module: mk_virtual_room
+#: model:ir.actions.act_window,name:mk_virtual_room.action_virtual_room_type
+#: model:ir.model,name:mk_virtual_room.model_mk_virtual_room_type
+#: model:ir.ui.menu,name:mk_virtual_room.mk_virtual_room_type_menu
+#: model:ir.ui.view,arch_db:mk_virtual_room.mk_virtual_room_type_form_view
+#: model:ir.ui.view,arch_db:mk_virtual_room.mk_virtual_room_type_search_view
+msgid "Virtual room type"
+msgstr "نوع القاعة"
+
+#. module: mk_virtual_room
+#: selection:mk.virtual_room.subscription,state:0
+msgid "confirm"
+msgstr "مفعل"
+
+#. module: mk_virtual_room
+#: selection:mk.virtual_room.provider.package,type_subscription_duration:0
+#: selection:mk.virtual_room.subscription,type_subscription_duration:0
+msgid "full year is twelve months"
+msgstr "سنة كاملة -اثنا عشر شهرا"
+
+#. module: mk_virtual_room
+#: selection:mk.virtual_room.subscription,type_subscription_duration:0
+msgid "month"
+msgstr "شهر"
+
+#. module: mk_virtual_room
+#: selection:mk.virtual_room.subscription,type_subscription_duration:0
+msgid "months"
+msgstr "شهر"
+
+#. module: mk_virtual_room
+#: selection:mk.virtual_room.subscription,type_payment_method:0
+msgid "withdraw from Account"
+msgstr "سحب من الحساب"
+
+#. module: mk_virtual_room
+#: code:addons/mk_virtual_room/models/mk_virtual_room.py:232
+#, python-format
+msgid "This virtual room is used on this day in a other episode!"
+msgstr "هذه القاعه الإفتراضية مستعملة في هذا الوقت في حلقة أخرى! "

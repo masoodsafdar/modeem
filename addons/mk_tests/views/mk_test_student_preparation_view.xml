@@ -1,0 +1,85 @@
+<odoo>
+    <data>
+    
+ 	<record id="mk_test_student_preparation_form_view" model="ir.ui.view">
+          <field name="name">Test Student Preparation Form View</field>
+          <field name="model">mk.test.student.preparation</field>
+          <field name="arch" type="xml">
+              <form string = "Test Student Preparation">
+		  <!--<header>
+		    <button name="do_start" string="Start" type="object" states="draft" class="oe_highlight"/>
+            <button name="do_cancel" string="Cancel" type="object" states="start,draft" class="oe_highlight"/>
+            <button name="do_draft" string="Set to Draft" type="object" states="start,cancelled" class="oe_highlight"/>
+            <field name="state" widget="statusbar" statusbar_visible="draft,start,cancelled"/>
+		  </header>-->
+		  <sheet>
+	  		  <group>
+		  		<field name="company_id"            required="1" options="{'no_open':1,'no_create':1}"/>
+		  		<field name="test_registeration_id" required="1" domain="[('company_id','=',company_id)]" options="{'no_open':1,'no_create':1}"/>
+                <!--<field name="mosq_id" invisible="1"/>-->
+		  		<field name="link_id" invisible="1" options="{'no_open':1,'no_create':1}"/>
+			  	<field name="study_year_id"         required="1" domain="[('company_id','=',company_id)]"       options="{'no_open':1,'no_create':1}"/>
+			  	<field name="study_class_id"        required="1" domain="[('study_year_id','=',study_year_id)]" options="{'no_open':1,'no_create':1}"/>
+			  	<field name="test_center_config_id" required="1" domain="[('company_id','=',company_id)]"       options="{'no_open':1,'no_create':1}"/>
+			  	<field name="test_type_id"          required="1" domain="[('company_id','=',company_id)]"       options="{'no_open':1,'no_create':1}"/>
+			  </group>
+			  <group>
+			  	<group>
+				  	<field name="period_t" required="1" />
+			  	</group>
+				<group>
+					<field name="test_date" required="1"/>
+				</group>
+			</group>
+			<group>
+			  	<field name="test_time"/>
+			  	<field name="comment"/>
+			</group>
+	  	</sheet>
+              </form>
+             </field>
+         </record>
+
+        <record id="mk_test_student_preparation_tree_view" model="ir.ui.view">
+            <field name="name">Test Student Preparation Tree View</field>
+            <field name="model">mk.test.student.preparation</field>
+            <field name="arch" type="xml">
+                <tree delete="0" string="Test Student Preparation" default_order='test_date, test_time'>
+                    <field name="link_id"/>
+                	<field name="study_year_id"  required="1" options="{'no_open':1,'no_create':1}"/>
+                	<field name="study_class_id" required="1" options="{'no_open':1,'no_create':1}"/>
+                	<field name="test_type_id"   required="1" options="{'no_create': True,'no_open': True,}"/>
+                    <field name="test_time"/>
+                    <button name="do_prep_stud" string="Prepare Student" type="object" states="draft"       class="oe_highlight"/>
+                    <button name="do_start"     string="Start Test"      type="object" states="stud"        class="oe_highlight"/>
+                    <button name="do_cancel"    string="Cancel"          type="object" states="start,draft" class="oe_highlight"/>
+                    <button name="do_draft"     string="Set to Draft"    type="object" states="cancelled"   class="oe_highlight"/>
+                     <field name="state"/>
+        	</tree>
+            </field>
+        </record>
+        
+        <record id="mk_test_student_preparation_search_view" model="ir.ui.view">
+            <field name="name">Test Student Preparation Search View</field>
+            <field name="model">mk.test.student.preparation</field>
+            <field name="arch" type="xml">
+                <search string="Test Student Preparation ">
+                </search>
+            </field>
+        </record>
+        
+        <record id="mk_test_student_preparation_action" model="ir.actions.act_window">
+            <field name="name">Test Student Preparation </field>
+            <field name="res_model">mk.test.student.preparation</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+            <field name="search_view_id" ref="mk_test_student_preparation_search_view"/>
+        </record>
+
+	<menuitem name="Test Student Preparation " id="mk_test_student_preparation_menu" sequence="5" parent="mk_tests_menu" action="mk_test_student_preparation_action"/>    
+
+    </data>  
+</odoo>

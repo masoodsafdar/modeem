@@ -1,0 +1,46 @@
+<odoo>
+  <data>
+
+  	  <record model="ir.ui.view" id="events_type_list">
+      <field name="name">events type list</field>
+      <field name="model">event.type</field>
+      <field name="priority" eval="15"/>
+
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="no"/>
+        
+        </tree>
+      </field>
+    </record>
+  
+
+    <record model="ir.ui.view" id="events_type_form">
+      <field name="name">event type form</field>
+      <field name="model">event.type</field>
+      <field name="arch" type="xml">
+
+        <form>
+          <sheet>
+          <group colspan="4" col="4">
+          <field name="name"/>
+          <field name="no"/>
+        </group>
+      </sheet>
+        </form>
+
+      </field>
+    </record>
+    
+
+    
+    <record model="ir.actions.act_window" id="events_type_action_window">
+      <field name="name">mk_event type window</field>
+      <field name="res_model">event.type</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+  	<menuitem name="Event type" id="menu_event_type" action="events_type_action_window" parent="event.menu_event_configuration"  groups="events_types_manage"/>
+  </data>
+</odoo>

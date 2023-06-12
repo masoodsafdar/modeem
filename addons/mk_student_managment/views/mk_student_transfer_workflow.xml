@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <data>
+
+        <!-- General Structure Of A WorkFlow XML File -->
+
+        <record id="wkf_student_transfer" model="workflow">
+            <field name="name">workflow.student_transfer</field>
+            <field name="osv">mk.student_transfer</field>
+            <field name="on_create">True</field>
+        </record>
+
+        <record id="activity_draft" model="workflow.activity">
+            <field name="wkf_id" ref="wkf_student_transfer"/>
+            <field name="name">draft</field>
+            <field name="flow_start" eval="True"/>
+            <field name="kind">function</field>
+            <field name="action">action_draft()</field>
+        </record>
+
+        <record id="act_wait_clearance" model="workflow.activity">
+            <field name="wkf_id" ref="wkf_student_transfer"/>
+            <field name="name">Wait</field>
+            <field name="kind">function</field>
+            <field name="action">action_wait()</field>
+        </record>
+
+        
+
+        <record id="act_process" model="workflow.activity">
+            <field name="wkf_id" ref="wkf_student_transfer"/>
+            <field name="name">Process</field>
+            <field name="kind">function</field>
+            <field name="action">action_process()</field>
+        </record>
+
+        <record id="activity_accept" model="workflow.activity">
+            <field name="wkf_id" ref="wkf_student_transfer"/>
+            <field name="name">accept</field>
+            <field name="kind">function</field>
+            <field name="action">action_accept()</field>
+        </record>
+
+       <record id="activity_reject" model="workflow.activity">
+            <field name="wkf_id" ref="wkf_student_transfer"/>
+            <field name="name">Reject</field>
+            <field name="kind">function</field>
+            <field name="action">action_reject()</field>
+        </record>
+
+        <record id="act_done" model="workflow.activity">
+            <field name="wkf_id" ref="wkf_student_transfer"/>
+            <field name="name">Done</field>
+            <field name="kind">function</field>
+            <field name="action">action_done()</field>
+        </record>
+
+       
+        
+        <record id="transfer_draft_to_process" model="workflow.transition">
+            <field name="act_from" ref="activity_draft"/>
+            <field name="act_to" ref="act_process"/>
+            <field name="signal">process_transfer</field>
+        </record>
+
+        <record id="reg_wait_to_done" model="workflow.transition">
+            <field name="act_from" ref="act_wait_clearance"/>
+            <field name="act_to" ref="act_done"/>
+            <field name="signal">done</field>
+            <field name="condition">end_wait_clearance()</field>
+        </record>
+
+       <!-- <record id="reg_draft_to_reject" model="workflow.transition">
+            <field name="act_from" ref="act_draft"/>
+            <field name="act_to" ref="act_reject"/>
+            <field name="signal">reject</field>
+        </record>
+
+<record id="reg_draft_to_wait" model="workflow.transition">
+            <field name="act_from" ref="act_draft"/>
+            <field name="act_to" ref="act_wait"/>
+            <field name="signal">wait_free</field>
+            <field name="condition"> True</field>
+        </record>
+
+        <record id="reg_draft_to_wait" model="workflow.transition">
+            <field name="act_from" ref="act_wait"/>
+            <field name="act_to" ref="act_first_acceptance"/>
+            <field name="signal">first_accept</field>
+            <field name="condition"> True</field>
+        </record>
+
+
+    -->
+        <record id="reg_process_to_accept" model="workflow.transition">
+            <field name="act_from" ref="act_process"/>
+            <field name="act_to" ref="activity_accept"/>
+            <field name="signal">accept</field>
+        </record>
+        
+
+        <record id="reg_process_to_reject" model="workflow.transition">
+            <field name="act_from" ref="act_process"/>
+            <field name="act_to" ref="activity_reject"/>
+            <field name="signal">reject</field>
+        </record>
+
+    </data>
+</odoo>

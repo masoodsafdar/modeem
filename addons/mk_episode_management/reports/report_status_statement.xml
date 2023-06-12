@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <template id="report_status_statement_template">
+            <t t-call="web.html_container">
+                <t t-call="web.external_layout">
+                    <div class="page" style="font-family:Amiri">
+
+                        <style type="text/css">
+
+                             table, tbody,thead,td,th,tr {
+                                border: 1px solid #414141;
+                                            }
+                             th{
+                                border: 1px solid #000;
+                                            }
+
+                            .table-condensed > thead > tr > th,
+                            .table-condensed > tbody > tr > td {
+                                vertical-align: bottom;
+                                  
+                                border: 1px solid #414141;
+                                border-bottom: 1px solid #414141;
+                                border-top: 1px solid #414141;
+                                border-right: 1px solid #414141;
+                                border-left: 1px solid #414141;
+                            }
+
+
+                        </style>
+<t t-foreach="docs" t-as="doc">
+
+			 <div class="col-xs-12">
+								<center>
+									<u>
+										<strong>
+											<h2>بيان بحالة المدرسة / الحلقة</h2>
+											<h3><span t-esc="doc['study_class']" /></h3>
+										</strong>
+										<h4>
+											<strong></strong>
+										</h4>
+							
+										<h4>
+											<!-- <span t-esc="o.name"/> -->
+										</h4>
+							
+									</u> 
+								</center>
+							<table class="col-xs-12">
+							
+								<thead>
+									<th class="text-center">الحي</th>
+									<th class="text-center">رقم الجوال</th>
+									<th class="text-center"> رقم الهاتف</th>
+									<th class="text-center">تاريخ نهاية التصريح</th>
+									<th class="text-center">رقم التصريح</th>
+									<th class="text-center">سنة التأسيس</th>
+									<th class="text-center">نوع المسجد/ المدرسة</th>
+									<th class="text-center">اسم المسجد/ المدرسة</th>
+									<th class="text-center">رقم المدرسة</th>
+								</thead>
+								<tbody>
+									<tr>
+										<td style="text-align: right;">
+											<span t-esc="doc['mosque'].district_id.name" />
+										</td>
+										<td>
+											<span></span>
+										</td>
+										<td style="text-align: right;">
+											<span t-esc="doc['mosque'].phone" />
+										</td>
+										<td style="text-align: right;">
+											<span t-esc="doc['mosque'].permision_end_date" />
+										</td>
+										<td style="text-align: right;">
+											<span t-esc="doc['mosque'].attach_no" />
+										</td>
+										<td style="text-align: right;">
+											<span></span>
+										</td>
+										<td style="text-align: right;">
+											<span t-esc="doc['mosque'].categ_id.name" />
+										</td>
+										<td style="text-align: right;">
+											<span t-esc="doc['mosque'].name" />
+										</td>
+										<td style="text-align: right;">
+											<span t-esc="doc['mosque'].register_code" />
+										</td>
+							
+									</tr>
+								</tbody>
+							</table>                       
+							<br/><br/><br/>
+					  <h4 style="text-align: right;"><u>بيانات الاحصاء</u></h4>							                            
+							<table class="col-xs-12">
+							
+								<tr>
+									<th rowspan="2" class="text-center">مجموع</th>
+									<th rowspan="2" class="text-center">أخرى/أمهات</th>
+									<th rowspan="2" class="text-center">جامعي</th>
+									<th rowspan="2" class="text-center">ثانوي</th>
+									<th rowspan="2" class="text-center">متوسط</th>
+									<th rowspan="2" class="text-center">ابتدائي</th>
+									<th rowspan="2" class="text-center">تمهيدي</th>
+									<th colspan="2" class="text-center">عدد الطلاب</th>
+									<th rowspan="2" class="text-center">عدد الحلقات</th>
+									<th rowspan="2" class="text-center">الفترة</th>
+								</tr>
+							  <tr>
+							    <td class="text-center"><span>غير سعودي</span></td>
+							    <td class="text-center"><span>سعودي</span></td>
+							  </tr>
+								<t t-if="doc['periode_subh']">
+									<tr>
+										<td class="text-center">
+											<span t-esc="doc['total_student_subh']"/>
+										</td>
+										<td class="text-center">
+											<span t-esc="doc['total_student_subh_other']"/>
+										</td>
+										<td class="text-center">
+											<span t-esc="doc['total_student_subh_academic']"/>
+										</td>
+										<td class="text-center">
+											<span t-esc="doc['total_student_subh_secondary']"/>
+										</td>
+										<td class="text-center">
+											<span t-esc="doc['total_student_subh_medium']"/>
+										</td>
+										<td class="text-center">
+											<span t-esc="doc['total_student_subh_primary']"/>
+										</td>
+										<td class="text-center">
+											<span t-esc="doc['total_student_subh_preliminary']"/>
+										</td>
+										<td class="text-center">
+											<span t-esc="doc['total_student_subh_not_saudi']"/>
+										</td>
+										<td class="text-center">
+											<span t-esc="doc['total_student_subh_saudi']"/>
+										</td>
+										<td class="text-center">
+											<span t-esc="len(doc['periode_subh'])"/>
+										</td>
+										<td class="text-center">
+											الصبح
+										</td>
+							
+									</tr>
+								</t>
+								<t t-if="doc['periode_zuhr']">
+									<tr>
+										<td class="text-center">
+											<span t-esc="doc['total_student_zuhr']"/>
+										</td>
+										<td class="text-center">
+											<span t-esc="doc['total_student_zuhr_other']"/>
+										</td>
+										<td class="text-center">
+											<span t-esc="doc['total_student_zuhr_academic']"/>
+										</td>
+										<td class="text-center">
+											<span t-esc="doc['total_student_zuhr_secondary']"/>
+										</td>
+										<td class="text-center">
+											<span t-esc="doc['total_student_zuhr_medium']"/>
+										</td>
+										<td class="text-center">
+											<span t-esc="doc['total_student_zuhr_primary']"/>
+										</td>
+										<td class="text-center">
+											<span t-esc="doc['total_student_zuhr_preliminary']"/>
+										</td>
+										<td class="text-center">
+											<span t-esc="doc['total_student_zuhr_not_saudi']"/>
+										</td>
+										<td class="text-center">
+											<span t-esc="doc['total_student_zuhr_saudi']"/>
+										</td>
+										<td class="text-center">
+											<span t-esc="len(doc['periode_zuhr'])"/>
+										</td>
+										<td class="text-center">
+											الظهر
+										</td>
+							
+									</tr>
+								</t>
+								<t t-if="doc['periode_aasr']">
+									<tr>
+										<td class="text-center">
+											<span t-esc="doc['total_student_aasr']"/>
+										</td>
+										<td class="text-center">
+											<span t-esc="doc['total_student_aasr_other']"/>
+										</td>
+										<td class="text-center">
+											<span t-esc="doc['total_student_aasr_academic']"/>
+										</td>
+										<td class="text-center">
+											<span t-esc="doc['total_student_aasr_secondary']"/>
+										</td>
+										<td class="text-center">
+											<span t-esc="doc['total_student_aasr_medium']"/>
+										</td>
+										<td class="text-center">
+											<span t-esc="doc['total_student_aasr_primary']"/>
+										</td>
+										<td class="text-center">
+											<span t-esc="doc['total_student_aasr_preliminary']"/>
+										</td>
+										<td class="text-center">
+											<span t-esc="doc['total_student_aasr_not_saudi']"/>
+										</td>
+										<td class="text-center">
+											<span t-esc="doc['total_student_aasr_saudi']"/>
+										</td>
+										<td class="text-center">
+											<span t-esc="len(doc['periode_aasr'])"/>
+										</td>
+										<td class="text-center">
+											العصر
+										</td>
+							
+									</tr>
+								</t>
+								<t t-if="doc['periode_magrib']">
+									<tr>
+										<td class="text-center">
+											<span t-esc="doc['total_student_magrib']"/>
+										</td>
+										<td class="text-center">
+											<span t-esc="doc['total_student_magrib_other']"/>
+										</td>
+										<td class="text-center">
+											<span t-esc="doc['total_student_magrib_academic']"/>
+										</td>
+										<td class="text-center">
+											<span t-esc="doc['total_student_magrib_secondary']"/>
+										</td>
+										<td class="text-center">
+											<span t-esc="doc['total_student_magrib_medium']"/>
+										</td>
+										<td class="text-center">
+											<span t-esc="doc['total_student_magrib_primary']"/>
+										</td>
+										<td class="text-center">
+											<span t-esc="doc['total_student_magrib_preliminary']"/>
+										</td>
+										<td class="text-center">
+											<span t-esc="doc['total_student_magrib_not_saudi']"/>
+										</td>
+										<td class="text-center">
+											<span t-esc="doc['total_student_magrib_saudi']"/>
+										</td>
+										<td class="text-center">
+											<span t-esc="len(doc['periode_magrib'])"/>
+										</td>
+										<td class="text-center">
+											المغرب
+										</td>
+							
+									</tr>
+								</t>
+								<t t-if="doc['periode_esha']">
+									<tr>
+										<td class="text-center">
+											<span t-esc="doc['total_student_esha']"/>
+										</td>
+										<td class="text-center">
+											<span t-esc="doc['total_student_esha_other']"/>
+										</td>
+										<td class="text-center">
+											<span t-esc="doc['total_student_esha_academic']"/>
+										</td>
+										<td class="text-center">
+											<span t-esc="doc['total_student_esha_secondary']"/>
+										</td>
+										<td class="text-center">
+											<span t-esc="doc['total_student_esha_medium']"/>
+										</td>
+										<td class="text-center">
+											<span t-esc="doc['total_student_esha_primary']"/>
+										</td>
+										<td class="text-center">
+											<span t-esc="doc['total_student_esha_preliminary']"/>
+										</td>
+										<td class="text-center">
+											<span t-esc="doc['total_student_esha_not_saudi']"/>
+										</td>
+										<td class="text-center">
+											<span t-esc="doc['total_student_esha_saudi']"/>
+										</td>
+										<td class="text-center">
+											<span t-esc="len(doc['periode_esha'])"/>
+										</td>
+										<td class="text-center">
+											العشاء
+										</td>
+							
+									</tr>
+								</t>
+								 <tr>
+										<td class="text-center">
+											<span t-esc="doc['total_all_student']"/>
+										</td>
+										<td class="text-center">
+											<span t-esc="doc['total_student_other']"/>
+										</td>
+										<td class="text-center">
+											<span t-esc="doc['total_student_academic']"/>
+										</td>
+										<td class="text-center">
+											<span t-esc="doc['total_student_secondary']"/>
+										</td>
+										<td class="text-center">
+											<span t-esc="doc['total_student_medium']"/>
+										</td>
+										<td class="text-center">
+											<span t-esc="doc['total_student_primary']"/>
+										</td>
+										<td class="text-center">
+											<span t-esc="doc['total_student_preliminary']"/>
+										</td>
+										<td class="text-center">
+											<span t-esc="doc['total_student_not_saudi']"/>
+										</td>
+										<td class="text-center">
+											<span t-esc="doc['total_student_saudi']"/>
+										</td>
+										<td class="text-center">
+											<span t-esc="doc['total_episodes']"/>
+										</td>
+										<td class="text-center">
+											المجموع
+										</td> 
+									</tr>
+						 </table>
+							<br/><br/><br/>
+								<h4 style="text-align: right;"><u>بيانات الموظفين</u></h4>
+								<table class="col-xs-12">
+							
+									<tr>
+										<th class="text-center">ملاحظات</th>
+										<th class="text-center">عدد الخاتمين</th>
+										<th class="text-center">عدد الاجزاء</th>
+										<th class="text-center">عدد الحلقات</th>
+										<th class="text-center">عدد الطلاب</th>
+										<th class="text-center">مسمى الوظيفة</th>
+										<th class="text-center">رقم الجوال</th>
+										<th class="text-center">الجنسية</th>
+										<th class="text-center">اسم الموظف</th>
+										<th class="text-center">مسلسل</th>
+									</tr>
+									<tr>
+									</tr>
+									<t t-set="i" t-value="1"/>
+							 <t t-foreach="employee" t-as="line">
+									 <tr>
+										 <td class="text-center">
+			                        	    
+			                        	</td>
+			                        	 <td class="text-center">
+			                        	  <span t-esc="line['nbr_test_final']"/> 
+			                        	</td>
+			                        	 <td class="text-center">
+			                        	   <span t-esc="line['nbr_parts']"/> 
+			                        	</td>
+			                        	 <td class="text-center">
+			                        	 <span t-esc="line['nbr_episode']"/> 
+			                        	</td>
+			                        	 <td class="text-center">
+			                        	   <span t-esc="line['nbr_student']"/> 
+			                        	</td>
+			                        	 <td class="text-center">
+			                        	   <span t-esc="line['job']"/> 
+			                        	</td>
+			                        	 <td class="text-center">
+			                        	    <span t-esc="line['mobile']"/> 
+			                        	</td>
+			                        	 <td class="text-center">
+			                        	    <span t-esc="line['nationality']"/> 
+			                        	</td>
+			                        	 <td class="text-center">
+			                        	    <span t-esc="line['name']"/> 
+			                        	</td>
+			                        	 <td class="text-center">
+			                        	    <span t-esc="i"/> 
+			                        	</td>
+									 <t t-set="i" t-value="i+1"></t> 
+									 </tr>
+									 
+									 </t>
+									
+									
+								</table>                                
+                        </div>
+   </t>
+
+                        <div class="col-xs-12 footer">
+                            <div class="row text-center" style="border-top: 1px solid black;">
+                                <div class="col-xs-3 col-xs-offset-9 text-right">
+                                    <ul class="list-inline" style="margin-top:10px;">
+                                        <li>Page:</li>
+                                        <li>
+                                            <span class="page"/>
+                                        </li>
+                                        <li>/</li>
+                                        <li>
+                                            <span class="topage"/>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </t>
+
+</t>
+</template>
+        
+ 	 <report id="report_status_statement" 
+        string="بيان بحالة المدرسة / الحلقة" 
+        model="mk.mosque" 
+        report_type="qweb-pdf" 
+        name="mk_episode_management.report_status_statement_template" 
+        file="mk_episode_management.report_status_statement_template"/>
+   
+   
+    </data>
+</odoo>

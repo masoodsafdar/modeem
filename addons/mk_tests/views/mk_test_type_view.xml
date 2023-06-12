@@ -1,0 +1,132 @@
+<odoo>
+    <data>
+    
+ 	<record id="mk_test_type_form_view" model="ir.ui.view">
+          <field name="name">Test Type Form View</field>
+          <field name="model">mk.test.type</field>
+          <field name="arch" type="xml">
+              <form string = "Test Type">
+		  <header>
+		    
+		  </header>
+		  <sheet>
+		  	  <group>
+			  	<field name="company_id" required="1" options="{'no_open':1,'no_create':1}"/>
+			  </group>
+			  <group>
+			  <group>
+			  </group>
+			</group>
+			<group>
+		  		<field name="name" style="width:40%%" required="1"/>
+		  	</group>
+			  <group>
+			  	<group>
+				  	<label for="duration"/>
+		                    	<div>
+				  		<field name="duration" required="1" class="oe_inline"/> Minute
+			  		</div>
+			  	</group>
+			  </group>
+            <group>
+               <field name ="type_test_ids" style="width:40%%" required="1"/>
+            </group>
+			<group>
+			  	<group>
+			  		<field name="test_type" required="1" widget="radio"/>
+			  		<field name="target" required="1" widget="radio"/>
+			  	</group>
+			  	<group>
+			  		<field name="test_scope" required="1" widget="radio" invisible="1"/>
+			  		<field name="test_methodology" required="1" widget="radio"/>
+                    <field name="follow_super" widget="radio" required="1"/>
+                    <field name="check_img"/>
+			  	</group>
+                <group>
+                    
+                </group>
+			  </group>
+              <notebook colspan="4">
+                    <page string="Type Error Tests">
+                        <field name="test_error_ids">
+                            <tree editable="bottom">
+                                    <field name="type_error"    required="1" options="{'no_create': True,'no_open': True,}"/>
+                                    <field name="degree_deduct" required="1"/>
+                            </tree>
+                        </field>
+                    </page>
+                    <page string="Branches Tests" attrs="{'invisible':[('follow_super','=','test_mosq')]}">
+                        <field name="test_branche_ids">
+                            <tree editable="bottom">
+                                <field name="branch"/>
+                                <field name="branch_type"/>
+                                <field name="check"/>
+                                <field name="age_categ_ids" widget="many2many_tags"/>
+                                <field name="part_ids" widget="many2many_tags" options="{'no_create': True,'no_open': True,}"/>
+                            </tree>
+                        </field>
+                    </page>
+               </notebook>
+
+	  	</sheet>
+              </form>
+             </field>
+         </record>
+
+        <record id="mk_test_type_tree_view" model="ir.ui.view">
+            <field name="name">Test Type Tree View</field>
+            <field name="model">mk.test.type</field>
+            <field name="arch" type="xml">
+                <tree delete="0" string="Test Type">
+                	<field name="company_id"       required="1" options="{'no_open':1,'no_create':1}"/>
+                	<field name="name"             required="1"/>
+                	<field name="duration"         required="1"/>
+                	<field name="test_type"        required="1"/>
+                	<field name="test_scope"       required="1"/>
+                	<field name="target"           required="1"/>
+                	<field name="test_methodology" required="1"/>
+                </tree>
+            </field>
+        </record>
+        
+        <record id="mk_test_type_search_view" model="ir.ui.view">
+            <field name="name">Test Type Search View</field>
+            <field name="model">mk.test.type</field>
+            <field name="arch" type="xml">
+                <search string="Test Type ">
+                    <field name="name" string="Test Type" filter_domain="[('name','ilike', self)]"/>
+                    <field name="duration"/>
+                    <field name="type_test_ids"/> 
+                    
+                    <filter string="محدّد (متّصل)"              name="test_type_s"        domain="[('test_type', '=','s')]"/>
+					<filter string="مفتوح"                    name="test_type_o"        domain="[('test_type', '=','o')]"/>
+				    <separator/>
+				    <filter string="من الفاتحة الى الناس"     name="test_methodology_a" domain="[('test_methodology', '=','a')]"/>
+					<filter string="من الناس الى الفاتحة"     name="test_methodology_d" domain="[('test_methodology', '=','d')]"/>
+					<filter string="عشوائي"                   name="test_methodology_r" domain="[('test_methodology', '=','r')]"/>
+				    <separator/>
+				    <filter string="طالب/ الطالبة"            name="target_s"           domain="[('target', '=','s')]"/>
+					<filter string="معلّم"                     name="target_t"           domain="[('target', '=','t')]"/>
+					<filter string="مشرف/ مشرفة"              name="target_u"           domain="[('target', '=','u')]"/>
+				    <separator/>
+				    <filter string="اختبارات الجمعية"         name="test_cmp"           domain="[('follow_super', '=','test_cmp')]"/>
+				    <filter string="اختبارات المساجد/المدارس" name="test_mosq"          domain="[('follow_super', '=','test_mosq')]"/>
+                </search>
+            </field>
+        </record>
+        
+        <record id="mk_test_type_action" model="ir.actions.act_window">
+            <field name="name">Test Type </field>
+            <field name="res_model">mk.test.type</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+            <field name="search_view_id" ref="mk_test_type_search_view"/>
+        </record>
+
+	<menuitem name="Test Type " id="mk_test_type_menu" sequence="5" parent="mk_tests_settings_menu" action="mk_test_type_action"/>    
+
+    </data>  
+</odoo>

@@ -1,0 +1,89 @@
+<odoo>
+    <data>
+    
+ 	<record id="mk_subject_configuration_form_view" model="ir.ui.view">
+          <field name="name">Subjects Configuration Form View</field>
+          <field name="model">mk.subject.configuration</field>
+          <field name="arch" type="xml">
+              <form string = "Subjects Configuration">
+		  <!--<header>
+			<button name="act_draft" string="Set to Draft" type="object" states="active" class="oe_highlight"/>
+			<button name="act_active" string="Set to Active" type="object" states="draft" class="oe_highlight"/>
+			<field name="state" widget="statusbar" statusbar_visible="draft,active"/>
+		  </header>-->
+		  <sheet>
+		    <group>
+		  	<group colspan="4" col="6">
+			  	<field name="company_id" invisible="1" options="{'no_open':1,'no_create':1}"/>
+		 		<field name="center_department_id" domain="[('level_type','=','c')]" invisible="1"/>
+		 		<field name="mosque_id"            domain="[('center_department_id','=',center_department_id),
+		 		                                            ('center_department_id','!=',False)]" invisible="1"/>
+	 		</group>
+	 	      </group>
+		     <group>
+			  	<field name="program_id" domain="[('company_id','=',company_id),
+			  	                                  ('state','=','active')]" required="1"/>
+			  	<field name="approach_id" required="1" domain="[('state','=','active')]" options="{'no_open':1,'no_create':1}"/>
+		      </group>
+		    <group colspan="2" col="4">
+		      		<field name="name"      required="1"/>
+			  		<field name="detail_id" required="1" options="{'no_create': True,'no_open': True,}"/>
+			  		<field name="order"     required="1"/>
+			  		<field name="num_words" readonly="1"/>
+			  		<field name="part_id"   invisible="1" options="{'no_create': True,'no_open': True,}"/>
+		    </group>
+		    <group colspan="2" col="4">
+		      	<field name="from_surah" invisible="1" options="{'no_create': True,'no_open': True,}"/>
+			  	<field name="from_verse" domain="[('surah_id','=',from_surah)]" invisible="1" options="{'no_create': True,'no_open': True,}"/>
+			  	<field name="to_surah" invisible="1" options="{'no_create': True,'no_open': True,}"/>
+			  	<field name="to_verse" domain="[('surah_id','=',to_surah)]" invisible="1" options="{'no_create': True,'no_open': True,}"/>
+		    </group>
+    		    <group>
+			  	<!--<field name="is_test"/>-->
+		    </group>
+	  	</sheet>
+              </form>
+             </field>
+         </record>
+
+        <record id="mk_subject_configuration_tree_view" model="ir.ui.view">
+            <field name="name">Subjects Configuration Tree View</field>
+            <field name="model">mk.subject.configuration</field>
+            <field name="arch" type="xml">
+                <tree delete="0" string="Subjects Configuration" colors="red:state=='draft';blue:state=='active'">
+                	<field name="company_id"  invisible="1" options="{'no_create': True,'no_open': True,}"/>
+	 				<field name="approach_id" options="{'no_create': True,'no_open': True,}"/>
+		  			<field name="detail_id" required="1"/>
+		  			<field name="num_words"/>
+	 				<field name="name"      required="1"/>
+	 				<field name="order"/>
+	 				<field name="state"/>
+                </tree>
+            </field>
+        </record>
+        
+        <record id="mk_subject_configuration_search_view" model="ir.ui.view">
+            <field name="name">Subjects Configuration Search View</field>
+            <field name="model">mk.subject.configuration</field>
+            <field name="arch" type="xml">
+                <search string="Subjects Configuration">
+                	<field name="name" string="Punishment" filter_domain="[('name','ilike', self)]"/>
+                </search>
+            </field>
+        </record>
+        
+        <record id="mk_subject_configuration_action" model="ir.actions.act_window">
+            <field name="name">Subjects Configuration</field>
+            <field name="res_model">mk.subject.configuration</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+            <field name="search_view_id" ref="mk_subject_configuration_search_view"/>
+        </record>
+
+	<!--<menuitem name="Subjects Configuration" id="mk_subject_configuration_configuration_menu" sequence="5" parent="mk_programs_menu" action="mk_subject_configuration_action"/>-->
+
+    </data>  
+</odoo>

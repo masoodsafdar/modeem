@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <!--data>
+
+
+
+            <record id="multiple_assgin_wizerd" model="ir.ui.view">
+                <field name="name">التوزيع علي المراكز</field>
+                <field name="model">center.assign</field>
+                <field name="arch" type="xml">
+                <form >
+                        <group col="4" colspan="4">
+                        <field name="pointer" readonly="1" invisible="1"/>
+                            <field name="distribuation_method"/>
+                            <field name="departments" attrs="{'invisible':[('distribuation_method','=','all')]}"/>
+                        </group>
+                        
+                        <notebook>
+                        <page string="chose items">    
+                        <field name="lines" domain="[('company_pointer','=',pointer),('state','=','new')]" options="{'no_create': 1, 'no_create_edit': 1,'no_open':1}">
+                            <tree>
+                                <field name="item_field"/>
+                                <field name="item_crateria"/>
+                                <field name="item"/>
+                                <field name="item_degree"/>
+                                <field name="item_description"/>
+                                <field name="need_approve"/>
+                                <field name="distribuation_method"/>
+                            </tree>
+                        </field>
+                    </page>
+                        </notebook>
+                        
+                    <footer>
+                    <button name="yes" type="object" string="yes" class="oe_highlight"/>
+                    <button string="no" class="oe_link" special="cancel"/>
+    
+
+        </footer>
+                </form>
+                </field>
+            </record>
+
+
+
+
+            <record id="one_assgin_wizerd" model="ir.ui.view">
+                <field name="name">التزيع علي المراكز</field>
+                <field name="model">one.center.assign</field>
+                <field name="arch" type="xml">
+                <form >
+                        <group col="4" colspan="4">
+
+
+                            <field name="distribuation_method"/>
+
+                                    <field name="departments" widget="many2many_tags" attrs="{'invisible':[('distribuation_method','=','all')]}"/>   
+                                      <field name="lines" invisible="1"/>
+      
+                            <field name="distribuation_method"/>
+                            <field name="company_required_pointers"/>
+                            <field name="lines" invisible="1" />
+                            <field name="departments"> 
+                            <tree editable="bottom">  
+                            <field name="center"/> 
+                            <field name="center_req_pointer"/> 
+                        </tree>
+                    </field>
+                                             
+                        </group>
+                        
+                       
+                        
+                    <footer>
+                    <button name="assgin_one" type="object" string="distribute" class="oe_highlight"/>
+                    <button string="no" class="oe_link" special="cancel"/>
+    
+
+        </footer>
+                </form>
+                </field>
+            </record>
+
+
+<record id="multiple_assgin_actoinn" model="ir.actions.act_window">
+                <field name="name"> التوزيع علي المراكز</field>
+                <field name="res_model">center.assign</field>
+                <field name="view_type">form</field>
+                <field name="view_mode">form</field>
+                <field name="view_id" ref="multiple_assgin_wizerd"/>
+                <field name="target">new</field>
+</record>
+<record id="one_assgin_actoinn" model="ir.actions.act_window">
+                <field name="name"> التوزيع علي المراكز</field>
+                <field name="res_model">one.center.assign</field>
+                <field name="view_type">form</field>
+                <field name="view_mode">form</field>
+                <field name="view_id" ref="one_assgin_wizerd"/>
+                <field name="target">new</field>
+</record>
+</data-->
+</odoo>

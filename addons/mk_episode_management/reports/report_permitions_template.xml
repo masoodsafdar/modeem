@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  <data>
+    <template id="report_mosque_permitions">
+      <t t-call="web.html_container">
+        <t t-foreach="docs" t-as="o">
+          <t t-call="web.external_layout">
+            <link rel="stylesheet" href="/mk_episode_management/static/src/font.css"/>
+
+            <div class="footer">
+              <div >
+
+              </div>
+            </div>
+
+            <div class="oe_structure"/>
+
+              <div class="page">
+
+                <t t-if="o.categ_type =='male'">
+                  <div  class="col-xs-12" style="background-image:url(/mk_episode_management/static/src/img/Opening_mosqu_female.jpg)">
+
+                    <p class="text-center" style="font-size:20px;font-family:Neo Sans Arabic">
+                      <br></br>
+                      <br></br>
+                      <br></br>
+                      <br></br>
+                      <br></br>
+                      <br></br>
+
+                      <br> ...الحمدلله والصلاة والسلام على رسول الله </br>
+                      <br>:أما بعد</br>
+                      <p class="text-center" style="font-size:20px; font-family:Neo Sans Arabic">فإن الجمعية الخيرية لتحفيظ القرآن الكريم في منطقة الرياض
+                            بناء على الصلاحية المخولة لها قررت منح التصريح رقم
+                            (                        <span t-field="o.center_id.code"/>
+-                        <span t-field="o.masjed_id.register_code"/>
+-                        <span t-field="o.district_id.code"/>
+)
+                              لمدرسة:(                        <span t-field="o.masjed_id"/>
+) لتحفيظ القرآن الكريم 
+                        <br>(بحي(                          <span t-field="o.district_id"/>
+ )التابع لـ  (                          <span t-field="o.center_id"/>
+                        </br>
+
+                      </p>
+                      <p class="text-center" style="font-size:20px; font-family:Neo Sans Arabic"> ,,,هذا ونسأل الله التوفيق والإعانة والسداد</p>
+                    </p>
+
+                  </div>
+                </t>
+                <t t-elif="o.categ_type =='female'">
+                  <div class="col-xs-12" style="background-image:url(/mk_episode_management/static/src/img/Opening_mosqu_female_morning.jpg)">
+                    <!--div class="backgroundimage" style="font-size:3em;width:200mm; height:230mm;z-index:1000;">
+                             <img src="/mk_episode_management/static/src/img/Opening_mosqu_female_morning.jpg"/>
+                          </div-->
+
+                    <p class="text-center" style="font-size:20px;font-family:Neo Sans Arabic">
+                      <br></br>
+                      <br></br>
+                      <br></br>
+                      <br></br>
+                      <br></br>
+                      <br></br>
+
+                      <br> ...الحمدلله والصلاة والسلام على رسول الله </br>
+                      <br>:أما بعد</br>
+                      <p class="text-center" style="font-size:20px; padding-right:5%; padding-top:50px ;font-family:Neo Sans Arabic">فإن الجمعية الخيرية لتحفيظ القرآن الكريم في منطقة الرياض
+                            بناء على الصلاحية المخولة لها قررت منح التصريح رقم
+                            (                        <span t-field="o.center_id.code"/>
+-                        <span t-field="o.masjed_id.register_code"/>
+-                        <span t-field="o.district_id.code"/>
+)
+                              لمدرسة:(                        <span t-field="o.masjed_id"/>
+) لتحفيظ القرآن الكريم 
+                        <br>(بحي(                          <span t-field="o.district_id"/>
+ )التابع لـ (                          <span t-field="o.center_id"/>
+                        </br>
+
+                      </p>
+                      <p class="text-center" style="font-size:20px;font-family:Neo Sans Arabic"> ,,,هذا ونسأل الله التوفيق والإعانة والسداد</p>
+                    </p>
+
+                  </div>
+
+                </t>
+              </div>
+
+          </t>
+        </t>
+      </t>
+    </template>
+
+
+
+  </data>
+</odoo>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="website_support_ticket_categories_view_form" model="ir.ui.view">
+            <field name="name">website.support.ticket.categories.form.view</field>
+            <field name="model">website.support.ticket.categories</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="website_support_ticket_categories_view_tree" model="ir.ui.view">
+            <field name="name">website.support.ticket.categories.tree.view</field>
+            <field name="model">website.support.ticket.categories</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="sequence" widget="handle"/>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="website_support_ticket_categories_action" model="ir.actions.act_window">
+            <field name="name">Support Ticket Categories</field>
+            <field name="res_model">website.support.ticket.categories</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Create new category</p>
+            </field>
+        </record>
+
+        <record id="sequence_supp_category_seq" model="ir.sequence">
+            <field name="name">website.support.ticket.categories sequence</field>
+            <field name="code">website.support.ticket.categories</field>
+            <field eval="1" name="number_next"/>
+            <field eval="1" name="number_increment"/>
+        </record>
+
+
+        <menuitem id="website_support_ticket_categories_menu" name="Categories"
+                  parent="website_support_parent_menu_main" action="website_support_ticket_categories_action"
+                  sequence="20" groups="website_support.group_technical_support_settings"/>
+
+    </data>
+</odoo>

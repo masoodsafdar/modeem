@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="incentive_data1" model="mk.incentive">
+        	<field name="name">راتب شهري لمدة سنة + 1100 ريال مقطوع</field>
+        </record>
+        <record id="incentive_data2" model="mk.incentive">
+        	<field name="name">راتب شهري لمدة سنة</field>
+        </record>
+        <record id="incentive_data3" model="mk.incentive">
+        	<field name="name">نصف راتب شهري لمدة سنة</field>
+        </record>
+        <record id="incentive_data4" model="mk.incentive">
+        	<field name="name">تنبيه(لسنة واحدة)</field>
+        </record>
+        <record id="incentive_data5" model="mk.incentive">
+        	<field name="name">طي القيد</field>
+        </record>
+        <record id="incentive_data6" model="mk.incentive">
+        	<field name="name">2000 ريال مقطوع</field>
+        </record>
+        <record id="incentive_data7" model="mk.incentive">
+        	<field name="name">1000 ريال مقطوع</field>
+        </record>
+        <record id="incentive_data8" model="mk.incentive">
+        	<field name="name">بدون حافز</field>
+        </record>
+    </data>
+</openerp>

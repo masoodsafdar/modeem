@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="1">
+        <!-- notify all employees of module installation -->
+        <!--
+        <record id="mk_center_data" model="mk.center">
+          <field name="name">Center A</field>
+        </record>
+        <record id="mk_stage_data" model="mk.stage">
+          <field name="name">Stage 1</field>
+          <field name="mosque_id" eval="ref('mk_master_models.model_mk_mosque')"/>
+        </record>
+-->
+
+        <!--surah and Ayaat Data-->
+        <record id="mk_surah_data1" model="mk.surah">
+        	<field name="name">الفاتحة</field>
+            <field name="ayaat_num">7</field>
+        </record>
+        <record id="mk_surah_data2" model="mk.surah">
+        	<field name="name">البقرة</field>
+            <field name="ayaat_num">286</field>
+        </record>
+        <record id="mk_surah_data3" model="mk.surah">
+        	<field name="name">آل عمران</field>
+            <field name="ayaat_num">200</field>
+        </record>
+        <record id="mk_surah_data4" model="mk.surah">
+        	<field name="name">النساء</field>
+            <field name="ayaat_num">176</field>
+        </record>
+        <record id="mk_surah_data5" model="mk.surah">
+        	<field name="name">المائدة</field>
+            <field name="ayaat_num">120</field>
+        </record>
+        <record id="mk_surah_data6" model="mk.surah">
+        	<field name="name">الأنعام</field>
+            <field name="ayaat_num">165</field>
+        </record>
+        <record id="mk_surah_data7" model="mk.surah">
+        	<field name="name">الأعراف</field>
+            <field name="ayaat_num">206</field>
+        </record>
+        <record id="mk_surah_data8" model="mk.surah">
+        	<field name="name">الأنفال</field>
+            <field name="ayaat_num">75</field>
+        </record>
+        <record id="mk_surah_data9" model="mk.surah">
+        	<field name="name">التوبة</field>
+            <field name="ayaat_num">129</field>
+        </record>
+        <record id="mk_surah_data10" model="mk.surah">
+        	<field name="name">يونس</field>
+            <field name="ayaat_num">109</field>
+        </record>
+        <record id="mk_surah_data11" model="mk.surah">
+        	<field name="name">هود</field>
+            <field name="ayaat_num">123</field>
+        </record>
+        <record id="mk_surah_data12" model="mk.surah">
+        	<field name="name">يوسف</field>
+            <field name="ayaat_num">111</field>
+        </record>
+        <record id="mk_surah_data13" model="mk.surah">
+        	<field name="name">الرعد</field>
+            <field name="ayaat_num">43</field>
+        </record>
+        <record id="mk_surah_data14" model="mk.surah">
+        	<field name="name">إبراهيم</field>
+            <field name="ayaat_num">52</field>
+        </record>
+        <record id="mk_surah_data15" model="mk.surah">
+        	<field name="name">الحجر</field>
+            <field name="ayaat_num">99</field>
+        </record>
+        <record id="mk_surah_data16" model="mk.surah">
+        	<field name="name">النحل</field>
+            <field name="ayaat_num">128</field>
+        </record>
+        <record id="mk_surah_data17" model="mk.surah">
+        	<field name="name">الإسراء</field>
+            <field name="ayaat_num">111</field>
+        </record>
+        <record id="mk_surah_data18" model="mk.surah">
+        	<field name="name">الكهف</field>
+            <field name="ayaat_num">110</field>
+        </record>
+        <record id="mk_surah_data19" model="mk.surah">
+        	<field name="name">مريم</field>
+            <field name="ayaat_num">98</field>
+        </record>
+        <record id="mk_surah_data20" model="mk.surah">
+        	<field name="name">طه</field>
+            <field name="ayaat_num">135</field>
+        </record>
+        <record id="mk_surah_data21" model="mk.surah">
+        	<field name="name">الأنبياء</field>
+            <field name="ayaat_num">112</field>
+        </record>
+        <record id="mk_surah_data22" model="mk.surah">
+        	<field name="name">الحج</field>
+            <field name="ayaat_num">78</field>
+        </record>
+        <record id="mk_surah_data23" model="mk.surah">
+        	<field name="name">المؤمنون</field>
+            <field name="ayaat_num">118</field>
+        </record>
+        <record id="mk_surah_data24" model="mk.surah">
+        	<field name="name">النور</field>
+            <field name="ayaat_num">64</field>
+        </record>
+        <record id="mk_surah_data25" model="mk.surah">
+        	<field name="name">الفرقان</field>
+            <field name="ayaat_num">77</field>
+        </record>
+        <record id="mk_surah_data26" model="mk.surah">
+        	<field name="name">الشعراء</field>
+            <field name="ayaat_num">227</field>
+        </record>
+        <record id="mk_surah_data27" model="mk.surah">
+        	<field name="name">النمل</field>
+            <field name="ayaat_num">93</field>
+        </record>
+        <record id="mk_surah_data28" model="mk.surah">
+        	<field name="name">القصص</field>
+            <field name="ayaat_num">88</field>
+        </record>
+        <record id="mk_surah_data29" model="mk.surah">
+        	<field name="name">العنكبوت</field>
+            <field name="ayaat_num">69</field>
+        </record>
+        <record id="mk_surah_data30" model="mk.surah">
+        	<field name="name">الروم</field>
+            <field name="ayaat_num">60</field>
+        </record>
+        <record id="mk_surah_data31" model="mk.surah">
+        	<field name="name">لقمان</field>
+            <field name="ayaat_num">34</field>
+        </record>
+        <record id="mk_surah_data32" model="mk.surah">
+        	<field name="name">السجدة</field>
+            <field name="ayaat_num">30</field>
+        </record>
+        <record id="mk_surah_data33" model="mk.surah">
+        	<field name="name">الأحزاب</field>
+            <field name="ayaat_num">73</field>
+        </record>
+        <record id="mk_surah_data34" model="mk.surah">
+        	<field name="name">سبأ</field>
+            <field name="ayaat_num">54</field>
+        </record>
+        <record id="mk_surah_data35" model="mk.surah">
+        	<field name="name">فاطر</field>
+            <field name="ayaat_num">45</field>
+        </record>
+        <record id="mk_surah_data36" model="mk.surah">
+        	<field name="name">يس</field>
+            <field name="ayaat_num">83</field>
+        </record>
+        <record id="mk_surah_data37" model="mk.surah">
+        	<field name="name">الصافات</field>
+            <field name="ayaat_num">182</field>
+        </record>
+        <record id="mk_surah_data38" model="mk.surah">
+        	<field name="name">ص</field>
+            <field name="ayaat_num">88</field>
+        </record>
+        <record id="mk_surah_data39" model="mk.surah">
+        	<field name="name">الزمر</field>
+            <field name="ayaat_num">75</field>
+        </record>
+        <record id="mk_surah_data40" model="mk.surah">
+        	<field name="name">غافر</field>
+            <field name="ayaat_num">85</field>
+        </record>
+        <record id="mk_surah_data41" model="mk.surah">
+        	<field name="name">فصلت</field>
+            <field name="ayaat_num">54</field>
+        </record>
+        <record id="mk_surah_data42" model="mk.surah">
+        	<field name="name">الشوري</field>
+            <field name="ayaat_num">53</field>
+        </record>
+        <record id="mk_surah_data43" model="mk.surah">
+        	<field name="name">الزخرف</field>
+            <field name="ayaat_num">89</field>
+        </record>
+        <record id="mk_surah_data44" model="mk.surah">
+        	<field name="name">الدخان</field>
+            <field name="ayaat_num">59</field>
+        </record>
+        <record id="mk_surah_data45" model="mk.surah">
+        	<field name="name">الجاثية</field>
+            <field name="ayaat_num">37</field>
+        </record>
+        <record id="mk_surah_data46" model="mk.surah">
+        	<field name="name">الأحقاف</field>
+            <field name="ayaat_num">35</field>
+        </record>
+        <record id="mk_surah_data47" model="mk.surah">
+        	<field name="name">محمد</field>
+            <field name="ayaat_num">38</field>
+        </record>
+        <record id="mk_surah_data48" model="mk.surah">
+        	<field name="name">الفتح</field>
+            <field name="ayaat_num">29</field>
+        </record>
+        <record id="mk_surah_data49" model="mk.surah">
+        	<field name="name">الحجرات</field>
+            <field name="ayaat_num">18</field>
+        </record>
+        <record id="mk_surah_data50" model="mk.surah">
+        	<field name="name">ق</field>
+            <field name="ayaat_num">45</field>
+        </record>
+        <record id="mk_surah_data51" model="mk.surah">
+        	<field name="name">الذاريات</field>
+            <field name="ayaat_num">60</field>
+        </record>
+        <record id="mk_surah_data52" model="mk.surah">
+        	<field name="name">الطور</field>
+            <field name="ayaat_num">49</field>
+        </record>
+        <record id="mk_surah_data53" model="mk.surah">
+        	<field name="name">النجم</field>
+            <field name="ayaat_num">62</field>
+        </record>
+        <record id="mk_surah_data54" model="mk.surah">
+        	<field name="name">القمر</field>
+            <field name="ayaat_num">55</field>
+        </record>
+        <record id="mk_surah_data55" model="mk.surah">
+        	<field name="name">الرحمن</field>
+            <field name="ayaat_num">78</field>
+        </record>
+       
+        <record id="mk_surah_data56" model="mk.surah">
+        	<field name="name">الواقعة</field>
+            <field name="ayaat_num">96</field>
+        </record>
+        <record id="mk_surah_data57" model="mk.surah">
+        	<field name="name">الحديد</field>
+            <field name="ayaat_num">29</field>
+        </record>
+        <record id="mk_surah_data58" model="mk.surah">
+        	<field name="name">المجادلة</field>
+            <field name="ayaat_num">22</field>
+        </record>
+        <record id="mk_surah_data59" model="mk.surah">
+        	<field name="name">الحشر</field>
+            <field name="ayaat_num">24</field>
+        </record>
+        <record id="mk_surah_data60" model="mk.surah">
+        	<field name="name">الممتحنة</field>
+            <field name="ayaat_num">13</field>
+        </record>
+        <record id="mk_surah_data61" model="mk.surah">
+        	<field name="name">الصف</field>
+            <field name="ayaat_num">14</field>
+        </record>
+        <record id="mk_surah_data62" model="mk.surah">
+        	<field name="name">الجمعة</field>
+            <field name="ayaat_num">11</field>
+        </record>
+        <record id="mk_surah_data63" model="mk.surah">
+        	<field name="name">المنافقون</field>
+            <field name="ayaat_num">11</field>
+        </record>
+         <record id="mk_surah_data64" model="mk.surah">
+        	<field name="name">التغابن</field>
+            <field name="ayaat_num">18</field>
+        </record>
+         <record id="mk_surah_data65" model="mk.surah">
+        	<field name="name">الطلاق</field>
+            <field name="ayaat_num">12</field>
+        </record>
+         <record id="mk_surah_data66" model="mk.surah">
+        	<field name="name">التحريم</field>
+            <field name="ayaat_num">12</field>
+        </record>
+         <record id="mk_surah_data67" model="mk.surah">
+        	<field name="name">الملك</field>
+            <field name="ayaat_num">30</field>
+        </record>
+         <record id="mk_surah_data68" model="mk.surah">
+        	<field name="name">القلم</field>
+            <field name="ayaat_num">52</field>
+        </record>
+         <record id="mk_surah_data69" model="mk.surah">
+        	<field name="name">الحاقة</field>
+            <field name="ayaat_num">52</field>
+        </record>
+         <record id="mk_surah_data70" model="mk.surah">
+        	<field name="name">المعارج</field>
+            <field name="ayaat_num">44</field>
+        </record>
+         <record id="mk_surah_data71" model="mk.surah">
+        	<field name="name">نوح</field>
+            <field name="ayaat_num">28</field>
+        </record>
+         <record id="mk_surah_data72" model="mk.surah">
+        	<field name="name">الجن</field>
+            <field name="ayaat_num">28</field>
+        </record>
+         <record id="mk_surah_data73" model="mk.surah">
+        	<field name="name">المزمل</field>
+            <field name="ayaat_num">20</field>
+        </record>
+         <record id="mk_surah_data74" model="mk.surah">
+        	<field name="name">المدثر</field>
+            <field name="ayaat_num">56</field>
+        </record>
+         <record id="mk_surah_data75" model="mk.surah">
+        	<field name="name">القيامة</field>
+            <field name="ayaat_num">40</field>
+        </record>
+         <record id="mk_surah_data76" model="mk.surah">
+        	<field name="name">الإنسان</field>
+            <field name="ayaat_num">31</field>
+        </record>
+         <record id="mk_surah_data77" model="mk.surah">
+        	<field name="name">المرسلات</field>
+            <field name="ayaat_num">50</field>
+        </record>
+         <record id="mk_surah_data78" model="mk.surah">
+        	<field name="name">النبأ</field>
+            <field name="ayaat_num">40</field>
+        </record>
+         <record id="mk_surah_data79" model="mk.surah">
+        	<field name="name">النازعات</field>
+            <field name="ayaat_num">46</field>
+        </record>
+         <record id="mk_surah_data80" model="mk.surah">
+        	<field name="name">عبس</field>
+            <field name="ayaat_num">42</field>
+        </record>
+         <record id="mk_surah_data81" model="mk.surah">
+        	<field name="name">التكوير</field>
+            <field name="ayaat_num">29</field>
+        </record>
+         <record id="mk_surah_data82" model="mk.surah">
+        	<field name="name">الانفطار</field>
+            <field name="ayaat_num">19</field>
+        </record>
+         <record id="mk_surah_data83" model="mk.surah">
+        	<field name="name">المطففين</field>
+            <field name="ayaat_num">36</field>
+        </record>
+         <record id="mk_surah_data84" model="mk.surah">
+        	<field name="name">الانشقاق</field>
+            <field name="ayaat_num">25</field>
+        </record>
+        <record id="mk_surah_data85" model="mk.surah">
+        	<field name="name">البروج</field>
+            <field name="ayaat_num">22</field>
+        </record>
+        <record id="mk_surah_data86" model="mk.surah">
+        	<field name="name">الطارق</field>
+            <field name="ayaat_num">17</field>
+        </record>
+        <record id="mk_surah_data87" model="mk.surah">
+        	<field name="name">الأعلي</field>
+            <field name="ayaat_num">19</field>
+        </record>
+        <record id="mk_surah_data88" model="mk.surah">
+        	<field name="name">الغاشية</field>
+            <field name="ayaat_num">26</field>
+        </record>
+        <record id="mk_surah_data89" model="mk.surah">
+        	<field name="name">الفجر</field>
+            <field name="ayaat_num">30</field>
+        </record>
+        <record id="mk_surah_data90" model="mk.surah">
+        	<field name="name">البلد</field>
+            <field name="ayaat_num">20</field>
+        </record>
+        <record id="mk_surah_data91" model="mk.surah">
+        	<field name="name">الشمس</field>
+            <field name="ayaat_num">15</field>
+        </record>
+        <record id="mk_surah_data92" model="mk.surah">
+        	<field name="name">الليل</field>
+            <field name="ayaat_num">21</field>
+        </record>
+        <record id="mk_surah_data93" model="mk.surah">
+        	<field name="name">الضحي</field>
+            <field name="ayaat_num">11</field>
+        </record>
+        <record id="mk_surah_data94" model="mk.surah">
+        	<field name="name">الشرح</field>
+            <field name="ayaat_num">8</field>
+        </record>
+        <record id="mk_surah_data95" model="mk.surah">
+        	<field name="name">التين</field>
+            <field name="ayaat_num">8</field>
+        </record>
+        <record id="mk_surah_data96" model="mk.surah">
+        	<field name="name">العلق</field>
+            <field name="ayaat_num">19</field>
+        </record>
+        <record id="mk_surah_data988" model="mk.surah">
+        	<field name="name">القدر</field>
+            <field name="ayaat_num">5</field>
+        </record>
+        <record id="mk_surah_data97" model="mk.surah">
+        	<field name="name">البينة</field>
+            <field name="ayaat_num">8</field>
+        </record>
+        <record id="mk_surah_data98" model="mk.surah">
+        	<field name="name">الزلزلة</field>
+            <field name="ayaat_num">8</field>
+        </record>
+        <record id="mk_surah_data99" model="mk.surah">
+        	<field name="name">العاديات</field>
+            <field name="ayaat_num">11</field>
+        </record>
+        <record id="mk_surah_data100" model="mk.surah">
+        	<field name="name">القارعة</field>
+            <field name="ayaat_num">11</field>
+        </record>
+        <record id="mk_surah_data101" model="mk.surah">
+        	<field name="name">التكاثر</field>
+            <field name="ayaat_num">8</field>
+        </record>
+        <record id="mk_surah_data102" model="mk.surah">
+        	<field name="name">العصر</field>
+            <field name="ayaat_num">3</field>
+        </record>
+        <record id="mk_surah_data103" model="mk.surah">
+        	<field name="name">الهمزة</field>
+            <field name="ayaat_num">9</field>
+        </record>
+        
+        <record id="mk_surah_data106" model="mk.surah">
+        	<field name="name">الفيل</field>
+            <field name="ayaat_num">5</field>
+        </record>
+        <record id="mk_surah_data107" model="mk.surah">
+        	<field name="name">قريش</field>
+            <field name="ayaat_num">4</field>
+        </record>
+        <record id="mk_surah_data108" model="mk.surah">
+        	<field name="name">الماعون</field>
+            <field name="ayaat_num">7</field>
+        </record>
+        <record id="mk_surah_data109" model="mk.surah">
+        	<field name="name">الكوثر</field>
+            <field name="ayaat_num">3</field>
+        </record>
+        <record id="mk_surah_data110" model="mk.surah">
+        	<field name="name">الكافرون</field>
+            <field name="ayaat_num">6</field>
+        </record>
+        <record id="mk_surah_data111" model="mk.surah">
+        	<field name="name">النصر</field>
+            <field name="ayaat_num">3</field>
+        </record>
+        <record id="mk_surah_data112" model="mk.surah">
+        	<field name="name">المسد</field>
+            <field name="ayaat_num">5</field>
+        </record>
+        <record id="mk_surah_data113" model="mk.surah">
+        	<field name="name">الإخلاص</field>
+            <field name="ayaat_num">4</field>
+        </record>
+        <record id="mk_surah_data114" model="mk.surah">
+        	<field name="name">الفلق</field>
+            <field name="ayaat_num">5</field>
+        </record>
+        <record id="mk_surah_data115" model="mk.surah">
+        	<field name="name">الناس</field>
+            <field name="ayaat_num">6</field>
+        </record>
+    </data>
+</openerp>

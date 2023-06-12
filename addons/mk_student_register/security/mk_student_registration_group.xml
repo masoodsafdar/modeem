@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+<record model="ir.module.category" id="module_category_student">
+            <field name="name">صلاحيات تسجيل الطلاب</field>
+            <field name="sequence">0</field>
+        </record>
+
+<record id="group_student_profile_read" model="res.groups">
+            <field name="name">Student Profile Read</field>
+            <field name="category_id" ref="module_category_student" />
+                 <field name="users" eval="[(4, ref('base.user_root'))]"/>
+
+        </record>
+
+        <record id="group_student_profile_create" model="res.groups">
+            <field name="name">Student Profile Create</field>
+            <field name="implied_ids" eval="[(4, ref('group_student_profile_read'))]"/>
+            <field name="category_id" ref="module_category_student" />
+                 <field name="users" eval="[(4, ref('base.user_root'))]"/>
+
+        </record>
+
+        <record id="group_student_profile_update" model="res.groups">
+            <field name="name">Student Profile Update</field>
+            <field name="implied_ids" eval="[(4, ref('group_student_profile_read'))]"/>
+            <field name="category_id" ref="module_category_student" />
+                 <field name="users" eval="[(4, ref('base.user_root'))]"/>
+
+        </record>
+
+        <record id="group_student_profile_delete" model="res.groups">
+            <field name="name">Student Profile Delete</field>
+            <field name="implied_ids" eval="[(4, ref('group_student_profile_read'))]"/>
+            <field name="category_id" ref="module_category_student" />
+             <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+
+	<record id="group_student_profile_password" model="res.groups">
+            <field name="name">إرسال كلمة المرور للطلاب</field>
+            <field name="implied_ids" eval="[(4, ref('group_student_profile_read'))]"/>
+            <field name="category_id" ref="module_category_student" />
+                 <field name="users" eval="[(4, ref('base.user_root'))]"/>
+
+        </record>
+
+        <record id="group_student_parent_read" model="res.groups">
+            <field name="name">Student Parent Read</field>
+            <field name="category_id" ref="module_category_student" />
+                 <field name="users" eval="[(4, ref('base.user_root'))]"/>
+
+        </record>
+
+        <record id="group_student_parent_create" model="res.groups">
+            <field name="name">Student Parent Create</field>
+            <field name="implied_ids" eval="[(4, ref('group_student_parent_read'))]"/>
+            <field name="category_id" ref="module_category_student" />
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+
+        <record id="group_student_parent_update" model="res.groups">
+            <field name="name">Student Parent Update</field>
+            <field name="implied_ids" eval="[(4, ref('group_student_parent_read'))]"/>
+            <field name="category_id" ref="module_category_student" />
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+
+        <record id="confirm_student_placement_to_episode_read" model="res.groups">
+            <field name="name">Confirm Student Placement to Episode Read</field>
+            <field name="implied_ids" eval="[(4, ref('group_student_profile_read'))]"/>
+            <field name="category_id" ref="module_category_student" />
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+
+        <record id="confirm_student_placement_to_episode_create" model="res.groups">
+            <field name="name">Confirm Student Placement to Episode Create</field>
+            <field name="implied_ids" eval="[(4, ref('confirm_student_placement_to_episode_read'))]"/>
+            <field name="category_id" ref="module_category_student" />
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+
+        <record id="confirm_student_placement_to_episode_edit" model="res.groups">
+            <field name="name">Edit Student Confirmation to Episode</field>
+            <field name="implied_ids" eval="[(4, ref('confirm_student_placement_to_episode_read'))]"/>
+            <field name="category_id" ref="module_category_student" />
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+
+        <record id="accept_or_deny_student_confirmation_to_episode" model="res.groups">
+            <field name="name">Accept or Deny Student Confirmation to Episode</field>
+            <field name="implied_ids" eval="[(4, ref('confirm_student_placement_to_episode_read'))]"/>
+            <field name="category_id" ref="module_category_student" />
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+
+        <record id="set_student_online" model="res.groups">
+            <field name="name">تعيين الطالب عن بعد</field>
+            <field name="implied_ids" eval="[(4, ref('group_student_profile_update'))]"/>
+            <field name="category_id" ref="module_category_student" />
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+
+        <record id="accept_or_deny_student_confirmation_to_mosque" model="res.groups">
+            <field name="name">Accept or Deny Student Confirmation to Mosque</field>
+            <field name="implied_ids" eval="[(4, ref('confirm_student_placement_to_episode_read'))]"/>
+            <field name="category_id" ref="module_category_student" />
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+
+        <record id="internal_students_transfer_read" model="res.groups">
+            <field name="name">Internal Students Transfer Read</field>
+            <field name="implied_ids" eval="[(4, ref('confirm_student_placement_to_episode_read'))]"/>
+            <field name="category_id" ref="module_category_student" />
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+
+        <record id="internal_students_transfer_edit" model="res.groups">
+            <field name="name">Internal Students Transfer edit</field>
+            <field name="implied_ids" eval="[(4, ref('confirm_student_placement_to_episode_read'))]"/>
+            <field name="category_id" ref="module_category_student" />
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+
+        <record id="internal_students_transfer_create" model="res.groups">
+            <field name="name">Internal Students Transfer create</field>
+            <field name="implied_ids" eval="[(4, ref('internal_students_transfer_read'))]"/>
+            <field name="category_id" ref="module_category_student" />
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+
+        <record id="accept_or_deny_internal_students_transfer" model="res.groups">
+            <field name="name">Accept or Deny Internal Students Transfer </field>
+            <field name="implied_ids" eval="[(4, ref('internal_students_transfer_read'))]"/>
+            <field name="category_id" ref="module_category_student" />
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+
+         <record id="update_student_listen_lines" model="res.groups">
+            <field name="name">Update student listen lines</field>
+            <field name="implied_ids" eval="[(4, ref('accept_or_deny_student_confirmation_to_episode'))]"/>
+            <field name="category_id" ref="module_category_student" />
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+
+
+          <!-- group of select all -->
+          <record id="select_all_student_registration_groups" model="res.groups">
+            <field name="name">Select All</field>
+            <field name="implied_ids" eval="[
+              (4, ref('group_student_profile_read')),
+              (4, ref('group_student_profile_create')),
+              (4, ref('group_student_profile_update')),
+              (4, ref('group_student_parent_read')),
+              (4, ref('group_student_parent_create')),
+              (4, ref('group_student_parent_update')),
+              (4, ref('confirm_student_placement_to_episode_read')),
+              (4, ref('confirm_student_placement_to_episode_create')),
+              (4, ref('confirm_student_placement_to_episode_edit')),
+              (4, ref('accept_or_deny_student_confirmation_to_episode')),
+              (4, ref('accept_or_deny_student_confirmation_to_mosque')),
+              (4, ref('internal_students_transfer_read')),
+              (4, ref('internal_students_transfer_edit')),
+              (4, ref('internal_students_transfer_create')),
+              (4, ref('accept_or_deny_internal_students_transfer'))]"/>
+            <field name="category_id" ref="module_category_student"/>
+          </record>
+    </data>
+</odoo>

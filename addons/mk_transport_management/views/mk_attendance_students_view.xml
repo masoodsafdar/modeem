@@ -1,0 +1,76 @@
+<odoo>
+    <data>
+ 	  <record id="mk_attendance_students_form_view" model="ir.ui.view">
+           <field name="name">Attendance Students Form View</field>
+           <field name="model">mk.attendance.students</field>
+           <field name="arch" type="xml">
+           	 <form string = "Transport Management">
+	   	        <header>
+	   	        	<button name="act_confirm" string="Confirm" type="object" states="draft" 
+	   	        		class="oe_highlight" groups="mk_transport_management.accept_reject_attendance"/>
+                     <button name="act_cancle" string="Cancle" type="object" states="draft"  
+                     	class="oe_highlight" groups="mk_transport_management.accept_reject_attendance"/>
+                     <field name="state"  widget="statusbar" statusbar_visible="draft,confirm,cancle"/>
+	   	        </header>
+	   	        <sheet>
+	   	        	<group>
+	   	        		<group>
+	   	        			<field name="date" required="1"/>
+	   	        			<field name="vehicle_id" required="1"/>	
+                    <field name="period" required="1"/>
+                    <field name="go_return" required="1"/>
+	   	        		</group>
+	   	        		<group>
+	   	        			<field name="mosque_id" required="1"/>
+	   	        			<field name="supervisor_id" required="1" options="{'no_create': True, 'no_create_edit':True}"/>
+	   	        		</group>
+	   	        	</group>
+	   	        	<field name="stud_attend_ids">
+	   	        		<tree editable="bottom">
+	   	        			<field name="student_id" required="1"/>
+	   	        			<field name="presence"/>
+	   	        			<field name="absent"/>
+                    <field name="apologize"/>
+	   	        			<field name="delivered"/>
+	   	        			<field name="note"/>
+	   	        		</tree>
+	   	        	</field>
+	   	        </sheet>
+	   	    </form>
+	   	  </field>
+	  </record>
+
+	  <record id="mk_attendance_students_tree_view" model="ir.ui.view">
+           <field name="name">Attendance Students Tree View</field>
+           <field name="model">mk.attendance.students</field>
+           <field name="arch" type="xml">
+           	  <tree>
+           	  	<field name="date"/>
+           	  </tree>
+           </field>
+       </record>
+
+       <record id="mk_attendance_students_search_view" model="ir.ui.view">
+            <field name="name">Attendance Students Search View</field>
+            <field name="model">mk.attendance.students</field>
+            <field name="arch" type="xml">
+                <search string="Attendance Students">
+                    <field name="date"/>
+                </search>
+            </field>
+        </record>
+        
+        <record id="mk_attendance_students_action" model="ir.actions.act_window">
+            <field name="name">Attendance Students</field>
+            <field name="res_model">mk.attendance.students</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+		   <menuitem name="Attendance Students" id="attendance_students_menu" 
+        parent="mk_transport_menu" action="mk_attendance_students_action" groups="trans_read_attendance,trans_writee_attendance,trans_createe_attendance"/> 
+
+	</data>
+</odoo>
+
+

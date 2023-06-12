@@ -1,0 +1,35 @@
+<odoo>
+    <template id="renew_assigne_supervisore_report">
+      <t t-foreach="docs" t-as="o">
+        <t t-call="web.external_layout">
+          <div class="oe_structure"/>
+          <div class="row">
+            <div class="page">
+                <p class="text-right" style="font-size:20px;">
+                  <br>..الحمدلله وحده , والصلاة والسلام على من لا نبي بعده</br>
+                   <br></br>..وبعد
+                   <br> فإن مدير <span t-field="o.center_department_id"/> التابع لجمعية مكنون لتحفيظ</br>
+                   <br></br> القرآن الكريم في منطقة الرياض, وبناءً على ماله من
+                  <br></br> صلاحية, وبعد الاطلاع على التصريح رقم (<span t-field="o.attach_no"/>) القاضي بافتتاح
+                  <br> :لتحفيظ القرآن الكريم باسم حلقة/ مدرسة</br>
+                  <br>(<span t-field="o.name"/>) الواقعة في مدينة الرياض حي(<span t-field="o.district_id"/>)</br>
+                </p>
+                 <p class="text-right" style="font-size:20px;">:يقرر مايلي</p>
+                 <br class="text-right" style="font-size:20px;"></br>
+                 <p class="text-right" style="font-size:20px;">
+                 <br><b>أولاً</b>: يجدد تكليف الشيخ /(<span t-field="o.responsible_id"/>) بالاشراف على حلقات/مدرسة</br>
+                 <br>(<span t-field="o.name"/>)</br>
+                 <br><b>ثانياً</b>:يلتزم المشرف بالمسئوليات المناطة به, والقيام بكافة</br>
+                 <br>المهام المكلف بها من قبل الجمعية, الموضحة في لائحة </br>
+                 <br> الحلقات القرآنية, والتواصل المستمر مع المركز, ورفع تقرير</br>
+                 <br> .الحلقة قبل نهاية العام الدراسي</br>
+                </p>
+                <h5 class="text-center" style="font-size:20px;">,,,هذا ونسأل الله التوفيق والإعانة والسداد</h5>
+
+
+           </div>
+        </div>
+      </t>
+    </t>
+  </template>
+</odoo>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+		<record model="ir.ui.view" id="view_employee_search">
+			<field name="name">hr.employee.search.inherit</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_filter"/>
+            <field name="arch" type="xml">
+	            <field name="job_id" position="after">
+	            	<field name="identification_id"/> 
+	                <field name="registeration_code"/>
+	                <field name="mosqtech_ids"/>
+	                <separator/>
+	                <filter name="gender" string="ذكور" domain="[('gender','=','male')]"/>
+	                <filter name="gender" string="إناث" domain="[('gender','=','female')]"/> 
+	            	<separator/>
+	                <filter name="state" string="draft"    domain="[('state','=','draft')]"/>                  
+	                <filter name="state" string="accepted" domain="[('state','=','accept')]"/>
+	                <filter name="state" string="مرفوض"    domain="[('state','=','reject')]"/>
+	            	<separator/>
+	            </field>
+	            
+                <filter name="group_manager" position="replace">
+                    <filter name="group_category" string="التصنيف" context="{'group_by':'category'}"/>
+                    <filter name="group_state"    string="الحالات"  context="{'group_by': 'state'}"/>
+                </filter>
+                
+				<filter name="group_coach" position="replace">
+				</filter>
+				
+				<filter name="group_company" position="replace">
+				</filter>
+			</field>
+		</record>
+
+    	<record id="open_view_employee_list_my_admin" model="ir.actions.act_window">
+			<field name="name">Mosques Admins</field>
+            <field name="res_model">hr.employee</field>
+            <!-- <field name="view_type">form</field> -->
+            <field name="view_mode">tree,kanban,form</field>
+            <field name="domain">[('category','=','admin')]</field>
+            <field name="context">{'default_category':'admin', 'default_category2':'admin'}</field>
+            <field name="view_id" eval="view_employee_tree"/>
+            <field name="search_view_id" ref="hr.view_employee_filter"/>
+    	</record>
+    
+    	<record id="open_view_employee_list_my_super" model="ir.actions.act_window">
+            <field name="name">Mosque's Supervisors</field>
+            <field name="res_model">hr.employee</field>
+            <!-- <field name="view_type">form</field> -->
+            <field name="view_mode">tree,kanban,form</field>
+            <field name="domain">[('category','=','supervisor')]</field>
+            <field name="context">{'default_category':'supervisor','default_category2':'supervisor'}</field>
+            <field name="view_id" eval="view_employee_tree"/>
+            <field name="search_view_id" ref="hr.view_employee_filter"/>
+    	</record>
+
+    	<record id="open_view_employee_list_my_teac" model="ir.actions.act_window">
+            <field name="name">Mosque's Teachers</field>
+            <field name="res_model">hr.employee</field>
+            <!-- <field name="view_type">form</field> -->
+            <field name="view_mode">tree,kanban,form</field>
+            <field name="domain">[('category','=','teacher')]</field>
+            <field name="context">{'default_category':'teacher','default_category2':'teacher'}</field>
+            <field name="view_id" eval="view_employee_tree"/>
+            <field name="search_view_id" ref="hr.view_employee_filter"/>
+    	</record>
+        
+    	<record id="open_view_employee_list_my_center" model="ir.actions.act_window">
+            <field name="name">Center Admins</field>
+            <field name="res_model">hr.employee</field>
+            <!-- <field name="view_type">form</field> -->
+            <field name="view_mode">tree,kanban,form</field>
+            <field name="domain">[('category','=','center_admin')]</field>
+            <field name="context">{'default_category':'center_admin','default_category2':'center_admin'}</field>
+            <field name="view_id" eval="view_employee_tree"/>
+            <field name="search_view_id" ref="hr.view_employee_filter"/>
+    	</record>
+
+    	<record id="open_view_employee_list_educational_supervisor" model="ir.actions.act_window">
+            <field name="name">Education supervisors</field>
+            <field name="res_model">hr.employee</field>
+            <!-- <field name="view_type">form</field> -->
+            <field name="view_mode">tree,kanban,form</field>
+            <field name="domain">[('category','=','edu_supervisor')]</field>
+            <field name="context">{'default_category':'edu_supervisor','default_category2':'edu_supervisor'}</field>
+            <field name="view_id" eval="view_employee_tree"/>
+            <field name="search_view_id" ref="hr.view_employee_filter"/>
+    	</record>
+
+     	<record id="open_view_employee_list_service" model="ir.actions.act_window">
+            <field name="name">service</field>
+            <field name="res_model">hr.employee</field>
+            <!-- <field name="view_type">form</field> -->
+            <field name="view_mode">tree,kanban,form</field>
+            <field name="domain">[('category','=','others')]</field>
+            <field name="context">{'default_category':'others','default_category2':'others'}</field>
+            <field name="view_id" eval="view_employee_tree"/>
+           <!-- <field name="search_view_id" ref="hr.view_employee_filter"/>-->
+    	</record>
+
+ 		<record id="open_view_employee_list_drivers" model="ir.actions.act_window">
+            <field name="name">bus supervisor</field>
+            <field name="res_model">hr.employee</field>
+            <!-- <field name="view_type">form</field> -->
+            <field name="view_mode">tree,kanban,form</field>
+            <field name="domain">[('category','=','bus_sup')]</field>
+            <field name="context">{'default_category':'bus_sup','default_category2':'bus_sup'}</field>
+            <field name="view_id" eval="view_employee_tree"/>
+    	</record>
+
+     	<record id="open_view_employee_list_managment" model="ir.actions.act_window">
+            <field name="name">Managment</field>
+            <field name="res_model">hr.employee</field>
+            <!-- <field name="view_type">form</field> -->
+            <field name="view_mode">tree,kanban,form</field>
+            <field name="domain">[('category','=','managment')]</field>
+            <field name="context">{'default_category':'managment','default_category2':'managment'}</field>
+            <field name="view_id" eval="view_employee_tree"/>
+           <!-- <field name="search_view_id" ref="hr.view_employee_filter"/>-->
+    	</record>
+
+     	<record id="action_hr_employees" model="ir.actions.act_window">
+            <field name="name">الموظفون</field>
+            <field name="res_model">hr.employee</field>
+            <!-- <field name="view_type">form</field> -->
+            <field name="view_mode">tree,kanban,form</field>
+            <field name="view_id" eval="view_employee_tree"/>
+           <!-- <field name="search_view_id" ref="hr.view_employee_filter"/>-->
+    	</record>
+    	
+    	<menuitem id="menu_all_employees" name="الموظفون" parent="hr.menu_hr_root" sequence="1" groups="mk_master_models.group_read_employee,mk_master_models.group_read_center,mk_master_models.group_read_employee_edu_sup,mk_master_models.group_read_employee_admins"/>
+    	
+		<menuitem id="menu_act_employees" name="الموظفون"                action="action_hr_employees"                            parent="menu_all_employees" sequence="1" groups="mk_master_models.group_read_employee"/>
+		<menuitem id="menu_open_center"   name="Center Admins"           action="open_view_employee_list_my_center"              parent="menu_all_employees" sequence="2" groups="mk_master_models.group_read_center"/>
+        <menuitem id="menu_open_edu_sup"  name="Educational supervisors" action="open_view_employee_list_educational_supervisor" parent="menu_all_employees" sequence="3" groups="mk_master_models.group_read_employee_edu_sup"/>
+        <menuitem id="menu_open_admins"   name="Mosques Admins"          action="open_view_employee_list_my_admin"               parent="menu_all_employees" sequence="4" groups="mk_master_models.group_read_employee_admins"/>
+        <menuitem id="menu_open_superv"   name="Mosque's Supervisors"    action="open_view_employee_list_my_super"               parent="menu_all_employees" sequence="5" groups="mk_master_models.group_read_employee"/>
+        <menuitem id="menu_open_teacher"  name="Mosque's Teachers"       action="open_view_employee_list_my_teac"                parent="menu_all_employees" sequence="6" groups="mk_master_models.group_read_employee"/>
+        <menuitem id="menu_open_service"  name="service"                 action="open_view_employee_list_service"                parent="menu_all_employees" sequence="7" groups="mk_master_models.group_read_employee"/>
+        <menuitem id="menu_drivers"       name="drivers"                 action="open_view_employee_list_drivers"                parent="menu_all_employees" sequence="8" groups="mk_master_models.group_read_employee"/>
+        <menuitem id="menu_managments"    name="Managment"               action="open_view_employee_list_managment"              parent="menu_all_employees" sequence="9" groups="mk_master_models.group_read_employee"/>
+
+        <menuitem id="hr.menu_hr_reporting_timesheet"        sequence="200"/>
+        <menuitem id="hr.menu_human_resources_configuration" sequence="300" groups="mk_master_models.group_read_employee_admins" parent="hr.menu_hr_root"/>
+        
+    	<menuitem id="hr.menu_open_view_employee_list_my" parent="hr.menu_human_resources_configuration"/>        
+        <!-- menuitem id="hr.menu_hr_main"          parent="hr.menu_human_resources_configuration" sequence="100"/-->
+
+    </data>
+</odoo>

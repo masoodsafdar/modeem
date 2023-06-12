@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="add_mk_episode_master_wizard" model="ir.ui.view">
+        <field name="name">add.mk.episode.master.wizard</field>
+        <field name="model">add.mk.episode.master</field>
+        <field name="arch" type="xml">
+            <form string="Add Episode">
+                <script>
+                    $(document).ready(function(){
+                    $('.modal-dialog').css({'width': '97%', 'height': '100%'});
+                    $('.modal-content').css({'height': '100%'});
+                    $('.modal-body').css({'height': '100%'});
+                    });
+                </script>
+                <header>
+                </header>
+                <sheet>
+                    <div class="oe_title" style="width:100%">
+                        <h2>
+                            <field name="name" required="True" placeholder="Episode name"/>
+                        </h2>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="academic_id" options="{'no_open':1,'no_create':1}"/>
+                            <field name="study_class_id" options="{'no_open':1,'no_create':1}" required="1"/>
+                        </group>
+                        <group>
+                            <field name="mosque_id" options="{'no_open':1,'no_create':1}" required="1"/>
+                            <field name="gender" invisible="1"/>
+                        </group>
+                    </group>
+                    <group string="Period">
+                        <group>
+                            <line>
+                                <label for="subh"/>
+                                <field name="subh"/>
+
+                                <label for="zuhr"/>
+                                <field name="zuhr"/>
+
+                                <label for="aasr"/>
+                                <field name="aasr"/>
+
+                                <label for="magrib"/>
+                                <field name="magrib"/>
+
+                                <label for="esha"/>
+                                <field name="esha"/>
+                            </line>
+                        </group>
+                        <br></br>
+                        <group>
+                        </group>
+                    </group>
+                    <group>
+                        <group colspan="2" col="2" name="subh" string="Subh" attrs="{'invisible':[('subh','=',False)]}">
+                            <group colspan="2" col="2">
+                                <group>
+                                    <field name="grade_subh_ids" widget="many2many_tags" options="{'no_open':1,'no_create':1}"/>
+                                    <field name="program_subh_id"   options="{'no_open':1,'no_create':1}" domain="[('is_required','=',True),('state','=','active'),('program_gender', '=', gender),('program_type','=','open')]"/>
+                                    <field name="approache_subh_id" options="{'no_open':1,'no_create':1}" domain="[('program_id','=',program_subh_id)]"/>
+                                    <field name="episode_type_subh_id" invisible="1" options="{'no_open':1,'no_create':1}"/>
+                                    <field name="episode_work_subh_id" invisible="1" options="{'no_open':1,'no_create':1}" domain="[('type_episode_id', '=', episode_type_subh_id)]"/>
+                                    <field name="start_date_subh" attrs="{'required':[('subh','=',True)]}"/>
+                                    <field name="end_date_subh" attrs="{'required':[('subh','=',True)]}"/>
+                                    <field name="error_register_subh" invisible="1"/>
+                                    <field name="is_online_subh"/>
+                                </group>
+                                <group>
+                                    <field name="teacher_subh_id" options="{'no_open':1,'no_create':1}"/>
+                                    <field name="episode_days_subh_ids" attrs="{'required':[('subh','=',True)]}" widget="many2many_checkboxes" options="{'no_open': True,'no_create': True}"/>
+                                </group>
+                            </group>
+                        </group>
+                        <group colspan="2" col="2" name="zuhr" string="Zuhr" attrs="{'invisible':[('zuhr','=',False)]}">
+                            <group colspan="2" col="2">
+                                <group>
+                                    <field name="grade_zuhr_ids" widget="many2many_tags" options="{'no_open':1,'no_create':1}"/>
+                                    <field name="program_zuhr_id"   options="{'no_open':1,'no_create':1}" domain="[('is_required','=',True),('state','=','active'),('program_gender', '=', gender),('program_type','=','open')]"/>
+                                    <field name="approache_zuhr_id" options="{'no_open':1,'no_create':1}" domain="[('program_id','=',program_zuhr_id)]"/>
+                                    <field name="episode_type_zuhr_id" invisible="1" options="{'no_open':1,'no_create':1}"/>
+                                    <field name="episode_work_zuhr_id" invisible="1" options="{'no_open':1,'no_create':1}" domain="[('type_episode_id', '=', episode_type_zuhr_id)]"/>
+                                    <field name="start_date_zuhr" attrs="{'required':[('zuhr','=',True)]}"/>
+                                    <field name="end_date_zuhr" attrs="{'required':[('zuhr','=',True)]}"/>
+                                    <field name="error_register_zuhr" invisible="1"/>
+                                    <field name="is_online_zuhr"/>
+                                </group>
+                                <group>
+                                    <field name="teacher_zuhr_id" options="{'no_open':1,'no_create':1}"/>
+                                    <field name="episode_days_zuhr_ids" attrs="{'required':[('zuhr','=',True)]}" widget="many2many_checkboxes" options="{'no_open': True,'no_create': True}"/>
+                                </group>
+                            </group>
+                        </group>
+                        <group colspan="2" col="2" name="aasr" string="Aasr" attrs="{'invisible':[('aasr','=',False)]}">
+                            <group colspan="2" col="2">
+                                <group>
+                                    <field name="grade_aasr_ids" widget="many2many_tags" options="{'no_open':1,'no_create':1}"/>
+                                    <field name="program_aasr_id"   options="{'no_open':1,'no_create':1}" domain="[('is_required','=',True),('state','=','active'),('program_gender', '=', gender),('program_type','=','open')]"/>
+                                    <field name="approache_aasr_id" options="{'no_open':1,'no_create':1}" domain="[('program_id','=',program_aasr_id)]"/>
+                                    <field name="episode_type_aasr_id" invisible="1" options="{'no_open':1,'no_create':1}"/>
+                                    <field name="episode_work_aasr_id" invisible="1" options="{'no_open':1,'no_create':1}" domain="[('type_episode_id', '=', episode_type_aasr_id)]"/>
+                                    <field name="start_date_aasr" attrs="{'required':[('aasr','=',True)]}"/>
+                                    <field name="end_date_aasr"   attrs="{'required':[('aasr','=',True)]}"/>
+                                    <field name="error_register_aasr" invisible="1"/>
+                                    <field name="is_online_aasr"/>
+                                </group>
+                                <group>
+                                    <field name="teacher_aasr_id" options="{'no_open':1,'no_create':1}"/>
+                                    <field name="episode_days_aasr_ids" attrs="{'required':[('aasr','=',True)]}" widget="many2many_checkboxes" options="{'no_open': True,'no_create': True}"/>
+                                </group>
+                            </group>
+                        </group>
+                        <group colspan="2" col="2" name="magrib" string="Magrib"
+                               attrs="{'invisible':[('magrib','=',False)]}">
+                            <group colspan="2" col="2">
+                                <group>
+                                    <field name="grade_magrib_ids" widget="many2many_tags" options="{'no_open':1,'no_create':1}"/>
+                                    <field name="program_magrib_id"   options="{'no_open':1,'no_create':1}" domain="[('is_required','=',True),('state','=','active'),('program_gender', '=', gender),('program_type','=','open')]"/>
+                                    <field name="approache_magrib_id" options="{'no_open':1,'no_create':1}" domain="[('program_id','=',program_magrib_id)]"/>
+                                    <field name="episode_type_magrib_id" invisible="1" options="{'no_open':1,'no_create':1}"/>
+                                    <field name="episode_work_magrib_id" invisible="1" options="{'no_open':1,'no_create':1}" domain="[('type_episode_id', '=', episode_type_magrib_id)]"/>
+                                    <field name="start_date_magrib" attrs="{'required':[('magrib','=',True)]}"/>
+                                    <field name="end_date_magrib" attrs="{'required':[('magrib','=',True)]}"/>
+                                    <field name="error_register_magrib" invisible="1"/>
+                                    <field name="is_online_magrib"/>
+                                </group>
+                                <group>
+                                    <field name="teacher_magrib_id" options="{'no_open':1,'no_create':1}"/>
+                                    <field name="episode_days_magrib_ids" attrs="{'required':[('magrib','=',True)]}" widget="many2many_checkboxes" options="{'no_open': True,'no_create': True}"/>
+                                </group>
+                            </group>
+                        </group>
+                        <group colspan="2" col="2" name="esha" string="Esha" attrs="{'invisible':[('esha','=',False)]}">
+                            <group colspan="2" col="2">
+                                <group>
+                                    <field name="grade_esha_ids" widget="many2many_tags" options="{'no_open':1,'no_create':1}"/>
+                                    <field name="program_esha_id"   options="{'no_open':1,'no_create':1}" domain="[('is_required','=',True),('state','=','active'),('program_gender', '=', gender),('program_type','=','open')]"/>
+                                    <field name="approache_esha_id" options="{'no_open':1,'no_create':1}" domain="[('program_id','=',program_esha_id)]"/>
+                                    <field name="episode_type_esha_id" invisible="1" options="{'no_open':1,'no_create':1}"/>
+                                    <field name="episode_work_esha_id" invisible="1" options="{'no_open':1,'no_create':1}" domain="[('type_episode_id', '=', episode_type_esha_id)]"/>
+                                    <field name="start_date_esha" attrs="{'required':[('esha','=',True)]}"/>
+                                    <field name="end_date_esha" attrs="{'required':[('esha','=',True)]}"/>
+                                    <field name="error_register_esha" invisible="1"/>
+                                    <field name="is_online_esha"/>
+                                </group>
+                                <group>
+                                    <field name="teacher_esha_id" options="{'no_open':1,'no_create':1}"/>
+                                    <field name="episode_days_esha_ids" attrs="{'required':[('esha','=',True)]}" widget="many2many_checkboxes" options="{'no_open': True,'no_create': True}"/>
+                                </group>
+                            </group>
+                        </group>
+                    </group>
+                </sheet>
+                <footer>
+                    <button string="Create" name="create_episode" type="object" default_focus="1" class="oe_highlight"/>
+                    <button string="Cancel" class="btn-primary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="add_episode_master_action" model="ir.actions.act_window">
+        <field name="name">Add Episode</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">add.mk.episode.master</field>
+        <field name="binding_view_types">form</field>
+        <field name="view_id" ref="add_mk_episode_master_wizard"/>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+    <menuitem id="menu_add_episodes" name="Add Episode" parent="mk_episode_management_menu" sequence="2"
+              action="add_episode_master_action"/>
+</odoo>

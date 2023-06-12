@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data noupdate="1">
+
+	    <record id="bigbluebutton_url" model="ir.config_parameter">
+	        <field name="key">bigbluebutton_url</field>
+	        <field name="value">***</field>
+	    </record>
+ 		
+ 		<record id="bigbluebutton_secret" model="ir.config_parameter">
+	        <field name="key">bigbluebutton_secret</field>
+	        <field name="value">***</field>
+	    </record>
+	</data>
+</odoo>

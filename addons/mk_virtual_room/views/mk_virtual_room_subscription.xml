@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	 <data>
+        <record id="mk_virtual_room_subscription_tree_view" model="ir.ui.view">
+            <field name="name">Virtual room subscription tree view</field>
+            <field name="model">mk.virtual_room.subscription</field>
+            <field name="arch" type="xml">
+                <tree delete="0" string="Virtual room subscription">
+                	<field name="name"/>
+                	<field name="mosque_id"/>
+                	<field name="virtual_room_provider_id"/>
+                	<field name="date_start"/>
+                	<field name="date_end"/>
+                	<field name="number_participant"/>
+                	<field name="type_subscription_duration"/>
+                	<field name="virtual_room_package_id"/>
+                	<field name="cost"/>
+                </tree>
+            </field>
+        </record>
+        
+	 	<record id="mk_virtual_room_subscription_form_view" model="ir.ui.view">
+			<field name="name">Virtual room subscription form view</field>
+	        <field name="model">mk.virtual_room.subscription</field>
+	        <field name="arch" type="xml">
+				<form string="Virtual room subscription">
+              		<header>
+	          			<button name="action_under_procedure" type="object" string="إرسال الطلب" attrs="{'invisible':[('state','!=','draft')]}"           class="oe_highlight"/>
+	          			<button name="action_confirm"         type="object" string="Confirm"     attrs="{'invisible':[('state','!=','under_procedure')]}" class="oe_highlight"/>
+	          			<button name="action_refused"         type="object" string="Refused"     attrs="{'invisible':[('state','in',('confirm','refused'))]}"/>
+
+	          			<field name="state" widget="statusbar"/>
+	          		</header>
+
+					<sheet>
+						<group>
+							<group>
+								<field name="mosque_id"                options="{'no_open':1,'no_create':1}"  attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+			                	<field name="virtual_room_provider_id" options="{'no_open':1,'no_create':1}"  attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+			                	<field name="virtual_room_package_id"  options="{'no_open':1,'no_create':1}" 
+			                	                                       domain="[('virtual_room_provider_id','=',virtual_room_provider_id)]" attrs="{'readonly': [('state', '!=', 'draft')]}"/>			                	
+			                	<field name="note"  attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+							</group>
+
+							<group>
+								<field name="type_subscription_duration"/>
+								<field name="number_participant"/>
+								<field name="cost"/>								
+			                	<field name="date_start" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+			                	<field name="date_end"   attrs="{'readonly': [('state', '!=', 'draft')]}"/>	                	
+							</group>
+						</group>
+						
+						<group string="طريقة الدفع">
+							<group>
+								<field name="type_payment_method"  attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+								<field name="bank_id"             attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+								<field name="number_account"      attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+								<field name="attachment"          attrs="{'readonly': [('state', '!=', 'draft')],'invisible':[('type_payment_method','in',('from_account'))]}" widget="many2many_binary" />
+							</group>
+							
+							<group>
+							</group>						
+						</group>
+					</sheet>
+					 <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+	              </form>
+	             </field>
+	         </record>
+	
+	        <record id="mk_virtual_room_subscription_search_view" model="ir.ui.view">
+	            <field name="name">Virtual room subscription search view</field>
+	            <field name="model">mk.virtual_room.subscription</field>
+	            <field name="arch" type="xml">
+	                <search string="Virtual room subscription">
+	                    <field name="name"/>
+	                </search>
+	            </field>
+	        </record>
+	        
+	        <record id="action_virtual_room_subscription" model="ir.actions.act_window">
+	            <field name="name">Virtual room subscription</field>
+	            <field name="res_model">mk.virtual_room.subscription</field>
+	            <field name="type">ir.actions.act_window</field> 
+	            <field name="view_mode">tree,form</field>
+	        </record>
+	
+	         <menuitem
+		         name="Virtual room subscription"
+		         id="mk_virtual_room_subscription_menu" 
+		         sequence="20" 
+		         parent="mk_virtual_room.virtual_room_basic_menu"
+		         action="action_virtual_room_subscription"/>
+
+	</data>
+</odoo>

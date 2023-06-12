@@ -1,0 +1,95 @@
+<odoo>
+    <data noupdate="1">
+        <record id="mk_memorize_method17" model="mk.memorize.method">
+            <field name="name">مقرر آية</field>
+            <field name="direction">up</field>
+            <field name="type_method">subject</field>
+        </record>
+        <record id="mk_memorize_method1" model="mk.memorize.method">
+            <field name="name">مقرر ربع صفحة</field>
+            <field name="direction">up</field>
+            <field name="type_method">subject</field>
+        </record>
+        <record id="mk_memorize_method2" model="mk.memorize.method">
+            <field name="name">مقرر نصف صفحة</field>
+            <field name="direction">up</field>
+            <field name="type_method">subject</field>
+        </record>
+        <record id="mk_memorize_method3" model="mk.memorize.method">
+            <field name="name">مقرر ثلاثة ارباع صفحة</field>
+            <field name="direction">up</field>
+            <field name="type_method">subject</field>
+        </record>
+        <record id="mk_memorize_method4" model="mk.memorize.method">
+            <field name="name">مقرر صفحة واحدة</field>
+            <field name="direction">up</field>
+            <field name="type_method">subject</field>
+        </record>
+        <record id="mk_memorize_method5" model="mk.memorize.method">
+            <field name="name">مقرر صفحة وربع</field>
+            <field name="direction">up</field>
+            <field name="type_method">subject</field>
+        </record>
+        <record id="mk_memorize_method6" model="mk.memorize.method">
+            <field name="name">مقرر صفحة ونصف</field>
+            <field name="direction">up</field>
+            <field name="type_method">subject</field>
+        </record>
+        <record id="mk_memorize_method7" model="mk.memorize.method">
+            <field name="name">مقرر صغحة وثلاثة ارباع</field>
+            <field name="direction">up</field>
+            <field name="type_method">subject</field>
+        </record>
+        <record id="mk_memorize_method8" model="mk.memorize.method">
+            <field name="name">مقرر صفحتان</field>
+            <field name="direction">up</field>
+            <field name="type_method">subject</field>
+        </record>
+
+        <record id="mk_memorize_method18" model="mk.memorize.method">
+            <field name="name">مقرر آية</field>
+            <field name="direction">down</field>
+            <field name="type_method">subject</field>
+        </record>
+        <record id="mk_memorize_method9" model="mk.memorize.method">
+            <field name="name">مقرر ربع صفحة</field>
+            <field name="direction">down</field>
+            <field name="type_method">subject</field>
+        </record>
+        <record id="mk_memorize_method10" model="mk.memorize.method">
+            <field name="name">مقرر نصف صفحة</field>
+            <field name="direction">down</field>
+            <field name="type_method">subject</field>
+        </record>
+        <record id="mk_memorize_method11" model="mk.memorize.method">
+            <field name="name">مقرر ثلاثة ارباع صفحة</field>
+            <field name="direction">down</field>
+            <field name="type_method">subject</field>
+        </record>
+        <record id="mk_memorize_method12" model="mk.memorize.method">
+            <field name="name">مقرر صفحة واحدة</field>
+            <field name="direction">down</field>
+            <field name="type_method">subject</field>
+        </record>
+        <record id="mk_memorize_method13" model="mk.memorize.method">
+            <field name="name">مقرر صفحة وربع</field>
+            <field name="direction">down</field>
+            <field name="type_method">subject</field>
+        </record>
+        <record id="mk_memorize_method14" model="mk.memorize.method">
+            <field name="name">مقرر صفحة ونصف</field>
+            <field name="direction">down</field>
+            <field name="type_method">subject</field>
+        </record>
+        <record id="mk_memorize_method15" model="mk.memorize.method">
+            <field name="name">مقرر صغحة وثلاثة ارباع</field>
+            <field name="direction">down</field>
+            <field name="type_method">subject</field>
+        </record>
+        <record id="mk_memorize_method16" model="mk.memorize.method">
+            <field name="name">مقرر صفحتان</field>
+            <field name="direction">down</field>
+            <field name="type_method">subject</field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,74 @@
+<odoo>
+	<data>
+		
+		<record model="ir.rule" id="tm_mk_link_rule">
+		<field name="name">transport manager mk link rules</field>
+		<field name="model_id" ref="mk_student_register.model_mk_link"/>
+		<field name="domain_force">
+		[('mosq_id.responsible_id.user_id.id','in',[user.id])]
+		</field>
+		<field name="groups" eval="[(4, ref('transportation_manager'))]"/>
+		</record>
+
+		<record model="ir.rule" id="tm_mk_transport_management_rule">
+		<field name="name">transport manager transport management rules</field>
+		<field name="model_id" ref="model_mk_transport_management"/>
+		<field name="domain_force">
+		[('request_id.student_id.mosq_id.responsible_id.user_id.id','in',[user.id])]
+		</field>
+		<field name="groups" eval="[(4, ref('transportation_manager'))]"/>
+		</record>
+
+		<record model="ir.rule" id="tm_transportation_request_rule">
+		<field name="name">transport manager transportation request rules</field>
+		<field name="model_id" ref="model_transportation_request"/>
+		<field name="domain_force">
+		[('student_id.mosq_id.responsible_id.user_id.id','in',[user.id])]
+		</field>
+		<field name="groups" eval="[(4, ref('transportation_manager'))]"/>
+		</record>
+
+		<record model="ir.rule" id="tm_apology_request_rule">
+		<field name="name">transport manager apology request rules</field>
+		<field name="model_id" ref="model_apology_request"/>
+		<field name="domain_force">
+		[('student_id.mosq_id.responsible_id.user_id.id','in',[user.id])]
+		</field>
+		<field name="groups" eval="[(4, ref('transportation_manager'))]"/>
+		</record>
+
+		<record model="ir.rule" id="tm_mk_attendance_students_rule">
+		<field name="name">transport mk attendance students rules</field>
+		<field name="model_id" ref="model_mk_attendance_students"/>
+		<field name="domain_force">
+		[('mosque_id.responsible_id.user_id.id','in',[user.id])]
+		</field>
+		<field name="groups" eval="[(4, ref('transportation_manager'))]"/>
+		</record>
+
+		<record model="ir.rule" id="tm_vehicle_recordss_rule">
+		<field name="name">transport vehicle records rules</field>
+		<field name="model_id" ref="model_vehicle_records"/>
+		<field name="domain_force">
+		[('mosque.responsible_id.user_id.id','in',[user.id])]
+		</field>
+		<field name="groups" eval="[(4, ref('transportation_manager'))]"/>
+		</record>
+
+<!--
+		<record model="ir.rule" id="tm_drivers_records_rule">
+		<field name="name">transport drivers records rules</field>
+		<field name="model_id" ref="model_drivers_records"/>
+		<field name="domain_force">
+		[('mosque.responsible_id.user_id.id','in',[user.id])]
+		</field>
+		<field name="groups" eval="[(4, ref('transportation_manager'))]"/>
+		</record>
+
+	-->
+
+
+
+
+	</data>
+</odoo>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data noupdate="1">
+
+       
+
+        <!-- record id="sms_smsclient_1" model="smsclient">
+            <field name="name">SMS Gateway</field>
+           
+            <field name="method">http</field>
+            <field name="url">https://sms.gateway.sa/api/sendsms.php</field>
+            <field name="users_id" eval="[(4, 1)]"/> 
+
+        </record-->
+
+       
+    </data>
+</odoo>

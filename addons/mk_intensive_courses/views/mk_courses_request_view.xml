@@ -1,0 +1,505 @@
+
+<odoo>
+    <data>
+		<!--	Student courses	-->
+		<record id="mk_student_course_tree_view" model="ir.ui.view">
+        	<field name="name">Student courses</field>
+        	<field name="model">mk.course.student</field>
+        	<field name="arch" type="xml">
+            	<tree string="Student courses" editable="bottom" create="false" delete="false">
+            		<field name="student_id"   readonly="1"/>
+                    <field name="identity_no"  readonly="1"/>
+                    <field name="email"        readonly="1"/>
+                    <field name="mobile"       readonly="1"/>
+                    <field name="nationality"  readonly="1"/>
+                    <field name="mosque_id"    readonly="1" options="{'no_open':1,'no_create':1}"/>
+                    <field name="branch_id"    readonly="1" options="{'no_open':1,'no_create':1}"/>
+                    <field name="branch_path_type" readonly="1"/>
+					<field name="attende"/>
+					<button name="action_change_branch" string="تغيير الفرع" type="object" groups="mk_intensive_courses.update_student_course_branch"/>
+					<button name="action_delete_course_subscription" string="الغاء" type="object" groups="mk_intensive_courses.delete_course_student"/>
+            	</tree>
+        	</field>
+    	</record>
+
+		<record id="branch_form_wizard" model="ir.ui.view">
+            <field name="name">branch.form.popup</field>
+            <field name="model">mk.course.student.update</field>
+            <field name="arch" type="xml">
+                <form string="Update branch">
+                    <sheet>
+                        <group>
+							<field name="student_course" invisible="1"/>
+                            <field name='branch_id' required="1" domain="[('id','in',context.get('course_request_branch_ids')),('id','!=',context.get('default_branch_id'))]" options="{'no_open':1,'no_create':1}"/>
+                        </group>
+                    </sheet>
+                    <footer>
+                        <button name="action_update_branch" type="object" string="تغيير" class="oe_highlight"/>
+                        <button string="إلغاء" class="oe_link" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+		<record model="ir.ui.view" id="mk_student_course_form_view">
+			<field name="name">student.course.form</field>
+			<field name="model">mk.course.student</field>
+			<field name="arch" type="xml">
+				<form string="Student courses" delete="false">
+					<header>
+					</header>
+					<sheet>
+						<group>
+							<field name="identity_no" attrs="{'required':[('no_identity','=', False)], 'invisible':[('no_identity','=',True)]}" style="width:50%;"/>
+							<field name="passport_no" attrs="{'invisible':[('no_identity','=',False)],'required': [('no_identity', '=', True)]}"/>
+							<field name="no_identity"/>
+						</group>
+
+						<group>
+							<group>
+								<field name="student_id"/>
+								<field name="nationality"/>
+								<field name="mosque_id"/>
+								<field name="mosque_id"/>
+								<field name="request_st_id"/>
+							</group>
+							<group>
+								<field name="email"/>
+								<field name="mobile"/>
+								<field name="gender"/>
+								<field name="birthdate"/>
+								<field name="branch_id"/>
+								<field name="attende"/>
+							</group>
+						</group>
+					</sheet>
+					<div class="oe_chatter">
+						<field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+						<field name="message_ids" widget="mail_thread"/>
+					</div>
+				</form>
+			</field>
+		</record>
+
+        <record id="mk_student_course_view_search" model="ir.ui.view">
+            <field name="name">Course Student Search View</field>
+            <field name="model">mk.course.student</field>
+            <field name="arch" type="xml">
+                <search string="student ">
+                    <field name="student_id"/>
+                    <field name="no_identity"/>
+                    <field name="identity_no"/>
+                    <field name="passport_no"/>
+                    <field name="mobile"/>
+                    <field name="email"/>
+                    <field name="nationality"/>
+                    <field name="birthdate"/>
+                    <field name="gender"/>
+                    <field name="attende"/>
+                    <field name="request_st_id"/>
+                    <field name="mosque_id"/>
+                    <field name="branch_id"/>
+
+                    <filter name="gender_male"   string="Male" domain="[('gender','=','male')]"/>
+                    <filter name="gender_female" string="Female" domain="[('gender','=','female')]"/>
+                    <separator/>
+					<filter name="present"   string="Present" domain="[('attende','=',True)]"/>
+                    <filter name="absent"    string="Absent" domain="[('attende','=',False)]"/>
+                    <separator/>
+
+                    <group>
+                        <filter name="group_by_attende"          string="By attende"  context="{'group_by': 'attende'}"/>
+                        <filter name="group_by_mosque_id"        string="By mosque"  context="{'group_by': 'mosque_id'}"/>
+                        <filter name="group_by_request_st_id"    string="By request course" context="{'group_by': 'request_st_id'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+		<!--	mk_courses_request	-->
+ 		<record id="mk_courses_request_form_view" model="ir.ui.view">
+        	<field name="name">Courses Request Form </field>
+        	<field name="model">mk.course.request</field>
+        	<field name="arch" type="xml">
+            	<form string = "Courses Evaluation" delete="false">
+					<header>
+						<button name="accept" string="Approve"      type="object" class="btn btn-sm oe_button" state="send" attrs="{'invisible':[('state', 'in', ('closed','accept','reject','draft'))]}"  groups="mk_intensive_courses.accept_reject_course_request"/>
+                    	<button name="reject" string="reject"       type="object" class="btn btn-sm oe_button" attrs="{'invisible':[('state', 'in',['draft','reject','accept','closed'])]}"                groups="mk_intensive_courses.accept_reject_course_request"/>
+                		<button name="draft"  string="Set to draft" type="object" class="oe_highlight"         attrs="{'invisible':[('state', 'in',['closed','accept','send','draft'] )]}"/>
+                 		<button name="send"   string="Send"         type="object" state="draft"                attrs="{'invisible':[('state', 'in',['send','reject','accept','closed'])]}"                 groups="mk_intensive_courses.send_course_request"    style="color: #ffffff;background-color: #FF0000;"/>
+						<button name="close_course_data_wizard"     type="object" string="Close"               attrs="{'invisible':[('state', '!=','accept')]}"   state="accept" groups="mk_intensive_courses.send_course_request"    style="color: #ffffff;background-color: #FF0000;"/>
+						<button name="print_close_certificate"      type="object" string="print close certificate"               attrs="{'invisible':['|',('state', '!=','closed'),('course_request_type','=','ramadan_course')]}" groups="mk_intensive_courses.send_course_request"    style="color: #ffffff;background-color: #FF0000;"/>
+						<button name="update_course_request_data"   type="object" string="تعديل البيانات"      attrs="{'invisible':[('state', 'in',['draft','send'])]}"      groups="mk_intensive_courses.update_course_request_data_group"/>
+						<button name="set_request_to_send"   type="object" string="Center review"    state="closed"	   attrs="{'invisible':[('state', 'in',['draft','send','accept','reject'])]}"      groups="mk_intensive_courses.update_center_review_group"/>
+						<button name="action_reset_accept"          type="object" string="Reset accept"        attrs="{'invisible':[('state', '!=','closed')]}"      groups="mk_intensive_courses.reset_accept_state_intensive_courses"/>
+						<button name="action_student_course_subscription" type="object" string="تسجيل الطلاب" attrs="{'invisible':[('state', 'in',['draft'])]}" groups="mk_intensive_courses.write_course_request"/>
+
+                		<field name="state" widget="statusbar" statusbar_visible="draft,send,accept,closed"/>
+            		</header>
+            		
+					<sheet>
+						<div class="oe_button_box" name="button_box">
+	                            <button name="toggle_active" type="object" class="oe_stat_button" icon="fa-archive">
+	                                <field name="active" widget="boolean_button" options='{"terminology": "archive"}'/>
+	                            </button>
+								<button name="open_view_student_courses" type="object" class="oe_stat_button" string='Student courses' icon="fa-list">
+                          			<field name="nbr_student_courses" string='Student courses'/>
+                    			</button>
+						</div>
+						<field name="image" widget='image' class="oe_avatar" options='{"preview_image": "image_medium", "size": [90, 90]}'/>
+		  	  			<group col="4">
+							<field name="mosque_id"     attrs="{'readonly':[('state', 'not in',['draft','send'])]}" options="{'no_create': True,'no_open': True}" force_save="1"/>
+			  				<field name="department_id" attrs="{'readonly':[('state', 'not in',['draft','send'])]}" options="{'no_create': True,'no_open': True}" required="1"/>
+                        	<field name="gender_mosque" invisible="1"/>
+			  				<field name="state_id"      attrs="{'readonly':[('state', 'not in',['draft','send'])]}" options="{'no_create': True,'no_open': True}"/>
+			  				<field name="location"      attrs="{'readonly':[('state', 'not in',['draft','send'])]}"/>
+			  				<field name="external_mosq_name" attrs="{'invisible':[('location', '!=', 'female_episodes')],'required':[('location', '=', 'female_episodes')], 'readonly':[('state', 'not in',['draft','send'])]}"/>
+							<field name="employee_id2" invisible="1"/>
+							<field name="user_id" invisible="1"/>
+							<field name="hijri_start_date" invisible="1"/>
+							<field name="hijri_end_date" invisible="1"/>
+		  				</group>
+ 						<notebook>
+                            <page string="Basic Info">
+                                <group>
+                                	<group>
+							  			<field name="academic_id"         attrs="{'readonly':[('state', 'not in',['draft','send'])]}" required="1" options="{'no_create':1, 'no_open':1}" domain="[('is_default', '=', True)]"/>
+							  			<field name="study_class_id"      attrs="{'readonly':[('state', 'not in',['draft','send'])]}" required="1" options="{'no_create':1, 'no_open':1}" domain="[('is_default', '=', True)]"/>
+										<field name="course"              attrs="{'readonly':[('state', 'not in',['draft','send'])]}" required="1" options="{'no_create':1, 'no_open':1}" domain="[('study_class_id','=',study_class_id)]"/>
+<!--										<field name="course_name"         attrs="{'readonly':[('state', 'not in',['draft','send'])]}"/>-->
+										<field name="branches_ids" widget="many2many_tags" options="{'no_create':1, 'no_open':1}"/>
+										<field name="course_name"/>
+										<field name="course_request_type"/>
+										<field name="course_request_code"/>
+										<field name="flag2" invisible="1"/>
+                                	</group>
+
+                                	<group>
+										<field name="employee_id"    attrs="{'invisible':[('flag2', '=', True)], 'readonly':[('state', 'not in',['draft','send'])]}" widget="selection" domain="[('mosqtech_ids','in',mosque_id)]" force_save="1"/>
+										<field name="emp_sec"        attrs="{'invisible':[('flag2', '=', False)], 'readonly':[('state', 'not in',['draft','send'])]}"/>
+										<field name="mobile"         attrs="{'readonly':[('state', 'not in',['draft','send'])]}"/>
+										<field name="admin_id"       attrs="{'readonly':[('state', 'not in',['draft','send'])]}" options="{'no_create': True,'no_open': True,'no_create_edit': '1'}" domain="[('category','=','admin')]" force_save="1"/>
+										<field name="mobile_admin"   attrs="{'readonly':[('state', 'not in',['draft','send'])]}"/>
+										<field name="mobile_company" attrs="{'readonly':[('state', 'not in',['draft','send'])]}"/>
+										<field name="course_request_url" readonly="True" widget="url" force_save="1"/>
+                                	</group>
+								</group>
+
+                        		<field name="mosque_location_id" invisible="1"/>
+
+								<group col="4">
+									<field name="yes"    invisible="1"/>
+									<field name="yes_ep" invisible="1"/>
+					  			</group>
+
+								<group>
+									<field name="flag" invisible="1"/>
+                 					<field name="mosque_location"  attrs="{'invisible':[('flag', '=', True)], 'readonly':[('state', 'not in',['draft','send'])]}" invisible="1"/>
+                        			<field name="mosque_location_cc"  attrs="{'invisible':[('flag', '=', False)], 'readonly':[('state', 'not in',['draft','send'])]}"/>
+									<field name="epsoide_ids" widget="many2many_tags" attrs="{'invisible':[('state', '!=', 'accept')]}"/>
+								</group>
+
+								<field name="emp_ids" attrs="{'invisible':[('state', '!=', 'accept')],'required':[('state', '!=', 'accept')]}" context="{'default_mosque_location_id':mosque_location_id}">
+									<tree create="false" delete="false">
+										<field name="category_id"/>
+											<field name="mosque_location_id" invisible="1"/>
+											<field name="emp_id" options="{'no_create': True,'no_open': True}" domain="[('mosqtech_ids','in',mosque_location_id)]"/>
+											<field name="emp_type"/>
+									</tree>
+								</field>
+
+<!--								<field name="student_ids" attrs="{'invisible':[('state', '!=', 'accept')],'required':[('state', '!=', 'accept')]}" context="{'default_mosque_location_id':mosque_location_id}">-->
+<!--	                                <tree editable="bottom" create="false" delete="false">-->
+<!--	                                    <field name="mosque_location_id" invisible="1"/>-->
+<!--	                                    <field name="mosque_id" invisible="1"/>-->
+<!--	                                    <field name="student_id" options="{'no_create': True,'no_open': True}"/>-->
+<!--										<field name="request_st_id" invisible="1"/>-->
+<!--										<field name="branch_id" domain="[('id','in',request_st_id.branches_ids)]"/>-->
+<!--	                                    <field name="student_id" options="{'no_create': True,'no_open': True}" domain="[('mosque_id','in',mosque_location_id)]"/>-->
+<!--	                                    <field name="attende"/>-->
+<!--	                                </tree>-->
+<!--								</field>-->
+
+								<line>
+								
+    							<p> اوقات الدورة </p>
+    							
+								<label for="subh"/>
+								<field name="subh" attrs="{'readonly':[('state', 'not in',['draft','send'])]}"/>
+								
+								<label for="zaher"/>
+								<field name="zaher" attrs="{'readonly':[('state', 'not in',['draft','send'])]}"/>
+								
+								<label for="asor"/>
+								<field name="asor"  attrs="{'readonly':[('state', 'not in',['draft','send'])]}"/>
+								
+						        <label for="mogreb"/>
+								<field name="mogreb" attrs="{'readonly':[('state', 'not in',['draft','send'])]}"/>
+								
+								<label for="esha"/>
+								<field name="esha"   attrs="{'readonly':[('state', 'not in',['draft','send'])]}"/>
+					
+								</line>
+                                   
+								<group col="4">
+									<field name="start_date" required="True" attrs="{'readonly':[('state', 'not in',['draft','send'])]}"/>
+									<field name="end_date"   required="True" attrs="{'readonly':[('state', 'not in',['draft','send'])]}"/>
+									<field name="day_ids" widget="many2many_checkboxes" required="True"  options="{'no_create': True,'no_open': True}" attrs="{'readonly':[('state', 'not in',['draft','send'])]}"/>
+									<field name="no_day" attrs="{'readonly':[('state', 'not in',['draft','send'])]}"/>
+									<field name="no_day_copy" invisible="1"/>
+								</group>
+								
+								<group>
+									<!--field name="branch_ids" widget="many2many_tags"/-->
+								</group>
+
+								<group col="4">
+									<field name="no_hours"    attrs="{'readonly':[('state', 'not in',['draft','send'])]}"/>
+									<field name="total_hours" attrs="{'readonly':[('state', 'not in',['draft','send'])]}"/>
+									<field name="no_teacher"  attrs="{'readonly':[('state', 'not in',['draft','send'])]}"/>
+									<field name="no_student"  attrs="{'readonly':[('state', 'not in',['draft','send'])]}"/>
+									<!--field name="no_supervisor"/-->
+									<field name="cost" attrs="{'readonly':[('state', 'not in',['draft','send'])]}"/>
+								</group>
+		   					</page>
+
+							<page string="Map">
+                   				<group colspan="2" col="2">
+                            		<field name="locate_desc"/>
+                            		<div>                                
+		                                <span> Lat : </span>
+		                                <field name="partner_latitude" nolabel="1" class="oe_inline" attrs="{'readonly':[('state', 'not in',['draft','send'])]}"/>
+		                                <span> ;  Long:  </span>
+		                                <field name="partner_longitude" nolabel="1" class="oe_inline" attrs="{'readonly':[('state', 'not in',['draft','send'])]}"/>
+		                                <span>) </span>
+                            		</div>
+                        		</group>
+            				</page>
+            				
+            				<page string="Note" >
+                  				<field name="note" widget="html" readonly="True"/>
+<!--                  				<field name="note" widget="html" readonly="True" attrs="{'invisible': [('gender_mosque', '==', 'male')]}"/>-->
+<!--                  				<field name="note2" widget="html" readonly="True" attrs="{'invisible': [('gender_mosque', '==', 'female')]}"/>-->
+								<line string="for supervisior">
+								<p> أتعهد بالالتزام بأنظمة‬ ‫الجمعية فيما‬  ‫يتعلق  ‫بالشروط‬ و ‫البنود   ‫الخاصة ‫بالدورات ‫المكثفة‬‬‬
+		   							<field name="commit"/>
+								</p>
+								</line>
+            				</page>
+
+							<page string="Closed course data" attrs="{'invisible': [('state', '!=', 'closed')]}">
+								<group>
+                    				<group>
+										<separator string="عدد حلقات الدورة"/>
+										<br/>
+										<field name="course_episode_nbr" nolabel="1"/><br/>
+
+										<separator string="عدد الطلاب/الطالبات"/>
+										<br/>
+										<field name="course_students_nbr" nolabel="1"/><br/>
+
+										<separator string="عدد المعلمات" attrs="{'invisible': [('gender_mosque', '!=', 'female')]}"/>
+										<br attrs="{'invisible': [('gender_mosque', '!=', 'female')]}"/>
+										<field name="course_teachers_nbr" nolabel="1" attrs="{'invisible': [('gender_mosque', '!=', 'female')]}"/>
+										<br attrs="{'invisible': [('gender_mosque', '!=', 'female')]}"/>
+
+										<separator string="عدد الاداريات" attrs="{'invisible': [('gender_mosque', '!=', 'female')]}"/>
+										<br attrs="{'invisible': [('gender_mosque', '!=', 'female')]}"/>
+										<field name="course_administrators_nbr" nolabel="1" attrs="{'invisible': [('gender_mosque', '!=', 'female')]}"/>
+										<br attrs="{'invisible': [('gender_mosque', '!=', 'female')]}"/>
+
+										<separator string="عدد الساعات (إجمالي عدد ساعات الدورة)"/>
+										<br/>
+										<div style="color: grey;"><p>عدد ساعات الدورة اليومية × عدد الأيام الفعلية للدورة</p></div>
+										<br/>
+										<field name="close_total_hours" nolabel="1"/><br/>
+
+										<separator string="عدد الأوجه المسمعة" attrs="{'invisible': [('gender_mosque', '=', 'female')]}"/>
+										<br attrs="{'invisible': [('gender_mosque', '=', 'female')]}"/>
+										<div style="color: grey;" attrs="{'invisible': [('gender_mosque', '=', 'female')]}">
+											<p>يضاف للرقم أوجه التلاوة الخاصة بحلقات تصحيح التلاوة</p>
+										</div>
+										<br attrs="{'invisible': [('gender_mosque', '=', 'female')]}"/>
+										<field name="parts_nbr" nolabel="1" attrs="{'invisible': [('gender_mosque', '=', 'female')]}"/>
+										<br attrs="{'invisible': [('gender_mosque', '=', 'female')]}"/>
+
+										<separator string="عدد الأوجه المسمعة (إجمالي عدد الوجه المسمعة من جميع الطالبات)" attrs="{'invisible': [('gender_mosque', '!=', 'female')]}"/>
+										<br attrs="{'invisible': [('gender_mosque', '!=', 'female')]}"/>
+										<field name="parts_female_total_nbr" nolabel="1" attrs="{'invisible': [('gender_mosque', '!=', 'female')]}"/>
+										<br attrs="{'invisible': [('gender_mosque', '!=', 'female')]}"/>
+
+										<separator string="عدد الأجزاء المسمعة (تلقائي -إجمالي عدد الأجزاء المكتملة)" attrs="{'invisible': [('gender_mosque', '!=', 'female')]}"/>
+										<br attrs="{'invisible': [('gender_mosque', '!=', 'female')]}"/>
+										<field name="parts_female_total_done_nbr" nolabel="1" attrs="{'invisible': [('gender_mosque', '!=', 'female')]}"/>
+										<br attrs="{'invisible': [('gender_mosque', '!=', 'female')]}"/>
+
+										<separator string="عدد الطلاب الخاتمين" attrs="{'invisible': [('gender_mosque', '=', 'female')]}"/>
+										<br attrs="{'invisible': [('gender_mosque', '=', 'female')]}"/>
+										<div style="color: grey;" attrs="{'invisible': [('gender_mosque', '=', 'female')]}">
+											<p>المقصود به الطلاب المشاركين في فرع القرآن كاملاً (إنجاز المقرر)</p>
+										</div>
+										<br attrs="{'invisible': [('gender_mosque', '=', 'female')]}"/>
+										<field name="students_finals_nbr" nolabel="1" attrs="{'invisible': [('gender_mosque', '=', 'female')]}"/>
+										<br attrs="{'invisible': [('gender_mosque', '=', 'female')]}"/>
+
+										<separator string="عدد الطلاب/الطالبات المشاركين في اختبارات الخاتمين"/>
+										<br/>
+										<field name="students_final_tests_nbr" nolabel="1"/><br/>
+
+										<separator string="عدد الطلاب/الطالبات المشاركين في اختبارات الأجزاء"/>
+										<br/>
+										<field name="students_parts_tests_nbr" nolabel="1"/><br/>
+									</group>
+									<group></group>
+								</group>
+							</page>
+                 		</notebook>
+	       			</sheet>
+					 <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+	     		</form>
+	   		</field>
+		</record>
+	
+    	<record id="mk_courses_request_tree_view" model="ir.ui.view">
+        	<field name="name">Courses Request </field>
+        	<field name="model">mk.course.request</field>
+        	<field name="arch" type="xml">
+            	<tree delete="0" string="Courses Request" colors="blue:state == 'draft';black:state =='send';red:state  =='reject';green:state =='accept' ">
+            		<field name="department_id"/>
+                 	<field name="mosque_id"/>
+                 	<field name="start_date"/>
+                 	<field name="end_date"/>
+					<field name="state_id"/>
+					<field name="location" />
+					<field name="state"/>
+					<field name="nbr_student_courses"/>
+            	</tree>
+        	</field>
+    	</record>
+
+		<record id="mk_course_request_search_view" model="ir.ui.view">
+	       <field name="name">mk course request search</field>
+	   	   <field name="model">mk.course.request</field>
+	       <field name="arch" type="xml">
+		    	<search>		    		
+		    		<field name="department_id"/>
+                 	<field name="mosque_id"/>
+                 	<field name="gender_mosque"/>
+					<field name="state_id"/>
+					<field name="location" />
+					<field name="academic_id" />
+					<field name="study_class_id" />
+					<field name="mobile" />
+					<field name="admin_id" />
+					<field name="course" />
+					<field name="mobile" />
+					<field name="mobile_admin" />
+					<field name="mobile_company" />
+					<field name="course_name" />
+					<field name="mosque_location" />
+					<field name="no_hours" />
+					<field name="total_hours" />
+					<field name="course_request_url" />
+					<field name="no_teacher" />
+					<field name="no_student" />
+					<field name="cost" />
+					<field name="no_day" />
+					<field name="active" />
+
+					<filter name="inactive"      string="مؤرشف"           domain="[('active','=',False)]"/>
+					<separator/>
+		    		<filter name="subh"          string="الفجر"           domain="[('subh', '=',True)]"/>
+		    		<separator/>
+					<filter name="zaher"         string="الظهر"           domain="[('zaher', '=',True)]"/>
+					<separator/>
+					<filter name="asor"          string="العصر"           domain="[('asor', '=',True)]"/>
+					<separator/>
+					<filter name="mogreb"        string="المغرب"          domain="[('mogreb', '=',True)]"/>
+					<separator/>
+					<filter name="esha"          string="العشاء"          domain="[('esha', '=',True)]"/>
+					<separator/>
+					<filter name="male"          string="رجالي"            domain="[('gender_mosque','=','male')]"/>
+					<filter name="female"        string="نسائي"            domain="[('gender_mosque','=','female')]"/>
+					<separator/>
+					<filter name="closed"        string="مقفل"            domain="[('state','=','closed')]"/>
+					<filter name="draft"         string="مبدئي"           domain="[('state','=','draft')]"/>
+                    <filter name="send"          string="ارسال"           domain="[('state','=','send')]"/>
+                    <filter name="accept"        string="موافقة"          domain="[('state','=','accept')]"/>
+                    <filter name="reject"        string="رفض"             domain="[('state','=','reject')]"/> 
+		    	
+		    		<group expand="0" string="Group By">
+	                    <filter name="department_id"        string="مركز إشراف"      context="{'group_by': 'department_id'}"/>   
+	                    <filter name="mosque_id"            string="المسجد/المدرسة"  context="{'group_by': 'mosque_id'}"/>
+	                    <filter name="gender_mosque"        string="رجالي/نسائي"     context="{'group_by': 'gender_mosque'}"/>
+	                    <filter name="state_id"             string="الحي"            context="{'group_by': 'state_id'}"/>
+	                    <filter name="location"             string="مقر البرنامج"    context="{'group_by': 'location'}"/>   
+	                    <filter name="academic_id"          string="العام الدراسي"   context="{'group_by': 'academic_id'}"/>   
+	                    <filter name="study_class_id"       string="الفصل الدراسي"   context="{'group_by': 'study_class_id'}"/>   
+                	    <filter name="admin_id"             string="مسؤول المسجد/المدرسة"    context="{'group_by': 'admin_id'}"/>
+                	    <filter name="course"               string="نوع البرنامج"    context="{'group_by': 'course'}"/>   
+                	    <filter name="mosque_location"      string="اسم المسجد/المدرسة"      context="{'group_by': 'mosque_location'}"/>
+                	    <filter name="active"               string="نشط"      context="{'group_by': 'active'}"/>
+
+                	
+                	</group>
+		    	</search>
+	       </field>
+		</record>
+				
+    	<record id="mk_courses_request_action" model="ir.actions.act_window">
+        	<field name="name">Courses Request </field>
+        	<field name="res_model">mk.course.request</field>
+        	<field name="type">ir.actions.act_window</field>
+        	<field name="view_type">form</field>
+        	<field name="view_mode">tree,form</field>
+    	</record>
+        
+		<menuitem  id="mk_courses_request_menu" sequence="0" parent="mk_courses_eval_menu_in" groups="mk_intensive_courses.read_course_request,mk_intensive_courses.edit_course_request,mk_intensive_courses.write_course_request,mk_intensive_courses.send_course_request,mk_intensive_courses.accept_reject_course_request" action="mk_courses_request_action"/>
+
+		<!--	mk.course.student	-->
+		<record id="mk_course_student_form_view" model="ir.ui.view">
+        	<field name="name">mk course student form </field>
+        	<field name="model">mk.course.student</field>
+        	<field name="arch" type="xml">
+            	<form  delete="false">
+					<sheet>
+						<group>
+							<group>
+								<field name="student_id"/>
+								<field name="mosque_id"/>
+							</group>
+							<group>
+								<field name="request_st_id"/>
+								<field name="attende"/>
+							</group>
+						</group>
+	       			</sheet>
+	     		</form>
+	   		</field>
+		</record>
+
+		<!--	mk_courses_request	-->
+		<record id="student_register_form_course_request_view" model="ir.ui.view">
+			<field name="name">mk.student.register</field>
+          	<field name="model">mk.student.register</field>
+          	<field name="inherit_id" ref="mk_student_register.view_student_register_form"/>
+      		<field name="arch" type="xml">
+			<xpath expr='//page[5]' position='after'>
+				<page string="البرامج المكثفة">
+				    <field name="student_course_ids">
+				        <tree create="0" delete="0" edit="0">
+				            <field name="request_st_id" string="البرنامج"/>
+				            <field name="attende"/>
+				        </tree>
+				    </field>
+				</page>
+			</xpath>
+			</field>
+	   </record>
+
+	</data>
+</odoo>	
+

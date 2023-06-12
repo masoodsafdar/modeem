@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+
+<record model="ir.rule" id="edu_supervisor_item_rule">
+      <field name="name">edu sup item rules</field>
+      <field name="model_id" ref="educational_supervison.model_supervisor_item"/>
+      <field name="domain_force">
+      ['|',('supervisor_id.department_id.id','=',user.department_ids.ids),'&amp;',('supervisor_id.user_id.id','=',user.id),'&amp;',('supervisor_id.category2','=','edu_supervisor'),('supervisor_id.state','=','accept')]
+      </field>      
+
+      <field name="groups" eval="[(4, ref('educational_supervison.group_read_supervisor_item'))]"/>
+</record>
+
+<record model="ir.rule" id="edu_center_item_rule">
+      <field name="name">edu center item rules</field>
+      <field name="model_id" ref="educational_supervison.model_center_item"/>
+      <field name="domain_force">
+      ['|',('center_id','in',user.department_id.ids),('center_id','in',user.department_ids.ids)]
+      </field>      
+      <field name="groups" eval="[(4, ref('educational_supervison.group_read_supervisor_item'))]"/>
+</record>
+<!--<record model="ir.rule" id="edu_comapany_pointers_rule">-->
+<!--      <field name="name">edu comapany pointers rules</field>-->
+<!--      <field name="model_id" ref="educational_supervison.model_comapany_pointers"/>-->
+<!--      <field name="domain_force">-->
+<!--      [('parent_line_ids.center_ids.id','in',user.department_ids.ids)]-->
+<!--      </field>-->
+<!--      <field name="groups" eval="[(4, ref('educational_supervison.group_read_comapany_pointers'))]"/>-->
+<!--</record>-->
+<record model="ir.rule" id="edu_parent_item_rule">
+      <field name="name">edu parent item rules</field>
+      <field name="model_id" ref="educational_supervison.model_parent_item"/>
+      <field name="domain_force">
+                        ['|', ('center_ids.id','=',user.department_id.id),
+                              ('center_ids.id','in',user.department_ids.ids)]
+      </field>      
+      <field name="groups" eval="[(4, ref('educational_supervison.group_read_comapany_pointers'))]"/>
+</record>
+
+<record model="ir.rule" id="edu_visits_managment_rule">
+      <field name="name">edu visits managment rule</field>
+      <field name="model_id" ref="educational_supervison.model_visits_managment"/>
+      <field name="domain_force">
+      [('supervisor_id.user_id.id','=',user.id),('supervisor_id.category2','=','admin'),('supervisor_id.state','=','accept')]
+      </field>      
+      <field name="groups" eval="[(4, ref('educational_supervison.group_read_supervisor_item')),(4, ref('educational_supervison.group_read_center_item'))]"/>
+</record>
+
+
+
+
+<!--
+
+[('supervisor.department_id.id','in',[ms.center_department_id.id for ms in user.mosque_ids]),('supervisor.category2','=','edu_supervisor'),('supervisor.state','=','accept')]
+[('supervisor.department_id.id','in',user.mosque_ids.center_department_id.ids),('supervisor.category2','=','edu_supervisor'),('supervisor.state','=','accept')]
+
+<record id="mosque_edu_users" model="res.groups">
+     <field name="name">Edu supervisor</field>
+     <field name="implied_ids" eval="[(4, ref('mk_users.mosque_users'))]"/>
+     <field name="users" eval="[(4, ref('base.user_root'))]"/>
+     <field name="category_id" ref="mk_users.maknon_management"/>
+</record>
+
+<record model="ir.rule" id="center_item_ffemale_rule">
+      <field name="name">center item rules</field>
+      <field name="model_id" ref="educational_supervison.model_center_item"/>
+      <field name="domain_force">[('center_id.female_managers.user_id.id','in',[user.id]),('women_men','=','women')]
+      </field>
+
+      field name="groups" eval="[(4, ref('mk_users.female_admin_center'))]"/
+
+</record>
+
+<record model="ir.rule" id="center_item_mmale_rule">
+      <field name="name">center item rules</field>
+      <field name="model_id" ref="educational_supervison.model_center_item"/>
+      <field name="domain_force">[('center_id.male_managers.user_id.id','in',[user.id]),('women_men','=','men')]
+      </field>
+      <field name="groups" eval="[(4, ref('mk_users.male_admin_center'))]"/>
+</record>
+
+<record model="ir.rule" id="center_item_manger_rule">
+      <field name="name">center item rules</field>
+      <field name="model_id" ref="educational_supervison.model_center_item"/>
+      <field name="domain_force">[('center_id.manager_id.user_id.id','in',[user.id])]</field>
+      
+      <field name="groups" eval="[(4, ref('mk_users.admin_center'))]"/>
+      >
+</record>
+
+
+<record model="ir.rule" id="supervisor_visits_rule">
+      <field name="name">sup visit rules</field>
+      <field name="model_id" ref="educational_supervison.model_visits_managment"/>
+      <field name="domain_force">
+      [('supervisor.user_id.id','in',[user.id]),('supervisor.state','=','accept')]
+      </field>
+      <field name="groups" eval="[(4, ref('mk_users.mosque_users'))]"/>
+</record>
+
+<record model="ir.rule" id="edu_supervisor_item_rule">
+      <field name="name">edu sup item rules</field>
+      <field name="model_id" ref="educational_supervison.model_supervisor_item"/>
+      <field name="domain_force">
+      [('supervisor.user_id.id','in',[user.id]),('supervisor.state','=','accept')]
+      </field>
+      <field name="groups" eval="[(4, ref('educational_supervison.mosque_edu_users'))]"/>
+</record>
+
+<record model="ir.rule" id="edu_supervisor_visits_rule">
+      <field name="name">edu sup visit rules</field>
+      <field name="model_id" ref="educational_supervison.model_visits_managment"/>
+      <field name="domain_force">
+      []
+      </field>
+      <field name="groups" eval="[(4, ref('educational_supervison.mosque_edu_users'))]"/>
+</record>
+-->
+</data>
+</openerp>
+

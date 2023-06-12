@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data noupdate="1">
+
+        <record id="hr_department_category2" model="hr.department.category">
+        	<field name="name">مسجد</field>
+            <field name="code">00003</field>
+        </record>
+        <record id="hr_department_category3" model="hr.department.category">
+        	<field name="name">جامع</field>
+            <field name="code">00004</field>
+        </record>
+        <record id="hr_department_category1" model="hr.department.category">
+        	<field name="name">مدرسة</field>
+            <field name="code">00005</field>
+        </record>
+    </data>
+</odoo>

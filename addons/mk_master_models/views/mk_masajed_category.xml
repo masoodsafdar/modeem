@@ -1,0 +1,74 @@
+<odoo>
+    <data>
+		<record id="mk_mosque_catogery_form_view" model="ir.ui.view">
+			<field name="name">mosque Form View</field>
+          	<field name="model">mk.mosque.category</field>
+          	<field name="arch" type="xml">
+            	<form delete="0" create="0" edit="0" string="mosque">
+					<sheet>
+						<group>
+				  			<group>			  				
+				  				<field name="name" required="1"/>
+								<field name="mosque_type" widget="radio"/>
+								<field name="code" readonly="1"/>
+								<field name="is_complexe"/>
+				  			</group>
+
+				  			<group>
+								<field name="order_categ"/>
+				  				<field name="active"/>
+				  			</group>						
+						</group>			  			
+	  	 			</sheet>
+					<div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+              	</form>
+			</field>
+		</record>
+
+		<record id="mk_mosque_catogery_tree_view" model="ir.ui.view">
+			<field name="name">mosque category tree View</field>
+          	<field name="model">mk.mosque.category</field>
+          	<field name="arch" type="xml">
+          		<tree delete="0" create="0" edit="0" string="mosque category">
+          			<field name="order_categ"/>
+		  			<field name="name"/>
+		  			<field name="mosque_type"/>
+		  			<field name="code"/>
+					<field name="active"/>
+		  		</tree>
+          	</field>
+		</record>
+
+        <record id="mk_mosque_catogery_search_view" model="ir.ui.view">
+            <field name="name">mosque category Search View</field>
+            <field name="model">mk.mosque.category</field>
+            <field name="arch" type="xml">
+                <search string="mosque category">
+                    <field name="name"/>
+                    <field name="code"/>
+                    <filter string="رجالي"  name="male"    domain="[('mosque_type', '=','male')]"/>
+                    <filter string="نسائي"  name="female"  domain="[('mosque_type', '=','female')]"/>
+                    
+                    <filter domain="[('active','=',False)]" name="active" string="Un Active"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="mk_mosque_category_action" model="ir.actions.act_window">
+            <field name="name">Mosque category</field>
+            <field name="res_model">mk.mosque.category</field>
+            <field name="type">ir.actions.act_window</field>
+            <!-- <field name="view_type">form</field> -->
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+            <field name="search_view_id" ref="mk_mosque_catogery_search_view"/>
+         </record>
+
+        <menuitem name="Mosque categories " id="mk_mosque_category_menu" sequence="1" parent="mk_associate_management_settings_menu" action="mk_mosque_category_action"/>
+
+    </data>
+</odoo>

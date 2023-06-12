@@ -1,0 +1,106 @@
+<odoo>
+    <data>
+
+        <record id="mk_punishment_form_view" model="ir.ui.view">
+            <field name="name">Punishment Form View</field>
+            <field name="model">mk.punishment</field>
+            <field name="arch" type="xml">
+                <form string="Punishment">
+                    <header>
+                        <button name="act_draft" string="Set to Draft" type="object" states="active"
+                                class="oe_highlight"/>
+                        <button name="act_active" string="Set to Active" type="object" states="draft"
+                                class="oe_highlight"/>
+                        <field name="state" widget="statusbar" statusbar_visible="draft,active"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <field name="company_id" required="1" invisible="1" options="{'no_open':1,'no_create':1}"/>
+                            <field name="name" required="1"/>
+                        </group>
+                        <group>
+                            <group>
+                                <field name="deduct_from_degrees" required="1"/>
+                                <field name="active"/>
+                            </group>
+                            <group>
+                                <field name="deduct_from_points" required="1"/>
+                            </group>
+                        </group>
+                        <separator string="Options"/>
+                        <group>
+                            <field name="guardian_call"/>
+                            <field name="guardian_message"/>
+                            <field name="mosque_message"/>
+                            <field name="freeze_study_class"/>
+                            <!--<field name="temporary_freezing"/>
+                            <field name="permenant_freezing"/>-->
+                        </group>
+                    </sheet>
+					<div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="mk_punishment_tree_view" model="ir.ui.view">
+            <field name="name">Punishment Tree View</field>
+            <field name="model">mk.punishment</field>
+            <field name="arch" type="xml">
+                <tree delete="0" string="Punishment" colors="red:state=='draft';blue:state=='active'">
+                    <field name="company_id" invisible="1" options="{'no_open':1,'no_create':1}"/>
+                    <field name="name"/>
+                    <field name="deduct_from_degrees"/>
+                    <field name="deduct_from_points"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <record id="mk_punishment_search_view" model="ir.ui.view">
+            <field name="name">Punishment Search View</field>
+            <field name="model">mk.punishment</field>
+            <field name="arch" type="xml">
+                <search string="Punishment">
+                    <field name="name" string="Punishment" filter_domain="[('name','ilike', self)]"/>
+                    <field name="deduct_from_degrees"/>
+                    <field name="deduct_from_points"/>
+
+                    <filter name="guardian_call" string="استدعاء ولي الامر و كتابة تعهّد"
+                            domain="[('guardian_call','=',True)]"/>
+                    <separator/>
+                    <filter name="guardian_message" string="ارسال رسالة لولي الأمر"
+                            domain="[('guardian_message','=',True)]"/>
+                    <separator/>
+                    <filter name="mosque_message" string="ارسال رسالة لِمُشرف المسجد/ مشرفة المدرسة"
+                            domain="[('mosque_message','=',True)]"/>
+                    <separator/>
+                    <filter name="freeze_study_class" string="تجميد الفصل الدراسي"
+                            domain="[('freeze_study_class','=',True)]"/>
+                    <separator/>
+                    <filter name="active" string="Active" domain="[('active','=',True)]"/>
+                    <filter name=" un active" string="Un active" domain="[('active','=',False)]"/>
+
+                </search>
+            </field>
+        </record>
+
+        <record id="mk_punishment_action" model="ir.actions.act_window">
+            <field name="name">Punishment</field>
+            <field name="res_model">mk.punishment</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+            <field name="search_view_id" ref="mk_punishment_search_view"/>
+        </record>
+
+        <menuitem name="Punishment" id="mk_punishment_menu" sequence="5"
+                  parent="mk_master_models.mk_program_management_settings_menu" action="mk_punishment_action"/>
+
+    </data>
+</odoo>

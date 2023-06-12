@@ -1,0 +1,55 @@
+<odoo>
+    <data>
+    
+ 	<record id="mk_level_form_view" model="ir.ui.view">
+          <field name="name">Level Form View</field>
+          <field name="model">mk.level</field>
+          <field name="arch" type="xml">
+              <form string = "Level ">
+		  <header>
+		    
+		  </header>
+		  <sheet>
+			  <group>
+			  	<field name="name" required="1"/>
+			  </group>
+	  	</sheet>
+              </form>
+             </field>
+         </record>
+
+        <record id="mk_level_tree_view" model="ir.ui.view">
+            <field name="name">Level Tree View</field>
+            <field name="model">mk.level</field>
+            <field name="arch" type="xml">
+                <tree delete="0" string="Level ">
+                	<field name="name" required="1"/>
+                </tree>
+            </field>
+        </record>
+        
+        <record id="mk_level_search_view" model="ir.ui.view">
+            <field name="name">Level Search View</field>
+            <field name="model">mk.level</field>
+            <field name="arch" type="xml">
+                <search string="Level ">
+                    <field name="name" string="Level " filter_domain="[('name','ilike', self)]"/>
+                </search>
+            </field>
+        </record>
+        
+        <record id="mk_level_action" model="ir.actions.act_window">
+            <field name="name">Level </field>
+            <field name="res_model">mk.level</field>
+            <field name="type">ir.actions.act_window</field>
+            <!-- <field name="view_type">form</field> -->
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+            <field name="search_view_id" ref="mk_level_search_view"/>
+        </record>
+
+	<!--<menuitem name="Level " id="mk_level_menu" sequence="9" parent="mk_program_management_settings_menu" action="mk_level_action"/>-->  
+
+    </data>  
+</odoo>

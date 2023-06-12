@@ -1,0 +1,956 @@
+<odoo>
+    <data>
+
+        <!-- ===================================================
+                                   Mistake Line
+             ===================================================-->
+
+        <record model="ir.ui.view" id="mk_mistake_tree">
+            <field name="name">mk.details.mistake.tree</field>
+            <field name="model">mk.details.mistake</field>
+            <field name="arch" type="xml">
+                <tree><!-- editable="bottom"-->
+                    <field name="surah_id" options="{'no_create': True,'no_open': True}"/>
+                    <field name="aya_id" options="{'no_create': True,'no_open': True}" string="آية"/>
+                    <field name="nbr_mstk_qty" sum="total_nbr_mstk_qty"/>
+                    <field name="number_mistake" sum="total_number_mistake" string="عدد أخطاء الحفظ"/>
+                    <field name="nbr_mstk_read" sum="total_nbr_mstk_read"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="mk_mistake_form">
+            <field name="name">mk.details.mistake.form</field>
+            <field name="model">mk.details.mistake</field>
+            <field name="arch" type="xml">
+                <form string="الأخطاء">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="mistake_id" options="{'no_create': True,'no_open': True}" invisible="1"/>
+                                <field name="from_surah" options="{'no_create': True,'no_open': True}" invisible="1"/>
+                                <field name="from_aya" options="{'no_create': True,'no_open': True}" invisible="1"/>
+                                <field name="to_surah" options="{'no_create': True,'no_open': True}" invisible="1"/>
+                                <field name="to_aya" options="{'no_create': True,'no_open': True}" invisible="1"/>
+                                <field name="nbr_mstk_qty" attrs="{'invisible': [('total_mistake_id','=',False)]}"/>
+                                <field name="number_mistake" attrs="{'invisible': [('total_mistake_id','=',False)]}"
+                                       string="عدد أخطاء الحفظ"/>
+                                <field name="nbr_mstk_read" attrs="{'invisible': [('total_mistake_id','=',False)]}"/>
+
+                                <field name="nbr_abscent" attrs="{'invisible': [('total_mistake_id','!=',False)]}"
+                                       readonly="1"/>
+                                <field name="total_mstk_qty" attrs="{'invisible': [('total_mistake_id','!=',False)]}"/>
+                                <field name="total_mstk_qlty" attrs="{'invisible': [('total_mistake_id','!=',False)]}"/>
+                                <field name="total_mstk_read" attrs="{'invisible': [('total_mistake_id','!=',False)]}"/>
+                                <field name="total_mistake_id" options="{'no_create': True,'no_open': True}"
+                                       invisible="1"
+                                       domain="[('mistake_id','=',mistake_id),('total_mistake_id','=',False)]"
+                                       attrs="{'invisible': [('total_mistake_id','!=',False)]}"/>
+                            </group>
+
+                            <group>
+                                <field name="surah_id" options="{'no_create': True,'no_open': True}"
+                                       domain="['|',('id','=',from_surah),('id','=',to_surah)]"
+                                       attrs="{'invisible': [('total_mistake_id','=',False)]}" invisible="1"/>
+                                <field name="aya_id" options="{'no_create': True,'no_open': True}"
+                                       domain="[('surah_id','=',surah_id)]"
+                                       attrs="{'invisible': [('total_mistake_id','=',False)]}" invisible="1"
+                                       string="آية"/>
+
+                                <field name="deduct_delay" attrs="{'invisible': [('total_mistake_id','!=',False)]}"
+                                       readonly="1"/>
+                                <field name="deduct_absence" attrs="{'invisible': [('total_mistake_id','!=',False)]}"
+                                       readonly="1"/>
+                                <field name="deduct_qty_memorize"
+                                       attrs="{'invisible': [('total_mistake_id','!=',False)]}" readonly="1"/>
+                                <field name="deduct_memorize" attrs="{'invisible': [('total_mistake_id','!=',False)]}"
+                                       readonly="1"/>
+                                <field name="deduct_tajweed" attrs="{'invisible': [('total_mistake_id','!=',False)]}"
+                                       readonly="1"/>
+                            </group>
+                        </group>
+
+                        <field name="mistake_details" invisible="1">
+                            <tree><!-- editable="bottom"-->
+                                <field name="surah_id" options="{'no_create': True,'no_open': True}"/>
+                                <field name="aya_id" options="{'no_create': True,'no_open': True}" string="آية"/>
+                                <field name="nbr_mstk_qty" sum="total_nbr_mstk_qty"/>
+                                <field name="number_mistake" sum="total_number_mistake" string="عدد أخطاء الحفظ"/>
+                                <field name="nbr_mstk_read" sum="total_nbr_mstk_read"/>
+                            </tree>
+                        </field>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_mistake_form">
+            <field name="name">الأخطاء</field>
+            <field name="res_model">mk.details.mistake</field>
+            <field name="view_mode">form</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="target">new</field>
+            <field name="context">{'default_mistake_id':active_id}</field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_mistake_tree">
+            <field name="name">الأخطاء</field>
+            <field name="res_model">mk.details.mistake</field>
+            <field name="view_mode">tree,form</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="target">new</field>
+            <field name="domain">[('mistake_id','=',active_id),('total_mistake_id','!=',False)]</field>
+            <field name="context">{}</field>
+        </record>
+
+        <!-- ===================================================
+                                 Listen line
+             ===================================================-->
+
+        <record model="ir.ui.view" id="mk_listen_line_tree_view">
+            <field name="name">mk.listening.line.tree</field>
+            <field name="model">mk.listen.line</field>
+            <field name="domain">[('is_meqraa_student','=',False)]</field>
+            <field name="arch" type="xml">
+                <tree delete="false" create="true" editable="top">
+                    <field name="is_from_mobile" invisible="1"/>
+                    <field name="actual_date" required="1" attrs="{'readonly': [('is_from_mobile', '=', True)]}"/>
+                    <field name="episode"     required="1" attrs="{'readonly': [('is_from_mobile', '=', True)]}" domain="[('is_study_class_default', '=', True)]" options="{'no_create': True,'no_open': True}"/>
+                    <field name="student_register_id" required="1" string="الطالب" attrs="{'readonly': [('is_from_mobile', '=', True)]}" options="{'no_create': True,'no_open': True}"/>
+                    <field name="type_follow"    required="1" attrs="{'readonly': [('is_from_mobile', '=', True)]}" options="{'no_create': True,'no_open': True}"/>
+                    <field name="study_class_id" required="1" attrs="{'readonly': [('is_from_mobile', '=', True)]}" domain="[('is_default', '=', True)]" options="{'no_create': True,'no_open': True}"/>
+                    <field name="from_surah" required="1" options="{'no_create': True,'no_open': True}"/>
+                    <field name="from_aya"   required="1" domain="[('surah_id', '=', from_surah)]"  options="{'no_create': True,'no_open': True}"/>
+                    <field name="to_surah"   required="1" options="{'no_create': True,'no_open': True}"/>
+                    <field name="to_aya"     required="1" domain="[('surah_id', '=', to_surah)]" options="{'no_create': True,'no_open': True}"/>
+                    <field name="nbr_lines" string="عدد الأسطر"          sum="Total"/>
+                    <field name="nbr_pages" string="عدد الأوجه الإجمالي" sum="Total" />
+                    <field name="state" readonly="True"/>
+                    <field name="total_mstk_qty"  sum="Total"/>
+                    <field name="total_mstk_read" sum="Total"/>
+                    <field name="degree"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="mk_listen_line_tree_view_mosque">
+            <field name="name">mk.listening.line.tree</field>
+            <field name="model">mk.listen.line</field>
+            <field name="domain">[('is_meqraa_student','=',False)]</field>
+            <field name="arch" type="xml">
+                <tree delete="false" create="true" editable="top">
+                    <field name="is_from_mobile" invisible="1"/>
+                    <field name="mosque_id" invisible="1" />
+                    <field name="actual_date" required="1" attrs="{'readonly': [('is_from_mobile', '=', True)]}"/>
+                    <field name="episode"     required="1" attrs="{'readonly': [('is_from_mobile', '=', True)]}" options="{'no_create': True,'no_open': True}"/>
+                    <field name="student_register_id" required="1" string="الطالب" attrs="{'readonly': [('is_from_mobile', '=', True)]}" options="{'no_create': True,'no_open': True}"/>
+                    <field name="type_follow"    required="1" attrs="{'readonly': [('is_from_mobile', '=', True)]}" options="{'no_create': True,'no_open': True}"/>
+                    <field name="study_class_id" required="1" attrs="{'readonly': [('is_from_mobile', '=', True)]}" domain="[('is_default', '=', True)]" options="{'no_create': True,'no_open': True}"/>
+                    <field name="from_surah" required="1" options="{'no_create': True,'no_open': True}"/>
+                    <field name="from_aya"   required="1" domain="[('surah_id', '=', from_surah)]"  options="{'no_create': True,'no_open': True}"/>
+                    <field name="to_surah"   required="1" options="{'no_create': True,'no_open': True}"/>
+                    <field name="to_aya"     required="1" domain="[('surah_id', '=', to_surah)]" options="{'no_create': True,'no_open': True}"/>
+                    <field name="nbr_lines" string="عدد الأسطر"          sum="Total"/>
+                    <field name="nbr_pages" string="عدد الأوجه الإجمالي" sum="Total" />
+                    <field name="state" readonly="True"/>
+                    <field name="total_mstk_qty"  sum="Total"/>
+                    <field name="total_mstk_read" sum="Total"/>
+                    <field name="degree"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="mk_listen_line_tree_view_episode">
+            <field name="name">mk.listening.line.tree</field>
+            <field name="model">mk.listen.line</field>
+            <field name="domain">[('is_meqraa_student','=',False)]</field>
+            <field name="arch" type="xml">
+                <tree delete="false" create="true" editable="top">
+                    <field name="is_from_mobile" invisible="1"/>
+                    <field name="actual_date" required="1" attrs="{'readonly': [('is_from_mobile', '=', True)]}"/>
+                    <field name="episode"   readonly="1"  required="1" attrs="{'readonly': [('is_from_mobile', '=', True)]}" domain="[('is_study_class_default', '=', True)]" options="{'no_create': True,'no_open': True}"/>
+                    <field name="student_register_id" required="1" string="الطالب" attrs="{'readonly': [('is_from_mobile', '=', True)]}" options="{'no_create': True,'no_open': True}"/>
+                    <field name="type_follow"    required="1" attrs="{'readonly': [('is_from_mobile', '=', True)]}" options="{'no_create': True,'no_open': True}"/>
+                    <field name="study_class_id" required="1" attrs="{'readonly': [('is_from_mobile', '=', True)]}" domain="[('is_default', '=', True)]" options="{'no_create': True,'no_open': True}"/>
+                    <field name="from_surah" required="1" options="{'no_create': True,'no_open': True}"/>
+                    <field name="from_aya"   required="1" domain="[('surah_id', '=', from_surah)]"  options="{'no_create': True,'no_open': True}"/>
+                    <field name="to_surah"   required="1" options="{'no_create': True,'no_open': True}"/>
+                    <field name="to_aya"     required="1" domain="[('surah_id', '=', to_surah)]" options="{'no_create': True,'no_open': True}"/>
+                    <field name="nbr_lines" string="عدد الأسطر"          sum="Total"/>
+                    <field name="nbr_pages" string="عدد الأوجه الإجمالي" sum="Total" />
+                    <field name="state" readonly="True"/>
+                    <field name="total_mstk_qty"  sum="Total"/>
+                    <field name="total_mstk_read" sum="Total"/>
+                    <field name="degree"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="mk_listen_line_tree_view_student">
+            <field name="name">mk.listening.line.tree</field>
+            <field name="model">mk.listen.line</field>
+            <field name="domain">[('is_meqraa_student','=',False)]</field>
+            <field name="arch" type="xml">
+                <tree delete="false" create="true" editable="top">
+                    <field name="is_from_mobile" invisible="1"/>
+                    <field name="actual_date" required="1" attrs="{'readonly': [('is_from_mobile', '=', True)]}"/>
+                    <field name="episode"     required="1" attrs="{'readonly': [('is_from_mobile', '=', True)]}" options="{'no_create': True,'no_open': True}"/>
+                    <field name="student_register_id" readonly="1" required="1" string="الطالب" attrs="{'readonly': [('is_from_mobile', '=', True)]}" options="{'no_create': True,'no_open': True}"/>
+                    <field name="type_follow"    required="1" attrs="{'readonly': [('is_from_mobile', '=', True)]}" options="{'no_create': True,'no_open': True}"/>
+                    <field name="study_class_id" required="1" attrs="{'readonly': [('is_from_mobile', '=', True)]}" domain="[('is_default', '=', True)]" options="{'no_create': True,'no_open': True}"/>
+                    <field name="from_surah" required="1" options="{'no_create': True,'no_open': True}"/>
+                    <field name="from_aya"   required="1" domain="[('surah_id', '=', from_surah)]"  options="{'no_create': True,'no_open': True}"/>
+                    <field name="to_surah"   required="1" options="{'no_create': True,'no_open': True}"/>
+                    <field name="to_aya"     required="1" domain="[('surah_id', '=', to_surah)]" options="{'no_create': True,'no_open': True}"/>
+                    <field name="nbr_lines" string="عدد الأسطر"          sum="Total"/>
+                    <field name="nbr_pages" string="عدد الأوجه الإجمالي" sum="Total" />
+                    <field name="state" readonly="True"/>
+                    <field name="total_mstk_qty"  sum="Total"/>
+                    <field name="total_mstk_read" sum="Total"/>
+                    <field name="degree"/>
+                </tree>
+            </field>
+        </record>
+
+
+
+
+
+        <record id="mk_listenline_search_view" model="ir.ui.view">
+            <field name="name">mk listen line search</field>
+            <field name="model">mk.listen.line</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="episode" string="الحلقة"/>
+                    <field name="student_id" string="التنسيب"/>
+                    <field name="student_register_id" string="الطالب"/>
+                    <field name="study_year_id"/>
+                    <field name="study_class_id"/>
+                    <field name="actual_date"/>
+                    <field name="center_department_id"/>
+                    <field name="is_from_mobile"/>
+
+                    <filter name="listen" string="listen" domain="[('type_follow','=','listen')]"/>
+                    <filter name="small_review" string="small review" domain="[('type_follow','=','review_small')]"/>
+                    <filter name="big review" string="big review" domain="[('type_follow','=','review_big')]"/>
+                    <filter name="tlawa" string="tlawa" domain="[('type_follow','=','tlawa')]"/>
+                    <separator/>
+                    <filter name="today"      string="اليوم" domain="[('actual_date','=',time.strftime('%%Y-%%m-%%d'))]"/>
+                    <filter name="this_week"  string="اخر أسبوع" domain="['&amp;',('actual_date', '>=', (context_today() + relativedelta(weeks=-1,days=1,weekday=6)).strftime('%Y-%m-%d')),('actual_date', '&lt;=', (context_today() + relativedelta(weekday=5)).strftime('%Y-%m-%d')),]"/>
+                    <filter name="this_month" string="اخر شهر" domain="['&amp;', ('actual_date', '>=', (context_today() + relativedelta(day=1)).strftime('%Y-%m-%d')),('actual_date', '&lt;=', (context_today() + relativedelta(months=1, day=1, days=-1)).strftime('%Y-%m-%d')),]"/>
+                    <separator/>
+                    <filter name="is_from_mobile"     string="أنشأ من التطبيق" domain="[('is_from_mobile','=',True)]"/>
+                    <filter name="is_not_from_mobile" string="أنشأ من النظام" domain="[('is_from_mobile','=',False)]"/>
+                    <group expand="0" string="Group By">
+                        <filter name="type_follow" string="type follow" context="{'group_by': 'type_follow'}"/>
+                        <filter name="group_by_center_department_id" string="المركز" context="{'group_by': 'center_department_id'}"/>
+                        <filter name="mosque_id"   string="Mosque" context="{'group_by': 'mosque_id'}"/>
+                        <filter name="episode"     string="الحلقة" context="{'group_by': 'episode'}"/>
+                        <filter name="student_register_id"           string="الطالب"  context="{'group_by': 'student_register_id'}"/>
+                        <filter name="study_year_id"       string="العام الدراسي" context="{'group_by': 'study_year_id'}"/>
+                        <filter name="study_class_id"      string="الفصل الدراسي" context="{'group_by': 'study_class_id'}"/>
+                        <filter name="group_by_actual_date" string="تجميع التاريخ بالعام" context="{'group_by': 'actual_date:year'}"/>
+                        <filter name="group_by_actual_date" string="تجميع التاريخ بالشهر" context="{'group_by': 'actual_date:month'}"/>
+                        <filter name="group_by_actual_date" string="تجميع التاريخ باليوم" context="{'group_by': 'actual_date:day'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <!-- ===================================================
+                           Student Prepare Presence
+       ===================================================-->
+
+        <record model="ir.ui.view" id="student_prepare_presence_tree_view">
+            <field name="name">mk.student.prepare.presence.tree</field>
+            <field name="model">mk.student.prepare.presence</field>
+            <field name="arch" type="xml">
+                <tree editable="top" create="true">
+                    <field name="is_from_mobile" invisible="1"/>
+                    <field name="presence_date" attrs="{'readonly': [('is_from_mobile','=',True)]}" required="1"/>
+                    <field name="episode_id"    attrs="{'readonly': [('is_from_mobile','=',True)]}"       options="{'no_create': True,'no_open': True}" required="1"/>
+                    <field name="student_register_id" attrs="{'readonly': [('is_from_mobile','=',True)]}" options="{'no_create': True,'no_open': True}" required="1"/>
+                    <field name="status" required="1"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="inherit_student_prepare_presence_tree_view">
+            <field name="name">mk.student.prepare.presence.readonly.tree</field>
+            <field name="model">mk.student.prepare.presence</field>
+            <field name="arch" type="xml">
+                <tree edit="false" delete="false" create="false">
+                    <field name="presence_date"/>
+                    <field name="episode_id"          options="{'no_create': True,'no_open': True}"/>
+                    <field name="student_register_id" options="{'no_create': True,'no_open': True}"/>
+                    <field name="status"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <record model="ir.ui.view" id="student_prepare_presence_tree_view_from_student">
+            <field name="name">mk.student.prepare.presence.tree</field>
+            <field name="model">mk.student.prepare.presence</field>
+            <field name="arch" type="xml">
+                <tree editable="top" create="true">
+                    <field name="is_from_mobile" invisible="1"/>
+                    <field name="presence_date" attrs="{'readonly': [('is_from_mobile','=',True)]}" required="1"/>
+                    <field name="episode_id" options="{'no_create': True,'no_open': True}" attrs="{'readonly': [('is_from_mobile','=',True)]}" required="1"/>
+                    <field name="student_register_id" readonly="1" attrs="{'readonly': [('is_from_mobile','=',True)]}" required="1"/>
+                    <field name="status" required="1"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <record model="ir.ui.view" id="student_prepare_presence_tree_view_episode">
+            <field name="name">mk.student.prepare.presence.tree episode</field>
+            <field name="model">mk.student.prepare.presence</field>
+            <field name="arch" type="xml">
+                <tree editable="top" create="true">
+                    <field name="is_from_mobile" invisible="1"/>
+                    <field name="presence_date" attrs="{'readonly': [('is_from_mobile','=',True)]}" required="1"/>
+                    <field name="episode_id"          options="{'no_create': True,'no_open': True}" attrs="{'readonly': [('is_from_mobile','=',True)]}" readonly="1" required="1"/>
+                    <field name="student_register_id" options="{'no_create': True,'no_open': True}" attrs="{'readonly': [('is_from_mobile','=',True)]}" required="1"/>
+                    <field name="status" required="1"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <record id="student_prepare_presence_form_view" model="ir.ui.view">
+            <field name="name">mk.student.prepare.presence.form</field>
+            <field name="model">mk.student.prepare.presence</field>
+            <field name="arch" type="xml">
+                <form delete="false" edit="false">
+                    <header>
+                    </header>
+                    <group>
+                        <group>
+                            <field name="presence_date"/>
+                            <field name="student_register_id"/>
+                        </group>
+                        <group>
+                            <field name="episode_id"/>
+                            <field name="status"/>
+                        </group>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="student_prepare_presence_search_view" model="ir.ui.view">
+            <field name="name">mk.student.prepare.presence.search</field>
+            <field name="model">mk.student.prepare.presence</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="presence_date"/>
+                    <field name="episode_id"/>
+                    <field name="mosque_id"/>
+                    <field name="status"/>
+                    <field name="student_register_id"/>
+                    <field name="study_year_id"/>
+                    <field name="study_class_id"/>
+                    <field name="center_department_id"/>
+
+                    <filter name="absent_today" string="الطلاب المتغيبين اليوم" domain="[('status','in',['absent_excuse', 'absent']),('presence_date','=',time.strftime('%%Y-%%m-%%d'))]"/>
+                    <separator/>
+                    <filter name="present" string="حاضر" domain="[('status','=','present')]"/>
+                    <filter name="absent" string="غائب" domain="[('status','=','absent')]"/>
+                    <filter name="absent_excuse" string="غائب بعذر" domain="[('status','=','absent_excuse')]"/>
+                    <filter name="delay" string="متأخر" domain="[('status','=','delay')]"/>
+                    <filter name="not_read" string="لم يسمع" domain="[('status','=','not_read')]"/>
+                    <filter name="excuse" string="استأذن" domain="[('status','=','excuse')]"/>
+                    <separator/>
+                    <filter name="today"      string="اليوم" domain="[('presence_date','=',time.strftime('%%Y-%%m-%%d'))]"/>
+                    <filter name="this_week"  string="اخر أسبوع" domain="['&amp;',('presence_date', '>=', (context_today() + relativedelta(weeks=-1,days=1,weekday=6)).strftime('%Y-%m-%d')),('presence_date', '&lt;=', (context_today() + relativedelta(weekday=5)).strftime('%Y-%m-%d')),]"/>
+                    <filter name="this_month" string="اخر شهر" domain="['&amp;', ('presence_date', '>=', (context_today() + relativedelta(day=1)).strftime('%Y-%m-%d')),('presence_date', '&lt;=', (context_today() + relativedelta(months=1, day=1, days=-1)).strftime('%Y-%m-%d')),]"/>
+                    <group expand="0" string="Group By">
+                        <filter name="status"     string="الحالة" context="{'group_by': 'status'}"/>
+                        <filter name="group_by_center_department_id" string="المركز"  context="{'group_by': 'center_department_id'}"/>
+                        <filter name="episode_id" string="الحلقة" context="{'group_by': 'episode_id'}"/>
+                        <filter name="mosque_id"  string="المسجد" context="{'group_by': 'mosque_id'}"/>
+                        <filter name="student_register_id" string="الطالب"        context="{'group_by': 'student_register_id'}"/>
+
+                        <filter name="study_year_id"       string="العام الدراسي" context="{'group_by': 'study_year_id'}"/>
+                        <filter name="study_class_id"      string="الفصل الدراسي" context="{'group_by': 'study_class_id'}"/>
+                        <filter name="group_by_actual_date" string="تجميع التاريخ بالعام" context="{'group_by': 'presence_date:year'}"/>
+                        <filter name="group_by_actual_date" string="تجميع التاريخ بالشهر" context="{'group_by': 'presence_date:month'}"/>
+                        <filter name="group_by_actual_date" string="تجميع التاريخ باليوم" context="{'group_by': 'presence_date:day'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <!-- ===================================================
+                        Student Preparation's Smart Buttons
+             ===================================================-->
+
+        <record id="mk_listen_prepration_tree" model="ir.ui.view">
+            <field name="name">mk.listening.preparation.tree</field>
+            <field name="model">mk.listen.line</field>
+            <field name="arch" type="xml">
+                <tree create="false" delete="false" editable="bottom">
+                    <field name="order" readonly="True"/>
+                    <field name="actual_date" readonly="True"/>
+                    <field name="from_surah" options="{'no_create': True,'no_open': True}"/>
+                    <field name="from_aya" options="{'no_create': True,'no_open': True}"/>
+                    <field name="to_surah" options="{'no_create': True,'no_open': True}"/>
+                    <field name="to_aya" options="{'no_create': True,'no_open': True}"/>
+                    <field name="nbr_lines" string="عدد الأسطر"/>
+                    <field name="nbr_pages" string="عدد الأوجه"/>
+                    <field name="state" readonly="True"/>
+                    <field name="total_mstk_qty"/>
+                    <field name="total_mstk_read"/>
+
+                    <field name="degree"/>
+
+                    <button name="get_action_mistake_view_form" type="object" string="عرض إجمالي" invisible="1"/>
+
+                    <field name="mistake_line_ids" invisible="1"/>
+                    <field name="program_id" invisible="1"/>
+                    <field name="episode" invisible="1"/>
+                    <field name="student_id" invisible="1"/>
+                    <field name="zuhr" invisible="1"/>
+                    <field name="magrib" invisible="1"/>
+                    <field name="esha" invisible="1"/>
+                    <field name="aasr" invisible="1"/>
+                    <field name="subh" invisible="1"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="mk_listening_prepa_form" model="ir.ui.view">
+            <field name="name">mk.listening.preparation.form</field>
+            <field name="model">mk.listen.line</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <button name="wkf_absent" states="draft,absent" string="Absent" type="object"/>
+                        <button name="wkf_done" states="draft,absent" string="Done" type="object"/>
+                        <field name="state" widget="statusbar" states="draft,done"/>
+                    </header>
+                    <group>
+                        <field name="permission_id" options="{'no_create': True,'no_open': True}"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="act_prepa_2_memors" model="ir.actions.act_window">
+            <field name="name">الحفظ</field>
+            <field name="res_model">mk.listen.line</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('preparation_id', '=', active_id),
+                ('type_follow','=','listen')]
+            </field>
+            <field name="context">{'default_preparation_id':active_id,
+                'form_view_ref': 'mk_student_managment.mk_listening_prepa_form',
+                'tree_view_ref': 'mk_student_managment.mk_listen_prepration_tree'}
+            </field>
+        </record>
+
+        <record id="act_prepa_2_reviews" model="ir.actions.act_window">
+            <field name="name">مراجعة صغرى</field>
+            <field name="res_model">mk.listen.line</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('preparation_id', '=', active_id),
+                ('type_follow','=','review_small')]
+            </field>
+            <field name="context">{'default_preparation_id':active_id,
+                'form_view_ref': 'mk_student_managment.mk_listening_prepa_form',
+                'tree_view_ref': 'mk_student_managment.mk_listen_prepration_tree'}
+            </field>
+        </record>
+
+        <record id="act_prepa_2_big_reviews" model="ir.actions.act_window">
+            <field name="name">مراجعة كبرى</field>
+            <field name="res_model">mk.listen.line</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('preparation_id', '=', active_id),
+                ('type_follow','=','review_big')]
+            </field>
+            <field name="context">{'default_preparation_id':active_id,
+                'form_view_ref': 'mk_student_managment.mk_listening_prepa_form',
+                'tree_view_ref': 'mk_student_managment.mk_listen_prepration_tree'}
+            </field>
+        </record>
+
+        <record id="act_prepa_2_recitations" model="ir.actions.act_window">
+            <field name="name">التلاوة</field>
+            <field name="res_model">mk.listen.line</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('preparation_id', '=', active_id),
+                ('type_follow','=','tlawa')]
+            </field>
+            <field name="context">{'default_preparation_id':active_id,
+                'form_view_ref': 'mk_student_managment.mk_listening_prepa_form',
+                'tree_view_ref': 'mk_student_managment.mk_listen_prepration_tree'}
+            </field>
+        </record>
+
+        <!-- ===================================================
+                              Student Preparation
+             ===================================================-->
+
+        <record model="ir.ui.view" id="mk_studen_prepration_tree">
+            <field name="name">mk.student.prepration.tree</field>
+            <field name="model">mk.student.prepare</field>
+            <field name="domain">[('is_meqraa_student','=',False)]</field>
+            <field name="arch" type="xml">
+                <tree delete="false">
+                    <field name="student_register_id"/>
+                    <field name="stage_pre_id"/>
+                    <field name="name"/>
+                    <field name="general_behavior_type"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="mk_studen_prepration_form">
+            <field name="name">mk.student.prepration.form</field>
+            <field name="model">mk.student.prepare</field>
+            <field name="arch" type="xml">
+                <form string="Prepration Student" create="0" delete="0">
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <button name="%(act_prepa_2_memors)d"
+                                    class="oe_stat_button"
+                                    type="action"
+                                    attrs="{'invisible':[('check_memory','=', False)]}"
+                                    context="{'default_program_id':program_id, 'episode':stage_pre_id}"
+                                    icon="fa-file-text-o"
+                                    string="Memorize"/>
+
+                            <button name="%(act_prepa_2_reviews)d"
+                                    class="oe_stat_button"
+                                    type="action"
+                                    attrs="{'invisible':[('check_minimum','=', False)]}"
+                                    icon="fa-file-text-o"
+                                    string="Small Review"/>
+
+                            <button name="%(act_prepa_2_big_reviews)d"
+                                    class="oe_stat_button"
+                                    type="action"
+                                    attrs="{'invisible':[('check_max','=', False)]}"
+                                    icon="fa-file-text-o"
+                                    string="Big Review"/>
+
+                            <button name="%(act_prepa_2_recitations)d"
+                                    class="oe_stat_button"
+                                    type="action"
+                                    attrs="{'invisible':[('check_read','=', False)]}"
+                                    icon="fa-file-text-o"
+                                    string="التلاوة"/>
+                        </div>
+
+                        <group>
+                            <field name="name" options="{'no_create': 1, 'no_create_edit': 1}" readonly="1"/>
+                            <field name="stage_pre_id" readonly="1"/>
+                            <field name="prepare_date" required="1" readonly="1"/>
+                            <field name="program_id" invisible="True"
+                                   options="{'no_create_edit': True, 'no_create':True}"/>
+                            <field name="link_id" readonly="1"/>
+                            <field name="general_behavior_type" readonly="1"/>
+                        </group>
+                        <field name="check_memory" invisible="1"/>
+                        <field name="check_minimum" invisible="1"/>
+                        <field name="check_max" invisible="1"/>
+                        <field name="check_read" invisible="1"/>
+                        <notebook>
+                            <page string="الإعدادات">
+                                <field name="history_ids" nolabel="1" readonly="1" >
+                                    <tree>
+                                        <field name="date_start"/>
+<!--                                        <field name="program_id"/>-->
+<!--                                        <field name="approache_id" string="المنهج"/>-->
+                                        <field name="is_memorize"/>
+                                        <field name="is_min_review"/>
+                                        <field name="is_big_review"/>
+                                        <field name="is_tlawa"/>
+                                        <!--  <field name="qty_id"          />-->
+                                        <!--  <field name="surah_from_id"   />-->
+                                        <!--  <field name="aya_from_id"     />-->
+                                        <!--  <field name="direction"       />-->
+                                        <!--  <field name="start_point_id"  />-->
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Test">
+                                <field name="test_ids">
+                                    <tree>
+                                        <field name="order"/>
+                                        <field name="subject_id" options="{'no_create': True,'no_open': True}"/>
+                                        <field name="date"/>
+                                        <field name="day"/>
+                                        <field name="actual_date"/>
+                                        <field name="check"/>
+                                        <field name="degree"/>
+                                        <field name="state"/>
+                                    </tree>
+                                    <form>
+                                        <header>
+                                            <button name="random_questions" states="draft" string="Questions Test"
+                                                    type="object"/>
+                                            <button name="wkf_absent" states="draft,absent" string="Absent"
+                                                    type="object"/>
+                                            <button name="wkf_done" states="start_test" string="Done" type="object"/>
+                                            <field name="state" widget="statusbar" states="draft,start_test,done"/>
+                                        </header>
+                                        <group>
+                                            <field name="subject_id" required="True"
+                                                   options="{'no_create': True,'no_open': True}"/>
+                                            <field name="date" required="True" readonly="True"/>
+                                            <field name="day" required="True" readonly="True"/>
+                                            <field name="actual_date" readonly="True"/>
+                                            <!-- <field name="actual_day" readonly="True"/>-->
+                                            <field name="check" readonly="True"/>
+                                            <field name="degree"/>
+                                            <field name="order" readonly="1"/>
+                                            <field name="test_question_ids">
+                                                <tree editable="bottom">
+                                                    <field name="from_surah" required="True"
+                                                           options="{'no_create': True,'no_open': True}"/>
+                                                    <field name="from_verse" required="True"
+                                                           options="{'no_create': True,'no_open': True}"/>
+                                                    <field name="to_surah" required="True"
+                                                           options="{'no_create': True,'no_open': True}"/>
+                                                    <field name="to_verse" required="True"
+                                                           options="{'no_create': True,'no_open': True}"/>
+                                                    <field name="mistake"/>
+                                                    <field name="quest_mistake_ids">
+                                                        <tree editable="bottom">
+                                                            <field name="name_mistake_id" required="True"
+                                                                   options="{'no_create': True,'no_open': True}"/>
+                                                            <field name="number_mistake" required="True"/>
+                                                        </tree>
+                                                        <form>
+                                                            <group>
+                                                                <field name="name_mistake_id" required="True"
+                                                                       options="{'no_create': True,'no_open': True}"/>
+                                                                <field name="number_mistake" required="True"/>
+                                                            </group>
+                                                        </form>
+                                                    </field>
+                                                </tree>
+                                            </field>
+                                        </group>
+                                    </form>
+                                </field>
+                            </page>
+                            <page string="سلوكيات الطالب">
+                                <field name="behavior_ids" nolabel="1" readonly="1">
+                                    <tree>
+                                        <field name="date_behavior"/>
+                                        <field name="behavior_id"/>
+                                        <field name="send_to_parent"/>
+                                        <field name="send_to_teacher"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="حضور الطالب">
+                                <field name="presence_ids" nolabel="1" readonly="1">
+                                    <tree>
+                                        <field name="presence_date"/>
+                                        <field name="status"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="احصائيات التسميع">
+                                <group>
+                                    <group>
+                                        <field name="nbr_listen_pages"/>
+                                        <field name="nbr_read_pages"/>
+                                        <field name="nbr_small_review_pages"/>
+                                    </group>
+                                    <group>
+                                        <field name="nbr_big_review_pages"/>
+                                        <field name="nbr_pages"/>
+                                        <field name="nbr_lines"/>
+                                    </group>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="mk_student_prepare_search_view" model="ir.ui.view">
+            <field name="name">Student prepare Search View</field>
+            <field name="model">mk.student.prepare</field>
+            <field name="arch" type="xml">
+                <search string="Student prepare">
+                    <field name="name"/>
+                    <field name="stage_pre_id"/>
+                    <field name="academic_id"/>
+                    <field name="study_class_id"/>
+                    <field name="link_id"/>
+                    <field name="is_delete_request"/>
+
+                    <filter string="delete request" name="is_delete_request"
+                            domain="[('is_delete_request', '=',True)]"/>
+                    <group expand="0" string="Group By">
+                        <filter name="name" string="المعلم/ المعلمة" context="{'group_by': 'name'}"/>
+                        <filter name="stage_pre_id" string="حلقة/ الفصل" context="{'group_by': 'stage_pre_id'}"/>
+                        <filter name="link_id" string="الطالب/الطالبة" context="{'group_by': 'link_id'}"/>
+                        <filter name="academic_id" string="العام الدراسي" context="{'group_by': 'academic_id'}"/>
+                        <filter name="study_class_id" string="الفصل الدراسي" context="{'group_by': 'study_class_id'}"/>
+                        <filter name="general_behavior_type" string="السلوك العام"
+                                context="{'group_by': 'general_behavior_type'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_prepration_student">
+            <field name="name">Prepration Student</field>
+            <field name="res_model">mk.student.prepare</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('is_meqraa_student','=', False)]</field>
+        </record>
+
+        <record model="ir.actions.act_window" id="all_student_prepare_presence_action">
+            <field name="name">حضور الطلاب</field>
+            <field name="res_model">mk.student.prepare.presence</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context">{"search_default_today":1}</field>
+            <field name="domain"></field>
+        </record>
+        <record model="ir.actions.act_window" id="absent_student_action">
+            <field name="name">قائمة الطلاب الغائبين</field>
+            <field name="res_model">mk.student.prepare.presence</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('status','in', ['absent','absent_excuse'])]</field>
+        </record>
+
+        <record model="ir.actions.act_window" id="all_student_listen_line_action">
+            <field name="name">تسميع الطلاب</field>
+            <field name="res_model">mk.listen.line</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('is_meqraa_student','=', False),('actual_date','!=', False)]</field>
+        </record>
+
+        <menuitem id="manage_student_menu" name="Students managment" parent="mk_student_register.maknoon_main_menu"
+                  web_icon="web_rtl,static/src/img/calsses.png"/>
+        <menuitem id="prepare_student_menu" name="Prepration Students" parent="manage_student_menu"
+                  action="action_prepration_student" sequence="1" groups="student_prepare_read"/>
+        <menuitem id="all_student_listen_line_menu" name="تسميع الطلاب" parent="manage_student_menu"
+                  action="all_student_listen_line_action" sequence="2" groups="student_prepare_read"/>
+        <menuitem id="all_student_prepare_presence_menu" name="حضور الطلاب" parent="manage_student_menu"
+                  action="all_student_prepare_presence_action" sequence="2" groups="student_prepare_read"/>
+        <menuitem id="absent_student_menu" name="قائمة الطلاب الغائبين" parent="manage_student_menu"
+                  action="absent_student_action" sequence="2" groups="student_prepare_read"/>
+
+        <!-- ===================================================
+                          Student Preparation Update
+             ===================================================-->
+
+        <record id="view_student_prepare_update_form" model="ir.ui.view">
+            <field name="name">view.student.prepare.update.form</field>
+            <field name="model">mk.student.prepare.update</field>
+            <field name="arch" type="xml">
+                <form string="Link student acceptance">
+                    <script>
+                        $(document).ready(function(){
+                        $('.modal-dialog').css({'width': '97%', 'height': '100%'});
+                        $('.modal-content').css({'height': '70%'});
+                        $('.modal-body').css({'height': '100%'});
+                        });
+                    </script>
+
+                    <sheet>
+                        <group>
+
+                            <group>
+                                <field name="program_type" invisible="1" readonly="1" force_save="1"/>
+                                <field name="program_id"   required="1" options='{"no_open": True, "no_create": True}' domain="[('is_required','=',True),('state','=','active'),('program_gender','=',context.get('episode_gender'))]"/>
+                                <field name="approache_id" required="1" options='{"no_open": True, "no_create": True}'/>
+                            </group>
+                            <group>
+                                <field name="date_start" required="1"/>
+                                <field name="preparation_id" invisible="1"/>
+                            </group>
+
+                        </group>
+
+                        <group string="إعدادات البرنامج">
+                            <line>
+                                <label for="is_memorize"/>
+                                <field name="is_memorize" readonly="0"/>
+                                <label for="is_min_review"/>
+                                <field name="is_min_review" readonly="0"/>
+                                <label for="is_big_review" string="المراجعة الكبرى"/>
+                                <field name="is_big_review" readonly="0"/>
+                                <label for="is_tlawa" string="التلاوة"/>
+                                <field name="is_tlawa" readonly="0"/>
+                            </line>
+                        </group>
+
+                    </sheet>
+
+                    <footer>
+                        <button name="action_update_preparation" type="object" string="تعديل المنهج"
+                                class="oe_highlight"/>
+                        <button special="cancel" string="إلغاء" class="oe_link"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_meqraa_student_prepare_update_form" model="ir.ui.view">
+            <field name="name">view.student.prepare.update.form</field>
+            <field name="model">mk.student.prepare.update</field>
+            <field name="arch" type="xml">
+                <form string="Link student acceptance">
+                    <script>
+                        $(document).ready(function(){
+                        $('.modal-dialog').css({'width': '97%', 'height': '100%'});
+                        $('.modal-content').css({'height': '70%'});
+                        $('.modal-body').css({'height': '100%'});
+                        });
+                    </script>
+
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="is_update_memorize" attrs="{'invisible': [('is_memorize','=',False)]}"/>
+                            </group>
+
+                            <group>
+                                <field name="date_start" required="1"/>
+                                <field name="preparation_id" invisible="1"/>
+                                <field name="is_memorize" invisible="1"/>
+                            </group>
+                        </group>
+
+                        <group colspan="4" col="5" attrs="{'invisible': [('is_update_memorize','=',False)]}">
+                            <label string=""/>
+                            <label for="memory_direction" string="المسار"/>
+                            <label for="page_id" string="المقرر"/>
+                            <label for="surah_from_prg_id" string="من السورة"/>
+                            <label for="aya_from_prg_id" string="من الآية"/>
+
+                            <label string="الحفظ" attrs="{'invisible':[('is_update_memorize','=',False)]}"/>
+                            <field name="memory_direction" nolabel="1"
+                                   attrs="{'required':[('is_update_memorize','=',True)],'invisible':[('is_update_memorize','=',False)]}"
+                                   readonly="1" force_save="1"/>
+                            <field name="page_id" nolabel="1"
+                                   attrs="{'required':[('is_update_memorize','=',True)],'invisible':[('is_update_memorize','=',False)]}"
+                                   style="width: 90%%" options="{'no_create': 1, 'no_open':1}"
+                                   domain="[('type_method','=','subject'),('direction','=',memory_direction)]"
+                                   readonly="1" force_save="1"/>
+                            <field name="surah_from_mem_id" nolabel="1"
+                                   attrs="{'required':[('is_update_memorize','=',True)],'invisible':[('is_update_memorize','=',False)]}"
+                                   options="{'no_create': 1, 'no_open':1}" style="width: 90%%"/>
+                            <field name="aya_from_mem_id" nolabel="1"
+                                   attrs="{'required':[('is_update_memorize','=',True)],'invisible':[('is_update_memorize','=',False)]}"
+                                   options="{'no_create': 1, 'no_open':1}" domain="[('surah_id','=',surah_from_mem_id)]"
+                                   style="width: 90%%"/>
+                        </group>
+                    </sheet>
+                    <footer>
+                        <button name="action_update_meqraa_preparation" type="object" string="تعديل المنهج"
+                                class="oe_highlight"/>
+                        <button special="cancel" string="إلغاء" class="oe_link"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <!-- ===========================================================
+                                        Actions
+             =========================================================== -->
+
+        <record id="action_update_student_prepare" model="ir.actions.server">
+            <field name="name">تعديل المنهج</field>
+            <field name="model_id" ref="model_mk_student_prepare"/>
+            <field name="binding_model_id" ref="model_mk_student_prepare"/>
+            <field name="state">code</field>
+            <field name="code">action = records.action_update_student_prepare()</field>
+        </record>
+
+        <!-- ===========================================================
+                                        mk.link
+             =========================================================== -->
+
+        <record id="view_mk_link_inherit_form" model="ir.ui.view">
+            <field name="name">view.mk.link.form.inherit</field>
+            <field name="model">mk.link</field>
+            <field name="inherit_id" ref="mk_student_register.view_student_link_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[1]" position="after">
+                    <page string="Listen lines" attrs="{'invisible': [('state','in',['draft','reject'])]}">
+                        <field name="listen_lines_ids"/>
+                    </page>
+
+                    <page string="احصائيات التسميع" attrs="{'invisible': [('state','in',['draft','reject'])]}">
+                        <group col="4">
+                            <group>
+                                <field name="nbr_listen_pages"/>
+                                <field name="nbr_read_pages"/>
+                                <field name="nbr_small_review_pages"/>
+                            </group>
+                            <group>
+                                <field name="nbr_big_review_pages"/>
+                                <field name="nbr_pages"/>
+                                <field name="nbr_lines"/>
+                            </group>
+                        </group>
+                    </page>
+
+                    <page string="Student presence"
+                          attrs="{'invisible': [('state','in',['draft','reject'])]}">
+                        <field name="presence_ids" readonly="1">
+                            <tree>
+                                <field name="presence_date"/>
+                                <field name="status"/>
+                            </tree>
+                        </field>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+
+        <!-- ===========================================================
+                                  mk.episode
+       =========================================================== -->
+
+        <record id="view_mk_episode__inherit_form" model="ir.ui.view">
+            <field name="name">view.mk.episode..form.inherit</field>
+            <field name="model">mk.episode</field>
+            <field name="inherit_id" ref="mk_student_register.episode_form_inherited_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//button[@name='open_view_listen_lines']" position="replace">
+                    <button name="open_view_listen_lines" type="object" class="oe_inline oe_stat_button"  icon="fa-list" style="width:450px;height:60px" attrs="{'invisible': [('state', 'not in', ['draft', 'accept', 'done'])]}">
+                        <div style="padding-right:5px;">عدد الأوجه <field name="nbr_pages"/><br/></div>
+                    </button>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="view_mk_episode___inherit_form" model="ir.ui.view">
+            <field name="name">view.mk.episode..form.inherit</field>
+            <field name="model">mk.episode</field>
+            <field name="inherit_id" ref="mk_episode_management.mk_episode_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='error_register']" position="after">
+                    <field name="nbr_lines"              string="عدد الأسطر"/>
+                    <field name="nbr_listen_pages"       string="عدد أوجه التسميع"/>
+                    <field name="nbr_read_pages"         string="عدد أوجه التلاوة"/>
+                    <field name="nbr_small_review_pages" string="عدد أوجه المراجعة الصغرى"/>
+                    <field name="nbr_big_review_pages"   string="عدد أوجه المراجعة الكبرى"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

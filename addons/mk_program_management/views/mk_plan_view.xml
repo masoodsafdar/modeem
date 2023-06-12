@@ -1,0 +1,114 @@
+<odoo>
+    <data>
+    
+ 	<record id="mk_plan_form_view" model="ir.ui.view">
+          <field name="name">Plan Form View</field>
+          <field name="model">mk.plan</field>
+          <field name="arch" type="xml">
+              <form string = "Plan">
+		  <header>
+		    <button name="do_print" string="Print" type="object" class="oe_highlight"/>
+		    <button name="add_note" string="Add Note" type="object" class="oe_highlight"/>
+		    <button name="add_test" string="Add Test" type="object" class="oe_highlight"/>
+		    <button name="stop_test" string="Stopping Test" type="object" class="oe_highlight"/>
+		    <button name="stop_reply_test" string="Stopping to Reply" type="object" class="oe_highlight"/>
+		    <button name="stop_qualify_student" string="Stopping to Qualify Student" type="object" class="oe_highlight"/>
+		    <button name="stop_measure_test" string="Stopping to Test Measuring" type="object" class="oe_highlight"/>
+		  </header>
+		  <sheet>
+			  <group>
+			  	<field name="name"        required="1"/>
+			  	<field name="program_id"  required="1" options="{'no_create': True,'no_open': True,}"/>
+			  	<field name="approach_id" required="1" options="{'no_create': True,'no_open': True,}"/>
+			  	<field name="level_id"    required="1" options="{'no_create': True,'no_open': True,}"/>
+			  </group>
+			  <separator string="Moving Terms"/>
+			  	<group>
+				  	<group>
+						<field name="saving"/> 
+						<field name="minimum_audit"/> 
+						<field name="maximum_audit"/>  
+					 </group>
+					 <group>
+						<field name="reading"/> 
+						<field name="all"/>  
+					 </group>
+				 </group>
+				 
+				 <group>
+				 	<field name="plan_course_ids">
+				 		<tree>
+							<field name="name"/>  
+						</tree>
+						<form>
+							<group>
+								<field name="name" required="1"/>
+								<field name="detail_ids">
+									<tree editable="top">
+										<field name="plan"        required="1"/>
+										<field name="from_surah"  required="1" options="{'no_create': True,'no_open': True,}"/>
+										<field name="from_verses" required="1" options="{'no_create': True,'no_open': True,}"/>
+										<field name="to_surah"    required="1" options="{'no_create': True,'no_open': True,}"/>
+										<field name="to_verses"   required="1" options="{'no_create': True,'no_open': True,}"/>
+									</tree>
+								
+								</field>
+							</group>
+						</form>		 	
+				 	</field>
+				 </group>
+	  	</sheet>
+              </form>
+             </field>
+         </record>
+
+        <record id="mk_plan_tree_view" model="ir.ui.view">
+            <field name="name">Plan Tree View</field>
+            <field name="model">mk.plan</field>
+            <field name="arch" type="xml">
+                <tree delete="0" string="Plan">
+                	<field name="name"/>
+                	<field name="program_id"  options="{'no_create': True,'no_open': True,}"/>
+		  			<field name="approach_id" options="{'no_create': True,'no_open': True,}"/>
+		  			<field name="level_id"    options="{'no_create': True,'no_open': True,}"/>
+                </tree>
+            </field>
+        </record>
+        
+        <record id="mk_plan_search_view" model="ir.ui.view">
+            <field name="name">Plan Search View</field>
+            <field name="model">mk.plan</field>
+            <field name="arch" type="xml">
+                <search string="Plan">
+                    <field name="name" string="Plan" filter_domain="[('name','ilike', self)]"/>
+                </search>
+            </field>
+        </record>
+        
+        <record id="mk_plan_action" model="ir.actions.act_window">
+            <field name="name">Plan</field>
+            <field name="res_model">mk.plan</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+            <field name="search_view_id" ref="mk_plan_search_view"/>
+        </record>
+        
+        <record id="mk_program_plan_action" model="ir.actions.act_window">
+            <field name="name">Plan</field>
+            <field name="res_model">mk.plan</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form,tree</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+            <field name="view_id" ref="mk_plan_form_view"/>
+            <field name="search_view_id" ref="mk_plan_search_view"/>
+        </record>
+
+	<!--menuitem name="Plan" id="mk_plan_menu" sequence="5" parent="mk_programs_menu" action="mk_plan_action"/-->    
+
+    </data>  
+</odoo>

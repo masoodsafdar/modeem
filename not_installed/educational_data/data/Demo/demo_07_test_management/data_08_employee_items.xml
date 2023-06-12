@@ -1,0 +1,9 @@
+<odoo>
+	<data noupdate="1">
+		<record model="employee.items" id="employee_items2">
+			<field name="name">المهارات والجدارات في تعليم القرآن الكريم</field>
+			<field name="total">15</field>
+			<!-- field name="branches"-->
+		</record>
+	</data>  
+</odoo>

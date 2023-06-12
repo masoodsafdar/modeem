@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+      <data>
+
+      <record model="ir.rule" id="center_configration_rule">
+            <field name="name">center configration rule</field>
+            <field name="model_id" ref="model_mak_test_center"/>
+            <field name="domain_force">['&amp;','|','|',
+                                    ('center_id.id','in',[user.department_id.id]),
+                                    ('center_id.id','in',user.department_ids.ids),
+                                    '|','|',
+                                    ('department_ids','in',user.department_ids.ids),
+                                    ('department_ids','in',[user.department_id.id]),'|',
+                                    ('department_ids','in',[ms.center_department_id.id for ms in user.mosque_ids]),
+                                    ('center_id.id','in',[ms.center_department_id.id for ms in user.mosque_ids]),
+                                    ('gender','in',(str(user.gender)).split(","))]
+            </field>
+            <field name="groups" eval="[(4, ref('maknon_tests.group_mak_test_center_read'))]"/>
+      </record>
+
+      <record model="ir.rule" id="makk_center_configration_rule">
+            <field name="name">makk center configration rule</field>
+            <field name="model_id" ref="model_mak_test_center"/>
+            <field name="domain_force">
+                              ['&amp;','|','|',
+                              ('center_id.id','in',[user.department_id.id]),
+                              ('center_id.id','in',user.department_ids.ids),
+                              '|','|',
+                              ('department_ids','in',user.department_ids.ids),
+                              ('department_ids','in',[user.department_id.id]),'|',
+                              ('department_ids','in',[ms.center_department_id.id for ms in user.mosque_ids]),
+                              ('center_id.id','in',[ms.center_department_id.id for ms in user.mosque_ids]),
+                              ('gender','in',(str(user.gender)).split(","))]
+            </field>
+            <field name="groups" eval="[(4, ref('maknon_tests.group_assembly_tests_full'))]"/>
+      </record>
+
+      <record model="ir.rule" id="center_prepration_rule">
+            <field name="name">center prepration rule</field>
+            <field name="model_id" ref="model_mk_test_center_prepration"/>
+            <field name="domain_force">['&amp;','|','|',
+                  ('center_id.center_id.id','in',[user.department_id.id]),
+                  ('center_id.center_id.id','in',user.department_ids.ids),
+                  '|','|',
+                  ('center_id.department_ids','in',user.department_ids.ids),
+                  ('center_id.department_ids','in',[user.department_id.id]),'|',
+                  ('center_id.department_ids','in',[ms.center_department_id.id for ms in user.mosque_ids]),
+                  ('center_id.center_id.id','in',[ms.center_department_id.id for ms in user.mosque_ids]),
+                  ('center_id.gender','in',(str(user.gender)).split(","))]
+            </field>
+            <field name="groups" eval="[(4, ref('maknon_tests.read_tests_centers'))]"/>
+      </record>
+
+      <record model="ir.rule" id="timetable_rule">
+            <field name="name">timetable rule</field>
+            <field name="model_id" ref="model_center_time_table"/>
+            <field name="domain_force">['&amp;','|','|',
+                                          ('center_id.center_id.center_id.id','in',[user.department_id.id]),
+                                          ('center_id.center_id.center_id.id','in',user.department_ids.ids),
+                                          '|','|',
+                                          ('center_id.center_id.department_ids','in',user.department_ids.ids),
+                                          ('center_id.center_id.department_ids','in',[user.department_id.id]),'|',
+                                          ('center_id.center_id.department_ids','in',[ms.center_department_id.id for ms in user.mosque_ids]),
+                                          ('center_id.center_id.center_id.id','in',[ms.center_department_id.id for ms in user.mosque_ids])
+                                          ,('center_id.center_id.gender','in',(str(user.gender)).split(","))]
+            </field>
+            <field name="groups" eval="[(4, ref('maknon_tests.read_tests_time_tables'))]"/>
+      </record>
+
+      <record model="ir.rule" id="student_session_rule">
+            <field name="name">student session rule</field>
+            <field name="model_id" ref="model_student_test_session"/>
+            <field name="perm_write" eval="False"/>
+            <field name="domain_force">['&amp;','|','|',
+                  ('center_id.center_id.center_id.id','in',[user.department_id.id]),
+                  ('center_id.center_id.center_id.id','in',user.department_ids.ids),
+                  '|','|',
+                  ('center_id.center_id.department_ids','in',user.department_ids.ids),
+                  ('center_id.center_id.department_ids','in',[user.department_id.id]),'|','|',
+                  ('user_id','in',[user.id]),
+                  ('center_id.center_id.department_ids','in',[ms.center_department_id.id for ms in user.mosque_ids]),
+                  ('center_id.center_id.center_id.id','in',[ms.center_department_id.id for ms in user.mosque_ids]) ,('center_id.center_id.gender','in',(str(user.gender)).split(",")) ]
+            </field>
+            <field name="groups" eval="[(4, ref('maknon_tests.read_student_test_session_center_admin'))]"/>
+      </record>
+
+      <record model="ir.rule" id="student_test_session_mosq_supervisor_rule">
+            <field name="name">student session mosq supervisor rule</field>
+            <field name="model_id" ref="model_student_test_session"/>
+            <field name="perm_write" eval="False"/>
+            <field name="domain_force">
+                  [('center_id.center_id.gender','in',(str(user.gender)).split(",")),
+                   '|',('mosque_id','in',user.mosque_ids.ids),
+                        ('user_id','in',[user.id])]
+            </field>
+            <field name="groups" eval="[(4, ref('maknon_tests.read_student_test_session_supervisor_mosq'))]"/>
+      </record>
+
+      <record model="ir.rule" id="employee_test_session_rule">
+            <field name="name">employee test session rule</field>
+            <field name="model_id" ref="model_employee_test_session"/>
+            <field name="domain_force">['&amp;','|','|',
+                                    ('center_id.center_id.center_id.id','in',[user.department_id.id]),
+                                    ('center_id.center_id.center_id.id','in',user.department_ids.ids),
+                                    '|','|',
+                                    ('center_id.center_id.department_ids','in',user.department_ids.ids),
+                                    ('center_id.center_id.department_ids','in',[user.department_id.id]),'|','|',
+                                    ('user_id','in',[user.id]),
+                                    ('center_id.center_id.department_ids','in',[ms.center_department_id.id for ms in user.mosque_ids]),  ('center_id.center_id.center_id.id','in',[ms.center_department_id.id for ms in user.mosque_ids]) ,
+                                    ('center_id.center_id.gender','in',(str(user.gender)).split(","))]
+            </field>
+            <field name="groups" eval="[(4, ref('maknon_tests.read_teacher_test_session'))]"/>
+      </record>
+
+      </data>
+</odoo>
+

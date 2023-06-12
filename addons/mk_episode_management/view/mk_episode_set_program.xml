@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+
+		<record id="episode_program_tree_view" model="ir.ui.view">
+			<field name="name">Episode program</field>
+			<field name="model">mk.episode</field>
+			<field name="arch" type="xml">
+				<tree>
+					<field name="display_name" />
+					<field name="study_class_id" options="{'no_open':1,'no_create':1}"/>
+					<field name="academic_id" options="{'no_open':1,'no_create':1}"/>
+				</tree>
+			</field>
+		</record>
+	</data>
+</odoo>
+    

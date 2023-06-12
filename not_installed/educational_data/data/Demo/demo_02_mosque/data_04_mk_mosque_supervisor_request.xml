@@ -1,0 +1,21 @@
+<odoo>
+    <data noupdate="1">
+        <record id="mosque_supervisor_request1" model="mosque.supervisor.request">
+            <field name="name">تكليف عبدالله عبدالرحمن 2020-10-21</field>
+            <field name="center_id" ref="mk_hr_department7"/>
+            <field name="employee_id" ref="hr_employee1"/>
+            <field name="identification_id">1007449760</field>
+            <field name="mosque_id" ref="mk_mosque1"/>
+            <field name="date_request">2020-10-21</field>
+            <field name="hijri_date_request">1442-03-04</field>
+            <field name="permision_end_date">2021-10-21</field>
+            <field name="hijri_end_date">1443-03-15</field>
+            <field name="permision_type">pe</field>
+            <field name="state">waiting</field>
+            <field name="attach_no">2020/10/0000021</field>
+            <field name="super_type">1</field>
+            <field name="categ_type">male</field>
+            <field name="is_valid" eval="True"/>
+        </record>
+    </data>
+</odoo>

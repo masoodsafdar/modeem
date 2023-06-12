@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record id="add_markdown_points_view_form" model="ir.ui.view">
+			<field name="name">Add Markdown Form</field>
+			<field name="model">add.markdown.points</field>
+			<field name="arch" type="xml">
+				<form>
+					<header>
+						<button name="confirm_action" string="Confirm"      states="draft,"   type="object" class="oe_highlight" groups="students_motivation.confirm_markdown_points"/>
+						<button name="cancel_action"  string="Cancel"       states="confirm," type="object" class="oe_highlight" />
+						<button name="draft_action"   string="Set To Draft" states="cancel"   type="object" class="oe_highlight" />
+						<field name="state" widget="statusbar"/>
+					</header>
+					<sheet>
+						<group col="4" colspan="2">
+							<field name="date" readonly="1"/>
+							<field name="name" invisible="1"/>
+						</group>
+						<field name="points_ids" >
+							<tree editable="bottom">
+								<field name="episode_id" options="{'no_create': True, 'no_open':True}"/>
+								<field name="student_id" options="{'no_create': True, 'no_open':True}"/>
+								<field name="stu_total_points" readonly="1"/>
+								<field name="standard_item_id" />
+								<field name="item_points"      readonly="1"/>
+								<field name="new_item_points" />
+							</tree>
+						</field>
+					</sheet>
+			 	</form>
+			</field>
+		</record>
+
+		<record id="add_markdown_tree_view" model="ir.ui.view">
+			<field name="name">add.markdown.points.tree</field>
+			<field name="model">add.markdown.points</field>
+			<field name="arch" type="xml">
+				<tree>
+					<field name="date" />
+					<field name="state" />
+				</tree>
+			</field>
+		</record>
+
+		<record id="add_markdown_points_search_view" model="ir.ui.view">
+	       <field name="name">add markdown points search</field>
+	   	   <field name="model">add.markdown.points</field>
+	       <field name="arch" type="xml">
+		    	<search>		    		
+		    		<filter name="draft"     string="مبدئي"   domain="[('state', '=','draft')]"/>
+				    <filter name="confirmed" string="تم التأكيد" domain="[('state', '=','confirmed')]"/>
+				    <filter name="cancel"    string="الغاء"    domain="[('state', '=','cancel')]"/>
+				    
+				    <group expand="0" string="Group By">
+		              <filter name="state" string="الحالة" context="{'group_by': 'state'}"/>
+		           </group>
+		    	</search>
+	       </field>
+		</record>
+				
+        <record model="ir.actions.act_window" id="action_add_markdown_action">
+            <field name="name">Add Markdown points</field>
+            <field name="res_model">add.markdown.points</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="menu_add_markdown_points" 
+				name="Add/Markdown students points"
+				parent="menu_motivation_root"
+				action="action_add_markdown_action"
+				sequence="2"
+				groups="students_motivation.read_markdown_points,students_motivation.create_write_markdown_points,students_motivation.delete_markdown_points,students_motivation.confirm_markdown_points"/>
+	</data>
+</odoo>

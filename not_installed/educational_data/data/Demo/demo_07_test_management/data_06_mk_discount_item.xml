@@ -1,0 +1,24 @@
+<odoo>
+	<data noupdate="1">
+		<record model="mk.discount.item" id="mk_discount_item1">
+			<field name="name">(التردد(في اللحن أو الحفظ تنبيه بدون فتح</field>
+			<field name="amount">1</field>
+			<field name="evaluation_item" ref="mk_evaluation_items2"/>
+			<field name="allowed_discount">5</field>
+		</record>
+
+		<record model="mk.discount.item" id="mk_discount_item3">
+			<field name="name">اللحن الجلي </field>
+			<field name="amount">1</field>
+			<field name="evaluation_item" ref="mk_evaluation_items2"/>
+			<field name="allowed_discount">5</field>
+		</record>
+
+		<record model="mk.discount.item" id="mk_discount_item2">
+			<field name="name">(الحفظ</field>
+			<field name="amount">1</field>
+			<field name="evaluation_item" ref="mk_evaluation_items2"/>
+			<field name="allowed_discount">75</field>
+		</record>
+	</data>  
+</odoo>

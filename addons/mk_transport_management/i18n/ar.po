@@ -1,0 +1,608 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* mk_transport_management
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-08-16 08:27+0000\n"
+"PO-Revision-Date: 2018-08-16 08:27+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_attendance_students_line_absent
+msgid "Absent"
+msgstr "غياب"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_attendance_students_line_apologize
+msgid "Apologize"
+msgstr "إعتذار"
+
+#. module: mk_transport_management
+#: model:ir.ui.menu,name:mk_transport_management.apology_request_menu
+msgid "Apology Request"
+msgstr "طلب إعتذار"
+
+#. module: mk_transport_management
+#: model:ir.actions.act_window,name:mk_transport_management.mk_attendance_students_action
+#: model:ir.model.fields,field_description:mk_transport_management.field_mk_attendance_students_stud_attend_ids
+#: model:ir.ui.menu,name:mk_transport_management.attendance_students_menu
+#: model:ir.ui.view,arch_db:mk_transport_management.mk_attendance_students_search_view
+msgid "Attendance Students"
+msgstr " إدارة حضور الطلاب للنقل"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_vehicle_emanagement_line_avilable_seats
+msgid "Avilable Seats"
+msgstr "عدد المقاعد الشاغرة"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_mk_transport_management_supervisor_id
+msgid "Bus Supervisor"
+msgstr "مشرف الباص"
+
+#. module: mk_transport_management
+#: model:ir.ui.view,arch_db:mk_transport_management.mk_attendance_students_form_view
+#: model:ir.ui.view,arch_db:mk_transport_management.mk_transport_management_form_view
+#: selection:mk.attendance.students,state:0
+#: selection:mk.transport.management,state:0
+msgid "Cancle"
+msgstr "إلغاء"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_mk_transport_management_cancling_reason
+msgid "Cancling Reason"
+msgstr "سبب إلغاء نقل الطالب"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_vehicle_records_center_id
+msgid "Center"
+msgstr "المركز"
+
+#. module: mk_transport_management
+#: model:ir.ui.view,arch_db:mk_transport_management.mk_attendance_students_form_view
+#: model:ir.ui.view,arch_db:mk_transport_management.mk_transport_management_form_view
+#: selection:mk.attendance.students,state:0
+#: selection:mk.transport.management,state:0
+msgid "Confirm"
+msgstr "الحضور"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_drivers_records_country_id
+msgid "Country"
+msgstr "الجنسية"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_attendance_students_line_create_uid
+#: model:ir.model.fields,field_description:mk_transport_management.field_mk_attendance_students_create_uid
+#: model:ir.model.fields,field_description:mk_transport_management.field_mk_transport_management_create_uid
+#: model:ir.model.fields,field_description:mk_transport_management.field_mk_vehicle_asset_create_uid
+#: model:ir.model.fields,field_description:mk_transport_management.field_vehicle_emanagement_line_create_uid
+#: model:ir.model.fields,field_description:mk_transport_management.field_vehicle_management_create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_attendance_students_line_create_date
+#: model:ir.model.fields,field_description:mk_transport_management.field_mk_attendance_students_create_date
+#: model:ir.model.fields,field_description:mk_transport_management.field_mk_transport_management_create_date
+#: model:ir.model.fields,field_description:mk_transport_management.field_mk_vehicle_asset_create_date
+#: model:ir.model.fields,field_description:mk_transport_management.field_vehicle_emanagement_line_create_date
+#: model:ir.model.fields,field_description:mk_transport_management.field_vehicle_management_create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_mk_attendance_students_date
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_mk_transport_management_days_ids
+msgid "Days"
+msgstr "الايام"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_mk_transport_management_deduct
+msgid "Deduct"
+msgstr "الخصم"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_attendance_students_line_delivered
+msgid "Delivered"
+msgstr "تم التسليم"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_attendance_students_line_display_name
+#: model:ir.model.fields,field_description:mk_transport_management.field_mk_attendance_students_display_name
+#: model:ir.model.fields,field_description:mk_transport_management.field_mk_transport_management_display_name
+#: model:ir.model.fields,field_description:mk_transport_management.field_mk_vehicle_asset_display_name
+#: model:ir.model.fields,field_description:mk_transport_management.field_vehicle_emanagement_line_display_name
+#: model:ir.model.fields,field_description:mk_transport_management.field_vehicle_management_display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: mk_transport_management
+#: selection:mk.attendance.students,state:0
+#: selection:mk.transport.management,state:0
+msgid "Draft"
+msgstr "مبدئي"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_mk_transport_management_driver_id
+msgid "Driver"
+msgstr "السائق"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_drivers_records_driver_guarantor
+msgid "Driver Guarantor"
+msgstr "كفالة السائق"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_mk_transport_management_driver_phone
+msgid "Driver Phone No"
+msgstr "رقم الجوال"
+
+#. module: mk_transport_management
+#: model:ir.ui.menu,name:mk_transport_management.drivers_records_menu
+msgid "Drivers Records"
+msgstr "سجل سائقي المركبات"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_mk_transport_management_fees
+msgid "Fees"
+msgstr "إرفاق سند السداد"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_vehicle_emanagement_line_go_return
+msgid "Go return"
+msgstr "ذهاب / عودة"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_attendance_students_line_id
+#: model:ir.model.fields,field_description:mk_transport_management.field_mk_attendance_students_id
+#: model:ir.model.fields,field_description:mk_transport_management.field_mk_transport_management_id
+#: model:ir.model.fields,field_description:mk_transport_management.field_mk_vehicle_asset_id
+#: model:ir.model.fields,field_description:mk_transport_management.field_vehicle_emanagement_line_id
+#: model:ir.model.fields,field_description:mk_transport_management.field_vehicle_management_id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_drivers_records_identity_no
+msgid "Identity No"
+msgstr "رقم الهوية"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_attendance_students_line___last_update
+#: model:ir.model.fields,field_description:mk_transport_management.field_mk_attendance_students___last_update
+#: model:ir.model.fields,field_description:mk_transport_management.field_mk_transport_management___last_update
+#: model:ir.model.fields,field_description:mk_transport_management.field_mk_vehicle_asset___last_update
+#: model:ir.model.fields,field_description:mk_transport_management.field_vehicle_emanagement_line___last_update
+#: model:ir.model.fields,field_description:mk_transport_management.field_vehicle_management___last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_attendance_students_line_write_uid
+#: model:ir.model.fields,field_description:mk_transport_management.field_mk_attendance_students_write_uid
+#: model:ir.model.fields,field_description:mk_transport_management.field_mk_transport_management_write_uid
+#: model:ir.model.fields,field_description:mk_transport_management.field_mk_vehicle_asset_write_uid
+#: model:ir.model.fields,field_description:mk_transport_management.field_vehicle_emanagement_line_write_uid
+#: model:ir.model.fields,field_description:mk_transport_management.field_vehicle_management_write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_attendance_students_line_write_date
+#: model:ir.model.fields,field_description:mk_transport_management.field_mk_attendance_students_write_date
+#: model:ir.model.fields,field_description:mk_transport_management.field_mk_transport_management_write_date
+#: model:ir.model.fields,field_description:mk_transport_management.field_mk_vehicle_asset_write_date
+#: model:ir.model.fields,field_description:mk_transport_management.field_vehicle_emanagement_line_write_date
+#: model:ir.model.fields,field_description:mk_transport_management.field_vehicle_management_write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_attendance_students_line_line_id
+msgid "Line ID"
+msgstr "Line ID"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_mk_attendance_students_mosque_id
+msgid "Mosque"
+msgstr "المسجد"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_attendance_students_line_note
+msgid "Note"
+msgstr "ملاحظة"
+
+#. module: mk_transport_management
+#: model:ir.ui.view,arch_db:mk_transport_management.mk_transport_management_form_view
+msgid "Payment"
+msgstr "السداد"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_attendance_students_line_presence
+msgid "Presence"
+msgstr "حضور"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_vehicle_records_responsible
+msgid "Responsible"
+msgstr "مسؤول"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_mk_transport_management_seates_no_aasr
+msgid "Seates No aasr"
+msgstr "Seates No aasr"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_mk_transport_management_seates_no_fajer
+msgid "Seates No fajer"
+msgstr "Seates No fajer"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_mk_transport_management_seates_no_esha
+msgid "Seates No isha"
+msgstr "Seates No isha"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_mk_transport_management_seates_no_maghrib
+msgid "Seates No maghrib"
+msgstr "Seates No maghrib"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_mk_transport_management_seates_no_zuhr
+msgid "Seates No zuhr"
+msgstr "Seates No zuhr"
+
+#. module: mk_transport_management
+#: model:ir.ui.view,arch_db:mk_transport_management.transportation request_form_view
+msgid "Send Request"
+msgstr "ارسال الطلب"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_mk_attendance_students_state
+#: model:ir.model.fields,field_description:mk_transport_management.field_mk_transport_management_state
+msgid "Status"
+msgstr "الحالة "
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_apology_request_student_id
+#: model:ir.model.fields,field_description:mk_transport_management.field_attendance_students_line_student_id
+#: model:ir.model.fields,field_description:mk_transport_management.field_mk_transport_management_student_id
+#: model:ir.model.fields,field_description:mk_transport_management.field_transportation_request_student_id
+msgid "Student"
+msgstr "اسم الطالب"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_mk_attendance_students_supervisor_id
+#: model:ir.model.fields,field_description:mk_transport_management.field_vehicle_records_superviser_id
+msgid "Supervisor"
+msgstr "مشرف الباص"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_mk_transport_management_period
+#: model:ir.model.fields,field_description:mk_transport_management.field_transportation_request_trans_period
+msgid "Transaction Period"
+msgstr "وقت النقل"
+
+#. module: mk_transport_management
+#: model:ir.ui.menu,name:mk_transport_management.transportation_request_menu
+msgid "Transation Request"
+msgstr "طلب نقل"
+
+#. module: mk_transport_management
+#: model:ir.ui.menu,name:mk_transport_management.mk_transport_main_menu
+#: model:ir.ui.menu,name:mk_transport_management.mk_transport_menu
+msgid "Transport"
+msgstr "النقل"
+
+#. module: mk_transport_management
+#: model:ir.ui.menu,name:mk_transport_management.transport_config_menu
+msgid "Transport Configration"
+msgstr "إدارة طلبات النقل"
+
+#. module: mk_transport_management
+#: model:ir.actions.act_window,name:mk_transport_management.mk_transport_management_action
+#: model:ir.ui.menu,name:mk_transport_management.transport_management_menu
+#: model:ir.ui.view,arch_db:mk_transport_management.mk_attendance_students_form_view
+#: model:ir.ui.view,arch_db:mk_transport_management.mk_transport_management_form_view
+#: model:ir.ui.view,arch_db:mk_transport_management.mk_transport_management_search_view
+#: model:ir.ui.view,arch_db:mk_transport_management.mk_transport_management_tree_view
+msgid "Transport Management"
+msgstr "إدارة النقل"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_mk_transport_management_transport_type
+#: model:ir.model.fields,field_description:mk_transport_management.field_transportation_request_transport_type
+msgid "Transport Type"
+msgstr "نوع النقل"
+
+#. module: mk_transport_management
+#: model:res.groups,name:mk_transport_management.transportation_manager
+msgid "Transportation manager"
+msgstr "مدير النقل"
+
+#. module: mk_transport_management
+#: model:ir.ui.menu,name:mk_transport_management.vehicle_records_menu
+msgid "Vechil Record"
+msgstr "المركبات"
+
+#. module: mk_transport_management
+#: model:ir.ui.menu,name:mk_transport_management.vehicle_management_menu2
+msgid "Vechil management"
+msgstr "إدارة المركبة"
+
+#. module: mk_transport_management
+#: model:ir.ui.view,arch_db:mk_transport_management.mk_transport_management_form_view
+msgid "Vehcile Details"
+msgstr "تفاصيل المركبة"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_mk_attendance_students_vehicle_id
+#: model:ir.model.fields,field_description:mk_transport_management.field_mk_transport_management_vehicle_id
+#: model:ir.model.fields,field_description:mk_transport_management.field_vehicle_management_vehicle_id
+msgid "Vehicle"
+msgstr "المركبة"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_vehicle_emanagement_line_vehicle_ide
+msgid "Vehicle Ide"
+msgstr "المركبة"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_vehicle_records_Vehicle_Type
+msgid "Vehicle Type"
+msgstr "نوع المركبة"
+
+#. module: mk_transport_management
+#: model:ir.ui.menu,name:mk_transport_management.vehicle_types_menu
+msgid "Vehicle Types"
+msgstr "نوع المركبة"
+
+#. module: mk_transport_management
+#: model:ir.ui.menu,name:mk_transport_management.vehicle_asset_menu
+msgid "Vehicle asset"
+msgstr "ملكية المركبة"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_vehicle_records_work_period_aasr
+msgid "Work Period Aasr"
+msgstr "العصر"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_vehicle_records_work_period_esha
+msgid "Work Period Esha"
+msgstr "العشاء"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_vehicle_records_work_period_magrib
+msgid "Work Period Magrib"
+msgstr "المغرب"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_vehicle_records_work_period_subh
+msgid "Work Period Subh"
+msgstr "الصبح"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_vehicle_records_work_period_zuhr
+msgid "Work Period Zuhr"
+msgstr "الظهر"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_vehicle_emanagement_line_work_periods
+msgid "Work Periods"
+msgstr "وقت النقل"
+
+#. module: mk_transport_management
+#: selection:mk.transport.management,period:0
+#: selection:vehicle.emanagement.line,work_periods:0
+msgid "aasr"
+msgstr "عصر"
+
+#. module: mk_transport_management
+#: model:ir.actions.act_window,name:mk_transport_management.apology_request_action
+#: model:ir.ui.view,arch_db:mk_transport_management.apology_request_form_view
+msgid "apology request"
+msgstr "طلب إعتزار"
+
+#. module: mk_transport_management
+#: model:ir.model,name:mk_transport_management.model_apology_request
+msgid "apology.request"
+msgstr "apology.request"
+
+#. module: mk_transport_management
+#: model:ir.model,name:mk_transport_management.model_attendance_students_line
+msgid "attendance.students.line"
+msgstr "attendance.students.line"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_vehicle_management_max_capcity
+msgid "capacity"
+msgstr "عدد المقاعد"
+
+#. module: mk_transport_management
+#: model:ir.actions.act_window,name:mk_transport_management.drivers_records_action
+#: model:ir.ui.view,arch_db:mk_transport_management.drivers_records_form_view
+msgid "drivers records"
+msgstr "سجل سائقي المركبات"
+
+#. module: mk_transport_management
+#: model:ir.model,name:mk_transport_management.model_drivers_records
+msgid "drivers.records"
+msgstr "سجل سائقي المركبات"
+
+#. module: mk_transport_management
+#: selection:mk.transport.management,period:0
+#: selection:vehicle.emanagement.line,work_periods:0
+msgid "esha"
+msgstr "عشاء"
+
+#. module: mk_transport_management
+#: selection:vehicle.emanagement.line,go_return:0
+msgid "go"
+msgstr "ذهاب"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_vehicle_management_v_lines
+msgid "lines"
+msgstr "lines"
+
+#. module: mk_transport_management
+#: selection:mk.transport.management,period:0
+#: selection:vehicle.emanagement.line,work_periods:0
+msgid "magrib"
+msgstr "مغرب"
+
+#. module: mk_transport_management
+#: model:ir.model,name:mk_transport_management.model_mk_attendance_students
+msgid "mk.attendance.students"
+msgstr "mk.attendance.students"
+
+#. module: mk_transport_management
+#: model:ir.model,name:mk_transport_management.model_mk_transport_management
+msgid "mk.transport.management"
+msgstr "mk.transport.management"
+
+#. module: mk_transport_management
+#: model:ir.model,name:mk_transport_management.model_mk_vehicle_asset
+msgid "mk.vehicle.asset"
+msgstr "mk.vehicle.asset"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_mk_vehicle_asset_name
+msgid "name"
+msgstr "اﻹسم"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_mk_transport_management_request_id
+msgid "request"
+msgstr "طلبات النقل"
+
+#. module: mk_transport_management
+#: selection:vehicle.emanagement.line,go_return:0
+msgid "return"
+msgstr "عودة فقط"
+
+#. module: mk_transport_management
+#: model:ir.ui.view,arch_db:mk_transport_management.transportation request_form_view
+msgid "stop transportation"
+msgstr "إيقاف نقل الطالب"
+
+#. module: mk_transport_management
+#: selection:mk.transport.management,period:0
+#: selection:vehicle.emanagement.line,work_periods:0
+msgid "subh"
+msgstr "الصبح"
+
+#. module: mk_transport_management
+#: model:ir.actions.act_window,name:mk_transport_management.transportation_request_action
+#: model:ir.ui.view,arch_db:mk_transport_management.transportation request_form_view
+msgid "transportation request"
+msgstr "طلب نقل "
+
+#. module: mk_transport_management
+#: model:ir.model,name:mk_transport_management.model_transportation_request
+msgid "transportation.request"
+msgstr "transportation.request"
+
+#. module: mk_transport_management
+#: model:ir.actions.act_window,name:mk_transport_management.vehicle_asset_action
+#: model:ir.ui.view,arch_db:mk_transport_management.vehicle_asset_form_view
+msgid "vehicle asset"
+msgstr "ملكية المركبة"
+
+#. module: mk_transport_management
+#: model:ir.actions.act_window,name:mk_transport_management.vehicle_management_menu_action
+#: model:ir.ui.view,arch_db:mk_transport_management.vehicle_management_form_view
+msgid "vehicle management"
+msgstr "إدارة المركبة"
+
+#. module: mk_transport_management
+#: model:ir.actions.act_window,name:mk_transport_management.vehicle_records_action
+#: model:ir.ui.view,arch_db:mk_transport_management.vehicle_records_form_view
+msgid "vehicle records"
+msgstr "سجل المركبات"
+
+#. module: mk_transport_management
+#: model:ir.actions.act_window,name:mk_transport_management.vehicle_types_action
+#: model:ir.ui.view,arch_db:mk_transport_management.vehicle_types_form_view
+msgid "vehicle types"
+msgstr "سجل المركبات"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_vehicle_emanagement_line_work_days
+#: model:ir.model.fields,field_description:mk_transport_management.field_vehicle_records_work_days
+msgid "vehicle work Days"
+msgstr "ايام عمل المركبة"
+
+#. module: mk_transport_management
+#: model:ir.model,name:mk_transport_management.model_vehicle_emanagement_line
+msgid "vehicle.emanagement.line"
+msgstr "vehicle.emanagement.line"
+
+#. module: mk_transport_management
+#: model:ir.model,name:mk_transport_management.model_vehicle_management
+msgid "vehicle.management"
+msgstr "vehicle.management"
+
+#. module: mk_transport_management
+#: model:ir.model,name:mk_transport_management.model_vehicle_records
+msgid "vehicle.records"
+msgstr "سجل المركبات"
+
+#. module: mk_transport_management
+#: model:ir.model,name:mk_transport_management.model_vehicle_types
+msgid "vehicle.types"
+msgstr "vehicle.types"
+
+#. module: mk_transport_management
+#: selection:mk.transport.management,period:0
+#: selection:vehicle.emanagement.line,work_periods:0
+msgid "zuhr"
+msgstr "ظهر"
+
+#. module: mk_transport_management
+#: model:ir.ui.view,arch_db:mk_transport_management.vehicle_records_form_view
+msgid "الفترات"
+msgstr "الفترات"
+
+#. module: mk_transport_management
+#: selection:mk.transport.management,transport_type:0
+#: selection:transportation.request,transport_type:0
+msgid "ذهاب فقط"
+msgstr "ذهاب فقط"
+
+#. module: mk_transport_management
+#: selection:mk.transport.management,transport_type:0
+#: selection:transportation.request,transport_type:0
+msgid "ذهاب وعودة"
+msgstr "ذهاب وعودة"
+
+#. module: mk_transport_management
+#: code:addons/mk_transport_management/models/mk_transport_management.py:101
+#: code:addons/mk_transport_management/models/mk_transport_management.py:124
+#: code:addons/mk_transport_management/models/mk_transport_management.py:145
+#: code:addons/mk_transport_management/models/mk_transport_management.py:151
+#: code:addons/mk_transport_management/models/mk_transport_management.py:159
+#, python-format
+msgid "عفوا ! لا توجد مقاعد شاغرة"
+msgstr "عفوا ! لا توجد مقاعد شاغرة"
+
+#. module: mk_transport_management
+#: selection:mk.transport.management,transport_type:0
+#: selection:transportation.request,transport_type:0
+msgid "عودة فقط"
+msgstr "عودة فقط"
+

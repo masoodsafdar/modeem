@@ -1,0 +1,26 @@
+<odoo>
+	<data noupdate="1">
+		<record model="mk.reward.items" id="mk_reward_items4">
+			<field name="reward_type">certificate</field>
+			<field name="appreciation">good</field>
+			<field name="amount">0</field>
+			<field name="age_fillter">open</field>
+			<!-- field name="age_groups" -->
+			<!-- field name="branches" -->
+		</record>
+
+		<record model="mk.reward.items" id="mk_reward_items5">
+			<field name="reward_type">certificate</field>
+			<field name="appreciation">v_good</field>
+			<field name="amount">0</field>
+			<field name="age_fillter">open</field>
+		</record>
+
+		<record model="mk.reward.items" id="mk_reward_items6">
+			<field name="reward_type">certificate_cash</field>
+			<field name="appreciation">excellent</field>
+			<field name="amount">1000</field>
+			<field name="age_fillter">open</field>
+		</record>
+	</data>  
+</odoo>

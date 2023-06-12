@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<openerp>
+		<data>
+			<record id="contest_calendar_form_view" model="ir.ui.view">
+			    <field name= "name">contest calendar form</field>
+			    <field name= "model">contest.calendar</field>
+			    <field name= "arch"  type="xml"> 
+			    	<form>
+			    	<sheet>
+			    		<group>
+			    			<group>
+			    				<field name="name"/>
+			    				<field name="SD"/>
+			    				<field name="ED"/>
+			    			</group>
+			    		</group>
+			    		<notebook>
+			    			<page>
+			    				<field name="stage_relation">
+			    					<tree editable="top">
+			    						<field name="no"/>
+			    						<field name="name"/>
+			    						<field name="Start_D"/>
+			    						<field name="end_D"/>
+			    						<field name="place"/>
+			    					</tree>
+			    				</field>
+			    			</page>
+			    		</notebook>
+			    	</sheet>
+			    </form>
+			    </field>
+			   </record>    
+            
+            <record id="contests_calendar_action" model="ir.actions.act_window">
+			<field name="name">contests calendar action</field>
+            <field name="res_model">contest.calendar</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+		</record>
+
+
+        <menuitem
+              id="contests_calendar_menu"
+              name="contests calendar"
+              action="contests_calendar_action"
+              parent="config_menu"
+              sequence="1"
+              groups="read_contest_calendar_group"
+         />	
+	 </data>
+</openerp>

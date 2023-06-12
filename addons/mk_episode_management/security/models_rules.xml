@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+		<record model="ir.rule" id="user_create_episode_center">
+			<field name="name">episode center</field>
+      		<field name="model_id" ref="mk_master_models.model_mk_episode_master"/>
+      		<field name="domain_force">['&amp;',('mosque_id.categ_id.mosque_type','in',(str(user.gender)).split(",")),'|',('mosque_id.id','in',user.mosque_ids.ids),('mosque_id.center_department_id.id','in',user.department_ids.ids)]
+			</field>
+		</record>
+		
+		<record model="ir.rule" id="user_consult_mk_episode">
+			<field name="name">consult mk episode</field>
+      		<field name="model_id" ref="mk_master_models.model_mk_episode"/>
+      		<field name="domain_force">['|',('is_episode_meqraa','=',True),
+				                         '&amp;',('mosque_id.categ_id.mosque_type','in',(str(user.gender)).split(",")),
+				                           '|',('mosque_id.id','in',user.mosque_ids.ids),
+				                               ('mosque_id.center_department_id.id','in',user.department_ids.ids)]
+			</field>
+		</record>		
+
+		<record model="ir.rule" id="mk_news_rule">
+      		<field name="name">mk news</field>
+      		<field name="model_id" ref="mk_episode_management.model_mk_news"/>
+      		<field name="domain_force">['&amp;',('masjed_id.categ_id.mosque_type','in',(str(user.gender)).split(",")),'|',('masjed_id.id','in',user.mosque_ids.ids),('masjed_id.center_department_id.id','in',user.department_ids.ids)] </field>
+		</record>
+
+		<record id="base.access_res_partner_group_partner_manager" model="ir.model.access">
+    		<field name="perm_read" eval="True"/>
+    		<field name="perm_write" eval="False"/>
+    		<field name="perm_create" eval="False"/>
+    		<field name="perm_unlink" eval="False"/>
+		</record>
+
+	</data>
+</openerp>

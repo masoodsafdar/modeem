@@ -1,0 +1,19 @@
+id,name,active
+Grade_1,تمهيدي,True
+Grade_2,روضة,True
+Grade_3,أول إبتدائي,True
+Grade_4,ثاني إبتدائي,True
+Grade_5,ثالث إبتدائي,True
+Grade_6,رابع إبتدائي,True
+Grade_7,خامس إبتدائي,True
+Grade_8,سادس إبتدائي,True
+Grade_9,أول متوسط,True
+Grade_10,ثاني متوسط,True
+Grade_11,ثالث متوسط,True
+Grade_12,أول ثانوي,True
+Grade_13,ثاني ثانوي,True
+Grade_14,ثالث ثانوي,True
+Grade_15,معهد,True
+Grade_16,جامعي,True
+Grade_17,فوق الجامعي,True
+Grade_18,غير محدد,False

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="email_employee_doc_attachement" model="ir.attachment">
+            <field name="datas_fname">new_session_model.docx</field>
+            <field name="name">new_session_model</field>
+            <field name="datas" type="base64" file="mk_master_models/static/doc/new_session_model.docx"/>
+        </record>
+
+        <record id="new_employee_send_doc" model="mail.template">
+            <field name="name">mk_send_employee_register_template</field>
+            <field name="model_id" ref="model_hr_employee"></field>
+            <field name="email_from">${('"%s" &lt;%s&gt;' % (object.company_id.name, object.company_id.email or user.email))|safe}</field>
+            <field name="email_to">${object.work_email}</field>
+            <field name="subject">نموذج موافقة</field>
+            <field name="attachment_ids" eval="[(6, 0, [ref('email_employee_doc_attachement')])]"/>
+            <field name="built_in" eval="True"/>
+            <field name="body_html">
+                <![CDATA[
+                <p>نشكر لكم فتح الحلقة</p>
+                <p>ونأمل منكم تعبئة نموذج موافقة جماعة المسجد وإرسالة للمركز</p>
+                 % if object.department_id.phone_number:
+                <p>رقم المركز: ${object.department_id.phone_number} :</p>
+                %endif
+                ]]>
+            </field>
+        </record>
+    </data>
+</odoo>
+

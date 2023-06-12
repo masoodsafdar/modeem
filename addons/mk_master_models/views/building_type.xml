@@ -1,0 +1,65 @@
+<odoo>
+    <data>
+
+        <record id="mk_building_type_form_view" model="ir.ui.view">
+            <field name="name">building type Form View</field>
+            <field name="model">mk.building.type</field>
+            <field name="arch" type="xml">
+                <form string="building type">
+                    <header>
+
+                    </header>
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                        </group>
+                        <group>
+                            <field name="code" readonly="1"/>
+                            <field name="active"/>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="mk_building_type_tree_view" model="ir.ui.view">
+            <field name="name">building type Tree View</field>
+            <field name="model">mk.building.type</field>
+            <field name="arch" type="xml">
+                <tree delete="0" string="building type">
+                    <field name="name"/>
+                    <field name="code" readonly="1"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="mk_building_type_search_view" model="ir.ui.view">
+            <field name="name">building type Search View</field>
+            <field name="model">mk.building.type</field>
+            <field name="arch" type="xml">
+                <search string="building type">
+                    <field name="name" string="building type" filter_domain="[('name','ilike', self)]"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="mk_building_type_action" model="ir.actions.act_window">
+            <field name="name">building type</field>
+            <field name="res_model">mk.building.type</field>
+            <field name="type">ir.actions.act_window</field>
+            <!-- <field name="view_type">form</field> -->
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+            <field name="search_view_id" ref="mk_building_type_search_view"/>
+        </record>
+
+        <menuitem name="Building type" id="mk_building_type_menu" sequence="5"
+                  parent="mk_associate_management_settings_menu" action="mk_building_type_action"/>
+
+    </data>
+</odoo>

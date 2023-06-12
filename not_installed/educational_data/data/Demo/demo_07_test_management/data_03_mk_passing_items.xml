@@ -1,0 +1,28 @@
+<odoo>
+	<data noupdate="1">
+		<record model="mk.passing.items" id="mk_passing_items6">
+			<field name="from_degree">80</field>
+			<field name="to_degree">89</field>
+			<field name="appreciation">v_good</field>
+			<!-- field name="branches" -->
+		</record>
+
+		<record model="mk.passing.items" id="mk_passing_items7">
+			<field name="from_degree">90</field>
+			<field name="to_degree">100</field>
+			<field name="appreciation">excellent</field>
+		</record>
+
+		<record model="mk.passing.items" id="mk_passing_items4">
+			<field name="from_degree">0</field>
+			<field name="to_degree">69</field>
+			<field name="appreciation">acceptable</field>
+		</record>
+
+		<record model="mk.passing.items" id="mk_passing_items5">
+			<field name="from_degree">70</field>
+			<field name="to_degree">79</field>
+			<field name="appreciation">good</field>
+		</record>
+	</data>  
+</odoo>

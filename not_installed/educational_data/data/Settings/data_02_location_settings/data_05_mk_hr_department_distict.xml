@@ -1,0 +1,25 @@
+<odoo>
+    <data noupdate="1">
+        <record id="mk_hr_department1" model="hr.department">
+            <field name="district_id" ref="mk_district118"/>
+        </record>
+        <record id="mk_hr_department2" model="hr.department">
+            <field name="district_id" ref="mk_district101"/>
+        </record>
+        <record id="mk_hr_department3" model="hr.department">
+            <field name="district_id" ref="mk_district100"/>
+        </record>
+        <record id="mk_hr_department4" model="hr.department">
+            <field name="district_id" ref="mk_district31"/>
+        </record>
+        <record id="mk_hr_department5" model="hr.department">
+            <field name="district_id" ref="mk_district57"/>
+        </record>
+        <record id="mk_hr_department6" model="hr.department">
+            <field name="district_id" ref="mk_district26"/>
+        </record>
+        <record id="mk_hr_department7" model="hr.department">
+            <field name="district_id" ref="mk_district40"/>
+        </record>
+    </data>
+</odoo>

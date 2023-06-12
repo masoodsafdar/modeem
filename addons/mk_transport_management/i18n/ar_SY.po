@@ -1,0 +1,2002 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* mk_transport_management
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-01-20 09:02+0000\n"
+"PO-Revision-Date: 2019-01-20 09:02+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: mk_transport_management
+#: model:mail.template,body_html:mk_transport_management.mk_accept_transport_request
+msgid "\n"
+"                \n"
+"\n"
+"                <head>\n"
+"        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\n"
+"        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n"
+"        <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\" />\n"
+"        <meta name=\"format-detection\" content=\"telephone=no\" /> <!-- disable auto telephone linking in iOS -->\n"
+"        <title>Trjmaty website</title>\n"
+"        <style type=\"text/css\">\n"
+"            html { background-color:#AF8B6D; margin:0; padding:0; }\n"
+"            body, #bodyTable, #bodyCell, #bodyCell{height:100% !important; margin:0; padding:0; width:100% !important;font-family:Helvetica, Arial, \"Lucida Grande\", sans-serif;}\n"
+"            table{border-collapse:collapse;}\n"
+"            table[id=bodyTable] {width:100%!important;margin:auto;max-width:500px!important;color:#7A7A7A;font-weight:normal;}\n"
+"            img, a img{border:0; outline:none; text-decoration:none;height:auto; line-height:100%;}\n"
+"            a {text-decoration:none !important;border-bottom: 1px solid;}\n"
+"            h1, h2, h3, h4, h5, h6{color:#5F5F5F; font-weight:normal; font-family:Helvetica; font-size:20px; line-height:125%; text-align:Left; letter-spacing:normal;margin-top:0;margin-right:0;margin-bottom:10px;margin-left:0;padding-top:0;padding-bottom:0;padding-left:0;padding-right:0;}\n"
+"\n"
+"            .ReadMsgBody{width:100%;} .ExternalClass{width:100%;} \n"
+"            .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div{line-height:100%;} \n"
+"            table, td{mso-table-lspace:0pt; mso-table-rspace:0pt;} \n"
+"            #outlook a{padding:0;} \n"
+"            img{-ms-interpolation-mode: bicubic;display:block;outline:none; text-decoration:none;} \n"
+"            body, table, td, p, a, li, blockquote{-ms-text-size-adjust:100%; -webkit-text-size-adjust:100%; font-weight:normal!important;border-radius: 10px 10px 0 0;} \n"
+"            .ExternalClass td[class=\"ecxflexibleContainerBox\"] h3 {padding-top: 10px !important;} \n"
+"\n"
+"            h1{display:block;font-size:26px;font-style:normal;font-weight:normal;line-height:100%;}\n"
+"            h2{display:block;font-size:20px;font-style:normal;font-weight:normal;line-height:120%;}\n"
+"            h3{display:block;font-size:17px;font-style:normal;font-weight:normal;line-height:110%;}\n"
+"            h4{display:block;font-size:18px;font-style:italic;font-weight:normal;line-height:100%;}\n"
+"            .flexibleImage{height:auto;}\n"
+"            .linkRemoveBorder{border-bottom:0 !important;}\n"
+"            table[class=flexibleContainerCellDivider] {padding-bottom:0 !important;padding-top:0 !important;}\n"
+"\n"
+"            body, #bodyTable{background-color:#E9DFD8;}\n"
+"            #emailHeader{background-color:#E9DFD8;}\n"
+"            #emailBody{background-color:#FFFFFF;}\n"
+"            #emailFooter{background-color:#E9DFD8;}\n"
+"            .nestedContainer{background-color:#F8F8F8; border:1px solid #CCCCCC;}\n"
+"            .emailButton{background-color:#205478; border-collapse:separate;border-radius: 22px;}\n"
+"            .buttonContent{color:#FFFFFF; font-family:Helvetica; font-size:18px; font-weight:bold; line-height:100%; padding:15px; text-align:center;}\n"
+"            .buttonContent a{color:#FFFFFF; display:block; text-decoration:none!important; border:0!important;}\n"
+"            .emailCalendar{background-color:#FFFFFF; border:1px solid #CCCCCC;}\n"
+"            .emailCalendarMonth{background-color:#205478; color:#FFFFFF; font-family:Helvetica, Arial, sans-serif; font-size:16px; font-weight:bold; padding-top:10px; padding-bottom:10px; text-align:center;}\n"
+"            .emailCalendarDay{color:#205478; font-family:Helvetica, Arial, sans-serif; font-size:60px; font-weight:bold; line-height:100%; padding-top:20px; padding-bottom:20px; text-align:center;}\n"
+"            .imageContentText {margin-top: 10px;line-height:0;}\n"
+"            .imageContentText a {line-height:0;}\n"
+"            #invisibleIntroduction {display:none !important;} \n"
+"\n"
+"            span[class=ios-color-hack] a {color:#275100!important;text-decoration:none!important;} /* Remove all link colors in IOS (below are duplicates based on the color preference) */\n"
+"            span[class=ios-color-hack2] a {color:#205478!important;text-decoration:none!important;}\n"
+"            span[class=ios-color-hack3] a {color:#8B8B8B!important;text-decoration:none!important;}\n"
+"\n"
+"            .a[href^=\"tel\"], a[href^=\"sms\"] {text-decoration:none!important;color:#606060!important;pointer-events:none!important;cursor:default!important;}\n"
+"            .mobile_link a[href^=\"tel\"], .mobile_link a[href^=\"sms\"] {text-decoration:none!important;color:#606060!important;pointer-events:auto!important;cursor:default!important;}\n"
+"\n"
+"\n"
+"            @media only screen and (max-width: 480px){\n"
+"\n"
+"                table[id=\"emailHeader\"],\n"
+"                table[id=\"emailBody\"],\n"
+"                table[id=\"emailFooter\"],\n"
+"                table[class=\"flexibleContainer\"],\n"
+"                td[class=\"flexibleContainerCell\"] {width:100% !important;}\n"
+"                td[class=\"flexibleContainerBox\"], td[class=\"flexibleContainerBox\"] table {display: block;width: 100%;text-align: left;}\n"
+"\n"
+"                td[class=\"imageContent\"] img {height:auto !important; width:100% !important; max-width:100% !important; }\n"
+"                img[class=\"flexibleImage\"]{height:auto !important; width:100% !important;max-width:100% !important;}\n"
+"                img[class=\"flexibleImageSmall\"]{height:auto !important; width:auto !important;}\n"
+"\n"
+"\n"
+"                \n"
+"                table[class=\"flexibleContainerBoxNext\"]{padding-top: 10px !important;}\n"
+"\n"
+"                \n"
+"                table[class=\"emailButton\"]{width:100% !important;}\n"
+"                td[class=\"buttonContent\"]{padding:0 !important;}\n"
+"                td[class=\"buttonContent\"] a{padding:15px !important;}\n"
+"\n"
+"            }\n"
+"\n"
+"            \n"
+"\n"
+"            @media only screen and (-webkit-device-pixel-ratio:.75){\n"
+"            }\n"
+"\n"
+"            @media only screen and (-webkit-device-pixel-ratio:1){\n"
+"            }\n"
+"\n"
+"            @media only screen and (-webkit-device-pixel-ratio:1.5){\n"
+"            }\n"
+"            \n"
+"            @media only screen and (min-device-width : 320px) and (max-device-width:568px) {\n"
+"\n"
+"            }\n"
+"        </style>\n"
+"\n"
+"    </head>\n"
+"    <body bgcolor=\"#E9DFD8\" leftmargin=\"0\" marginwidth=\"0\" topmargin=\"0\" marginheight=\"0\" offset=\"0\">\n"
+"\n"
+"        <center style=\"background-color:#E9DFD8;\">\n"
+"            <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" height=\"100%\" width=\"100%\" id=\"bodyTable\" style=\"table-layout: fixed;max-width:100% !important;width: 100% !important;min-width: 100% !important;\">\n"
+"                <tr>\n"
+"                    <td align=\"center\" valign=\"top\" id=\"bodyCell\">\n"
+"                        <table bgcolor=\"#E9DFD8\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"500\" id=\"emailHeader\">\n"
+"\n"
+"                            <tr>\n"
+"                                <td align=\"center\" valign=\"top\">\n"
+"                                    <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\">\n"
+"                                        <tr>\n"
+"                                            <td align=\"center\" valign=\"top\">\n"
+"                                                <table border=\"0\" cellpadding=\"10\" cellspacing=\"0\" width=\"500\" class=\"flexibleContainer\">\n"
+"                                                    <tr>\n"
+"                                                        <td valign=\"top\" width=\"500\" class=\"flexibleContainerCell\">\n"
+"\n"
+"                                                            <table align=\"left\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\">\n"
+"                                                                <tr>\n"
+"\n"
+"                                                                    <td align=\"left\" valign=\"middle\" id=\"invisibleIntroduction\" class=\"flexibleContainerBox\" style=\"display:none !important; mso-hide:all;\">\n"
+"                                                                        <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" style=\"max-width:100%;\">\n"
+"                                                                            <tr>\n"
+"                                                                                <td align=\"left\" class=\"textContent\">\n"
+"                                                                                    <div style=\"font-family:Helvetica,Arial,sans-serif;font-size:13px;color:#828282;text-align:center;line-height:120%;\">\n"
+"                                                                                        The introduction of your message preview goes here. Try to make it short.\n"
+"                                                                                    </div>\n"
+"                                                                                </td>\n"
+"                                                                            </tr>\n"
+"                                                                        </table>\n"
+"                                                                    </td>\n"
+"                                                                    <td align=\"right\" valign=\"middle\" class=\"flexibleContainerBox\">\n"
+"                                                                        <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" style=\"max-width:100%;\">\n"
+"                                                                            <tr>\n"
+"                                                                                <td align=\"left\" class=\"textContent\">\n"
+"                                                                                    <div style=\"font-family:Helvetica,Arial,sans-serif;font-size:13px;color:#828282;text-align:center;line-height:120%;\">\n"
+"                                                                                    </div>\n"
+"                                                                                </td>\n"
+"                                                                            </tr>\n"
+"                                                                        </table>\n"
+"                                                                    </td>\n"
+"                                                                </tr>\n"
+"                                                            </table>\n"
+"                                                        </td>\n"
+"                                                    </tr>\n"
+"                                                </table>\n"
+"                                            </td>\n"
+"                                        </tr>\n"
+"                                    </table>\n"
+"                                </td>\n"
+"                            </tr>\n"
+"                        </table>\n"
+"\n"
+"                        <table bgcolor=\"#FFFFFF\"  border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"500\" id=\"emailBody\">\n"
+"\n"
+"                            <tr>\n"
+"                                <td align=\"center\" valign=\"top\">\n"
+"                                    <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" style=\"color:#FFFFFF;#f9f9f9 url(https://www.e-maknoon.com/img/bgR.png) repeat-x left top;background-repeat: no-repeat;background-size: 100% 100%;\" >\n"
+"                                        <tr>\n"
+"                                            <td align=\"center\" valign=\"top\">\n"
+"                                    \n"
+"                                                <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"500\" class=\"flexibleContainer\">\n"
+"                                                    <tr>\n"
+"                                                        <td align=\"center\" valign=\"top\" width=\"500\" class=\"flexibleContainerCell\">\n"
+"                                                            <table border=\"0\" cellpadding=\"30\" cellspacing=\"0\" width=\"100%\">\n"
+"                                                                <tr>\n"
+"                                                                    <td align=\"center\" valign=\"top\" class=\"textContent\">\n"
+"                                                                        <img src=\"https://www.e-maknoon.com/img/logo.png\">\n"
+"                                                            \n"
+"                                                                    </td>\n"
+"                                                                </tr>\n"
+"                                                            </table>\n"
+"\n"
+"                                                        </td>\n"
+"                                                    </tr>\n"
+"                                                </table>\n"
+"                                            </td>\n"
+"                                        </tr>\n"
+"                                    </table>\n"
+"                                </td>\n"
+"                            </tr>\n"
+"                            \n"
+"                            <tr>\n"
+"                                <td align=\"center\" valign=\"top\">\n"
+"                                    <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" bgcolor=\"#F8F8F8\">\n"
+"                                        <tr>\n"
+"                                            <td align=\"center\" valign=\"top\">\n"
+"                                                <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"500\" class=\"flexibleContainer\">\n"
+"                                                    <tr>\n"
+"                                                        <td align=\"center\" valign=\"top\" width=\"500\" class=\"flexibleContainerCell\">\n"
+"                                                            <table border=\"0\" cellpadding=\"30\" cellspacing=\"0\" width=\"100%\">\n"
+"                                                                <tr>\n"
+"                                                                    <td align=\"center\" valign=\"top\">\n"
+"\n"
+"                                                                        <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\">\n"
+"                                                                            <tr>\n"
+"                                                                                <td valign=\"top\" class=\"textContent\">\n"
+"                                                                                    \n"
+"                                                                                    <div mc:edit=\"body\" style=\"text-align:right;font-family:Helvetica,Arial,sans-serif;font-size:15px;margin-bottom:0;color:#5F5F5F;line-height:135%;\">تم إرسال الطلب . يرجى مراجعة المسجد ﻹكمال اﻹجراءات </div>\n"
+"                                                                                </td>\n"
+"                                                                            </tr>\n"
+"                                                                        </table>\n"
+"\n"
+"                                                                    </td>\n"
+"                                                                </tr>\n"
+"                                                            </table>\n"
+"                                                        </td>\n"
+"                                                    </tr>\n"
+"                                                </table>\n"
+"                                            </td>\n"
+"                                        </tr>\n"
+"                                    </table>\n"
+"                                </td>\n"
+"                            </tr>\n"
+"                            \n"
+"                            <tr>\n"
+"                                <td align=\"center\" valign=\"top\"><br><br>\n"
+"                                    \n"
+"                                </td>\n"
+"                            </tr>\n"
+"\n"
+"\n"
+"                            <tr>\n"
+"                                <td align=\"center\" valign=\"top\">\n"
+"                                    <table border=\"0\" bgcolor=\"#F8F8F8\"cellpadding=\"0\" cellspacing=\"0\" width=\"100%\">\n"
+"                                        <tr>\n"
+"                                            <td align=\"center\" valign=\"top\">\n"
+"                                                <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"500\" class=\"flexibleContainer\">\n"
+"                                                    <tr>\n"
+"                                                        <td align=\"center\" valign=\"top\" width=\"500\" class=\"flexibleContainerCell\">\n"
+"\n"
+"                                                            <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\">\n"
+"                                                                <tr>\n"
+"                                                                    <td valign=\"top\" class=\"imageContent\" style=\"text-align:-webkit-center;\">\n"
+"                                                                        <img src=\"https://www.e-maknoon.com/img/mail.jpg\" width=\"100%\" height=\"40%\"  class=\"flexibleImage\" style=\"width:100%;display:block;\" alt=\"Text\" title=\"Text\" />\n"
+"                                                                    </td>\n"
+"                                                                </tr>\n"
+"                                                            </table>\n"
+"\n"
+"                                                        </td>\n"
+"                                                    </tr>\n"
+"                                                </table>\n"
+"                                            </td>\n"
+"                                        </tr>\n"
+"                                    </table>\n"
+"                                </td>\n"
+"                            </tr>\n"
+"                            \n"
+"                    </td>\n"
+"                </tr>\n"
+"            </table>\n"
+"        </center>\n"
+"    </body>\n"
+"\n"
+"                \n"
+"            "
+msgstr "\n"
+"                \n"
+"\n"
+"                <head>\n"
+"        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\n"
+"        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n"
+"        <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\" />\n"
+"        <meta name=\"format-detection\" content=\"telephone=no\" /> <!-- disable auto telephone linking in iOS -->\n"
+"        <title>Trjmaty website</title>\n"
+"        <style type=\"text/css\">\n"
+"            html { background-color:#AF8B6D; margin:0; padding:0; }\n"
+"            body, #bodyTable, #bodyCell, #bodyCell{height:100% !important; margin:0; padding:0; width:100% !important;font-family:Helvetica, Arial, \"Lucida Grande\", sans-serif;}\n"
+"            table{border-collapse:collapse;}\n"
+"            table[id=bodyTable] {width:100%!important;margin:auto;max-width:500px!important;color:#7A7A7A;font-weight:normal;}\n"
+"            img, a img{border:0; outline:none; text-decoration:none;height:auto; line-height:100%;}\n"
+"            a {text-decoration:none !important;border-bottom: 1px solid;}\n"
+"            h1, h2, h3, h4, h5, h6{color:#5F5F5F; font-weight:normal; font-family:Helvetica; font-size:20px; line-height:125%; text-align:Left; letter-spacing:normal;margin-top:0;margin-right:0;margin-bottom:10px;margin-left:0;padding-top:0;padding-bottom:0;padding-left:0;padding-right:0;}\n"
+"\n"
+"            .ReadMsgBody{width:100%;} .ExternalClass{width:100%;} \n"
+"            .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div{line-height:100%;} \n"
+"            table, td{mso-table-lspace:0pt; mso-table-rspace:0pt;} \n"
+"            #outlook a{padding:0;} \n"
+"            img{-ms-interpolation-mode: bicubic;display:block;outline:none; text-decoration:none;} \n"
+"            body, table, td, p, a, li, blockquote{-ms-text-size-adjust:100%; -webkit-text-size-adjust:100%; font-weight:normal!important;border-radius: 10px 10px 0 0;} \n"
+"            .ExternalClass td[class=\"ecxflexibleContainerBox\"] h3 {padding-top: 10px !important;} \n"
+"\n"
+"            h1{display:block;font-size:26px;font-style:normal;font-weight:normal;line-height:100%;}\n"
+"            h2{display:block;font-size:20px;font-style:normal;font-weight:normal;line-height:120%;}\n"
+"            h3{display:block;font-size:17px;font-style:normal;font-weight:normal;line-height:110%;}\n"
+"            h4{display:block;font-size:18px;font-style:italic;font-weight:normal;line-height:100%;}\n"
+"            .flexibleImage{height:auto;}\n"
+"            .linkRemoveBorder{border-bottom:0 !important;}\n"
+"            table[class=flexibleContainerCellDivider] {padding-bottom:0 !important;padding-top:0 !important;}\n"
+"\n"
+"            body, #bodyTable{background-color:#E9DFD8;}\n"
+"            #emailHeader{background-color:#E9DFD8;}\n"
+"            #emailBody{background-color:#FFFFFF;}\n"
+"            #emailFooter{background-color:#E9DFD8;}\n"
+"            .nestedContainer{background-color:#F8F8F8; border:1px solid #CCCCCC;}\n"
+"            .emailButton{background-color:#205478; border-collapse:separate;border-radius: 22px;}\n"
+"            .buttonContent{color:#FFFFFF; font-family:Helvetica; font-size:18px; font-weight:bold; line-height:100%; padding:15px; text-align:center;}\n"
+"            .buttonContent a{color:#FFFFFF; display:block; text-decoration:none!important; border:0!important;}\n"
+"            .emailCalendar{background-color:#FFFFFF; border:1px solid #CCCCCC;}\n"
+"            .emailCalendarMonth{background-color:#205478; color:#FFFFFF; font-family:Helvetica, Arial, sans-serif; font-size:16px; font-weight:bold; padding-top:10px; padding-bottom:10px; text-align:center;}\n"
+"            .emailCalendarDay{color:#205478; font-family:Helvetica, Arial, sans-serif; font-size:60px; font-weight:bold; line-height:100%; padding-top:20px; padding-bottom:20px; text-align:center;}\n"
+"            .imageContentText {margin-top: 10px;line-height:0;}\n"
+"            .imageContentText a {line-height:0;}\n"
+"            #invisibleIntroduction {display:none !important;} \n"
+"\n"
+"            span[class=ios-color-hack] a {color:#275100!important;text-decoration:none!important;} /* Remove all link colors in IOS (below are duplicates based on the color preference) */\n"
+"            span[class=ios-color-hack2] a {color:#205478!important;text-decoration:none!important;}\n"
+"            span[class=ios-color-hack3] a {color:#8B8B8B!important;text-decoration:none!important;}\n"
+"\n"
+"            .a[href^=\"tel\"], a[href^=\"sms\"] {text-decoration:none!important;color:#606060!important;pointer-events:none!important;cursor:default!important;}\n"
+"            .mobile_link a[href^=\"tel\"], .mobile_link a[href^=\"sms\"] {text-decoration:none!important;color:#606060!important;pointer-events:auto!important;cursor:default!important;}\n"
+"\n"
+"\n"
+"            @media only screen and (max-width: 480px){\n"
+"\n"
+"                table[id=\"emailHeader\"],\n"
+"                table[id=\"emailBody\"],\n"
+"                table[id=\"emailFooter\"],\n"
+"                table[class=\"flexibleContainer\"],\n"
+"                td[class=\"flexibleContainerCell\"] {width:100% !important;}\n"
+"                td[class=\"flexibleContainerBox\"], td[class=\"flexibleContainerBox\"] table {display: block;width: 100%;text-align: left;}\n"
+"\n"
+"                td[class=\"imageContent\"] img {height:auto !important; width:100% !important; max-width:100% !important; }\n"
+"                img[class=\"flexibleImage\"]{height:auto !important; width:100% !important;max-width:100% !important;}\n"
+"                img[class=\"flexibleImageSmall\"]{height:auto !important; width:auto !important;}\n"
+"\n"
+"\n"
+"                \n"
+"                table[class=\"flexibleContainerBoxNext\"]{padding-top: 10px !important;}\n"
+"\n"
+"                \n"
+"                table[class=\"emailButton\"]{width:100% !important;}\n"
+"                td[class=\"buttonContent\"]{padding:0 !important;}\n"
+"                td[class=\"buttonContent\"] a{padding:15px !important;}\n"
+"\n"
+"            }\n"
+"\n"
+"            \n"
+"\n"
+"            @media only screen and (-webkit-device-pixel-ratio:.75){\n"
+"            }\n"
+"\n"
+"            @media only screen and (-webkit-device-pixel-ratio:1){\n"
+"            }\n"
+"\n"
+"            @media only screen and (-webkit-device-pixel-ratio:1.5){\n"
+"            }\n"
+"            \n"
+"            @media only screen and (min-device-width : 320px) and (max-device-width:568px) {\n"
+"\n"
+"            }\n"
+"        </style>\n"
+"\n"
+"    </head>\n"
+"    <body bgcolor=\"#E9DFD8\" leftmargin=\"0\" marginwidth=\"0\" topmargin=\"0\" marginheight=\"0\" offset=\"0\">\n"
+"\n"
+"        <center style=\"background-color:#E9DFD8;\">\n"
+"            <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" height=\"100%\" width=\"100%\" id=\"bodyTable\" style=\"table-layout: fixed;max-width:100% !important;width: 100% !important;min-width: 100% !important;\">\n"
+"                <tr>\n"
+"                    <td align=\"center\" valign=\"top\" id=\"bodyCell\">\n"
+"                        <table bgcolor=\"#E9DFD8\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"500\" id=\"emailHeader\">\n"
+"\n"
+"                            <tr>\n"
+"                                <td align=\"center\" valign=\"top\">\n"
+"                                    <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\">\n"
+"                                        <tr>\n"
+"                                            <td align=\"center\" valign=\"top\">\n"
+"                                                <table border=\"0\" cellpadding=\"10\" cellspacing=\"0\" width=\"500\" class=\"flexibleContainer\">\n"
+"                                                    <tr>\n"
+"                                                        <td valign=\"top\" width=\"500\" class=\"flexibleContainerCell\">\n"
+"\n"
+"                                                            <table align=\"left\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\">\n"
+"                                                                <tr>\n"
+"\n"
+"                                                                    <td align=\"left\" valign=\"middle\" id=\"invisibleIntroduction\" class=\"flexibleContainerBox\" style=\"display:none !important; mso-hide:all;\">\n"
+"                                                                        <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" style=\"max-width:100%;\">\n"
+"                                                                            <tr>\n"
+"                                                                                <td align=\"left\" class=\"textContent\">\n"
+"                                                                                    <div style=\"font-family:Helvetica,Arial,sans-serif;font-size:13px;color:#828282;text-align:center;line-height:120%;\">\n"
+"                                                                                        The introduction of your message preview goes here. Try to make it short.\n"
+"                                                                                    </div>\n"
+"                                                                                </td>\n"
+"                                                                            </tr>\n"
+"                                                                        </table>\n"
+"                                                                    </td>\n"
+"                                                                    <td align=\"right\" valign=\"middle\" class=\"flexibleContainerBox\">\n"
+"                                                                        <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" style=\"max-width:100%;\">\n"
+"                                                                            <tr>\n"
+"                                                                                <td align=\"left\" class=\"textContent\">\n"
+"                                                                                    <div style=\"font-family:Helvetica,Arial,sans-serif;font-size:13px;color:#828282;text-align:center;line-height:120%;\">\n"
+"                                                                                    </div>\n"
+"                                                                                </td>\n"
+"                                                                            </tr>\n"
+"                                                                        </table>\n"
+"                                                                    </td>\n"
+"                                                                </tr>\n"
+"                                                            </table>\n"
+"                                                        </td>\n"
+"                                                    </tr>\n"
+"                                                </table>\n"
+"                                            </td>\n"
+"                                        </tr>\n"
+"                                    </table>\n"
+"                                </td>\n"
+"                            </tr>\n"
+"                        </table>\n"
+"\n"
+"                        <table bgcolor=\"#FFFFFF\"  border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"500\" id=\"emailBody\">\n"
+"\n"
+"                            <tr>\n"
+"                                <td align=\"center\" valign=\"top\">\n"
+"                                    <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" style=\"color:#FFFFFF;#f9f9f9 url(https://www.e-maknoon.com/img/bgR.png) repeat-x left top;background-repeat: no-repeat;background-size: 100% 100%;\" >\n"
+"                                        <tr>\n"
+"                                            <td align=\"center\" valign=\"top\">\n"
+"                                    \n"
+"                                                <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"500\" class=\"flexibleContainer\">\n"
+"                                                    <tr>\n"
+"                                                        <td align=\"center\" valign=\"top\" width=\"500\" class=\"flexibleContainerCell\">\n"
+"                                                            <table border=\"0\" cellpadding=\"30\" cellspacing=\"0\" width=\"100%\">\n"
+"                                                                <tr>\n"
+"                                                                    <td align=\"center\" valign=\"top\" class=\"textContent\">\n"
+"                                                                        <img src=\"https://www.e-maknoon.com/img/logo.png\">\n"
+"                                                            \n"
+"                                                                    </td>\n"
+"                                                                </tr>\n"
+"                                                            </table>\n"
+"\n"
+"                                                        </td>\n"
+"                                                    </tr>\n"
+"                                                </table>\n"
+"                                            </td>\n"
+"                                        </tr>\n"
+"                                    </table>\n"
+"                                </td>\n"
+"                            </tr>\n"
+"                            \n"
+"                            <tr>\n"
+"                                <td align=\"center\" valign=\"top\">\n"
+"                                    <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" bgcolor=\"#F8F8F8\">\n"
+"                                        <tr>\n"
+"                                            <td align=\"center\" valign=\"top\">\n"
+"                                                <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"500\" class=\"flexibleContainer\">\n"
+"                                                    <tr>\n"
+"                                                        <td align=\"center\" valign=\"top\" width=\"500\" class=\"flexibleContainerCell\">\n"
+"                                                            <table border=\"0\" cellpadding=\"30\" cellspacing=\"0\" width=\"100%\">\n"
+"                                                                <tr>\n"
+"                                                                    <td align=\"center\" valign=\"top\">\n"
+"\n"
+"                                                                        <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\">\n"
+"                                                                            <tr>\n"
+"                                                                                <td valign=\"top\" class=\"textContent\">\n"
+"                                                                                    \n"
+"                                                                                    <div mc:edit=\"body\" style=\"text-align:right;font-family:Helvetica,Arial,sans-serif;font-size:15px;margin-bottom:0;color:#5F5F5F;line-height:135%;\">تم إرسال الطلب . يرجى مراجعة المسجد ﻹكمال اﻹجراءات </div>\n"
+"                                                                                </td>\n"
+"                                                                            </tr>\n"
+"                                                                        </table>\n"
+"\n"
+"                                                                    </td>\n"
+"                                                                </tr>\n"
+"                                                            </table>\n"
+"                                                        </td>\n"
+"                                                    </tr>\n"
+"                                                </table>\n"
+"                                            </td>\n"
+"                                        </tr>\n"
+"                                    </table>\n"
+"                                </td>\n"
+"                            </tr>\n"
+"                            \n"
+"                            <tr>\n"
+"                                <td align=\"center\" valign=\"top\"><br><br>\n"
+"                                    \n"
+"                                </td>\n"
+"                            </tr>\n"
+"\n"
+"\n"
+"                            <tr>\n"
+"                                <td align=\"center\" valign=\"top\">\n"
+"                                    <table border=\"0\" bgcolor=\"#F8F8F8\"cellpadding=\"0\" cellspacing=\"0\" width=\"100%\">\n"
+"                                        <tr>\n"
+"                                            <td align=\"center\" valign=\"top\">\n"
+"                                                <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"500\" class=\"flexibleContainer\">\n"
+"                                                    <tr>\n"
+"                                                        <td align=\"center\" valign=\"top\" width=\"500\" class=\"flexibleContainerCell\">\n"
+"\n"
+"                                                            <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\">\n"
+"                                                                <tr>\n"
+"                                                                    <td valign=\"top\" class=\"imageContent\" style=\"text-align:-webkit-center;\">\n"
+"                                                                        <img src=\"https://www.e-maknoon.com/img/mail.jpg\" width=\"100%\" height=\"40%\"  class=\"flexibleImage\" style=\"width:100%;display:block;\" alt=\"Text\" title=\"Text\" />\n"
+"                                                                    </td>\n"
+"                                                                </tr>\n"
+"                                                            </table>\n"
+"\n"
+"                                                        </td>\n"
+"                                                    </tr>\n"
+"                                                </table>\n"
+"                                            </td>\n"
+"                                        </tr>\n"
+"                                    </table>\n"
+"                                </td>\n"
+"                            </tr>\n"
+"                            \n"
+"                    </td>\n"
+"                </tr>\n"
+"            </table>\n"
+"        </center>\n"
+"    </body>\n"
+"\n"
+"                \n"
+"            "
+
+#. module: mk_transport_management
+#: model:mail.template,body_html:mk_transport_management.mk_biding_transport_request
+msgid "\n"
+"                \n"
+"\n"
+"                <head>\n"
+"        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\n"
+"        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n"
+"        <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\" />\n"
+"        <meta name=\"format-detection\" content=\"telephone=no\" /> <!-- disable auto telephone linking in iOS -->\n"
+"        <title>Trjmaty website</title>\n"
+"        <style type=\"text/css\">\n"
+"            html { background-color:#AF8B6D; margin:0; padding:0; }\n"
+"            body, #bodyTable, #bodyCell, #bodyCell{height:100% !important; margin:0; padding:0; width:100% !important;font-family:Helvetica, Arial, \"Lucida Grande\", sans-serif;}\n"
+"            table{border-collapse:collapse;}\n"
+"            table[id=bodyTable] {width:100%!important;margin:auto;max-width:500px!important;color:#7A7A7A;font-weight:normal;}\n"
+"            img, a img{border:0; outline:none; text-decoration:none;height:auto; line-height:100%;}\n"
+"            a {text-decoration:none !important;border-bottom: 1px solid;}\n"
+"            h1, h2, h3, h4, h5, h6{color:#5F5F5F; font-weight:normal; font-family:Helvetica; font-size:20px; line-height:125%; text-align:Left; letter-spacing:normal;margin-top:0;margin-right:0;margin-bottom:10px;margin-left:0;padding-top:0;padding-bottom:0;padding-left:0;padding-right:0;}\n"
+"\n"
+"            .ReadMsgBody{width:100%;} .ExternalClass{width:100%;} \n"
+"            .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div{line-height:100%;} \n"
+"            table, td{mso-table-lspace:0pt; mso-table-rspace:0pt;} \n"
+"            #outlook a{padding:0;} \n"
+"            img{-ms-interpolation-mode: bicubic;display:block;outline:none; text-decoration:none;} \n"
+"            body, table, td, p, a, li, blockquote{-ms-text-size-adjust:100%; -webkit-text-size-adjust:100%; font-weight:normal!important;border-radius: 10px 10px 0 0;} \n"
+"            .ExternalClass td[class=\"ecxflexibleContainerBox\"] h3 {padding-top: 10px !important;} \n"
+"\n"
+"            h1{display:block;font-size:26px;font-style:normal;font-weight:normal;line-height:100%;}\n"
+"            h2{display:block;font-size:20px;font-style:normal;font-weight:normal;line-height:120%;}\n"
+"            h3{display:block;font-size:17px;font-style:normal;font-weight:normal;line-height:110%;}\n"
+"            h4{display:block;font-size:18px;font-style:italic;font-weight:normal;line-height:100%;}\n"
+"            .flexibleImage{height:auto;}\n"
+"            .linkRemoveBorder{border-bottom:0 !important;}\n"
+"            table[class=flexibleContainerCellDivider] {padding-bottom:0 !important;padding-top:0 !important;}\n"
+"\n"
+"            body, #bodyTable{background-color:#E9DFD8;}\n"
+"            #emailHeader{background-color:#E9DFD8;}\n"
+"            #emailBody{background-color:#FFFFFF;}\n"
+"            #emailFooter{background-color:#E9DFD8;}\n"
+"            .nestedContainer{background-color:#F8F8F8; border:1px solid #CCCCCC;}\n"
+"            .emailButton{background-color:#205478; border-collapse:separate;border-radius: 22px;}\n"
+"            .buttonContent{color:#FFFFFF; font-family:Helvetica; font-size:18px; font-weight:bold; line-height:100%; padding:15px; text-align:center;}\n"
+"            .buttonContent a{color:#FFFFFF; display:block; text-decoration:none!important; border:0!important;}\n"
+"            .emailCalendar{background-color:#FFFFFF; border:1px solid #CCCCCC;}\n"
+"            .emailCalendarMonth{background-color:#205478; color:#FFFFFF; font-family:Helvetica, Arial, sans-serif; font-size:16px; font-weight:bold; padding-top:10px; padding-bottom:10px; text-align:center;}\n"
+"            .emailCalendarDay{color:#205478; font-family:Helvetica, Arial, sans-serif; font-size:60px; font-weight:bold; line-height:100%; padding-top:20px; padding-bottom:20px; text-align:center;}\n"
+"            .imageContentText {margin-top: 10px;line-height:0;}\n"
+"            .imageContentText a {line-height:0;}\n"
+"            #invisibleIntroduction {display:none !important;} \n"
+"\n"
+"            span[class=ios-color-hack] a {color:#275100!important;text-decoration:none!important;} /* Remove all link colors in IOS (below are duplicates based on the color preference) */\n"
+"            span[class=ios-color-hack2] a {color:#205478!important;text-decoration:none!important;}\n"
+"            span[class=ios-color-hack3] a {color:#8B8B8B!important;text-decoration:none!important;}\n"
+"\n"
+"            .a[href^=\"tel\"], a[href^=\"sms\"] {text-decoration:none!important;color:#606060!important;pointer-events:none!important;cursor:default!important;}\n"
+"            .mobile_link a[href^=\"tel\"], .mobile_link a[href^=\"sms\"] {text-decoration:none!important;color:#606060!important;pointer-events:auto!important;cursor:default!important;}\n"
+"\n"
+"\n"
+"            @media only screen and (max-width: 480px){\n"
+"\n"
+"                table[id=\"emailHeader\"],\n"
+"                table[id=\"emailBody\"],\n"
+"                table[id=\"emailFooter\"],\n"
+"                table[class=\"flexibleContainer\"],\n"
+"                td[class=\"flexibleContainerCell\"] {width:100% !important;}\n"
+"                td[class=\"flexibleContainerBox\"], td[class=\"flexibleContainerBox\"] table {display: block;width: 100%;text-align: left;}\n"
+"\n"
+"                td[class=\"imageContent\"] img {height:auto !important; width:100% !important; max-width:100% !important; }\n"
+"                img[class=\"flexibleImage\"]{height:auto !important; width:100% !important;max-width:100% !important;}\n"
+"                img[class=\"flexibleImageSmall\"]{height:auto !important; width:auto !important;}\n"
+"\n"
+"\n"
+"                \n"
+"                table[class=\"flexibleContainerBoxNext\"]{padding-top: 10px !important;}\n"
+"\n"
+"                \n"
+"                table[class=\"emailButton\"]{width:100% !important;}\n"
+"                td[class=\"buttonContent\"]{padding:0 !important;}\n"
+"                td[class=\"buttonContent\"] a{padding:15px !important;}\n"
+"\n"
+"            }\n"
+"\n"
+"            \n"
+"\n"
+"            @media only screen and (-webkit-device-pixel-ratio:.75){\n"
+"            }\n"
+"\n"
+"            @media only screen and (-webkit-device-pixel-ratio:1){\n"
+"            }\n"
+"\n"
+"            @media only screen and (-webkit-device-pixel-ratio:1.5){\n"
+"            }\n"
+"            \n"
+"            @media only screen and (min-device-width : 320px) and (max-device-width:568px) {\n"
+"\n"
+"            }\n"
+"        </style>\n"
+"\n"
+"    </head>\n"
+"    <body bgcolor=\"#E9DFD8\" leftmargin=\"0\" marginwidth=\"0\" topmargin=\"0\" marginheight=\"0\" offset=\"0\">\n"
+"\n"
+"        <center style=\"background-color:#E9DFD8;\">\n"
+"            <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" height=\"100%\" width=\"100%\" id=\"bodyTable\" style=\"table-layout: fixed;max-width:100% !important;width: 100% !important;min-width: 100% !important;\">\n"
+"                <tr>\n"
+"                    <td align=\"center\" valign=\"top\" id=\"bodyCell\">\n"
+"                        <table bgcolor=\"#E9DFD8\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"500\" id=\"emailHeader\">\n"
+"\n"
+"                            <tr>\n"
+"                                <td align=\"center\" valign=\"top\">\n"
+"                                    <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\">\n"
+"                                        <tr>\n"
+"                                            <td align=\"center\" valign=\"top\">\n"
+"                                                <table border=\"0\" cellpadding=\"10\" cellspacing=\"0\" width=\"500\" class=\"flexibleContainer\">\n"
+"                                                    <tr>\n"
+"                                                        <td valign=\"top\" width=\"500\" class=\"flexibleContainerCell\">\n"
+"\n"
+"                                                            <table align=\"left\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\">\n"
+"                                                                <tr>\n"
+"\n"
+"                                                                    <td align=\"left\" valign=\"middle\" id=\"invisibleIntroduction\" class=\"flexibleContainerBox\" style=\"display:none !important; mso-hide:all;\">\n"
+"                                                                        <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" style=\"max-width:100%;\">\n"
+"                                                                            <tr>\n"
+"                                                                                <td align=\"left\" class=\"textContent\">\n"
+"                                                                                    <div style=\"font-family:Helvetica,Arial,sans-serif;font-size:13px;color:#828282;text-align:center;line-height:120%;\">\n"
+"                                                                                        The introduction of your message preview goes here. Try to make it short.\n"
+"                                                                                    </div>\n"
+"                                                                                </td>\n"
+"                                                                            </tr>\n"
+"                                                                        </table>\n"
+"                                                                    </td>\n"
+"                                                                    <td align=\"right\" valign=\"middle\" class=\"flexibleContainerBox\">\n"
+"                                                                        <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" style=\"max-width:100%;\">\n"
+"                                                                            <tr>\n"
+"                                                                                <td align=\"left\" class=\"textContent\">\n"
+"                                                                                    <div style=\"font-family:Helvetica,Arial,sans-serif;font-size:13px;color:#828282;text-align:center;line-height:120%;\">\n"
+"                                                                                    </div>\n"
+"                                                                                </td>\n"
+"                                                                            </tr>\n"
+"                                                                        </table>\n"
+"                                                                    </td>\n"
+"                                                                </tr>\n"
+"                                                            </table>\n"
+"                                                        </td>\n"
+"                                                    </tr>\n"
+"                                                </table>\n"
+"                                            </td>\n"
+"                                        </tr>\n"
+"                                    </table>\n"
+"                                </td>\n"
+"                            </tr>\n"
+"                        </table>\n"
+"\n"
+"                        <table bgcolor=\"#FFFFFF\"  border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"500\" id=\"emailBody\">\n"
+"\n"
+"                            <tr>\n"
+"                                <td align=\"center\" valign=\"top\">\n"
+"                                    <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" style=\"color:#FFFFFF;#f9f9f9 url(https://www.e-maknoon.com/img/bgR.png) repeat-x left top;background-repeat: no-repeat;background-size: 100% 100%;\" >\n"
+"                                        <tr>\n"
+"                                            <td align=\"center\" valign=\"top\">\n"
+"                                    \n"
+"                                                <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"500\" class=\"flexibleContainer\">\n"
+"                                                    <tr>\n"
+"                                                        <td align=\"center\" valign=\"top\" width=\"500\" class=\"flexibleContainerCell\">\n"
+"                                                            <table border=\"0\" cellpadding=\"30\" cellspacing=\"0\" width=\"100%\">\n"
+"                                                                <tr>\n"
+"                                                                    <td align=\"center\" valign=\"top\" class=\"textContent\">\n"
+"                                                                        <img src=\"https://www.e-maknoon.com/img/logo.png\">\n"
+"                                                            \n"
+"                                                                    </td>\n"
+"                                                                </tr>\n"
+"                                                            </table>\n"
+"\n"
+"                                                        </td>\n"
+"                                                    </tr>\n"
+"                                                </table>\n"
+"                                            </td>\n"
+"                                        </tr>\n"
+"                                    </table>\n"
+"                                </td>\n"
+"                            </tr>\n"
+"                            \n"
+"                            <tr>\n"
+"                                <td align=\"center\" valign=\"top\">\n"
+"                                    <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" bgcolor=\"#F8F8F8\">\n"
+"                                        <tr>\n"
+"                                            <td align=\"center\" valign=\"top\">\n"
+"                                                <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"500\" class=\"flexibleContainer\">\n"
+"                                                    <tr>\n"
+"                                                        <td align=\"center\" valign=\"top\" width=\"500\" class=\"flexibleContainerCell\">\n"
+"                                                            <table border=\"0\" cellpadding=\"30\" cellspacing=\"0\" width=\"100%\">\n"
+"                                                                <tr>\n"
+"                                                                    <td align=\"center\" valign=\"top\">\n"
+"\n"
+"                                                                        <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\">\n"
+"                                                                            <tr>\n"
+"                                                                                <td valign=\"top\" class=\"textContent\">\n"
+"                                                                                    \n"
+"                                                                                    <div mc:edit=\"body\" style=\"text-align:right;font-family:Helvetica,Arial,sans-serif;font-size:15px;margin-bottom:0;color:#5F5F5F;line-height:135%;\">تم إرسال الطلب و سيتم وضعه في قائمة الاحتياطي</div>\n"
+"                                                                                </td>\n"
+"                                                                            </tr>\n"
+"                                                                        </table>\n"
+"\n"
+"                                                                    </td>\n"
+"                                                                </tr>\n"
+"                                                            </table>\n"
+"                                                        </td>\n"
+"                                                    </tr>\n"
+"                                                </table>\n"
+"                                            </td>\n"
+"                                        </tr>\n"
+"                                    </table>\n"
+"                                </td>\n"
+"                            </tr>\n"
+"                            \n"
+"                            <tr>\n"
+"                                <td align=\"center\" valign=\"top\"><br><br>\n"
+"                                    \n"
+"                                </td>\n"
+"                            </tr>\n"
+"\n"
+"\n"
+"                            <tr>\n"
+"                                <td align=\"center\" valign=\"top\">\n"
+"                                    <table border=\"0\" bgcolor=\"#F8F8F8\"cellpadding=\"0\" cellspacing=\"0\" width=\"100%\">\n"
+"                                        <tr>\n"
+"                                            <td align=\"center\" valign=\"top\">\n"
+"                                                <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"500\" class=\"flexibleContainer\">\n"
+"                                                    <tr>\n"
+"                                                        <td align=\"center\" valign=\"top\" width=\"500\" class=\"flexibleContainerCell\">\n"
+"\n"
+"                                                            <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\">\n"
+"                                                                <tr>\n"
+"                                                                    <td valign=\"top\" class=\"imageContent\" style=\"text-align:-webkit-center;\">\n"
+"                                                                        <img src=\"https://www.e-maknoon.com/img/mail.jpg\" width=\"100%\" height=\"40%\"  class=\"flexibleImage\" style=\"width:100%;display:block;\" alt=\"Text\" title=\"Text\" />\n"
+"                                                                    </td>\n"
+"                                                                </tr>\n"
+"                                                            </table>\n"
+"\n"
+"                                                        </td>\n"
+"                                                    </tr>\n"
+"                                                </table>\n"
+"                                            </td>\n"
+"                                        </tr>\n"
+"                                    </table>\n"
+"                                </td>\n"
+"                            </tr>\n"
+"                            \n"
+"                    </td>\n"
+"                </tr>\n"
+"            </table>\n"
+"        </center>\n"
+"    </body>\n"
+"\n"
+"                \n"
+"            "
+msgstr "\n"
+"                \n"
+"\n"
+"                <head>\n"
+"        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\n"
+"        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n"
+"        <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\" />\n"
+"        <meta name=\"format-detection\" content=\"telephone=no\" /> <!-- disable auto telephone linking in iOS -->\n"
+"        <title>Trjmaty website</title>\n"
+"        <style type=\"text/css\">\n"
+"            html { background-color:#AF8B6D; margin:0; padding:0; }\n"
+"            body, #bodyTable, #bodyCell, #bodyCell{height:100% !important; margin:0; padding:0; width:100% !important;font-family:Helvetica, Arial, \"Lucida Grande\", sans-serif;}\n"
+"            table{border-collapse:collapse;}\n"
+"            table[id=bodyTable] {width:100%!important;margin:auto;max-width:500px!important;color:#7A7A7A;font-weight:normal;}\n"
+"            img, a img{border:0; outline:none; text-decoration:none;height:auto; line-height:100%;}\n"
+"            a {text-decoration:none !important;border-bottom: 1px solid;}\n"
+"            h1, h2, h3, h4, h5, h6{color:#5F5F5F; font-weight:normal; font-family:Helvetica; font-size:20px; line-height:125%; text-align:Left; letter-spacing:normal;margin-top:0;margin-right:0;margin-bottom:10px;margin-left:0;padding-top:0;padding-bottom:0;padding-left:0;padding-right:0;}\n"
+"\n"
+"            .ReadMsgBody{width:100%;} .ExternalClass{width:100%;} \n"
+"            .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div{line-height:100%;} \n"
+"            table, td{mso-table-lspace:0pt; mso-table-rspace:0pt;} \n"
+"            #outlook a{padding:0;} \n"
+"            img{-ms-interpolation-mode: bicubic;display:block;outline:none; text-decoration:none;} \n"
+"            body, table, td, p, a, li, blockquote{-ms-text-size-adjust:100%; -webkit-text-size-adjust:100%; font-weight:normal!important;border-radius: 10px 10px 0 0;} \n"
+"            .ExternalClass td[class=\"ecxflexibleContainerBox\"] h3 {padding-top: 10px !important;} \n"
+"\n"
+"            h1{display:block;font-size:26px;font-style:normal;font-weight:normal;line-height:100%;}\n"
+"            h2{display:block;font-size:20px;font-style:normal;font-weight:normal;line-height:120%;}\n"
+"            h3{display:block;font-size:17px;font-style:normal;font-weight:normal;line-height:110%;}\n"
+"            h4{display:block;font-size:18px;font-style:italic;font-weight:normal;line-height:100%;}\n"
+"            .flexibleImage{height:auto;}\n"
+"            .linkRemoveBorder{border-bottom:0 !important;}\n"
+"            table[class=flexibleContainerCellDivider] {padding-bottom:0 !important;padding-top:0 !important;}\n"
+"\n"
+"            body, #bodyTable{background-color:#E9DFD8;}\n"
+"            #emailHeader{background-color:#E9DFD8;}\n"
+"            #emailBody{background-color:#FFFFFF;}\n"
+"            #emailFooter{background-color:#E9DFD8;}\n"
+"            .nestedContainer{background-color:#F8F8F8; border:1px solid #CCCCCC;}\n"
+"            .emailButton{background-color:#205478; border-collapse:separate;border-radius: 22px;}\n"
+"            .buttonContent{color:#FFFFFF; font-family:Helvetica; font-size:18px; font-weight:bold; line-height:100%; padding:15px; text-align:center;}\n"
+"            .buttonContent a{color:#FFFFFF; display:block; text-decoration:none!important; border:0!important;}\n"
+"            .emailCalendar{background-color:#FFFFFF; border:1px solid #CCCCCC;}\n"
+"            .emailCalendarMonth{background-color:#205478; color:#FFFFFF; font-family:Helvetica, Arial, sans-serif; font-size:16px; font-weight:bold; padding-top:10px; padding-bottom:10px; text-align:center;}\n"
+"            .emailCalendarDay{color:#205478; font-family:Helvetica, Arial, sans-serif; font-size:60px; font-weight:bold; line-height:100%; padding-top:20px; padding-bottom:20px; text-align:center;}\n"
+"            .imageContentText {margin-top: 10px;line-height:0;}\n"
+"            .imageContentText a {line-height:0;}\n"
+"            #invisibleIntroduction {display:none !important;} \n"
+"\n"
+"            span[class=ios-color-hack] a {color:#275100!important;text-decoration:none!important;} /* Remove all link colors in IOS (below are duplicates based on the color preference) */\n"
+"            span[class=ios-color-hack2] a {color:#205478!important;text-decoration:none!important;}\n"
+"            span[class=ios-color-hack3] a {color:#8B8B8B!important;text-decoration:none!important;}\n"
+"\n"
+"            .a[href^=\"tel\"], a[href^=\"sms\"] {text-decoration:none!important;color:#606060!important;pointer-events:none!important;cursor:default!important;}\n"
+"            .mobile_link a[href^=\"tel\"], .mobile_link a[href^=\"sms\"] {text-decoration:none!important;color:#606060!important;pointer-events:auto!important;cursor:default!important;}\n"
+"\n"
+"\n"
+"            @media only screen and (max-width: 480px){\n"
+"\n"
+"                table[id=\"emailHeader\"],\n"
+"                table[id=\"emailBody\"],\n"
+"                table[id=\"emailFooter\"],\n"
+"                table[class=\"flexibleContainer\"],\n"
+"                td[class=\"flexibleContainerCell\"] {width:100% !important;}\n"
+"                td[class=\"flexibleContainerBox\"], td[class=\"flexibleContainerBox\"] table {display: block;width: 100%;text-align: left;}\n"
+"\n"
+"                td[class=\"imageContent\"] img {height:auto !important; width:100% !important; max-width:100% !important; }\n"
+"                img[class=\"flexibleImage\"]{height:auto !important; width:100% !important;max-width:100% !important;}\n"
+"                img[class=\"flexibleImageSmall\"]{height:auto !important; width:auto !important;}\n"
+"\n"
+"\n"
+"                \n"
+"                table[class=\"flexibleContainerBoxNext\"]{padding-top: 10px !important;}\n"
+"\n"
+"                \n"
+"                table[class=\"emailButton\"]{width:100% !important;}\n"
+"                td[class=\"buttonContent\"]{padding:0 !important;}\n"
+"                td[class=\"buttonContent\"] a{padding:15px !important;}\n"
+"\n"
+"            }\n"
+"\n"
+"            \n"
+"\n"
+"            @media only screen and (-webkit-device-pixel-ratio:.75){\n"
+"            }\n"
+"\n"
+"            @media only screen and (-webkit-device-pixel-ratio:1){\n"
+"            }\n"
+"\n"
+"            @media only screen and (-webkit-device-pixel-ratio:1.5){\n"
+"            }\n"
+"            \n"
+"            @media only screen and (min-device-width : 320px) and (max-device-width:568px) {\n"
+"\n"
+"            }\n"
+"        </style>\n"
+"\n"
+"    </head>\n"
+"    <body bgcolor=\"#E9DFD8\" leftmargin=\"0\" marginwidth=\"0\" topmargin=\"0\" marginheight=\"0\" offset=\"0\">\n"
+"\n"
+"        <center style=\"background-color:#E9DFD8;\">\n"
+"            <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" height=\"100%\" width=\"100%\" id=\"bodyTable\" style=\"table-layout: fixed;max-width:100% !important;width: 100% !important;min-width: 100% !important;\">\n"
+"                <tr>\n"
+"                    <td align=\"center\" valign=\"top\" id=\"bodyCell\">\n"
+"                        <table bgcolor=\"#E9DFD8\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"500\" id=\"emailHeader\">\n"
+"\n"
+"                            <tr>\n"
+"                                <td align=\"center\" valign=\"top\">\n"
+"                                    <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\">\n"
+"                                        <tr>\n"
+"                                            <td align=\"center\" valign=\"top\">\n"
+"                                                <table border=\"0\" cellpadding=\"10\" cellspacing=\"0\" width=\"500\" class=\"flexibleContainer\">\n"
+"                                                    <tr>\n"
+"                                                        <td valign=\"top\" width=\"500\" class=\"flexibleContainerCell\">\n"
+"\n"
+"                                                            <table align=\"left\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\">\n"
+"                                                                <tr>\n"
+"\n"
+"                                                                    <td align=\"left\" valign=\"middle\" id=\"invisibleIntroduction\" class=\"flexibleContainerBox\" style=\"display:none !important; mso-hide:all;\">\n"
+"                                                                        <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" style=\"max-width:100%;\">\n"
+"                                                                            <tr>\n"
+"                                                                                <td align=\"left\" class=\"textContent\">\n"
+"                                                                                    <div style=\"font-family:Helvetica,Arial,sans-serif;font-size:13px;color:#828282;text-align:center;line-height:120%;\">\n"
+"                                                                                        The introduction of your message preview goes here. Try to make it short.\n"
+"                                                                                    </div>\n"
+"                                                                                </td>\n"
+"                                                                            </tr>\n"
+"                                                                        </table>\n"
+"                                                                    </td>\n"
+"                                                                    <td align=\"right\" valign=\"middle\" class=\"flexibleContainerBox\">\n"
+"                                                                        <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" style=\"max-width:100%;\">\n"
+"                                                                            <tr>\n"
+"                                                                                <td align=\"left\" class=\"textContent\">\n"
+"                                                                                    <div style=\"font-family:Helvetica,Arial,sans-serif;font-size:13px;color:#828282;text-align:center;line-height:120%;\">\n"
+"                                                                                    </div>\n"
+"                                                                                </td>\n"
+"                                                                            </tr>\n"
+"                                                                        </table>\n"
+"                                                                    </td>\n"
+"                                                                </tr>\n"
+"                                                            </table>\n"
+"                                                        </td>\n"
+"                                                    </tr>\n"
+"                                                </table>\n"
+"                                            </td>\n"
+"                                        </tr>\n"
+"                                    </table>\n"
+"                                </td>\n"
+"                            </tr>\n"
+"                        </table>\n"
+"\n"
+"                        <table bgcolor=\"#FFFFFF\"  border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"500\" id=\"emailBody\">\n"
+"\n"
+"                            <tr>\n"
+"                                <td align=\"center\" valign=\"top\">\n"
+"                                    <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" style=\"color:#FFFFFF;#f9f9f9 url(https://www.e-maknoon.com/img/bgR.png) repeat-x left top;background-repeat: no-repeat;background-size: 100% 100%;\" >\n"
+"                                        <tr>\n"
+"                                            <td align=\"center\" valign=\"top\">\n"
+"                                    \n"
+"                                                <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"500\" class=\"flexibleContainer\">\n"
+"                                                    <tr>\n"
+"                                                        <td align=\"center\" valign=\"top\" width=\"500\" class=\"flexibleContainerCell\">\n"
+"                                                            <table border=\"0\" cellpadding=\"30\" cellspacing=\"0\" width=\"100%\">\n"
+"                                                                <tr>\n"
+"                                                                    <td align=\"center\" valign=\"top\" class=\"textContent\">\n"
+"                                                                        <img src=\"https://www.e-maknoon.com/img/logo.png\">\n"
+"                                                            \n"
+"                                                                    </td>\n"
+"                                                                </tr>\n"
+"                                                            </table>\n"
+"\n"
+"                                                        </td>\n"
+"                                                    </tr>\n"
+"                                                </table>\n"
+"                                            </td>\n"
+"                                        </tr>\n"
+"                                    </table>\n"
+"                                </td>\n"
+"                            </tr>\n"
+"                            \n"
+"                            <tr>\n"
+"                                <td align=\"center\" valign=\"top\">\n"
+"                                    <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" bgcolor=\"#F8F8F8\">\n"
+"                                        <tr>\n"
+"                                            <td align=\"center\" valign=\"top\">\n"
+"                                                <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"500\" class=\"flexibleContainer\">\n"
+"                                                    <tr>\n"
+"                                                        <td align=\"center\" valign=\"top\" width=\"500\" class=\"flexibleContainerCell\">\n"
+"                                                            <table border=\"0\" cellpadding=\"30\" cellspacing=\"0\" width=\"100%\">\n"
+"                                                                <tr>\n"
+"                                                                    <td align=\"center\" valign=\"top\">\n"
+"\n"
+"                                                                        <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\">\n"
+"                                                                            <tr>\n"
+"                                                                                <td valign=\"top\" class=\"textContent\">\n"
+"                                                                                    \n"
+"                                                                                    <div mc:edit=\"body\" style=\"text-align:right;font-family:Helvetica,Arial,sans-serif;font-size:15px;margin-bottom:0;color:#5F5F5F;line-height:135%;\">تم إرسال الطلب و سيتم وضعه في قائمة الاحتياطي</div>\n"
+"                                                                                </td>\n"
+"                                                                            </tr>\n"
+"                                                                        </table>\n"
+"\n"
+"                                                                    </td>\n"
+"                                                                </tr>\n"
+"                                                            </table>\n"
+"                                                        </td>\n"
+"                                                    </tr>\n"
+"                                                </table>\n"
+"                                            </td>\n"
+"                                        </tr>\n"
+"                                    </table>\n"
+"                                </td>\n"
+"                            </tr>\n"
+"                            \n"
+"                            <tr>\n"
+"                                <td align=\"center\" valign=\"top\"><br><br>\n"
+"                                    \n"
+"                                </td>\n"
+"                            </tr>\n"
+"\n"
+"\n"
+"                            <tr>\n"
+"                                <td align=\"center\" valign=\"top\">\n"
+"                                    <table border=\"0\" bgcolor=\"#F8F8F8\"cellpadding=\"0\" cellspacing=\"0\" width=\"100%\">\n"
+"                                        <tr>\n"
+"                                            <td align=\"center\" valign=\"top\">\n"
+"                                                <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"500\" class=\"flexibleContainer\">\n"
+"                                                    <tr>\n"
+"                                                        <td align=\"center\" valign=\"top\" width=\"500\" class=\"flexibleContainerCell\">\n"
+"\n"
+"                                                            <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"100%\">\n"
+"                                                                <tr>\n"
+"                                                                    <td valign=\"top\" class=\"imageContent\" style=\"text-align:-webkit-center;\">\n"
+"                                                                        <img src=\"https://www.e-maknoon.com/img/mail.jpg\" width=\"100%\" height=\"40%\"  class=\"flexibleImage\" style=\"width:100%;display:block;\" alt=\"Text\" title=\"Text\" />\n"
+"                                                                    </td>\n"
+"                                                                </tr>\n"
+"                                                            </table>\n"
+"\n"
+"                                                        </td>\n"
+"                                                    </tr>\n"
+"                                                </table>\n"
+"                                            </td>\n"
+"                                        </tr>\n"
+"                                    </table>\n"
+"                                </td>\n"
+"                            </tr>\n"
+"                            \n"
+"                    </td>\n"
+"                </tr>\n"
+"            </table>\n"
+"        </center>\n"
+"    </body>\n"
+"\n"
+"                \n"
+"            "
+
+#. module: mk_transport_management
+#: model:res.groups,name:mk_transport_management.create_apologize_request
+msgid " create apologize request "
+msgstr " create apologize request "
+
+#. module: mk_transport_management
+#: model:res.groups,name:mk_transport_management.write_apologize_request
+msgid " modify apologize request "
+msgstr " modify apologize request "
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_attendance_students_line_absent
+msgid "Absent"
+msgstr "غياب"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_apology_request_absent_reason
+msgid "Absent Reason"
+msgstr "سبب اﻹعتذار"
+
+#. module: mk_transport_management
+#: model:res.groups,name:mk_transport_management.accept_reject_transport_management
+msgid "Accept Reject Transport Management"
+msgstr "قبول أو رفض إدارة نقل"
+
+#. module: mk_transport_management
+#: model:res.groups,name:mk_transport_management.accept_reject_attendance
+msgid "Accept/Reject Attendance"
+msgstr "تاكيد/إلغاء الحضور"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_attendance_students_line_apologize
+msgid "Apologize"
+msgstr "إعتذار"
+
+#. module: mk_transport_management
+#: model:ir.ui.menu,name:mk_transport_management.apology_request_menu
+msgid "Apology Request"
+msgstr "طلب إعتذار"
+
+#. module: mk_transport_management
+#: selection:transportation.request,state:0
+msgid "Approvel"
+msgstr "Approvel"
+
+#. module: mk_transport_management
+#: model:ir.ui.view,arch_db:mk_transport_management.drivers_records_form_view
+msgid "Are you sure you want to do this?"
+msgstr "هل تود إضافة الطالب/الطالبة في هذا المسجد/المدرسة ؟"
+
+#. module: mk_transport_management
+#: model:ir.actions.act_window,name:mk_transport_management.mk_attendance_students_action
+#: model:ir.model.fields,field_description:mk_transport_management.field_mk_attendance_students_stud_attend_ids
+#: model:ir.ui.menu,name:mk_transport_management.attendance_students_menu
+#: model:ir.ui.view,arch_db:mk_transport_management.mk_attendance_students_search_view
+msgid "Attendance Students"
+msgstr " إدارة حضور الطلاب للنقل"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_vehicle_emanagement_line_avilable_seats
+msgid "Avilable Seats"
+msgstr "عدد المقاعد الشاغرة"
+
+#. module: mk_transport_management
+#: selection:mk.transport.management,state:0
+#: selection:transportation.request,state:0
+msgid "Biding"
+msgstr "Biding"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_mk_attendance_students_supervisor_id
+#: model:ir.model.fields,field_description:mk_transport_management.field_mk_transport_management_supervisor_id
+#: model:ir.model.fields,field_description:mk_transport_management.field_vehicle_records_superviser_id
+msgid "Bus Supervisor"
+msgstr "مشرف الباص"
+
+#. module: mk_transport_management
+#: model:ir.ui.view,arch_db:mk_transport_management.mk_attendance_students_form_view
+#: model:ir.ui.view,arch_db:mk_transport_management.mk_transport_management_form_view
+#: selection:mk.attendance.students,state:0
+#: selection:mk.transport.management,state:0
+#: selection:transportation.request,state:0
+msgid "Cancle"
+msgstr "إلغاء"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_mk_transport_management_cancling_reason
+#: model:ir.model.fields,field_description:mk_transport_management.field_transportation_request_canceling_reason
+msgid "Cancling Reason"
+msgstr "سبب إلغاء نقل الطالب"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_drivers_records_center_id
+#: model:ir.model.fields,field_description:mk_transport_management.field_vehicle_records_center_id
+msgid "Center"
+msgstr "المركز"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_drivers_records_center_name
+msgid "Center name"
+msgstr "المركز  / المراكز"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_vehicle_types_code
+msgid "Code"
+msgstr "كود البرنامج"
+
+#. module: mk_transport_management
+#: model:ir.ui.view,arch_db:mk_transport_management.mk_attendance_students_form_view
+#: model:ir.ui.view,arch_db:mk_transport_management.mk_transport_management_form_view
+#: selection:mk.attendance.students,state:0
+#: selection:mk.transport.management,state:0
+msgid "Confirm"
+msgstr "تأكيد"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_drivers_records_country_id
+msgid "Country"
+msgstr "دولة"
+
+#. module: mk_transport_management
+#: model:res.groups,name:mk_transport_management.create_driver
+msgid "Create Driver"
+msgstr "انشاء سائق"
+
+#. module: mk_transport_management
+#: model:res.groups,name:mk_transport_management.create_transportation_management
+msgid "Create Transporation Management"
+msgstr "إنشاء إدارة النقل"
+
+#. module: mk_transport_management
+#: model:res.groups,name:mk_transport_management.create_transportation_request
+msgid "Create Transportation Request"
+msgstr "إنشاء طلب نقل"
+
+#. module: mk_transport_management
+#: model:res.groups,name:mk_transport_management.create_vehicles
+msgid "Create Vehicles"
+msgstr "إنشاء مركبات"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_apology_request_create_uid
+#: model:ir.model.fields,field_description:mk_transport_management.field_attendance_students_line_create_uid
+#: model:ir.model.fields,field_description:mk_transport_management.field_drivers_records_create_uid
+#: model:ir.model.fields,field_description:mk_transport_management.field_mk_attendance_students_create_uid
+#: model:ir.model.fields,field_description:mk_transport_management.field_mk_transport_management_create_uid
+#: model:ir.model.fields,field_description:mk_transport_management.field_mk_vehicle_asset_create_uid
+#: model:ir.model.fields,field_description:mk_transport_management.field_transportation_request_create_uid
+#: model:ir.model.fields,field_description:mk_transport_management.field_vehicle_emanagement_line_create_uid
+#: model:ir.model.fields,field_description:mk_transport_management.field_vehicle_management_create_uid
+#: model:ir.model.fields,field_description:mk_transport_management.field_vehicle_records_create_uid
+#: model:ir.model.fields,field_description:mk_transport_management.field_vehicle_types_create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_apology_request_create_date
+#: model:ir.model.fields,field_description:mk_transport_management.field_attendance_students_line_create_date
+#: model:ir.model.fields,field_description:mk_transport_management.field_drivers_records_create_date
+#: model:ir.model.fields,field_description:mk_transport_management.field_mk_attendance_students_create_date
+#: model:ir.model.fields,field_description:mk_transport_management.field_mk_transport_management_create_date
+#: model:ir.model.fields,field_description:mk_transport_management.field_mk_vehicle_asset_create_date
+#: model:ir.model.fields,field_description:mk_transport_management.field_transportation_request_create_date
+#: model:ir.model.fields,field_description:mk_transport_management.field_vehicle_emanagement_line_create_date
+#: model:ir.model.fields,field_description:mk_transport_management.field_vehicle_management_create_date
+#: model:ir.model.fields,field_description:mk_transport_management.field_vehicle_records_create_date
+#: model:ir.model.fields,field_description:mk_transport_management.field_vehicle_types_create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_apology_request_date
+#: model:ir.model.fields,field_description:mk_transport_management.field_mk_attendance_students_date
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_mk_transport_management_days_ids
+#: model:ir.model.fields,field_description:mk_transport_management.field_transportation_request_transportation_days
+msgid "Days"
+msgstr "الايام"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_mk_transport_management_deduct
+msgid "Deduct"
+msgstr "الخصم"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_attendance_students_line_delivered
+msgid "Delivered"
+msgstr "تم التسليم"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_apology_request_display_name
+#: model:ir.model.fields,field_description:mk_transport_management.field_attendance_students_line_display_name
+#: model:ir.model.fields,field_description:mk_transport_management.field_drivers_records_display_name
+#: model:ir.model.fields,field_description:mk_transport_management.field_mk_attendance_students_display_name
+#: model:ir.model.fields,field_description:mk_transport_management.field_mk_transport_management_display_name
+#: model:ir.model.fields,field_description:mk_transport_management.field_mk_vehicle_asset_display_name
+#: model:ir.model.fields,field_description:mk_transport_management.field_transportation_request_display_name
+#: model:ir.model.fields,field_description:mk_transport_management.field_vehicle_emanagement_line_display_name
+#: model:ir.model.fields,field_description:mk_transport_management.field_vehicle_management_display_name
+#: model:ir.model.fields,field_description:mk_transport_management.field_vehicle_records_display_name
+#: model:ir.model.fields,field_description:mk_transport_management.field_vehicle_types_display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: mk_transport_management
+#: selection:mk.attendance.students,state:0
+#: selection:mk.transport.management,state:0
+#: selection:transportation.request,state:0
+msgid "Draft"
+msgstr "مبدئي"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_drivers_records_name
+#: model:ir.model.fields,field_description:mk_transport_management.field_mk_transport_management_driver_id
+#: model:ir.model.fields,field_description:mk_transport_management.field_vehicle_records_driver
+msgid "Driver"
+msgstr "السائق"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_drivers_records_driver_guarantor
+msgid "Driver Guarantor"
+msgstr "كفالة السائق"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_mk_transport_management_driver_phone
+msgid "Driver Phone No"
+msgstr "رقم الجوال"
+
+#. module: mk_transport_management
+#: model:ir.ui.menu,name:mk_transport_management.drivers_records_menu
+msgid "Drivers Records"
+msgstr "سجل سائقي المركبات"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_drivers_records_egama_exp_date
+msgid "Egama Exp Date"
+msgstr "تاريخ إنتهاء اﻹقامة"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_mk_transport_management_fees
+msgid "Fees"
+msgstr "رسوم"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_drivers_records_flag
+msgid "Flag"
+msgstr "إختيار"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_drivers_records_flag2
+msgid "Flag2"
+msgstr "Flag2"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_vehicle_records_form_exp_date
+msgid "Form Expired Date"
+msgstr "تاريخ إنتهاء اﻹستمارة"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_drivers_records_found_driver
+msgid "Found driver"
+msgstr "Found driver"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_mk_attendance_students_go_return
+#: model:ir.model.fields,field_description:mk_transport_management.field_vehicle_emanagement_line_go_return
+msgid "Go return"
+msgstr "ذهاب / عودة"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_apology_request_id
+#: model:ir.model.fields,field_description:mk_transport_management.field_attendance_students_line_id
+#: model:ir.model.fields,field_description:mk_transport_management.field_drivers_records_id
+#: model:ir.model.fields,field_description:mk_transport_management.field_mk_attendance_students_id
+#: model:ir.model.fields,field_description:mk_transport_management.field_mk_transport_management_id
+#: model:ir.model.fields,field_description:mk_transport_management.field_mk_vehicle_asset_id
+#: model:ir.model.fields,field_description:mk_transport_management.field_transportation_request_id
+#: model:ir.model.fields,field_description:mk_transport_management.field_vehicle_emanagement_line_id
+#: model:ir.model.fields,field_description:mk_transport_management.field_vehicle_management_id
+#: model:ir.model.fields,field_description:mk_transport_management.field_vehicle_records_id
+#: model:ir.model.fields,field_description:mk_transport_management.field_vehicle_types_id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_drivers_records_identity_no
+msgid "Identity No"
+msgstr "رقم اﻹقامة / الهوية"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_vehicle_records_insurance
+msgid "Insurance"
+msgstr "التأمين"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_vehicle_records_insurance_exp_date
+msgid "Insurance Expired Date"
+msgstr "تاريخ انتهاء التأمين"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_apology_request___last_update
+#: model:ir.model.fields,field_description:mk_transport_management.field_attendance_students_line___last_update
+#: model:ir.model.fields,field_description:mk_transport_management.field_drivers_records___last_update
+#: model:ir.model.fields,field_description:mk_transport_management.field_mk_attendance_students___last_update
+#: model:ir.model.fields,field_description:mk_transport_management.field_mk_transport_management___last_update
+#: model:ir.model.fields,field_description:mk_transport_management.field_mk_vehicle_asset___last_update
+#: model:ir.model.fields,field_description:mk_transport_management.field_transportation_request___last_update
+#: model:ir.model.fields,field_description:mk_transport_management.field_vehicle_emanagement_line___last_update
+#: model:ir.model.fields,field_description:mk_transport_management.field_vehicle_management___last_update
+#: model:ir.model.fields,field_description:mk_transport_management.field_vehicle_records___last_update
+#: model:ir.model.fields,field_description:mk_transport_management.field_vehicle_types___last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_apology_request_write_uid
+#: model:ir.model.fields,field_description:mk_transport_management.field_attendance_students_line_write_uid
+#: model:ir.model.fields,field_description:mk_transport_management.field_drivers_records_write_uid
+#: model:ir.model.fields,field_description:mk_transport_management.field_mk_attendance_students_write_uid
+#: model:ir.model.fields,field_description:mk_transport_management.field_mk_transport_management_write_uid
+#: model:ir.model.fields,field_description:mk_transport_management.field_mk_vehicle_asset_write_uid
+#: model:ir.model.fields,field_description:mk_transport_management.field_transportation_request_write_uid
+#: model:ir.model.fields,field_description:mk_transport_management.field_vehicle_emanagement_line_write_uid
+#: model:ir.model.fields,field_description:mk_transport_management.field_vehicle_management_write_uid
+#: model:ir.model.fields,field_description:mk_transport_management.field_vehicle_records_write_uid
+#: model:ir.model.fields,field_description:mk_transport_management.field_vehicle_types_write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_apology_request_write_date
+#: model:ir.model.fields,field_description:mk_transport_management.field_attendance_students_line_write_date
+#: model:ir.model.fields,field_description:mk_transport_management.field_drivers_records_write_date
+#: model:ir.model.fields,field_description:mk_transport_management.field_mk_attendance_students_write_date
+#: model:ir.model.fields,field_description:mk_transport_management.field_mk_transport_management_write_date
+#: model:ir.model.fields,field_description:mk_transport_management.field_mk_vehicle_asset_write_date
+#: model:ir.model.fields,field_description:mk_transport_management.field_transportation_request_write_date
+#: model:ir.model.fields,field_description:mk_transport_management.field_vehicle_emanagement_line_write_date
+#: model:ir.model.fields,field_description:mk_transport_management.field_vehicle_management_write_date
+#: model:ir.model.fields,field_description:mk_transport_management.field_vehicle_records_write_date
+#: model:ir.model.fields,field_description:mk_transport_management.field_vehicle_types_write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_transportation_request_latitude
+msgid "Latitude"
+msgstr "خط العرض"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_drivers_records_License_exp_date
+msgid "License Exp Date"
+msgstr "تاريخ إنتهاء رخصة القيادة"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_attendance_students_line_line_id
+msgid "Line ID"
+msgstr "Line ID"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_transportation_request_longitude
+msgid "Longitude"
+msgstr "خط الطول"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_vehicle_records_model
+msgid "Model"
+msgstr "النموذج"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_drivers_records_mosques
+#: model:ir.model.fields,field_description:mk_transport_management.field_mk_attendance_students_mosque_id
+#: model:ir.model.fields,field_description:mk_transport_management.field_vehicle_records_mosque
+msgid "Mosque"
+msgstr "المسجد"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_drivers_records_mosque_name
+msgid "Mosque name"
+msgstr "المسجد/المدرسة "
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_vehicle_types_name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_attendance_students_line_note
+msgid "Note"
+msgstr "ضوابط الدورة"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_vehicle_records_no_of_seats
+msgid "Number of Seats"
+msgstr "عدد المقاعد"
+
+#. module: mk_transport_management
+#: model:ir.ui.view,arch_db:mk_transport_management.mk_transport_management_form_view
+msgid "Payment"
+msgstr "السداد"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_transportation_request_payment_voucher
+msgid "Payment Voucher"
+msgstr "إيصال دفع"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_mk_attendance_students_period
+msgid "Period"
+msgstr "الفترة"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_drivers_records_phone_no
+msgid "Phone No"
+msgstr "رقم الجوال"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_attendance_students_line_presence
+msgid "Presence"
+msgstr "حضور"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_vehicle_records_Property
+msgid "Property"
+msgstr "ملكية المركبة"
+
+#. module: mk_transport_management
+#: model:res.groups,name:mk_transport_management.read_apologize_request
+msgid "Read Apologize Request"
+msgstr "القراءة أو الإطلاع علي إعتذار"
+
+#. module: mk_transport_management
+#: model:res.groups,name:mk_transport_management.read_driver
+msgid "Read Driver"
+msgstr "قراءة السائق"
+
+#. module: mk_transport_management
+#: model:res.groups,name:mk_transport_management.read_transportation_management
+msgid "Read Transporation Management"
+msgstr "قراءة إدارة النقل"
+
+#. module: mk_transport_management
+#: model:res.groups,name:mk_transport_management.read_transportation_request
+msgid "Read Transportation Request"
+msgstr "القراءة أو الإطلاع علي طلب نقل"
+
+#. module: mk_transport_management
+#: model:res.groups,name:mk_transport_management.read_vehicles
+msgid "Read Vehicles"
+msgstr "القراءة أو الإطلاع علي المركبات"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_vehicle_records_rent_info
+msgid "Rent Info"
+msgstr "معلومات الاستئجار"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_vehicle_records_responsible
+msgid "Responsible"
+msgstr "مسئول"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_mk_transport_management_seates_no_aasr
+msgid "Seates No aasr"
+msgstr "Seates No aasr"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_mk_transport_management_seates_no_fajer
+msgid "Seates No fajer"
+msgstr "Seates No fajer"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_mk_transport_management_seates_no_esha
+msgid "Seates No isha"
+msgstr "Seates No isha"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_mk_transport_management_seates_no_maghrib
+msgid "Seates No maghrib"
+msgstr "Seates No maghrib"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_mk_transport_management_seates_no_zuhr
+msgid "Seates No zuhr"
+msgstr "Seates No zuhr"
+
+#. module: mk_transport_management
+#: model:ir.ui.view,arch_db:mk_transport_management.transportation request_form_view
+#: selection:transportation.request,state:0
+msgid "Send Request"
+msgstr "إرسال طلب"
+
+#. module: mk_transport_management
+#: model:res.groups,name:mk_transport_management.send_transporation_request
+msgid "Send Transporation Request"
+msgstr "إرسال طلب النقل"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_vehicle_records_serial_no
+msgid "Serial No"
+msgstr "رقم المركبة"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_transportation_request_state
+msgid "State"
+msgstr "المحافظة"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_mk_attendance_students_state
+#: model:ir.model.fields,field_description:mk_transport_management.field_mk_transport_management_state
+msgid "Status"
+msgstr "الحالة "
+
+#. module: mk_transport_management
+#: selection:transportation.request,state:0
+msgid "Stop transportation"
+msgstr "Stop transportation"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_apology_request_student_id
+#: model:ir.model.fields,field_description:mk_transport_management.field_attendance_students_line_student_id
+#: model:ir.model.fields,field_description:mk_transport_management.field_mk_transport_management_student_id
+#: model:ir.model.fields,field_description:mk_transport_management.field_transportation_request_student_id
+msgid "Student"
+msgstr "اسم الطالب"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_mk_transport_management_period
+#: model:ir.model.fields,field_description:mk_transport_management.field_mk_transport_management_trans_period
+#: model:ir.model.fields,field_description:mk_transport_management.field_transportation_request_trans_period
+msgid "Transaction Period"
+msgstr "وقت النقل"
+
+#. module: mk_transport_management
+#: model:ir.ui.menu,name:mk_transport_management.transportation_request_menu
+msgid "Transation Request"
+msgstr "طلب نقل"
+
+#. module: mk_transport_management
+#: model:ir.ui.menu,name:mk_transport_management.mk_transport_main_menu
+#: model:ir.ui.menu,name:mk_transport_management.mk_transport_menu
+msgid "Transport"
+msgstr "النقل"
+
+#. module: mk_transport_management
+#: model:ir.ui.menu,name:mk_transport_management.transport_config_main_menu
+#: model:ir.ui.menu,name:mk_transport_management.transport_config_menu
+msgid "Transport Configration"
+msgstr "إدارة طلبات النقل"
+
+#. module: mk_transport_management
+#: model:ir.actions.act_window,name:mk_transport_management.mk_transport_management_action
+#: model:ir.module.category,name:mk_transport_management.transport_management_access_categ
+#: model:ir.ui.menu,name:mk_transport_management.transport_management_menu
+#: model:ir.ui.view,arch_db:mk_transport_management.mk_attendance_students_form_view
+#: model:ir.ui.view,arch_db:mk_transport_management.mk_transport_management_form_view
+#: model:ir.ui.view,arch_db:mk_transport_management.mk_transport_management_search_view
+#: model:ir.ui.view,arch_db:mk_transport_management.mk_transport_management_tree_view
+msgid "Transport Management"
+msgstr "إدارة النقل"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_apology_request_transport_type
+#: model:ir.model.fields,field_description:mk_transport_management.field_mk_transport_management_transport_type
+#: model:ir.model.fields,field_description:mk_transport_management.field_transportation_request_transport_type
+msgid "Transport Type"
+msgstr "نوع النقل"
+
+#. module: mk_transport_management
+#: model:res.groups,name:mk_transport_management.write_transportation_request
+msgid "Update Transportation Request"
+msgstr "تعديل طلب النقل"
+
+#. module: mk_transport_management
+#: model:res.groups,name:mk_transport_management.write_vehicles
+msgid "Update or Modify Vehicles"
+msgstr "تعديل المركبات"
+
+#. module: mk_transport_management
+#: model:ir.ui.menu,name:mk_transport_management.vehicle_records_menu
+msgid "Vechil Record"
+msgstr "المركبات"
+
+#. module: mk_transport_management
+#: model:ir.ui.view,arch_db:mk_transport_management.mk_transport_management_form_view
+msgid "Vehcile Details"
+msgstr "تفاصيل المركبة"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_mk_attendance_students_vehicle_id
+#: model:ir.model.fields,field_description:mk_transport_management.field_mk_transport_management_vehicle_id
+#: model:ir.model.fields,field_description:mk_transport_management.field_vehicle_management_vehicle_id
+msgid "Vehicle"
+msgstr "المركبة"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_vehicle_records_Vehicle_Type
+msgid "Vehicle Type"
+msgstr "نوع المركبة"
+
+#. module: mk_transport_management
+#: model:res.groups,name:mk_transport_management.vehicle_types_manage
+msgid "Vehicle Type Management"
+msgstr "نوع المركبة"
+
+#. module: mk_transport_management
+#: model:ir.ui.menu,name:mk_transport_management.vehicle_types_menu
+msgid "Vehicle Types"
+msgstr "نوع المركبة"
+
+#. module: mk_transport_management
+#: model:ir.ui.menu,name:mk_transport_management.vehicle_asset_menu
+msgid "Vehicle asset"
+msgstr "ملكية المركبة"
+
+#. module: mk_transport_management
+#: model:res.groups,name:mk_transport_management.vehicle_asset_manage
+msgid "Vehicle asset Management"
+msgstr "ملكية المركبة"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_vehicle_records_vehicle_created
+msgid "Vehicle created"
+msgstr "Vehicle created"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_vehicle_records_work_period_aasr
+msgid "Work Period Aasr"
+msgstr "العصر"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_vehicle_records_work_period_esha
+msgid "Work Period Esha"
+msgstr "العشاء"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_vehicle_records_work_period_magrib
+msgid "Work Period Magrib"
+msgstr "المغرب"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_vehicle_records_work_period_subh
+msgid "Work Period Subh"
+msgstr "الصبح"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_vehicle_records_work_period_zuhr
+msgid "Work Period Zuhr"
+msgstr "الظهر"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_vehicle_emanagement_line_work_periods
+msgid "Work Periods"
+msgstr "وقت النقل"
+
+#. module: mk_transport_management
+#: model:res.groups,name:mk_transport_management.write_driver
+msgid "Write Driver"
+msgstr "تحرير السائق"
+
+#. module: mk_transport_management
+#: model:res.groups,name:mk_transport_management.write_transportation_management
+msgid "Write Transporation Management"
+msgstr "تحرير إدارة النقل"
+
+#. module: mk_transport_management
+#: selection:mk.attendance.students,period:0
+#: selection:mk.transport.management,period:0
+#: selection:transportation.request,trans_period:0
+#: selection:vehicle.emanagement.line,work_periods:0
+msgid "aasr"
+msgstr "عصر"
+
+#. module: mk_transport_management
+#: model:ir.ui.view,arch_db:mk_transport_management.drivers_records_form_view
+msgid "add"
+msgstr "إضافة"
+
+#. module: mk_transport_management
+#: model:ir.actions.act_window,name:mk_transport_management.apology_request_action
+#: model:ir.ui.view,arch_db:mk_transport_management.apology_request_form_view
+msgid "apology request"
+msgstr "طلب إعتذار"
+
+#. module: mk_transport_management
+#: model:ir.model,name:mk_transport_management.model_apology_request
+msgid "apology.request"
+msgstr "apology.request"
+
+#. module: mk_transport_management
+#: model:ir.model,name:mk_transport_management.model_attendance_students_line
+msgid "attendance.students.line"
+msgstr "attendance.students.line"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_vehicle_management_max_capcity
+msgid "capacity"
+msgstr "عدد المقاعد"
+
+#. module: mk_transport_management
+#: model:res.groups,name:mk_transport_management.trans_createe_attendance
+msgid "create attendance"
+msgstr "إنشاء حضور"
+
+#. module: mk_transport_management
+#: model:ir.ui.view,arch_db:mk_transport_management.drivers_records_form_view
+msgid "driver information"
+msgstr "driver information"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_drivers_records_driver_name
+msgid "driver name"
+msgstr "driver name"
+
+#. module: mk_transport_management
+#: model:ir.actions.act_window,name:mk_transport_management.drivers_records_action
+#: model:ir.ui.view,arch_db:mk_transport_management.drivers_records_form_view
+msgid "drivers records"
+msgstr "سجل سائقي المركبات"
+
+#. module: mk_transport_management
+#: model:ir.model,name:mk_transport_management.model_drivers_records
+msgid "drivers.records"
+msgstr "سجل سائقي المركبات"
+
+#. module: mk_transport_management
+#: selection:mk.attendance.students,period:0
+#: selection:mk.transport.management,period:0
+#: selection:transportation.request,trans_period:0
+#: selection:vehicle.emanagement.line,work_periods:0
+msgid "esha"
+msgstr "عشاء"
+
+#. module: mk_transport_management
+#: selection:mk.attendance.students,go_return:0
+#: selection:vehicle.emanagement.line,go_return:0
+msgid "go"
+msgstr "ذهاب"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_vehicle_emanagement_line_vehicle_ide
+msgid "ids"
+msgstr "ids"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_vehicle_management_v_lines
+msgid "lines"
+msgstr "lines"
+
+#. module: mk_transport_management
+#: selection:mk.attendance.students,period:0
+#: selection:mk.transport.management,period:0
+#: selection:transportation.request,trans_period:0
+#: selection:vehicle.emanagement.line,work_periods:0
+msgid "magrib"
+msgstr "مغرب"
+
+#. module: mk_transport_management
+#: model:ir.model,name:mk_transport_management.model_mk_attendance_students
+msgid "mk.attendance.students"
+msgstr "mk.attendance.students"
+
+#. module: mk_transport_management
+#: model:ir.model,name:mk_transport_management.model_mk_transport_management
+msgid "mk.transport.management"
+msgstr "mk.transport.management"
+
+#. module: mk_transport_management
+#: model:ir.model,name:mk_transport_management.model_mk_vehicle_asset
+msgid "mk.vehicle.asset"
+msgstr "mk.vehicle.asset"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_mk_vehicle_asset_name
+msgid "name"
+msgstr "اﻹسم"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_drivers_records_mosque_new
+msgid "new mosque"
+msgstr "إضافة الطالب/الطالبة لمسجد"
+
+#. module: mk_transport_management
+#: model:res.groups,name:mk_transport_management.payment_voucher
+msgid "payment voucher"
+msgstr "إيصال دفع"
+
+#. module: mk_transport_management
+#: model:res.groups,name:mk_transport_management.trans_read_attendance
+msgid "read attendance"
+msgstr "قراءة الحضور"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_mk_transport_management_request_id
+msgid "request"
+msgstr "طلب نقل"
+
+#. module: mk_transport_management
+#: selection:mk.attendance.students,go_return:0
+#: selection:vehicle.emanagement.line,go_return:0
+msgid "return"
+msgstr "عودة فقط"
+
+#. module: mk_transport_management
+#: model:ir.ui.view,arch_db:mk_transport_management.transportation request_form_view
+#: model:res.groups,name:mk_transport_management.group_stop_transportation
+msgid "stop transportation"
+msgstr "إيقاف النقل"
+
+#. module: mk_transport_management
+#: selection:mk.attendance.students,period:0
+#: selection:mk.transport.management,period:0
+#: selection:transportation.request,trans_period:0
+#: selection:vehicle.emanagement.line,work_periods:0
+msgid "subh"
+msgstr "الصبح"
+
+#. module: mk_transport_management
+#: model:ir.actions.act_window,name:mk_transport_management.transportation_request_action
+#: model:ir.ui.view,arch_db:mk_transport_management.transportation request_form_view
+msgid "transportation request"
+msgstr "طلب نقل "
+
+#. module: mk_transport_management
+#: model:ir.model,name:mk_transport_management.model_transportation_request
+msgid "transportation.request"
+msgstr "transportation.request"
+
+#. module: mk_transport_management
+#: model:ir.actions.act_window,name:mk_transport_management.vehicle_asset_action
+#: model:ir.ui.view,arch_db:mk_transport_management.vehicle_asset_form_view
+msgid "vehicle asset"
+msgstr "ملكية المركبة"
+
+#. module: mk_transport_management
+#: model:ir.actions.act_window,name:mk_transport_management.vehicle_records_action
+#: model:ir.ui.view,arch_db:mk_transport_management.vehicle_records_form_view
+msgid "vehicle records"
+msgstr "سجل المركبات"
+
+#. module: mk_transport_management
+#: model:ir.actions.act_window,name:mk_transport_management.vehicle_types_action
+#: model:ir.ui.view,arch_db:mk_transport_management.vehicle_types_form_view
+msgid "vehicle types"
+msgstr "أنواع المركبات"
+
+#. module: mk_transport_management
+#: model:ir.model.fields,field_description:mk_transport_management.field_vehicle_emanagement_line_work_days
+#: model:ir.model.fields,field_description:mk_transport_management.field_vehicle_records_work_days
+msgid "vehicle work Days"
+msgstr "ايام عمل المركبة"
+
+#. module: mk_transport_management
+#: model:ir.model,name:mk_transport_management.model_vehicle_emanagement_line
+msgid "vehicle.emanagement.line"
+msgstr "vehicle.emanagement.line"
+
+#. module: mk_transport_management
+#: model:ir.model,name:mk_transport_management.model_vehicle_management
+msgid "vehicle.management"
+msgstr "vehicle.management"
+
+#. module: mk_transport_management
+#: model:ir.model,name:mk_transport_management.model_vehicle_records
+msgid "vehicle.records"
+msgstr "سجل المركبات"
+
+#. module: mk_transport_management
+#: model:ir.model,name:mk_transport_management.model_vehicle_types
+msgid "vehicle.types"
+msgstr "vehicle.types"
+
+#. module: mk_transport_management
+#: model:res.groups,name:mk_transport_management.trans_writee_attendance
+msgid "write attendance"
+msgstr "التعديل و الكتابة على الحضور"
+
+#. module: mk_transport_management
+#: selection:mk.attendance.students,period:0
+#: selection:mk.transport.management,period:0
+#: selection:transportation.request,trans_period:0
+#: selection:vehicle.emanagement.line,work_periods:0
+msgid "zuhr"
+msgstr "ظهر"
+
+#. module: mk_transport_management
+#: code:addons/mk_transport_management/models/vehicle_records.py:141
+#, python-format
+msgid "Ø¹ÙÙØ§ ! ÙØ§ ÙÙÙÙ Ø­Ø°Ù ÙØªØ±Ø© Ø§ÙØµØ¨Ø­ ÙØ¥Ø±ØªØ¨Ø§Ø· Ø·ÙØ§Ø¨ Ø¨ÙØ§"
+msgstr "Ø¹ÙÙØ§ ! ÙØ§ ÙÙÙÙ Ø­Ø°Ù ÙØªØ±Ø© Ø§ÙØµØ¨Ø­ ÙØ¥Ø±ØªØ¨Ø§Ø· Ø·ÙØ§Ø¨ Ø¨ÙØ§"
+
+#. module: mk_transport_management
+#: code:addons/mk_transport_management/models/vehicle_records.py:154
+#, python-format
+msgid "Ø¹ÙÙØ§ ! ÙØ§ ÙÙÙÙ Ø­Ø°Ù ÙØªØ±Ø© Ø§ÙØ¸ÙØ± ÙØ¥Ø±ØªØ¨Ø§Ø· Ø·ÙØ§Ø¨ Ø¨ÙØ§"
+msgstr "Ø¹ÙÙØ§ ! ÙØ§ ÙÙÙÙ Ø­Ø°Ù ÙØªØ±Ø© Ø§ÙØ¸ÙØ± ÙØ¥Ø±ØªØ¨Ø§Ø· Ø·ÙØ§Ø¨ Ø¨ÙØ§"
+
+#. module: mk_transport_management
+#: code:addons/mk_transport_management/models/vehicle_records.py:189
+#, python-format
+msgid "Ø¹ÙÙØ§ ! ÙØ§ ÙÙÙÙ Ø­Ø°Ù ÙØªØ±Ø© Ø§ÙØ¹Ø´Ø§Ø¡ ÙØ¥Ø±ØªØ¨Ø§Ø· Ø·ÙØ§Ø¨ Ø¨ÙØ§"
+msgstr "Ø¹ÙÙØ§ ! ÙØ§ ÙÙÙÙ Ø­Ø°Ù ÙØªØ±Ø© Ø§ÙØ¹Ø´Ø§Ø¡ ÙØ¥Ø±ØªØ¨Ø§Ø· Ø·ÙØ§Ø¨ Ø¨ÙØ§"
+
+#. module: mk_transport_management
+#: code:addons/mk_transport_management/models/vehicle_records.py:166
+#, python-format
+msgid "Ø¹ÙÙØ§ ! ÙØ§ ÙÙÙÙ Ø­Ø°Ù ÙØªØ±Ø© Ø§ÙØ¹ØµØ± ÙØ¥Ø±ØªØ¨Ø§Ø· Ø·ÙØ§Ø¨ Ø¨ÙØ§"
+msgstr "Ø¹ÙÙØ§ ! ÙØ§ ÙÙÙÙ Ø­Ø°Ù ÙØªØ±Ø© Ø§ÙØ¹ØµØ± ÙØ¥Ø±ØªØ¨Ø§Ø· Ø·ÙØ§Ø¨ Ø¨ÙØ§"
+
+#. module: mk_transport_management
+#: code:addons/mk_transport_management/models/vehicle_records.py:178
+#, python-format
+msgid "Ø¹ÙÙØ§ ! ÙØ§ ÙÙÙÙ Ø­Ø°Ù ÙØªØ±Ø© Ø§ÙÙØºØ±Ø¨ ÙØ¥Ø±ØªØ¨Ø§Ø· Ø·ÙØ§Ø¨ Ø¨ÙØ§"
+msgstr "Ø¹ÙÙØ§ ! ÙØ§ ÙÙÙÙ Ø­Ø°Ù ÙØªØ±Ø© Ø§ÙÙØºØ±Ø¨ ÙØ¥Ø±ØªØ¨Ø§Ø· Ø·ÙØ§Ø¨ Ø¨ÙØ§"
+
+#. module: mk_transport_management
+#: code:addons/mk_transport_management/models/vehicle_records.py:129
+#, python-format
+msgid "Ø¹ÙÙØ§ ! ÙØ§ ÙÙÙÙ Ø­Ø°Ù ÙÙÙ ÙÙ  Ø§ÙØ£ÙØ§Ù Ø§ÙÙØ±ØªØ¨Ø·Ø© Ø¨Ø·ÙØ¨Ø§Øª ÙÙÙ"
+msgstr "Ø¹ÙÙØ§ ! ÙØ§ ÙÙÙÙ Ø­Ø°Ù ÙÙÙ ÙÙ  Ø§ÙØ£ÙØ§Ù Ø§ÙÙØ±ØªØ¨Ø·Ø© Ø¨Ø·ÙØ¨Ø§Øª ÙÙÙ"
+
+#. module: mk_transport_management
+#: model:ir.ui.view,arch_db:mk_transport_management.vehicle_records_form_view
+msgid "الفترات"
+msgstr "الفترات"
+
+#. module: mk_transport_management
+#: selection:apology.request,transport_type:0
+#: selection:mk.transport.management,transport_type:0
+#: selection:transportation.request,transport_type:0
+msgid "ذهاب فقط"
+msgstr "ذهاب فقط"
+
+#. module: mk_transport_management
+#: selection:apology.request,transport_type:0
+#: selection:mk.transport.management,transport_type:0
+#: selection:transportation.request,transport_type:0
+msgid "ذهاب وعودة"
+msgstr "ذهاب وعودة"
+
+#. module: mk_transport_management
+#: model:mail.template,subject:mk_transport_management.mk_accept_transport_request
+#: model:mail.template,subject:mk_transport_management.mk_biding_transport_request
+msgid "طلب نقل"
+msgstr "طلب نقل"
+
+#. module: mk_transport_management
+#: code:addons/mk_transport_management/models/mk_transport_management.py:119
+#: code:addons/mk_transport_management/models/mk_transport_management.py:141
+#, python-format
+msgid "عفوا ! لا توجد مقاعد شاغرة"
+msgstr "عفوا ! لا توجد مقاعد شاغرة"
+
+#. module: mk_transport_management
+#: selection:apology.request,transport_type:0
+#: selection:mk.transport.management,transport_type:0
+#: selection:transportation.request,transport_type:0
+msgid "عودة فقط"
+msgstr "عودة فقط"
+

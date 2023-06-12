@@ -1,0 +1,8 @@
+<odoo>
+    <data>
+    
+
+	<menuitem name="Programs Management" id="mk_programs_main_menu" web_icon="web_rtl,static/src/img/program.png" />    
+	<menuitem name="إعدادات البرامج"     id="mk_programs_menu" parent="mk_programs_main_menu"/>   
+    </data>  
+</odoo>

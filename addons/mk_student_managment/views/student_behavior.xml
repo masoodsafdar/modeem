@@ -1,0 +1,113 @@
+<odoo>
+    <data>
+        <!-- explicit list view definition -->
+        <!--
+        <record model="ir.ui.view" id="mk.student.managment.list">
+          <field name="name">Mk.Student.managment list</field>
+          <field name="model">mk.student.managment.mk.student.managment</field>
+          <field name="arch" type="xml">
+            <tree>
+              <field name="name"/>
+              <field name="value"/>
+              <field name="value2"/>
+            </tree>
+          </field>
+        </record>
+        -->
+
+        <record model="ir.ui.view" id="mk_student_managment_form">
+            <field name="name">Mk.Student.managment form</field>
+            <field name="model">mk.student.behaviors</field>
+            <field name="arch" type="xml">
+                <form string="Students behaviors">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="Warning_type"/>
+                            </group>
+
+                            <group>
+                                <field name="Dedect_grade"/>
+
+                            </group>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+
+        <record id="search_all_behaviors" model="ir.ui.view">
+            <field name="model">mk.student.behaviors</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name"/>
+                    <field name="Dedect_grade"/>
+
+                    <filter string="التنبيهات الشفوية" name="oral_warning"
+                            domain="[('Warning_type', '=','oral_warning')]"/>
+                    <filter string="التنبيهات الاولي" name="first_warning"
+                            domain="[('Warning_type', '=','first_warning')]"/>
+                    <filter string="التنبيهات الثانية" name="second_warning"
+                            domain="[('Warning_type', '=','second_warning')]"/>
+                    <filter string="تنبيهات التعهدات" name="commitment_warning"
+                            domain="[('Warning_type', '=','commitment_warning')]"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="action_all_behaviors" model="ir.actions.act_window">
+            <field name="name">All Behaviors</field>
+            <field name="res_model">mk.student.behaviors</field>
+            <field name="search_view_id" ref="search_all_behaviors"/>
+        </record>
+        <!-- actions opening views on models -->
+
+        <record model="ir.actions.act_window" id="mk_student_managment.action_behavior_configuration">
+            <field name="name">student behaviors</field>
+            <field name="res_model">mk.student.behaviors</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+
+        <!-- server action to the one above -->
+        <!--
+        <record model="ir.actions.server" id="mk.student.managment.action_server">
+          <field name="name">Mk.Student.managment server</field>
+          <field name="model_id" ref="model_mk.student.managment_mk.student.managment"/>
+          <field name="code">
+            action = {
+              "type": "ir.actions.act_window",
+              "view_mode": "tree,form",
+              "res_model": self._name,
+            }
+          </field>
+        </record>
+        -->
+
+        <!-- Top menu item -->
+        <!--
+
+
+
+
+        <menuitem name="Configuration" id="mk_student_managment.configuration" parent="mk_student_managment.menu_root"/>
+        <menuitem name="Student managment" id="mk_student_managment.student_management" parent="mk_student_managment.configuration"/>-->
+        <menuitem name="Student managment" id="mk_student_managment.menu_root"
+                  web_icon="web_rtl,static/src/img/calsses.png"/>
+        <menuitem name="Students Behaviors" id="student_behaviors"
+                  parent="mk_master_models.mk_student_management_settings_menu" action="action_behavior_configuration"/>
+        <!-- actions -->
+        <!--
+        <menuitem name="List" id="mk.student.managment.menu_1_list" parent="mk.student.managment.menu_1"
+                  action="mk.student.managment.action_window"/>
+        <menuitem name="Server to list" id="mk.student.managment" parent="mk.student.managment.menu_2"
+                  action="mk.student.managment.action_server"/>
+        -->
+    </data>
+</odoo>

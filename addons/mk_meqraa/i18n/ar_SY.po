@@ -1,0 +1,418 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* mk_meqraa
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0-20201204\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-05-31 09:23+0000\n"
+"PO-Revision-Date: 2021-05-31 09:23+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: mk_meqraa
+#: model:ir.ui.view,arch_db:mk_meqraa.view_mq_student_register_form
+msgid "Address Detail"
+msgstr "تفاصيل العنوان"
+
+#. module: mk_meqraa
+#: model:ir.model.fields,field_description:mk_meqraa.field_mk_student_register_arabic_lang_level
+msgid "Arabic language level"
+msgstr "مستوى اللغة العربية"
+
+#. module: mk_meqraa
+#: model:ir.ui.view,arch_db:mk_meqraa.view_mq_student_register_form
+msgid "Are you sure you want to do this?"
+msgstr "هل تود إضافة الطالب/الطالبة في هذا المسجد/المدرسة ؟"
+
+#. module: mk_meqraa
+#: model:ir.ui.view,arch_db:mk_meqraa.view_mq_student_register_form
+msgid "Banking accounts"
+msgstr "الحسابات البنكية"
+
+#. module: mk_meqraa
+#: model:ir.ui.view,arch_db:mk_meqraa.view_mq_student_register_form
+msgid "Basic Info"
+msgstr "المعلومات اﻷساسية"
+
+#. module: mk_meqraa
+#: model:ir.model.fields,field_description:mk_meqraa.field_mk_episode_days_recitation
+#: model:ir.model.fields,field_description:mk_meqraa.field_mk_student_register_days_recitation
+msgid "Days of recitation"
+msgstr "ايام التسميع"
+
+#. module: mk_meqraa
+#: model:ir.ui.view,arch_db:mk_meqraa.view_mq_student_register_form
+msgid "Episode Details"
+msgstr "حلقات الطالب/الطالبة"
+
+#. module: mk_meqraa
+#: model:ir.ui.view,arch_db:mk_meqraa.view_mq_student_register_form
+msgid "First Name"
+msgstr "الاسم الاول"
+
+#. module: mk_meqraa
+#: selection:mk.student.register,arabic_lang_level:0
+msgid "Good"
+msgstr "جيد"
+
+#. module: mk_meqraa
+#: selection:mk.student.register,arabic_lang_level:0
+msgid "Low"
+msgstr "ضعيف"
+
+#. module: mk_meqraa
+#: model:ir.ui.menu,name:mk_meqraa.menu_meqraa_main
+msgid "MEQRAA"
+msgstr "مقراة"
+
+#. module: mk_meqraa
+#: selection:mk.student.register,arabic_lang_level:0
+msgid "Medium"
+msgstr "متوسط"
+
+#. module: mk_meqraa
+#: selection:mk.student.register,khota_type:0
+msgid "Memorizing Quran within one year"
+msgstr "حفظ القران خلال سنة واحدة"
+
+#. module: mk_meqraa
+#: selection:mk.student.register,khota_type:0
+msgid "Memorizing Quran within three years"
+msgstr "حفظ القران خلال ثلاث سنوات"
+
+#. module: mk_meqraa
+#: selection:mk.student.register,khota_type:0
+msgid "Memorizing Quran within two years"
+msgstr "حفظ القران خلال سنتين"
+
+#. module: mk_meqraa
+#: model:ir.ui.view,arch_db:mk_meqraa.view_mq_student_register_form
+msgid "Meqraa Private data"
+msgstr "بيانات خاصة بطلاب المقرأة"
+
+#. module: mk_meqraa
+#: selection:mk.episode,days_recitation:0
+#: selection:mk.student.register,days_recitation:0
+msgid "Saturday/Monday/Wednesday"
+msgstr "السبت/الإثنين/الاربعاء"
+
+#. module: mk_meqraa
+#: model:ir.ui.view,arch_db:mk_meqraa.view_mq_student_register_form
+msgid "Second Name"
+msgstr "الاب"
+
+#. module: mk_meqraa
+#: model:ir.actions.act_window,name:mk_meqraa.mq_student_profile_sec_action
+msgid "Student Profile"
+msgstr "الملف التعريفي للطالب"
+
+#. module: mk_meqraa
+#: model:ir.ui.view,arch_db:mk_meqraa.view_mq_student_register_form
+msgid "Student Register"
+msgstr "تسجيل الطالب"
+
+#. module: mk_meqraa
+#: model:ir.ui.view,arch_db:mk_meqraa.view_mq_student_register_form
+msgid "Student information"
+msgstr "معلومات الطالب"
+
+#. module: mk_meqraa
+#: model:ir.ui.menu,name:mk_meqraa.mq_student_profile_menu
+msgid "Student profile"
+msgstr "الطلاب"
+
+#. module: mk_meqraa
+#: model:ir.ui.menu,name:mk_meqraa.mq_student_submenu
+msgid "Student profile"
+msgstr "الطلاب"
+
+#. module: mk_meqraa
+#: model:ir.model,name:mk_meqraa.model_mk_student_register
+msgid "Students  profile"
+msgstr "الملف التعريفي للطالب"
+
+#. module: mk_meqraa
+#: model:ir.model.fields,field_description:mk_meqraa.field_mk_episode_riwaya
+#: model:ir.model.fields,field_description:mk_meqraa.field_mk_link_riwaya
+#: model:ir.model.fields,field_description:mk_meqraa.field_mk_student_register_riwaya
+msgid "Riwaya"
+msgstr "الرواية"
+
+#. module: mk_meqraa
+#: model:ir.model.fields,field_description:mk_meqraa.field_mk_student_register_number_parts_saved
+msgid "The number of parts you save"
+msgstr "عدد الاجزاء المحفوظة"
+
+#. module: mk_meqraa
+#: model:ir.model.fields,field_description:mk_meqraa.field_mk_link_khota_type
+#: model:ir.model.fields,field_description:mk_meqraa.field_mk_student_register_khota_type
+msgid "Khota"
+msgstr "الخطة"
+
+#. module: mk_meqraa
+#: selection:mk.episode,days_recitation:0
+#: selection:mk.student.register,days_recitation:0
+msgid "Sunday/Tuesday/Thursday"
+msgstr "الاحد/الثلاثاء/الخميس"
+
+#. module: mk_meqraa
+#: model:ir.model.fields,field_description:mk_meqraa.field_mk_student_register_business_career
+msgid "Your business career"
+msgstr "الوظيفة"
+
+#. module: mk_meqraa
+#: model:ir.ui.view,arch_db:mk_meqraa.view_mq_student_register_form
+msgid "add"
+msgstr "إضافة"
+
+#. module: mk_meqraa
+#: model:ir.ui.view,arch_db:mk_meqraa.view_mq_student_register_form
+msgid "saved parts"
+msgstr "مقدار الحفظ"
+
+#. module: mk_meqraa
+#: model:ir.ui.view,arch_db:mk_meqraa.view_mq_student_register_form
+msgid "send password"
+msgstr "استعادة كلمة المرور"
+
+#. module: mk_meqraa
+#: model:ir.model.fields,field_description:mk_meqraa.field_mq_annual_vacation_date_from
+msgid "Date From"
+msgstr "تاريخ البداية"
+
+#. module: mk_meqraa
+#: model:ir.model.fields,field_description:mk_meqraa.field_mq_annual_vacation_date_to
+msgid "Date To"
+msgstr "تاريخ الانتهاء"
+
+#. module: mk_meqraa
+#: model:ir.ui.view,arch_db:mk_meqraa.mq_annual_vacation_form_view
+msgid "Annual Vacations"
+msgstr "الاجازات السنوية"
+
+#. module: mk_meqraa
+#: model:ir.model.fields,field_description:mk_meqraa.field_mk_episode_is_episode_meqraa
+msgid "Episode Meqraa"
+msgstr "حلقة المقراة"
+
+#. module: mk_meqraa
+#: model:ir.ui.view,arch_db:mk_meqraa.mq_episode_times_form_view
+msgid "Episode Times"
+msgstr "اوقات الحلقات"
+
+#. module: mk_meqraa
+#: model:ir.model.fields,field_description:mk_meqraa.field_mq_time_time_from
+msgid "From"
+msgstr "مِن"
+
+#. module: mk_meqraa
+#: model:ir.model.fields,field_description:mk_meqraa.field_mk_student_register_is_student_meqraa
+msgid "Is student Meqraa"
+msgstr "طالب المقراة"
+
+#. module: mk_meqraa
+#: model:ir.model.fields,field_description:mk_meqraa.field_mq_annual_vacation_name
+msgid "Name vacation"
+msgstr "الاجازة"
+
+#. module: mk_meqraa
+#: model:ir.model.fields,field_description:mk_meqraa.field_mq_time_name
+msgid "Name time"
+msgstr "الفترة"
+
+#. module: mk_meqraa
+#: model:ir.actions.act_window,name:mk_meqraa.mq_prepration_student_action
+msgid "Prepration Student"
+msgstr "تحضير الطالب/الطالبة"
+
+#. module: mk_meqraa
+#: model:ir.ui.menu,name:mk_meqraa.mq_prepare_student_menu
+msgid "Prepration Students"
+msgstr "تحضير الطلاب"
+
+#. module: mk_meqraa
+#: model:ir.ui.menu,name:mk_meqraa.mq_episodes_submenu
+msgid "Halakat"
+msgstr "الحلقات"
+
+#. module: mk_meqraa
+#: model:ir.ui.menu,name:mk_meqraa.mq_episodes_menu
+msgid "Halakat"
+msgstr "الحلقات"
+
+#. module: mk_meqraa
+#: model:ir.model.fields,field_description:mk_meqraa.field_mk_episode_time_id
+msgid "Times"
+msgstr "الفترة"
+
+#. module: mk_meqraa
+#: model:ir.model.fields,field_description:mk_meqraa.field_mq_time_time_to
+msgid "To"
+msgstr "إلى"
+
+#. module: mk_meqraa
+#: model:ir.ui.menu,name:mk_meqraa.mq_annual_vacation_menu
+msgid "Annual vacations"
+msgstr "الاجازات السنوية"
+
+#. module: mk_meqraa
+#: model:ir.actions.act_window,name:mk_meqraa.mq_annual_vacation_action
+msgid "Annual Vacations"
+msgstr "الاجازات السنوية"
+
+#. module: mk_meqraa
+#: model:ir.ui.menu,name:mk_meqraa.mq_time_menu
+msgid "Times"
+msgstr "الفترات"
+
+#. module: mk_meqraa
+#: model:ir.actions.act_window,name:mk_meqraa.mq_times_action
+msgid "Times"
+msgstr "الفترات"
+
+#. module: mk_meqraa
+#: model:ir.ui.view,arch_db:mk_meqraa.mq_episode_form_view
+msgid "work days"
+msgstr "الايام"
+
+#. module: mk_meqraa
+#: model:ir.ui.view,arch_db:mk_meqraa.mq_episode_form_view
+msgid "episode Information"
+msgstr "معلومات"
+
+#. module: mk_meqraa
+#: model:ir.ui.view,arch_db:mk_meqraa.mq_episode_form_view
+msgid "Virtual room"
+msgstr "القاعات الافتراضية"
+
+#. module: mk_meqraa
+#: model:ir.ui.view,arch_db:mk_meqraa.mq_episode_form_view
+msgid "Student List"
+msgstr "قائمة الطلاب"
+
+#. module: mk_meqraa
+#: model:ir.model.fields,field_description:mk_meqraa.field_mk_episode_display_name
+msgid "Display Name"
+msgstr "الحلقة"
+
+#. module: mk_meqraa
+#: model:ir.actions.act_window,name:mk_meqraa.mq_student_profile_action
+msgid "Student Profile"
+msgstr "الملف التعريفي للطالب"
+
+#. module: mk_meqraa
+#: model:ir.model.fields,field_description:mk_meqraa.field_mk_programs_is_program_meqraa
+msgid "Is program Meqraa"
+msgstr "Is program Meqraa"
+
+#. module: mk_meqraa
+#: model:ir.ui.menu,name:mk_meqraa.mq_programs_menu
+msgid "Programs"
+msgstr "البرامج"
+
+#. module: mk_meqraa
+#: model:ir.ui.menu,name:mk_meqraa.mq_approaches_menu
+msgid "Approaches"
+msgstr "المناهج"
+
+#. module: mk_meqraa
+#: model:ir.ui.menu,name:mk_meqraa.mq_programs_approaches_submenu
+msgid "Programs/Approaches"
+msgstr "البرامج و المناهج"
+
+#. module: mk_meqraa
+#: model:ir.ui.view,arch_db:mk_meqraa.view_mq_student_link_form
+msgid "approache setting"
+msgstr "إعدادات المنهج"
+
+#. module: mk_meqraa
+#: model:ir.ui.view,arch_db:mk_meqraa.view_mq_student_link_form
+msgid "Registeration Info"
+msgstr "بيانات التسجيل"
+
+#. module: mk_meqraa
+#: model:ir.ui.view,arch_db:mk_meqraa.view_mq_student_link_form
+msgid "Reject"
+msgstr "رفض"
+
+#. module: mk_meqraa
+#: model:ir.ui.view,arch_db:mk_meqraa.mq_episode_form_view
+msgid "Validate"
+msgstr "اعتماد "
+
+#. module: mk_meqraa
+#: model:ir.ui.view,arch_db:mk_meqraa.mq_episode_form_view
+msgid "reject"
+msgstr "رفض"
+
+#. module: mk_meqraa
+#: model:ir.ui.view,arch_db:mk_meqraa.view_mq_student_link_form
+msgid "Accept"
+msgstr "قبول"
+
+#. module: mk_meqraa
+#: model:ir.ui.view,arch_db:mk_meqraa.import_meqraa_students_wizard
+#: model:ir.ui.view,arch_db:mk_meqraa.import_students_wizard
+msgid "Import"
+msgstr "استيراد"
+
+#. module: mk_meqraa
+#: model:ir.ui.view,arch_db:mk_meqraa.import_meqraa_students_wizard
+msgid "Import Meqraa Students"
+msgstr "استيراد طلاب المقراة"
+
+#. module: mk_meqraa
+#: model:ir.actions.act_window,name:mk_meqraa.my_config_window1
+#: model:ir.ui.menu,name:mk_meqraa.menuitem_import_meqra_student
+msgid "Import Students"
+msgstr "استيراد الطلاب"
+
+#. module: mk_meqraa
+#: model:ir.ui.view,arch_db:mk_meqraa.import_meqraa_students_wizard
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: mk_meqraa
+#: model:ir.model.fields,field_description:mk_meqraa.field_import_student_name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: mk_meqraa
+#: model:ir.model.fields,field_description:mk_meqraa.field_import_student_file
+msgid "XLS File"
+msgstr "الملف"
+
+#. module: mk_meqraa
+#: model:ir.actions.act_window,name:mk_meqraa.quick_add_meqraa_student_action
+#: model:ir.ui.menu,name:mk_meqraa.quick_add_meqraa_student_menu
+msgid "Quick Add Meqraa Student"
+msgstr "الانشاء السريع  للطلاب"
+
+#. module: mk_meqraa
+#: model:ir.actions.act_window,name:mk_meqraa.quick_add_meqraa_episode_action
+msgid "Quick Add Episode Student"
+msgstr "الانشاء السريع للحلقات"
+
+#. module: mk_meqraa
+#: model:ir.ui.menu,name:mk_meqraa.quick_add_meqraa_episode_menu
+msgid "Quick Add Meqraa Episode"
+msgstr "الانشاء السريع للحلقات"
+
+#. module: mk_meqraa
+#: model:ir.actions.act_window,name:mk_meqraa.student_meqraa_test_session_action
+#: model:ir.ui.menu,name:mk_meqraa.student_meqraa_test_session_menu
+msgid "Meqraa student test sessions"
+msgstr "اختبارات طلاب المقراة"
+
+#. module: mk_meqraa
+#: model:ir.actions.act_window,name:mk_meqraa.meqraa_student_test_subscription_action
+#: model:ir.ui.view,arch_db:mk_meqraa.center_time_table_inherit_form_view
+#: model:ir.ui.view,arch_db:mk_meqraa.center_time_table_inherit_tree_view
+msgid "Meqraa student test subscription"
+msgstr "تسجيل طلاب المقراة"

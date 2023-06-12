@@ -1,0 +1,798 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- =======================================================
+        						   Student Request
+             ======================================================= -->
+
+        <record id="view_student_link_tree" model="ir.ui.view">
+            <field name="name">view.student.link.tree</field>
+            <field name="model">mk.link</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="registeration_code"/>
+                    <field name="student_id"/>
+                    <field name="episode_id"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_student_link_form" model="ir.ui.view">
+            <field name="name">view.student.link.form</field>
+            <field name="model">mk.link</field>
+            <field name="arch" type="xml">
+                <form string="Link student acceptance" delete="0">
+                    <script>
+                        $(document).ready(function(){
+                        $('.modal-dialog').css({'width': '97%', 'height': '100%'});
+                        $('.modal-content').css({'height': '100%'});
+                        $('.modal-body').css({'height': '100%'});
+                        });
+                    </script>
+
+                    <header>
+                        <button name="action_reject"       type="object" string="Reject"        attrs="{'invisible':['|',('action_done','!=',False),('state', '!=', 'draft')]}" groups="mk_student_register.accept_or_deny_student_confirmation_to_episode"/>
+<!--                        <button name="action_mosq_accept"  type="object" string="Mosque Accept" attrs="{'invisible':['|',('action_done','!=',False),('state', '!=', 'draft')]}" groups="mk_student_register.accept_or_deny_student_confirmation_to_mosque"/>-->
+                        <button name="action_accept"       type="object" string="Accept"        attrs="{'invisible':[('state', '!=', 'draft')]}"                        groups="mk_student_register.accept_or_deny_student_confirmation_to_episode"/>
+                        <button name="action_stop"         type="object" string="Stop"             states="accept"       groups="mk_student_register.stop_student_in_episode"/>
+                        <button name="action_return_to_accept"  type="object" string="Return to accept" states="stopped"                                groups="mk_student_register.stop_student_in_episode"/>
+                        <button name="action_set_to_draft"      type="object" string="Set to draft"  attrs="{'invisible':[('state', 'not in', ['reject', 'cancel'],)]}" groups="mk_student_register.accept_or_deny_student_confirmation_to_episode"/>
+                        <button name="action_cancel"            type="object" string="Cancel"        attrs="{'invisible':[('state', '!=', 'accept')]}"  groups="mk_student_register.cancel_student_link_to_episode"/>
+                        <field name="state" widget="statusbar"/>
+                    </header>
+
+                    <sheet>
+                        <group string="Registeration Info">
+                            <field name="msg_error" col="2"  readonly="1" nolabel="1" style="color:red;font-weight:bold" attrs="{'invisible': [('action_done','=',False)]}"/>
+                            <group>
+                                <field name="student_id" options="{'no_create': 1, 'no_open':1}" required="True" readonly="1"/>
+                                <field name="registeration_code"/>
+                                <field name="academic_id"       options="{'no_create': 1, 'no_open':1}"/>
+                                <field name="registeration_date" attrs="{'readonly':['|',('action_done','!=',False),('state','!=','draft')]}"        required="1"/>
+                                <field name="preparation_id"     attrs="{'invisible':[('preparation_id','=',False)]}" readonly="1" options="{'no_create': 1, 'no_open':0}"/>
+                                <field name="selected_period" invisible="1"/>
+                                <field name="part_id" invisible="1" widget="many2many_tags" options="{'no_create': 1,'no_open': 1}"/>
+                            </group>
+
+                            <group>
+                                <field name="mosq_id"      attrs="{'readonly':['|',('action_done','!=',False),('state','!=','draft')]}" options="{'no_create': 1, 'no_open':1}"/>
+                                <field name="episode_id"   attrs="{'readonly':['|',('action_done','!=',False),('state','not in',['draft','mosque_accept'])], 'required':[('state','not in',['draft','reject'])]}" options="{'no_create': 1, 'no_open':1}" domain="[('mosque_id','=',mosq_id),('state','in',['draft','accept'])]"/>
+                                <field name="domain_days"  attrs="{'invisible': [('episode_id','=',False)]}" readonly="1" widget="many2many_tags"/>
+                                <field name="student_days" attrs="{'readonly':[('state','!=','mosque_accept')], 'required':[('state','=','mosque_accept')], 'invisible':[('state','==','draft')]}" widget="many2many_tags" domain="[('id','in',domain_days)]" options="{'no_create': 1, 'no_open': 1}" string="أيام الطالب" force_save="True"/>
+                                <field name="is_tlawa" invisible="1"/>
+                                <field name="is_big_review" invisible="1"/>
+                                <field name="type_order"    invisible="1"/>
+                                <field name="action_done"   invisible="1"/>
+                            </group>
+                        </group>
+
+                        <notebook attrs="{'invisible':[('state','==','draft')]}">
+                            <page string="approache setting"   attrs="{'invisible':[('state','==','draft')]}">
+                                <group colspan="2" col="6"     attrs="{'readonly':[('state','not in',['draft','mosque_accept'])]}">
+                                    <field name="program_type" readonly="1" force_save="1"/>
+                                    <field name="program_id"   attrs="{'readonly':[('state','not in',['draft','mosque_accept'])], 'required':[('state','=','mosque_accept')]}" domain="[('program_type','=',program_type),('state','=','active'),('program_type','=','open')]" options="{'no_create': 1, 'no_open':1}"/>
+                                    <field name="approache"    attrs="{'readonly':[('state','not in',['draft','mosque_accept'])], 'required':[('state','=','mosque_accept')]}" domain="[('program_id','=',program_id),('program_type','=','open')]"                            options="{'no_create': 1, 'no_open':1}"/>
+                                </group>
+
+                                <group string="إعدادات البرنامج" attrs="{'invisible':[('state','==','draft')]}">
+                                    <line>
+                                        <label for="is_memorize"/>
+                                        <field name="is_memorize"   readonly="0" attrs="{'readonly':[('state','not in',['draft','mosque_accept'])]}"/>
+                                        <label for="is_min_review"/>
+                                        <field name="is_min_review" readonly="0" attrs="{'readonly':[('state','not in',['draft','mosque_accept'])]}"/>
+                                        <label for="is_big_review" string="المراجعة الكبرى"/>
+                                        <field name="is_big_review" readonly="0" attrs="{'readonly':[('state','not in',['draft','mosque_accept'])]}"/>
+                                        <label for="is_tlawa"      string="التلاوة"/>
+                                        <field name="is_tlawa"     readonly="0" attrs="{'readonly':[('state','not in',['draft','mosque_accept'])]}"/>
+                                    </line>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="mk_student_link_search_view" model="ir.ui.view">
+            <field name="name">student link Search View</field>
+            <field name="model">mk.link</field>
+            <field name="arch" type="xml">
+                <search string="student">
+                    <field name="mosq_id"/>
+                    <field name="episode_id"/>
+
+                    <filter name="group_by_mosque" string="By mosque" context="{'group_by': 'mosq_id'}"/>
+                    <filter name="group_episode" string="By Episode" context="{'group_by': 'episode_id'}"/>
+                    <group>
+                        <field name="registeration_code"/>
+                        <field name="student_id"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record id="mk_student_link_accept_action" model="ir.actions.act_window">
+            <field name="name">Student link acceptance</field>
+            <field name="res_model">mk.link</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context">{'search_default_group_episode':1}</field>
+        </record>
+
+        <menuitem id="maknoon_main_menu" name="Maknoon"/>
+        <menuitem id="student_management_view_menu" name="Register Student" parent="maknoon_main_menu" sequence="1"/>
+
+        <!--  menuitem id="student_link_accept_menu" name="linking student acceptance" action="mk_student_link_accept_action" parent="student_management_view_menu" sequence="4"
+                                                groups="mk_student_register.confirm_student_placement_to_episode_read,mk_student_register.confirm_student_placement_to_episode_edit,mk_student_register.accept_or_deny_student_confirmation_to_episode,mk_student_register.confirm_student_placement_to_episode_create"/-->
+
+        <!-- =======================================================
+                          Student Assign Wizard View
+             ======================================================= -->
+
+        <record id="mk_student_assign_form_view" model="ir.ui.view">
+            <field name="name">view.mk.student.assign.form</field>
+            <field name="model">mk.student.assign</field>
+            <field name="arch" type="xml">
+                <form string="Student assign">
+                    <script>
+                        $(document).ready(function(){
+                        $('.modal-dialog').css({'width': '70%', 'height': '80%'});
+                        $('.modal-content').css({'height': '100%'});
+                        $('.modal-body').css({'height': '100%'});
+                        });
+                    </script>
+                        <header>
+                            <button name="action_reject"  type="object"  string="رفض" groups="mk_student_register.accept_or_deny_student_confirmation_to_episode"/>
+                            <button name="action_accept"  type="object"  string="قبول" groups="mk_student_register.accept_or_deny_student_confirmation_to_episode"/>
+                            <field name="state" widget="statusbar"/>
+                        </header>
+                            <group string="Registeration Info">
+                                <group>
+                                    <field name="student_id" options="{'no_create': 1, 'no_open':1}" required="True" readonly="1"/>
+                                    <field name="registeration_code"/>
+                                    <field name="academic_id"       options="{'no_create': 1, 'no_open':1}"/>
+                                    <field name="registeration_date" attrs="{'readonly':[('state','!=','draft')]}"        required="1"/>
+                                </group>
+                                <group>
+                                    <field name="mosq_id"    options="{'no_create': 1, 'no_open':1}"/>
+                                    <field name="episode_id" options="{'no_create': 1, 'no_open':1}" domain="[('mosque_id','=',mosq_id),('state','in',['draft','accept'])]"/>
+                                    <field name="domain_days"  attrs="{'invisible': [('episode_id','=',False)]}" readonly="1" widget="many2many_tags"/>
+                                    <field name="student_days" attrs="{'readonly':[('state','!=','draft')]}" widget="many2many_tags" domain="[('id','in',domain_days)]" options="{'no_create': 1, 'no_open': 1}" string="أيام الطالب" force_save="True"/>
+                                </group>
+                            </group>
+                            <notebook attrs="{'invisible': [('episode_id','=',False)]}">
+                                <page string="approache setting">
+                                    <group colspan="2" col="6">
+                                        <field name="program_type" readonly="1" force_save="1"/>
+                                        <field name="program_id" options="{'no_create': 1, 'no_open':1}"/>
+                                        <field name="approach_id" domain="[('program_id','=',program_id)]" options="{'no_create': 1, 'no_open':1}"/>
+                                    </group>
+                                    <group string="إعدادات البرنامج">
+                                        <line>
+                                            <label for="is_memorize" string="الحفظ"/>
+                                            <field name="is_memorize"   readonly="0"/>
+                                            <label for="is_min_review" string="المراجعة الصغرى"/>
+                                            <field name="is_min_review" readonly="0"/>
+                                            <label for="is_big_review" string="المراجعة الكبرى"/>
+                                            <field name="is_big_review" readonly="0"/>
+                                            <label for="is_tlawa"     string="التلاوة"/>
+                                            <field name="is_tlawa"     readonly="0"/>
+                                        </line>
+                                    </group>
+                                </page>
+                            </notebook>
+                    <footer>
+                    </footer>
+                </form>
+            </field>
+        </record>
+        <!-- =======================================================
+        					  Student Request Action Multi
+             ======================================================= -->
+
+        <record id="view_student_request_multi_form" model="ir.ui.view">
+            <field name="name">view.student.request.multi.form</field>
+            <field name="model">mk.student.internal_transfer</field>
+            <field name="arch" type="xml">
+                <form string="Link student acceptance">
+                    <script>
+                        $(document).ready(function(){
+                        $('.modal-dialog').css({'width': '97%', 'height': '100%'});
+                        $('.modal-content').css({'height': '100%'});
+                        $('.modal-body').css({'height': '100%'});
+                        });
+                    </script>
+
+                    <sheet>
+
+                        <group string="بيانات التنسيب">
+                            <field name="msg_error" col="2"  readonly="1" nolabel="1" style="color:red;font-weight:bold" attrs="{'invisible': [('msg_error','=',False)]}"/>
+                            <field name="msg_error2" col="2" readonly="1" nolabel="1" style="color:red;font-weight:bold" attrs="{'invisible': [('msg_error2','=',False)]}"/>
+                            <group>
+                                <field name="mosq_from_id" options="{'no_create': 1, 'no_open':1}" attrs="{'required': [('type_order','=','external')],'invisible': [('type_order','!=','external')]}"/>
+                                <field name="mosq_id"      options="{'no_create': 1, 'no_open':1}" required="1"/>
+                                <field name="gender" readonly="1"/>
+                                <field name="episode_fr_id" options="{'no_create': 1, 'no_open':1}" domain="[('mosque_id','=',mosq_id),('women_or_men','=',gender)]" attrs="{'required': [('type_order','=','internal')],'invisible': [('type_order','!=','internal')]}"/>
+                                <field name="episode_id"    options="{'no_create': 1, 'no_open':1}" domain="[('mosque_id','=',mosq_id),('women_or_men','=',gender)]" required="1"/>
+                                <field name="domain_days" readonly="1" widget="many2many_tags" attrs="{'invisible': [('episode_id','=',False)]}"/>
+                                <field name="selected_period"   invisible="1"/>
+                                <field name="episode_assign_id" invisible="1"/>
+                            </group>
+
+                            <group>
+                                <field name="year" options="{'no_create': 1, 'no_open':1}"/>
+                                <field name="registeration_date" required="1"/>
+                                <field name="is_tlawa"      invisible="1"/>
+                                <field name="is_big_review" invisible="1"/>
+                                <field name="type_order"    invisible="1"/>
+                            </group>
+                        </group>
+
+                        <separator string="الطلاب"/>
+                        <field name="student_ids" options="{'no_create': 1, 'no_open':1}" nolable="1" domain="[('is_student_meqraa', '=', False),('category', '=', False),'|',('mosq_id','=',mosq_id),('mosq_id','=',False)]">
+                            <tree>
+                                <field name="display_name"/>
+                                <field name="mosq_id"/>
+                                <field name="gender"/>
+                                <field name="request_id"/>
+                                <field name="request_state"/>
+                            </tree>
+                        </field>
+                        <group>
+                            <group>
+                                <field name="type_setting" readonly="1"  attrs="{'invisible':[('type_order','in',['internal','external'])],'required':[('type_order','not in',['internal','external'])]}" />
+                                <field name="type_setting_ps" attrs="{'invisible':[('type_order','not in',['internal','external'])],'required':[('type_order','in',['internal','external'])]}" widget="radio"/>
+                            </group>
+                            <group>
+                            </group>
+                        </group>
+                        <notebook attrs="{'invisible': ['|','|',('student_ids','=',[]),('type_setting','=',False),('type_setting_ps','=','psss')]}">
+                            <page string="الإعدادات ">
+                                <group colspan="2" col="6"     attrs="{'invisible': [('student_ids','=',[])]}">
+                                    <field name="program_type" readonly="1" force_save="1"/>
+                                    <field name="program_id"  domain="[('program_type','=',program_type),('state','=','active'),('program_gender','=',context.get('episode_gender'))]" options="{'no_create': 1, 'no_open':1}"/>
+                                    <field name="approach_id" domain="[('program_id','=',program_id)]"                            options="{'no_create': 1, 'no_open':1}" attrs="{'required': [('type_setting','in',['pusu','pusd']),('program_id','!=',False)]}"/>
+                                </group>
+                                <group string="إعدادات البرنامج">
+                                    <line>
+                                        <label for="is_memorize"/>
+                                        <field name="is_memorize"   readonly="0"/>
+                                        <label for="is_min_review"/>
+                                        <field name="is_min_review" readonly="0"/>
+                                        <label for="is_big_review" string="المراجعة الكبرى"/>
+                                        <field name="is_big_review" readonly="0"/>
+                                        <label for="is_tlawa"      string="المراجعة الصغرى"/>
+                                        <field name="is_tlawa"      readonly="0"/>
+                                    </line>
+                                    <br/>
+                                </group>
+                                <group colspan="2" col="4">
+                                    <group colspan="2" col="2">
+                                        <field name="student_days" attrs="{'required': [('type_setting','in',['pusu','pusd'])]}" domain="[('id','in',domain_days)]" widget="many2many_tags" options="{'no_create': 1, 'no_open': 1}"/>
+                                    </group>
+                                    <group colspan="2" col="2">
+                                    </group>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <footer>
+                        <button name="action_assign_episode" type="object" string="تأكيد" class="oe_highlight"/>
+                        <button special="cancel" string="إلغاء" class="oe_link"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <!-- =======================================================
+        						     Student
+             ======================================================= -->
+
+        <record model="ir.ui.view" id="view_student_register_tree">
+            <field name="name">student.register.tree</field>
+            <field name="model">mk.student.register</field>
+            <field name="arch" type="xml">
+                <tree delete="0" decoration-info="request_state not in ['accept','reject','done']" decoration-success="request_state in ['accept','done']" decoration-muted="request_state == 'reject'">
+                    <field name="display_name"/>
+                    <field name="identity_no"/>
+                    <field name="email"/>
+                    <field name="mobile"/>
+                    <field name="country_id"/>
+                    <field name="mosque_id" widget="many2many_tags" invisible="1"/>
+                    <field name="mosq_id"/>
+                    <field name="request_state" invisible="1"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_student_register_form">
+            <field name="name">student.register.form</field>
+            <field name="model">mk.student.register</field>
+            <field name="arch" type="xml">
+                <form string="Student Register">
+                    <header>
+                        <button name="send_passwd"   string="send password"      type="object"  attrs="{'invisible': ['|',('request_id', '=', False),('request_state', 'in', ['draft', 'reject'])]}" groups="mk_student_register.group_student_profile_password"/>
+                        <!-- button name="%(mk_serach_episode_action)d" string="Search For Avialable Episodes" type="action" attrs="{'invisible': [('create_date', '=', False)]}" groups="mk_student_register.confirm_student_placement_to_episode_create" context="{'default_student_id':id}"/-->
+                        <button name="action_request" string="تصديق طلب الانضمام" type="object" attrs="{'invisible': [('request_id','!=',False),('request_state','in',['accept','done'])]}"                  groups="mk_student_register.confirm_student_placement_to_episode_read,mk_student_register.confirm_student_placement_to_episode_edit,mk_student_register.accept_or_deny_student_confirmation_to_episode,mk_student_register.confirm_student_placement_to_episode_create"/>
+                        <button name="action_make_online_student"   string="تعيين الطالب عن بعد" type="object"  attrs="{'invisible': ['|',('is_online_student', '=', True),('request_state', '!=', 'accept')]}" groups="mk_student_register.set_student_online"/>
+                        <button name="action_make_presence_student" string="تعيين الطالب حضوري"  type="object"  attrs="{'invisible': ['|',('is_online_student', '=', False),('request_state', '!=', 'accept')]}" groups="mk_student_register.set_student_online"/>
+                    </header>
+                    <sheet>
+                        <div class="oe_left oe_button_box" name="button_box">
+                            <div class="row">
+                                <div class="oe_left col-3">
+                                   <button name="toggle_active" type="object" class="oe_stat_button" icon="fa-archive">
+                                        <field name="active" widget="boolean_button" options="{&quot;terminology&quot;: &quot;archive&quot;}"/>
+                                   </button>
+                                </div>
+                                <div class="oe_right col-3">
+                                    <button name="open_view_student_listen_lines"   type="object" class="oe_inline oe_stat_button" string="Listen lines" icon="fa-list" style="width:450px;height:60px" attrs="{'invisible': [('request_state','not in',['accept','done'])]}"/>
+                                </div>
+                                 <div class="oe_right col-3">
+                                    <button name="open_view_student_presence_lines" type="object" class="oe_inline oe_stat_button" string="حضور الطالب" icon="fa-list" style="width:450px;height:60px" attrs="{'invisible': [('request_state','not in',['accept','done'])]}"/>
+                                </div>
+                            </div>
+                        </div>
+
+                        <field name="image" widget='image' class="oe_avatar" options='{"preview_image": "image_medium", "size": [90, 90]}'/>
+                        <field name="id" invisible="1"/>
+                        <field name="request_state" invisible="1"/>
+                        <field name="request_id" invisible="1"/>
+
+                        <group>
+                            <field name="identity_no" attrs="{'required':[('no_identity','=', False)], 'invisible':[('no_identity','=',True)]}" style="width:50%;"/>
+                            <field name="passport_no" attrs="{'invisible':[('no_identity','=',False)],'required': [('no_identity', '=', True)]}"/>
+                            <field name="no_identity"/>
+                            <field name="is_online_student" attrs="{'readonly': [('request_state','in',['accept','done','reject'])]}"/>
+                        </group>
+
+                        <group attrs="{'invisible': [('flag2','=',False)]}" string="Student information" style="width:70%;">
+                            <field name="flag2" invisible="1"/>
+                            <field name="create_date" invisible="1"/>
+                            <field name="student_name" attrs="{'invisible': [('flag2','=',False)]}"/>
+                            <field name="mosque_name"  attrs="{'invisible': [('flag2','=',False)]}"/>
+                            <field name="mosque_new"   attrs="{'invisible': [('flag2','=',False)],'required':[('flag2','!=',False)]}"/>
+                            <field name="center_name"  attrs="{'invisible': [('flag2','=',False)]}"/>
+                            <button name="add_mosq" string="add" type="object" attrs="{'invisible': [('flag2','=',False)]}" confirm="Are you sure you want to do this?"/>
+                        </group>
+
+                        <div class="oe_title">
+                            <h1>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <field name="name" placeholder="First Name" style="padding-right:8px" attrs="{'invisible': [('create_date', '=', False)],'required': [('create_date', '!=', False)]}"/>
+                                        </td>
+                                        <td>
+                                            <field name="second_name" placeholder="Second Name" style="padding-right:8px" attrs="{'invisible': [('create_date', '=', False)],'required': [('create_date', '!=', False)]}"/>
+                                        </td>
+                                        <td>
+                                            <field name="third_name" placeholder="الجد" style="padding-right:8px" attrs="{'invisible': [('create_date', '=', False)]}"/>
+                                        </td>
+                                        <td>
+                                            <field name="fourth_name" placeholder="العائلة" style="padding-right:8px" attrs="{'invisible': [('create_date', '=', False)]}"/>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </h1>
+                            <div class="o_row" colspan="4" attrs="{'invisible': [('create_date', '=', False)]}">
+                                <group>
+                                    <field name="is_student" attrs="{'invisible':[('flag','=',True)]}"/>
+                                    <field name="st_parent_id" domain="[('parent', '=', 1)]" attrs="{'invisible': ['|',('is_student', '=', True),('flag','=',True)]}"/>
+                                    <field name="parent_identity"/>
+                                    <field name="registeration_code"/>
+                                    <!-- field name="mosque_id" widget="many2many_tags"/-->
+                                    <field name="mosq_id" required="1" options="{'no_create': True,'no_open': True}"/>
+                                    <field name="ep_type_id" options="{'no_create': True,'no_open': True}"/>
+                                    <field name="gender_mosque" invisible="1"/>
+                                    <field name="categ_mosque_id" invisible="1"/>
+                                    <field name="flag" invisible="1"/>
+                                    <field name="department_id" invisible="1"/>
+                                </group>
+                            </div>
+                            <group>
+                            </group>
+                        </div>
+
+                        <notebook colspan="4" attrs="{'invisible': [('create_date', '=', False)]}">
+                            <page string="Basic Info">
+                                <group>
+                                    <group>
+                                        <field name="country_id" options="{'no_create': 1, 'no_open':1}" invisible="0"/>
+                                        <field name="nationality"/>
+                                        <field name="mobile" attrs="{'required': [('create_date', '!=', False)]}" class="oe_phone"/>
+                                        <field name="mobile_add" class="oe_phone"/>
+                                        <field name="email"/>
+                                    </group>
+
+                                    <group>
+                                        <field name="birthdate" attrs="{'required': [('create_date', '!=', False)]}"/>
+                                        <field name="grade_id" attrs="{'required': [('create_date', '!=', False)]}" options="{'no_create': 1, 'no_open':1}"/>
+                                    </group>
+                                </group>
+
+                                <group>
+                                    <group>
+                                        <field name="gender"/>
+                                        <field name="marital_status"/>
+                                    </group>
+
+                                    <group>
+                                        <field name="job_type"/>
+                                        <field name="job_id" options="{'no_create': 1, 'no_open': 1}" attrs="{'invisible':[('job_type','=','student')]}"/>
+                                    </group>
+                                </group>
+                            </page>
+                            <page string="Address Detail">
+                                <group>
+                                    <group>
+                                        <field name="area_id" options="{'no_create': True, 'no_open': True}"/>
+                                        <field name="city_id" options="{'no_create': True, 'no_open': True}"/>
+                                    </group>
+                                    <group>
+                                        <field name="district_id" options="{'no_create': True, 'no_open': True}" domain="[('type_location','=','district'), ('enable','=',True), ('district_id','=',city_id)]"/>
+                                    </group>
+                                    <group>
+                                        <field name="latitude"/>
+                                        <field name="longitude"/>
+                                    </group>
+                                </group>
+                            </page>
+                            <page string="Episode Details">
+                                <field name="link_ids">
+                                    <tree create="0" delete="0">
+                                        <field name="registeration_date" string="التاريخ"/>
+                                        <field name="academic_id" invisible="1"/>
+                                        <field name="study_class_id"/>
+                                        <field name="department_id"/>
+                                        <field name="mosq_id"/>
+                                        <field name="episode_id"/>
+                                        <field name="teacher_id"/>
+                                        <field name="page_id" string="المقرر" invisible="1"/>
+                                        <field name="save_start_point"        invisible="1"/>
+                                        <field name="qty_memor_total"         invisible="1"/>
+                                        <!-- field name="start_date_episode"/>
+                                        <field name="end_date_episode"/-->
+                                        <field name="type_order" string="الطلب"/>
+                                        <field name="state" string="الحالة"/>
+                                        <field name="action_done" invisible="1"/>
+                                        <button name="%(mk_student_register.action_student_internal_transfer)d" string="نقل داخلي" type="action" attrs="{'invisible':['|', ('action_done','in',['clear','ep_done']),('state','=','cancel')]}" groups="mk_student_register.student_internal_transfert"/>
+								        <button name="action_cancel"                 string="إلغاء"          type="object" attrs="{'invisible':['|', ('action_done','!=',False),('state','!=','accept')]}" groups="mk_student_register.cancel_student_link_to_episode"/>
+                                        <button name="action_update_student_prepare" string="تعديل المنهج" type="object" attrs="{'invisible':['|', ('action_done','!=',False),('state','!=','accept')]}" groups="mk_student_register.cancel_student_link_to_episode"/>
+                                        <field name="action_done"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Banking accounts" attrs="{'invisible': [('is_student', '=', False)]}">
+                                <field name="banking_accounts">
+                                    <tree editable="top">
+                                        <field name="account_no"/>
+                                        <field name="account_owner_name"/>
+                                        <field name="bank_id"/>
+                                        <field name="state"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="saved parts">
+                                <group>
+                                    <field name="part_id" widget="many2many_tags"
+                                           options="{'no_create': True,'no_open': True,}"/>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="mk_student_search_view" model="ir.ui.view">
+            <field name="name">student Search View</field>
+            <field name="model">mk.student.register</field>
+            <field name="arch" type="xml">
+                <search string="student ">
+                    <field name="display_name"/>
+                    <field name="identity_no"/>
+                    <field name="passport_no"/>
+                    <field name="department_id" string="المركز"/>
+                    <field name="mosq_id"/>
+                    <field name="categ_mosque_id" string="فئة المسجد"/>
+                    <field name="request_state" string="فئة المسجد"/>
+                    <field name="nationality_group"/>
+                    <field name="is_online_student"/>
+                    <field name="is_current_study_class"/>
+
+                    <separator/>
+                    <filter name="request_accept" string="طلب إنضمام مقبول" domain="[('request_state','=','accept')]"/>
+                    <filter name="Not updated" string="Not updated"         domain="[('birthdate','=',False),('write_date','=',False)]"/>
+                    <separator/>
+                    <filter name="gender_male"   string="ذكور" domain="[('gender','=','male')]"/>
+                    <filter name="gender_female" string="إناث" domain="[('gender','=','female')]"/>
+                    <separator/>
+                    <filter name="male"   string="مساجد رجالية" domain="[('gender_mosque','=','male')]"/>
+                    <filter name="female" string="مساجد نسائية" domain="[('gender_mosque','=','female')]"/>
+                    <separator/>
+                    <filter name="saoudian"     string="سعودي"     domain="[('nationality_group','=','sa')]"/>
+                    <filter name="non_saoudian" string="غير سعودي" domain="[('nationality_group','=','non_sa')]"/>
+                    <separator/>
+                    <filter string="Online" name="is_online_student" domain="[('is_online_student', '=',True)]"/>
+                    <separator/>
+                    <filter name="state_draft"         string="مبدئي"         domain="[('request_state','=','draft')]"/>
+                    <filter name="state_mosque_accept" string="مقبول في مسجد" domain="[('request_state','=','mosque_accept')]"/>
+                    <filter name="state_accept"  string="مقبول"  domain="[('request_state','=','accept')]"/>
+                    <filter name="state_reject"  string="مرفوض"  domain="[('request_state','=','reject')]"/>
+                    <filter name="state_done"    string="منتهي"  domain="[('request_state','=','done')]"/>
+                    <separator/>
+                    <filter name="is_current_study_class" string="طالب منسب في الفصل الحالي" domain="[('is_current_study_class','=',True)]"/>
+                    <filter name="is_current_study_class" string="طالب غير منسب في الفصل الحالي" domain="[('is_current_study_class','=',False)]"/>
+                    <separator/>
+                    <filter string="Un Active" name="unactive" domain="[('active', '=',False)]"/>
+                    <separator/>
+
+                    <group>
+                        <filter name="group_area"          string="By Area"          context="{'group_by': 'area_id'}"/>
+                        <filter name="group_district"      string="By district"      context="{'group_by': 'district_id'}"/>
+                        <filter name="group_department_id" string="المركز"           context="{'group_by': 'department_id'}"/>
+                        <filter name="group_mosq_id"       string="المسجد"           context="{'group_by': 'mosq_id'}"/>
+                        <filter name="group_gender_mosq"   string="نوع المسجد"       context="{'group_by':'gender_mosque'}"/>
+                        <filter name="group_categ_mosq"    string="فئة المسجد"       context="{'group_by':'categ_mosque_id'}"/>
+                        <filter name="group_request_state" string="حالة طلب الانضمام" context="{'group_by': 'request_state'}"/>
+                        <filter name="group_job"           string="By job"           context="{'group_by': 'job_id'}"/>
+                        <filter name="group_gender"        string="By Gender"        context="{'group_by': 'gender'}"/>
+                        <filter name="group_grade"         string="By Grade"         context="{'group_by': 'grade_id'}"/>
+                        <filter name="group_nationality"   string="سعودي/غير سعودي"  context="{'group_by': 'nationality_group'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="mk_kanban_view_student">
+            <field name="name">Student Kanban</field>
+            <field name="model">mk.student.register</field>
+            <field name="arch" type="xml">
+                <kanban edit="true" delete="false">
+                    <field name="display_name"/>
+                    <field name="request_state"/>
+                    <field name="request_id"/>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <t t-if="record.request_state.raw_value == 'accept' or record.request_state.raw_value == 'done'">
+                                <div t-attf-class="oe_kanban_card oe_kanban_global_click"
+                                     style="background-color: #20cc82;color: #fff;">
+                                    <div t-attf-class="oe_kanban_details">
+                                        <strong>
+                                            <field name="display_name"/>
+                                        </strong>
+                                        <ul>
+                                            <li t-if="record.country_id.raw_value">
+                                                <field name="country_id"/>
+                                            </li>
+                                            <li t-if="record.email.raw_value">
+                                                <field name="email"/>
+                                            </li>
+                                            <li t-if="record.mobile.raw_value">
+                                                <i class="fa fa-envelope"></i>
+                                                <field name="mobile"/>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </t>
+
+                            <t t-if="record.request_state.raw_value == 'reject'">
+                                <div t-attf-class="oe_kanban_card oe_kanban_global_click"
+                                     style="background-color: #959595;color: #fff;">
+                                    <div t-attf-class="oe_kanban_details">
+                                        <strong>
+                                            <field name="display_name"/>
+                                        </strong>
+                                        <ul>
+                                            <li t-if="record.country_id.raw_value">
+                                                <field name="country_id"/>
+                                            </li>
+                                            <li t-if="record.email.raw_value">
+                                                <field name="email"/>
+                                            </li>
+                                            <li t-if="record.mobile.raw_value">
+                                                <i class="fa fa-envelope"></i>
+                                                <field name="mobile"/>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </t>
+
+                            <t t-if="record.request_state.raw_value != 'accept' and record.request_state.raw_value !=  'reject'">
+                                <div t-attf-class="oe_kanban_card oe_kanban_global_click"
+                                     style="background-color: #ff9619;color: #fff;">
+                                    <div t-attf-class="oe_kanban_details">
+                                        <strong>
+                                            <field name="display_name"/>
+                                        </strong>
+                                        <ul>
+                                            <li t-if="record.country_id.raw_value">
+                                                <field name="country_id"/>
+                                            </li>
+                                            <li t-if="record.email.raw_value">
+                                                <field name="email"/>
+                                            </li>
+                                            <li t-if="record.mobile.raw_value">
+                                                <i class="fa fa-envelope"></i>
+                                                <field name="mobile"/>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </t>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
+        <record id="mk_student_profile_sec_action" model="ir.actions.act_window">
+            <field name="name">Student Profile</field>
+            <field name="res_model">mk.student.register</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">kanban,tree,form</field>
+            <field name="domain">[('is_student_meqraa','=',False)]</field>
+            <field name="view_id" ref="mk_student_register.view_student_register_tree"/>
+            <field name="context">{}</field><!-- {'search_default_request_accept':1}</field-->
+        </record>
+
+
+        <menuitem id="student_profile_partner_menu" name="Student profile" action="mk_student_profile_sec_action"
+                  parent="student_management_view_menu" sequence="0"
+                  groups="mk_student_register.group_student_profile_read,mk_student_register.group_student_profile_create,mk_student_register.group_student_profile_update"/>
+
+        <!-- menuitem id="search_for_epispdes_menu" name="Search For Avialable Episodes" action="mk_serach_episode_action" parent="student_management_view_menu" sequence="3" groups="mk_student_register.confirm_student_placement_to_episode_create"/-->
+
+        <!-- =======================================================
+        						   Add simple Student
+             ======================================================= -->
+
+        <record model="ir.ui.view" id="view_add_student_profile_tree">
+            <field name="name">student.register.tree</field>
+            <field name="model">mk.student.register</field>
+            <field name="arch" type="xml">
+                <tree delete="0" editable="top">
+                    <field name="name" required="1"/>
+                    <field name="second_name" required="1"/>
+                    <field name="fourth_name" required="1"/>
+                    <field name="country_id" string="الجنسية" options="{'no_create': 1, 'no_open':1}"/>
+                    <field name="identity_no" attrs="{'required': [('no_identity','=',False)], 'readonly':[('no_identity','=',True)]}"/>
+                    <field name="no_identity"/>
+                    <field name="passport_no" attrs="{'required': [('no_identity','=',True)], 'readonly':[('no_identity','=',False)]}"/>
+                    <field name="mosq_id"   required="1"  domain="[('state', '=', 'accept')]" options="{'no_create': 1, 'no_open':1}"/>
+                    <field name="mobile" required="1" placeholder="512345678"/>
+                    <field name="birthdate" required="1"/>
+                    <field name="grade_id" required="1" options="{'no_create': 1, 'no_open':1}"/>
+                    <field name="email"/>
+                    <field name="gender" invisible="1"/>
+                    <field name="district_id" required="1" options="{'no_create': 1, 'no_open':1}"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="add_student_profile_action" model="ir.actions.act_window">
+            <field name="name">Add Student</field>
+            <field name="res_model">mk.student.register</field>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="mk_student_register.view_add_student_profile_tree"/>
+            <field name="domain">[('category','=',False),('is_student_meqraa','=',False)]</field>
+            <field name="context">{'is_from_supervisor':'True'}</field>
+        </record>
+
+
+        <menuitem id="add_student_profile_menu" name="Add Student" action="add_student_profile_action"
+                  parent="maknoon_main_menu" sequence="10"
+                  groups="mk_student_register.group_student_profile_read,mk_student_register.group_student_profile_create,mk_student_register.group_student_profile_update"/>
+
+        <!-- =======================================================
+                              Student Request Action Multi
+             ======================================================= -->
+
+        <record id="view_mosque_clearance_student_form" model="ir.ui.view">
+            <field name="name">view.mk.student.clearance.multi.form</field>
+            <field name="model">mk.student.clearance</field>
+            <field name="arch" type="xml">
+                <form string="إخلاء طرف">
+                    <sheet>
+                        <group>
+                            <field name="msg_error" col="2" readonly="1" nolabel="1" style="color:red;font-weight:bold" attrs="{'invisible': [('msg_error','=',False)]}"/>
+                            <group>
+                                <field name="year" options="{'no_create': 1, 'no_open':1}"/>
+                            </group>
+
+                            <group>
+                                <field name="mosque_id" options="{'no_create': 1, 'no_open':1}"/>
+                            </group>
+                        </group>
+
+                        <separator string="الطلاب"/>
+                        <field name="student_ids" options="{'no_create': 1, 'no_open':1}" nolable="1" domain="['|',('mosq_id','=',mosque_id),('mosq_id','=',False)]">
+                            <tree>
+                                <field name="display_name"/>
+                                <field name="mosq_id"/>
+                                <field name="gender"/>
+                                <field name="request_id"/>
+                                <field name="request_state"/>
+                            </tree>
+                        </field>
+                    </sheet>
+                    <footer>
+                        <button name="action_create" type="object" string="تأكيد" class="oe_highlight"/>
+                        <button special="cancel" string="إلغاء" class="oe_link"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_mosque_clearance_student" model="ir.actions.act_window">
+            <field name="name">إخلاء طرف</field>
+            <field name="res_model">mk.student.clearance</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_mosque_clearance_student_form"/>
+            <field name="target">new</field>
+        </record>
+
+        <!-- ===========================================================
+                                        Actions
+             =========================================================== -->
+
+        <record id="action_student_request_multi" model="ir.actions.server">
+            <field name="name">تنسيب لحلقة</field>
+            <field name="model_id" ref="model_mk_student_register"/>
+            <field name="binding_model_id" ref="model_mk_student_register"/>
+            <field name="state">code</field>
+            <field name="code">action = records.action_student_request_multi()</field>
+        </record>
+
+        <act_window id="action_transfer_intern_students_course"
+                    name="نقل داخلي"
+                    res_model="mk.student.internal_transfer"
+                    src_model="mk.student.register"
+                    view_mode="form"
+                    target="new"
+                    context="{'default_student_ids': active_ids,
+		                      'default_type_order':  'internal',
+		                      'form_view_ref':       'mk_student_register.view_student_request_multi_form'}"
+                    key2="client_action_multi"/>
+
+        <act_window id="action_transfer_extern_students_course"
+                    name="نقل خارجي"
+                    res_model="mk.student.internal_transfer"
+                    src_model="mk.student.register"
+                    view_mode="form"
+                    target="new"
+                    context="{'default_student_ids': active_ids,
+		                      'default_type_order':  'external',
+		                      'form_view_ref':       'mk_student_register.view_student_request_multi_form'}"
+                    key2="client_action_multi"/>
+
+        <record id="action_assign_students_course_from_episode_multi" model="ir.actions.server">
+            <field name="name">تنسيب لحلقة</field>
+            <field name="model_id" ref="model_mk_episode"/>
+            <field name="binding_model_id" ref="model_mk_episode"/>
+            <field name="state">code</field>
+            <field name="code">action = records.action_assign_students_course_from_episode_multi()</field>
+        </record>
+
+        <act_window id="action_mosq_clear_students"
+                    name="إخلاء طرف"
+                    res_model="mk.student.clearance"
+                    src_model="mk.student.register"
+                    view_mode="form"
+                    target="new"
+                    context="{'form_view_ref':       'mk_student_register.view_mosque_clearance_student_form',
+		            		  'default_student_ids': active_ids,}"
+                    key2="client_action_multi"/>
+
+    </data>
+</odoo>

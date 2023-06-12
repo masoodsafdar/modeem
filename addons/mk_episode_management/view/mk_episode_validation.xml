@@ -1,0 +1,24 @@
+ 
+<odoo>
+    <data>
+		<record id="episode_validation_form_view" model="ir.ui.view">
+			<field name="model">mk.episode</field>
+			<field name="inherit_id" ref="mk_episode_form_view"/>
+        	<field name="arch" type="xml">
+				<header position="inside">
+	                <button name="accept_validate" string="Validate" type="object" class="btn btn-sm oe_button"
+                            attrs="{'invisible':['|',('active','!=',True),('state', 'in',('accept','reject','done'))]}" groups="mk_episode_management.accept_deny_inactivate"/>
+            
+                	<button name="reject_validate" string="reject" type="object" class="btn btn-sm oe_button"
+                            attrs="{'invisible':['|',('active','!=',True),('state', 'in',('accept','reject','done'))]}" groups="mk_episode_management.accept_deny_inactivate"/>
+
+                	<button name="draft_validate"  string="إرجاع الى مبدئي" type="object" class="oe_highlight"
+                	        attrs="{'invisible':['|',('active','!=',True),('state', '!=','reject')]}" groups="mk_episode_management.accept_deny_inactivate"/>
+
+       				<button name="action_done"    type="object" string="تجميد الحلقة"       states="accept"/>
+       				<button name="action_reopen" type="object" string="إعادة تفعيل الحلقة"  states="done"/>                	                	
+				</header>
+			</field>
+		</record>        
+	</data>  
+</odoo>

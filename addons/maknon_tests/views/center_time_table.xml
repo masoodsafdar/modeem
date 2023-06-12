@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+         <!-- teacher.test.subscription action-->
+        <record id="teacher_test_subscription_action" model="ir.actions.act_window">
+            <field name="name">ادراج الموظف في جلسة اختبار</field>
+            <field name="res_model">test.register</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="maknon_tests.teacher_test_register_from"/>
+            <field name="target">new</field>
+        </record>
+
+        <record id="center_time_table_form_view" model="ir.ui.view">
+            <field name="name">Center Time Table</field>
+            <field name="model">center.time.table</field>
+            <field name="arch" type="xml">
+                <form create="0" delete="0" edit="0">
+                    <header>
+                      <button type="action" name="%(previous_class_test_registration_action)d" context="{'default_test_time': active_id,
+                                                                                                         'default_center_id': center_id,
+                                                                                                         'default_study_class_id': study_class_id,
+                                                                                                         'default_academic_id': academic_id,
+                                                                                                         'default_avalible_minutes': avalible_minutes,
+                                                                                                         'default_total_minutes': total_minutes}"
+                            string="تسجيل سابق"
+                            attrs="{'invisible':['|',('avalible_minutes','=',0),
+			                                         ('type_center','!=','student')]}"
+                            groups="maknon_tests.create_previous_class_student_test_session"/>
+                        <button type="action" name="%(test_registration_actoin1)d" context="{'default_test_time': active_id,
+																								  'default_center_id': center_id,
+																								  'default_study_class_id': study_class_id,
+                                                                                                   'default_academic_id': academic_id,
+																								  'default_avalible_minutes': avalible_minutes,
+																								  'default_total_minutes': total_minutes}"
+								                                                   string="Student test registration"
+								                                                   attrs="{'invisible':['|',('avalible_minutes','=',0),
+																											('type_center','!=','student')]}"
+								                                                   groups="maknon_tests.create_student_test_session"/>
+<!--                        <button type="action" name="%(action_test_registration_teacher)d" context="{'default_test_session_id': active_id,-->
+<!--																							      'default_center_id': center_id,-->
+<!--																							      'default_avalible_minutes': avalible_minutes,-->
+<!--																							      'default_total_minutes': total_minutes}"-->
+<!--								                                                          string="Teacher test registration"-->
+<!--                                                                                          attrs="{'invisible':['|',('avalible_minutes','=',0),-->
+<!--																									               ('type_center','!=','teacher')]}"-->
+<!--                                                                                          groups="maknon_tests.create_teacher_test_session"/>-->
+                        <button type="action" name="%(teacher_test_subscription_action)d" context="{'default_test_time': active_id,
+                                                                                                     'default_center_id': center_id,
+                                                                                                     'default_study_class_id': study_class_id,
+                                                                                                         'default_academic_id': academic_id,
+                                                                                                     'default_avalible_minutes': avalible_minutes,
+                                                                                                     'default_total_minutes': total_minutes}"
+                                                                                        string="تسجيل الموظف"
+                                                                                        attrs="{'invisible':['|',('avalible_minutes','=',0),
+                                                                                        ('type_center','!=','student')]}"
+                                                                                        groups="maknon_tests.teacher_test_subscription"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="center_id" options="{'no_open':True,'no_create':True}" required="1"/>
+                                <field name="committee_no"/>
+                            </group>
+
+                            <group>
+                                <field name="gender"/>
+                                <field name="type_center" invisible="1"/>
+                                <field name="study_class_id" invisible="1"/>
+                                <field name="academic_id" invisible="1"/>
+                            </group>
+                        </group>
+
+                        <group>
+                            <group>
+                                <field name="date" required="1"/>
+                                <field name="day" required="1"/>
+                                <field name="period_id" required="1"/>
+                            </group>
+
+                            <group>
+                                <field name="total_hours" string="capacity /hours"/>
+                                <field name="total_minutes" string="capacity/minutes"/>
+                                <field name="avalible_minutes"/>
+                            </group>
+                        </group>
+
+                        <notebook>
+                            <page string="List of Examiners">
+                                <field name="list_of_examiners" readonly="1"
+                                       attrs="{'invisible': [('type_center','=','teacher')]}">
+                                    <tree>
+                                        <field name="center_id" options="{'no_create': True,'no_open': True,}"/>
+                                        <field name="student_id" options="{'no_create': True,'no_open': True,}"/>
+                                        <field name="test_time"/>
+                                        <field name="test_name"/>
+                                        <field name="branch"/>
+                                        <field name="duration" sum="total"/>
+                                        <field name="state"/>
+                                    </tree>
+                                </field>
+                                <field name="teacher_test_ids" readonly="1"
+                                       attrs="{'invisible': [('type_center','=','student')]}">
+                                    <tree>
+                                        <field name="center_id" options="{'no_create': True,'no_open':True}"/>
+                                        <field name="emp_id" options="{'no_create': True,'no_open':True}"/>
+                                        <field name="test_name" options="{'no_create': True,'no_edit':True}"/>
+                                        <field name="branch" options="{'no_create': True,'no_edit':True}"/>
+                                        <field name="duration" sum="total"/>
+                                        <field name="state"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="center_time_table_tree_view" model="ir.ui.view">
+            <field name="name">Center Time Table</field>
+            <field name="model">center.time.table</field>
+            <field name="arch" type="xml">
+                <tree create="0" edit="0" delete="0" decoration-danger="avalible_minutes==0"
+                      decoration-bf="visible_for_user==True" decoration-muted="visible_for_user==False">
+                    <field name="visible_for_user" invisible="1"/>
+                    <field name="center_id" options="{'no_create': True,'no_open': True,}"/>
+                    <field name="date"/>
+                    <field name="day"/>
+                    <field name="committee_no"/>
+                    <field name="period_id"/>
+                    <field name="total_hours"/>
+                    <field name="total_minutes" string="capacity/minutes"/>
+                    <field name="avalible_minutes"/>
+                    <field name="type_center" invisible="1"/>
+                    <field name="study_class_id" invisible="1"/>
+                    <field name="academic_id" invisible="1"/>
+
+                    <button type="action" name="%(previous_class_test_registration_action)d" context="{'default_test_time': active_id,
+                                                                                                         'default_center_id': center_id,
+                                                                                                         'default_study_class_id': study_class_id,
+                                                                                                         'default_academic_id': academic_id,
+                                                                                                         'default_avalible_minutes': avalible_minutes,
+                                                                                                         'default_total_minutes': total_minutes}"
+                            string="تسجيل سابق"
+                            attrs="{'invisible':['|',('avalible_minutes','=',0),
+			                                         ('type_center','!=','student')]}"
+                            groups="maknon_tests.create_previous_class_student_test_session"/>
+
+                    <button type="action" name="%(test_registration_actoin1)d" context="{'default_test_time': active_id,
+			                                                                                                 'default_center_id': center_id,
+			                                                                                                 'default_study_class_id': study_class_id,
+                                                                                                         'default_academic_id': academic_id,
+			                                                                                                 'default_avalible_minutes': avalible_minutes,
+			                                                                                                 'default_total_minutes': total_minutes}"
+                            string="Student test registration"
+                            attrs="{'invisible':['|',('avalible_minutes','=',0),
+			                                         ('type_center','!=','student')]}"
+                            groups="maknon_tests.create_student_test_session"/>
+
+                     <button type="action" name="%(teacher_test_subscription_action)d" context="{'default_test_time': active_id,
+			                                                                                     'default_center_id': center_id,
+			                                                                                     'default_study_class_id': study_class_id,
+                                                                                                         'default_academic_id': academic_id,
+			                                                                                     'default_avalible_minutes': avalible_minutes,
+			                                                                                     'default_total_minutes': total_minutes}"
+                            string="تسجيل الموظف"
+                            attrs="{'invisible':['|',('avalible_minutes','=',0),
+			                                         ('type_center','!=','student')]}"
+                            groups="maknon_tests.teacher_test_subscription"/>
+
+<!--                    <button type="action" name="%(action_test_registration_teacher)d" context="{'default_test_session_id': active_id,-->
+<!--			                                                                                                        'default_center_id': center_id,-->
+<!--			                                                                                                        'default_avalible_minutes': avalible_minutes,-->
+<!--			                                                                                                        'default_total_minutes': total_minutes}"-->
+<!--                            string="Teacher test registration"-->
+<!--                            attrs="{'invisible':['|',('avalible_minutes','=',0),-->
+<!--			                                                                                                                ('type_center','!=','teacher')]}"-->
+<!--                            groups="maknon_tests.create_teacher_test_session"/>-->
+                </tree>
+            </field>
+        </record>
+
+        <record id="timetable_view" model="ir.ui.view">
+            <field name="name">timeble search</field>
+            <field name="model">center.time.table</field>
+            <field name="arch" type="xml">
+                <search string="timeble">
+                    <field name="center_id"/>
+                    <field name="date"/>
+                    <field name="day"/>
+                    <field name="period_id"/>
+
+                    <filter string="رجالي" domain="[('center_name','like','[رجالي]')]"/>
+                    <filter string="نسائي" domain="[('center_name','like','[نسائي]')]"/>
+                    <filter name="group_center" string="مركز الاختبار" context="{'group_by': 'center_id'}"/>
+                    <filter name="group_date" string="التاريخ" context="{'group_by': 'date'}"/>
+                    <filter name="group_day" string="اليوم" context="{'group_by': 'day'}"/>
+                    <filter name="group_period" string="الفتره" context="{'group_by': 'period_id'}"/>
+                    <filter name="group_study_class" string="الفصل الدراسي" context="{'group_by': 'study_class_id'}"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="center_time_tables_action" model="ir.actions.act_window">
+            <field name="name">Center Time Table</field>
+            <field name="res_model">center.time.table</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('date','>=',current_date),('type_center','=','student')]</field>
+            <field name="context">{'search_default_group_center':1,'default_type_center':'student'}</field>
+        </record>
+
+        <record id="previous_center_time_tables_action" model="ir.actions.act_window">
+            <field name="name">Previous class Center Time Table</field>
+            <field name="res_model">center.time.table</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('study_class_id.is_default','=',False),('type_center','=','student')]</field>
+            <field name="context">{'search_default_group_center':1,'default_type_center':'student'}</field>
+        </record>
+
+        <menuitem id="center_time_tables_menu" name="centers tests Timetables" action="center_time_tables_action"
+                  parent="maknon_tests.reqistration_main_menu"
+                  sequence="2" groups="maknon_tests.read_tests_time_tables,maknon_tests.create_student_test_session"/>
+
+        <menuitem id="previous_center_time_tables_menu" name="Previous centers tests Timetables" action="previous_center_time_tables_action"
+          parent="maknon_tests.reqistration_main_menu"
+          sequence="2" groups="maknon_tests.create_previous_class_student_test_session"/>
+
+        <record id="action_center_timetable_teacher" model="ir.actions.act_window">
+            <field name="name">جدول الإختبارات</field>
+            <field name="res_model">center.time.table</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('date','&gt;=',current_date),('type_center','=','teacher')]</field>
+            <field name="context">{'search_default_group_center':1,'default_type_center':'teacher'}</field>
+        </record>
+
+<!--        <menuitem id="menu_center_timetable_teacher" name="جدول الإختبارات" action="action_center_timetable_teacher"-->
+<!--                  parent="maknon_tests.test_techers_operation_main_menu"-->
+<!--                  groups="maknon_tests.create_teacher_test_session" sequence="30"/>-->
+    </data>
+</openerp>

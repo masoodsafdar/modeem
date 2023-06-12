@@ -1,0 +1,71 @@
+<odoo>
+    <data>
+    
+ 	<record id="mk_test_appreciation_form_view" model="ir.ui.view">
+          <field name="name">Test Appreciation Form View</field>
+          <field name="model">mk.test.appreciation</field>
+          <field name="arch" type="xml">
+              <form string = "Test Appreciation">
+		  <header>
+		    
+		  </header>
+		  <sheet>
+		  	  <group>
+			  	<field name="company_id" required="1" options="{'no_open':1,'no_create':1}"/>
+			  </group>
+			  <group>
+			  	<group>
+				  	<field name="test_type_id" required="1" domain="[('company_id','=',company_id)]" options="{'no_open':1,'no_create':1}"/>
+				  	<field name="name"         required="1"/>
+			  	</group>
+				<group>
+				</group>
+			</group>
+			<group colspan="6" col="4">
+			  	<field name="from_score" required="1"/>
+			  	<field name="to_score" required="1"/>
+			  </group>
+	  	</sheet>
+              </form>
+             </field>
+         </record>
+
+        <record id="mk_test_appreciation_tree_view" model="ir.ui.view">
+            <field name="name">Test Appreciation Tree View</field>
+            <field name="model">mk.test.appreciation</field>
+            <field name="arch" type="xml">
+                <tree delete="0" string="Test Appreciation">
+                	<field name="company_id"   required="1" options="{'no_open':1,'no_create':1}"/>
+                	<field name="test_type_id" required="1" options="{'no_open':1,'no_create':1}"/>
+                	<field name="name"         required="1"/>
+                	<field name="from_score"   required="1"/>
+                	<field name="to_score"     required="1"/>
+                </tree>
+            </field>
+        </record>
+        
+        <record id="mk_test_appreciation_search_view" model="ir.ui.view">
+            <field name="name">Test Appreciation Search View</field>
+            <field name="model">mk.test.appreciation</field>
+            <field name="arch" type="xml">
+                <search string="Test Appreciation ">
+                    <field name="name" string="Test Appreciation" filter_domain="[('name','ilike', self)]"/>
+                </search>
+            </field>
+        </record>
+        
+        <record id="mk_test_appreciation_action" model="ir.actions.act_window">
+            <field name="name">Test Appreciation </field>
+            <field name="res_model">mk.test.appreciation</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+            <field name="search_view_id" ref="mk_test_appreciation_search_view"/>
+        </record>
+
+	<!--<menuitem name="Test Appreciation " id="mk_test_appreciation_menu" sequence="5" parent="mk_tests_settings_menu" action="mk_test_appreciation_action"/>-->    
+
+    </data>  
+</odoo>

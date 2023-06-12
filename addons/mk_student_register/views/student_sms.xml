@@ -1,0 +1,54 @@
+<odoo>
+	<data>
+		<record id="student_sms_form" model="ir.ui.view">
+        	<field name="name">mk.student.sms</field>
+        	<field name="model">mk.student.sms</field>
+        	<field eval="20" name="priority"/>
+        	<field name="arch" type="xml">
+            	<form >
+					<sheet>
+						<group>
+							<field name="is_user_department" invisible="1"/>
+							<field name="department_id" options="{'no_create': True, 'no_open':True}"/>
+							<field name="mosque_ids"    options="{'no_create': True, 'no_open':True}"  widget="many2many_tags"/>
+							<field name="episode_id"    options="{'no_create': True, 'no_open':True}" domain="[('mosque_id','in',mosque_ids)]" invisible="1"/>
+						</group>
+
+						<separator string="Students"/>
+						<field name="student_ids" options="{'no_create': True, 'no_open':True}" nolabel="1">
+							<tree>
+								<field name="display_name"/>
+								<field name="identity_no"/>
+								<field name="email"/>
+								<field name="mobile"/>
+								<field name="country_id"/>
+								<field name="mosq_id"/>
+							</tree>
+						</field>
+
+						<group>
+							<field name="type_message"/>
+							<field name="message" placeholder="نص الرسالة" attrs="{'invisible': [('type_message', '!=', 'free_notif')]}" groups="mk_student_register.group_sms_general_config"/>
+						</group>
+            		</sheet>
+                	<footer>
+                    	<button name="ok" string="OK" type="object" class="oe_highlight" />
+                	</footer>
+            	</form>
+        	</field>
+    	</record>
+
+    	<record model="ir.actions.act_window" id="action_student_sms_form">
+        	<field name="name">student sms </field>
+        	<field name="res_model">mk.student.sms</field>
+        	<field name="view_type">form</field>
+        	<field name="view_mode">form</field>
+        	<field name="view_id" ref="student_sms_form" />
+        	<field name="target">new</field>
+    	</record>
+    
+     	<menuitem name="مركز الرسائل" id="sms_center" sequence="1" groups="group_sms_student,group_sms_employee,group_sms_configuration"/> 
+
+    	<menuitem name="إرسال رسائل نصية للطلاب" id="student_sms_menu" sequence="1" parent="sms_center" action="action_student_sms_form" groups="group_sms_student"/> 
+ 	</data>
+</odoo>

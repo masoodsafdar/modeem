@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+		<record id="view_employee_tree" model="ir.ui.view">
+			<field name="name">hr.employee.form</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_tree"/>
+            <field name="arch" type="xml">
+				<xpath expr="//tree" position="attributes">
+                	<attribute name="delete">false</attribute>
+				</xpath>
+            	<field name="work_phone" position="replace">
+            		<field name="mobile_phone"/>
+            	</field>
+<!--				<field name="identification_id" position="replace">-->
+<!--            		<field name="last_log_from_app"/>-->
+<!--            	</field>-->
+				<field name="name" position="after">
+					<field name="identification_id"/>
+					<field name="last_log_from_app"/>
+            	</field>
+            </field>
+		</record>
+
+		<record id="view_users_tree" model="ir.ui.view">
+			<field name="name">res.users.form</field>
+            <field name="model">res.users</field>
+            <field name="inherit_id" ref="base.view_users_tree"/>
+            <field name="arch" type="xml">
+				<field name="login_date" position="after">
+            		<field name="last_app_login"/>
+            	</field>
+            </field>
+		</record>
+		            
+		<record id="view_employee_custom_form2" model="ir.ui.view">
+			<field name="name">hr.employee.form</field>
+            <field name="model">hr.employee</field>
+            <field name="priority" eval="15"/>
+            <field name="arch" type="xml">
+                <form string="Employee" delete="false">
+                	<header attrs="{'invisible': [('flag','=',False)]}">                
+                    	<button name="accept"      string="Validate"      attrs="{'invisible':['|',('state', 'in', ('accept','reject')),('flag','=',False)]}" type="object" class="btn btn-sm oe_button" groups="mk_master_models.group_Acceptance_employee"/>
+                    	<button name="reject"      string="reject"        attrs="{'invisible':['|',('state', 'in',('accept','reject')),('flag','=',False)]}"  type="object" class="btn btn-sm oe_button" groups="mk_master_models.group_Acceptance_employee"/>
+                		<button name="draft"       string="Set to draft"  attrs="{'invisible':['|',('state', 'in',('draft')),('flag','=',False)]}"            type="object" class="oe_highlight"         groups="mk_master_models.group_Acceptance_employee"/>
+                 		<button name="send_passwd" string="send password" attrs="{'invisible':['|',('state', 'in',('draft','reject')),('flag','=',False)]}"   type="object"                              groups="mk_master_models.group_Send_password_employee" />
+                  		
+                  		<button name="%(add_employee_mosque_actoin)d" string="تنسيب الموظف للمسجد\المدرسة" attrs="{'invisible':['|',('state','in',('draft')),('category','=','center_admin')]}"                     type="action" context="{'default_employee_id':active_id,'default_department_id':department_id,'default_category':category2}" groups="mk_master_models.add_mosques_for_employee_group"/>
+                 		<button name="%(change_emp_job_action)d"      string="Change Employee Job"         attrs="{'invisible':['|',('state','in',('draft')),('category','in',('center_admin','edu_supervisor'))]}" type="action" context="{'default_employee_id':active_id,'default_mosque_id2':mosqtech_ids }" groups="mk_master_models.group_change_job_hr"/> 
+						<button name="synchronize_mosque_to_user"     string="Synchronize mosques" attrs="{'invisible':['|',('state', 'in', ('draft','reject')),('flag','=',False)]}"  type="object" class="btn btn-sm oe_button" groups="mk_master_models.group_Acceptance_employee"/>
+
+						<field name="state" widget="statusbar" statusbar_visible="draft,accept,reject" attrs="{'invisible': [('flag','=',False)]}"/>
+            		</header>
+
+                    <sheet>
+                        <div class="oe_button_box" name="button_box" attrs="{'invisible': [('flag','=',False)]}">
+                            <!-- for security update groups="hr.group_hr_user" -->
+                            <button name="toggle_active" type="object" class="oe_stat_button" icon="fa-archive">
+                                <field name="active" widget="boolean_button" options='{"terminology": "archive"}'/>
+                            </button>
+                        </div>
+                        
+                        <field name="image" widget='image' class="oe_avatar" options='{"preview_image":"image_medium"}' attrs="{'invisible': [('flag','=',False)]}"/>
+                   		
+                   		<group>     
+                   			<field name="identification_id" style="width:50%;"/>
+                   		</group>
+                   		
+          				<group invisible="1"> 
+          					<field name="flag2" invisible="1"/> 
+                          	<field name="flag" invisible="1"/>
+           				</group>
+           				
+             			<group attrs="{'invisible': [('flag2','=',False)]}" string="employee information" style="width:70%;"> 
+                           <field name="create_date" invisible="1"/> 
+                           <field name="employee_name" attrs="{'invisible': [('flag2','=',False)]}"/> 
+                           <field name="category_name" attrs="{'invisible': [('flag2','=',False)]}"/> 
+                           <field name="mosque_name"   attrs="{'invisible': [('flag2','=',False)]}"/> 
+                           <field name="center_name"   attrs="{'invisible': [('flag2','=',False)]}"/> 
+                           <field name="mosque_new"    attrs="{'required':[('flag2','!=',False)],'invisible': [('flag2','=',False)]}"/>
+
+                           <button name="add_mosq" string="add" type="object" attrs="{'invisible': [('flag2','=',False)]}"/> 
+                        </group>   
+                        
+                        <div id="o_employee_container" attrs="{'invisible': [('flag','=',False)]}">
+                        	<div id="o_employee_main">                                             
+                        		<group colspan="4">
+                        			<field name="name"  attrs="{'required': [('flag2','=',False)]}" style="width:50%;"/>
+                        			<field name="registeration_code"  style="width:50%;" readonly="1"/>
+                    			</group>
+                   
+ 								<!-- for security update  groups="hr.group_hr_user"-->                    
+ 								<field name="category_ids" widget="many2many_tags" options="{'color_field': 'color', 'no_create_edit': True}" placeholder="e.g. Part Time" invisible="1"/>                       
+                        		<notebook attrs="{'invisible': [('flag','=',False)]}">
+                        		
+                            		<page name="public" string="Work Information">
+                                		<group>
+                                    		<group string="Contact Information">                                        
+                                        		<field name="work_location"/>
+                                         		<field name="work_email"   widget="email"          attrs="{'required':[('flag2','=',False)]}"/>
+                                          		<field name="mobile_phone" class="oe_phone"        attrs="{'required':[('flag2','=',False)]}"/>
+                                          		<field name="kin_phone"    class="oe_phone"/>        
+                                       			<field name="work_phone"   class="oe_phone"        attrs="{'required':0}"/>
+                                         		<field name="recruit_ids"  widget="many2many_tags" attrs="{'required': [('flag2','=',False)]}" options="{'no_open':1,'no_create':1}"/>
+                           						<field name="job_id"       options="{'no_open':1,'no_create':1}" required="1"/>
+                                    		</group>
+                                    		<group string="Position">
+                                          		<field name="category2"             attrs="{'readonly':[('state','=','accept')],'required': [('flag2','=',False)]}" string="cattegory"/>
+												<field name="center_admin_category" attrs="{'invisible':[('category','!=','center_admin')],'readonly':[('state','=','accept')]}"/>
+                    							<field name="category"              invisible="1" readonly="0" options="{'no_create': 1,'no_open': 1}"/>
+                                          		<field name="department_id"         attrs="{'invisible':[('category2','=',False)],'required':[('flag2','=',False),('state','!=','accept')]}" options="{'no_create': 1, 'no_open':1}"/>
+                                          		<field name="department_ids"        attrs="{'invisible':['|',('category2','=',False),('category2','not in',('teacher','managment','center_admin','admin'))]}" domain="[('id','!=',department_id)]" options="{'no_create': 1, 'no_open':1}" widget="many2many_tags"/>
+                                         		<field name="mosque_id"             required="0" invisible="1"/>
+                                        		<field name="mosqtech_ids"          attrs="{'invisible':['|',('category','in',['edu_supervisor','center_admin'])], 
+                                        		                                            'required':[('flag2','=',False),('category','not in',['edu_supervisor','center_admin']),('state','!=','accept')]}" 
+                                        		                                    domain="['|',('center_department_id','=',department_id),('center_department_id','in',department_ids)]" widget="many2many_tags"/>
+												<field name="years_of_experience"/>
+												<field name="tajweed_level"/>
+                                    		</group>
+                                		</group>
+                                		<field name="notes" placeholder="Other Information ..." colspan="4"/>
+                            		</page>
+                            		
+                            		<page name="personal_information" string="Private Information">
+                                		<group>
+                                    		<group string="citizenship">
+                                        		<field name="country_id" options="{'no_create': 1, 'no_open':1}" attrs="{'required':[('flag2','=',False)]}"/>
+                                        		<field name="issue_identity"/>
+                                        		<field name="identity_expire"/>
+                                     		</group>
+                                     		
+                                     		<group string="Contact Information" invisible="1">
+                							</group>
+                							
+                                    		<group string="Status">
+                                        		<field name="gender"  attrs="{'required':[('flag2','=',False)]}"/>
+                                        		<field name="marital" attrs="{'required':[('flag2','=',False)]}"/>
+                                    		</group>
+                                    		
+                                    		<group string="Birth">
+                                        		<field name="birthday"/>
+                                    		</group>                                   
+                                		</group>
+                            		</page>
+                            
+                					<page string="mosques" attrs="{'invisible':[('category', '!=','edu_supervisor')]}" >
+                    					<field name="mosque_sup" domain="[('center_department_id','=',department_id)]"/>
+                					</page>
+                					
+                             		<page name="salary_settings" string="Salary Settings" attrs="{'invisible':[('category','=','edu_supervisor')]}" >
+                        				<group>
+                            				<group string="Salary" name="active_group">
+                                				<field name="salary"/>
+                                				<field name="salary_donor" />
+                                				<field name="contract_type" />
+                            				</group>
+                        				</group>
+                    				</page>
+
+                        			<page string="saved parts" attrs="{'invisible':[('category','=','edu_supervisor')]}">
+                            			<field name="part_ids" widget="many2many_tags"  options="{'no_create': 1, 'no_create_edit': 1,'no_open':1}"/>                        
+                        			</page>
+                        			
+                        			<page string="مساجد" invisible="1">
+                            			<field name="masajed_ids" readonly="1"/>                        
+                        			</page>                        			
+                       
+                        		</notebook>
+                        	</div>
+                        </div>
+                    </sheet>
+                    
+                    <div class="oe_chatter">
+                        <!-- for security update groups="base.group_user" -->
+                        <field name="message_follower_ids" widget="mail_followers" />
+                        <field name="message_ids"          widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="hr_employee_search_view" model="ir.ui.view">
+            <field name="name">HR employee Search View</field>
+            <field name="model">hr.employee</field>
+			<field name="inherit_id" ref="hr.view_employee_filter"/>
+            <field name="arch" type="xml">
+				<xpath expr="//search">
+					 <filter name="last_log_from_app"        string="معلم يستعمل التطبيق" 	domain="[('last_log_from_app', '!=',False)]"/>
+					 <filter name="last_log_from_app"        string="معلم لا يستعمل التطبيق" 		domain="[('last_log_from_app', '=',False),('category2','=','teacher')]"/>
+				</xpath>
+                <xpath expr="//search">
+                     <group expand="0" string="Group By">
+		                     <filter name="tajweed_level"        string="المستوى التجويدي" context="{'group_by': 'tajweed_level'}"/>
+		             </group>
+				</xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

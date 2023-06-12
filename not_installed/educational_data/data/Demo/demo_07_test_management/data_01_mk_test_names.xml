@@ -1,0 +1,28 @@
+<odoo>
+	<data noupdate="1">
+		<record model="mk.test.names" id="mk_test_names2">
+			<field name="academic_id" ref="mk_study_year1"/>
+			<field name="name">اختبارات الأجزاء طلاب</field>
+			<field name="test_group">student</field>
+			<field name="type_test">parts</field>
+		</record>
+
+		<record model="mk.test.names" id="mk_test_names3">
+			<field name="academic_id" ref="mk_study_year1"/>
+			<field name="name">اختبارات الخاتمين طلاب</field>
+			<field name="test_group">student</field>
+			<field name="type_test">final</field>
+		</record>
+
+		<record model="mk.test.names" id="mk_test_names4">
+			<field name="academic_id" ref="mk_study_year1"/>
+			<field name="name">اختبارات الخاتمين موظفين</field>
+			<field name="test_group">employee</field>
+			<field name="type_test">final</field>
+			<field name="job_id" eval="[(4,ref('educational_data.Job1')),(4,ref('educational_data.Job2')),
+				(4,ref('educational_data.Job5')),(4,ref('educational_data.Job9')),(4,ref('educational_data.Job11')),
+				(4,ref('educational_data.Job12')),(4,ref('educational_data.Job24')),(4,ref('educational_data.Job47')),
+				(4,ref('educational_data.Job401'))]"/>
+		</record>
+	</data>  
+</odoo>

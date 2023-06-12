@@ -1,0 +1,13 @@
+
+.o_web_client .openerp .oe_appsbar {
+    background-image: url(/maknoon_icons/static/src/img/bg1.png) no-repeat!important;
+    background-size:100% 100%;
+}
+.o_web_client .openerp .oe_appsbar .oe_apps .oe_app img {
+    width: 100px !important;
+    height: 100px !important;
+    border-radius: 6px !important;
+ box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.50) !important;
+-webkit-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.50) !important;
+-moz-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.50) !important;
+}

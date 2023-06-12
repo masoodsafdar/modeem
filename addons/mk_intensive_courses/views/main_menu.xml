@@ -1,0 +1,7 @@
+<odoo>
+    <data>
+        <menuitem id="mk_courses_settings_menu" name="Intensive Courses" sequence="3" />   
+        <menuitem id="mk_courses_config_menu"   parent ="mk_courses_settings_menu"  name="Course Intensive" sequence="4"  />
+        <menuitem id="mk_courses_eval_menu_in" parent ="mk_courses_settings_menu"  name="Course Evaluation" sequence="3" />
+    </data>  
+</odoo>

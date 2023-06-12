@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+<record model="ir.rule" id="transport_management_rule">
+<field name="name">transport management rules</field>
+<field name="model_id" ref="model_mk_transport_management"/>
+<field name="domain_force">
+
+	[('request_id.student_id.mosq_id.responsible_id.user_id.id','in',[user.id])]
+
+</field>
+
+<field name="groups" eval="[(4, ref('mk_users.mk_mosque_admins'))]"/>
+</record>
+
+<record model="ir.rule" id="transportation_request_rule">
+<field name="name">transportation request rules</field>
+<field name="model_id" ref="model_transportation_request"/>
+<field name="domain_force">
+[('student_id.mosq_id.responsible_id.user_id.id','in',[user.id])]
+</field>
+<field name="groups" eval="[(4, ref('mk_users.mk_mosque_admins'))]"/>
+</record>
+
+
+
+<record model="ir.rule" id="apology_request_rule">
+<field name="name">apology request rules</field>
+<field name="model_id" ref="model_apology_request"/>
+<field name="domain_force">
+[('student_id.mosq_id.responsible_id.user_id.id','in',[user.id])]
+</field>
+<field name="groups" eval="[(4, ref('mk_users.mk_mosque_admins'))]"/>
+</record>
+
+
+
+<record model="ir.rule" id="mk_attendance_students_rule">
+<field name="name">mk attendance students rules</field>
+<field name="model_id" ref="model_mk_attendance_students"/>
+<field name="domain_force">
+[('mosque_id.responsible_id.user_id.id','in',[user.id])]
+</field>
+<field name="groups" eval="[(4, ref('mk_users.mk_mosque_admins'))]"/>
+
+</record>
+
+<record model="ir.rule" id="vehicle_records_rule">
+<field name="name">vehicle records rules</field>
+<field name="model_id" ref="model_vehicle_records"/>
+<field name="domain_force">
+[('mosque.responsible_id.user_id.id','in',[user.id])]
+</field>
+<field name="groups" eval="[(4, ref('mk_users.mk_mosque_admins'))]"/>
+</record>
+
+<record model="ir.rule" id="transport_management_center_rule">
+<field name="name">transport management center rules</field>
+<field name="model_id" ref="model_mk_transport_management"/>
+<field name="domain_force">
+
+      [('request_id.student_id.mosq_id.center_department_id.manager_id.user_id.id','in',[user.id])]
+
+</field>
+
+<field name="groups" eval="[(4, ref('mk_users.admin_center'))]"/>
+</record>
+
+<record model="ir.rule" id="transportation_request_center_rule">
+<field name="name">transportation request center rules</field>
+<field name="model_id" ref="model_transportation_request"/>
+<field name="domain_force">
+[('student_id.mosq_id.center_department_id.manager_id.user_id.id','in',[user.id])]
+</field>
+<field name="groups" eval="[(4, ref('mk_users.admin_center'))]"/>
+</record>
+
+
+
+<record model="ir.rule" id="apology_request_center_rule">
+<field name="name">apology request center rules</field>
+<field name="model_id" ref="model_apology_request"/>
+<field name="domain_force">
+[('student_id.mosq_id.center_department_id.manager_id.user_id.id','in',[user.id])]
+</field>
+<field name="groups" eval="[(4, ref('mk_users.admin_center'))]"/>
+</record>
+
+
+
+<record model="ir.rule" id="mk_attendance_students_center_rule">
+<field name="name">mk attendance students center rules</field>
+<field name="model_id" ref="model_mk_attendance_students"/>
+<field name="domain_force">
+[('mosque_id.center_department_id.manager_id.user_id.id','in',[user.id])]
+</field>
+<field name="groups" eval="[(4, ref('mk_users.admin_center'))]"/>
+
+</record>
+
+<record model="ir.rule" id="vehicle_records center_rule">
+<field name="name">vehicle records center rules</field>
+<field name="model_id" ref="model_vehicle_records"/>
+<field name="domain_force">
+[('mosque.center_department_id.manager_id.user_id.id','in',[user.id])]
+</field>
+<field name="groups" eval="[(4, ref('mk_users.admin_center'))]"/>
+</record>
+
+<!-- female admin center rules -->
+<record model="ir.rule" id="transport_management_female_center_rule">
+<field name="name">transport management center rules</field>
+<field name="model_id" ref="model_mk_transport_management"/>
+<field name="domain_force">
+
+      [('request_id.student_id.mosq_id.center_department_id.female_managers.user_id.id','in',[user.id])]
+
+</field>
+
+<field name="groups" eval="[(4, ref('mk_users.female_admin_center'))]"/>
+</record>
+
+<record model="ir.rule" id="transportation_request_female_center_rule">
+<field name="name">transportation request center rules</field>
+<field name="model_id" ref="model_transportation_request"/>
+<field name="domain_force">
+[('student_id.mosq_id.center_department_id.female_managers.user_id.id','in',[user.id])]
+</field>
+<field name="groups" eval="[(4, ref('mk_users.female_admin_center'))]"/>
+</record>
+
+
+
+<record model="ir.rule" id="apology_request_female_center_rule">
+<field name="name">apology request center rules</field>
+<field name="model_id" ref="model_apology_request"/>
+<field name="domain_force">
+[('student_id.mosq_id.center_department_id.female_managers.user_id.id','in',[user.id])]
+</field>
+<field name="groups" eval="[(4, ref('mk_users.female_admin_center'))]"/>
+</record>
+
+
+
+<record model="ir.rule" id="mk_attendance_students_female_center_rule">
+<field name="name">mk attendance students center rules</field>
+<field name="model_id" ref="model_mk_attendance_students"/>
+<field name="domain_force">
+[('mosque_id.center_department_id.female_managers.user_id.id','in',[user.id])]
+</field>
+<field name="groups" eval="[(4, ref('mk_users.female_admin_center'))]"/>
+
+</record>
+
+<record model="ir.rule" id="vehicle_records_female_center_rule">
+<field name="name">vehicle records center rules</field>
+<field name="model_id" ref="model_vehicle_records"/>
+<field name="domain_force">
+[('mosque.center_department_id.female_managers.user_id.id','in',[user.id])]
+</field>
+<field name="groups" eval="[(4, ref('mk_users.female_admin_center'))]"/>
+</record>
+
+<!-- male admin center record rules -->
+<record model="ir.rule" id="transport_management_male_rule">
+<field name="name">transport management center rules</field>
+<field name="model_id" ref="model_mk_transport_management"/>
+<field name="domain_force">
+
+      [('request_id.student_id.mosq_id.center_department_id.male_managers.user_id.id','in',[user.id])]
+
+</field>
+
+<field name="groups" eval="[(4, ref('mk_users.male_admin_center'))]"/>
+</record>
+
+<record model="ir.rule" id="transportation_request_male_rule">
+<field name="name">transportation request center rules</field>
+<field name="model_id" ref="model_transportation_request"/>
+<field name="domain_force">
+[('student_id.mosq_id.center_department_id.male_managers.user_id.id','in',[user.id])]
+</field>
+<field name="groups" eval="[(4, ref('mk_users.male_admin_center'))]"/>
+</record>
+
+
+
+<record model="ir.rule" id="apology_request_male_rule">
+<field name="name">apology request center rules</field>
+<field name="model_id" ref="model_apology_request"/>
+<field name="domain_force">
+[('student_id.mosq_id.center_department_id.male_managers.user_id.id','in',[user.id])]
+</field>
+<field name="groups" eval="[(4, ref('mk_users.male_admin_center'))]"/>
+</record>
+
+
+
+<record model="ir.rule" id="mk_attendance_students_male_rule">
+<field name="name">mk attendance students center rules</field>
+<field name="model_id" ref="model_mk_attendance_students"/>
+<field name="domain_force">
+[('mosque_id.center_department_id.male_managers.user_id.id','in',[user.id])]
+</field>
+<field name="groups" eval="[(4, ref('mk_users.male_admin_center'))]"/>
+
+</record>
+
+<record model="ir.rule" id="vehicle_records_male_rule">
+<field name="name">vehicle records center rules</field>
+<field name="model_id" ref="model_vehicle_records"/>
+<field name="domain_force">
+[('mosque.center_department_id.male_managers.user_id.id','in',[user.id])]
+</field>
+<field name="groups" eval="[(4, ref('mk_users.male_admin_center'))]"/>
+</record>
+
+</data>
+</openerp>

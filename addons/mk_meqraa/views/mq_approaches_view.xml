@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record id="mq_open_mk_approaches_action" model="ir.actions.act_window">
+            <field name="name">مناهج المقراة</field>
+            <field name="res_model">mk.approaches</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('program_type','=','open'),('is_approache_meqraa', '=', 'True')]</field>
+            <field name="context">{'default_program_type':'open', 'default_is_approache_meqraa':'True'}</field>
+            <field name="search_view_id" ref="mk_program_management.mk_approaches_search_view"/>
+        </record>
+	</data>
+</odoo>

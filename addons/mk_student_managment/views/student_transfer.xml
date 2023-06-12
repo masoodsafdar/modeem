@@ -1,0 +1,56 @@
+<odoo>
+	<data>
+    <!-- explicit list view definition -->
+    
+		<record model="ir.ui.view" id="mk_internal_transfer_list">
+			<field name="name">Mk.Student.transfer list</field>
+			<field name="model">mk.internal_transfer</field>
+			<field name="arch" type="xml">
+				<tree>
+					<field name="student"/>
+					<field name="to_episode"/>
+					<field name="from_episode"/>
+				</tree>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="mk_internal_transfer_form">
+			<field name="name">Mk.Student.transfer form</field>
+			<field name="model">mk.internal_transfer</field>
+			<field name="arch" type="xml">
+	        	<form string="Students internal transfer">
+	           		<header>
+	                   	<button name="action_reject"          type="object" string="Reject"       attrs="{'invisible':['|',('state', '!=', 'draft')]} " groups="mk_student_managment.accept_or_deny_internal_students_transfer"/>
+	                   	<button name="action_accept_transfer" type="object" string="Accept"       attrs="{'invisible':['|',('state', '!=', 'draft')]}"  groups="mk_student_managment.accept_or_deny_internal_students_transfer"/>
+						<button name="action_draft"           type="object" string="set as draft" attrs="{'invisible':[('state', '=', 'draft')]}"       groups="mk_student_managment.accept_or_deny_internal_students_transfer"/>
+	                   	<field name="state" widget="statusbar"/> 
+	                </header>
+	            	<sheet>
+	              		<group>
+	                		<group>
+				                <group colspan="2">
+				                    <field name="student" colspan="1" options="{'no_create': 1, 'no_open': 1}" domain="[('student_id','=',student_id)]"/>
+				                    <field name="year"                options="{'no_create': 1, 'no_open': 1}"/>
+				                    <field name="study_class_id"      options="{'no_create': 1, 'no_open': 1}"/>
+				                    <field name="from_episode"        options="{'no_create': 1, 'no_open': 1}"/>
+				                    <field name="to_episode"          options="{'no_create': 1, 'no_open': 1}"/>
+				                    <field name="student_id"          options="{'no_create': 1, 'no_open': 1}" invisible="1"/>
+				             	</group>
+	          				</group>
+	            		</group>
+	            	</sheet>
+	        	</form>
+			</field>
+		</record>
+
+		<record id="action_internal_transfer" model="ir.actions.act_window">
+			<field name="name">student internal transfer</field>
+			<field name="res_model">mk.internal_transfer</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+    
+		<menuitem name="Student managment"          id="mk_student_managment.menu_root" web_icon="web_rtl,static/src/img/calsses.png" />
+		<!-- menuitem name="Students internal transfer" id="student_internal_transfer_menu" parent="mk_student_register.student_management_view_menu" action="action_internal_transfer"/-->
+	
+	</data>
+</odoo>

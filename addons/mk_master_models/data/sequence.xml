@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="sequence_mk_mosque_category" model="ir.sequence">
+            <field name="name">Mosque Category Sequence</field>
+            <field name="code">mosque.category</field>
+            <field name="prefix">0</field>
+            <field name="padding">4</field>
+            <field name="number_next">1</field>
+            <field name="number_increment">1</field>
+        </record>
+        <record id="sequence_country_state" model="ir.sequence">
+            <field name="name">Counrty State Sequence</field>
+            <field name="code">res.country.state</field>
+            <field name="prefix">0</field>
+            <field name="padding">4</field>
+            <field name="number_next">1</field>
+            <field name="number_increment">1</field>
+        </record>
+        <record id="sequence_hr_department_category" model="ir.sequence">
+            <field name="name">Hr Department Category Sequence</field>
+            <field name="code">hr.department.category</field>
+            <field name="prefix"></field>
+            <field name="padding">5</field>
+            <field name="number_next">1</field>
+            <field name="number_increment">1</field>
+        </record>
+        <record id="mk_building_type_serial" model="ir.sequence">
+            <field name="name">mk building type</field>
+            <field name="code">mk.building.type.serial</field>
+            <field name="padding">4</field>
+            <field name="prefix">0</field>
+            <field name="company_id" eval="False"/>
+        </record>
+    </data>
+</odoo>

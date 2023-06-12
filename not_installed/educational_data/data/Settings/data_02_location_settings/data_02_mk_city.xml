@@ -1,0 +1,15 @@
+<odoo>
+    <data noupdate="1">
+        <record id="mk_city1" model="res.country.state">
+            <field name="name">الرياض</field>
+            <field name="code">RI</field>
+            <field name="enable" eval="True"/>
+            <field name="area_id" ref="mk_area1"/>
+            <field name="district_id" eval="False"/>
+            <field name="country_id" ref="base.sa"/>
+            <field name="longitude">24.774265</field>
+            <field name="latitude">46.738586</field>
+            <field name="type_location">city</field>
+        </record>
+    </data>
+</odoo>

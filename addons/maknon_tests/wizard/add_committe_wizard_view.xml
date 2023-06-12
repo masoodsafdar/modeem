@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record id="committe_migration_wizard_view_form" model="ir.ui.view">
+		<field name="name">add.comittee.wizard.form</field>
+		<field name="model">add.comittee.wizard</field>
+		<field name="arch" type="xml">
+			<form string="Add Committee">
+				<group>
+					<field name="msg_error" col="2"  readonly="1" nolabel="1" style="color:red;font-weight:bold" attrs="{'invisible': [('msg_error','=',False)]}"/>
+				</group>
+				<group>
+					<group>
+	                	<p style="color:red">يتم اختيار المعلم من ضمن قائمة لجان الاختبار بواسطة المركز الرئيسي للاختبار</p>
+	                </group>
+					<group>
+						<field name="session_ids" invisible="1"/>
+						<field name="committee_id" options="{'no_create': True}" attrs="{'readonly':[('msg_error','!=',False)]}"/>
+					</group>
+				</group>
+				<p class="oe_grey"></p>
+				<footer>
+					<button name="process_add" string="Add" type="object" default_focus="1" class="oe_highlight" />
+					<button string="Cancel" class="btn-default" special="cancel"/>
+				</footer>
+			</form>
+		</field>
+	</record>
+
+    <record id="action_student_migration_wizard" model="ir.actions.server">
+        <field name="name">Add Committee Member</field>
+        <field name="model_id" ref="model_student_test_session"/>
+        <field name="binding_model_id" ref="model_student_test_session"/>
+        <field name="state">code</field>
+        <field name="code">action = records.assign_committee()</field>
+    </record>
+</odoo>

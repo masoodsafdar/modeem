@@ -1,0 +1,687 @@
+<odoo>
+    <data>
+        <!-- =====================================================
+                                    WIZARD
+             ===================================================== -->
+
+        <record id="permision_wizerd_list" model="ir.ui.view">
+            <field name="name">Pemision</field>
+            <field name="model">perm.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Supervisior List ">
+                    <group col="4" colspan="4">
+                        <field name="active_id" invisible="1"/>
+                        <field name="employee_id"/>
+                    </group>
+
+                    <footer>
+                        <button name="yes" type="object" string="yes" class="oe_highlight"/>
+                        <button string="no" class="oe_link" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="wizard_sup_list_action" model="ir.actions.act_window">
+            <field name="name"></field>
+            <field name="res_model">perm.wizard</field>
+            <field name="binding_view_types">form</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="permision_wizerd_list"/>
+            <field name="target">new</field>
+        </record>
+
+        <!-- =====================================================
+                               PERMISSION MOSQUE
+             ===================================================== -->
+
+        <record id="mk_mosque_perm_tree_view" model="ir.ui.view">
+            <field name="name">mosque permision Tree View</field>
+            <field name="model">mosque.permision</field>
+            <field name="arch" type="xml">
+                <tree delete="0" string="mosque Pemision">
+                    <field name="masjed_id"      required="True"/>
+                    <field name="area_id"/>
+                    <field name="district_id"/>
+                    <field name="type_process"/>
+                    <field name="permision_date" string="تاريخ التصريح"/>
+                    <field name="permision_type" string="نوع التصريح"/>
+                    <field name="mosque_type"    string="الإجراء" invisible="1"/>
+                    <field name="state"          string="الحالة"/>
+                    <field name="remain" invisible="1"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="mk_mosque_perm_form_view" model="ir.ui.view">
+            <field name="name">mosque Perm Form View</field>
+            <field name="model">mosque.permision</field>
+            <field name="arch" type="xml">
+                <form string = "mosque Permision " delete="false">
+                    <header>
+                    	<button name="action_valid"    string="إعتماد"              type="object" class="btn btn-primary btn-sm" attrs="{'invisible':[('is_valid','=',True)]}"                                                                                       groups="mk_episode_management.action_validation_mosque_permision"/>
+                    	<button name="action_unvalid"  string="إلغاء إعتماد"        type="object"                                attrs="{'invisible':[('is_valid','!=',True)]}"                                                                                      groups="mk_episode_management.action_unvalid_mosque_permision"/>
+                        <button name="review"          string="Supervisor Review"   type="object" class="btn btn-sm oe_button" attrs="{'invisible':['|',('state', 'in', ('renew','review','accept','reject','tajmeed','new','test')),('type_process','=','exist')]}" groups="mk_episode_management.supervisor_visit_mosque_permision"/>
+                        <button name="wait_test"       string="Awaiting Test"       type="object" class="btn btn-sm oe_button" attrs="{'invisible':['|',('state', 'in', ('draft','renew','accept','reject','tajmeed','new','test')),('test_select','!=','test_slc')]}"/>
+                        <button name="renew_validate"  string="Temporary Permision" type="object" class="btn btn-sm oe_button" attrs="{'invisible':['|',('state', 'in', ('draft','renew','accept','reject','tajmeed','new')),('type_process','=','exist')]}"         groups="mk_episode_management.temporary_mosque_permision"/>
+                        <button name="except_per"      string="Exceptions"          type="object" class="btn btn-sm oe_button" attrs="{'invisible':['|',('state', 'in', ('draft','review','accept','reject','tajmeed','new','test')),('type_process','=','exist')]}" groups="mk_episode_management.exption_mosque_permision"/>
+                        <button name="transfer"        string="Transfer"            type="object" class="btn btn-sm oe_button" attrs="{'invisible':['|',('state', 'in', ('draft','review','reject','tajmeed','new','test'))]}"                                       groups="mk_episode_management.transfer_mosque_permision"/>
+                        <button name="renew"           string="Renew"               type="object" class="btn btn-sm oe_button" attrs="{'invisible':['|',('state', 'in', ('draft','review','reject','renew','tajmeed','new','test'))]}"                               groups="mk_episode_management.renew_mosque_permision"/>
+<!--                        <button name="frize"           string="Frize"               type="object" class="btn btn-sm oe_button" attrs="{'invisible':['|',('state', 'in', ('draft','review','reject','renew','tajmeed','test'))]}"                                     groups="mk_episode_management.frize_mosque_permision"/>-->
+                        <button name="reject_validate" string="reject"              type="object" class="btn btn-sm oe_button" attrs="{'invisible':['|',('state', 'in', ('draft','review','reject'))]}"                                                              groups="mk_episode_management.reject_mosque_permision"/>
+                        <button name="draft_validate" string="ارجاع الي مبدئي"      type="object" class="btn btn-sm oe_button" attrs="{'invisible':[('state','!=','reject')]}"     groups="mk_episode_management.set_draft_mosque_permision"/>
+                        <field name="state" widget="statusbar" statusbar_visible="draft,renew,review,test,accept,new,tajmeed,reject"/>
+                    </header>
+
+                    <sheet>
+                    	<group>
+	                    	<group>
+	                            <field name="type_process"  required="1" attrs="{'readonly': [('is_valid','=',True)]}"/>
+	                            <field name="masjed_id"     required="1" attrs="{'readonly': [('is_valid','=',True)]}" options="{'no_create': 1, 'no_open': 1}" domain="[('gender_mosque','=',categ_type)]"/>
+	                            <field name="register_code" string="كود المسجد/ المدرسة"/>
+	                            <field name="categ_id"      required="1" attrs="{'readonly': [('is_valid','=',True)]}" options="{'no_create': 1, 'no_open': 1}"/>
+	                            <field name="episode_value" required="1" attrs="{'readonly': [('is_valid','=',True)]}"/>
+	                            <field name="episodes"      required="1" attrs="{'readonly': [('is_valid','=',True)]}"/>
+	                            <field name="categ_type"    invisible="1" force_save="1"/>
+	                            <field name="perm_type"     invisible="1" force_save="1"/>
+	                            <field name="test_select"   invisible="1"/>
+	                            <field name="is_valid"      invisible="1"/>
+	                    	</group>
+	                    	<group>
+	                    		<field name="date_request"               attrs="{'readonly': [('is_valid','=',True)]}"/>
+	                    		<field name="center_id"     required="1" options="{'no_create': 1, 'no_open': 1}"/>
+	                    		<field name="area_id"                    attrs="{'readonly': [('is_valid','=',True)]}" options="{'no_create': 1, 'no_open': 1}"/>
+	                    		<field name="city_id"                    attrs="{'readonly': [('is_valid','=',True)]}" options="{'no_create': 1, 'no_open': 1}"/>
+	                    		<field name="district_id"   required="1" attrs="{'readonly': [('is_valid','=',True)]}" options="{'no_create': 1, 'no_open': 1}"/>
+	                    		<field name="build_type"                 attrs="{'readonly': [('is_valid','=',True)]}" options="{'no_create': 1, 'no_open': 1}"/>
+	                    		<field name="check_maneg_mosque"         attrs="{'readonly': [('is_valid','=',True)]}"/>
+	                    		<field name="check_parking_mosque"       attrs="{'readonly': [('is_valid','=',True)]}"/>
+	                    	</group>
+                    	</group>
+
+                        <notebook>
+                            <page string="Permission Info">
+                                <group col="4">
+                                    <field name="permision_date" string="تاريخ التصريح" attrs="{'readonly': [('is_valid','=',True)]}"/>
+                                    <field name="permision_type" string="نوع التصريح"   attrs="{'readonly': [('is_valid','=',True)]}"/>
+                                    <field name="hijri_permision_date"     invisible="1"/>
+                                    <field name="hijri_permision_end_date" invisible="1"/>
+                                    <field name="permision_end_date" string="تاريخ إنتهاء التصريح"/>
+                                    <field name="mosque_type"        string="الإجراء"  invisible="1" groups="mk_episode_management.action_validation_mosque_permision"/>
+                                    <field name="attach_no"/>
+                                    <field name="remain" invisible="1"/>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="mk_mosque_perm_search_view" model="ir.ui.view">
+            <field name="name">mosque Search View</field>
+            <field name="model">mosque.permision</field>
+            <field name="arch" type="xml">
+                <search string="mosque">
+                	<field name="masjed_id"/>
+                	<field name="register_code" string="كود المسجد/ المدرسة"/>
+                    <field name="area_id"/>
+                	<field name="center_id"/>
+                	<field name="district_id"/>
+                	<field name="attach_no"/>
+                    <field name="permision_date"/>
+                    <field name="permision_type"/>
+                    <field name="type_process"/>
+                    <field name="categ_id"/>
+                    <field name="remain"/>
+                    <field name="remain"/>
+                    <field name="permision_end_date"/>
+                    <field name="categ_type"/>
+
+                    <filter name="new"                        string="جديد"     		  domain="[('type_process','=','new')]"/>
+                    <filter name="exist"                      string="تجديد"    		  domain="[('type_process','=','exist')]"/>
+                    <separator/>
+                    <filter name="mo"                         string="صباحية"             domain="[('episode_value','=','mo')]"/>
+                    <filter name="ev"                         string="مسائية"             domain="[('episode_value','=','ev')]"/>
+                    <separator/>
+                    <filter name="finished_mosq_permission"   string="التصاريح المنتهية"                               domain="[('permision_end_date','&lt;',context_today().strftime('%Y-%m-%d') )]"/>
+                    <filter name="almost_finished_mosq_permission"   string="التصاريح المقاربة للنهاية (3 أشهر وأقل)"  domain="[('permision_end_date','&gt;',context_today().strftime('%Y-%m-%d') ),
+                                                                                                                                 ('permision_end_date','&lt;=',(context_today()+relativedelta(days=90)).strftime('%Y-%m-%d') )]"/>
+                    <separator/>
+                    <filter name="check_maneg_mosque_vaild"   string="توجد ادارة للحلقات" domain="[('check_maneg_mosque','=',True)]"/>
+                    <separator/>
+                    <filter name="check_parking_mosque_vaild" string="يوجد موقف"          domain="[('check_parking_mosque','=',True)]"/>
+                    <separator/>
+                    <filter name="pe"               string="دائم"                         domain="[('permision_type','=','pe')]"/>
+                    <filter name="te"               string="مؤقت"                         domain="[('permision_type','=','te')]"/>
+                    <separator/>
+                    <!-- <filter name="mosque" string="مسجد" domain="[('categ_type','=','male')]"/> -->
+                    <!-- <filter name="school" string="مدرسة" domain="[('categ_type','=','female')]"/> -->
+                    <separator/>
+                    <filter name="perm_valid"     string="معتمد"     domain="[('valid_state','=','valid')]"/>
+                    <filter name="perm_not_valid" string="غير معتمد" domain="[('valid_state','=','not_valid')]"/>
+                    <separator/>
+                    <filter name="mosque_type1"     string="مبدئي"              domain="[('state','=','draft')]"/>
+                    <filter name="mosque_type2"     string="زيارة مشرف تربوي"   domain="[('state','=','review')]"/>
+                    <filter name="mosque_type3"     string="اختبار"             domain="[('state','=','test')]"/>
+                    <filter name="mosque_type4"     string="تصريح مؤقت"         domain="[('state','=','renew')]"/>
+                    <filter name="mosque_type1"     string="تصريح دائم"         domain="[('state','=','accept')]"/>
+                    <filter name="mosque_type2"     string="تجديد"  			domain="[('state','=','new')]"/>
+                    <filter name="mosque_type3"     string="تجميد"              domain="[('state','=','tajmeed')]"/>
+                    <filter name="mosque_type4"     string="مرفوض"              domain="[('state','=','reject')]"/>
+
+                    <group expand="1" string="Group By">
+	                    <filter name="group_area"         string="المنطقة" context="{'group_by': 'area_id'}"/>
+	                    <filter name="group_city"         string="المدينة" context="{'group_by': 'city_id'}"/>
+	                    <filter name="group_district"     string="الحي"    context="{'group_by': 'district_id'}"/>
+	                    <filter name="group_center"       string="المركز"  context="{'group_by': 'center_id'}"/>
+	                    <filter name="group_mosque"       string="المسجد"  context="{'group_by': 'masjed_id'}"/>
+	                    <filter name="group_period_type"  string="نوع التصريح" context="{'group_by': 'permision_type'}"/>
+	                    <filter name="group_type_process" string="النوع"   	   context="{'group_by': 'type_process'}"/>
+	                    <filter name="group_categ_type"   string="مسجد/مدرسة"   context="{'group_by': 'categ_type'}"/>
+	                    <filter name="group_categ"        string="الفئة"       context="{'group_by': 'categ_id'}"/>
+	                    <filter name="group_state"        string="الحالة"  	   context="{'group_by': 'state'}"/>
+	                    <filter name="group_valid_state"  string="Valid State"  context="{'group_by': 'valid_state'}"/>
+	                    <filter name="group_action"       string="الإجراء"      context="{'group_by': 'mosque_type'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <menuitem id="mk_permision" parent="mk_episode_management_menu" name="Mosque Permision"/>
+
+        <record id="mk_mosque_permission_action" model="ir.actions.act_window">
+            <field name="name">تصاريح المساجد</field>
+            <field name="res_model">mosque.permision</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="binding_view_types">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('perm_type','=','mosque_perm')]</field>
+            <field name="context">{'default_perm_type': 'mosque_perm','default_categ_type': 'male'}</field>
+            <field name="view_id" ref="mk_mosque_perm_tree_view"/>
+        </record>
+
+        <menuitem id="mk_mosque_menu_mosque_perm" name="تصاريح المساجد" parent="mk_permision" action="mk_mosque_permission_action"
+                  groups="mk_episode_management.read_mosque_permision,mk_episode_management.create_mosque_permision,mk_episode_management.edit_mosque_permision"/>
+
+        <record id="mk_school_permission_action" model="ir.actions.act_window">
+            <field name="name">تصاريح المدارس</field>
+            <field name="res_model">mosque.permision</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="binding_view_types">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('perm_type','=','school_perm')]</field>
+            <field name="context">{'default_perm_type': 'school_perm','default_categ_type': 'female'}</field>
+            <field name="view_id" ref="mk_mosque_perm_tree_view"/>
+        </record>
+        <menuitem id="mk_mosque_menu_school_perm" name="تصاريح المدارس" parent="mk_permision" action="mk_school_permission_action"
+                  groups="mk_episode_management.read_mosque_permision,mk_episode_management.create_mosque_permision,mk_episode_management.edit_mosque_permision"/>
+
+
+        <!-- =====================================================
+                                   MOSQUE EVAL
+             ===================================================== -->
+
+        <record id="mk_mosque_eval_tree_view" model="ir.ui.view">
+            <field name="name">mosque evalution Tree View</field>
+            <field name="model">mosque.eval</field>
+            <field name="arch" type="xml">
+                <tree delete="0" string="mosque Evalution">
+                    <field name="start_date"/>
+                    <field name="end_date"/>
+                    <field name="eval_degree"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="mk_mosque_eval_form_view" model="ir.ui.view">
+            <field name="name">mosque Form View</field>
+            <field name="model">mosque.eval</field>
+            <field name="arch" type="xml">
+                <form string="Mosque Evalution ">
+                    <sheet>
+                        <group>
+                            <field name="start_date"/>
+                            <field name="end_date"/>
+                            <field name="eval_degree"/>
+                        </group>
+
+                        <notebook>
+                            <page string="Evalution">
+                                <field name="eval_ids">
+                                    <tree editable="bottom">
+
+                                        <field name="item"/>
+                                        <field name="evaluation"/>
+                                        <field name="degree"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="mosque_eval_search" model="ir.ui.view">
+            <field name="name">mosque eval search View</field>
+            <field name="model">mosque.eval</field>
+            <field name="arch" type="xml">
+                <search>
+	            	<field name="start_date"/>
+	                <field name="end_date"/>
+	                <field name="eval_degree"/>
+	                <field name="eval_ids"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="mk_mosque_eval_action" model="ir.actions.act_window">
+            <field name="name">mosque evalution</field>
+            <field name="res_model">mosque.eval</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="binding_view_types">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+            <field name="view_id" ref="mk_mosque_eval_tree_view"/>
+        </record>
+
+        <menuitem id="mk_mosque_menu_eval" sequence="9" parent="mk_permision" action="mk_mosque_eval_action" groups="mk_episode_management.create_mosque_eval"/>
+
+        <!-- =====================================================
+                             MOSQUE EVAL LOCATION
+             ===================================================== -->
+
+        <record id="mk_mosque_loction_tree_view" model="ir.ui.view">
+            <field name="name">mosque Location Tree View</field>
+            <field name="model">mosque.eval.location</field>
+            <field name="arch" type="xml">
+                <tree delete="0" string="Mosque Evalution Location">
+                    <field name="start_date"/>
+                    <field name="end_date"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="mk_mosque_loction_form_view" model="ir.ui.view">
+            <field name="name">mosque Form View</field>
+            <field name="model">mosque.eval.location</field>
+            <field name="arch" type="xml">
+                <form string="Mosque Evalution Location ">
+                    <sheet>
+                        <group>
+                            <field name="start_date"/>
+                            <field name="end_date"/>
+                        </group>
+
+                        <notebook>
+                            <page string="Item">
+                                <field name="item_ids">
+                                    <tree editable="bottom">
+                                        <field name="item"/>
+                                        <field name="item_type"/>
+                                        <field name="item_important"/>
+                                        <field name="eval_calculate"/>
+                                        <field name="degree" attrs="{'invisible':[('eval_calculate', '!=', 'degree')]}"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="mosque_eval_location_search" model="ir.ui.view">
+            <field name="name">mosque eval location search View</field>
+            <field name="model">mosque.eval.location</field>
+            <field name="arch" type="xml">
+                <search>
+	            	<field name="start_date"/>
+	                <field name="end_date"/>
+	                <field name="item_ids"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="mk_mosque_eval_location_action" model="ir.actions.act_window">
+            <field name="name">Mosque Location </field>
+            <field name="res_model">mosque.eval.location</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="binding_view_types">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+            <field name="view_id" ref="mk_mosque_loction_tree_view"/>
+        </record>
+
+        <menuitem id="mk_mosque_menu_eval_location" sequence="9" parent="mk_permision" action="mk_mosque_eval_location_action" groups="mk_episode_management.create_mosque_eval_location"/>
+
+        <!-- =====================================================
+                                MOSQUE SUPERVISOR
+             ===================================================== -->
+
+        <record id="mk_mosque_supervisior_form_view" model="ir.ui.view">
+            <field name="name">mosque  supervisior Form View</field>
+            <field name="model">mosque.supervisor</field>
+            <field name="arch" type="xml">
+                <form string="Supervision">
+                <header>
+                    <button name="get_supervisior" string="Search" type="object"/>
+                    <button name="%(wizard_sup_list_action)d" string="Supervisor List" type="action" context="{'default_active_id':active_id}" />
+                    <button name="action_waiting" string="في انتظار الرد"   type="object" attrs="{'invisible':['|',('state', 'in', ('done','waiting'))]}"   groups="mk_episode_management.action_validation_mosque_supervisor_request" class="btn btn-primary btn-sm"/>
+                    <button name="action_done"    string="تم الرد"          type="object" attrs="{'invisible':['|',('state', 'in', ('draft','done'))]}"     groups="mk_episode_management.action_validation_mosque_supervisor_request" class="btn btn-primary btn-sm"/>
+
+                    <field name="state" widget="statusbar"/>
+                </header>
+                    <sheet>
+                        <group>
+                            <field name="attach_no"/>
+                            <field name="start_date"/>
+                            <field name="end_date"/>
+                            <field name="attachment_ids" widget="many2many_binary"/>
+                        </group>
+
+                        <notebook>
+                            <page string="Supervisor">
+                                <field name="line_ids">
+                                    <tree editable="bottom">
+                                        <field name="center_id"   options="{'no_create': True,'no_open': True,}"/>
+                                        <field name="mosque_id"   options="{'no_create': True,'no_open': True,}"/>
+                                        <field name="employee_id" options="{'no_create': True,'no_open': True,}"/>
+                                        <field name="id_supervisor"/>
+                                        <field name="attachment_ids" string="المرفقات" widget="many2many_binary"/>
+                                        <field name="state"			 string="الحالة"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="mk_mosque_supervisior_tree_view" model="ir.ui.view">
+            <field name="name">mosque Supervisor Tree View</field>
+            <field name="model">mosque.supervisor</field>
+            <field name="arch" type="xml">
+                <tree delete="0" string="Mosque Supervisor">
+                    <field name="attach_no"/>
+                    <field name="start_date"/>
+                    <field name="end_date"/>
+                </tree>
+            </field>
+        </record>
+
+      <record id="mosque_supervisor_search" model="ir.ui.view">
+            <field name="name">mosque.supervisor search View</field>
+            <field name="model">mosque.supervisor</field>
+            <field name="arch" type="xml">
+                <search>
+	            	<field name="attach_no"/>
+	                <field name="start_date"/>
+	                <field name="end_date"/>
+	                <field name="line_ids"/>
+	                <separator/>
+                    <filter name="draft"   string="في انتظار الرفع"  domain="[('state','=','draft')]"/>
+                    <filter name="waiting" string="في انتظار الرد"   domain="[('state','=','waiting')]"/>
+                    <filter name="done"    string="تم الرد"          domain="[('state','=','done')]"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="mk_mosque_supervisior_action" model="ir.actions.act_window">
+            <field name="name">Supervisor Report</field>
+            <field name="res_model">mosque.supervisor</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="binding_view_types">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+            <field name="view_id" ref="mk_mosque_supervisior_tree_view"/>
+        </record>
+        <menuitem id="mk_mosque_menu_supervisior_report" parent="mk_permision" action="mk_mosque_supervisior_action" groups="mk_episode_management.create_mosque_permision"/>
+
+        <!-- =====================================================
+                            MOSQUE SUPERVISOR Line
+             ===================================================== -->
+
+        <record id="mosque_supervisior_line_tree" model="ir.ui.view">
+            <field name="name">mosque Supervisor Line Tree View</field>
+            <field name="model">mosque.supervisor.line</field>
+            <field name="arch" type="xml">
+	            <tree editable="bottom" create="0" delete="0">
+	            	<field name="line_id"       readonly="1" string="رقم المعاملة"/>
+	                <field name="center_id"     readonly="1"/>
+	                <field name="mosque_id"     readonly="1"/>
+	                <field name="employee_id"   readonly="1"/>
+	                <field name="id_supervisor" readonly="1"/>
+	                <field name="state"         string="الحالة"/>
+	            </tree>
+            </field>
+        </record>
+
+        <record id="mosque_supervisior_line_search" model="ir.ui.view">
+            <field name="name">mosque Supervisor Line search View</field>
+            <field name="model">mosque.supervisor.line</field>
+            <field name="arch" type="xml">
+                <search string="معاملات مشرفي المساجد">
+	            	<field name="line_id" string="رقم المعاملة"/>
+	                <field name="center_id"/>
+	                <field name="mosque_id"/>
+	                <field name="employee_id"/>
+	                <field name="id_supervisor"/>
+	                <field name="state"/>
+
+                    <filter name="filter_accept" string="مقبول" domain="[('state','=','accept')]"/>
+                    <filter name="filter_reject" string="مرفوض" domain="[('state','=','reject')]"/>
+                    <filter name="filter_block"  string="محظور" domain="[('state','=','block')]"/>
+
+                    <group expand="1" string="Group By">
+	                    <filter name="group_line"     string="رقم المعاملة" context="{'group_by': 'line_id'}"/>
+	                    <filter name="group_center"   string="المركز"       context="{'group_by': 'center_id'}"/>
+	                    <filter name="group_mosque"   string="المسجد"       context="{'group_by': 'mosque_id'}"/>
+	                    <filter name="group_employee" string="المشرف"       context="{'group_by': 'employee_id'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record id="action_mosque_supervisior_line" model="ir.actions.act_window">
+            <field name="name">معاملات مشرفي المساجد</field>
+            <field name="res_model">mosque.supervisor.line</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="binding_view_types">form</field>
+            <field name="view_mode">tree</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+            <field name="view_id" ref="mosque_supervisior_line_search"/>
+        </record>
+        <menuitem id="mosque_supervisior_lines_menu" parent="mk_permision" action="action_mosque_supervisior_line" groups="mk_episode_management.create_mosque_permision"/>
+
+        <!-- =====================================================
+                           MOSQUE SUPERVISOR REQUEST
+             ===================================================== -->
+
+        <record id="mk_mosque_supervisior_request_tree_view" model="ir.ui.view">
+            <field name="name">mosque Supervisor Tree View</field>
+            <field name="model">mosque.supervisor.request</field>
+            <field name="arch" type="xml">
+                <tree delete="0" string="Mosque Supervisor Request">
+                    <field name="center_id"   options="{'no_create': True,'no_open': True,}"/>
+                    <field name="mosque_id"   options="{'no_create': 1, 'no_open': 1}"/>
+                    <field name="employee_id" options="{'no_create': True,'no_open': True,}"/>
+                    <field name="identification_id"/>
+                    <field name="permision_type" string="نوع التكليف"/>
+                    <field name="date_request"/>
+                    <field name="permision_end_date"/>
+                    <field name="super_type"     string="الإجراء" invisible="1"/>
+                    <field name="state"          string="الحالة"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="mk_mosque_admin_request_tree_view" model="ir.ui.view">
+            <field name="name">mosque Admin Tree View</field>
+            <field name="model">mosque.supervisor.request</field>
+            <field name="arch" type="xml">
+                <tree delete="0" string="Mosque Admin Request">
+                    <field name="center_id"   options="{'no_create': True,'no_open': True,}"/>
+                    <field name="mosque_id"   options="{'no_create': 1, 'no_open': 1}"/>
+                    <field name="mosque_admin_id" options="{'no_create': True,'no_open': True,}"/>
+                    <field name="admin_identification_id" readonly="1"/>
+                    <field name="permision_type" string="نوع التكليف"/>
+                    <field name="date_request"/>
+                    <field name="permision_end_date"/>
+                    <field name="super_type"     string="الإجراء" invisible="1"/>
+                    <field name="state"          string="الحالة"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="mk_mosque_supervisior_request_form_view" model="ir.ui.view">
+            <field name="name">mosque  admin request Form View</field>
+            <field name="model">mosque.supervisor.request</field>
+            <field name="arch" type="xml">
+                <form string="Admin Request" delete="0">
+                    <header>
+                    	<button name="action_valid"   string="إعتماد"         type="object" attrs="{'invisible':['|',('is_valid','=',True),('state', 'in', ('draft','block','reject','waiting'))]}"  groups="mk_episode_management.action_validation_mosque_supervisor_request" class="btn btn-primary btn-sm"/>
+                    	<button name="action_unvalid" string="إلغاء إعتماد"   type="object" attrs="{'invisible':['|',('is_valid','=',False),('state', 'in', ('draft','block','reject','accept','waiting'))]}" groups="mk_episode_management.action_unvalid_mosque_supervisor_request"/>
+                    	<button name="action_waiting" string="في انتظار الرد" type="object" attrs="{'invisible':[('state', 'in', ('accept','block','reject','waiting'))]}"        groups="mk_episode_management.action_validation_mosque_supervisor_request" class="btn btn-primary btn-sm"/>
+                    	<button name="action_accept"  string="قبول"           type="object" attrs="{'invisible':[('state', 'in', ('draft','block','reject','accept'))]}"          groups="mk_episode_management.action_validation_mosque_supervisor_request" class="btn btn-primary btn-sm"/>
+                    	<button name="action_reject"  string="رفض"            type="object" attrs="{'invisible':[('state', 'in', ('draft','block','reject','accept'))]}"          groups="mk_episode_management.action_validation_mosque_supervisor_request" class="btn btn-primary btn-sm"/>
+                    	<button name="action_done"    string="انهاء"          type="object" attrs="{'invisible':[('state', '!=', 'accept')]}"                    groups="mk_episode_management.action_validation_mosque_supervisor_request" class="btn btn-primary btn-sm"/>
+                    	<button name="action_blocked" string="توقيف"          type="object" attrs="{'invisible':[('state', 'in', ('draft','block','waiting'))]}" groups="mk_episode_management.action_validation_mosque_supervisor_request" class="btn btn-primary btn-sm"/>
+                        <button name="action_draft" string="Return to initial" type="object" attrs="{'invisible':[('state', '!=', 'block' )]}" groups="mk_episode_management.action_validation_mosque_supervisor_request" class="btn btn-primary btn-sm"/>
+
+                        <field name="state" widget="statusbar"/>
+                    </header>
+                    <sheet>
+                         <div class="oe_button_box" name="button_box">
+                             <button name="toggle_active" type="object" class="oe_stat_button" icon="fa-archive">
+                                <field name="active" widget="boolean_button" options='{"terminology": "archive"}'/>
+                             </button>
+                             <button name="toggle_auto_renowell" type="object" class="oe_stat_button" icon="fa-archive">
+                                <field name="auto_renowell" widget="boolean_button" options='{"terminology": {"string_true": "تجديد تلقائي",
+                                                                                                              "hover_true": "غير قابل للتجديد",
+                                                                                                              "string_false": "غير قابل للتجديد",
+                                                                                                              "hover_false": "تجديد تلقائي"}}'/>
+                             </button>
+                        </div>
+                        <group>
+                        	<group>
+                        		<field name="categ_type"  required="1"  attrs="{'readonly': [('is_valid','=',True)]}"/>
+                        		<field name="center_id"   required="1"  attrs="{'readonly': [('is_valid','=',True)]}" options="{'no_create': 1, 'no_open': 1}"/>
+                        		<field name="mosque_id"   required="1"  attrs="{'readonly': [('is_valid','=',True)]}" options="{'no_create': 1, 'no_open': 1}"/>
+                        		<field name="mosque_ids"  invisible="1" attrs="{'readonly': [('is_valid','=',True)]}" options="{'no_create': 1, 'no_open': 1}" widget="many2many_tags"/>
+                        		<field name="employee_id"               attrs="{'readonly': [('is_valid','=',True)],'invisible':[('type_request','!=','supervisor_request')],'required':[('type_request','=','supervisor_request')]}" options="{'no_create': 1, 'no_open': 1}" domain="[('department_id','=',center_id),('category','=','admin')]" />
+                                <field name="identification_id"         attrs="{'invisible':[('type_request','!=','supervisor_request')]}"/>
+                                <field name="mosque_admin_id"           attrs="{'readonly': [('is_valid','=',True)],'invisible':[('type_request','!=','admin_request')],'required':[('type_request','=','admin_request')]}"           options="{'no_create': 1, 'no_open': 1}" domain="[('department_id','=',center_id),('category','=','supervisor')]" />
+                        	    <field name="admin_identification_id"   attrs="{'invisible':[('type_request','!=','admin_request')]}"/>
+                        	    <field name="is_valid" invisible="1"/>
+                        	</group>
+
+                        	<group>
+	                            <field name="date_request"   attrs="{'readonly': [('is_valid','=',True)]}" string="تاريخ التكليف"/>
+	                            <field name="permision_end_date" string="تاريخ نهاية التكليف"/>
+	                            <field name="permision_type" attrs="{'readonly': [('is_valid','=',True)]}" string="نوع التكليف"/>
+	                            <field name="super_type" invisible="1"/>
+	                            <field name="attachment_ids" widget="many2many_binary"/>
+	                            <field name="attach_no"/>
+                                <field name="type_request" invisible="1"/>
+                        	</group>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+						<field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+						<field name="message_ids"          widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="mk_mosque_super_requset_search_view" model="ir.ui.view">
+            <field name="name">super Search View</field>
+            <field name="model">mosque.supervisor.request</field>
+            <field name="arch" type="xml">
+                <search string="mosque">
+                	<field name="employee_id"/>
+                	<field name="center_id"/>
+                	<field name="mosque_id"/>
+                	<field name="identification_id"/>
+                	<field name="date_request"/>
+                	<field name="permision_end_date"/>
+                	<field name="attach_no"/>
+                	<field name="active"/>
+                	<field name="state"/>
+
+                    <separator/>
+                    <filter name="male"   				 string="مسجد"              domain="[('categ_type','=','male')]"/>
+                    <filter name="female" 			  	 string="مدرسة"             domain="[('categ_type','=','female')]"/>
+                     <separator/>
+                    <filter name="male"   				 string="دائم"              domain="[('permision_type','=','pe')]"/>
+                    <filter name="female" 				 string="مؤقت"              domain="[('permision_type','=','te')]"/>
+                    <separator/>
+                    <filter name="filter_inactive"          string="مؤرشفة"         domain="[('active','=',False)]"/>
+                    <separator/>
+                    <filter name="filter_vaild"          string="معتمد"             domain="[('is_valid','=',True)]"/>
+                    <filter name="filter_unvaild"        string="غير معتمد"         domain="[('is_valid','=',False)]"/>
+                    <separator/>
+                    <filter name="filter_draft"            string="مبدئي"         domain="[('state','=','draft')]"/>
+                    <filter name="filter_accept"           string="مقبول"         domain="[('state','=','accept')]"/>
+                    <filter name="filter_reject"           string="مرفوض"         domain="[('state','=','reject')]"/>
+                    <filter name="filter_done"           string="منتهي"         domain="[('state','=','done')]"/>
+                    <separator/>
+                     <filter name="filter_auto_renowell"   string="تجديد تلقائي"     domain="[('auto_renowell','=',True)]"/>
+                    <filter name="filter_no_auto_renowell" string="غير قابل للتجديد" domain="[('auto_renowell','=',False)]"/>
+                    <separator/>
+                    <filter name="finished_supervisor_request"        string="التكاليف المنتهية"                        domain="[('permision_end_date','&lt;',context_today().strftime('%Y-%m-%d') )]"/>
+                    <filter name="almost_finished_supervisor_request" string="التكاليف المقاربة للنهاية (3 أشهر وأقل)"  domain="[('permision_end_date','&gt;',context_today().strftime('%Y-%m-%d') ),
+                                                                                                                                 ('permision_end_date','&lt;=',(context_today()+relativedelta(days=90)).strftime('%Y-%m-%d') )]"/>
+
+                    <group expand="1" string="Group By">
+	                    <filter name="group_district"    string="المشرف"      context="{'group_by': 'employee_id'}"/>
+	                    <filter name="group_center"      string="المركز" 	  context="{'group_by': 'center_id'}"/>
+	                    <filter name="group_mosque"      string="المسجد" 	  context="{'group_by': 'mosque_id'}"/>
+	                    <filter name="group_employee_id" string="المشرف"  	  context="{'group_by': 'employee_id'}"/>
+
+	                    <filter name="group_period_type" string="نوع التكليف" context="{'group_by': 'permision_type'}"/>
+	                    <filter name="group_categ_type"  string="النوع"   	  context="{'group_by': 'categ_type'}"/>
+	                    <filter name="group_state"       string="الحالة"  	  context="{'group_by': 'state'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record id="mk_mosque_supervisior_request_action" model="ir.actions.act_window">
+            <field name="name">Supervisor Request</field>
+            <field name="res_model">mosque.supervisor.request</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="binding_view_types">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('type_request','=','supervisor_request')]</field>
+            <field name="context">{'default_type_request': 'supervisor_request'}</field>
+            <field name="view_id" ref="mk_mosque_supervisior_request_tree_view"/>
+        </record>
+
+        <menuitem id="mk_mosque_menu_supervisior_request" parent="mk_permision" sequence="11" action="mk_mosque_supervisior_request_action" groups="mk_episode_management.read_mosque_supervisor_requests,mk_episode_management.create_mosque_supervisor_requests,mk_episode_management.edit_mosque_supervisor_requests"/>
+
+        <record id="mk_mosque_admin_request_action" model="ir.actions.act_window">
+            <field name="name">Admin Request</field>
+            <field name="res_model">mosque.supervisor.request</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="binding_view_types">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('type_request','=','admin_request')]</field>
+            <field name="context">{'default_type_request': 'admin_request'}</field>
+            <field name="view_id" ref="mk_mosque_admin_request_tree_view"/>
+        </record>
+
+        <menuitem id="mk_mosque_menu_admin_request" parent="mk_permision" sequence="11" action="mk_mosque_admin_request_action" groups="mk_episode_management.read_mosque_supervisor_requests,mk_episode_management.create_mosque_supervisor_requests,mk_episode_management.edit_mosque_supervisor_requests"/>
+    </data>
+</odoo>

@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<openerp>
+		<data>
+			<record id="test_branche_form_view" model="ir.ui.view">
+			    <field name= "name">Test Branches</field>
+			    <field name= "model">mk.branches.master</field>
+			    <field name= "arch"  type="xml"> 
+			         <form  create="1" delete="1" edit="1">
+			             <sheet>
+			                <group>
+			                 	<group>
+			                 		<field name="name"/>
+			                 		<field name="order" string="branch order"/>
+			                 		<field name="test_name" options="{'no_open':1,'no_create':1}"/>
+			                 		<field name="parent_branch" domain="[('test_name','=',test_name)]" invisible="1"/>
+			                 	</group>
+			                 	
+			                 	<group>
+			                 		<field name="branch_group"/>
+			                 		<field name="job_id" attrs="{'invisible':[('branch_group','=','student')]}" widget="many2many_tags" options="{'no_open':1,'no_create':1}"/>
+			                 		<field name="age_fillter"/>
+									<field name="age_groups" widget="many2many_tags" attrs="{'invisible':[('age_fillter','=','open')],
+									                                                         'required':[('age_fillter','=','close')]}"
+									                                                 options="{'no_create': True, 'no_open':True}"/>
+			                 	</group>
+                            </group>
+
+			                <group>
+				                <group>
+									<field name="trackk"/>
+									<field name="parts_num"/>			                
+			                 		<field name="duration"/>
+			                 		<field name="maximum_degree"/>
+			                 		<field name="minumim_degree"/>
+			                 		<field name="round_frag" string="جبر الكسر لاعلي"/>
+				                </group>			                      
+			                 	<group>
+			        				<field name="contsets"/>
+			                 		<field name="courses"/>
+			                 		<field name="general" string="عام"/>
+			                 		<field name="preliminary"/>
+			                 	</group>
+			                </group>
+
+			                <notebook>
+			                	<page string="إعدادات الاسئلة">
+				                 	<group>
+					                 	<group>
+					                 		<field name="quations_method"    required="1"/>
+					                 		<field name="qu_number_per_part" required="1" string="عدد الاسئلة"/>
+					                 		<field name="lines_per_part" attrs="{'invisible':[('quations_method','=','subject')],'required':[('quations_method','=','lines')]}"/>
+						                 	<field name="subject_id"     attrs="{'invisible':[('quations_method','=','lines')],
+						                 	                                     'required':[('quations_method','=','subject')]}"
+						                 	                             domain="[('type_method','=','subject'),('direction','!=',trackk)]"
+						                 	                             options="{'no_create': True,'no_open': True,}"/>
+					                 	</group>
+					                 	<group>
+					                 		<field name="select_parts" string="تحديد النطاق بالاجزاء"/>
+					                 	</group>
+				                 	</group>
+				                 	<group>
+	                 					<group>
+		                 					<field name="parts_ids" widget="many2many_tags" attrs="{'invisible':[('select_parts','=',False)],'required':[('select_parts','=',True)]}" options="{'no_open':1,'no_create':1,'no_edit':1}"/>
+					                 		
+					                 		<field name="from_surah" attrs="{'invisible':[('select_parts','=',True)],
+					                 		                                 'required':[('select_parts','=',False)]}" options="{'no_open':1,'no_create':1}"/>
+				                 			<field name="from_aya" string="من الاية" domain="[('surah_id','=',from_surah)]" 
+				                 			                                        attrs="{'invisible':[('select_parts','=',True)],
+				                 			                                                'required':[('select_parts','=',False)]}" 
+				                 			                                        options="{'no_open':1,'no_create':1}"/>
+				                 		</group>
+				                 		<group>
+				               				<field name="to_surah" attrs="{'invisible':[('select_parts','=',True)],
+				               			    	                           'required':[('select_parts','=',False)]}" 
+				               			        	               options="{'no_open':1,'no_create':1}"/>
+				                 			<field name="to_aya" string="الي اية" domain="[('surah_id','=',to_surah)]"
+				                 												  attrs="{'invisible':[('select_parts','=',True)],
+				                 												          'required':[('select_parts','=',False)]}" 
+				                 												  options="{'no_open':1,'no_create':1}"/>
+				                 		</group>
+			                 		</group>
+								</page>
+
+			                	<page string="passing items">
+			                		<field name="passing_items">
+			                			<tree editable="bottom">
+			                				<field name="from_degree"/>
+			                				<field name="to_degree"/>
+			                				<field name="appreciation"/>
+			                			</tree>
+			                		</field>
+			                	</page>
+			                	<page string="Reward items">
+			                		<field name="reward_items">
+			                			<tree editable="bottom">
+			                				<field name="reward_type"/>
+			                				<field name="appreciation"/>
+											<field name="age_fillter"/>
+			                				<field name="age_groups" options="{'no_create': True, 'no_open':True}"/>
+											<field name="reward_type"/>
+											<field name="amount"/>
+
+			                			</tree>
+			                		</field>
+			                	</page>
+			                	<page string="Evaluation items">
+			                		<field name="evaluation_items">
+			                			<tree editable="bottom">
+			                		<field name="name"/>
+			                		<field name="total"/>
+			                		</tree>
+			                	</field>
+			                	</page>
+			                	<page string="employee items" attrs="{'invisible':[('branch_group','=','student')]}">
+			                		<field name="employee_items">
+			                			<tree>
+			                				<field name="name"/>
+			                				<field name="total"/>
+			                			</tree>
+			                		</field>
+			                	</page>
+			                </notebook>
+
+			             </sheet>
+						 <div class="oe_chatter">
+							<field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+							<field name="message_ids" widget="mail_thread"/>
+						</div>
+			         </form> 
+			    </field>     
+			</record>
+
+
+
+			 <record id="test_branches_tree" model="ir.ui.view">
+			      <field name="name">branches</field>
+			      <field name="model">mk.branches.master</field>
+			      <field name="arch" type="xml">
+			        <tree>
+						<field name="test_name"/>
+						<field name="name"/>
+						<field name="trackk"/>
+						<field name="branch_group"/>
+
+						<field name="order" string="branch order"/>
+						<field name="from_surah" options="{'no_create': True,'no_open': True,}"/>
+						<field name="to_surah"   options="{'no_create': True,'no_open': True,}"/>
+						<field name="parts_num"/>
+						<field name="duration"/>
+						<field name="maximum_degree"/>
+						<field name="minumim_degree"/>
+			        </tree>
+			   </field>
+			 </record>
+        
+        <record id="mk_branches master_view" model="ir.ui.view">
+            <field name="name">branches master Search View</field>
+            <field name="model">mk.branches.master</field>
+            <field name="arch" type="xml">
+                <search>
+                	<field name="name"/>
+	                <field name="order"/>
+	                <field name="test_name"/> 
+	                <field name="parent_branch"/>
+	                <field name="trackk"/>
+	                <field name="parts_num"/>
+	                <field name="duration"/>
+	                <field name="maximum_degree"/>
+	                <field name="minumim_degree"/>
+	                <field name="qu_number_per_part"/>
+	                <field name="minumim_degree"/>
+	                <field name="subject_id"/>
+ 
+			        <filter string="مفتوح"                 name="open"          domain="[('age_fillter', '=','open')]"/>
+				    <filter string="محدد"                  name="close"         domain="[('age_fillter', '=','close')]"/>
+				    <separator/>
+				    <filter string="طلاب"                   name="student"       domain="[('branch_group', '=','student')]"/>
+				    <filter string="الموظف"                name="employee"      domain="[('branch_group', '=','employee')]"/>
+				    <separator/>
+				    <filter string="تصاعدي"                name="up"            domain="[('trackk', '=','up')]"/>
+				    <filter string="تنازلي"                name="down"          domain="[('trackk', '=','down')]"/>
+				    <separator/>
+                    <filter string="المسابقات"             name="is_contest"    domain="[('contsets','=',True)]"/>
+                    <separator/>
+                    <filter string="عام"                   name="general"       domain="[('general','=',True)]"/>
+                    <separator/>
+                    <filter string="دورات مكثفة"           name="courses"       domain="[('courses','=',True)]"/>
+                    <separator/>
+                    <filter string="تمهيدي"                name="preliminary"   domain="[('preliminary','=',True)]"/>
+	 				<separator/>
+                    <filter string="جبر الكسر لاعلي"        name="round_frag"    domain="[('round_frag','=',True)]"/>
+                    <separator/>
+                    <filter string="تحديد النطاق بالاجزاء"  name="select_parts"  domain="[('select_parts','=',True)]"/>
+                    <separator/>
+                    <filter string="عدد الاسطر"             name="lines"         domain="[('quations_method','=','lines')]"/>
+                    <filter string="المقرر"                name="subject"       domain="[('quations_method','=','subject')]"/>
+
+                	<group expand="0" string="Group By">
+	                    <filter name="test_name"       string="نوع الاختبار"    context="{'group_by': 'test_name'}"/> 
+	                    <filter name="parent_branch"   string="الجزء"          context="{'group_by': 'parent_branch'}"/>
+	                    <filter name="subject_id"      string="الوظيفة"        context="{'group_by': 'subject_id'}"/>    
+                	</group>
+                </search>
+            </field>
+        </record>
+        
+			 <record id="test_branches_action" model="ir.actions.act_window">
+				<field name="name">test Branches</field>
+				<field name="res_model">mk.branches.master</field>
+				<field name="type">ir.actions.act_window</field>
+				<field name="view_type">form</field>
+				<field name="view_mode">tree,form</field>
+				<!--<field name="domain">[]</field>
+				<field name="context">{}</field>
+				<field name="search_view_id" ref="mk_contests_regulatoins_preparation_search_view"/> -->
+		    </record>
+
+		   <menuitem
+              id="test_branches_setting"
+              name="Test Branches"
+              action="test_branches_action"
+              parent="maknon_tests.test_processes_main_menu"
+              sequence="1"
+              groups="maknon_tests.group_tests_branches_read,maknon_tests.group_assembly_tests_full"
+            />	
+
+
+</data>
+</openerp>

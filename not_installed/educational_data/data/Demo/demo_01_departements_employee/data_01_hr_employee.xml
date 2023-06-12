@@ -1,0 +1,972 @@
+<odoo>
+    <data >
+        <record id="base.user_root" model="res.users">
+            <field name="lang">ar_SY</field>
+        </record>
+        <record id="hr.employee_root" model="hr.employee">
+            <field name="category">center_admin</field>
+        </record>
+
+        <record id="hr_employee1" model="hr.employee">
+            <field name="name">عبدالله عبدالرحمن</field>
+            <field name="active" eval="True"/>
+            <field name="country_id">192</field>
+            <field name="gender">male</field>
+            <field name="marital">single</field>
+            <field name="birthday">1970-06-01</field>
+            <field name="identification_id">1007449760</field>
+            <field name="work_phone"></field>
+            <field name="mobile_phone">966 50327663</field>
+            <field name="work_email">abdallah@gmail.com</field>
+            <field name="job_id" ref="Job401"/>
+            <field name="department_id" ref="mk_hr_department7"/>
+            <field name="center_admin_category">both</field>
+            <field name="flag" eval="True"/>
+            <field name="flag2" eval="False"/>
+            <field name="category2">admin</field>
+            <field name="passwd">3277</field>
+            <field name="issue_identity">2003-12-29</field>
+            <field name="identity_expire">2024-08-13</field>
+            <field name="kin_phone"></field>
+            <field name="salary">500</field>
+            <field name="salary_donor">society</field>
+            <field name="contract_type">contractor</field>
+            <field name="registeration_code">50004</field>
+            <field name="category">center_admin</field>
+            <field name="part_ids" eval="[(4, ref('educational_data.mk_parts1')),(4, ref('educational_data.mk_parts2')),
+            (4, ref('educational_data.mk_parts3'))]"/>
+            <field name="outsource" eval="False"/>
+        </record>
+        <record id="hr_employee2" model="hr.employee">
+            <field name="name">إسماعيل سيد إسماعيل</field>
+            <field name="active" eval="True"/>
+            <field name="country_id">192</field>
+            <field name="gender">male</field>
+            <field name="marital">single</field>
+            <field name="birthday">1970-06-01</field>
+            <field name="identification_id">2406435327</field>
+            <field name="work_phone"></field>
+            <field name="mobile_phone">966 50327555</field>
+            <field name="work_email">ismail.ismail@is.com</field>
+            <field name="job_id" ref="Job352"/>
+            <field name="department_id" ref="mk_hr_department7"/>
+            <field name="center_admin_category">both</field>
+            <field name="flag" eval="True"/>
+            <field name="flag2" eval="False"/>
+            <field name="category2">teacher</field>
+            <field name="passwd">3543</field>
+            <field name="issue_identity">2003-12-30</field>
+            <field name="identity_expire">2024-08-13</field>
+            <field name="kin_phone"></field>
+            <field name="salary">500</field>
+            <field name="salary_donor">society</field>
+            <field name="contract_type">contractor</field>
+            <field name="registeration_code">300001</field>
+            <field name="category">teacher</field>
+            <field name="part_ids" eval="[(4, ref('educational_data.mk_parts1')),(4, ref('educational_data.mk_parts2')),
+            (4, ref('educational_data.mk_parts3'))]"/>
+            <field name="outsource" eval="False"/>
+        </record>
+        <record id="hr_employee3" model="hr.employee">
+            <field name="name">محمد ماهر حلمي</field>
+            <field name="active" eval="True"/>
+            <field name="country_id">192</field>
+            <field name="gender">male</field>
+            <field name="marital">single</field>
+            <field name="birthday">1970-06-01</field>
+            <field name="identification_id">1000000008</field>
+            <field name="work_phone"></field>
+            <field name="mobile_phone">966 54282367</field>
+            <field name="work_email">mohamad@gmail.com</field>
+            <field name="job_id" ref="Job11"/>
+            <field name="department_id" ref="mk_hr_department7"/>
+            <field name="center_admin_category">both</field>
+            <field name="flag" eval="True"/>
+            <field name="flag2" eval="False"/>
+            <field name="category2">managment</field>
+            <field name="passwd">5478</field>
+            <field name="issue_identity">2003-12-31</field>
+            <field name="identity_expire">2024-08-13</field>
+            <field name="kin_phone"></field>
+            <field name="salary">500</field>
+            <field name="salary_donor">society</field>
+            <field name="contract_type">contractor</field>
+            <field name="registeration_code">1</field>
+            <field name="category">managment</field>
+            <field name="part_ids" eval="[(4, ref('educational_data.mk_parts1')),(4, ref('educational_data.mk_parts2')),
+            (4, ref('educational_data.mk_parts3'))]"/>
+            <field name="outsource" eval="False"/>
+        </record>
+        <record id="hr_employee4" model="hr.employee">
+            <field name="name">بشير صالح شريف</field>
+            <field name="active" eval="True"/>
+            <field name="country_id">245</field>
+            <field name="gender">male</field>
+            <field name="marital">married</field>
+            <field name="birthday">1988-03-24</field>
+            <field name="identification_id">1000000073</field>
+            <field name="work_phone">966 55991</field>
+            <field name="mobile_phone">966 55991983</field>
+            <field name="work_email">bachir@gmail.com</field>
+            <field name="job_id" ref="Job5"/>
+            <field name="department_id" ref="mk_hr_department7"/>
+            <field name="center_admin_category">both</field>
+            <field name="flag" eval="True"/>
+            <field name="flag2" eval="False"/>
+            <field name="category2">bus_sup</field>
+            <field name="passwd">2451</field>
+            <field name="issue_identity">2004-01-01</field>
+            <field name="identity_expire">2024-08-14</field>
+            <field name="kin_phone">966 56832</field>
+            <field name="salary">400</field>
+            <field name="salary_donor">society</field>
+            <field name="contract_type">contractor</field>
+            <field name="registeration_code">2</field>
+            <field name="category">bus_sup</field>
+            <field name="part_ids" eval="[(4, ref('educational_data.mk_parts1')),(4, ref('educational_data.mk_parts2')),
+            (4, ref('educational_data.mk_parts3'))]"/>
+            <field name="outsource" eval="False"/>
+        </record>
+        <record id="hr_employee5" model="hr.employee">
+            <field name="name">منال عبدالقادر أحمد</field>
+            <field name="active" eval="True"/>
+            <field name="country_id">192</field>
+            <field name="gender">female</field>
+            <field name="marital">married</field>
+            <field name="birthday">1970-01-06</field>
+            <field name="identification_id">1000000081</field>
+            <field name="work_phone"></field>
+            <field name="mobile_phone">966 05537359</field>
+            <field name="work_email">manel@gmail.com</field>
+            <field name="job_id" ref="Job12"/>
+            <field name="department_id" ref="mk_hr_department2"/>
+            <field name="center_admin_category">both</field>
+            <field name="flag" eval="True"/>
+            <field name="flag2" eval="False"/>
+            <field name="category2">others</field>
+            <field name="passwd"></field>
+            <field name="issue_identity">2004-01-02</field>
+            <field name="identity_expire">2020-03-10</field>
+            <field name="kin_phone"></field>
+            <field name="salary">300</field>
+            <field name="salary_donor">society</field>
+            <field name="contract_type">contractor</field>
+            <field name="registeration_code">3</field>
+            <field name="category">others</field>
+            <field name="part_ids" eval="[(4, ref('educational_data.mk_parts1')),(4, ref('educational_data.mk_parts2')),
+            (4, ref('educational_data.mk_parts3'))]"/>
+            <field name="outsource" eval="False"/>
+        </record>
+        <record id="hr_employee6" model="hr.employee">
+            <field name="name">امل محمد عبد اللطيف</field>
+            <field name="active" eval="True"/>
+            <field name="country_id">192</field>
+            <field name="gender">female</field>
+            <field name="marital">married</field>
+            <field name="birthday">1995-04-01</field>
+            <field name="identification_id">1000000099</field>
+            <field name="work_phone">966 50321</field>
+            <field name="mobile_phone">966 50512888</field>
+            <field name="work_email">amal@gmail.com</field>
+            <field name="job_id" ref="Job352"/>
+            <field name="department_id" ref="mk_hr_department2"/>
+            <field name="center_admin_category">both</field>
+            <field name="flag" eval="True"/>
+            <field name="flag2" eval="False"/>
+            <field name="category2">teacher</field>
+            <field name="passwd">8679</field>
+            <field name="issue_identity">2011-03-09</field>
+            <field name="identity_expire">2024-08-13</field>
+            <field name="kin_phone"></field>
+            <field name="salary">600</field>
+            <field name="salary_donor">society</field>
+            <field name="contract_type">contractor</field>
+            <field name="registeration_code">300002</field>
+            <field name="category">teacher</field>
+            <field name="part_ids" eval="[(4, ref('educational_data.mk_parts1')),(4, ref('educational_data.mk_parts2')),
+            (4, ref('educational_data.mk_parts3'))]"/>
+            <field name="outsource" eval="False"/>
+        </record>
+        <record id="hr_employee7" model="hr.employee">
+            <field name="name">أحمد سليمان محمد</field>
+            <field name="active" eval="True"/>
+            <field name="country_id">192</field>
+            <field name="gender">male</field>
+            <field name="marital">single</field>
+            <field name="birthday">1985-05-01</field>
+            <field name="identification_id">1000000107</field>
+            <field name="work_phone"></field>
+            <field name="mobile_phone">966 50512639</field>
+            <field name="work_email">ahmad@gmail.com</field>
+            <field name="job_id" ref="Job1"/>
+            <field name="department_id" ref="mk_hr_department7"/>
+            <field name="center_admin_category">both</field>
+            <field name="flag" eval="True"/>
+            <field name="flag2" eval="False"/>
+            <field name="category2">supervisor</field>
+            <field name="passwd">2062</field>
+            <field name="issue_identity">1995-11-09</field>
+            <field name="identity_expire">2029-08-22</field>
+            <field name="kin_phone">966 50895</field>
+            <field name="salary">700</field>
+            <field name="salary_donor">society</field>
+            <field name="contract_type">contractor</field>
+            <field name="registeration_code">50005</field>
+            <field name="category">supervisor</field>
+            <field name="part_ids" eval="[(4, ref('educational_data.mk_parts1')),(4, ref('educational_data.mk_parts2')),
+            (4, ref('educational_data.mk_parts3'))]"/>
+            <field name="outsource" eval="False"/>
+        </record>
+        <record id="hr_employee8" model="hr.employee">
+            <field name="name">سعد محمد فهد</field>
+            <field name="active" eval="True"/>
+            <field name="country_id">192</field>
+            <field name="gender">male</field>
+            <field name="marital">married</field>
+            <field name="birthday">1969-10-21</field>
+            <field name="identification_id">1000000115</field>
+            <field name="work_phone"></field>
+            <field name="mobile_phone">966 50997213</field>
+            <field name="work_email">saad@gmail.com</field>
+            <field name="job_id" ref="Job401"/>
+            <field name="department_id" ref="mk_hr_department2"/>
+            <field name="center_admin_category">both</field>
+            <field name="flag" eval="True"/>
+            <field name="flag2" eval="False"/>
+            <field name="category2">admin</field>
+            <field name="passwd"></field>
+            <field name="issue_identity">1987-08-04</field>
+            <field name="identity_expire">2036-11-25</field>
+            <field name="kin_phone"></field>
+            <field name="salary">800</field>
+            <field name="salary_donor">society</field>
+            <field name="contract_type">contractor</field>
+            <field name="registeration_code">40002</field>
+            <field name="category">center_admin</field>
+            <field name="part_ids" eval="[(4, ref('educational_data.mk_parts1')),(4, ref('educational_data.mk_parts2')),
+            (4, ref('educational_data.mk_parts3'))]"/>
+            <field name="outsource" eval="False"/>
+        </record>
+        <record id="hr_employee9" model="hr.employee">
+            <field name="name">احمد حسن محمد</field>
+            <field name="active" eval="True"/>
+            <field name="country_id">192</field>
+            <field name="gender">male</field>
+            <field name="marital">married</field>
+            <field name="birthday">1965-03-04</field>
+            <field name="identification_id">1000000123</field>
+            <field name="work_phone"></field>
+            <field name="mobile_phone">966 50292996</field>
+            <field name="work_email">ahmadhassan@gmail.com</field>
+            <field name="job_id" ref="Job426"/>
+            <field name="department_id" ref="mk_hr_department7"/>
+            <field name="center_admin_category">both</field>
+            <field name="flag" eval="True"/>
+            <field name="flag2" eval="False"/>
+            <field name="category2">supervisor</field>
+            <field name="passwd"></field>
+            <field name="issue_identity">1987-08-04</field>
+            <field name="identity_expire">2023-05-11</field>
+            <field name="kin_phone"></field>
+            <field name="salary">800</field>
+            <field name="salary_donor">society</field>
+            <field name="contract_type">contractor</field>
+            <field name="registeration_code">9</field>
+            <field name="category">edu_supervisor</field>
+            <field name="part_ids" eval="[(4, ref('educational_data.mk_parts1')),(4, ref('educational_data.mk_parts2')),
+            (4, ref('educational_data.mk_parts3'))]"/>
+            <field name="outsource" eval="False"/>
+        </record>
+        <record id="hr_employee10" model="hr.employee">
+            <field name="name">ابتهال بنت عبدالعزيز</field>
+            <field name="active" eval="True"/>
+            <field name="country_id">192</field>
+            <field name="gender">female</field>
+            <field name="marital">married</field>
+            <field name="birthday">1993-03-24</field>
+            <field name="identification_id">1000000131</field>
+            <field name="work_phone">966 11221</field>
+            <field name="mobile_phone">966 50805989</field>
+            <field name="work_email">ibtihel@gmail.com</field>
+            <field name="job_id" ref="Job426"/>
+            <field name="department_id" ref="mk_hr_department2"/>
+            <field name="center_admin_category">both</field>
+            <field name="flag" eval="True"/>
+            <field name="flag2" eval="False"/>
+            <field name="category2">supervisor</field>
+            <field name="passwd">4759</field>
+            <field name="issue_identity">2005-06-16</field>
+            <field name="identity_expire">2026-12-31</field>
+            <field name="kin_phone">966 55449</field>
+            <field name="salary">800</field>
+            <field name="salary_donor">society</field>
+            <field name="contract_type">contractor</field>
+            <field name="registeration_code">10</field>
+            <field name="category">edu_supervisor</field>
+            <field name="part_ids" eval="[(4, ref('educational_data.mk_parts1')),(4, ref('educational_data.mk_parts2')),
+            (4, ref('educational_data.mk_parts3'))]"/>
+            <field name="outsource" eval="False"/>
+        </record>
+        <record id="hr_employee11" model="hr.employee">
+            <field name="name">أحمد محمد علي بالعبيد</field>
+            <field name="active" eval="True"/>
+            <field name="country_id">192</field>
+            <field name="gender">male</field>
+            <field name="marital">married</field>
+            <field name="birthday">1959-02-26</field>
+            <field name="identification_id">1000000156</field>
+            <field name="work_phone">966 55885</field>
+            <field name="mobile_phone">966 55105574</field>
+            <field name="work_email">ahmadmedali@gmail.com</field>
+            <field name="job_id" ref="Job47"/>
+            <field name="department_id" ref="mk_hr_department5"/>
+            <field name="center_admin_category">both</field>
+            <field name="flag" eval="True"/>
+            <field name="flag2" eval="False"/>
+            <field name="category2">admin</field>
+            <field name="passwd">3244</field>
+            <field name="issue_identity">2005-06-17</field>
+            <field name="identity_expire">2026-08-19</field>
+            <field name="kin_phone"></field>
+            <field name="salary">900</field>
+            <field name="salary_donor">society</field>
+            <field name="contract_type">contractor</field>
+            <field name="registeration_code">60002</field>
+            <field name="category">center_admin</field>
+            <field name="part_ids" eval="[(4, ref('educational_data.mk_parts1')),(4, ref('educational_data.mk_parts2')),
+            (4, ref('educational_data.mk_parts3'))]"/>
+            <field name="outsource" eval="False"/>
+        </record>
+        <record id="hr_employee12" model="hr.employee">
+            <field name="name">مريم صالح العويس</field>
+            <field name="active" eval="True"/>
+            <field name="country_id">192</field>
+            <field name="gender">female</field>
+            <field name="marital">married</field>
+            <field name="birthday">1978-08-08</field>
+            <field name="identification_id">1000000164</field>
+            <field name="work_phone">966 50321</field>
+            <field name="mobile_phone">966 50321338</field>
+            <field name="work_email">maryamsalah@gmail.com</field>
+            <field name="job_id" ref="Job47"/>
+            <field name="department_id" ref="mk_hr_department1"/>
+            <field name="center_admin_category">both</field>
+            <field name="flag" eval="True"/>
+            <field name="flag2" eval="False"/>
+            <field name="category2">admin</field>
+            <field name="passwd">1151</field>
+            <field name="issue_identity">1999-10-31</field>
+            <field name="identity_expire">2026-08-19</field>
+            <field name="kin_phone"></field>
+            <field name="salary">1000</field>
+            <field name="salary_donor">society</field>
+            <field name="contract_type">contractor</field>
+            <field name="registeration_code">60004</field>
+            <field name="category">center_admin</field>
+            <field name="part_ids" eval="[(4, ref('educational_data.mk_parts1')),(4, ref('educational_data.mk_parts2')),
+            (4, ref('educational_data.mk_parts3'))]"/>
+            <field name="outsource" eval="False"/>
+        </record>
+        <record id="hr_employee13" model="hr.employee">
+            <field name="name">مبارك محمد الغوينم</field>
+            <field name="active" eval="True"/>
+            <field name="country_id">192</field>
+            <field name="gender">male</field>
+            <field name="marital">single</field>
+            <field name="birthday">1969-08-19</field>
+            <field name="identification_id">1000000180</field>
+            <field name="work_phone">966 53335</field>
+            <field name="mobile_phone">966 55343435</field>
+            <field name="work_email">mobarek@gmail.com</field>
+            <field name="job_id" ref="Job47"/>
+            <field name="department_id" ref="mk_hr_department3"/>
+            <field name="center_admin_category">both</field>
+            <field name="flag" eval="True"/>
+            <field name="flag2" eval="False"/>
+            <field name="category2">admin</field>
+            <field name="passwd">7876</field>
+            <field name="issue_identity">1989-09-20</field>
+            <field name="identity_expire">2023-12-05</field>
+            <field name="kin_phone"></field>
+            <field name="salary">900</field>
+            <field name="salary_donor">society</field>
+            <field name="contract_type">contractor</field>
+            <field name="registeration_code">60006</field>
+            <field name="category">center_admin</field>
+            <field name="part_ids" eval="[(4, ref('educational_data.mk_parts1')),(4, ref('educational_data.mk_parts2')),
+            (4, ref('educational_data.mk_parts3'))]"/>
+            <field name="outsource" eval="False"/>
+        </record>
+        <record id="hr_employee14" model="hr.employee">
+            <field name="name">محمد يحيى العسيري</field>
+            <field name="active" eval="True"/>
+            <field name="country_id">192</field>
+            <field name="gender">male</field>
+            <field name="marital">single</field>
+            <field name="birthday">1994-06-01</field>
+            <field name="identification_id">1000000198</field>
+            <field name="work_phone">966 50420</field>
+            <field name="mobile_phone">966 50420485</field>
+            <field name="work_email">mohamedyahya@gmail.com</field>
+            <field name="job_id" ref="Job47"/>
+            <field name="department_id" ref="mk_hr_department7"/>
+            <field name="center_admin_category">both</field>
+            <field name="flag" eval="True"/>
+            <field name="flag2" eval="False"/>
+            <field name="category2">admin</field>
+            <field name="passwd">3817</field>
+            <field name="issue_identity">2014-12-28</field>
+            <field name="identity_expire">2020-10-22</field>
+            <field name="kin_phone"></field>
+            <field name="salary">900</field>
+            <field name="salary_donor">society</field>
+            <field name="contract_type">contractor</field>
+            <field name="registeration_code">60007</field>
+            <field name="category">center_admin</field>
+            <field name="part_ids" eval="[(4, ref('educational_data.mk_parts1')),(4, ref('educational_data.mk_parts2')),
+            (4, ref('educational_data.mk_parts3'))]"/>
+            <field name="outsource" eval="False"/>
+        </record>
+        <record id="hr_employee15" model="hr.employee">
+            <field name="name">منصور أحمد مبارك</field>
+            <field name="active" eval="True"/>
+            <field name="country_id">192</field>
+            <field name="gender">male</field>
+            <field name="marital">single</field>
+            <field name="birthday">1980-09-18</field>
+            <field name="identification_id">1000000206</field>
+            <field name="work_phone">966 56912</field>
+            <field name="mobile_phone">966 56912188</field>
+            <field name="work_email">mansour@gmail.com</field>
+            <field name="job_id" ref="Job47"/>
+            <field name="department_id" ref="mk_hr_department6"/>
+            <field name="center_admin_category">both</field>
+            <field name="flag" eval="True"/>
+            <field name="flag2" eval="False"/>
+            <field name="category2">admin</field>
+            <field name="passwd">9289</field>
+            <field name="issue_identity">1992-08-11</field>
+            <field name="identity_expire">2026-08-11</field>
+            <field name="kin_phone"></field>
+            <field name="salary">1000</field>
+            <field name="salary_donor">society</field>
+            <field name="contract_type">contractor</field>
+            <field name="registeration_code">60008</field>
+            <field name="category">center_admin</field>
+            <field name="part_ids" eval="[(4, ref('educational_data.mk_parts1')),(4, ref('educational_data.mk_parts2')),
+            (4, ref('educational_data.mk_parts3'))]"/>
+            <field name="outsource" eval="False"/>
+        </record>
+        <record id="hr_employee16" model="hr.employee">
+            <field name="name">جعفر بن قاسم مصلح</field>
+            <field name="active" eval="True"/>
+            <field name="country_id">233</field>
+            <field name="gender">male</field>
+            <field name="marital">single</field>
+            <field name="birthday">1991-08-14</field>
+            <field name="identification_id">1000000214</field>
+            <field name="work_phone">966 55870</field>
+            <field name="mobile_phone">966 55870049</field>
+            <field name="work_email">jaafar@gmail.com</field>
+            <field name="job_id" ref="Job24"/>
+            <field name="department_id" ref="mk_hr_department1"/>
+            <field name="center_admin_category">male</field>
+            <field name="flag" eval="True"/>
+            <field name="flag2" eval="False"/>
+            <field name="category2">admin</field>
+            <field name="passwd">1234</field>
+            <field name="issue_identity">2001-08-13</field>
+            <field name="identity_expire">2042-08-20</field>
+            <field name="kin_phone"></field>
+            <field name="salary">700</field>
+            <field name="salary_donor">society</field>
+            <field name="contract_type">contractor</field>
+            <field name="registeration_code">60009</field>
+            <field name="category">center_admin</field>
+            <field name="part_ids" eval="[(4, ref('educational_data.mk_parts1')),(4, ref('educational_data.mk_parts2')),
+            (4, ref('educational_data.mk_parts3'))]"/>
+            <field name="outsource" eval="False"/>
+        </record>
+        <record id="hr_employee17" model="hr.employee">
+            <field name="name">سارة محمد الدوسري</field>
+            <field name="active" eval="True"/>
+            <field name="country_id">192</field>
+            <field name="gender">female</field>
+            <field name="marital">married</field>
+            <field name="birthday">1993-03-24</field>
+            <field name="identification_id">1000000222</field>
+            <field name="work_phone"></field>
+            <field name="mobile_phone">966 50045700</field>
+            <field name="work_email">sarra@gmail.com</field>
+            <field name="job_id" ref="Job24"/>
+            <field name="department_id" ref="mk_hr_department1"/>
+            <field name="center_admin_category">female</field>
+            <field name="flag" eval="True"/>
+            <field name="flag2" eval="False"/>
+            <field name="category2">admin</field>
+            <field name="passwd">6568</field>
+            <field name="issue_identity">2005-06-16</field>
+            <field name="identity_expire">2028-11-29</field>
+            <field name="kin_phone">966 50045</field>
+            <field name="salary">800</field>
+            <field name="salary_donor">society</field>
+            <field name="contract_type">contractor</field>
+            <field name="registeration_code">60010</field>
+            <field name="category">center_admin</field>
+            <field name="part_ids" eval="[(4, ref('educational_data.mk_parts1')),(4, ref('educational_data.mk_parts2')),
+            (4, ref('educational_data.mk_parts3'))]"/>
+            <field name="outsource" eval="True"/>
+        </record>
+        <record id="hr_employee18" model="hr.employee">
+            <field name="name">محمد علي بالعبيد</field>
+            <field name="active" eval="True"/>
+            <field name="country_id">192</field>
+            <field name="gender">male</field>
+            <field name="marital">married</field>
+            <field name="birthday">1991-08-14</field>
+            <field name="identification_id">1000000230</field>
+            <field name="work_phone">966 55105</field>
+            <field name="mobile_phone">966 55105574</field>
+            <field name="work_email">medali@gmail.com</field>
+            <field name="job_id" ref="Job24"/>
+            <field name="department_id" ref="mk_hr_department2"/>
+            <field name="center_admin_category">male</field>
+            <field name="flag" eval="True"/>
+            <field name="flag2" eval="False"/>
+            <field name="category2">admin</field>
+            <field name="passwd">3971</field>
+            <field name="issue_identity">2002-08-12</field>
+            <field name="identity_expire">2026-12-31</field>
+            <field name="kin_phone"></field>
+            <field name="salary">800</field>
+            <field name="salary_donor">society</field>
+            <field name="contract_type">contractor</field>
+            <field name="registeration_code">60011</field>
+            <field name="category">center_admin</field>
+            <field name="part_ids" eval="[(4, ref('educational_data.mk_parts1')),(4, ref('educational_data.mk_parts2')),
+            (4, ref('educational_data.mk_parts3'))]"/>
+            <field name="outsource" eval="False"/>
+        </record>
+        <record id="hr_employee19" model="hr.employee">
+            <field name="name">صالحة عبدالله سعد القحطاني</field>
+            <field name="active" eval="True"/>
+            <field name="country_id">192</field>
+            <field name="gender">female</field>
+            <field name="marital">married</field>
+            <field name="birthday">1978-08-08</field>
+            <field name="identification_id">1000000248</field>
+            <field name="work_phone">966 01149</field>
+            <field name="mobile_phone">966 05955557</field>
+            <field name="work_email">salihaabdallah@gmail.com</field>
+            <field name="job_id" ref="Job24"/>
+            <field name="department_id" ref="mk_hr_department2"/>
+            <field name="center_admin_category">female</field>
+            <field name="flag" eval="True"/>
+            <field name="flag2" eval="False"/>
+            <field name="category2">admin</field>
+            <field name="passwd">8818</field>
+            <field name="issue_identity">1990-10-28</field>
+            <field name="identity_expire">2028-11-29</field>
+            <field name="kin_phone">966 05375</field>
+            <field name="salary">600</field>
+            <field name="salary_donor">society</field>
+            <field name="contract_type">contractor</field>
+            <field name="registeration_code">60012</field>
+            <field name="category">center_admin</field>
+            <field name="part_ids" eval="[(4, ref('educational_data.mk_parts1')),(4, ref('educational_data.mk_parts2')),
+            (4, ref('educational_data.mk_parts3'))]"/>
+            <field name="outsource" eval="False"/>
+        </record>
+        <record id="hr_employee20" model="hr.employee">
+            <field name="name">مؤيد عبدالله محمد</field>
+            <field name="active" eval="True"/>
+            <field name="country_id">192</field>
+            <field name="gender">male</field>
+            <field name="marital">married</field>
+            <field name="birthday">1978-08-08</field>
+            <field name="identification_id">1000000263</field>
+            <field name="work_phone">966 55837</field>
+            <field name="mobile_phone">966 55837350</field>
+            <field name="work_email">moayed@gmail.com</field>
+            <field name="job_id" ref="Job24"/>
+            <field name="department_id" ref="mk_hr_department3"/>
+            <field name="center_admin_category">male</field>
+            <field name="flag" eval="True"/>
+            <field name="flag2" eval="False"/>
+            <field name="category2">admin</field>
+            <field name="passwd"></field>
+            <field name="issue_identity">2005-06-16</field>
+            <field name="identity_expire">2028-11-29</field>
+            <field name="kin_phone">966 55837</field>
+            <field name="salary">700</field>
+            <field name="salary_donor">society</field>
+            <field name="contract_type">contractor</field>
+            <field name="registeration_code"></field>
+            <field name="category">center_admin</field>
+            <field name="part_ids" eval="[(4, ref('educational_data.mk_parts1')),(4, ref('educational_data.mk_parts2')),
+            (4, ref('educational_data.mk_parts3'))]"/>
+            <field name="outsource" eval="False"/>
+        </record>
+        <record id="hr_employee21" model="hr.employee">
+            <field name="name">نجاح مصطفى عبدالكريم</field>
+            <field name="active" eval="True"/>
+            <field name="country_id">192</field>
+            <field name="gender">female</field>
+            <field name="marital">single</field>
+            <field name="birthday">1967-02-01</field>
+            <field name="identification_id">1000000271</field>
+            <field name="work_phone">966 05031</field>
+            <field name="mobile_phone">966 05031187</field>
+            <field name="work_email">najah@gmail.com</field>
+            <field name="job_id" ref="Job24"/>
+            <field name="department_id" ref="mk_hr_department3"/>
+            <field name="center_admin_category">female</field>
+            <field name="flag" eval="True"/>
+            <field name="flag2" eval="False"/>
+            <field name="category2">admin</field>
+            <field name="passwd">8580</field>
+            <field name="issue_identity">2005-06-16</field>
+            <field name="identity_expire">2028-11-29</field>
+            <field name="kin_phone">966 05031</field>
+            <field name="salary">800</field>
+            <field name="salary_donor">society</field>
+            <field name="contract_type">contractor</field>
+            <field name="registeration_code">60014</field>
+            <field name="category">center_admin</field>
+            <field name="part_ids" eval="[(4, ref('educational_data.mk_parts1')),(4, ref('educational_data.mk_parts2')),
+            (4, ref('educational_data.mk_parts3'))]"/>
+            <field name="outsource" eval="False"/>
+        </record>
+        <record id="hr_employee22" model="hr.employee">
+            <field name="name">ضيف الله هندي عامر القرني</field>
+            <field name="active" eval="True"/>
+            <field name="country_id">192</field>
+            <field name="gender">male</field>
+            <field name="marital">married</field>
+            <field name="birthday">1993-03-24</field>
+            <field name="identification_id">1000000289</field>
+            <field name="work_phone">966 50055</field>
+            <field name="mobile_phone">966 50205252</field>
+            <field name="work_email">dhifallah@gmail.com</field>
+            <field name="job_id" ref="Job24"/>
+            <field name="department_id" ref="mk_hr_department4"/>
+            <field name="center_admin_category">male</field>
+            <field name="flag" eval="True"/>
+            <field name="flag2" eval="False"/>
+            <field name="category2">admin</field>
+            <field name="passwd">5340</field>
+            <field name="issue_identity">2005-06-16</field>
+            <field name="identity_expire">2028-11-29</field>
+            <field name="kin_phone">966 56298</field>
+            <field name="salary">700</field>
+            <field name="salary_donor">society</field>
+            <field name="contract_type">contractor</field>
+            <field name="registeration_code">60015</field>
+            <field name="category">center_admin</field>
+            <field name="part_ids" eval="[(4, ref('educational_data.mk_parts1')),(4, ref('educational_data.mk_parts2')),
+            (4, ref('educational_data.mk_parts3'))]"/>
+            <field name="outsource" eval="False"/>
+        </record>
+        <record id="hr_employee23" model="hr.employee">
+            <field name="name">رنيم صالح الجويعي</field>
+            <field name="active" eval="True"/>
+            <field name="country_id">192</field>
+            <field name="gender">female</field>
+            <field name="marital">single</field>
+            <field name="birthday">1991-08-14</field>
+            <field name="identification_id">1000000297</field>
+            <field name="work_phone">966 50205</field>
+            <field name="mobile_phone">966 50205383</field>
+            <field name="work_email">ranim@gmail.com</field>
+            <field name="job_id" ref="Job24"/>
+            <field name="department_id" ref="mk_hr_department4"/>
+            <field name="center_admin_category">female</field>
+            <field name="flag" eval="True"/>
+            <field name="flag2" eval="False"/>
+            <field name="category2">admin</field>
+            <field name="passwd">9483</field>
+            <field name="issue_identity">2007-12-26</field>
+            <field name="identity_expire">2028-11-29</field>
+            <field name="kin_phone"></field>
+            <field name="salary">700</field>
+            <field name="salary_donor">society</field>
+            <field name="contract_type">contractor</field>
+            <field name="registeration_code">60016</field>
+            <field name="category">center_admin</field>
+            <field name="part_ids" eval="[(4, ref('educational_data.mk_parts1')),(4, ref('educational_data.mk_parts2')),
+            (4, ref('educational_data.mk_parts3'))]"/>
+            <field name="outsource" eval="False"/>
+        </record>
+        <record id="hr_employee24" model="hr.employee">
+            <field name="name">مبارك محمد الغوينم</field>
+            <field name="active" eval="True"/>
+            <field name="country_id">192</field>
+            <field name="gender">male</field>
+            <field name="marital">married</field>
+            <field name="birthday">1978-08-08</field>
+            <field name="identification_id">1000000305</field>
+            <field name="work_phone"></field>
+            <field name="mobile_phone">966 55343435</field>
+            <field name="work_email">moberak@gmail.com</field>
+            <field name="job_id" ref="Job24"/>
+            <field name="department_id" ref="mk_hr_department5"/>
+            <field name="center_admin_category">male</field>
+            <field name="flag" eval="True"/>
+            <field name="flag2" eval="False"/>
+            <field name="category2">admin</field>
+            <field name="passwd">9347</field>
+            <field name="issue_identity">2005-06-16</field>
+            <field name="identity_expire">2028-11-29</field>
+            <field name="kin_phone">966 53335</field>
+            <field name="salary">600</field>
+            <field name="salary_donor">society</field>
+            <field name="contract_type">contractor</field>
+            <field name="registeration_code">60017</field>
+            <field name="category">center_admin</field>
+            <field name="part_ids" eval="[(4, ref('educational_data.mk_parts1')),(4, ref('educational_data.mk_parts2')),
+            (4, ref('educational_data.mk_parts3'))]"/>
+            <field name="outsource" eval="False"/>
+        </record>
+        <record id="hr_employee25" model="hr.employee">
+            <field name="name">ياسمين علي السعيد</field>
+            <field name="active" eval="True"/>
+            <field name="country_id">192</field>
+            <field name="gender">female</field>
+            <field name="marital">single</field>
+            <field name="birthday">1994-06-01</field>
+            <field name="identification_id">1000000313</field>
+            <field name="work_phone">966 50562</field>
+            <field name="mobile_phone">966 50541671</field>
+            <field name="work_email">yasmine@gmail.com</field>
+            <field name="job_id" ref="Job24"/>
+            <field name="department_id" ref="mk_hr_department5"/>
+            <field name="center_admin_category">female</field>
+            <field name="flag" eval="True"/>
+            <field name="flag2" eval="False"/>
+            <field name="category2">admin</field>
+            <field name="passwd">5866</field>
+            <field name="issue_identity">2005-06-16</field>
+            <field name="identity_expire">2028-11-29</field>
+            <field name="kin_phone"></field>
+            <field name="salary">600</field>
+            <field name="salary_donor">society</field>
+            <field name="contract_type">contractor</field>
+            <field name="registeration_code">60018</field>
+            <field name="category">center_admin</field>
+            <field name="part_ids" eval="[(4, ref('educational_data.mk_parts1')),(4, ref('educational_data.mk_parts2')),
+            (4, ref('educational_data.mk_parts3'))]"/>
+            <field name="outsource" eval="False"/>
+        </record>
+        <record id="hr_employee26" model="hr.employee">
+            <field name="name">عبدالعزيز ناصر اليحيى</field>
+            <field name="active" eval="True"/>
+            <field name="country_id">192</field>
+            <field name="gender">male</field>
+            <field name="marital">married</field>
+            <field name="birthday">1994-06-01</field>
+            <field name="identification_id">1000000321</field>
+            <field name="work_phone">966 59988</field>
+            <field name="mobile_phone">966 59988337</field>
+            <field name="work_email">abdalaziznacer@gmail.com</field>
+            <field name="job_id" ref="Job24"/>
+            <field name="department_id" ref="mk_hr_department6"/>
+            <field name="center_admin_category">male</field>
+            <field name="flag" eval="True"/>
+            <field name="flag2" eval="False"/>
+            <field name="category2">admin</field>
+            <field name="passwd">2995</field>
+            <field name="issue_identity">2005-06-16</field>
+            <field name="identity_expire">2028-11-29</field>
+            <field name="kin_phone">966 83371</field>
+            <field name="salary">500</field>
+            <field name="salary_donor">society</field>
+            <field name="contract_type">contractor</field>
+            <field name="registeration_code">60019</field>
+            <field name="category">center_admin</field>
+            <field name="part_ids" eval="[(4, ref('educational_data.mk_parts1')),(4, ref('educational_data.mk_parts2')),
+            (4, ref('educational_data.mk_parts3'))]"/>
+            <field name="outsource" eval="False"/>
+        </record>
+        <record id="hr_employee27" model="hr.employee">
+            <field name="name">هتون بنت عبدالله بن كنعان</field>
+            <field name="active" eval="True"/>
+            <field name="country_id">192</field>
+            <field name="gender">female</field>
+            <field name="marital">married</field>
+            <field name="birthday">1993-03-24</field>
+            <field name="identification_id">1000000339</field>
+            <field name="work_phone">966 55797</field>
+            <field name="mobile_phone">966 05066585</field>
+            <field name="work_email">hotoun@gmail.com</field>
+            <field name="job_id" ref="Job24"/>
+            <field name="department_id" ref="mk_hr_department6"/>
+            <field name="center_admin_category">female</field>
+            <field name="flag" eval="True"/>
+            <field name="flag2" eval="False"/>
+            <field name="category2">admin</field>
+            <field name="passwd">7435</field>
+            <field name="issue_identity">2005-06-16</field>
+            <field name="identity_expire">2028-11-29</field>
+            <field name="kin_phone"></field>
+            <field name="salary">700</field>
+            <field name="salary_donor">society</field>
+            <field name="contract_type">contractor</field>
+            <field name="registeration_code">60020</field>
+            <field name="category">center_admin</field>
+            <field name="part_ids" eval="[(4, ref('educational_data.mk_parts1')),(4, ref('educational_data.mk_parts2')),
+            (4, ref('educational_data.mk_parts3'))]"/>
+            <field name="outsource" eval="False"/>
+        </record>
+        <record id="hr_employee28" model="hr.employee">
+            <field name="name">ماجد محمد علي ال عيدان</field>
+            <field name="active" eval="True"/>
+            <field name="country_id">192</field>
+            <field name="gender">male</field>
+            <field name="marital">married</field>
+            <field name="birthday">1978-08-08</field>
+            <field name="identification_id">1000000347</field>
+            <field name="work_phone">966 96659</field>
+            <field name="mobile_phone">966 54619286</field>
+            <field name="work_email">majed@gmail.com</field>
+            <field name="job_id" ref="Job24"/>
+            <field name="department_id" ref="mk_hr_department7"/>
+            <field name="center_admin_category">male</field>
+            <field name="flag" eval="True"/>
+            <field name="flag2" eval="False"/>
+            <field name="category2">admin</field>
+            <field name="passwd">7661</field>
+            <field name="issue_identity">2005-06-16</field>
+            <field name="identity_expire">2028-11-29</field>
+            <field name="kin_phone"></field>
+            <field name="salary">700</field>
+            <field name="salary_donor">society</field>
+            <field name="contract_type">contractor</field>
+            <field name="registeration_code">60021</field>
+            <field name="category">center_admin</field>
+            <field name="part_ids" eval="[(4, ref('educational_data.mk_parts1')),(4, ref('educational_data.mk_parts2')),
+            (4, ref('educational_data.mk_parts3'))]"/>
+            <field name="outsource" eval="False"/>
+        </record>
+        <record id="hr_employee29" model="hr.employee">
+            <field name="name">عائشه محمد سعيدان</field>
+            <field name="active" eval="True"/>
+            <field name="country_id">192</field>
+            <field name="gender">female</field>
+            <field name="marital">married</field>
+            <field name="birthday">1967-02-01</field>
+            <field name="identification_id">1000000354</field>
+            <field name="work_phone">966 38696</field>
+            <field name="mobile_phone">966 50043869</field>
+            <field name="work_email">aycha@gmail.com</field>
+            <field name="job_id" ref="Job24"/>
+            <field name="department_id" ref="mk_hr_department7"/>
+            <field name="center_admin_category">female</field>
+            <field name="flag" eval="True"/>
+            <field name="flag2" eval="False"/>
+            <field name="category2">admin</field>
+            <field name="passwd">3765</field>
+            <field name="issue_identity">2005-06-16</field>
+            <field name="identity_expire">2028-11-29</field>
+            <field name="kin_phone"></field>
+            <field name="salary">700</field>
+            <field name="salary_donor">society</field>
+            <field name="contract_type">contractor</field>
+            <field name="registeration_code">60022</field>
+            <field name="category">center_admin</field>
+            <field name="part_ids" eval="[(4, ref('educational_data.mk_parts1')),(4, ref('educational_data.mk_parts2')),
+            (4, ref('educational_data.mk_parts3'))]"/>
+            <field name="outsource" eval="False"/>
+        </record>
+        <record id="hr_employee30" model="hr.employee">
+            <field name="name">أمنة محمد لافي الغامدي</field>
+            <field name="active" eval="True"/>
+            <field name="country_id">192</field>
+            <field name="gender">female</field>
+            <field name="marital">married</field>
+            <field name="birthday">1967-02-01</field>
+            <field name="identification_id">1000000362</field>
+            <field name="work_phone">966 59710</field>
+            <field name="mobile_phone">966 50429555</field>
+            <field name="work_email">emna@gmail.com</field>
+            <field name="job_id" ref="Job1"/>
+            <field name="department_id" ref="mk_hr_department2"/>
+            <field name="center_admin_category">both</field>
+            <field name="flag" eval="True"/>
+            <field name="flag2" eval="False"/>
+            <field name="category2">supervisor</field>
+            <field name="passwd">2019</field>
+            <field name="issue_identity">2005-06-16</field>
+            <field name="identity_expire">2028-11-29</field>
+            <field name="kin_phone"></field>
+            <field name="salary">900</field>
+            <field name="salary_donor">society</field>
+            <field name="contract_type">contractor</field>
+            <field name="registeration_code">50006</field>
+            <field name="category">supervisor</field>
+            <field name="part_ids" eval="[(4, ref('educational_data.mk_parts1')),(4, ref('educational_data.mk_parts2')),
+            (4, ref('educational_data.mk_parts3'))]"/>
+            <field name="outsource" eval="True"/>
+        </record>
+        <record id="hr_employee31" model="hr.employee">
+            <field name="name">جابر أحمد الحارثي</field>
+            <field name="active" eval="True"/>
+            <field name="country_id">192</field>
+            <field name="gender">male</field>
+            <field name="marital">married</field>
+            <field name="birthday">1978-08-08</field>
+            <field name="identification_id">1000000636</field>
+            <field name="work_phone">966 52225</field>
+            <field name="mobile_phone">966 55182274</field>
+            <field name="work_email">jaberahmad@gmail.com</field>
+            <field name="job_id" ref="Job47"/>
+            <field name="department_id" ref="mk_hr_department2"/>
+            <field name="center_admin_category">both</field>
+            <field name="flag" eval="True"/>
+            <field name="flag2" eval="False"/>
+            <field name="category2">admin</field>
+            <field name="passwd"></field>
+            <field name="issue_identity">1990-10-28</field>
+            <field name="identity_expire">2028-11-29</field>
+            <field name="kin_phone"></field>
+            <field name="salary">900</field>
+            <field name="salary_donor">society</field>
+            <field name="contract_type">contractor</field>
+            <field name="registeration_code">60023</field>
+            <field name="category">center_admin</field>
+            <field name="part_ids" eval="[(4, ref('educational_data.mk_parts1')),(4, ref('educational_data.mk_parts2')),
+            (4, ref('educational_data.mk_parts3'))]"/>
+            <field name="outsource" eval="False"/>
+        </record>
+
+        <record id="hr_employee32" model="hr.employee">
+            <field name="name">يوسف عبد الله الناصر</field>
+            <field name="active" eval="True"/>
+            <field name="country_id">192</field>
+            <field name="gender">male</field>
+            <field name="marital">married</field>
+            <field name="birthday">1990-11-13</field>
+            <field name="identification_id">1000000644</field>
+            <field name="work_phone">966 52365</field>
+            <field name="mobile_phone">966 55962274</field>
+            <field name="work_email">youssefabdallah@gmail.com</field>
+            <field name="job_id" ref="Job47"/>
+            <field name="department_id" ref="mk_hr_department4"/>
+            <field name="center_admin_category">both</field>
+            <field name="flag" eval="True"/>
+            <field name="flag2" eval="False"/>
+            <field name="category2">admin</field>
+            <field name="passwd"></field>
+            <field name="issue_identity">2008-10-10</field>
+            <field name="identity_expire">2028-11-29</field>
+            <field name="kin_phone"></field>
+            <field name="salary">900</field>
+            <field name="salary_donor">society</field>
+            <field name="contract_type">contractor</field>
+            <field name="registeration_code">60024</field>
+            <field name="category">center_admin</field>
+            <field name="part_ids" eval="[(4, ref('educational_data.mk_parts1')),(4, ref('educational_data.mk_parts2')),
+            (4, ref('educational_data.mk_parts3'))]"/>
+            <field name="outsource" eval="False"/>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,24 @@
+<odoo>
+    <data>
+    
+ 	<record model="ir.ui.view" id="view_country_form_inherit">
+    <field name="name">view_country_form.inherit</field>
+    <field name="model">res.country</field>
+    <field name="inherit_id" ref="base.view_country_form"/>
+    <field name="arch" type="xml">
+            
+     <field name="code"  position="after">
+                        <field name="active"  />
+            </field> 
+
+      <field name="active"  position="after">
+             <field name="is_default"  />
+        </field> 
+
+
+     </field>
+
+    </record>
+
+    </data>  
+</odoo>

@@ -1,0 +1,11 @@
+<odoo>
+    <data noupdate="1">
+        <record id="mk_news1" model="mk.news">
+            <field name="title">إعلان عن مسابقة</field>
+            <field name="category">adver</field>
+            <field name="date">2020-10-20</field>
+            <field name="state">draft</field>
+            <field name="masjed_id" ref="mk_mosque1"/>
+        </record>
+    </data>
+</odoo>

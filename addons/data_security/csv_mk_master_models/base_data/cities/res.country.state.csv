@@ -1,0 +1,129 @@
+id,name,country_id:id,enable
+City_1,الرياض,base.sa,1
+City_2,تمير,base.sa,1
+City_3,الزلفي,base.sa,1
+City_4,شقراء,base.sa,1
+City_5,الداودمى,base.sa,1
+City_6,حوطة سدير,base.sa,1
+City_7,حوطة بنى تميم,base.sa,1
+City_8,القويعية,base.sa,1
+City_9,المجمعة,base.sa,1
+City_10,الأفلاج,base.sa,1
+City_11,السليل,base.sa,1
+City_12,روضة سدير,base.sa,1
+City_13,عفيف,base.sa,1
+City_14,الحريق,base.sa,1
+City_15,الغاط,base.sa,1
+City_16,ثادق,base.sa,1
+City_17,بريده,base.sa,1
+City_18,مرات,base.sa,1
+City_19,ساجر بالسر,base.sa,1
+City_20,وادى الواسر,base.sa,1
+City_21,الدرعيه,base.sa,1
+City_22,الخرج,base.sa,1
+City_23,ضرما,base.sa,1
+City_24,البجاديه,base.sa,1
+City_25,مكه المكرمه,base.sa,1
+City_26,جده,base.sa,1
+City_27,الطائف,base.sa,1
+City_28,وادى ليه,base.sa,1
+City_29,رنيه,base.sa,1
+City_30,تربه,base.sa,1
+City_31,الكامل وبنى سليم,base.sa,1
+City_32,الخرمه,base.sa,1
+City_33,خليص,base.sa,1
+City_34,القنفذه,base.sa,1
+City_35,الجموم,base.sa,1
+City_36,رابغ,base.sa,1
+City_37,الليث,base.sa,1
+City_38,بنى مالك,base.sa,1
+City_39,رهاط ومدركه,base.sa,1
+City_40,المدينه المنورة,base.sa,1
+City_41,العلا,base.sa,1
+City_42,ينبع,base.sa,1
+City_43,المهد,base.sa,1
+City_44,الحناكيه,base.sa,1
+City_45,بدر,base.sa,1
+City_46,خيبر,base.sa,1
+City_47,القصيم,base.sa,1
+City_48,عنيزه,base.sa,1
+City_49,الرس,base.sa,1
+City_50,البكيريه,base.sa,1
+City_51,المذنب,base.sa,1
+City_52,البدائع,base.sa,1
+City_53,الخبراء,base.sa,1
+City_54,عيون الجواء,base.sa,1
+City_55,الأسياح,base.sa,1
+City_56,الشماسيه,base.sa,1
+City_57,عقلة الصقور,base.sa,1
+City_58,الخبراء,base.sa,1
+City_59,الدمام,base.sa,1
+City_60,الإحساء,base.sa,1
+City_61,الجبيل,base.sa,1
+City_62,حفر الباطن,base.sa,1
+City_63,أبها,base.sa,1
+City_64,بيشة,base.sa,1
+City_65,بلقرن,base.sa,1
+City_66,محايل عسير,base.sa,1
+City_67,النماص,base.sa,1
+City_68,خميس مشيط,base.sa,1
+City_69,المجارده,base.sa,1
+City_70,رجال ألمع,base.sa,1
+City_71,ظهران الجنوب,base.sa,1
+City_72,سراة عبيده,base.sa,1
+City_73,أحد رفيده,base.sa,1
+City_74,تباله,base.sa,1
+City_75,البرك,base.sa,1
+City_76,تبوك,base.sa,1
+City_77,أملج,base.sa,1
+City_78,البدع,base.sa,1
+City_79,تيماء,base.sa,1
+City_80,ضباء,base.sa,1
+City_81,الوجه,base.sa,1
+City_82,حقل,base.sa,1
+City_83,حائل,base.sa,1
+City_84,الحائط,base.sa,1
+City_85,الروضه,base.sa,1
+City_86,بقعاء,base.sa,1
+City_87,موقق,base.sa,1
+City_88,فيد,base.sa,1
+City_89,الغزاله,base.sa,1
+City_90,عرعر,base.sa,1
+City_91,رفحاء,base.sa,1
+City_92,طريف,base.sa,1
+City_93,العويقليه,base.sa,1
+City_94,جازان,base.sa,1
+City_95,بيش,base.sa,1
+City_96,الدرب (القياس),base.sa,1
+City_97,ضمد,base.sa,1
+City_98,الداير,base.sa,1
+City_99,أبى عريش,base.sa,1
+City_100,صبيا,base.sa,1
+City_101,صامطه,base.sa,1
+City_102,أحد المسارحه,base.sa,1
+City_103,وادى جازان,base.sa,1
+City_104,نجران,base.sa,1
+City_105,شروره,base.sa,1
+City_106,الباحه,base.sa,1
+City_107,بلجرشي,base.sa,1
+City_108,المندق,base.sa,1
+City_109,قلوه,base.sa,1
+City_110,المخواه,base.sa,1
+City_111,القرى بالأطاوله,base.sa,1
+City_112,العقيق,base.sa,1
+City_113,سكاكا,base.sa,1
+City_114,القريات,base.sa,1
+City_115,دومة الجندل,base.sa,1
+City_116,طبرجل,base.sa,1
+City_117,حريملاء,base.sa,1
+City_118,المركز الخيرى لتعليم القرآن,base.sa,1
+City_119,معهد الدراسات القرآنيه,base.sa,1
+City_120,المشعلية,base.sa,1
+City_122,رماح,base.sa,1
+City_123,المزاحمية,base.sa,1
+City_124,الدلم,base.sa,1
+City_125,الجلة وتبراك,base.sa,1
+City_126,مركز الجمش,base.sa,1
+City_127,جلاجل,base.sa,1
+City_128,جو,base.sa,1
+City_129,جلاجل,base.sa,1
