@@ -7,14 +7,14 @@ _logger = logging.getLogger(__name__)
     
 class Surah(models.Model):
     _name = 'mk.surah'
-    _inherit = ['mail.thread']
+    _inherit=['mail.thread','mail.activity.mixin']
     _order = 'order'
         
-    name         = fields.Char('Name', track_visibility='onchange')
-    order        = fields.Integer('Order', required=True, track_visibility='onchange')
-    start_verses = fields.Integer('Start Verses ', track_visibility='onchange')
-    end_verses   = fields.Integer('End Verses ', track_visibility='onchange')
-    nbr_lines    = fields.Integer('عدد الأسطر', track_visibility='onchange')
+    name         = fields.Char('Name', tracking=True)
+    order        = fields.Integer('Order', required=True, tracking=True)
+    start_verses = fields.Integer('Start Verses ', tracking=True)
+    end_verses   = fields.Integer('End Verses ', tracking=True)
+    nbr_lines    = fields.Integer('عدد الأسطر', tracking=True)
     #part_ids = fields.One2many('mk.parts', 'part_id' , string='parts', )
     
     _sql_constraints = [('name_uniq', 'unique (name)', "هذا السجل موجود مسبقا !"),]
@@ -36,24 +36,24 @@ class Surah(models.Model):
     
 class Verse(models.Model):
     _name = 'mk.surah.verses'
-    _inherit = ['mail.thread']
+    _inherit=['mail.thread','mail.activity.mixin']
     _rec_name = 'original_surah_order'
     
-    surah_id		 			= fields.Many2one('mk.surah', string='Surah', track_visibility='onchange')
-    part_id 					= fields.Many2one('mk.parts', string='Part',  track_visibility='onchange')
-    verse 						= fields.Text('Verse', track_visibility='onchange')
-    original_accumalative_order = fields.Integer('Original Accumalative Order', track_visibility='onchange')
-    reverse_accumalative_order  = fields.Integer('Reverse Accumalative Order',  track_visibility='onchange')
-    original_surah_order 		= fields.Integer('Original Surah Order', track_visibility='onchange')
-    reverse_surah_order 		= fields.Integer('Reverse Surah Order',  track_visibility='onchange')
+    surah_id		 			= fields.Many2one('mk.surah', string='Surah', tracking=True)
+    part_id 					= fields.Many2one('mk.parts', string='Part',  tracking=True)
+    verse 						= fields.Text('Verse', tracking=True)
+    original_accumalative_order = fields.Integer('Original Accumalative Order', tracking=True)
+    reverse_accumalative_order  = fields.Integer('Reverse Accumalative Order',  tracking=True)
+    original_surah_order 		= fields.Integer('Original Surah Order', tracking=True)
+    reverse_surah_order 		= fields.Integer('Reverse Surah Order',  tracking=True)
     difficulty_level 			= fields.Selection([('easy', 'Easy'),
                                                     ('middle', 'Middle'),
-                                                    ('difficult', 'Difficult')], string='Difficulty Level', track_visibility='onchange')
-    line_start                  = fields.Integer('سطر البداية', track_visibility='onchange')
-    line_end                    = fields.Integer('سطر النهاية', track_visibility='onchange')
+                                                    ('difficult', 'Difficult')], string='Difficulty Level', tracking=True)
+    line_start                  = fields.Integer('سطر البداية', tracking=True)
+    line_end                    = fields.Integer('سطر النهاية', tracking=True)
 
-    line_no 					= fields.Integer('Number of Lines per Verse', track_visibility='onchange')
-    page_no						= fields.Integer('page no.', track_visibility='onchange')
+    line_no 					= fields.Integer('Number of Lines per Verse', tracking=True)
+    page_no						= fields.Integer('page no.', tracking=True)
 
     @api.model
     def get_listen_line_page(self, line_id):

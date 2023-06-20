@@ -12,7 +12,7 @@ _logger = logging.getLogger(__name__)
 
 class MasjedPermision(models.Model):
     _name = 'mosque.permision'
-    _inherit = ['mail.thread']
+    _inherit=['mail.thread','mail.activity.mixin']
 
     # @api.one
     @api.depends('masjed_id', 'is_valid', 'permision_date')
@@ -39,25 +39,25 @@ class MasjedPermision(models.Model):
         for rec in self:
             rec.categ_type = rec.categ_id.mosque_type
 
-    name               = fields.Char(compute=get_name_permission, default='طلب تصريح', store=True, track_visibility='onchange')
-    date_request       = fields.Date('Request Date', track_visibility='onchange')
-    attach_no          = fields.Char('Attachment No', track_visibility='onchange')
+    name               = fields.Char(compute=get_name_permission, default='طلب تصريح', store=True, tracking=True)
+    date_request       = fields.Date('Request Date', tracking=True)
+    attach_no          = fields.Char('Attachment No', tracking=True)
 
-    masjed_id          = fields.Many2one('mk.mosque', string='Masjed', track_visibility='onchange')
-    responsible_id     = fields.Many2one('hr.employee', string='Responsible', domain=[('category', '=', 'admin')], track_visibility='onchange')
-    register_code      = fields.Char("كود المسجد/ المدرسة", size=20, compute=get_name_permission, store=True, track_visibility='onchange')
-    permision_date     = fields.Date('تاريخ التصريح',  track_visibility='onchange')
-    permision_end_date = fields.Date('تاريخ إنتهاء التصريح', compute="compute_hijri_start_date", store=True, track_visibility='onchange')
+    masjed_id          = fields.Many2one('mk.mosque', string='Masjed', tracking=True)
+    responsible_id     = fields.Many2one('hr.employee', string='Responsible', domain=[('category', '=', 'admin')], tracking=True)
+    register_code      = fields.Char("كود المسجد/ المدرسة", size=20, compute=get_name_permission, store=True, tracking=True)
+    permision_date     = fields.Date('تاريخ التصريح',  tracking=True)
+    permision_end_date = fields.Date('تاريخ إنتهاء التصريح', compute="compute_hijri_start_date", store=True, tracking=True)
     permision_type     = fields.Selection([('pe', 'Parminante'),
-                                           ('te', 'Temparorey')], string="المدة", track_visibility='onchange')
+                                           ('te', 'Temparorey')], string="المدة", tracking=True)
     mosque_type         = fields.Selection([('1', 'new'),
                                             ('2', 'transfer'),
                                             ('3', 'Cancel'),
-                                            ('4', 'Tajmeed')], string="الإجراء", track_visibility='onchange')
-    center_id           = fields.Many2one('hr.department', string='Center', track_visibility='onchange')
-    city_id             = fields.Many2one('res.country.state', string='City', domain=[('type_location', '=', 'city'),('enable', '=', True)], track_visibility='onchange')
-    area_id             = fields.Many2one('res.country.state', string='Area', domain=[('type_location', '=', 'area'),('enable', '=', True)], track_visibility='onchange')
-    district_id         = fields.Many2one('res.country.state', string='District', domain=[('type_location', '=', 'district'),('enable', '=', True)], track_visibility='onchange')
+                                            ('4', 'Tajmeed')], string="الإجراء", tracking=True)
+    center_id           = fields.Many2one('hr.department', string='Center', tracking=True)
+    city_id             = fields.Many2one('res.country.state', string='City', domain=[('type_location', '=', 'city'),('enable', '=', True)], tracking=True)
+    area_id             = fields.Many2one('res.country.state', string='Area', domain=[('type_location', '=', 'area'),('enable', '=', True)], tracking=True)
+    district_id         = fields.Many2one('res.country.state', string='District', domain=[('type_location', '=', 'district'),('enable', '=', True)], tracking=True)
     state               = fields.Selection([('draft', 'Draft'),
                                             ('renew', 'Temparory Permission'),
                                             ('review', 'Supervisor Review'),
@@ -65,39 +65,39 @@ class MasjedPermision(models.Model):
                                             ('accept', 'Permenant permision'),
                                             ('new', 'Renew'),
                                             ('tajmeed', 'Tajmeed'),
-                                            ('reject', 'Rejected')], string='State', default='draft', track_visibility='onchange')
-    supervision_id      = fields.Many2one('hr.employee', string="Supervision", domain=[('category', '=', 'edu_supervisor')], track_visibility='onchange')
-    visit_date          = fields.Date('Visit Date', track_visibility='onchange')
-    student_no          = fields.Integer("Number of student", track_visibility='onchange')
+                                            ('reject', 'Rejected')], string='State', default='draft', tracking=True)
+    supervision_id      = fields.Many2one('hr.employee', string="Supervision", domain=[('category', '=', 'edu_supervisor')], tracking=True)
+    visit_date          = fields.Date('Visit Date', tracking=True)
+    student_no          = fields.Integer("Number of student", tracking=True)
     supervisor_decision = fields.Selection([('accept', 'Accept'),
-                                            ('reject', 'Reject')], string='Supervisior Decision', track_visibility='onchange')
-    decision_date       = fields.Date('Decision Date', track_visibility='onchange')
-    note                = fields.Text('Note', track_visibility='onchange')
+                                            ('reject', 'Reject')], string='Supervisior Decision', tracking=True)
+    decision_date       = fields.Date('Decision Date', tracking=True)
+    note                = fields.Text('Note', tracking=True)
     eval_lines          = fields.One2many('mosque.eval.visit', 'visit_id', string="Evaluation Result")
     location_ids        = fields.One2many('mosque.eval.location.visit', 'loaction_id', string="Location Evalution")
     teacher_ids         = fields.One2many('teacher.test', 'test_id', string="Teacher Test")
-    remain              = fields.Integer("Remaining Date", track_visibility='onchange')
+    remain              = fields.Integer("Remaining Date", tracking=True)
     # teacher_ids2=fields.One2many('teacher.test','test_id2',string="Teacher Test")
     type_process        = fields.Selection([('new', 'جديد'),
-                                            ('exist', 'تجديد')], string='Type', track_visibility='onchange')
-    test_select         = fields.Selection([('test_slc', 'Testing')], string='Select Test', default='test_slc', track_visibility='onchange')
+                                            ('exist', 'تجديد')], string='Type', tracking=True)
+    test_select         = fields.Selection([('test_slc', 'Testing')], string='Select Test', default='test_slc', tracking=True)
     categ_type          = fields.Selection([('male', 'Male'),
-                                            ('female', 'Female'), ], string="نوع المسجد", compute=get_categ_type, track_visibility='onchange')
-    hijri_permision_date     = fields.Char(compute="compute_hijri_start_date", store=True, track_visibility='onchange')
-    hijri_permision_end_date = fields.Char(compute="compute_hijri_start_date", store=True, track_visibility='onchange')
+                                            ('female', 'Female'), ], string="نوع المسجد", compute=get_categ_type, tracking=True)
+    hijri_permision_date     = fields.Char(compute="compute_hijri_start_date", store=True, tracking=True)
+    hijri_permision_end_date = fields.Char(compute="compute_hijri_start_date", store=True, tracking=True)
 
-    categ_id           = fields.Many2one('mk.mosque.category', string='الفئة', track_visibility='onchange')
+    categ_id           = fields.Many2one('mk.mosque.category', string='الفئة', tracking=True)
     episode_value      = fields.Selection([('mo', 'صباحية'),
-                                           ('ev', 'مسائية')], string="دوام الحلقات", track_visibility='onchange')
-    episodes           = fields.Char('إسم الحلقات/ إسم الفصول', track_visibility='onchange')
-    build_type         = fields.Many2one('mk.building.type', string='نوع المبني', track_visibility='onchange')
-    check_maneg_mosque = fields.Boolean('توجد ادارة للحلقات بالمسجد/ المدرسة', track_visibility='onchange')
-    check_parking_mosque = fields.Boolean('يوجد موقف بالمسجد/ المدرسة', track_visibility='onchange')
-    is_valid             = fields.Boolean('إعتماد', track_visibility='onchange')
+                                           ('ev', 'مسائية')], string="دوام الحلقات", tracking=True)
+    episodes           = fields.Char('إسم الحلقات/ إسم الفصول', tracking=True)
+    build_type         = fields.Many2one('mk.building.type', string='نوع المبني', tracking=True)
+    check_maneg_mosque = fields.Boolean('توجد ادارة للحلقات بالمسجد/ المدرسة', tracking=True)
+    check_parking_mosque = fields.Boolean('يوجد موقف بالمسجد/ المدرسة', tracking=True)
+    is_valid             = fields.Boolean('إعتماد', tracking=True)
     valid_state          = fields.Selection([('valid', 'Valid'),
-                                             ('not_valid', 'Not Valid')], compute='get_valid_state',store=True, string="Valid State", track_visibility='onchange')
+                                             ('not_valid', 'Not Valid')], compute='get_valid_state',store=True, string="Valid State", tracking=True)
     perm_type            = fields.Selection([('mosque_perm', 'Mosque permission'),
-                                             ('school_perm', 'School permission')], compute='get_perm_type',store=True, string="Perm type", track_visibility='onchange')
+                                             ('school_perm', 'School permission')], compute='get_perm_type',store=True, string="Perm type", tracking=True)
 
     # @api.multi
     def get_valid_state(self):
@@ -737,7 +737,7 @@ class masjed_supervisor_line(models.Model):
 
 class masjed_supervisor_request(models.Model):
     _name = 'mosque.supervisor.request'
-    _inherit = ['mail.thread']
+    _inherit=['mail.thread','mail.activity.mixin']
 
     # @api.one
     @api.depends('employee_id', 'is_valid', 'date_request')
@@ -776,39 +776,39 @@ class masjed_supervisor_request(models.Model):
         self.identification_id = employee and employee.identification_id or ''         
 
 
-    name                    = fields.Char(compute=get_name_request, default='طلب تكليف', store=True, track_visibility='onchange')
-    center_id               = fields.Many2one('hr.department', string='Center', track_visibility='onchange')
-    employee_id             = fields.Many2one('hr.employee', string='supervisor', domain=[('category', '=', 'admin')], track_visibility='onchange')
-    identification_id       = fields.Char(compute='get_identification_id', store=True, track_visibility='onchange')
-    mosque_admin_id         = fields.Many2one('hr.employee', string='supervisor', domain=[('category', '=', 'supervisor')], track_visibility='onchange')
-    admin_identification_id = fields.Char(related='mosque_admin_id.identification_id', store=True, track_visibility='onchange')
+    name                    = fields.Char(compute=get_name_request, default='طلب تكليف', store=True, tracking=True)
+    center_id               = fields.Many2one('hr.department', string='Center', tracking=True)
+    employee_id             = fields.Many2one('hr.employee', string='supervisor', domain=[('category', '=', 'admin')], tracking=True)
+    identification_id       = fields.Char(compute='get_identification_id', store=True, tracking=True)
+    mosque_admin_id         = fields.Many2one('hr.employee', string='supervisor', domain=[('category', '=', 'supervisor')], tracking=True)
+    admin_identification_id = fields.Char(related='mosque_admin_id.identification_id', store=True, tracking=True)
     mosque_ids              = fields.Many2many('mk.mosque', string='Mosque')
-    mosque_id               = fields.Many2one('mk.mosque', string='المسجد', track_visibility='onchange')
-    date_request            = fields.Date('Request Date', track_visibility='onchange')
-    hijri_date_request      = fields.Char(compute="compute_dates", store=True, track_visibility='onchange')
-    permision_end_date      = fields.Date('End Date', compute="compute_dates", store=True, track_visibility='onchange')
-    hijri_end_date          = fields.Char(compute="compute_dates", store=True, track_visibility='onchange')
+    mosque_id               = fields.Many2one('mk.mosque', string='المسجد', tracking=True)
+    date_request            = fields.Date('Request Date', tracking=True)
+    hijri_date_request      = fields.Char(compute="compute_dates", store=True, tracking=True)
+    permision_end_date      = fields.Date('End Date', compute="compute_dates", store=True, tracking=True)
+    hijri_end_date          = fields.Char(compute="compute_dates", store=True, tracking=True)
     permision_type          = fields.Selection([('pe', 'Parminante'),
-                                                ('te', 'Temparorey')], string= "المدة", track_visibility='onchange')
+                                                ('te', 'Temparorey')], string= "المدة", tracking=True)
     state                   = fields.Selection([('draft', 'مبدئي'),
                                                 ('waiting', 'في انتظار الرد'),
                                                 ('accept', 'Accepted'),
                                                 ('reject', 'Rejected'),
                                                 ('done', 'منتهي'),
-                                                ('block', 'موقف')], string="الحالة", default='draft', track_visibility='onchange')
+                                                ('block', 'موقف')], string="الحالة", default='draft', tracking=True)
     attachment_ids          = fields.Many2many('ir.attachment', string="Attachment")
-    attach_no               = fields.Char('Attach No', compute=get_nbr_attach, store=True, track_visibility='onchange')
+    attach_no               = fields.Char('Attach No', compute=get_nbr_attach, store=True, tracking=True)
     super_type              = fields.Selection([('1', 'new'),
                                                 ('2', 'transfer'),
                                                 ('3', 'Cancel'),
-                                                ('4', 'Tajmeed')], string="Option", track_visibility='onchange')
+                                                ('4', 'Tajmeed')], string="Option", tracking=True)
     categ_type              = fields.Selection([('male', 'Male'),
-                                                ('female', 'Female')], string="Type", required=True, track_visibility='onchange')
+                                                ('female', 'Female')], string="Type", required=True, tracking=True)
     type_request                = fields.Selection([('supervisor_request', 'Supervisor request'),
-                                                    ('admin_request', 'Admin request')], default='supervisor_request' ,string="Permission requests", required=True, track_visibility='onchange')
-    is_valid                = fields.Boolean('إعتماد',               track_visibility='onchange')
-    active                  = fields.Boolean('Active', default=True, track_visibility='onchange')
-    auto_renowell           = fields.Boolean('Auto renowell', track_visibility='onchange')
+                                                    ('admin_request', 'Admin request')], default='supervisor_request' ,string="Permission requests", required=True, tracking=True)
+    is_valid                = fields.Boolean('إعتماد',               tracking=True)
+    active                  = fields.Boolean('Active', default=True, tracking=True)
+    auto_renowell           = fields.Boolean('Auto renowell', tracking=True)
 
     # @api.multi
     def toggle_auto_renowell(self):
@@ -905,66 +905,66 @@ class masjed_supervisor_request(models.Model):
     def action_reject(self):
         self.state = 'reject'
 
-    @api.onchange('categ_type', 'center_id')
-    def onchange_categ_type(self):
-        categ_type = self.categ_type
-        center = self.center_id
-        center_id = center.id
-        mosque_ids = []
-        if center_id:
-            # self.employee_id = center.manager_id.id
-            if categ_type:
-                mosques = self.env['mk.mosque'].search([('center_department_id', '=', center_id),
-                                                        ('categ_id.mosque_type', '=', categ_type)])
-                mosque_ids = [mosque.id for mosque in mosques]
+    # @api.onchange('categ_type', 'center_id')
+    # def onchange_categ_type(self):
+    #     categ_type = self.categ_type
+    #     center = self.center_id
+    #     center_id = center.id
+    #     mosque_ids = []
+    #     if center_id:
+    #         # self.employee_id = center.manager_id.id
+    #         if categ_type:
+    #             mosques = self.env['mk.mosque'].search([('center_department_id', '=', center_id),
+    #                                                     ('categ_id.mosque_type', '=', categ_type)])
+    #             mosque_ids = [mosque.id for mosque in mosques]
 
-        self.mosque_id = False
+    #     self.mosque_id = False
 
 
-        return {'domain': {'mosque_ids': [('id', 'in', mosque_ids)],
-                           'mosque_id': [('id', 'in', mosque_ids)]}, }
+    #     return {'domain': {'mosque_ids': [('id', 'in', mosque_ids)],
+    #                        'mosque_id': [('id', 'in', mosque_ids)]}, }
 
-    @api.onchange('mosque_id')
-    def onchange_mosque_id(self):
-        type_request = self.type_request
-        employee_id = False
-        mosque_admin_id = False
-        mosque = self.mosque_id
+    # @api.onchange('mosque_id')
+    # def onchange_mosque_id(self):
+    #     type_request = self.type_request
+    #     employee_id = False
+    #     mosque_admin_id = False
+    #     mosque = self.mosque_id
 
-        domain_supervisor = []
+    #     domain_supervisor = []
 
-        if mosque:
-            if type_request == 'supervisor_request':
-                employee = mosque.responsible_id
-                domain_employee = [('category', '=', 'admin'),
-                                   ('state', 'in', ('draft', 'accept')),
-                                   ('mosqtech_ids', 'in', [mosque.id])]
-                if employee:
-                    employee_id = employee.id
-                    domain_supervisor = [employee_id]
-                    domain_employee += [('id', '!=', employee_id)]
+    #     if mosque:
+    #         if type_request == 'supervisor_request':
+    #             employee = mosque.responsible_id
+    #             domain_employee = [('category', '=', 'admin'),
+    #                                ('state', 'in', ('draft', 'accept')),
+    #                                ('mosqtech_ids', 'in', [mosque.id])]
+    #             if employee:
+    #                 employee_id = employee.id
+    #                 domain_supervisor = [employee_id]
+    #                 domain_employee += [('id', '!=', employee_id)]
 
-                employees = self.env['hr.employee'].search(domain_employee)
-                domain_supervisor += [employee.id for employee in employees]
+    #             employees = self.env['hr.employee'].search(domain_employee)
+    #             domain_supervisor += [employee.id for employee in employees]
 
-            elif type_request == 'admin_request':
-                mosque_admin = mosque.mosque_admin_id
-                domain_employee = [('category', '=', 'supervisor'),
-                                   ('state', 'in', ('draft', 'accept')),
-                                   ('mosqtech_ids', 'in', [mosque.id])]
-                if mosque_admin:
-                    mosque_admin_id = mosque_admin.id
-                    domain_supervisor = [mosque_admin_id]
-                    domain_employee += [('id', '!=', mosque_admin_id)]
+    #         elif type_request == 'admin_request':
+    #             mosque_admin = mosque.mosque_admin_id
+    #             domain_employee = [('category', '=', 'supervisor'),
+    #                                ('state', 'in', ('draft', 'accept')),
+    #                                ('mosqtech_ids', 'in', [mosque.id])]
+    #             if mosque_admin:
+    #                 mosque_admin_id = mosque_admin.id
+    #                 domain_supervisor = [mosque_admin_id]
+    #                 domain_employee += [('id', '!=', mosque_admin_id)]
 
-                employees = self.env['hr.employee'].search(domain_employee)
-                domain_supervisor += [employee.id for employee in employees]
+    #             employees = self.env['hr.employee'].search(domain_employee)
+    #             domain_supervisor += [employee.id for employee in employees]
 
-        self.employee_id = employee_id
-        self.mosque_admin_id = mosque_admin_id
+    #     self.employee_id = employee_id
+    #     self.mosque_admin_id = mosque_admin_id
 
-        return {'domain': {'employee_id': [('id', 'in', domain_supervisor)],
-                           'mosque_admin_id': [('id', 'in', domain_supervisor)]}}
+    #     return {'domain': {'employee_id': [('id', 'in', domain_supervisor)],
+    #                        'mosque_admin_id': [('id', 'in', domain_supervisor)]}}
 
     # @api.one
     def action_valid(self):

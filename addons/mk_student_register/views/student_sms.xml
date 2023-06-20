@@ -28,7 +28,7 @@
 
 						<group>
 							<field name="type_message"/>
-							<field name="message" placeholder="نص الرسالة" attrs="{'invisible': [('type_message', '!=', 'free_notif')]}" groups="mk_student_register.group_sms_general_config"/>
+							<field name="message" placeholder="نص الرسالة" attrs="{'invisible': [('type_message', '!=', 'free_notif')]}"/>
 						</group>
             		</sheet>
                 	<footer>
@@ -41,14 +41,14 @@
     	<record model="ir.actions.act_window" id="action_student_sms_form">
         	<field name="name">student sms </field>
         	<field name="res_model">mk.student.sms</field>
-        	<field name="view_type">form</field>
+        	<field name="binding_view_types">form</field>
         	<field name="view_mode">form</field>
         	<field name="view_id" ref="student_sms_form" />
         	<field name="target">new</field>
     	</record>
     
-     	<menuitem name="مركز الرسائل" id="sms_center" sequence="1" groups="group_sms_student,group_sms_employee,group_sms_configuration"/> 
+     	<menuitem name="مركز الرسائل" id="sms_center" parent="" sequence="1"/> 
 
-    	<menuitem name="إرسال رسائل نصية للطلاب" id="student_sms_menu" sequence="1" parent="sms_center" action="action_student_sms_form" groups="group_sms_student"/> 
+    	<menuitem name="إرسال رسائل نصية للطلاب" id="student_sms_menu" sequence="1" parent="sms_center" action="action_student_sms_form"/> 
  	</data>
 </odoo>

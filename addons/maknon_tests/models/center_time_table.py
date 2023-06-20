@@ -7,7 +7,7 @@ _logger = logging.getLogger(__name__)
 
 class TestCenterTimetable(models.Model):
     _name = 'center.time.table'
-    _inherit = ['mail.thread']
+    _inherit=['mail.thread','mail.activity.mixin']
     
     @api.multi
     def name_get(self):        
@@ -76,19 +76,19 @@ class TestCenterTimetable(models.Model):
         self.used_minites = used_min    
 
     center_name       = fields.Char("center name")
-    center_id         = fields.Many2one("mk.test.center.prepration", string="Test center", track_visibility='onchange')
-    date              = fields.Date("Date", help="Date within center tests duration",      track_visibility='onchange')
+    center_id         = fields.Many2one("mk.test.center.prepration", string="Test center", tracking=True)
+    date              = fields.Date("Date", help="Date within center tests duration",      tracking=True)
     day               = fields.Selection([('Friday',    'Friday'),
                                           ('Saturday',  'Saturday'),
                                           ('Sunday',    'Sunday'),
                                           ('Monday',    'Monday'),
                                           ('Tuesday',   'Tuesday'),
                                           ('Wednesday', 'Wednesday'),
-                                          ('Thursday',  'Thursday')], string="Day",    help="Days available at center",                      track_visibility='onchange')
-    period_id         = fields.Many2one("test.period",                string="period", help="select period from avalible periods at center", track_visibility='onchange')
+                                          ('Thursday',  'Thursday')], string="Day",    help="Days available at center",                      tracking=True)
+    period_id         = fields.Many2one("test.period",                string="period", help="select period from avalible periods at center", tracking=True)
     total_hours       = fields.Integer("total hours",  related='period_id.total_hours')
     full              = fields.Boolean("full", readonly=True)    
-    active            = fields.Boolean("active", default=True, track_visibility='onchange')
+    active            = fields.Boolean("active", default=True, tracking=True)
     gender            = fields.Selection([('male','رجالي'),
                                           ('female','نسائي')], string="center gender", compute='get_gender')
     total_minutes     = fields.Integer("capacity/minutes",  compute='get_total_minutes')
@@ -99,7 +99,7 @@ class TestCenterTimetable(models.Model):
     list_of_examiners = fields.One2many("student.test.session",  "test_time",       string="List of Examiners")
     teacher_test_ids  = fields.One2many("employee.test.session", "test_session_id", string="قائمة الممتحنين")
     type_center       = fields.Selection([('student', 'Student'),
-                                          ('teacher', 'Teacher')], string="Type", default='student', track_visibility='onchange')
+                                          ('teacher', 'Teacher')], string="Type", default='student', tracking=True)
     study_class_id    = fields.Many2one('mk.study.class',          string="Study class",              compute='get_study_class_id', store=True)
     academic_id       = fields.Many2one('mk.study.year',  string='Academic Year', ondelete='restrict', compute='get_study_class_id', store=True)
 

@@ -3,7 +3,7 @@
     <data>
 
 
-<record model="ir.rule" id="user_create_permision_center">
+<!-- <record model="ir.rule" id="user_create_permision_center">
       <field name="name">permision mosque</field>
       <field name="model_id" ref="mk_episode_management.model_mosque_permision"/>
       <field name="domain_force">['|',('masjed_id','in',user.mosque_ids.ids),
@@ -40,7 +40,7 @@
     <field name="perm_write" eval="False"/>
     <field name="perm_create" eval="False"/>
     <field name="perm_unlink" eval="False"/>
-</record>
+</record> -->
 
 </data>
 </openerp>

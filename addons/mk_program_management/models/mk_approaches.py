@@ -8,19 +8,19 @@ from odoo.tools.translate import _
 
 class MkApproaches(models.Model):
     _name = 'mk.approaches'
-    _inherit = ['mail.thread']
+    _inherit=['mail.thread','mail.activity.mixin']
 
     company_id 				= fields.Many2one('res.company',   string='Company', default=lambda self: self.env['res.company']._company_default_get('mk.approaches'))  
     center_department_id 	= fields.Many2one('hr.department', string='Center')
     mosque_id 				= fields.Many2one('mk.mosque',     string='Mosque')
-    name 					= fields.Char('Name',                    track_visibility='onchange')
-    code 					= fields.Char('Code',                    track_visibility='onchange')
-    active 					= fields.Boolean('Active', default=True, track_visibility='onchange')
+    name 					= fields.Char('Name',                    tracking=True)
+    code 					= fields.Char('Code',                    tracking=True)
+    active 					= fields.Boolean('Active', default=True, tracking=True)
     state 					= fields.Selection([('draft', 'Draft'), 
-												('active', 'Active')], 'Status', default='active', index=True, required=True, readonly=True, copy=False, track_visibility='onchange')
-    program_id 				= fields.Many2one('mk.programs',        string='Program', track_visibility='onchange')
+												('active', 'Active')], 'Status', default='active', index=True, required=True, readonly=True, copy=False, tracking=True)
+    program_id 				= fields.Many2one('mk.programs',        string='Program', tracking=True)
     program_type			= fields.Selection([('open','open'),
-											    ('close','close')], string="program type", track_visibility='onchange')
+											    ('close','close')], string="program type", tracking=True)
     minimum_audit 			= fields.Boolean(related='program_id.minimum_audit', string='Minimum Audit')
     maximum_audit 			= fields.Boolean(related='program_id.maximum_audit', string='Maximum Audit')
     reading					= fields.Boolean(related='program_id.reading',       string='Reading')
@@ -29,50 +29,50 @@ class MkApproaches(models.Model):
     age_category_ids 		= fields.Many2many('mk.age.category', string='Age Category')
     job_ids 				= fields.Many2many('mk.job',          string='Target Job')
     stage_ids 				= fields.Many2many('mk.grade',        string='Target Stages')
-    is_previous_approach 	= fields.Boolean('Previous Approach?', track_visibility='onchange')
-    approach_id 			= fields.Many2one('mk.approaches',    string='approach', track_visibility='onchange')
-    required_mosques 		= fields.Boolean('Required for All Mosques', track_visibility='onchange')
+    is_previous_approach 	= fields.Boolean('Previous Approach?', tracking=True)
+    approach_id 			= fields.Many2one('mk.approaches',    string='approach', tracking=True)
+    required_mosques 		= fields.Boolean('Required for All Mosques', tracking=True)
     #Small Review
-    lessons_minimum_audit 	= fields.Float('Lessons Minimum Audit',   track_visibility='onchange')
-    quantity_minimum_audit  = fields.Float('Quantity Minimum Audit',  track_visibility='onchange')
-    deduct_qty_small_review = fields.Float('مقدار الخصم',             track_visibility='onchange')
-    memorize_minimum_audit  = fields.Float('Memorize Minimum Audit',  track_visibility='onchange')
-    deduct_memor_sml_review = fields.Float('مقدار الخصم',             track_visibility='onchange')
-    mastering_minimum_audit = fields.Float('Mastering Minimum Audit', track_visibility='onchange')
-    deduct_tjwd_sml_review  = fields.Float('مقدار الخصم',             track_visibility='onchange')
+    lessons_minimum_audit 	= fields.Float('Lessons Minimum Audit',   tracking=True)
+    quantity_minimum_audit  = fields.Float('Quantity Minimum Audit',  tracking=True)
+    deduct_qty_small_review = fields.Float('مقدار الخصم',             tracking=True)
+    memorize_minimum_audit  = fields.Float('Memorize Minimum Audit',  tracking=True)
+    deduct_memor_sml_review = fields.Float('مقدار الخصم',             tracking=True)
+    mastering_minimum_audit = fields.Float('Mastering Minimum Audit', tracking=True)
+    deduct_tjwd_sml_review  = fields.Float('مقدار الخصم',             tracking=True)
     #Big Review
-    lessons_maximum_audit 	= fields.Float('Lessons Maximum Audit',   track_visibility='onchange')
-    quantity_maximum_audit  = fields.Float('Quantity Maximum Audit',  track_visibility='onchange')
-    deduct_qty_big_review   = fields.Float('مقدار الخصم',             track_visibility='onchange')
-    memorize_maximum_audit  = fields.Float('Memorize Maximum Audit',  track_visibility='onchange')
-    deduct_memor_big_review = fields.Float('مقدار الخصم',             track_visibility='onchange')
-    mastering_maximum_audit = fields.Float('Mastering Maximum Audit', track_visibility='onchange')
-    deduct_tjwd_big_review  = fields.Float('مقدار الخصم',             track_visibility='onchange')
+    lessons_maximum_audit 	= fields.Float('Lessons Maximum Audit',   tracking=True)
+    quantity_maximum_audit  = fields.Float('Quantity Maximum Audit',  tracking=True)
+    deduct_qty_big_review   = fields.Float('مقدار الخصم',             tracking=True)
+    memorize_maximum_audit  = fields.Float('Memorize Maximum Audit',  tracking=True)
+    deduct_memor_big_review = fields.Float('مقدار الخصم',             tracking=True)
+    mastering_maximum_audit = fields.Float('Mastering Maximum Audit', tracking=True)
+    deduct_tjwd_big_review  = fields.Float('مقدار الخصم',             tracking=True)
     #Tlawa
-    lessons_reading 		= fields.Float('Lessons Reading',   track_visibility='onchange')
-    quantity_reading        = fields.Float('Quantity Reading',  track_visibility='onchange')
-    deduct_qty_reading      = fields.Float('مقدار الخصم',       track_visibility='onchange')
-    memorize_reading        = fields.Float('Memorize Reading',  track_visibility='onchange')
-    deduct_memor_reading    = fields.Float('مقدار الخصم',       track_visibility='onchange')
-    mastering_reading       = fields.Float('Mastering Reading', track_visibility='onchange')
-    deduct_tjwd_reading     = fields.Float('مقدار الخصم',       track_visibility='onchange')
+    lessons_reading 		= fields.Float('Lessons Reading',   tracking=True)
+    quantity_reading        = fields.Float('Quantity Reading',  tracking=True)
+    deduct_qty_reading      = fields.Float('مقدار الخصم',       tracking=True)
+    memorize_reading        = fields.Float('Memorize Reading',  tracking=True)
+    deduct_memor_reading    = fields.Float('مقدار الخصم',       tracking=True)
+    mastering_reading       = fields.Float('Mastering Reading', tracking=True)
+    deduct_tjwd_reading     = fields.Float('مقدار الخصم',       tracking=True)
     #Memorize
-    lessons_memorize 		= fields.Float('Lessons Memorize',   track_visibility='onchange')
-    quantity_memorize       = fields.Float('Quantity Memorize',  track_visibility='onchange')
-    deduct_qty_memorize     = fields.Float('مقدار الخصم',        track_visibility='onchange')
-    memorize_degree         = fields.Float('Memorize Degree',    track_visibility='onchange')
-    deduct_memor_memorize   = fields.Float('مقدار الخصم',        track_visibility='onchange')
-    mastering_memorize      = fields.Float('Mastering Memorize', track_visibility='onchange')
-    deduct_tjwd_memorize    = fields.Float('مقدار الخصم',        track_visibility='onchange')
+    lessons_memorize 		= fields.Float('Lessons Memorize',   tracking=True)
+    quantity_memorize       = fields.Float('Quantity Memorize',  tracking=True)
+    deduct_qty_memorize     = fields.Float('مقدار الخصم',        tracking=True)
+    memorize_degree         = fields.Float('Memorize Degree',    tracking=True)
+    deduct_memor_memorize   = fields.Float('مقدار الخصم',        tracking=True)
+    mastering_memorize      = fields.Float('Mastering Memorize', tracking=True)
+    deduct_tjwd_memorize    = fields.Float('مقدار الخصم',        tracking=True)
     #Attendance
-    preparation_degree 		= fields.Float('Prepartion Degree',           track_visibility='onchange')
-    late_deduct 			= fields.Float('Late Deduct',                 track_visibility='onchange')
-    excused_absence_deduct 	= fields.Float('Excused Absence Deduct',      track_visibility='onchange')
-    no_excused_absence_deduct = fields.Float('No Excused Absence Deduct', track_visibility='onchange')
-    behavior_degree         = fields.Float('درجة السلوك',                 track_visibility='onchange')
+    preparation_degree 		= fields.Float('Prepartion Degree',           tracking=True)
+    late_deduct 			= fields.Float('Late Deduct',                 tracking=True)
+    excused_absence_deduct 	= fields.Float('Excused Absence Deduct',      tracking=True)
+    no_excused_absence_deduct = fields.Float('No Excused Absence Deduct', tracking=True)
+    behavior_degree         = fields.Float('درجة السلوك',                 tracking=True)
     #Test
-    test_degree 			= fields.Float('Test Degree',  track_visibility='onchange')
-    nbr_question_test       = fields.Integer('عدد الأسئلة', track_visibility='onchange')
+    test_degree 			= fields.Float('Test Degree',  tracking=True)
+    nbr_question_test       = fields.Integer('عدد الأسئلة', tracking=True)
     qty_question_test       = fields.Selection([('qty001','آية'),
                                                 ('qty025','ربع صفحة'),
                                                 ('qty050','نصف صفحة'),
@@ -81,11 +81,11 @@ class MkApproaches(models.Model):
                                                 ('qty125','صفحة وربع'),
                                                 ('qty150','صفحة ونصف'),
                                                 ('qty175','صفحة وثلاثة ارباع'),
-                                                ('qty200','صفحتان'),], string='مقدار السؤال', track_visibility='onchange')     
-    deduction_test          = fields.Float('مقدار الخصم', track_visibility='onchange')
+                                                ('qty200','صفحتان'),], string='مقدار السؤال', tracking=True)     
+    deduction_test          = fields.Float('مقدار الخصم', tracking=True)
     #Exam
-    exam_degree             = fields.Float('درجة الإختبار', track_visibility='onchange')
-    nbr_question_exam       = fields.Integer('عدد الأسئلة', track_visibility='onchange')
+    exam_degree             = fields.Float('درجة الإختبار', tracking=True)
+    nbr_question_exam       = fields.Integer('عدد الأسئلة', tracking=True)
     qty_question_exam       = fields.Selection([('qty001','آية'),
                                                 ('qty025','ربع صفحة'),
                                                 ('qty050','نصف صفحة'),
@@ -94,19 +94,19 @@ class MkApproaches(models.Model):
                                                 ('qty125','صفحة وربع'),
                                                 ('qty150','صفحة ونصف'),
                                                 ('qty175','صفحة وثلاثة ارباع'),
-                                                ('qty200','صفحتان')], string='مقدار السؤال', track_visibility='onchange')
-    deduction_exam          = fields.Float('مقدار الخصم', track_visibility='onchange')
+                                                ('qty200','صفحتان')], string='مقدار السؤال', tracking=True)
+    deduction_exam          = fields.Float('مقدار الخصم', tracking=True)
 
-    tajweed_degree 			= fields.Float('Tajweed Degree', track_visibility='onchange')
+    tajweed_degree 			= fields.Float('Tajweed Degree', tracking=True)
 
     part_ids 				= fields.Many2many('mk.parts', string='Parts')
     surah_ids 				= fields.Many2many('mk.surah', string='surah')
     program_purpose 		= fields.Selection([('memorize_quran',    'Memorize all Quran'),
 												('memorize_part',     'Memorize Specific Parts'),
 												('memorize_surah',    'Memorize Specific Surah'),
-												('mastering_reading', 'Mastering Reading Only')], string='Program Purpose', track_visibility='onchange')
-    subject_id 				= fields.Many2one('mk.memorize.method', string='Subjects', track_visibility='onchange')
-    is_test 				= fields.Boolean('Test After End of Subject', track_visibility='onchange')
+												('mastering_reading', 'Mastering Reading Only')], string='Program Purpose', tracking=True)
+    subject_id 				= fields.Many2one('mk.memorize.method', string='Subjects', tracking=True)
+    is_test 				= fields.Boolean('Test After End of Subject', tracking=True)
 
     listen_ids 				= fields.One2many('mk.manual.plan', 'approche_id', 'plan')
     small_reviews_ids		= fields.One2many('mk.manual.plan', 'small_id',    'plan')

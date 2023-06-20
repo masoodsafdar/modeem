@@ -10,7 +10,7 @@ _logger = logging.getLogger(__name__)
 
 class MkTestCenter(models.Model):
     _name = 'mak.test.center'
-    _inherit = ['mail.thread']
+    _inherit=['mail.thread','mail.activity.mixin']
     _rec_name='display_name'
 
     @api.depends('center_id')
@@ -45,27 +45,27 @@ class MkTestCenter(models.Model):
                 else:
                     record.display_name = str(record.name) +'['+'نسائي'+']'
 
-    academic_id              = fields.Many2one('mk.study.year',  string='Academic Year', ondelete='restrict', required=True, track_visibility='onchange')
-    study_class_id           = fields.Many2one('mk.study.class', string='Study class',   ondelete='restrict', track_visibility='onchange')
-    name                     = fields.Char('Center Name', track_visibility='onchange')
+    academic_id              = fields.Many2one('mk.study.year',  string='Academic Year', ondelete='restrict', required=True, tracking=True)
+    study_class_id           = fields.Many2one('mk.study.class', string='Study class',   ondelete='restrict', tracking=True)
+    name                     = fields.Char('Center Name', tracking=True)
     company_id               = fields.Many2one('res.company',    string='Company', ondelete='restrict', default=lambda self: self.env['res.company']._company_default_get('mak.test.center'))
-    center_id                = fields.Many2one("hr.department",  string='Test Center', track_visibility='onchange')
+    center_id                = fields.Many2one("hr.department",  string='Test Center', tracking=True)
     department_ids           = fields.Many2many("hr.department", string="Departments")
     test_group               = fields.Selection([('student','Students'),
-												('employee','Employee')], string="Test Group", default='student', required=True, track_visibility='onchange')
+												('employee','Employee')], string="Test Group", default='student', required=True, tracking=True)
     test_names               = fields.Many2many("mk.test.names", string="Tests Names")
-    all_branches             = fields.Boolean("ALL branches", default=True, track_visibility='onchange')
+    all_branches             = fields.Boolean("ALL branches", default=True, tracking=True)
     branches_ids             = fields.Many2many("mk.branches.master", string="Branches")
-    registeration_start_date = fields.Date('Registeration Start Date', track_visibility='onchange')
-    registeration_end_date   = fields.Date('Registeration End Date', track_visibility='onchange')
-    exam_start_date          = fields.Date('Exam Start Date',        track_visibility='onchange')
-    exam_end_date            = fields.Date('Exam End Date',          track_visibility='onchange')
+    registeration_start_date = fields.Date('Registeration Start Date', tracking=True)
+    registeration_end_date   = fields.Date('Registeration End Date', tracking=True)
+    exam_start_date          = fields.Date('Exam Start Date',        tracking=True)
+    exam_end_date            = fields.Date('Exam End Date',          tracking=True)
     gender                   = fields.Selection([('male','رجالي'),
-												('female','نسائي')], string='Gender',     default='male', track_visibility='onchange')
+												('female','نسائي')], string='Gender',     default='male', tracking=True)
     editable                 = fields.Boolean("show", compute='cheack_user_logged_in', default=True,)
-    main_company             = fields.Boolean(" تحديد الادارة العامة كمركز رئيسي", track_visibility='onchange')
+    main_company             = fields.Boolean(" تحديد الادارة العامة كمركز رئيسي", tracking=True)
     display_name             = fields.Char("Name", compute="_display_name", store=True)
-    active                   = fields.Boolean("active", default=True,  track_visibility='onchange')
+    active                   = fields.Boolean("active", default=True,  tracking=True)
     
     @api.onchange('city_id')
     def city_id_on_change(self):

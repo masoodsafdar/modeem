@@ -34,10 +34,10 @@ class Employee(models.Model):
 				rec.found_employee = employee[0].id
 			
 	gender                = fields.Selection([('male', 'Male'),
-							                  ('female', 'Female')], groups="hr.group_hr_user", default="male", track_visibility='onchange')
+							                  ('female', 'Female')], groups="hr.group_hr_user", default="male", tracking=True)
 	center_admin_category = fields.Selection([('female', 'Female school'),
 							 			      ('male',   'Male school'),
-										      ('both',   'male and female school')], string='type of schools', required=False, readonly=False, default='both', track_visibility='onchange')
+										      ('both',   'male and female school')], string='type of schools', required=False, readonly=False, default='both', tracking=True)
 	mosque_sup            = fields.Many2many('mk.mosque', string='Mosque eduactional supervisor', required=False, readonly=False, index=False, default=None, help=False, domain=[], context={}, auto_join=False, limit=None)
 	mosque_new            = fields.Many2one('mk.mosque',  string='new mosque')
 	found_employee        = fields.Integer('Found employee', compute=get_employee)
@@ -50,26 +50,26 @@ class Employee(models.Model):
 	start_date            = fields.Date('release date')
 	expire_date           = fields.Date('Expiration date')
 	category2             = fields.Selection("_get_priority_list","category", store=True)
-	work_phone            = fields.Char(required=False, size=9, track_visibility='onchange')
-	work_email            = fields.Char(required=False, track_visibility='onchange')
+	work_phone            = fields.Char(required=False, size=9, tracking=True)
+	work_email            = fields.Char(required=False, tracking=True)
 	passwd                = fields.Char(string='Passwd',)
 	issue_identity        = fields.Date(string='Issue identity',)
 	identity_expire       = fields.Date(string='Identity expire', required=False,)
 	recruit_ids           = fields.Many2many('hr.recruitment.degree', string='Recruit')
 	part_ids              = fields.Many2many('mk.parts',              string='Part id')
 	kin_phone             = fields.Char('Kin phone', size=9)
-	salary                = fields.Integer('Salary', track_visibility='onchange')
+	salary                = fields.Integer('Salary', tracking=True)
 	salary_donor          = fields.Selection([('society', 'Society'),
 									    ('masjed',  'Masjed'),
-									    ('center',  'Center')], string='Salary donor', track_visibility='onchange')
+									    ('center',  'Center')], string='Salary donor', tracking=True)
 	contract_type         = fields.Selection([('contractor',   'contractor'),
 					 				    ('volunteer',    'volunteer'), 
-									    ('collaborator', 'Collaborator')], string='Contract type', track_visibility='onchange')
+									    ('collaborator', 'Collaborator')], string='Contract type', tracking=True)
 	department_ids        = fields.Many2many('hr.department', string='مراكز إضافية')
 	mosque_id             = fields.Many2one('mk.mosque',      string='Masjed')
 	mosqtech_ids          = fields.Many2many('mk.mosque', 'mosque_relation', 'mosq_id','emp_id', string='Masjed')
-	registeration_code    = fields.Char(size=12, string="registeration code", track_visibility='onchange')
-	job_id                = fields.Many2one(domain=[('educational_job','=','True')], track_visibility='onchange')
+	registeration_code    = fields.Char(size=12, string="registeration code", tracking=True)
+	job_id                = fields.Many2one(domain=[('educational_job','=','True')], tracking=True)
 	category              = fields.Selection([('teacher',        'المعلمين'),
 						                   ('center_admin',   'مدراء / مساعدي مدراء المركز'),
 						                   ('bus_sup',        'مشرف الباص'),
@@ -77,15 +77,15 @@ class Employee(models.Model):
 						                   ('admin',          'المشرف العام للمسجد /المدرسة'),
 						                   ('edu_supervisor', 'مشرف تربوي'),
 						                   ('managment',      'إداري\إداريين'),
-						                   ('others',         'خدمات مساعدة')], string='Cateqory', default='admin', track_visibility='onchange')
-	mobile_phone          = fields.Char("Mobile Phone", required=True, size=12, track_visibility='onchange')
+						                   ('others',         'خدمات مساعدة')], string='Cateqory', default='admin', tracking=True)
+	mobile_phone          = fields.Char("Mobile Phone", required=True, size=12, tracking=True)
 	state                 = fields.Selection([('draft',  'Draft'),
 				  			               ('accept', 'Accepted'), 
-							               ('reject', 'Rejected')], string='State', default='draft', track_visibility='onchange')
-	identification_id     = fields.Char(size=10, groups="base.group_user,group_read_employee", track_visibility='onchange')
-	gender                = fields.Selection(groups="base.group_user,group_read_employee",     track_visibility='onchange')
-	birthday              = fields.Date(groups="base.group_user,group_read_employee",          track_visibility='onchange')
-	marital               = fields.Selection(groups="base.group_user,group_read_employee",     track_visibility='onchange')
+							               ('reject', 'Rejected')], string='State', default='draft', tracking=True)
+	identification_id     = fields.Char(size=10, groups="base.group_user,group_read_employee", tracking=True)
+	gender                = fields.Selection(groups="base.group_user,group_read_employee",     tracking=True)
+	birthday              = fields.Date(groups="base.group_user,group_read_employee",          tracking=True)
+	marital               = fields.Selection(groups="base.group_user,group_read_employee",     tracking=True)
 	episode_ids           = fields.One2many('mk.episode','teacher_id')
 	episode_unactv_ids    = fields.One2many('mk.episode','teacher_id',domain=[('active','=',False)])
 	masajed_ids           = fields.One2many('mk.mosque','responsible_id')
@@ -97,8 +97,8 @@ class Employee(models.Model):
 											 ('skilled', ' متمكن/ة'),
 											 ('distinct', 'متميز/ة'),
 											 ('perfect', 'متقن/ة'),
-											 ('expert', 'خبير/ة')], string='المستوى التجويدي', track_visibility='onchange')
-	years_of_experience   = fields.Integer('سنوات الخبرة', track_visibility='onchange')
+											 ('expert', 'خبير/ة')], string='المستوى التجويدي', tracking=True)
+	years_of_experience   = fields.Integer('سنوات الخبرة', tracking=True)
 	work_location         = fields.Char('Work Location',required=False)
 	last_log_from_app = fields.Datetime(related='user_id.last_app_login',string='Last login from the APP')
 

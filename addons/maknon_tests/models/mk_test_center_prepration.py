@@ -11,7 +11,7 @@ _logger = logging.getLogger(__name__)
 
 class MkTestCenterConfig(models.Model):
     _name = 'mk.test.center.prepration'
-    _inherit = ['mail.thread']
+    _inherit=['mail.thread','mail.activity.mixin']
 
     #_rec_name = 'center_id'
     
@@ -142,54 +142,54 @@ class MkTestCenterConfig(models.Model):
     
     name                     = fields.Char("Name", store=True, compute='get_name_center_prep')          
     visible_for_user         = fields.Boolean(string="show",   default=True, compute='cheack_user_logged_in')
-    active                   = fields.Boolean(string="active", default=True, groups='maknon_tests.tests_centers_archive', track_visibility='onchange')
+    active                   = fields.Boolean(string="active", default=True, groups='maknon_tests.tests_centers_archive', tracking=True)
     place_options            = fields.Selection([('company',  'مقر الجمعية'),
                                                  ('in',       'داخل المركز'),
                                                  ('out',      'خارج المركز'),
                                                  ('at',       'في مقر المركز'),
                                                  ('c_female', 'مكتب الإشراف النسائي'),
-                                                 ('portal',   'لجنة متحركة')], string="exam place", track_visibility='onchange')
+                                                 ('portal',   'لجنة متحركة')], string="exam place", tracking=True)
     # outside place
     latitude                 = fields.Char("latitude")
     longtitude               = fields.Char("longtitude")
     place_description        = fields.Char("place discribtion", compute='get_place')
-    out_disc                 = fields.Char("place discribtion", track_visibility='onchange') # in place
+    out_disc                 = fields.Char("place discribtion", tracking=True) # in place
     mosque_ids               = fields.Many2many('mk.mosque', compute=get_mosques, store=True)
-    internal_place           = fields.Many2one("mk.mosque", string="select mosque", track_visibility='onchange')
+    internal_place           = fields.Many2one("mk.mosque", string="select mosque", tracking=True)
     main_center              = fields.Char('Test Center')
-    academic_id              = fields.Many2one('mk.study.year',  string='Academic Year', required=True,                      ondelete='restrict', track_visibility='onchange')
-    study_class_id           = fields.Many2one('mk.study.class', string='Study class',   domain=[('is_default', '=', True)], ondelete='restrict', track_visibility='onchange')
+    academic_id              = fields.Many2one('mk.study.year',  string='Academic Year', required=True,                      ondelete='restrict', tracking=True)
+    study_class_id           = fields.Many2one('mk.study.class', string='Study class',   domain=[('is_default', '=', True)], ondelete='restrict', tracking=True)
     center_group             = fields.Selection([('student',  'Student'),
-                                                 ('employee', 'Employee')], string="center exam group", track_visibility='onchange')
-    center_code              = fields.Char(string="code", track_visibility='onchange')
+                                                 ('employee', 'Employee')], string="center exam group", tracking=True)
+    center_code              = fields.Char(string="code", tracking=True)
     company_id               = fields.Many2one('res.company',     string='Company', default=lambda self: self.env['res.company']._company_default_get('mk.test.center.config'))
-    center_id                = fields.Many2one('mak.test.center', string='Test Center', track_visibility='onchange')
+    center_id                = fields.Many2one('mak.test.center', string='Test Center', tracking=True)
     center_info              = fields.Text(string="center information", compute='get_info')
-    website_registeration    = fields.Boolean('Registeration by Website',    track_visibility='onchange')
-    is_auto_assign_committee = fields.Boolean('إسناد تلقائي للجنة الإختبار ', track_visibility='onchange')
+    website_registeration    = fields.Boolean('Registeration by Website',    tracking=True)
+    is_auto_assign_committee = fields.Boolean('إسناد تلقائي للجنة الإختبار ', tracking=True)
     committee_assign_type    = fields.Selection([('all_committee_assign', 'All committee assign'),
                                                  ('supervisor_assign', 'Supervisor assign'),
-                                                 ('manual_assign', 'Manual assign')], string="Committee assign type",default="all_committee_assign", required="1", track_visibility='onchange')
+                                                 ('manual_assign', 'Manual assign')], string="Committee assign type",default="all_committee_assign", required="1", tracking=True)
     #Committee Test Lines
-    registeration_start_date = fields.Date('Registeration Start Date', track_visibility='onchange')
-    registeration_end_date   = fields.Date('Registeration End Date',   track_visibility='onchange')
-    exam_start_date          = fields.Date('Exam Start Date',          track_visibility='onchange')
-    exam_end_date            = fields.Date('Exam End Date', track_visibility='onchange')
+    registeration_start_date = fields.Date('Registeration Start Date', tracking=True)
+    registeration_end_date   = fields.Date('Registeration End Date',   tracking=True)
+    exam_start_date          = fields.Date('Exam Start Date',          tracking=True)
+    exam_end_date            = fields.Date('Exam End Date', tracking=True)
     periods_ids              = fields.Many2many("test.period", string="Available Periods")
-    friday                   = fields.Boolean('Friday',    track_visibility='onchange')
-    saturday                 = fields.Boolean('Saturday',  track_visibility='onchange')
-    sunday                   = fields.Boolean('Sunday',    track_visibility='onchange')
-    monday                   = fields.Boolean('Monday',    track_visibility='onchange')
-    tuesday                  = fields.Boolean('Tuesday',   track_visibility='onchange')
-    wednesday                = fields.Boolean('Wednesday', track_visibility='onchange')
-    thursday                 = fields.Boolean('Thursday',  track_visibility='onchange')
+    friday                   = fields.Boolean('Friday',    tracking=True)
+    saturday                 = fields.Boolean('Saturday',  tracking=True)
+    sunday                   = fields.Boolean('Sunday',    tracking=True)
+    monday                   = fields.Boolean('Monday',    tracking=True)
+    tuesday                  = fields.Boolean('Tuesday',   tracking=True)
+    wednesday                = fields.Boolean('Wednesday', tracking=True)
+    thursday                 = fields.Boolean('Thursday',  tracking=True)
     department_ids           = fields.Many2many("hr.department", string="Departments")
     test_names               = fields.Many2many("mk.test.names", string="Tests Names")
-    all_branches             = fields.Boolean(string="ALL branches", default=True, track_visibility='onchange')
+    all_branches             = fields.Boolean(string="ALL branches", default=True, tracking=True)
     branches_ids             = fields.Many2many("mk.branches.master", string="Branches")
     committee_test_ids       = fields.One2many('committee.tests', 'commitee_id', string='Committee test')
     timetable_ids            = fields.One2many("center.time.table", "center_id","TimeTable")
-    flag                     = fields.Boolean(string="flag", default=False, track_visibility='onchange')
+    flag                     = fields.Boolean(string="flag", default=False, tracking=True)
     committe_number          = fields.Integer(string="members number", compute='committee_numbers')
     
     @api.onchange('center_id')
@@ -447,12 +447,12 @@ class MkTestCenterConfig(models.Model):
 
 class CommitteeTest(models.Model):
     _name = 'committee.tests'
-    _inherit = ['mail.thread']
+    _inherit=['mail.thread','mail.activity.mixin']
 
-    name                 = fields.Char(string="Name", track_visibility='onchange')
+    name                 = fields.Char(string="Name", tracking=True)
     members_ids          = fields.One2many("committe.member","committe_id", "members list")
-    commitee_id          = fields.Many2one('mk.test.center.prepration', string='Committee_id', track_visibility='onchange')
-    active               = fields.Boolean(string="active", default=True, track_visibility='onchange')
+    commitee_id          = fields.Many2one('mk.test.center.prepration', string='Committee_id', tracking=True)
+    active               = fields.Boolean(string="active", default=True, tracking=True)
     examiner_employee_id = fields.Many2one('hr.employee', string='Examinner')
 
     @api.multi
@@ -468,14 +468,14 @@ class CommitteeTest(models.Model):
 
 class committeMembers(models.Model):
     _name='committe.member'
-    _inherit = ['mail.thread']
+    _inherit=['mail.thread','mail.activity.mixin']
 
-    member_id   = fields.Many2one("hr.employee", "Member", track_visibility='onchange')
-    outsource   = fields.Boolean(string="outsource",       track_visibility='onchange')
+    member_id   = fields.Many2one("hr.employee", "Member", tracking=True)
+    outsource   = fields.Boolean(string="outsource",       tracking=True)
     committe_id = fields.Many2one("committee.tests","commitee_id")
     center_id   = fields.Many2one('mk.test.center.prepration', string='Test Center')
 
-    main_member = fields.Boolean(string="main member", default=False, track_visibility='onchange')
+    main_member = fields.Boolean(string="main member", default=False, tracking=True)
 
 
     @api.constrains('member_id')

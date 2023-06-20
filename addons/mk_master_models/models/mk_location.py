@@ -18,22 +18,22 @@ class mak_country_state(models.Model):
 		return 600
 
 	area_id              = fields.Many2one('res.country.state', string="area",    domain=[('type_location','=','area'),
-                                                                                          ('enable', '=', True)], default=defult_area, track_visibility='onchange')#!=false =>city
+                                                                                          ('enable', '=', True)], default=defult_area, tracking=True)#!=false =>city
 	district_id          = fields.Many2one('res.country.state', string="City",    domain=[('type_location','=','city'),
-																						  ('enable', '=', True),], track_visibility='onchange')
-	country_id           = fields.Many2one('res.country',       string='Country', default=default_country, track_visibility='onchange')
-	latitude             = fields.Char('Latitude',  digits=(12,8), track_visibility='onchange')
-	longitude            = fields.Char('Longitude', digits=(12,8), track_visibility='onchange')
-	code                 = fields.Char('code',      required=False, size=2, track_visibility='onchange')
-	active               = fields.Boolean('Active', default=True, track_visibility='onchange')
-	center_department_id = fields.Many2one('hr.department', string='Center', track_visibility='onchange')
+																						  ('enable', '=', True),], tracking=True)
+	country_id           = fields.Many2one('res.country',       string='Country', default=default_country, tracking=True)
+	latitude             = fields.Char('Latitude',  digits=(12,8), tracking=True)
+	longitude            = fields.Char('Longitude', digits=(12,8), tracking=True)
+	code                 = fields.Char('code',      required=False, size=2, tracking=True)
+	active               = fields.Boolean('Active', default=True, tracking=True)
+	center_department_id = fields.Many2one('hr.department', string='Center', tracking=True)
 	department_ids       = fields.Many2many('hr.department',string='Additional departments')
-	enable               = fields.Boolean("Enable for Educational", default=False, track_visibility='onchange')
+	enable               = fields.Boolean("Enable for Educational", default=False, tracking=True)
 	type_location        = fields.Selection([('country',  'Country'),											
 											 ('city',     'City'),
 											 ('area',     'Area'),
 											 ('district', 'District'),], default='country')
-	district_code        = fields.Char(string="District Code", track_visibility='onchange', copy=False)
+	district_code        = fields.Char(string="District Code", tracking=True, copy=False)
 	flag                 = fields.Boolean(string="Is Defaut center", default=False)
 
 

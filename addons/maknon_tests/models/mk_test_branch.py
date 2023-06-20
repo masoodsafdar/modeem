@@ -7,7 +7,7 @@ _logger = logging.getLogger(__name__)
 
 class TestName(models.Model):
     _name = 'mk.test.names'
-    _inherit = ['mail.thread']
+    _inherit=['mail.thread','mail.activity.mixin']
 
     @api.multi
     def get_study_class(self):
@@ -20,21 +20,21 @@ class TestName(models.Model):
         academic_year = self.env['mk.study.year'].search([('is_default', '=', True)], limit=1)
         return academic_year and academic_year.id or False
 
-    academic_id    = fields.Many2one('mk.study.year',  string='Academic Year', default=get_year_default, required=True, ondelete='restrict', track_visibility='onchange')
-    study_class_id = fields.Many2one('mk.study.class', string='Study class',   default=get_study_class,  domain=[('is_default', '=', True)], track_visibility='onchange', ondelete='restrict')
-    active         = fields.Boolean("active", default=True, groups="maknon_tests.group_types_tests_archives", track_visibility='onchange')
-    name           = fields.Char("Test term", required=True, track_visibility='onchange')
+    academic_id    = fields.Many2one('mk.study.year',  string='Academic Year', default=get_year_default, required=True, ondelete='restrict', tracking=True)
+    study_class_id = fields.Many2one('mk.study.class', string='Study class',   default=get_study_class,  domain=[('is_default', '=', True)], tracking=True, ondelete='restrict')
+    active         = fields.Boolean("active", default=True, groups="maknon_tests.group_types_tests_archives", tracking=True)
+    name           = fields.Char("Test term", required=True, tracking=True)
     branches       = fields.One2many('mk.branches.master', 'test_name', string='Branches')
-    parent_test    = fields.Many2one("mk.test.names",                   string="Parent Test", track_visibility='onchange')
+    parent_test    = fields.Many2one("mk.test.names",                   string="Parent Test", tracking=True)
     test_group     = fields.Selection([('student','Students'),
-                                       ('employee','Employee')],        string="Test Group", default='student', required=True, track_visibility='onchange')
-    job_id         = fields.Many2many("hr.job", domain=[('educational_job','=','True')], track_visibility='onchange')
+                                       ('employee','Employee')],        string="Test Group", default='student', required=True, tracking=True)
+    job_id         = fields.Many2many("hr.job", domain=[('educational_job','=','True')], tracking=True)
     type_test      = fields.Selection([('final',            'الخاتمين'),
                                        ('parts',            'الأجزاء'),
                                        ('contest',          'مسابقات'),
                                        ('correct_citation', 'تصحيح تلاوة'),
                                        ('indoctrination',   'تلقين'),
-                                       ('vacations',        'اجازات'),], string="النوع", default='final', required=True, track_visibility='onchange')
+                                       ('vacations',        'اجازات'),], string="النوع", default='final', required=True, tracking=True)
 
     @api.multi
     def write(self, vals):
@@ -63,7 +63,7 @@ class TestName(models.Model):
 
 class TestBranches(models.Model):
     _name = 'mk.branches.master'
-    _inherit = ['mail.thread']
+    _inherit=['mail.thread','mail.activity.mixin']
     _order = 'trackk, order'
 
     @api.multi
@@ -97,45 +97,45 @@ class TestBranches(models.Model):
 
         return super(TestBranches, self).unlink()
 
-    active             = fields.Boolean(string="Active", default=True, groups="maknon_tests.group_tests_branches_archives", track_visibility='onchange')
-    test_name          = fields.Many2one("mk.test.names",      string="test term", required="1", track_visibility='onchange')
+    active             = fields.Boolean(string="Active", default=True, groups="maknon_tests.group_tests_branches_archives", tracking=True)
+    test_name          = fields.Many2one("mk.test.names",      string="test term", required="1", tracking=True)
     study_class_id     = fields.Many2one("mk.study.class", string="study_class_id", compute='get_study_class_id', store=True)
-    parent_branch      = fields.Many2one("mk.branches.master", string="parent branch", track_visibility='onchange')
-    from_surah         = fields.Many2one("mk.surah", string="from surah",         track_visibility='onchange')
-    to_surah           = fields.Many2one("mk.surah", string="to surah",           track_visibility='onchange')
-    from_aya           = fields.Many2one("mk.surah.verses",    string="from aya", track_visibility='onchange')
-    to_aya             = fields.Many2one("mk.surah.verses",    string="to aya",   track_visibility='onchange')   
+    parent_branch      = fields.Many2one("mk.branches.master", string="parent branch", tracking=True)
+    from_surah         = fields.Many2one("mk.surah", string="from surah",         tracking=True)
+    to_surah           = fields.Many2one("mk.surah", string="to surah",           tracking=True)
+    from_aya           = fields.Many2one("mk.surah.verses",    string="from aya", tracking=True)
+    to_aya             = fields.Many2one("mk.surah.verses",    string="to aya",   tracking=True)   
     age_groups         = fields.Many2many("mk.grade",          string="Age groups")    
     parts_ids          = fields.Many2many("mk.parts",          string="parts")
-    subject_id         = fields.Many2one("mk.memorize.method", string="subject", track_visibility='onchange')
-    round_frag         = fields.Boolean("round", default=True, track_visibility='onchange')
-    order              = fields.Integer("order", track_visibility='onchange')
+    subject_id         = fields.Many2one("mk.memorize.method", string="subject", tracking=True)
+    round_frag         = fields.Boolean("round", default=True, tracking=True)
+    order              = fields.Integer("order", tracking=True)
     passing_items      = fields.Many2many("mk.passing.items",    string="passing items")
     reward_items       = fields.Many2many("mk.reward.items",     string="reward")
     evaluation_items   = fields.Many2many("mk.evaluation.items", string="evaluation")
     employee_items     = fields.Many2many("employee.items",      string="Employee Items")
     #-p
-    name               = fields.Char("Branch name", required=True, track_visibility='onchange')
+    name               = fields.Char("Branch name", required=True, tracking=True)
     trackk             = fields.Selection([('up',   'من الناس إلى الفاتحة'),
-                                           ('down', 'من الفاتحة إلى الناس')], string="المسار", required=True, track_visibility='onchange')
+                                           ('down', 'من الفاتحة إلى الناس')], string="المسار", required=True, tracking=True)
     parts_num          = fields.Integer("Parts No", compute='part_num_count', store=True)
     age_fillter        = fields.Selection([('open',  'Open'),
-                                           ('close', 'Close')], string="Age Fillter", default="open", required=True, track_visibility='onchange')
-    contsets           = fields.Boolean("contests",    track_visibility='onchange')
-    courses            = fields.Boolean("courses",     track_visibility='onchange')
-    general            = fields.Boolean("contests",    track_visibility='onchange')
-    preliminary        = fields.Boolean("preliminary", track_visibility='onchange')
-    duration           = fields.Integer("Branch duration", required=True, track_visibility='onchange')
+                                           ('close', 'Close')], string="Age Fillter", default="open", required=True, tracking=True)
+    contsets           = fields.Boolean("contests",    tracking=True)
+    courses            = fields.Boolean("courses",     tracking=True)
+    general            = fields.Boolean("contests",    tracking=True)
+    preliminary        = fields.Boolean("preliminary", tracking=True)
+    duration           = fields.Integer("Branch duration", required=True, tracking=True)
     branch_group       = fields.Selection([('student',  'Students'),                                           
-                                           ('employee', 'Employee')], string="Branch Group", default='student', required=True, track_visibility='onchange')
+                                           ('employee', 'Employee')], string="Branch Group", default='student', required=True, tracking=True)
     job_id             = fields.Many2many("hr.job", domain=[('educational_job','=','True')])
-    maximum_degree     = fields.Integer("Maximum degree", required=True, track_visibility='onchange')
-    minumim_degree     = fields.Integer("Minum degree",   required=True, track_visibility='onchange')
+    maximum_degree     = fields.Integer("Maximum degree", required=True, tracking=True)
+    minumim_degree     = fields.Integer("Minum degree",   required=True, tracking=True)
     quations_method    = fields.Selection([('lines',   'Lines Number'),
-                                           ('subject', 'Subject')], default='lines', string="Quation method", track_visibility='onchange')
-    qu_number_per_part = fields.Integer("Question no per part", track_visibility='onchange')
-    lines_per_part     = fields.Integer("Lines per Part", track_visibility='onchange')
-    select_parts       = fields.Boolean("select part", default=False, track_visibility='onchange')
+                                           ('subject', 'Subject')], default='lines', string="Quation method", tracking=True)
+    qu_number_per_part = fields.Integer("Question no per part", tracking=True)
+    lines_per_part     = fields.Integer("Lines per Part", tracking=True)
+    select_parts       = fields.Boolean("select part", default=False, tracking=True)
 
     @api.constrains('qu_number_per_part')
     def _check_qu_number_per_part(self):

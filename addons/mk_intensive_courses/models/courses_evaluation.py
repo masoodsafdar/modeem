@@ -40,7 +40,7 @@ def geo_find(addr):
 
 class mk_courses_evalution(models.Model):
     _name = 'mk.courses.evalution'
-    _inherit = ['mail.thread']
+    _inherit=['mail.thread','mail.activity.mixin']
     _rec_name = 'domain'
 
     @api.one
@@ -48,10 +48,10 @@ class mk_courses_evalution(models.Model):
     def _get_total(self):
         self.degree = sum(standard.degree for standard in self.standard_ids)
 
-    start_date   = fields.Date('Start Date', required=True, track_visibility='onchange')
-    end_date     = fields.Date('End Date', track_visibility='onchange')
-    domain       = fields.Char('Domain', track_visibility='onchange')
-    degree       = fields.Float('Sum of Degree', compute=_get_total, track_visibility='onchange')
+    start_date   = fields.Date('Start Date', required=True, tracking=True)
+    end_date     = fields.Date('End Date', tracking=True)
+    domain       = fields.Char('Domain', tracking=True)
+    degree       = fields.Float('Sum of Degree', compute=_get_total, tracking=True)
     standard_ids = fields.One2many('mk.course.standard', 'course_id', string="Standars")
 
     @api.constrains('end_date')
@@ -104,7 +104,7 @@ class mk_courses_calibration_satndard(models.Model):
 
 class mk_courses_request(models.Model):
     _name = 'mk.course.request'
-    _inherit = ['mail.thread']
+    _inherit=['mail.thread','mail.activity.mixin']
     _rec_name = 'course'
 
     @api.multi
@@ -273,101 +273,101 @@ class mk_courses_request(models.Model):
         for rec in self:
             rec.course_request_url= "http://edu.maknon.org.sa/showintensive_course/" + str(rec.id)
 
-    mosque_location_id = fields.Integer(string='mosque location id', track_visibility='onchange')
-    user_id            = fields.Many2one('res.users', string="user",default=default_user, track_visibility='onchange')
-    department_id      = fields.Many2one('hr.department',string="Department",compute="compute_mosq_department", store=True, track_visibility='onchange')
-    employee_id2       = fields.Many2one('res.users', string="employee", track_visibility='onchange')
-    mosque_id          = fields.Many2one('mk.mosque',default=_defautl_masjed, track_visibility='onchange')
+    mosque_location_id = fields.Integer(string='mosque location id', tracking=True)
+    user_id            = fields.Many2one('res.users', string="user",default=default_user, tracking=True)
+    department_id      = fields.Many2one('hr.department',string="Department",compute="compute_mosq_department", store=True, tracking=True)
+    employee_id2       = fields.Many2one('res.users', string="employee", tracking=True)
+    mosque_id          = fields.Many2one('mk.mosque',default=_defautl_masjed, tracking=True)
     gender_mosque      = fields.Selection([('male','رجالي'),
-                                           ('female','نسائي')], related="mosque_id.gender_mosque", string='Mosque gender', store=True, track_visibility='onchange')
-    mosque_location    = fields.Many2one('mk.mosque',string="أسم المسجد/المدرسة", track_visibility='onchange')
-    mosque_location_cc = fields.Char(string="أسم المسجد/المدرسة", track_visibility='onchange')
+                                           ('female','نسائي')], related="mosque_id.gender_mosque", string='Mosque gender', store=True, tracking=True)
+    mosque_location    = fields.Many2one('mk.mosque',string="أسم المسجد/المدرسة", tracking=True)
+    mosque_location_cc = fields.Char(string="أسم المسجد/المدرسة", tracking=True)
     state_id           = fields.Many2one('res.country.state', string='الحي', domain=[('type_location','=','district'),
-                                                                                     ('enable','=',True)], track_visibility='onchange')
+                                                                                     ('enable','=',True)], tracking=True)
     location           = fields.Selection(string="Location", selection=[('internal', 'Internal'),
 															            ('external', 'External'),
 															            ('female_episodes', 'حلقات نسائية في مسجد/جامع'),
-                                                                        ('remotly', 'Remotly')],default='internal', track_visibility='onchange')
+                                                                        ('remotly', 'Remotly')],default='internal', tracking=True)
     external_mosq_name = fields.Char('اسم المسجد/الجامع')
-    academic_id        = fields.Many2one('mk.study.year',  string='العام الدراسي', default=get_year_default, track_visibility='onchange')
-    study_class_id     = fields.Many2one('mk.study.class', string='الفصل الدراسي', track_visibility='onchange')
-    course             = fields.Many2one('mk.types.courses', string='Course', track_visibility='onchange')
-    course_name        = fields.Char("course Name", required=True, track_visibility='onchange')
-    employee_id        = fields.Many2one("hr.employee", string="Employee", required=True, track_visibility='onchange')
-    mobile             = fields.Char('Mobile', track_visibility='onchange')
-    mobile_company     = fields.Char('Mobile company', track_visibility='onchange')
-    admin_id           = fields.Many2one('hr.employee',string="Mosque Admin",compute="_defautl_admin", store=True, track_visibility='onchange')
-    mobile_admin       = fields.Char('Mobile admin', track_visibility='onchange')
-    yes                = fields.Selection(string="هل سبق اقامة دورة في المسجد/المدرسة", selection=[('نعم', 'Yes'), ('ﻻ', 'No')], track_visibility='onchange')
-    yes_ep             = fields.Selection(string="هل يوجد أدارة حلقات بالمسجد/المدرسة‬",selection=[('نعم', 'Yes'), ('ﻻ', 'No')], track_visibility='onchange')
+    academic_id        = fields.Many2one('mk.study.year',  string='العام الدراسي', default=get_year_default, tracking=True)
+    study_class_id     = fields.Many2one('mk.study.class', string='الفصل الدراسي', tracking=True)
+    course             = fields.Many2one('mk.types.courses', string='Course', tracking=True)
+    course_name        = fields.Char("course Name", required=True, tracking=True)
+    employee_id        = fields.Many2one("hr.employee", string="Employee", required=True, tracking=True)
+    mobile             = fields.Char('Mobile', tracking=True)
+    mobile_company     = fields.Char('Mobile company', tracking=True)
+    admin_id           = fields.Many2one('hr.employee',string="Mosque Admin",compute="_defautl_admin", store=True, tracking=True)
+    mobile_admin       = fields.Char('Mobile admin', tracking=True)
+    yes                = fields.Selection(string="هل سبق اقامة دورة في المسجد/المدرسة", selection=[('نعم', 'Yes'), ('ﻻ', 'No')], tracking=True)
+    yes_ep             = fields.Selection(string="هل يوجد أدارة حلقات بالمسجد/المدرسة‬",selection=[('نعم', 'Yes'), ('ﻻ', 'No')], tracking=True)
     #no=fields.Boolean('No')
     #no_ep=fields.Boolean('No')
     emp_ids            = fields.One2many('mk.course.emp', 'request_id', string="Employee")
     epsoide_ids        = fields.Many2many('mk.episode', string="Episode", domain=lambda self:[('mosque_id', '=', self.mosque_location_id)])
     #
-    start_date         = fields.Date(string='Start Date', track_visibility='onchange')
-    end_date           = fields.Date(string='End Date', track_visibility='onchange')
+    start_date         = fields.Date(string='Start Date', tracking=True)
+    end_date           = fields.Date(string='End Date', tracking=True)
     day_ids            = fields.Many2many('mk.work.days', string="Days")
-    subh               = fields.Boolean('Subah', track_visibility='onchange')
-    zaher              = fields.Boolean('Zaher', track_visibility='onchange')
-    asor               = fields.Boolean('Asor', track_visibility='onchange')
-    mogreb             = fields.Boolean('mogreb', track_visibility='onchange')
-    esha               = fields.Boolean('Esha', track_visibility='onchange')
-    no_day             = fields.Integer(string="No Of Days", compute="on_change_start_date", track_visibility='onchange')
-    no_day_copy        = fields.Integer(string="No Of Days", track_visibility='onchange')
+    subh               = fields.Boolean('Subah', tracking=True)
+    zaher              = fields.Boolean('Zaher', tracking=True)
+    asor               = fields.Boolean('Asor', tracking=True)
+    mogreb             = fields.Boolean('mogreb', tracking=True)
+    esha               = fields.Boolean('Esha', tracking=True)
+    no_day             = fields.Integer(string="No Of Days", compute="on_change_start_date", tracking=True)
+    no_day_copy        = fields.Integer(string="No Of Days", tracking=True)
     #branch_ids=fields.Many2many('test.branch.line', string="Branches"
         #,domain=[('branch_type','=','ic')]# )
-    no_hours           = fields.Integer("No Of Hours", track_visibility='onchange')
-    no_teacher         = fields.Integer("No Of Teachers", track_visibility='onchange')
-    no_student         = fields.Integer("No Of Student", required=True, track_visibility='onchange')
-    no_supervisor      = fields.Integer("No Of supervisor", track_visibility='onchange')
-    cost               = fields.Float("Cost", track_visibility='onchange')
-    commit             = fields.Boolean('Commit', track_visibility='onchange')
+    no_hours           = fields.Integer("No Of Hours", tracking=True)
+    no_teacher         = fields.Integer("No Of Teachers", tracking=True)
+    no_student         = fields.Integer("No Of Student", required=True, tracking=True)
+    no_supervisor      = fields.Integer("No Of supervisor", tracking=True)
+    cost               = fields.Float("Cost", tracking=True)
+    commit             = fields.Boolean('Commit', tracking=True)
     student_ids        = fields.One2many('mk.course.student', 'request_st_id', string="Students")
     state              = fields.Selection(string="State", selection=[('draft', 'Draft'),
                                                                      ('send','Send'),
                                                                      ('accept', 'Accept'),
                                                                      ('reject', 'Reject'),
-                                                                     ('closed', 'Closed')], default='draft', track_visibility='onchange')
+                                                                     ('closed', 'Closed')], default='draft', tracking=True)
     #google_map_mosque = fields.Char(string="Map")
     note               = fields.Text(string="Note", compute=_defautl_note, store=True)
-    # note2              = fields.Text(default=_defautl_note2, string="Note", track_visibility='onchange')
-    partner_latitude   = fields.Char(string="Longitude", track_visibility='onchange')
-    partner_longitude  = fields.Char(string="Latitude", track_visibility='onchange')
-    no_seats           = fields.Integer('Number of vacant seats', track_visibility='onchange')
-    total_hours        = fields.Integer('إجمالي الساعات',compute="_get_total_hour", track_visibility='onchange')
+    # note2              = fields.Text(default=_defautl_note2, string="Note", tracking=True)
+    partner_latitude   = fields.Char(string="Longitude", tracking=True)
+    partner_longitude  = fields.Char(string="Latitude", tracking=True)
+    no_seats           = fields.Integer('Number of vacant seats', tracking=True)
+    total_hours        = fields.Integer('إجمالي الساعات',compute="_get_total_hour", tracking=True)
     # location = fields.Char(string="Coordonnées géographiques", compute="tt_return_location")
-    locate_desc        = fields.Text(string="وصف الموقع", track_visibility='onchange')
+    locate_desc        = fields.Text(string="وصف الموقع", tracking=True)
     #check=fields.Char('check',default=check)
-    flag               = fields.Boolean('flage', track_visibility='onchange')
-    flag2              = fields.Boolean('flage', track_visibility='onchange')
-    emp_sec            = fields.Char("مشرف البرنامج", track_visibility='onchange')
-    hijri_start_date   = fields.Char(compute="compute_hijri_start_date",store=True, track_visibility='onchange')
-    hijri_end_date     = fields.Char(compute="compute_hijri_start_date",store=True, track_visibility='onchange')
-    company_id         = fields.Many2one('res.company', string="Company", default=lambda self: self.env['res.company']._company_default_get('mk.course.request') , track_visibility='onchange')
-    active             = fields.Boolean('نشط', default=True, track_visibility='onchange')
-    course_request_code= fields.Char('Course request code', size=12, readonly=True, track_visibility='onchange')
+    flag               = fields.Boolean('flage', tracking=True)
+    flag2              = fields.Boolean('flage', tracking=True)
+    emp_sec            = fields.Char("مشرف البرنامج", tracking=True)
+    hijri_start_date   = fields.Char(compute="compute_hijri_start_date",store=True, tracking=True)
+    hijri_end_date     = fields.Char(compute="compute_hijri_start_date",store=True, tracking=True)
+    company_id         = fields.Many2one('res.company', string="Company", default=lambda self: self.env['res.company']._company_default_get('mk.course.request') , tracking=True)
+    active             = fields.Boolean('نشط', default=True, tracking=True)
+    course_request_code= fields.Char('Course request code', size=12, readonly=True, tracking=True)
 
-    course_episode_nbr       = fields.Integer('Course Episodes', track_visibility='onchange')
-    course_students_nbr      = fields.Integer('Course Students', track_visibility='onchange')
-    course_teachers_nbr      = fields.Integer('Course Teachers', track_visibility='onchange')
-    course_administrators_nbr = fields.Integer('Course Administrators', track_visibility='onchange')
-    close_total_hours        = fields.Integer('Total hours', track_visibility='onchange')
-    parts_female_total_nbr   = fields.Integer('Parts female total nbr', track_visibility='onchange')
-    parts_female_total_done_nbr = fields.Integer('Parts female total done nbr', track_visibility='onchange')
-    parts_nbr                = fields.Integer('Parts nbr', track_visibility='onchange')
-    students_finals_nbr      = fields.Integer('Students finals', track_visibility='onchange')
-    students_final_tests_nbr = fields.Integer('Students in final tests', track_visibility='onchange')
-    students_parts_tests_nbr = fields.Integer('Students in parts tests', track_visibility='onchange')
+    course_episode_nbr       = fields.Integer('Course Episodes', tracking=True)
+    course_students_nbr      = fields.Integer('Course Students', tracking=True)
+    course_teachers_nbr      = fields.Integer('Course Teachers', tracking=True)
+    course_administrators_nbr = fields.Integer('Course Administrators', tracking=True)
+    close_total_hours        = fields.Integer('Total hours', tracking=True)
+    parts_female_total_nbr   = fields.Integer('Parts female total nbr', tracking=True)
+    parts_female_total_done_nbr = fields.Integer('Parts female total done nbr', tracking=True)
+    parts_nbr                = fields.Integer('Parts nbr', tracking=True)
+    students_finals_nbr      = fields.Integer('Students finals', tracking=True)
+    students_final_tests_nbr = fields.Integer('Students in final tests', tracking=True)
+    students_parts_tests_nbr = fields.Integer('Students in parts tests', tracking=True)
     course_request_type      = fields.Selection(string="Course request type", selection=[('quran_day', 'Quran day'),
                                                                                          ('intensive_course', 'Intensive course'),
-                                                                                         ('ramadan_course', 'Ramadan course')], default='intensive_course', required=True, track_visibility='onchange')
+                                                                                         ('ramadan_course', 'Ramadan course')], default='intensive_course', required=True, tracking=True)
     image                    = fields.Binary("Image",              attachment=True)
     image_medium             = fields.Binary("Medium-sized image", attachment=True)
     image_small              = fields.Binary("Small-sized image",  attachment=True)
-    course_request_url       = fields.Char(string='Course link', compute=get_subscription_url, store=True, track_visibility='onchange')
+    course_request_url       = fields.Char(string='Course link', compute=get_subscription_url, store=True, tracking=True)
     branches_ids             = fields.Many2many("mk.parts.names", string="فروع الحفظ و المراجعة")
-    nbr_student_courses  = fields.Integer('student_courses', compute='get_student_courses', store=True, track_visibility='onchange')
+    nbr_student_courses  = fields.Integer('student_courses', compute='get_student_courses', store=True, tracking=True)
 
     def set_request_to_send(self):
         self.state="send"
@@ -812,19 +812,19 @@ class Update_courses_student(models.TransientModel):
 
 class mk_courses_student(models.Model):
     _name = 'mk.course.student'
-    _inherit = ['mail.thread']
+    _inherit=['mail.thread','mail.activity.mixin']
     _rec_name = 'student_id'
 
-    student_id         = fields.Many2one('mk.student.register', string="Student", required=1, ondelete='cascade', track_visibility='onchange')
-    no_identity        = fields.Boolean('No Identity', compute='get_student_details', store=True, track_visibility='onchange')
-    identity_no        = fields.Char('Identity No',    compute='get_student_details', store=True, track_visibility='onchange')
-    passport_no        = fields.Char('Passport No',    compute='get_student_details', store=True, track_visibility='onchange')
-    mobile             = fields.Char('Mobile',         compute='get_student_details', store=True, track_visibility='onchange')
-    email              = fields.Char('Email',          compute='get_student_details', store=True, track_visibility='onchange')
-    nationality        = fields.Char('الجنسية' ,       compute='get_student_details', store=True, track_visibility='onchange')
-    birthdate          = fields.Date('Birthdate',      compute='get_student_details', store=True, track_visibility='onchange')
+    student_id         = fields.Many2one('mk.student.register', string="Student", required=1, ondelete='cascade', tracking=True)
+    no_identity        = fields.Boolean('No Identity', compute='get_student_details', store=True, tracking=True)
+    identity_no        = fields.Char('Identity No',    compute='get_student_details', store=True, tracking=True)
+    passport_no        = fields.Char('Passport No',    compute='get_student_details', store=True, tracking=True)
+    mobile             = fields.Char('Mobile',         compute='get_student_details', store=True, tracking=True)
+    email              = fields.Char('Email',          compute='get_student_details', store=True, tracking=True)
+    nationality        = fields.Char('الجنسية' ,       compute='get_student_details', store=True, tracking=True)
+    birthdate          = fields.Date('Birthdate',      compute='get_student_details', store=True, tracking=True)
     gender             = fields.Selection([('male', 'Male'),
-                                           ('female', 'Female')], string="Gender",  default="male",  compute='get_student_details', store=True, track_visibility='onchange')
+                                           ('female', 'Female')], string="Gender",  default="male",  compute='get_student_details', store=True, tracking=True)
     attende            = fields.Boolean('attendance')
     request_st_id      = fields.Many2one('mk.course.request',   string="Course request", required=1)
     mosque_id          = fields.Many2one(related='request_st_id.mosque_id', store=True)
@@ -973,8 +973,8 @@ class mk_student_register(models.Model):
 
 class MkParts(models.Model):
     _name = 'mk.parts.names'
-    _inherit = ['mail.thread']
+    _inherit=['mail.thread','mail.activity.mixin']
     _order = 'order'
 
-    name  = fields.Char('Name',     track_visibility='onchange')
-    order = fields.Integer('Order', track_visibility='onchange')
+    name  = fields.Char('Name',     tracking=True)
+    order = fields.Integer('Order', tracking=True)

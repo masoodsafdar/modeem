@@ -5,7 +5,7 @@
         <record id="mk_student_link_draft_record_action2" model="ir.actions.act_window">
             <field name="name">period draft student</field>
             <field name="res_model">mk.link</field>
-            <field name="view_type">form</field>
+            <field name="binding_view_types">form</field>
             <field name="view_mode">tree,form</field>
             <field name="domain">[('episode_id','=',active_id),('state','!=','accept')]</field>
         </record>
@@ -31,7 +31,7 @@
         <record id="action_student_internal_transfer" model="ir.actions.act_window">
             <field name="name">نقل داخلي</field>
             <field name="res_model">student.internal.transfer</field>
-            <field name="view_type">form</field>
+            <field name="binding_view_types">form</field>
             <field name="view_mode">form</field>
             <field name="view_id" ref="form_student_internal_transfer"/>
             <field name="context">{'default_link_id': active_id}</field>
@@ -44,7 +44,7 @@
             <field name="inherit_id" ref="mk_episode_management.mk_episode_form_view"/>
             <field name="arch" type="xml">
                 <header position="inside">
-                    <button name="action_assign_student_from_episode" string="تنسيب الطلاب/ الطالبات للحلقة" type="object" attrs="{'invisible':['|',('state','not in',['draft','accept']),('active','!=',True)]}" groups="mk_episode_management.students_placement_to_episode"/>
+                    <button name="action_assign_student_from_episode" string="تنسيب الطلاب/ الطالبات للحلقة" type="object" attrs="{'invisible':['|',('state','not in',['draft','accept']),('active','!=',True)]}"/>
                 </header>
                 <xpath expr="//page[1]//label[@for='women_or_men']" position='before'>
                     <label for="expected_students" style="font-weight: bold; width:200px"/>
@@ -67,14 +67,14 @@
                                 <field name="registeration_date"/>
                                 <field name="state" string="الحالة"/>
                                 <field name="action_done" invisible="1"/>
-                                <button name="%(mk_student_register.action_student_internal_transfer)d" string="نقل داخلي" type="action" attrs="{'invisible':['|', ('action_done','in',['clear','ep_done']),('state','=','cancel')]}" groups="mk_student_register.student_internal_transfert"/>
-                                <button name="action_cancel"                 string="إلغاء" type="object"          attrs="{'invisible':['|', ('action_done','!=',False),('state','!=','accept')]}" groups="mk_student_register.cancel_student_link_to_episode"/>
-                                <button name="action_update_student_prepare" string="تعديل المنهج" type="object" attrs="{'invisible':['|', ('action_done','!=',False),('state','!=','accept')]}" groups="mk_student_register.cancel_student_link_to_episode"/>
+                                <button name="%(mk_student_register.action_student_internal_transfer)d" string="نقل داخلي" type="action" attrs="{'invisible':['|', ('action_done','in',['clear','ep_done']),('state','=','cancel')]}"/>
+                                <button name="action_cancel"                 string="إلغاء" type="object"          attrs="{'invisible':['|', ('action_done','!=',False),('state','!=','accept')]}"/>
+                                <button name="action_update_student_prepare" string="تعديل المنهج" type="object" attrs="{'invisible':['|', ('action_done','!=',False),('state','!=','accept')]}"/>
                             </tree>
                         </field>
                     </page>
 
-                    <page string="الطلاب المرفوضين" groups="base.group_no_one">
+                    <page string="الطلاب المرفوضين">
                         <field name="canceled_link_ids" string="الطلاب المرفوضين">
                             <tree create="0" delete="0">
                                 <field name="registeration_code"/>
@@ -90,12 +90,12 @@
                     <div class="oe_left oe_button_box">
                         <div class="row">
                             <div class="oe_left col-3">
-                                <button class="oe_inline oe_stat_button" type="action" name="876" icon="fa-list"
+                                <!-- <button class="oe_inline oe_stat_button" type="action" name="876" icon="fa-list"
                                         style="width:450px;height:100px">
                                     <div style="padding-right:5px;">قائمة<br/>الطلاب الغير مفعلين
                                         <br/>
                                     </div>
-                                </button>
+                                </button> -->
                             </div>
                             <div class="oe_right col-3">
                                 <button name="open_view_listen_lines" type="object" class="oe_inline oe_stat_button"

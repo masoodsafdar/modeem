@@ -11,6 +11,8 @@ _logger = logging.getLogger(__name__)
 class episode_programs(models.Model):
     _inherit = 'mk.episode'
 
+    is_episode_meqraa = fields.Boolean(string="Is Episode Meqraa")
+
     @api.model
     def archive_seasonal_episode(self):
         episodes = self.env['mk.episode'].search([('study_class_id.is_default', '=', True),
@@ -63,14 +65,14 @@ class episode_programs(models.Model):
             self.episode_period = 'evening'
 
 
-    program_id            = fields.Many2one('mk.programs',   string='نوع البرنامج', track_visibility='onchange')
-    approache_id          = fields.Many2one('mk.approaches', string='البرنامج' , track_visibility='onchange')
-    episode_path_id       = fields.Many2one('mk.path',       string='المسار' ,   track_visibility='onchange')
-    department_id         = fields.Many2one('hr.department', string="Department", compute=get_department, store=True , track_visibility='onchange')
+    program_id            = fields.Many2one('mk.programs',   string='نوع البرنامج', tracking=True)
+    approache_id          = fields.Many2one('mk.approaches', string='البرنامج' , tracking=True)
+    episode_path_id       = fields.Many2one('mk.path',       string='المسار' ,   tracking=True)
+    department_id         = fields.Many2one('hr.department', string="Department", compute=get_department, store=True , tracking=True)
     day_schedule_test_ids = fields.One2many('mk.schedule.test.day', 'episode_id', string='Schedule test day')
-    is_online             = fields.Boolean('Online', track_visibility='onchange')
+    is_online             = fields.Boolean('Online', tracking=True)
     episode_period        = fields.Selection([('morning', 'Morning'),
-                                              ('evening', 'Evening')], string='Episode Period', compute='get_episode_period',store=True, track_visibility='onchange')
+                                              ('evening', 'Evening')], string='Episode Period', compute='get_episode_period',store=True, tracking=True)
 
 
     # @api.multi

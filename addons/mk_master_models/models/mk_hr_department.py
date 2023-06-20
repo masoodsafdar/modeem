@@ -8,33 +8,33 @@ _logger = logging.getLogger(__name__)
 class HrDepartment(models.Model):
     _inherit = 'hr.department'
         
-    name             = fields.Char('Department Name', required=True, track_visibility='onchange')
+    name             = fields.Char('Department Name', required=True, tracking=True)
     mosque_ids       = fields.One2many('mk.mosque', 'center_department_id', string='mosques')
     level_type       = fields.Selection([('gm','General Management'),
                                          ('m','Management'),
                                          ('d','Department'),
-                                         ('c','Center')], string='Level Type', required=False, track_visibility='onchange')
-    latitude         = fields.Char(string='Latitude', default=0, track_visibility='onchange')
-    longitude        = fields.Char(string='Longitude',default=0, track_visibility='onchange')
-    signature        = fields.Binary("Signature", attachment=True, track_visibility='onchange')
-    signature_name   = fields.Char("Signature", track_visibility='onchange')
-    test_center_admin= fields.Char("Test center admin", track_visibility='onchange')
+                                         ('c','Center')], string='Level Type', required=False, tracking=True)
+    latitude         = fields.Char(string='Latitude', default=0, tracking=True)
+    longitude        = fields.Char(string='Longitude',default=0, tracking=True)
+    signature        = fields.Binary("Signature", attachment=True, tracking=True)
+    signature_name   = fields.Char("Signature", tracking=True)
+    test_center_admin= fields.Char("Test center admin", tracking=True)
     city_id          = fields.Many2one('res.country.state', string='City', domain=[('type_location','=','city'),
-                                                                                   ('enable','=',True)], track_visibility='onchange')
+                                                                                   ('enable','=',True)], tracking=True)
     area_id          = fields.Many2one('res.country.state', string='Area', domain=[('type_location','=','area'),
-                                                                                   ('enable','=',True)], track_visibility='onchange')
+                                                                                   ('enable','=',True)], tracking=True)
     district_id      = fields.Many2one('res.country.state', string='District', domain=[('type_location','=','district'),
-                                                                                       ('enable','=',True)], track_visibility='onchange')
-    code             = fields.Char('Code', size=50, track_visibility='onchange')
-    active           = fields.Boolean('Active', default=True, track_visibility='onchange')
-    gateway_config   = fields.Many2one('mk.smsclient.config', string='gateway config', track_visibility='onchange')
-    gateway_user     = fields.Char('Gateway user', size=50, track_visibility='onchange')
-    gateway_password = fields.Char('Gateway password',size=50, track_visibility='onchange')
-    gateway_sender   = fields.Char('Gateway sender',size=50, track_visibility='onchange')
-    send_time        = fields.Float('Send time', default=0.0, digits=(16, 2), track_visibility='onchange')
+                                                                                       ('enable','=',True)], tracking=True)
+    code             = fields.Char('Code', size=50, tracking=True)
+    active           = fields.Boolean('Active', default=True, tracking=True)
+    gateway_config   = fields.Many2one('mk.smsclient.config', string='gateway config', tracking=True)
+    gateway_user     = fields.Char('Gateway user', size=50, tracking=True)
+    gateway_password = fields.Char('Gateway password',size=50, tracking=True)
+    gateway_sender   = fields.Char('Gateway sender',size=50, tracking=True)
+    send_time        = fields.Float('Send time', default=0.0, digits=(16, 2), tracking=True)
     male_managers    = fields.One2many('hr.employee', 'department_id', string='assitens', domain=[('center_admin_category','=','male')])
     female_managers  = fields.One2many('hr.employee', 'department_id', string='assitens', domain=[('center_admin_category','=','female')])
-    phone_number     = fields.Char('رقم المركز', track_visibility='onchange')
+    phone_number     = fields.Char('رقم المركز', tracking=True)
 
     _sql_constraints = [('name_uniq', 'unique (name)', "هذا السجل موجود مسبقا!"),]
 

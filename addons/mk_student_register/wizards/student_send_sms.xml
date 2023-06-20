@@ -35,13 +35,30 @@
             </field>
         </record>
 
-       <act_window name="Send an SMS"
+        <record id="action_student_sms_send" model="ir.ui.view">
+            <field name="name">Send an SMS</field>
+            <field name="model">student.sms.send</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                    <h1> Are you sure </h1>
+                    <!-- <field name="date"/>       -->
+                    </group>
+               <footer>
+                <button name="client_action_multi" type="object" string="Yes" class = "oe_highlight"  />
+                </footer>
+        </form>
+            </field>
+        </record>
+
+       <!-- <act_window name="Send an SMS"
             res_model="student.sms.send"
             src_model="mk.student.register"
             view_mode="form"
             target="new"
             key2="client_action_multi"
             id="action_student_sms_send"
-            />
+            /> -->
     </data>
 </odoo>

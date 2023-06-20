@@ -7,14 +7,14 @@ _logger = logging.getLogger(__name__)
     
 class TestEvaluationItems(models.Model):
     _name = 'mk.evaluation.items'
-    _inherit = ['mail.thread']
+    _inherit=['mail.thread','mail.activity.mixin']
 
     discount_items = fields.One2many("mk.discount.item","evaluation_item","discount items")
     branches       = fields.Many2many("mk.branches.master", string="branches")
-    name           = fields.Char(   string="Name",         required="1", track_visibility='onchange')
-    total          = fields.Integer(string="Total degree", required="1", track_visibility='onchange')
-    part_discount  = fields.Boolean(string="full discount",              track_visibility='onchange')
-    active         = fields.Boolean(string="active", default=True, groups="maknon_tests.group_evaluation_items_archives", track_visibility='onchange')
+    name           = fields.Char(   string="Name",         required="1", tracking=True)
+    total          = fields.Integer(string="Total degree", required="1", tracking=True)
+    part_discount  = fields.Boolean(string="full discount",              tracking=True)
+    active         = fields.Boolean(string="active", default=True, groups="maknon_tests.group_evaluation_items_archives", tracking=True)
 
     @api.model
     def list_evaluation_items(self):

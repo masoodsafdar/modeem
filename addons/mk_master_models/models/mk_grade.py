@@ -8,21 +8,21 @@ _logger = logging.getLogger(__name__)
 
 class mak_grade(models.Model):
     _name = 'mk.grade'
-    _inherit = ['mail.thread']
+    _inherit=['mail.thread','mail.activity.mixin']
     _description = 'Educational episodes'
 
-    name           = fields.Char('Grade',     required=True, track_visibility='onchange')
-    order_grade    = fields.Integer("Order", track_visibility='onchange')
-    active         = fields.Boolean('Active', default=True,  track_visibility='onchange')
+    name           = fields.Char('Grade',     required=True, tracking=True)
+    order_grade    = fields.Integer("Order", tracking=True)
+    active         = fields.Boolean('Active', default=True,  tracking=True)
     age_categories = fields.Many2many("mk.age.category",string="Age Gategories")
-    is_parent      = fields.Boolean('مؤهل خاص بولي الأمر', default=False, track_visibility='onchange')
-    is_episode     = fields.Boolean('مؤهل خاص بالحلقات',  default=False, track_visibility='onchange')
+    is_parent      = fields.Boolean('مؤهل خاص بولي الأمر', default=False, tracking=True)
+    is_episode     = fields.Boolean('مؤهل خاص بالحلقات',  default=False, tracking=True)
     type_level     = fields.Selection([('preliminary', 'تمهيدي'), 
                                         ('primary', 'ابتدائي'), 
                                         ('medium', 'متوسط'),
                                         ('secondary', 'ثانوي'),
                                         ('academic', 'جامعي'), 
-                                        ('other', 'أخرى/أمهات')], string='المستوى الدراسي', track_visibility='onchange')
+                                        ('other', 'أخرى/أمهات')], string='المستوى الدراسي', tracking=True)
 
     # _sql_constraints = [('order_grade_uniq', 'unique (order_grade)', "Ordre must be unique please"),]
     

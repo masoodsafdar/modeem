@@ -42,13 +42,13 @@ class link_student(models.Model):
         return academic_year and academic_year.id or False
 
     # @api.one
-    @api.depends('episode_id')
-    def get_episode_days(self):
-        self.ensure_one()
-        days = set()
-        for episode_day in self.episode_id.episode_days:
-            days.add(episode_day.id)
-        self.domain_days = list(days)
+    # @api.depends('episode_id')
+    # def get_episode_days(self):
+    #     self.ensure_one()
+    #     days = set()
+    #     for episode_day in self.episode_id.episode_days:
+    #         days.add(episode_day.id)
+    #     self.domain_days = list(days)
 
     def _default_error_msg(self):
         return "طلب الانظمام لحلقة منتهية الرجاء استخدام اجراء الية تنسيب الطالب لحلقة"
@@ -68,7 +68,8 @@ class link_student(models.Model):
     registeration_date = fields.Date(default=datetime.today().strftime('%Y-%m-%d'), string='التاريخ', copy=False)
     mosq_id            = fields.Many2one('mk.mosque',      string='Mosque',  ondelete="restrict")
     episode_id         = fields.Many2one('mk.episode',     string="Episode", ondelete="restrict", required=True, copy=False, index=True)
-    domain_days        = fields.Many2many('mk.work.days', 'mk_link_mk_work_days_rel', 'mk_link_id', 'mk_work_days_id', string='أيام الحلقة', compute=get_episode_days, store=True)
+    # domain_days        = fields.Many2many('mk.work.days', 'mk_link_mk_work_days_rel', 'mk_link_id', 'mk_work_days_id', string='أيام الحلقة', compute=get_episode_days, store=True)
+    # domain_days        = fields.Many2many('mk.work.days', 'mk_link_mk_work_days_rel', 'mk_link_id', 'mk_work_days_id', string='أيام الحلقة')
     student_days       = fields.Many2many('mk.work.days', 'mk_link_student_days_rel', 'mk_link_id', 'mk_work_days_id', string='أيام الطالب',  ondelete="restrict")
     
     academic_id        = fields.Many2one('mk.study.year',  string='العام الدراسي', related='episode_id.academic_id', copy=False)

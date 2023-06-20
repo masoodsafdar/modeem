@@ -40,18 +40,24 @@
           </field>
         </record>
 
-        <act_window 
+        <record model="ir.actions.act_window" id="gateway_config_action">
+            <field name="name">gateway configuration</field>
+            <field name="res_model">mk.smsclient.config</field>
+            <field name="binding_view_types">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- <act_window 
         id="gateway_config_action"
         name="gateway configuration"
         res_model="mk.smsclient.config"
-        view_mode="tree,form"/>
+        view_mode="tree,form"/> -->
 
         <menuitem name="إعدادات بوابة الرسائل القصيرة" 
       id="gateway_config_menu"
       parent="sms_center"
       action="gateway_config_action"
       sequence="3"
-      groups="group_sms_configuration"
             />
 
 

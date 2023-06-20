@@ -18,7 +18,7 @@ import base64
 
 class session(models.Model):
     _name = 'student.test.session'
-    _inherit = ['mail.thread']
+    _inherit=['mail.thread','mail.activity.mixin']
     _rec_name='student_name'
 
     @api.depends('center_id')
@@ -193,9 +193,9 @@ class session(models.Model):
 
     editable         = fields.Boolean(string="show", compute='cheack_user_logged_in')
     flag             = fields.Boolean(string="show", compute='cheack_user_logged_in2', default=False)
-    active           = fields.Boolean(string="active", default=True, track_visibility='onchange')
-    academic_id      = fields.Many2one('mk.study.year',  string='Academic Year', required=True,ondelete='restrict', default=get_year_default,                    track_visibility='onchange')
-    study_class_id   = fields.Many2one('mk.study.class', string='Study class', default=get_study_class, domain=[('is_default', '=', True)], ondelete='restrict', track_visibility='onchange')
+    active           = fields.Boolean(string="active", default=True, tracking=True)
+    academic_id      = fields.Many2one('mk.study.year',  string='Academic Year', required=True,ondelete='restrict', default=get_year_default,                    tracking=True)
+    study_class_id   = fields.Many2one('mk.study.class', string='Study class', default=get_study_class, domain=[('is_default', '=', True)], ondelete='restrict', tracking=True)
     is_current_year  = fields.Boolean('العام الحالي', compute=get_is_current_year, store=True)
     controller_flag  = fields.Boolean(string="controller", default=False)        
     state            = fields.Selection([('draft', 'Draft'),
@@ -203,10 +203,10 @@ class session(models.Model):
                                          ('start', 'start'),
                                          ('pasue', 'إيقاف'),
                                          ('done',  'Done test'),
-                                         ('cancel','إلغاء')], default="draft", string="status", index=True, track_visibility='onchange')
-    student_id       = fields.Many2one("mk.link",      string="student", track_visibility='onchange')
-    branch_duration  = fields.Integer(string="branch duration",            track_visibility='onchange')
-    test_name        = fields.Many2one("mk.test.names",string="Test Name", track_visibility='onchange')
+                                         ('cancel','إلغاء')], default="draft", string="status", index=True, tracking=True)
+    student_id       = fields.Many2one("mk.link",      string="student", tracking=True)
+    branch_duration  = fields.Integer(string="branch duration",            tracking=True)
+    test_name        = fields.Many2one("mk.test.names",string="Test Name", tracking=True)
     type_test        = fields.Selection([('final',   'الخاتمين'),
                                         ('parts',   'الأجزاء'),
                                         ('contest', 'مسابقات'),
@@ -214,34 +214,34 @@ class session(models.Model):
                                          ('indoctrination', 'تلقين'),
                                          ('vacations', 'اجازات'),], string="النوع", compute='get_type_test', store=True)
 
-    test_time        = fields.Many2one("center.time.table",       string="Test Time",     track_visibility='onchange')
-    branch           = fields.Many2one("mk.branches.master",      string="Branch",        track_visibility='onchange')
-    center_id        = fields.Many2one("mk.test.center.prepration", string="Test center", track_visibility='onchange')
+    test_time        = fields.Many2one("center.time.table",       string="Test Time",     tracking=True)
+    branch           = fields.Many2one("mk.branches.master",      string="Branch",        tracking=True)
+    center_id        = fields.Many2one("mk.test.center.prepration", string="Test center", tracking=True)
     test_center_id   = fields.Many2one("mak.test.center", string="مركز الاختبار",  compute='get_test_center_id', store=True)
     department_id    = fields.Many2one("hr.department",   string="مركز الاشراف", compute='get_test_center_id', store=True)
-    center_name      = fields.Char(string="center name",                track_visibility='onchange')
-    teacher          = fields.Many2one("hr.employee", string="Teacher", track_visibility='onchange')
-    user_id          = fields.Many2one("res.users",   string="users",   track_visibility='onchange')
+    center_name      = fields.Char(string="center name",                tracking=True)
+    teacher          = fields.Many2one("hr.employee", string="Teacher", tracking=True)
+    user_id          = fields.Many2one("res.users",   string="users",   tracking=True)
     user_ids         = fields.Many2many("res.users", compute=get_users_committe, store=True)
     test_question    = fields.One2many("test.questions","session_id","session questions")
-    start_date       = fields.Datetime(string="exam start at",         track_visibility='onchange')
-    done_date        = fields.Datetime(string="exam done at",          track_visibility='onchange')
-    is_pass          = fields.Boolean(string='is pass', default=False, track_visibility='onchange', compute='get_final_degree', store=True)
-    committe_id      = fields.Many2one("committee.tests", "committe",  track_visibility='onchange')
-    mosque_id        = fields.Many2one('mk.mosque', string="Mosque",   track_visibility='onchange')
+    start_date       = fields.Datetime(string="exam start at",         tracking=True)
+    done_date        = fields.Datetime(string="exam done at",          tracking=True)
+    is_pass          = fields.Boolean(string='is pass', default=False, tracking=True, compute='get_final_degree', store=True)
+    committe_id      = fields.Many2one("committee.tests", "committe",  tracking=True)
+    mosque_id        = fields.Many2one('mk.mosque', string="Mosque",   tracking=True)
     avalible_teacher = fields.Many2many("hr.employee", string="available",               compute='_get_avilable_techer', store=True)
     branch_order     = fields.Integer(related='branch.order', string="branch order")
-    degree           = fields.Float(string="Deserved degree", track_visibility='onchange')
-    force_degree  = fields.Float(string="Force degree",       track_visibility='onchange')
-    final_degree     = fields.Float(string="Final degree",    track_visibility='onchange', compute='get_final_degree', store=True)
+    degree           = fields.Float(string="Deserved degree", tracking=True)
+    force_degree  = fields.Float(string="Force degree",       tracking=True)
+    final_degree     = fields.Float(string="Final degree",    tracking=True, compute='get_final_degree', store=True)
     appreciation     = fields.Selection([('excellent',  'Excellent'),
                                          ('v_good',     'Very good'),
                                          ('good',       'Good'),
                                          ('acceptable', 'Acceptable'),
-                                         ('fail',       'Fail')], string="appreciation", track_visibility='onchange', compute='get_final_degree', store=True)
+                                         ('fail',       'Fail')], string="appreciation", tracking=True, compute='get_final_degree', store=True)
     maximum_degree   = fields.Integer(related='branch.maximum_degree', string="Maximum degree")
     duration         = fields.Integer(related='branch.duration',       string="exam duration")
-    active           = fields.Boolean(string="Active", default=True, track_visibility='onchange')
+    active           = fields.Boolean(string="Active", default=True, tracking=True)
     category         = fields.Selection([('teacher', 'المعلمين'),
                                          ('center_admin','مدراء / مساعدي مدراء المركز'),
                                          ('bus_sup','مشرف الباص'),
@@ -256,24 +256,24 @@ class session(models.Model):
     is_printed     = fields.Boolean(string="Is printed", default=False)
     is_get_diploma = fields.Boolean(string="Is get diploma", default=False)
 
-    studnt_id        = fields.Many2one("mk.student.register", string="student", compute='get_student_link', store=True, track_visibility='onchange')
-    episode_id = fields.Many2one("mk.episode", string="الحلقة", index=True,          compute='get_student_episode', store=True, track_visibility='onchange')
-    class_epsd_id = fields.Many2one("mk.study.class", string="الفصل الدراسي للحلقة", compute='get_student_episode', store=True, track_visibility='onchange')
+    studnt_id        = fields.Many2one("mk.student.register", string="student", compute='get_student_link', store=True, tracking=True)
+    episode_id = fields.Many2one("mk.episode", string="الحلقة", index=True,          compute='get_student_episode', store=True, tracking=True)
+    class_epsd_id = fields.Many2one("mk.study.class", string="الفصل الدراسي للحلقة", compute='get_student_episode', store=True, tracking=True)
     episode_teacher = fields.Many2one('hr.employee', string='معلم الحلقة',           compute='get_student_episode', store=True)
     episode_type = fields.Many2one('mk.episode_type', string='نوع الحلقة',           compute='get_student_episode', store=True)
 
-    mosque_id     = fields.Many2one("mk.mosque",     string="المسجد",      compute='get_student_episode', store=True, track_visibility='onchange')
-    deprt_mosq_id = fields.Many2one("hr.department", string="مركز المسجد", compute='get_student_episode', store=True, track_visibility='onchange')
+    mosque_id     = fields.Many2one("mk.mosque",     string="المسجد",      compute='get_student_episode', store=True, tracking=True)
+    deprt_mosq_id = fields.Many2one("hr.department", string="مركز المسجد", compute='get_student_episode', store=True, tracking=True)
 
-    masjed_name     = fields.Char(string="masjed", compute='get_mosque_name', store=True, track_visibility='onchange')
+    masjed_name     = fields.Char(string="masjed", compute='get_mosque_name', store=True, tracking=True)
     gender_mosque   = fields.Selection([('male', 'رجالي'),
                                       ('female', 'نسائي')], string="Mosque gender", compute='get_categ_gender', store=True)
     categ_mosque_id = fields.Many2one('mk.mosque.category', string="Mosque category", compute='get_categ_gender', store=True)
 
-    student_name = fields.Char(string="student name", compute='get_student_link', store=True, track_visibility='onchange')
-    identity_nbr = fields.Char("رقم الهوية/جواز السفر", compute='get_student_link', store=True, track_visibility='onchange')
-    nationality = fields.Char("الجنسية", compute='get_student_link', store=True, track_visibility='onchange')
-    mobile_nbr       = fields.Char("الجوال", compute='get_student_link', store=True, track_visibility='onchange')
+    student_name = fields.Char(string="student name", compute='get_student_link', store=True, tracking=True)
+    identity_nbr = fields.Char("رقم الهوية/جواز السفر", compute='get_student_link', store=True, tracking=True)
+    nationality = fields.Char("الجنسية", compute='get_student_link', store=True, tracking=True)
+    mobile_nbr       = fields.Char("الجوال", compute='get_student_link', store=True, tracking=True)
     attachment_id   = fields.Many2one('ir.attachment', string='المرفقات')
 
     #region Student compute data

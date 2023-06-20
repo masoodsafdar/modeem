@@ -17,7 +17,7 @@ _logger = logging.getLogger(__name__)
     
 class Mkmosque(models.Model):
     _name = 'mk.mosque'
-    _inherit = ['mail.thread']
+    _inherit=['mail.thread','mail.activity.mixin']
 
     @api.depends('write_date')
     def get_mosq_subscription_url(self):
@@ -79,44 +79,44 @@ class Mkmosque(models.Model):
 
         return res
 
-    name                    = fields.Char('Name', required=True, track_visibility='onchange')
+    name                    = fields.Char('Name', required=True, tracking=True)
     image                   = fields.Binary("Image",              attachment=True)
     image_medium            = fields.Binary("Medium-sized image", attachment=True)
     image_small             = fields.Binary("Small-sized image",  attachment=True)
-    responsible_id          = fields.Many2one('hr.employee', string='Responsible', domain=[('category','=','admin')], track_visibility='onchange')
-    one_way_money           = fields.Integer('one way money', track_visibility='onchange')
-    double_way_money        = fields.Integer('Double way money', track_visibility='onchange')
-    build_type              = fields.Many2one('mk.building.type', string='build type', track_visibility='onchange')
-    mosq_subscription_url   = fields.Char(string='رابط تسجيل الطلاب في المسجد', compute=get_mosq_subscription_url, store=True, track_visibility='onchange')
-    permision_date          = fields.Date('تاريخ التصريح',        track_visibility='onchange')
-    permision_end_date      = fields.Date('Permisiion  End Date', track_visibility='onchange')
-    responsible_end_date    = fields.Date('تاريخ التصريح للمشرف', track_visibility='onchange')
+    responsible_id          = fields.Many2one('hr.employee', string='Responsible', domain=[('category','=','admin')], tracking=True)
+    one_way_money           = fields.Integer('one way money', tracking=True)
+    double_way_money        = fields.Integer('Double way money', tracking=True)
+    build_type              = fields.Many2one('mk.building.type', string='build type', tracking=True)
+    mosq_subscription_url   = fields.Char(string='رابط تسجيل الطلاب في المسجد', compute=get_mosq_subscription_url, store=True, tracking=True)
+    permision_date          = fields.Date('تاريخ التصريح',        tracking=True)
+    permision_end_date      = fields.Date('Permisiion  End Date', tracking=True)
+    responsible_end_date    = fields.Date('تاريخ التصريح للمشرف', tracking=True)
     responsible_type        = fields.Selection([('1', 'تجديد'),
                                                 ('2', 'تحويل'),
                                                 ('3', 'إلغاء'),
-                                                ('4', 'تجميد')], string="نتيجة التصريح للمشرف", track_visibility='onchange')
+                                                ('4', 'تجميد')], string="نتيجة التصريح للمشرف", tracking=True)
     permision_type          = fields.Selection([('pe', 'دائم'),
-                                                ('te', 'مؤقت')], string="نوع التصريح", track_visibility='onchange')
+                                                ('te', 'مؤقت')], string="نوع التصريح", tracking=True)
     mosque_type             = fields.Selection([('1', 'تجديد'),
                                                 ('2', 'تحويل'),
                                                 ('3', 'إلغاء'),
-                                                ('4', 'تجميد')], string="نتيجة التصريح", track_visibility='onchange')
+                                                ('4', 'تجميد')], string="نتيجة التصريح", tracking=True)
     teacher_ids             = fields.Many2many("hr.employee", "mosque_relation", "emp_id", "mosq_id", string="Teachers", domain=[('category','=','teacher')])
-    episodes                = fields.Char('Episodes', track_visibility='onchange')
+    episodes                = fields.Char('Episodes', tracking=True)
     episode_value           = fields.Selection([('mo', 'Early'),
-                                                ('ev', 'Late')], string="دوام الحلقات", track_visibility='onchange')
+                                                ('ev', 'Late')], string="دوام الحلقات", tracking=True)
     teachers_number         = fields.Integer('Teachers no', default=0, compute=get_teachers)
     mosq_other_emp_ids      = fields.Many2many("hr.employee", "mosque_relation", "emp_id", "mosq_id", string="others supervisors", domain=[('category','=','managment')])
     others_emp_number       = fields.Integer('other num', default=0, compute=get_others_emp)
     city_id                 = fields.Many2one('res.country.state', string='City',     required=True, domain=[('type_location','=','city'), 
-                                                                                                               ('enable','=',True)], track_visibility='onchange')
+                                                                                                               ('enable','=',True)], tracking=True)
     area_id                 = fields.Many2one('res.country.state', string='Area',     required=True, domain=[('type_location','=','area'), 
-                                                                                                               ('enable','=',True)], track_visibility='onchange')
+                                                                                                               ('enable','=',True)], tracking=True)
     district_id             = fields.Many2one('res.country.state', string='District', required=True, domain=[('type_location','=','district'),
-                                                                                                             ('enable','=',True)], track_visibility='onchange')
+                                                                                                             ('enable','=',True)], tracking=True)
     episode_id              = fields.One2many('mk.episode', 'mosque_id',string='Episode', domain=[('state','=','accept')])
-    latitude                = fields.Char('Latitude',  track_visibility='onchange')
-    longitude               = fields.Char('Longitude', track_visibility='onchange')
+    latitude                = fields.Char('Latitude',  tracking=True)
+    longitude               = fields.Char('Longitude', tracking=True)
     episodes_number         = fields.Integer(compute=get_episode, string="episode numbers")
     # student_number          = fields.Integer(string="Students numbers", compute='_compute_students')
     student_numbers          = fields.Integer(string="Students numbers", compute='_compute_students')
@@ -124,34 +124,34 @@ class Mkmosque(models.Model):
     state                   = fields.Selection([('draft',     'Draft'),
                                                 ('permision', 'طلب تصريح'),
                                                 ('accept',    'Accepted'),
-                                                ('reject',    'Rejected'),], default='draft', string='State', track_visibility='onchange')
+                                                ('reject',    'Rejected'),], default='draft', string='State', tracking=True)
     supervisors             = fields.Many2many("hr.employee", "mosque_relation", "emp_id", "mosq_id", string="supervisors", domain=[('category','in',['admin','supervisor'])])    
-    categ_id                = fields.Many2one('mk.mosque.category', string='Category', required=True, track_visibility='onchange')
+    categ_id                = fields.Many2one('mk.mosque.category', string='Category', required=True, tracking=True)
     is_complexe             = fields.Boolean(related='categ_id.is_complexe')
-    complex_name            = fields.Char('Complexe', track_visibility='onchange')
-    register_code           = fields.Char('Register Code', readonly=True,     track_visibility='onchange')
-    check_maneg_mosque      = fields.Boolean('Find mange episodes in mosque', track_visibility='onchange')
-    check_parking_mosque    = fields.Boolean('Find parking in mosque',        track_visibility='onchange')
+    complex_name            = fields.Char('Complexe', tracking=True)
+    register_code           = fields.Char('Register Code', readonly=True,     tracking=True)
+    check_maneg_mosque      = fields.Boolean('Find mange episodes in mosque', tracking=True)
+    check_parking_mosque    = fields.Boolean('Find parking in mosque',        tracking=True)
     link_ids                = fields.One2many("event.link", 'link_id',    string="Link")
     managment_id            = fields.Many2many("hr.employee", "mosque_relation", "emp_id", "mosq_id", string='أداري \أداريين المسجد', domain=[('category2','=','managment')])
-    center_department_id    = fields.Many2one('hr.department', string='المركز', readonly=True, track_visibility='onchange')
-    attach_no               = fields.Char("Attachment No", track_visibility='onchange')
-    res_identity            = fields.Char(related='responsible_id.identification_id', string="رقم الهوية", track_visibility='onchange')
+    center_department_id    = fields.Many2one('hr.department', string='المركز', readonly=True, tracking=True)
+    attach_no               = fields.Char("Attachment No", tracking=True)
+    res_identity            = fields.Char(related='responsible_id.identification_id', string="رقم الهوية", tracking=True)
     edu_supervisor          = fields.Many2many('hr.employee',        string='Educational supervisor', domain=[('category','=','edu_supervisor')])
-    gateway_config          = fields.Many2one('mk.smsclient.config', string='gateway config', required=False, track_visibility='onchange')
-    gateway_user            = fields.Char('Gateway user',     size=50, track_visibility='onchange')
-    gateway_password        = fields.Char('Gateway password', size=50, track_visibility='onchange')
-    gateway_sender          = fields.Char('Gateway sender',   size=50, track_visibility='onchange')
-    send_time               = fields.Float('Send time',       default=0.0, digits=(16, 2), track_visibility='onchange')
-    phone                   = fields.Char('هاتف المسجد',             track_visibility='onchange')
-    fax                     = fields.Char('فاكس المسجد',             track_visibility='onchange')
-    email                   = fields.Char('البريد اﻹلكتروني للمسجد', track_visibility='onchange')
-    mosque_addres           = fields.Char('عنوان المسجد',            track_visibility='onchange')
-    mosque_secondary_addres = fields.Char('العنوان الثانوي للمسجد',  track_visibility='onchange')
-    mosque_link             = fields.Char('رابط المسجد',             track_visibility='onchange')
+    gateway_config          = fields.Many2one('mk.smsclient.config', string='gateway config', required=False, tracking=True)
+    gateway_user            = fields.Char('Gateway user',     size=50, tracking=True)
+    gateway_password        = fields.Char('Gateway password', size=50, tracking=True)
+    gateway_sender          = fields.Char('Gateway sender',   size=50, tracking=True)
+    send_time               = fields.Float('Send time',       default=0.0, digits=(16, 2), tracking=True)
+    phone                   = fields.Char('هاتف المسجد',             tracking=True)
+    fax                     = fields.Char('فاكس المسجد',             tracking=True)
+    email                   = fields.Char('البريد اﻹلكتروني للمسجد', tracking=True)
+    mosque_addres           = fields.Char('عنوان المسجد',            tracking=True)
+    mosque_secondary_addres = fields.Char('العنوان الثانوي للمسجد',  tracking=True)
+    mosque_link             = fields.Char('رابط المسجد',             tracking=True)
     mosque_logo             = fields.Binary(attachment=True, string="شعار المسجد ( 380 * 200 مفرغ )")
     mosque_logo_two         = fields.Binary(attachment=True, string="شعار المسجد ( 110 * 84 مفرغ )")
-    mosque_info             = fields.Text('معلومات عن المسجد', track_visibility='onchange')
+    mosque_info             = fields.Text('معلومات عن المسجد', tracking=True)
     page_theme              = fields.Selection([('dark_green',  'اخضر غامق'),
                                                 ('light_green', 'اخضر فاتح'), 
                                                 ('light_blue',  'ازرق فاتح'), 
@@ -162,54 +162,54 @@ class Mkmosque(models.Model):
                                                 ('dark_gray',   'رمادي غامق'),
                                                 ('orange',      'برتقالي'), 
                                                 ('yellow',      'اصفر'), 
-                                                ('bege',        'بيجي')], string='الثيم الخاص بالصفحة', track_visibility='onchange')    
+                                                ('bege',        'بيجي')], string='الثيم الخاص بالصفحة', tracking=True)    
     first_student_image     = fields.Binary("الصورة  ( 200 * 200)", attachment=True)
     second_student_image    = fields.Binary("الصورة  ( 200 * 200)", attachment=True)
     third_student_image     = fields.Binary("الصورة  ( 200 * 200)", attachment=True)
     fourth_student_image    = fields.Binary("الصورة  ( 200 * 200)", attachment=True)
         
-    is_specific_eval        = fields.Boolean('قياس وتقييم خاص', track_visibility='onchange')
+    is_specific_eval        = fields.Boolean('قياس وتقييم خاص', tracking=True)
     #Small Review
-    lessons_minimum_audit   = fields.Float('Lessons Minimum Audit',   track_visibility='onchange')
-    quantity_minimum_audit  = fields.Float('Quantity Minimum Audit',  track_visibility='onchange')
-    deduct_qty_small_review = fields.Float('مقدار الخصم',             track_visibility='onchange')
-    memorize_minimum_audit  = fields.Float('Memorize Minimum Audit',  track_visibility='onchange')
-    deduct_memor_sml_review = fields.Float('مقدار الخصم',             track_visibility='onchange')
-    mastering_minimum_audit = fields.Float('Mastering Minimum Audit', track_visibility='onchange')
-    deduct_tjwd_sml_review  = fields.Float('مقدار الخصم',             track_visibility='onchange')
+    lessons_minimum_audit   = fields.Float('Lessons Minimum Audit',   tracking=True)
+    quantity_minimum_audit  = fields.Float('Quantity Minimum Audit',  tracking=True)
+    deduct_qty_small_review = fields.Float('مقدار الخصم',             tracking=True)
+    memorize_minimum_audit  = fields.Float('Memorize Minimum Audit',  tracking=True)
+    deduct_memor_sml_review = fields.Float('مقدار الخصم',             tracking=True)
+    mastering_minimum_audit = fields.Float('Mastering Minimum Audit', tracking=True)
+    deduct_tjwd_sml_review  = fields.Float('مقدار الخصم',             tracking=True)
     #Big Review
-    lessons_maximum_audit    = fields.Float('Lessons Maximum Audit',  track_visibility='onchange')
-    quantity_maximum_audit  = fields.Float('Quantity Maximum Audit',  track_visibility='onchange')
-    deduct_qty_big_review   = fields.Float('مقدار الخصم',             track_visibility='onchange')
-    memorize_maximum_audit  = fields.Float('Memorize Maximum Audit',  track_visibility='onchange')
-    deduct_memor_big_review = fields.Float('مقدار الخصم',             track_visibility='onchange')
-    mastering_maximum_audit = fields.Float('Mastering Maximum Audit', track_visibility='onchange')
-    deduct_tjwd_big_review  = fields.Float('مقدار الخصم',             track_visibility='onchange')
+    lessons_maximum_audit    = fields.Float('Lessons Maximum Audit',  tracking=True)
+    quantity_maximum_audit  = fields.Float('Quantity Maximum Audit',  tracking=True)
+    deduct_qty_big_review   = fields.Float('مقدار الخصم',             tracking=True)
+    memorize_maximum_audit  = fields.Float('Memorize Maximum Audit',  tracking=True)
+    deduct_memor_big_review = fields.Float('مقدار الخصم',             tracking=True)
+    mastering_maximum_audit = fields.Float('Mastering Maximum Audit', tracking=True)
+    deduct_tjwd_big_review  = fields.Float('مقدار الخصم',             tracking=True)
     #Tlawa
-    lessons_reading         = fields.Float('Lessons Reading',   track_visibility='onchange')
-    quantity_reading        = fields.Float('Quantity Reading',  track_visibility='onchange')
-    deduct_qty_reading      = fields.Float('مقدار الخصم',       track_visibility='onchange')
-    memorize_reading        = fields.Float('Memorize Reading',  track_visibility='onchange')
-    deduct_memor_reading    = fields.Float('مقدار الخصم',       track_visibility='onchange')
-    mastering_reading       = fields.Float('Mastering Reading', track_visibility='onchange')
-    deduct_tjwd_reading     = fields.Float('مقدار الخصم',       track_visibility='onchange')
+    lessons_reading         = fields.Float('Lessons Reading',   tracking=True)
+    quantity_reading        = fields.Float('Quantity Reading',  tracking=True)
+    deduct_qty_reading      = fields.Float('مقدار الخصم',       tracking=True)
+    memorize_reading        = fields.Float('Memorize Reading',  tracking=True)
+    deduct_memor_reading    = fields.Float('مقدار الخصم',       tracking=True)
+    mastering_reading       = fields.Float('Mastering Reading', tracking=True)
+    deduct_tjwd_reading     = fields.Float('مقدار الخصم',       tracking=True)
     #Memorize
-    lessons_memorize        = fields.Float('Lessons Memorize',   track_visibility='onchange')
-    quantity_memorize       = fields.Float('Quantity Memorize',  track_visibility='onchange')
-    deduct_qty_memorize     = fields.Float('مقدار الخصم',        track_visibility='onchange')
-    memorize_degree         = fields.Float('Memorize Degree',    track_visibility='onchange')
-    deduct_memor_memorize   = fields.Float('مقدار الخصم',        track_visibility='onchange')
-    mastering_memorize      = fields.Float('Mastering Memorize', track_visibility='onchange')
-    deduct_tjwd_memorize    = fields.Float('مقدار الخصم',        track_visibility='onchange')
+    lessons_memorize        = fields.Float('Lessons Memorize',   tracking=True)
+    quantity_memorize       = fields.Float('Quantity Memorize',  tracking=True)
+    deduct_qty_memorize     = fields.Float('مقدار الخصم',        tracking=True)
+    memorize_degree         = fields.Float('Memorize Degree',    tracking=True)
+    deduct_memor_memorize   = fields.Float('مقدار الخصم',        tracking=True)
+    mastering_memorize      = fields.Float('Mastering Memorize', tracking=True)
+    deduct_tjwd_memorize    = fields.Float('مقدار الخصم',        tracking=True)
     #Attendance
-    preparation_degree         = fields.Float('Prepartion Degree',        track_visibility='onchange')
-    late_deduct             = fields.Float('Late Deduct',                 track_visibility='onchange')
-    excused_absence_deduct     = fields.Float('Excused Absence Deduct',   track_visibility='onchange')
-    no_excused_absence_deduct = fields.Float('No Excused Absence Deduct', track_visibility='onchange')
-    behavior_degree         = fields.Float('Behavior Degree',             track_visibility='onchange')
+    preparation_degree         = fields.Float('Prepartion Degree',        tracking=True)
+    late_deduct             = fields.Float('Late Deduct',                 tracking=True)
+    excused_absence_deduct     = fields.Float('Excused Absence Deduct',   tracking=True)
+    no_excused_absence_deduct = fields.Float('No Excused Absence Deduct', tracking=True)
+    behavior_degree         = fields.Float('Behavior Degree',             tracking=True)
     #Test
-    test_degree             = fields.Float('Test Degree',  track_visibility='onchange')
-    nbr_question_test       = fields.Integer('عدد الأسئلة', track_visibility='onchange')
+    test_degree             = fields.Float('Test Degree',  tracking=True)
+    nbr_question_test       = fields.Integer('عدد الأسئلة', tracking=True)
     qty_question_test       = fields.Selection([('qty001','آية'),
                                                 ('qty025','ربع صفحة'),
                                                 ('qty050','نصف صفحة'),
@@ -218,11 +218,11 @@ class Mkmosque(models.Model):
                                                 ('qty125','صفحة وربع'),
                                                 ('qty150','صفحة ونصف'),
                                                 ('qty175','صفحة وثلاثة ارباع'),
-                                                ('qty200','صفحتان'),], string='مقدار السؤال', track_visibility='onchange')
-    deduction_test          = fields.Float('مقدار الخصم', track_visibility='onchange')
+                                                ('qty200','صفحتان'),], string='مقدار السؤال', tracking=True)
+    deduction_test          = fields.Float('مقدار الخصم', tracking=True)
     #Exam
-    exam_degree             = fields.Float('درجة الإختبار', track_visibility='onchange')
-    nbr_question_exam       = fields.Integer('عدد الأسئلة', track_visibility='onchange')
+    exam_degree             = fields.Float('درجة الإختبار', tracking=True)
+    nbr_question_exam       = fields.Integer('عدد الأسئلة', tracking=True)
     qty_question_exam       = fields.Selection([('qty001','آية'),
                                                 ('qty025','ربع صفحة'),
                                                 ('qty050','نصف صفحة'),
@@ -231,8 +231,8 @@ class Mkmosque(models.Model):
                                                 ('qty125','صفحة وربع'),
                                                 ('qty150','صفحة ونصف'),
                                                 ('qty175','صفحة وثلاثة ارباع'),
-                                                ('qty200','صفحتان'),], string='مقدار السؤال', track_visibility='onchange')
-    deduction_exam          = fields.Float('مقدار الخصم', track_visibility='onchange')
+                                                ('qty200','صفحتان'),], string='مقدار السؤال', tracking=True)
+    deduction_exam          = fields.Float('مقدار الخصم', tracking=True)
        
     gender_mosque           = fields.Selection([('male','Male'),
                                                 ('female','Female')], string="Mosque gender", compute=get_gender_mosque, store=True)
@@ -243,11 +243,11 @@ class Mkmosque(models.Model):
                                                 ('edu_complex','مجمع تعليمي'),
                                                 ('mosque','مسجد')], string='الفئة')
     close_date              = fields.Date('Close Date')
-    reject_reason           = fields.Text('Reject Reason', track_visibility='onchange')
+    reject_reason           = fields.Text('Reject Reason', tracking=True)
 
     is_synchronized_admin   = fields.Boolean('التحيين',default=False)
-    mosq_type               = fields.Many2one('hr.department.category', string='الفئة في الاداري', invisible=True, track_visibility='onchange')
-    code                    = fields.Char('Unified Code', readonly=True,     track_visibility='onchange')
+    mosq_type               = fields.Many2one('hr.department.category', string='الفئة في الاداري', invisible=True, tracking=True)
+    code                    = fields.Char('Unified Code', readonly=True,     tracking=True)
     is_synchro_edu_admin  = fields.Boolean('الموائمة', default=False)
     has_permission        = fields.Boolean('يوجد تصريح' ,default=False)
     permission_status     = fields.Selection([('draft', 'مبدئي'),
@@ -257,7 +257,7 @@ class Mkmosque(models.Model):
                                               ('accept', 'تصريح دائم'),
                                               ('new', 'تجديد'),
                                               ('tajmeed', 'تجميد'),
-                                              ('reject', 'مرفوض')], string='حالة التصريح', track_visibility='onchange')
+                                              ('reject', 'مرفوض')], string='حالة التصريح', tracking=True)
 
     # @api.model
     # def create_from_portal(self, values):
@@ -1263,17 +1263,17 @@ class responsible_mosque(models.Model):
 
 class mosque_category(models.Model):
     _name = 'mk.mosque.category'
-    _inherit = ['mail.thread']
+    _inherit=['mail.thread','mail.activity.mixin']
     _rec_name = 'display_name'
     
-    name         = fields.Char(string="Category name", track_visibility='onchange')
+    name         = fields.Char(string="Category name", tracking=True)
     mosque_type  = fields.Selection([('male', 'Male'),
-                                     ('female', 'Female')], string="Type", track_visibility='onchange')
-    order_categ  = fields.Integer("الترتيب",          track_visibility='onchange')
-    active       = fields.Boolean(string="Active", track_visibility='onchange')
+                                     ('female', 'Female')], string="Type", tracking=True)
+    order_categ  = fields.Integer("الترتيب",          tracking=True)
+    active       = fields.Boolean(string="Active", tracking=True)
     display_name = fields.Char(compute="_display_name", string="Name", store=True)
-    is_complexe  = fields.Boolean(string="Is complexe", track_visibility='onchange')
-    code         = fields.Char(string="Code", track_visibility='onchange', copy=False)
+    is_complexe  = fields.Boolean(string="Is complexe", tracking=True)
+    code         = fields.Char(string="Code", tracking=True, copy=False)
 
 
     _sql_constraints = [
@@ -1331,7 +1331,7 @@ class mk_news_link(models.Model):
 
 class DepartmentCategory(models.Model):
     _name = "hr.department.category"
-    _inherit = ['mail.thread']
+    _inherit=['mail.thread','mail.activity.mixin']
 
 
     name = fields.Char(string='Name', translate=True)

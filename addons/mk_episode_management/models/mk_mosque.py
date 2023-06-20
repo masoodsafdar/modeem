@@ -39,49 +39,49 @@ class mk_mosque(models.Model):
             rec.permission_code = "-".join([ str(rec.center_department_id.code) ,str(rec.district_id.code) , str(rec.register_code)])
 
 
-    permission_code                    = fields.Char('رقم التصريح',        track_visibility='onchange',compute=get_permission_code, store=True,)
-    supervisors_no                     = fields.Integer('supervisors no for mosque', default=0, compute='get_supervisors', track_visibility='onchange')
-    active                             = fields.Boolean('Active',                    default=True,                         track_visibility='onchange')
+    permission_code                    = fields.Char('رقم التصريح',        tracking=True,compute=get_permission_code, store=True,)
+    supervisors_no                     = fields.Integer('supervisors no for mosque', default=0, compute='get_supervisors', tracking=True)
+    active                             = fields.Boolean('Active',                    default=True,                         tracking=True)
     test_schedule_ids                  = fields.One2many('mk.schedule.test', 'mosque_id', string='Schedule test')
     permission_ids                     = fields.One2many('mosque.permision', 'masjed_id', string='التصاريح')
-    nbr_permission                     = fields.Integer('التصاريح', compute='get_nbr_permission', track_visibility='onchange', store=True)
+    nbr_permission                     = fields.Integer('التصاريح', compute='get_nbr_permission', tracking=True, store=True)
     permission_requests_ids            = fields.One2many('mosque.supervisor.request', 'mosque_id', string='التكاليف')
-    nbr_supervisor_permission_requests = fields.Integer('طلبات تكاليف مشرفي المساجد',         compute='get_nbr_permission_requests', track_visibility='onchange')
-    nbr_admin_permission_requests      = fields.Integer('طلبات تكاليف مديري المساجد/المدارس', compute='get_nbr_permission_requests', track_visibility='onchange')
-    mosque_admin_id                    = fields.Many2one('hr.employee', 'Mosque admin', track_visibility='onchange')
+    nbr_supervisor_permission_requests = fields.Integer('طلبات تكاليف مشرفي المساجد',         compute='get_nbr_permission_requests', tracking=True)
+    nbr_admin_permission_requests      = fields.Integer('طلبات تكاليف مديري المساجد/المدارس', compute='get_nbr_permission_requests', tracking=True)
+    mosque_admin_id                    = fields.Many2one('hr.employee', 'Mosque admin', tracking=True)
 
-    @api.model
-    def get_filtered_mosques(self, district_id,episode_type):
-        try:
-            district_id = int(district_id)
-            episode_type = int(episode_type)
-        except:
-            pass
+    # @api.model
+    # def get_filtered_mosques(self, district_id,episode_type):
+    #     try:
+    #         district_id = int(district_id)
+    #         episode_type = int(episode_type)
+    #     except:
+    #         pass
 
-        male = []
-        female = []
-        mosque_ids = self.env['mk.mosque'].search([('district_id', '=', district_id)])
-        for mosq in mosque_ids:
-            mosque_type = mosq.categ_id.mosque_type
-            episode_id = self.env['mk.episode'].search([('mosque_id', '=', mosq.id),
-                                                         ('episode_type', '=', episode_type),
-                                                         ('state', 'in', ['draft', 'accept'])], limit=1)
-            if episode_id:
-                if mosque_type == 'male':
-                    male.append({'mosque_id': mosq.id,
-                                 'mosque_name' : mosq.name,
-                                 'lat' : mosq.latitude,
-                                 'long' : mosq.longitude,
-                                 'shift' : mosq.episode_value})
-                if mosque_type == 'female':
-                    female.append({'mosque_id': mosq.id,
-                                 'mosque_name' : mosq.name,
-                                 'lat' : mosq.latitude,
-                                 'long' : mosq.longitude,
-                                 'shift' : mosq.episode_value})
-        vals = {'male': male,
-                'female': female}
-        return str(vals)
+    #     male = []
+    #     female = []
+    #     mosque_ids = self.env['mk.mosque'].search([('district_id', '=', district_id)])
+    #     for mosq in mosque_ids:
+    #         mosque_type = mosq.categ_id.mosque_type
+    #         episode_id = self.env['mk.episode'].search([('mosque_id', '=', mosq.id),
+    #                                                      ('episode_type', '=', episode_type),
+    #                                                      ('state', 'in', ['draft', 'accept'])], limit=1)
+    #         if episode_id:
+    #             if mosque_type == 'male':
+    #                 male.append({'mosque_id': mosq.id,
+    #                              'mosque_name' : mosq.name,
+    #                              'lat' : mosq.latitude,
+    #                              'long' : mosq.longitude,
+    #                              'shift' : mosq.episode_value})
+    #             if mosque_type == 'female':
+    #                 female.append({'mosque_id': mosq.id,
+    #                              'mosque_name' : mosq.name,
+    #                              'lat' : mosq.latitude,
+    #                              'long' : mosq.longitude,
+    #                              'shift' : mosq.episode_value})
+    #     vals = {'male': male,
+    #             'female': female}
+    #     return str(vals)
 
     @api.model
     def delete_archived_mosque(self):

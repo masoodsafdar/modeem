@@ -10,7 +10,7 @@ _logger = logging.getLogger(__name__)
 
 class MkStudyClass(models.Model):
     _name = 'mk.study.class'
-    _inherit = ['mail.thread']
+    _inherit=['mail.thread','mail.activity.mixin']
     _order = 'order'
     
     # @api.multi
@@ -59,16 +59,16 @@ class MkStudyClass(models.Model):
         academic_year = self.env['mk.study.year'].search([('is_default', '=', True)], limit=1)
         return academic_year and academic_year.id or False     
     
-    name               = fields.Char('Name', track_visibility='onchange')
+    name               = fields.Char('Name', tracking=True)
     company_id         = fields.Many2one('res.company', string='Company', default=lambda self: self.env['res.company']._company_default_get('mk.study.class'))
-    order              = fields.Integer('Order', track_visibility='onchange')
-    study_year_id      = fields.Many2one('mk.study.year', 'Study Year', default=get_year_default, track_visibility='onchange')
-    start_date         = fields.Date('Start Date', track_visibility='onchange')
-    end_date           = fields.Date('End Date', track_visibility='onchange')
-    islamic_start_date = fields.Date('Islamic Start Date', track_visibility='onchange')
-    islamic_end_date   = fields.Date('Islamic End Date', track_visibility='onchange')
-    active             = fields.Boolean('Active', default=True, track_visibility='onchange')
-    is_default         = fields.Boolean('Is default', default=True, track_visibility='onchange')
+    order              = fields.Integer('Order', tracking=True)
+    study_year_id      = fields.Many2one('mk.study.year', 'Study Year', default=get_year_default, tracking=True)
+    start_date         = fields.Date('Start Date', tracking=True)
+    end_date           = fields.Date('End Date', tracking=True)
+    islamic_start_date = fields.Date('Islamic Start Date', tracking=True)
+    islamic_end_date   = fields.Date('Islamic End Date', tracking=True)
+    active             = fields.Boolean('Active', default=True, tracking=True)
+    is_default         = fields.Boolean('Is default', default=True, tracking=True)
     
     @api.constrains('start_date', 'end_date')
     def _check_date(self): 

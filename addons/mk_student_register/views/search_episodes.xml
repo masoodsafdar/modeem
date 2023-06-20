@@ -38,7 +38,7 @@
 <record id="episode_search_wizard_action" model="ir.actions.act_window">
 <field name="name">episode search</field>
 <field name="res_model">mk.episode_search</field>
-<field name="view_type">form</field>
+<field name="binding_view_types">form</field>
 <field name="view_mode">form</field>
 <field name="view_id" ref="search_episodes_wizard_form_view"/>
 <field name="target">new</field>

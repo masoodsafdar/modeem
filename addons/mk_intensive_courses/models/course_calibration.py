@@ -5,7 +5,7 @@ from odoo.tools.translate import _
 
 class mk_courses_evalution(models.Model):
     _name = 'mk.course.calibration'
-    _inherit = ['mail.thread']
+    _inherit=['mail.thread','mail.activity.mixin']
     _rec_name = 'display_name'
 
     @api.multi
@@ -21,21 +21,21 @@ class mk_courses_evalution(models.Model):
             
         self.update({'total':total})
 
-    students_no    = fields.Integer('Students no', required=True, track_visibility='onchange')
-    teachers_no    = fields.Integer('Teachers no', required=True, track_visibility='onchange')
-    subh           = fields.Boolean('Subah', track_visibility='onchange')
-    zaher          = fields.Boolean('Zaher', track_visibility='onchange')
-    asor           = fields.Boolean('Asor', track_visibility='onchange')
-    esha           = fields.Boolean('Esha', track_visibility='onchange')
-    mog            = fields.Boolean('mogreb', track_visibility='onchange')
-    type_course_id = fields.Many2one('mk.types.courses', string='نوع الدورة', required=True, track_visibility='onchange')
+    students_no    = fields.Integer('Students no', required=True, tracking=True)
+    teachers_no    = fields.Integer('Teachers no', required=True, tracking=True)
+    subh           = fields.Boolean('Subah', tracking=True)
+    zaher          = fields.Boolean('Zaher', tracking=True)
+    asor           = fields.Boolean('Asor', tracking=True)
+    esha           = fields.Boolean('Esha', tracking=True)
+    mog            = fields.Boolean('mogreb', tracking=True)
+    type_course_id = fields.Many2one('mk.types.courses', string='نوع الدورة', required=True, tracking=True)
     mosque_ids     = fields.Many2many('mk.mosque')
-    mosque_id      = fields.Many2one('mk.mosque', string='المسجد/المدرسة', required=True, track_visibility='onchange')
-    course_id      = fields.Many2one('mk.course.request', string='Course', required=True, ondelete='cascade', track_visibility='onchange')
-    total          = fields.Integer('Total', compute=_get_total, track_visibility='onchange')
+    mosque_id      = fields.Many2one('mk.mosque', string='المسجد/المدرسة', required=True, tracking=True)
+    course_id      = fields.Many2one('mk.course.request', string='Course', required=True, ondelete='cascade', tracking=True)
+    total          = fields.Integer('Total', compute=_get_total, tracking=True)
     state          = fields.Selection([('draft',  'Draft'), 
                                        ('accept', 'Accept'),
-                                       ('reject', 'Reject')], default='draft', string='State', track_visibility='onchange')
+                                       ('reject', 'Reject')], default='draft', string='State', tracking=True)
     standards_id   = fields.One2many('mk.course.calibration.standard', 'calibration_id', string='standards')
     display_name   = fields.Char(compute="get_display_name", string="Name")
 

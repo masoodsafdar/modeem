@@ -8,16 +8,16 @@ class MailTemplate(models.Model):
     _name = 'mail.template'
     _inherit = ['mail.template', 'mail.thread']
 
-    back             = fields.Binary('Background', track_visibility='onchange')
+    back             = fields.Binary('Background', tracking=True)
     repport_type     = fields.Selection([('mosuqe_permession', 'Setting rapport mosque repport'),
                                          ('mosuqe_school_permession', 'إعداد تقريرتصريح مدرسة'),
                                          ('mosque_supervisor', 'إعداد تقريرتكليف مشرف مسجد'),
                                          ('school_supervisor', 'إعداد تقريرتكليف مشرف مدرسة'),
-                                         ('mosque_directors',  'إعداد تقرير تكليف مديرة مدرسة')], string='Repport type', required=True, track_visibility='onchange')
-    body_html2       = fields.Html('Body2', track_visibility='onchange')
-    is_arabic_number = fields.Boolean('Request Arabic Number', track_visibility='onchange')
-    width            = fields.Char('Width', track_visibility='onchange')
-    height           = fields.Char('Height', track_visibility='onchange')
+                                         ('mosque_directors',  'إعداد تقرير تكليف مديرة مدرسة')], string='Repport type', required=True, tracking=True)
+    body_html2       = fields.Html('Body2', tracking=True)
+    is_arabic_number = fields.Boolean('Request Arabic Number', tracking=True)
+    width            = fields.Char('Width', tracking=True)
+    height           = fields.Char('Height', tracking=True)
 
     _sql_constraints = [
         ('repport_type', 'unique (repport_type)', 'The Repport type must be unique !')
@@ -56,8 +56,8 @@ class MailTemplate(models.Model):
 class MasjedPermision(models.Model):
     _inherit = 'mosque.permision'
 
-    background = fields.Binary('Background', compute='_compute_background', track_visibility='onchange')
-    body       = fields.Html('Body',         compute='compute_body', track_visibility='onchange')
+    background = fields.Binary('Background', compute='_compute_background', tracking=True)
+    body       = fields.Html('Body',         compute='compute_body', tracking=True)
 
     # @api.one
     def _compute_background(self):
@@ -89,8 +89,8 @@ class MasjedPermision(models.Model):
 class masjed_supervisor_request(models.Model):
     _inherit = 'mosque.supervisor.request'
 
-    background = fields.Binary('Background', compute='_compute_background', track_visibility='onchange')
-    body       = fields.Html('Body',         compute='compute_body', track_visibility='onchange')
+    background = fields.Binary('Background', compute='_compute_background', tracking=True)
+    body       = fields.Html('Body',         compute='compute_body', tracking=True)
 
     # @api.one
     def _compute_background(self):

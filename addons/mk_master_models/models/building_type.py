@@ -9,11 +9,11 @@ _logger = logging.getLogger(__name__)
 
 class mk_building_type(models.Model):
     _name="mk.building.type"
-    _inherit = ['mail.thread']
+    _inherit=['mail.thread','mail.activity.mixin']
 
-    name   = fields.Char("Name", required=True,     track_visibility='onchange')
-    active = fields.Boolean("Active" ,default=True, track_visibility='onchange')
-    code   = fields.Char(string="Code", track_visibility='onchange', copy=False)
+    name   = fields.Char("Name", required=True,     tracking=True)
+    active = fields.Boolean("Active" ,default=True, tracking=True)
+    code   = fields.Char(string="Code", tracking=True, copy=False)
 
     _sql_constraints = [('code_uniq', 'unique(code)', 'The building type code must be unique !')]
 

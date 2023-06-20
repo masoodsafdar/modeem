@@ -6,12 +6,12 @@ import re
 class UserGuide(models.Model):
     _name = 'user.guide'
     _description = 'User Guide'
-    _inherit = ['mail.thread']
+    _inherit=['mail.thread','mail.activity.mixin']
 
-    active = fields.Boolean("Active", default=True, track_visibility='onchange')
-    name = fields.Char(string="Guide Name", required=True, track_visibility='onchange')
-    category_id = fields.Many2one('user.guide.category', string='Category', track_visibility='onchange')
-    description = fields.Text(string='Description', track_visibility='onchange')
+    active = fields.Boolean("Active", default=True, tracking=True)
+    name = fields.Char(string="Guide Name", required=True, tracking=True)
+    category_id = fields.Many2one('user.guide.category', string='Category', tracking=True)
+    description = fields.Text(string='Description', tracking=True)
     video_URL = fields.Char("Video URL", copy=False)
     embed_video = fields.Char(
         string="Embed video",

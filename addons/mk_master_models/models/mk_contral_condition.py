@@ -8,25 +8,25 @@ _logger = logging.getLogger(__name__)
 
 class mk_contral_condition(models.Model):
     _name = 'mk.contral.condition'
-    _inherit = ['mail.thread']
+    _inherit=['mail.thread','mail.activity.mixin']
     _description = 'Contral Condition'
     _rec_name = 'type_id'
 
-    type_id         = fields.Many2one('mk.type.contral', string='Type', track_visibility='onchange')
-    address_contral = fields.Char('Address Contral', track_visibility='onchange')
-    order           = fields.Char('Order',           track_visibility='onchange')
-    note            = fields.Html('Text/Contral',    track_visibility='onchange')
-    active          = fields.Boolean('Active',       track_visibility='onchange')
-    check_episode   = fields.Boolean('Episodes',     track_visibility='onchange')
-    check_courses   = fields.Boolean('Intensive Courses', track_visibility='onchange')
-    check_summer    = fields.Boolean('Summer Courses',    track_visibility='onchange')
-    check_test      = fields.Boolean('Tests',        track_visibility='onchange')
-    check_compet    = fields.Boolean('Competitions', track_visibility='onchange')
+    type_id         = fields.Many2one('mk.type.contral', string='Type', tracking=True)
+    address_contral = fields.Char('Address Contral', tracking=True)
+    order           = fields.Char('Order',           tracking=True)
+    note            = fields.Html('Text/Contral',    tracking=True)
+    active          = fields.Boolean('Active',       tracking=True)
+    check_episode   = fields.Boolean('Episodes',     tracking=True)
+    check_courses   = fields.Boolean('Intensive Courses', tracking=True)
+    check_summer    = fields.Boolean('Summer Courses',    tracking=True)
+    check_test      = fields.Boolean('Tests',        tracking=True)
+    check_compet    = fields.Boolean('Competitions', tracking=True)
     categ_type      = fields.Selection([('male', 'رجالية'),
-                                        ('female', 'نسائية')], string="رجالية/نسائية", track_visibility='onchange')
+                                        ('female', 'نسائية')], string="رجالية/نسائية", tracking=True)
     course_request_type      = fields.Selection(string="نوع الدورة", selection=[('quran_day', 'Quran day'),
                                                                                 ('intensive_course', 'Intensive course'),
-                                                                                ('ramadan_course', 'Ramadan course')], default='intensive_course', track_visibility='onchange')
+                                                                                ('ramadan_course', 'Ramadan course')], default='intensive_course', tracking=True)
 
     @api.model
     def get_condition_control(self):

@@ -7,12 +7,12 @@ _logger = logging.getLogger(__name__)
 
 class mk_work_days(models.Model):
     _name = 'mk.work.days'
-    _inherit = ['mail.thread']
+    _inherit=['mail.thread','mail.activity.mixin']
     _order = 'order asc'
     
-    order  = fields.Integer('Order',  track_visibility='onchange')
-    name   = fields.Char('Name',      track_visibility='onchange')
-    active = fields.Boolean('Active', track_visibility='onchange', default=True)
+    order  = fields.Integer('Order',  tracking=True)
+    name   = fields.Char('Name',      tracking=True)
+    active = fields.Boolean('Active', tracking=True, default=True)
 
     # @api.one
     def unlink(self):

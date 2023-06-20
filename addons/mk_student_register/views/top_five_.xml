@@ -38,11 +38,18 @@
       </field>
     </record>
 
- <act_window 
+    <record model="ir.actions.act_window" id="top_five_action">
+        <field name="name">top_five</field>
+        <field name="res_model">top.five</field>
+        <field name="binding_view_types">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+ <!-- <act_window 
       id="top_five_action"
       name="top_five"
       res_model="top.five"
-      view_mode="tree,form"/>
+      view_mode="tree,form"/> -->
 
 
 

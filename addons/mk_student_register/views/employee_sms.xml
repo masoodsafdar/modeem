@@ -27,13 +27,13 @@
     <record model="ir.actions.act_window" id="action_employee_sms_form">
         <field name="name">employee sms </field>
         <field name="res_model">mk.employee.sms</field>
-        <field name="view_type">form</field>
+        <field name="binding_view_types">form</field>
         <field name="view_mode">form</field>
         <field name="view_id" ref="employee_sms_form" />
         <field name="target">new</field>
     </record>
 
- <menuitem name="إرسال رسائل نصية للموظفين " id="employee_sms_menu1" sequence="1" parent="sms_center" action="action_employee_sms_form" groups="group_sms_employee"/> 
+ <menuitem name="إرسال رسائل نصية للموظفين " id="employee_sms_menu1" sequence="1" parent="sms_center" action="action_employee_sms_form"/> 
 
  </data>
 </odoo>

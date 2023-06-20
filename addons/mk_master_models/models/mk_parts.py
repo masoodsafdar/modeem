@@ -7,15 +7,15 @@ _logger = logging.getLogger(__name__)
     
 class MkParts(models.Model):
     _name = 'mk.parts'
-    _inherit = ['mail.thread']
+    _inherit=['mail.thread','mail.activity.mixin']
     _order = 'order'
         
-    name        = fields.Char('Name', track_visibility='onchange')
-    order       = fields.Integer('Order', track_visibility='onchange')
-    from_surah  = fields.Many2one('mk.surah', string='From Surah', track_visibility='onchange')
-    to_surah    = fields.Many2one('mk.surah', string='To Surah',   track_visibility='onchange')
-    from_verses = fields.Integer('From Verses ', track_visibility='onchange')
-    to_verses   = fields.Integer('To Verses ', track_visibility='onchange')
+    name        = fields.Char('Name', tracking=True)
+    order       = fields.Integer('Order', tracking=True)
+    from_surah  = fields.Many2one('mk.surah', string='From Surah', tracking=True)
+    to_surah    = fields.Many2one('mk.surah', string='To Surah',   tracking=True)
+    from_verses = fields.Integer('From Verses ', tracking=True)
+    to_verses   = fields.Integer('To Verses ', tracking=True)
     
     _sql_constraints = [('name_uniq', 'unique (name)', "هذا السجل موجود مسبقا !"),]
 

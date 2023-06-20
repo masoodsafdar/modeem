@@ -27,11 +27,11 @@ class StudentPrepare(models.Model):
     _rec_name = 'link_id'
 
     #region prepare fields
-    link_id             = fields.Many2one('mk.link', string='Student Link', ondelete='set null', index=True, track_visibility='onchange')
-    student_register_id = fields.Many2one('mk.student.register', string='Student Link', ondelete='set null', compute='get_student_register', store=True, track_visibility='onchange')
-    stage_pre_id = fields.Many2one('mk.episode', string='Episode', ondelete='set null', track_visibility='onchange')
-    name = fields.Many2one('hr.employee', string='Teacher', required=True, track_visibility='onchange')
-    program_id = fields.Many2one('mk.programs', string='Program', ondelete='restrict', track_visibility='onchange')
+    link_id             = fields.Many2one('mk.link', string='Student Link', ondelete='set null', index=True, tracking=True)
+    student_register_id = fields.Many2one('mk.student.register', string='Student Link', ondelete='set null', compute='get_student_register', store=True, tracking=True)
+    stage_pre_id = fields.Many2one('mk.episode', string='Episode', ondelete='set null', tracking=True)
+    name = fields.Many2one('hr.employee', string='Teacher', required=True, tracking=True)
+    program_id = fields.Many2one('mk.programs', string='Program', ondelete='restrict', tracking=True)
     general_behavior_type = fields.Selection([('excellent', 'ممتاز'),
                                               ('very_good', 'جيد جداً'),
                                               ('good', 'جيد'),
@@ -40,13 +40,13 @@ class StudentPrepare(models.Model):
 
     academic_id = fields.Many2one('mk.study.year', string='العام الدراسي', related='stage_pre_id.academic_id',copy=False, store=True)
     study_class_id = fields.Many2one('mk.study.class', string='الفصل الدراسي', related='stage_pre_id.study_class_id', copy=False, store=True)
-    prepare_date = fields.Date('Prepration Date', default=fields.Date.today(), track_visibility='onchange')
-    active = fields.Boolean('Active', track_visibility='onchange', default=True)
+    prepare_date = fields.Date('Prepration Date', default=fields.Date.today(), tracking=True)
+    active = fields.Boolean('Active', tracking=True, default=True)
 
-    check_memory = fields.Boolean('Check Program', compute='get_check', store=True, track_visibility='onchange')
-    check_minimum = fields.Boolean('Check Minimum', compute='get_check', store=True, track_visibility='onchange')
-    check_max = fields.Boolean('Check Minimum', compute='get_check', store=True, track_visibility='onchange')
-    check_read = fields.Boolean('Check Reading', compute='get_check', store=True, track_visibility='onchange')
+    check_memory = fields.Boolean('Check Program', compute='get_check', store=True, tracking=True)
+    check_minimum = fields.Boolean('Check Minimum', compute='get_check', store=True, tracking=True)
+    check_max = fields.Boolean('Check Minimum', compute='get_check', store=True, tracking=True)
+    check_read = fields.Boolean('Check Reading', compute='get_check', store=True, tracking=True)
 
     std_save_ids    = fields.One2many('mk.listen.line', 'preparation_id', string='Save', domain=[('type_follow', '=', 'listen')], copy=False)
     smal_review_ids = fields.One2many('mk.listen.line', 'preparation_id', string='Smal Review ', domain=[('type_follow', '=', 'review_small')], copy=False)
@@ -64,24 +64,24 @@ class StudentPrepare(models.Model):
     nbr_read_pages          = fields.Float(' أوجه التلاوة',          compute='get_nbr_lines', store=True, copy=False)
     nbr_small_review_pages  = fields.Float(' أوجه المراجعة الصغرى', compute='get_nbr_lines', store=True, copy=False)
     nbr_big_review_pages    = fields.Float(' أوجه المراجعة الكبرى', compute='get_nbr_lines', store=True, copy=False)
-    is_meqraa_student       = fields.Boolean('Meqraa Student', default=False, track_visibility='onchange')
+    is_meqraa_student       = fields.Boolean('Meqraa Student', default=False, tracking=True)
     #endregion
 
     #region old fields
-    period_id    = fields.Many2one('mk.periods', string='Period', ondelete='restrict', track_visibility='onchange', copy=False)
+    period_id    = fields.Many2one('mk.periods', string='Period', ondelete='restrict', tracking=True, copy=False)
     test_ids     = fields.One2many('mk.test.line', 'line_id', string='Line Test', copy=False)
 
-    subh   = fields.Boolean('Subh', track_visibility='onchange')
-    zuhr   = fields.Boolean('Zuhr', track_visibility='onchange')
-    aasr   = fields.Boolean('Aasr', track_visibility='onchange')
-    magrib = fields.Boolean('Magrib', track_visibility='onchange')
-    esha   = fields.Boolean('Esha', track_visibility='onchange')
-    period_subh   = fields.Char('Subh', track_visibility='onchange')
-    period_zuhr   = fields.Char('Zuhr', track_visibility='onchange')
-    period_aasr   = fields.Char('Aasr', track_visibility='onchange')
-    period_magrib = fields.Char('Magrib', track_visibility='onchange')
-    period_esha   = fields.Char('Esha', track_visibility='onchange')
-    archived = fields.Boolean('Archived', track_visibility='onchange')
+    subh   = fields.Boolean('Subh', tracking=True)
+    zuhr   = fields.Boolean('Zuhr', tracking=True)
+    aasr   = fields.Boolean('Aasr', tracking=True)
+    magrib = fields.Boolean('Magrib', tracking=True)
+    esha   = fields.Boolean('Esha', tracking=True)
+    period_subh   = fields.Char('Subh', tracking=True)
+    period_zuhr   = fields.Char('Zuhr', tracking=True)
+    period_aasr   = fields.Char('Aasr', tracking=True)
+    period_magrib = fields.Char('Magrib', tracking=True)
+    period_esha   = fields.Char('Esha', tracking=True)
+    archived = fields.Boolean('Archived', tracking=True)
     is_delete_request = fields.Boolean('delete request', default=False)
     #endregion
 
@@ -2451,7 +2451,7 @@ class StudentPresence(models.Model):
                                        ('absent_excuse', 'غائب بعذر'),
                                        ('delay', 'متأخر'),
                                        ('not_read', 'لم يسمع'),
-                                       ('excuse', 'استأذن'), ], string='الحالة', track_visibility='onchange')
+                                       ('excuse', 'استأذن'), ], string='الحالة', tracking=True)
     link_id             = fields.Many2one('mk.link', ondelete='cascade')
     student_register_id = fields.Many2one("mk.student.register", string='الطالب')
     episode_id          = fields.Many2one("mk.episode",     string='الحلقة', index=True)
@@ -2519,15 +2519,15 @@ class StudentPresence(models.Model):
 #region class student behavior
 class Behavior(models.Model):
     _name = 'mk.student.behaviors'
-    _inherit = ['mail.thread']
+    _inherit=['mail.thread','mail.activity.mixin']
     _description = 'Maknoon student Behavior'
 
-    name = fields.Char('Behavior name', required=True, track_visibility='onchange', size=30)
-    Dedect_grade = fields.Integer('Deduction grade', required=True, track_visibility='onchange')
+    name = fields.Char('Behavior name', required=True, tracking=True, size=30)
+    Dedect_grade = fields.Integer('Deduction grade', required=True, tracking=True)
     Warning_type = fields.Selection([('oral_warning', 'oral warning'),
                                      ('first_warning', 'first warning'),
                                      ('second_warning', 'second warning'),
-                                     ('commitment_warning', 'commitment warning')], string='Warning type',required=True, track_visibility='onchange')
+                                     ('commitment_warning', 'commitment warning')], string='Warning type',required=True, tracking=True)
 
     _sql_constraints = [('name_uniq', 'UNIQUE (name)', 'عذرا اسم السلوك يجب ألا يتكرر')]
 
@@ -3648,7 +3648,7 @@ class mk_ditels_mistake_line(models.Model):
     deduct_tajweed = fields.Float('الخصم على جودة التجويد')
 
     indiscipline_ids = fields.One2many('mk.student.plan.line.indiscipline', 'eval_id', string='أيام الغياب')
-    active = fields.Boolean('Active', track_visibility='onchange', default=True)
+    active = fields.Boolean('Active', tracking=True, default=True)
 
     @api.model
     def detail_mistakes_plan_line(self, plan_line_id):
@@ -3809,7 +3809,7 @@ class StudentPlanLineIndiscipline(models.Model):
                                           ('delay', 'متأخر'),
                                           ('not_read', 'لم يسمع'),
                                           ('excuse', 'استأذن'), ], string='نوع عدم الإنضباط')
-    active = fields.Boolean('Active', track_visibility='onchange', default=True)
+    active = fields.Boolean('Active', tracking=True, default=True)
 
     @api.model
     def create(self, vals):

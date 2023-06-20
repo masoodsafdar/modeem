@@ -3,7 +3,7 @@ from odoo import models, fields, api
     
 class TestPassingItems(models.Model):
     _name = 'mk.passing.items'
-    _inherit = ['mail.thread']
+    _inherit=['mail.thread','mail.activity.mixin']
     _rec_name = 'display_name'
 
     @api.multi
@@ -28,14 +28,14 @@ class TestPassingItems(models.Model):
 
     display_name       = fields.Char(compute="get_display_name", string="Name", store=True)
     #Relations Fields
-    active   = fields.Boolean(string="active",default=True,groups="maknon_tests.group_passing_items_archives", track_visibility='onchange')
+    active   = fields.Boolean(string="active",default=True,groups="maknon_tests.group_passing_items_archives", tracking=True)
     branches = fields.Many2many("mk.branches.master",string="Branches")
     #Primary Fields
-    from_degree  = fields.Integer(string="From Degree", required="1", track_visibility='onchange')
-    to_degree    = fields.Integer(string="to Degree",   required="1", track_visibility='onchange')
+    from_degree  = fields.Integer(string="From Degree", required="1", tracking=True)
+    to_degree    = fields.Integer(string="to Degree",   required="1", tracking=True)
     appreciation = fields.Selection([('excellent',  'Excellent'),
                                      ('v_good',     'Very good'),
                                      ('good',       'Good'),
                                      ('acceptable', 'Acceptable'),
-                                     ('fail',       'Fail')], string="appreciation", track_visibility='onchange')
+                                     ('fail',       'Fail')], string="appreciation", tracking=True)
     

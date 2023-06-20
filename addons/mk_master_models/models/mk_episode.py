@@ -9,7 +9,7 @@ _logger = logging.getLogger(__name__)
 
 class Mkepisode(models.Model):
     _name = 'mk.episode'
-    _inherit = ['mail.thread']
+    _inherit=['mail.thread','mail.activity.mixin']
     rec_name = 'display_name'
     _order = 'create_date desc'
         
@@ -53,38 +53,38 @@ class Mkepisode(models.Model):
         return period and period.id or False
 
 
-    name                = fields.Char('Name', track_visibility='onchange')
-    mosque_id           = fields.Many2one('mk.mosque',     string='Masjed',        track_visibility='onchange')
-    academic_id         = fields.Many2one('mk.study.year', string='Academic Year', required=True, default=get_year_default, copy=False, track_visibility='onchange')
+    name                = fields.Char('Name', tracking=True)
+    mosque_id           = fields.Many2one('mk.mosque',     string='Masjed',        tracking=True)
+    academic_id         = fields.Many2one('mk.study.year', string='Academic Year', required=True, default=get_year_default, copy=False, tracking=True)
     error_register      = fields.Selection([('total', 'Overall'), 
-                                            ('detailed', 'Detailed')], string='Error register', track_visibility='onchange')
-    study_class_id      = fields.Many2one('mk.study.class', string='Study class', default=get_study_class, domain=[('is_default', '=', True)], copy=False, track_visibility='onchange')
+                                            ('detailed', 'Detailed')], string='Error register', tracking=True)
+    study_class_id      = fields.Many2one('mk.study.class', string='Study class', default=get_study_class, domain=[('is_default', '=', True)], copy=False, tracking=True)
     is_study_class_default = fields.Boolean(related='study_class_id.is_default',store=True)
     color               = fields.Integer('Color   Index', default=12)
-    teacher_id          = fields.Many2one('hr.employee', string='Teacher',    domain=[('category2','=','teacher')], index=True, track_visibility='onchange')
-    teacher_assist_id   = fields.Many2one('hr.employee', string='معلم مساعد', domain=[('category2','=','teacher')], track_visibility='onchange')
+    teacher_id          = fields.Many2one('hr.employee', string='Teacher',    domain=[('category2','=','teacher')], index=True, tracking=True)
+    teacher_assist_id   = fields.Many2one('hr.employee', string='معلم مساعد', domain=[('category2','=','teacher')], tracking=True)
     send_time           = fields.Float('Send time', default=0.0, digits=(16, 2))
     episode_season      = fields.Selection([('normal' , 'Normal'),
-                                            ('seasonal' , 'Seasonal')], string="Episode Season", default='normal', track_visibility='onchange')
-    episode_season_type = fields.Many2one('mk.episode.season',          string="Episode Season types",             track_visibility='onchange')
+                                            ('seasonal' , 'Seasonal')], string="Episode Season", default='normal', tracking=True)
+    episode_season_type = fields.Many2one('mk.episode.season',          string="Episode Season types",             tracking=True)
     state               = fields.Selection([('draft',  'Draft'),
                                             ('accept', 'Accepted'),
                                             ('done',   'مجمدة'), 
-                                            ('reject', 'Rejected')], string='الحالة', default='draft',     track_visibility='onchange')
-    parent_episode      = fields.Many2one("mk.episode.master",       string="parent episode", copy=False, track_visibility='onchange')
+                                            ('reject', 'Rejected')], string='الحالة', default='draft',     tracking=True)
+    parent_episode      = fields.Many2one("mk.episode.master",       string="parent episode", copy=False, tracking=True)
     display_name        = fields.Char(compute="_display_name",       string="Name", store=True)
     selected_period     = fields.Selection([('subh', 'subh'), 
                                             ('zuhr', 'zuhr'),
                                             ('aasr','aasr'),
                                             ('magrib','magrib'),
-                                            ('esha','esha')], string='period', track_visibility='onchange')
-    start_date          = fields.Date('Start date', copy=False,                track_visibility='onchange')
-    active              = fields.Boolean('Active', default=True, copy=False,   track_visibility='onchange')
+                                            ('esha','esha')], string='period', tracking=True)
+    start_date          = fields.Date('Start date', copy=False,                tracking=True)
+    active              = fields.Boolean('Active', default=True, copy=False,   tracking=True)
     women_or_men        = fields.Selection([('men', 'men episode'), 
-                                            ('women', 'women episode')], string='women or men', required=True, default='men', track_visibility='onchange')
-    end_date            = fields.Date('End date', copy=False, track_visibility='onchange')
-    episode_work        = fields.Many2one('mk.epsoide.works',string='episode work',                 track_visibility='onchange')
-    episode_type        = fields.Many2one('mk.episode_type', string='Episode Type', required=False, track_visibility='onchange')
+                                            ('women', 'women episode')], string='women or men', required=True, default='men', tracking=True)
+    end_date            = fields.Date('End date', copy=False, tracking=True)
+    episode_work        = fields.Many2one('mk.epsoide.works',string='episode work',                 tracking=True)
+    episode_type        = fields.Many2one('mk.episode_type', string='Episode Type', required=False, tracking=True)
     #old version not used
     interval            = fields.Selection([('morning',   'Morning'), 
                                             ('doha',      'Doha'), 
@@ -97,19 +97,19 @@ class Mkepisode(models.Model):
     grade_ids           = fields.Many2many('mk.grade', string='Grades', domain=[('is_episode','=',True)])
     #program_ids=fields.Many2many(string= 'Programs',comodel_name='mk.programs')    
     company_id          = fields.Many2one('res.company',    string='company', default=lambda self: self.env.user.company_id)
-    period_id           = fields.Many2one('mk.periods',     string='Period', required=False, default=get_period, track_visibility='onchange')
+    period_id           = fields.Many2one('mk.periods',     string='Period', required=False, default=get_period, tracking=True)
     test_time           = fields.Char(compute='_test_time', string='Test Time', store=True)
-    subh                = fields.Boolean('Subh',   track_visibility='onchange')
-    zuhr                = fields.Boolean('Zuhr',   track_visibility='onchange')
-    aasr                = fields.Boolean('Aasr',   track_visibility='onchange')
-    magrib              = fields.Boolean('Magrib', track_visibility='onchange')
-    esha                = fields.Boolean('Esha',   track_visibility='onchange')
+    subh                = fields.Boolean('Subh',   tracking=True)
+    zuhr                = fields.Boolean('Zuhr',   tracking=True)
+    aasr                = fields.Boolean('Aasr',   tracking=True)
+    magrib              = fields.Boolean('Magrib', tracking=True)
+    esha                = fields.Boolean('Esha',   tracking=True)
     
-    period_subh         = fields.Char('Subh',   track_visibility='onchange')
-    period_zuhr         = fields.Char('Zuhr',   track_visibility='onchange')
-    period_aasr         = fields.Char('Aasr',   track_visibility='onchange')
-    period_magrib       = fields.Char('Magrib', track_visibility='onchange')
-    period_esha         = fields.Char('Esha',   track_visibility='onchange')
+    period_subh         = fields.Char('Subh',   tracking=True)
+    period_zuhr         = fields.Char('Zuhr',   tracking=True)
+    period_aasr         = fields.Char('Aasr',   tracking=True)
+    period_magrib       = fields.Char('Magrib', tracking=True)
+    period_esha         = fields.Char('Esha',   tracking=True)
     
     episode_days        = fields.Many2many('mk.work.days', string='work days', required=True)
 
@@ -530,8 +530,8 @@ class Mkepisode(models.Model):
 
 class mk_season_type(models.Model):
     _name = 'mk.episode.season'
-    _inherit = ['mail.thread']
+    _inherit=['mail.thread','mail.activity.mixin']
     _rec_name = 'name'
 
-    active = fields.Boolean(default=True, track_visibility='onchange')
-    name   = fields.Char("Name",          track_visibility='onchange')
+    active = fields.Boolean(default=True, tracking=True)
+    name   = fields.Char("Name",          tracking=True)

@@ -171,8 +171,8 @@ class AddEpisodeMasterWizard(models.TransientModel):
     error_register_subh   = fields.Selection([('total', 'Overall'),
                                              ('detailed', 'Detailed')], string='Error register')
     episode_days_subh_ids = fields.Many2many('mk.work.days', 'mk_episode_days1_rel', 'episode_id', 'day_id', string='work days Sobh', default=get_default_days)
-    program_subh_id = fields.Many2one('mk.programs', string='Program', track_visibility='onchange')
-    approache_subh_id = fields.Many2one('mk.approaches', string='Approach', track_visibility='onchange')
+    program_subh_id = fields.Many2one('mk.programs', string='Program', tracking=True)
+    approache_subh_id = fields.Many2one('mk.approaches', string='Approach', tracking=True)
 
     teacher_zuhr_id       = fields.Many2one('hr.employee', string='Teacher Zuhr')
     grade_zuhr_ids        = fields.Many2many('mk.grade',  'mk_episode_grade2_rel', 'episode_id', 'grade_id', string='Grades Zuhr', domain=[('is_episode', '=', True)])
@@ -183,8 +183,8 @@ class AddEpisodeMasterWizard(models.TransientModel):
     error_register_zuhr   = fields.Selection([('total', 'Overall'),
                                               ('detailed', 'Detailed')], string='Error register')
     episode_days_zuhr_ids = fields.Many2many('mk.work.days','mk_episode_days2_rel', 'episode_id', 'day_id', string='work days Sobh', default=get_default_days)
-    program_zuhr_id       = fields.Many2one('mk.programs', string='Program', track_visibility='onchange')
-    approache_zuhr_id     = fields.Many2one('mk.approaches', string='Approach', track_visibility='onchange')
+    program_zuhr_id       = fields.Many2one('mk.programs', string='Program', tracking=True)
+    approache_zuhr_id     = fields.Many2one('mk.approaches', string='Approach', tracking=True)
 
     teacher_aasr_id         = fields.Many2one('hr.employee', string='Teacher Aasr')
     grade_aasr_ids          = fields.Many2many('mk.grade', 'mk_episode_grade3_rel', 'episode_id', 'grade_id', string='Grades Aasr', domain=[('is_episode', '=', True)])
@@ -195,8 +195,8 @@ class AddEpisodeMasterWizard(models.TransientModel):
     error_register_aasr     = fields.Selection([('total', 'Overall'),
                                                 ('detailed', 'Detailed')], string='Error register')
     episode_days_aasr_ids   = fields.Many2many('mk.work.days', 'mk_episode_days3_rel', 'episode_id', 'day_id', string='work days Sobh', default=get_default_days)
-    program_aasr_id         = fields.Many2one('mk.programs', string='Program', track_visibility='onchange')
-    approache_aasr_id       = fields.Many2one('mk.approaches', string='Approach', track_visibility='onchange')
+    program_aasr_id         = fields.Many2one('mk.programs', string='Program', tracking=True)
+    approache_aasr_id       = fields.Many2one('mk.approaches', string='Approach', tracking=True)
 
     teacher_magrib_id       = fields.Many2one('hr.employee', string='Teacher Magrib')
     grade_magrib_ids        = fields.Many2many('mk.grade',  'mk_episode_grade4_rel', 'episode_id', 'grade_id', string='Grades Magrib', domain=[('is_episode', '=', True)])
@@ -207,8 +207,8 @@ class AddEpisodeMasterWizard(models.TransientModel):
     error_register_magrib   = fields.Selection([('total', 'Overall'),
                                                 ('detailed', 'Detailed')], string='Error register')
     episode_days_magrib_ids = fields.Many2many('mk.work.days', 'mk_episode_days4_rel', 'episode_id', 'day_id', string='work days Sobh', default=get_default_days)
-    program_magrib_id         = fields.Many2one('mk.programs', string='Program', track_visibility='onchange')
-    approache_magrib_id       = fields.Many2one('mk.approaches', string='Approach', track_visibility='onchange')
+    program_magrib_id         = fields.Many2one('mk.programs', string='Program', tracking=True)
+    approache_magrib_id       = fields.Many2one('mk.approaches', string='Approach', tracking=True)
 
     teacher_esha_id        = fields.Many2one('hr.employee', string='Teacher Esha')
     grade_esha_ids         = fields.Many2many('mk.grade',  'mk_episode_grade5_rel', 'episode_id', 'grade_id', string='Grades Esha', domain=[('is_episode', '=', True)])
@@ -219,8 +219,8 @@ class AddEpisodeMasterWizard(models.TransientModel):
     error_register_esha    = fields.Selection([('total', 'Overall'),
                                                ('detailed', 'Detailed')], string='Error register')
     episode_days_esha_ids = fields.Many2many('mk.work.days', 'mk_episode_days5_rel', 'episode_id', 'day_id', string='work days Sobh', default=get_default_days)
-    program_esha_id = fields.Many2one('mk.programs', string='Program', track_visibility='onchange')
-    approache_esha_id = fields.Many2one('mk.approaches', string='Approach', track_visibility='onchange')
+    program_esha_id = fields.Many2one('mk.programs', string='Program', tracking=True)
+    approache_esha_id = fields.Many2one('mk.approaches', string='Approach', tracking=True)
 
     is_online_subh        = fields.Boolean('Online')
     is_online_zuhr        = fields.Boolean('Online')

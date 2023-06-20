@@ -9,7 +9,7 @@ from odoo.tools.translate import _
 
 class MkPunishment(models.Model):
     _name = 'mk.punishment'
-    _inherit = ['mail.thread']
+    _inherit=['mail.thread','mail.activity.mixin']
     
     
     # @api.one
@@ -20,16 +20,16 @@ class MkPunishment(models.Model):
     def act_active(self):
         self.state = 'active'
     
-    company_id          = fields.Many2one('res.company', string='Company', default=lambda self: self.env['res.company']._company_default_get('mk.punishment'), track_visibility='onchange')
-    name                = fields.Char('Name', track_visibility='onchange')
-    deduct_from_degrees = fields.Float('Deduct From Degrees',    track_visibility='onchange')
-    deduct_from_points  = fields.Float('Deduct From Points',     track_visibility='onchange')
-    active              = fields.Boolean('Active', default=True, track_visibility='onchange')
+    company_id          = fields.Many2one('res.company', string='Company', default=lambda self: self.env['res.company']._company_default_get('mk.punishment'), tracking=True)
+    name                = fields.Char('Name', tracking=True)
+    deduct_from_degrees = fields.Float('Deduct From Degrees',    tracking=True)
+    deduct_from_points  = fields.Float('Deduct From Points',     tracking=True)
+    active              = fields.Boolean('Active', default=True, tracking=True)
     
-    guardian_call      = fields.Boolean('Call the Guardian and write a Pledge', track_visibility='onchange')
-    guardian_message   = fields.Boolean('Send Message to guardian',     track_visibility='onchange')
-    mosque_message     = fields.Boolean('Send Message to Mosque Admin', track_visibility='onchange')
-    freeze_study_class = fields.Boolean('Freeze the Study Class',       track_visibility='onchange')
+    guardian_call      = fields.Boolean('Call the Guardian and write a Pledge', tracking=True)
+    guardian_message   = fields.Boolean('Send Message to guardian',     tracking=True)
+    mosque_message     = fields.Boolean('Send Message to Mosque Admin', tracking=True)
+    freeze_study_class = fields.Boolean('Freeze the Study Class',       tracking=True)
     #temporary_freezing = fields.Boolean('Temporary Freezing for Membership and Adding to Black List on the Current Study Class')
     #permenant_freezing = fields.Boolean('Permenant Freezing and Adding to Permenant Black List')
     

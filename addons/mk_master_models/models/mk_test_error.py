@@ -8,15 +8,15 @@ from odoo.tools.translate import _
 
 class MkTestError(models.Model):
     _name = 'mk.test.error'
-    _inherit = ['mail.thread']
+    _inherit=['mail.thread','mail.activity.mixin']
 
 
-    company_id    = fields.Many2one('res.company', string='Company', default=lambda self: self.env['res.company']._company_default_get('mk.test.error'), track_visibility='onchange')
-    code          = fields.Char(string='Code', required=True, track_visibility='onchange')
-    error_type    = fields.Selection([('at','Applied Tajweed'),('s','Saving')], string='Error Type', default='at', track_visibility='onchange')
-    name          = fields.Char('Error Name', track_visibility='onchange')
-    active        = fields.Boolean('Active', default=True, track_visibility='onchange')
-    degree_deduct = fields.Float('Degree Deduct', track_visibility='onchange')
+    company_id    = fields.Many2one('res.company', string='Company', default=lambda self: self.env['res.company']._company_default_get('mk.test.error'), tracking=True)
+    code          = fields.Char(string='Code', required=True, tracking=True)
+    error_type    = fields.Selection([('at','Applied Tajweed'),('s','Saving')], string='Error Type', default='at', tracking=True)
+    name          = fields.Char('Error Name', tracking=True)
+    active        = fields.Boolean('Active', default=True, tracking=True)
+    degree_deduct = fields.Float('Degree Deduct', tracking=True)
     
     _sql_constraints = [
         ('name_uniq', 'unique (name)', "موجود مسبقاً !"),

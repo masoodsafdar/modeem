@@ -17,7 +17,7 @@
     <record model="ir.actions.act_window" id="action_warning">
         <field name="name">Warning</field>
         <field name="res_model">wizard.message</field>
-        <field name="view_type">form</field>
+        <field name="binding_view_types">form</field>
         <field name="view_mode">form</field>
         <field name="view_id" ref="warning_form" />
         <field name="target">new</field>

@@ -14,7 +14,7 @@ class WebsiteSupportTicket(models.Model):
     _description = "Website Support Ticket"
     _rec_name = "subject"
     _order = "create_date desc"
-    _inherit = ['mail.thread']
+    _inherit=['mail.thread','mail.activity.mixin']
 
     def _default_state(self):
         return self.env.ref('website_support.website_ticket_state_open').id
@@ -73,7 +73,7 @@ g,res_users as user_id where g.gid in (2884,3,2886)  and g.uid=user_id.id
     person_name           = fields.Char(string='Person Name')
     email                 = fields.Char(string="Email",default=_default_email)
     support_email         = fields.Char(string="Support Email")
-    category              = fields.Many2one('website.support.ticket.categories',default=_default_category_id,string="Category", track_visibility='onchange')
+    category              = fields.Many2one('website.support.ticket.categories',default=_default_category_id,string="Category", tracking=True)
     sub_category_id       = fields.Many2one('website.support.ticket.subcategory', string="Sub Category")
     subject               = fields.Char(string="Subject")
     description           = fields.Text(string="Description")
@@ -415,11 +415,11 @@ class WebsiteSupportTicketMessage(models.Model):
 
 class WebsiteSupportTicketCategories(models.Model):
     _name = "website.support.ticket.categories"
-    _inherit = ['mail.thread']
+    _inherit=['mail.thread','mail.activity.mixin']
     _order = "sequence asc"
 
-    sequence     = fields.Integer(string="Sequence", track_visibility='onchange')
-    name         = fields.Char(required=True, translate=True, string='Category Name', track_visibility='onchange')
+    sequence     = fields.Integer(string="Sequence", tracking=True)
+    name         = fields.Char(required=True, translate=True, string='Category Name', tracking=True)
     cat_user_ids = fields.Many2many('res.users', string="Category Users")
 
     @api.model
@@ -431,13 +431,13 @@ class WebsiteSupportTicketCategories(models.Model):
 
 class WebsiteSupportTicketSubCategories(models.Model):
     _name = "website.support.ticket.subcategory"
-    _inherit = ['mail.thread']
+    _inherit=['mail.thread','mail.activity.mixin']
     _order = "sequence asc"
 
-    sequence             = fields.Integer(string="Sequence", track_visibility='onchange')
-    name                 = fields.Char(required=True, translate=True, string='Sub Category Name', track_visibility='onchange')
-    parent_category_id   = fields.Many2one('website.support.ticket.categories', required=True, string="Parent Category", track_visibility='onchange')
-    category_type        = fields.Selection([('website','From Website'),('system','From System'),('both','Both')], string="Category Type", track_visibility='onchange')
+    sequence             = fields.Integer(string="Sequence", tracking=True)
+    name                 = fields.Char(required=True, translate=True, string='Sub Category Name', tracking=True)
+    parent_category_id   = fields.Many2one('website.support.ticket.categories', required=True, string="Parent Category", tracking=True)
+    category_type        = fields.Selection([('website','From Website'),('system','From System'),('both','Both')], string="Category Type", tracking=True)
     additional_field_ids = fields.One2many('website.support.ticket.subcategory.field', 'wsts_id', string="Additional Fields")
  
     @api.model

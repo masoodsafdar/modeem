@@ -10,7 +10,7 @@ _logger = logging.getLogger(__name__)
 
 class mk_clearance(models.Model):
     _name='mk.clearance'
-    _inherit = ['mail.thread']
+    _inherit=['mail.thread','mail.activity.mixin']
     _rec_name="display_name"
 
     def _getDefault_academic_year(self):
@@ -74,22 +74,22 @@ class mk_clearance(models.Model):
 
     display_name   = fields.Char("Name", compute="get_name")
     mosque_id      = fields.Many2one('mk.mosque',      string='mosque',      required=False, compute=get_mosque_student, store=True)
-    year           = fields.Many2one('mk.study.year',  string='Study Year',  readonly=True,                      default=_getDefault_academic_year, track_visibility='onchange')
-    study_class_id = fields.Many2one('mk.study.class', string='Study class', domain=[('is_default', '=', True)], default=get_study_class,           track_visibility='onchange')
+    year           = fields.Many2one('mk.study.year',  string='Study Year',  readonly=True,                      default=_getDefault_academic_year, tracking=True)
+    study_class_id = fields.Many2one('mk.study.class', string='Study class', domain=[('is_default', '=', True)], default=get_study_class,           tracking=True)
     episode_id     = fields.Many2one('mk.episode',     string='Episode',     ondelete='cascade', domain=[('state','=','accept')])
     state          = fields.Selection([('draft',   'Draft'),
                                        ('request', 'إنتظار الرد'),
                                        ('accept',  'Accept'), 
-                                       ('reject',  'Reject')], string='الحالة', default='draft', track_visibility='onchange')
+                                       ('reject',  'Reject')], string='الحالة', default='draft', tracking=True)
     student        = fields.Many2one('mk.student.register',   string='Student', required=False, compute=get_mosque_student, store=True)
     
-    user_id        = fields.Many2one('res.users', default=lambda self: self.env.user.id, track_visibility='onchange')
-    id_student     = fields.Char('رقم الهوية / جواز السفر', track_visibility='onchange')
+    user_id        = fields.Many2one('res.users', default=lambda self: self.env.user.id, tracking=True)
+    id_student     = fields.Char('رقم الهوية / جواز السفر', tracking=True)
     name_student   = fields.Char('الطالب',             compute=get_mosque_student, store=True)
-    mosque_to_id   = fields.Many2one('mk.mosque',      string='للإنتقال إلى المسجد', track_visibility='onchange')
+    mosque_to_id   = fields.Many2one('mk.mosque',      string='للإنتقال إلى المسجد', tracking=True)
     name_mosque_to = fields.Char('للإنتقال إلى المسجد', compute=get_name_mosque_to, store=True)
     name_mosque    = fields.Char('من المسجد',          compute=get_mosque_student, store=True)
-    date_request   = fields.Date('تاريخ الطلب', default=fields.Date.today(), track_visibility='onchange')
+    date_request   = fields.Date('تاريخ الطلب', default=fields.Date.today(), tracking=True)
     is_same_admin_mosque = fields.Boolean( default=False) #compute='check_is_same_admin_mosque', store=True,
     is_change_admin_mosque = fields.Boolean( dafault=False) #compute='get_admin_mosque_to', store=True,
 

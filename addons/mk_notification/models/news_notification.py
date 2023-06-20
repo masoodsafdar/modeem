@@ -6,7 +6,7 @@ _logger = logging.getLogger(__name__)
 
 class News(models.Model):
     _name = 'mk.news.notification'
-    _inherit = ['mail.thread']
+    _inherit=['mail.thread','mail.activity.mixin']
 
     name     = fields.Char('الاشعار', required=True)
     category = fields.Selection([('teacher', 'المعلمين'),

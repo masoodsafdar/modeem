@@ -8,7 +8,7 @@ _logger = logging.getLogger(__name__)
 
 class mk_subject_page(models.Model):
     _name = 'mk.subject.page'
-    _inherit = ['mail.thread']
+    _inherit=['mail.thread','mail.activity.mixin']
     _description = 'Subjects Pages Configuration'
     _rec_name= 'subject_page_id'
     _order = "order"
@@ -56,16 +56,16 @@ class mk_subject_page(models.Model):
             i += 1
                 
 
-    order			= fields.Integer('order', track_visibility='onchange')
-    subject_page_id = fields.Many2one('mk.memorize.method', string='Subject or Page', track_visibility='onchange')
-    from_surah 		= fields.Many2one('mk.surah',           string='From: Surah', track_visibility='onchange')
-    from_verse 		= fields.Many2one('mk.surah.verses',    string='Verse',       track_visibility='onchange')
-    to_surah 		= fields.Many2one('mk.surah',           string='To: Surah', track_visibility='onchange')
-    to_verse 		= fields.Many2one('mk.surah.verses',    string='Verse',     track_visibility='onchange')
-    is_test			= fields.Boolean("is test", track_visibility='onchange')
+    order			= fields.Integer('order', tracking=True)
+    subject_page_id = fields.Many2one('mk.memorize.method', string='Subject or Page', tracking=True)
+    from_surah 		= fields.Many2one('mk.surah',           string='From: Surah', tracking=True)
+    from_verse 		= fields.Many2one('mk.surah.verses',    string='Verse',       tracking=True)
+    to_surah 		= fields.Many2one('mk.surah',           string='To: Surah', tracking=True)
+    to_verse 		= fields.Many2one('mk.surah.verses',    string='Verse',     tracking=True)
+    is_test			= fields.Boolean("is test", tracking=True)
     #part_id=fields.Many2one("mk.parts","part")
-    part_id 		= fields.Many2many('mk.parts', 'parts_subject', 'subject_id', 'part_id', string="parts", compute='get_parts', store=True, track_visibility='onchange')
-    active 			= fields.Boolean('Active',default=True, track_visibility='onchange')
+    part_id 		= fields.Many2many('mk.parts', 'parts_subject', 'subject_id', 'part_id', string="parts", compute='get_parts', store=True, tracking=True)
+    active 			= fields.Boolean('Active',default=True, tracking=True)
     
     from_sura       = fields.Integer()
     from_aya        = fields.Integer()

@@ -6,14 +6,14 @@ _logger = logging.getLogger(__name__)
     
 class mk_memorize_method(models.Model):
     _name = 'mk.memorize.method'
-    _inherit = ['mail.thread']
+    _inherit=['mail.thread','mail.activity.mixin']
 
         
-    name             = fields.Char('Name', track_visibility='onchange')
+    name             = fields.Char('Name', tracking=True)
     type_method      = fields.Selection([('subject', 'Subject'),
-								         ('page',    'Page')],   string='Type',  default='subject', track_visibility='onchange')
+								         ('page',    'Page')],   string='Type',  default='subject', tracking=True)
     direction        = fields.Selection([('up',   'من الفاتحة للناس'),
-									     ('down', 'من الناس للفاتحة')], string='مسار الحفظ', default='up',      track_visibility='onchange')
+									     ('down', 'من الناس للفاتحة')], string='مسار الحفظ', default='up',      tracking=True)
     subject_page_ids = fields.One2many('mk.subject.page', 'subject_page_id', string='lines')
     type_qty         = fields.Selection([('qty001','آية'),
                                          ('qty025','ربع صفحة'),

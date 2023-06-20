@@ -6,7 +6,7 @@ _logger = logging.getLogger(__name__)
 
 class OldStudentTests(models.Model):
     _name = 'old.student.test'
-    _inherit = ['mail.thread']
+    _inherit=['mail.thread','mail.activity.mixin']
     _rec_name='student_name'
 
     student_name = fields.Char('الطالب')

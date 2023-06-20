@@ -27,7 +27,7 @@
                     <field name="is_send_to_mosque_admin" attrs="{'invisible': [('mosque_admin_id', '=', False)]}"/>
                 </xpath>
                 <xpath expr ="//form//sheet//notebook//page[7]" position = "after">
-                    <page string="الرسائل المرسلة" groups="base.group_no_one">
+                    <page string="الرسائل المرسلة">
 						<field name="sms_ids" readonly="1">
 							<tree edit="false">
 								<field name="user_id"/>

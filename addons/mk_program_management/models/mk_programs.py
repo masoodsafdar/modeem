@@ -6,7 +6,7 @@ _logger = logging.getLogger(__name__)
 
 class MkPrograms(models.Model):
     _name = 'mk.programs'
-    _inherit = ['mail.thread']
+    _inherit=['mail.thread','mail.activity.mixin']
     
     """
     
@@ -122,13 +122,13 @@ class MkPrograms(models.Model):
         self.state = 'active'
         
     company_id           = fields.Many2one('res.company', string='Company', default=lambda self: self.env['res.company']._company_default_get('mk.programs'))  
-    center_department_id = fields.Many2one('hr.department', string='Center', track_visibility='onchange')#,default=default_center
+    center_department_id = fields.Many2one('hr.department', string='Center', tracking=True)#,default=default_center
     
     @api.onchange('center_department_id')
     def _onchange_center_department_id(self):
         self.mosque_id = False
         
-    mosque_id = fields.Many2one('mk.mosque', string='Mosque', track_visibility='onchange')
+    mosque_id = fields.Many2one('mk.mosque', string='Mosque', tracking=True)
     
     @api.onchange('center_department_id')
     def get_mosques(self):
@@ -138,33 +138,33 @@ class MkPrograms(models.Model):
         else:
             return {'domain':{'mosque_id':[('id','in',[])]}}
 
-    name = fields.Char('Name', track_visibility='onchange')
+    name = fields.Char('Name', tracking=True)
     #code = fields.Char('Code')
     #active = fields.Boolean('Active', default=True)
     program_approches=fields.One2many("mk.approaches","program_id","Program appreoches")
     state = fields.Selection([('draft',  'Draft'),
-                              ('active', 'Active')], 'Status', default='draft', index=True, required=True, readonly=True, copy=False, track_visibility='onchange')
+                              ('active', 'Active')], 'Status', default='draft', index=True, required=True, readonly=True, copy=False, tracking=True)
 
-    active   = fields.Boolean('Active', default=True , track_visibility='onchange')
-    memorize = fields.Boolean('Memorize', track_visibility='onchange')
-    mail     = fields.Boolean('Mail',     track_visibility='onchange')
-    femail   = fields.Boolean('Femail',   track_visibility='onchange')
+    active   = fields.Boolean('Active', default=True , tracking=True)
+    memorize = fields.Boolean('Memorize', tracking=True)
+    mail     = fields.Boolean('Mail',     tracking=True)
+    femail   = fields.Boolean('Femail',   tracking=True)
 
     program_gender = fields.Selection([('men', 'Male'),
-                                       ('women', 'Female')], 'الجنس', compute='_get_gender', store=True, track_visibility='onchange')
+                                       ('women', 'Female')], 'الجنس', compute='_get_gender', store=True, tracking=True)
     gender = fields.Selection([('male', 'Male'),
                                        ('female', 'Female')], 'الجنس', compute='_get_gender', store=True)
     recruitment_ids    = fields.Many2many('hr.recruitment.degree', string='Qualfication')
     specialization_ids = fields.Many2many('mk.specializations',    string='Specialization')
-    experience_years   = fields.Float('Experience Years', track_visibility='onchange')
+    experience_years   = fields.Float('Experience Years', tracking=True)
 
-    minimum_audit = fields.Boolean('Minimum Audit', track_visibility='onchange')
-    maximum_audit = fields.Boolean('Maximum Audit', track_visibility='onchange')
-    reading       = fields.Boolean('Reading',       track_visibility='onchange')
-    is_previous_program = fields.Boolean('Previous Program?',              track_visibility='onchange')
-    program_id          = fields.Many2one('mk.programs', string='Program', track_visibility='onchange')
+    minimum_audit = fields.Boolean('Minimum Audit', tracking=True)
+    maximum_audit = fields.Boolean('Maximum Audit', tracking=True)
+    reading       = fields.Boolean('Reading',       tracking=True)
+    is_previous_program = fields.Boolean('Previous Program?',              tracking=True)
+    program_id          = fields.Many2one('mk.programs', string='Program', tracking=True)
     
-    is_required         = fields.Boolean('Required for All Mosques',       track_visibility='onchange')
+    is_required         = fields.Boolean('Required for All Mosques',       tracking=True)
     #is_share = fields.Boolean('Can Be Share')
     #is_change = fields.Boolean('Can Be Change')
     program_type=fields.Selection([('open','open'),

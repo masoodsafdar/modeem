@@ -12,10 +12,10 @@ class mk_virtual_room_provider(models.Model):
     _description = 'Virtual room provider'
     _inherit =  ['mail.thread', 'mail.activity.mixin']
     
-    name                     = fields.Char('Name', track_visibility='onchange', required=True)  
+    name                     = fields.Char('Name', tracking=True, required=True)  
     type_subscription        = fields.Selection([('server','Server'),
-                                                 ('room', 'Room')], string='Type subscription',                                  track_visibility='onchange', required=True)
-    virtual_room_package_ids = fields.One2many('mk.virtual_room.provider.package', 'virtual_room_provider_id', string='Package', track_visibility='onchange', required=True)
+                                                 ('room', 'Room')], string='Type subscription',                                  tracking=True, required=True)
+    virtual_room_package_ids = fields.One2many('mk.virtual_room.provider.package', 'virtual_room_provider_id', string='Package', tracking=True, required=True)
 
 
 class mk_virtual_room_provider_package(models.Model):
@@ -45,16 +45,16 @@ class mk_virtual_room_provider_package(models.Model):
         self.name = 'باقة' + ' ' + (self.virtual_room_provider_id.name or '') + ' '+ type_subscription_duration
         
     name                       = fields.Char(compute=get_name_package, default='Package', store=True)
-    virtual_room_provider_id   = fields.Many2one('mk.virtual_room.provider', string='Virtual room provider', track_visibility='onchange', required=True)  
+    virtual_room_provider_id   = fields.Many2one('mk.virtual_room.provider', string='Virtual room provider', tracking=True, required=True)  
     type_subscription_duration = fields.Selection([('month',        'Month'),
                                                    ('two_months',   'Two months'),
                                                    ('three_months', 'Three months'),
                                                    ('four_months',  'Four-month semester'),
                                                    ('eight_months', 'Eight-month academic year'),
-                                                   ('full_year',    'full year is twelve months'),], string='Type subscription', track_visibility='onchange', required=True)  
-    number_room                = fields.Integer('Number room',         track_visibility='onchange', required=True)  
-    number_participant         = fields.Integer('Number participants', track_visibility='onchange', required=True)  
-    cost                       = fields.Float('Cost',                  track_visibility='onchange', required=True)  
+                                                   ('full_year',    'full year is twelve months'),], string='Type subscription', tracking=True, required=True)  
+    number_room                = fields.Integer('Number room',         tracking=True, required=True)  
+    number_participant         = fields.Integer('Number participants', tracking=True, required=True)  
+    cost                       = fields.Float('Cost',                  tracking=True, required=True)  
 
         
 class mk_virtual_room_subscription(models.Model):
@@ -84,9 +84,9 @@ class mk_virtual_room_subscription(models.Model):
         self.name = 'إشتراك' + ' ' + self.mosque_id.name + ' '+ self.virtual_room_package_id.name + ' ' + self.date_start
          
     name                       = fields.Char('Name', default='إشتراك', compute=get_name_subscription, store=True)  
-    mosque_id                  = fields.Many2one('mk.mosque',                        string='Mosque',                track_visibility='onchange', required=True, ondelete='cascade')
-    virtual_room_provider_id   = fields.Many2one('mk.virtual_room.provider',         string='Virtual room provider', track_visibility='onchange', required=True)
-    virtual_room_package_id    = fields.Many2one('mk.virtual_room.provider.package', string='Virtual room package',  track_visibility='onchange', required=True)   
+    mosque_id                  = fields.Many2one('mk.mosque',                        string='Mosque',                tracking=True, required=True, ondelete='cascade')
+    virtual_room_provider_id   = fields.Many2one('mk.virtual_room.provider',         string='Virtual room provider', tracking=True, required=True)
+    virtual_room_package_id    = fields.Many2one('mk.virtual_room.provider.package', string='Virtual room package',  tracking=True, required=True)   
     type_subscription_duration = fields.Selection([('month',        'month'),
                                                    ('two_months',   'Two months'),
                                                    ('three_months', 'Three months'),
@@ -95,18 +95,18 @@ class mk_virtual_room_subscription(models.Model):
                                                    ('full_year',    'full year is twelve months')], string='Type subscription', compute=get_package_detail, store=True)
     number_participant         = fields.Integer('Number participants', compute=get_package_detail, store=True)  
     cost                       = fields.Float('Cost',                  compute=get_package_detail, store=True)  
-    date_start                 = fields.Date('Date start', track_visibility='onchange', required=True)
-    date_end                   = fields.Date('Date End',   track_visibility='onchange', required=True)    
-    note                       = fields.Text('Note', track_visibility='onchange')  
+    date_start                 = fields.Date('Date start', tracking=True, required=True)
+    date_end                   = fields.Date('Date End',   tracking=True, required=True)    
+    note                       = fields.Text('Note', tracking=True)  
     type_payment_method        = fields.Selection([('from_account', 'withdraw from Account'),
-                                                   ('cash_deposit', 'Cash deposit')], string='Payment method', track_visibility='onchange') 
-    bank_id                    = fields.Many2one('res.bank', string="Bank", track_visibility='onchange') 
-    number_account             = fields.Char('Bank account number',      track_visibility='onchange') 
+                                                   ('cash_deposit', 'Cash deposit')], string='Payment method', tracking=True) 
+    bank_id                    = fields.Many2one('res.bank', string="Bank", tracking=True) 
+    number_account             = fields.Char('Bank account number',      tracking=True) 
     attachment                 = fields.Many2many('ir.attachment', string='Attachement')
     state                      = fields.Selection([('draft',           'Draft'),
                                                    ('under_procedure', 'Under the procedure'),
                                                    ('confirm',         'confirm'),
-                                                   ('refused',         'Refused')], string='State', default='draft', track_visibility='onchange')   
+                                                   ('refused',         'Refused')], string='State', default='draft', tracking=True)   
 
     @api.multi
     def action_under_procedure(self):
@@ -165,19 +165,19 @@ class mk_virtual_room(models.Model):
             room.virtual_room_provider_id = subscription.virtual_room_provider_id.id
             room.virtual_room_package_id = subscription.virtual_room_package_id.id
             
-    name                           = fields.Char('Name', track_visibility='onchange', required=True)  
-    virtual_room_subscription_id   = fields.Many2one('mk.virtual_room.subscription',     string='Virtual room subscription', track_visibility='onchange', required=True, ondelete='cascade')
+    name                           = fields.Char('Name', tracking=True, required=True)  
+    virtual_room_subscription_id   = fields.Many2one('mk.virtual_room.subscription',     string='Virtual room subscription', tracking=True, required=True, ondelete='cascade')
     virtual_room_provider_id       = fields.Many2one('mk.virtual_room.provider',         string='Virtual room provider',     compute=get_subscription)
     virtual_room_package_id        = fields.Many2one('mk.virtual_room.provider.package', string='Virtual room package',      compute=get_subscription)      
-    type_room_id                   = fields.Many2one('mk.virtual_room.type',             string='Room Type', track_visibility='onchange', required=True) 
+    type_room_id                   = fields.Many2one('mk.virtual_room.type',             string='Room Type', tracking=True, required=True) 
     mosque_id                      = fields.Many2one('mk.mosque',                        string='Mosque',    compute=get_subscription) 
-    room_objective                 = fields.Char('Room objective',               track_visibility='onchange', required=True)  
-    admin_link                     = fields.Char('Admin link',                   track_visibility='onchange', required=True)  
-    participant_link               = fields.Char('Participant link',             track_visibility='onchange', required=True)  
-    date_expiration                = fields.Date('Subscription expiration date', track_visibility='onchange', required=True)
+    room_objective                 = fields.Char('Room objective',               tracking=True, required=True)  
+    admin_link                     = fields.Char('Admin link',                   tracking=True, required=True)  
+    participant_link               = fields.Char('Participant link',             tracking=True, required=True)  
+    date_expiration                = fields.Date('Subscription expiration date', tracking=True, required=True)
     state                          = fields.Selection([('draft',   'Draft'),
                                                        ('confirm', 'Confirm'),
-                                                       ('stopped', 'Stopped')], string='State', default='draft', track_visibility='onchange')   
+                                                       ('stopped', 'Stopped')], string='State', default='draft', tracking=True)   
 
     @api.onchange('virtual_room_provider_id')
     def get_package(self):
@@ -223,8 +223,8 @@ class mk_virtual_room_type(models.Model):
     _order = 'order_type'
     _inherit = ['mail.thread', 'mail.activity.mixin']
  
-    name        = fields.Char('Name',     track_visibility='onchange', required=True)  
-    order_type  = fields.Integer('Order', track_visibility='onchange', required=True)  
+    name        = fields.Char('Name',     tracking=True, required=True)  
+    order_type  = fields.Integer('Order', tracking=True, required=True)  
     
     
 class mk_episode(models.Model):

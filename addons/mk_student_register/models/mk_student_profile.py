@@ -22,9 +22,18 @@ _logger = logging.getLogger(__name__)
 class mk_student_register(models.Model):
     _name = 'mk.student.register'
     _description = 'Students  profile'
-    _inherit = ['mail.thread']
+    # _inherit = ['mail.thread']
+    _inherit=['mail.thread','mail.activity.mixin']
     _rec_name='display_name'
     _order = 'create_date desc'
+
+
+    def _getDefault_academic_year(self):
+        academic_recs = self.env['mk.academic_year'].search([('is_default','=',True)])       
+        if academic_recs:
+            return academic_recs[0].id
+                  
+        return False 
 
     # @api.multi
     def name_get(self):
@@ -181,9 +190,9 @@ class mk_student_register(models.Model):
         self.categ_mosque_id = categ_mosque.id
         self.gender_mosque   = categ_mosque.mosque_type
 
-    @api.model
-    def default_get(self, fields):
-        res = super(mk_student_register, self).default_get(fields)
+    # @api.model
+    # def default_get(self, fields):
+    #     res = super(mk_student_register, self).default_get(fields)
 
         mosques_ids = False
         user_id = self.env.user
@@ -199,38 +208,76 @@ class mk_student_register(models.Model):
         return res
 
 
-    name               = fields.Char(track_visibility='onchange')
-    display_name       = fields.Char(compute="_display_name", string="Name", store=True)
-    second_name        = fields.Char('Second Name', track_visibility='onchange')
-    third_name         = fields.Char('Third Name',  track_visibility='onchange')
-    fourth_name        = fields.Char('Fourth Name', track_visibility='onchange')
-    no_identity        = fields.Boolean('No Identity',         track_visibility='onchange')
-    identity_no        = fields.Char('Identity No',   size=10, track_visibility='onchange')
-    passport_no        = fields.Char('Passport No',   size=10, track_visibility='onchange')
-    mobile             = fields.Char('Mobile',        size=14, track_visibility='onchange')
-    mobile_add         = fields.Char('second Mobile', size=14, track_visibility='onchange')
-    email              = fields.Char('Email',                  track_visibility='onchange')
+
+    # second_name = fields.Char('Second Name', required=True)
+    # third_name  = fields.Char('Third Name',  required=True)
+    forth_name  = fields.Char('Forth Name')
+    # part_id     = fields.Many2many("mk.parts", string="part")
+    p_image     = fields.Binary('Image')
+    # identity_no = fields.Integer('Identity No')
+    # passport_no = fields.Char('Passport No', size=15)
+    # mobile      = fields.Char('mobile', size=9)
+    # email       = fields.Char('Email',  size=40)    
+    parent_tel  = fields.Integer('Parent Tel')
+    birth_date  = fields.Date('Birth Date')
+    # job_id      = fields.Many2one('mk.job', string='Job', required=True)
+    # gender      = fields.Selection([('male',   'Male'), 
+    #                                 ('female', 'Female')], string="Gender", default="male")
+    # country_id  = fields.Many2one('res.country')
+    # area_id     = fields.Many2one('mk.area',     string='area')
+    # city_id     = fields.Many2one('mk.city',     string='city')    
+    # district_id = fields.Many2one('mk.district', string='district')
+    children_no = fields.Integer('children nunmber')
+    # link_ids    = fields.Many2many('mk.link.student','mk_link_student_mk_student_register_rel','mk_student_register_id','mk_link_student_id', string = 'Student' )    
+    # grade_id    = fields.Many2one('mk.grade',         string='Grade', required=True)
+    academic_id = fields.Many2one('mk.academic_year', string='Academic Year', readonly=True, default=_getDefault_academic_year)
+    # note        = fields.Text('Note')
+    state       = fields.Selection([('draft',    'Draft'), 
+                                    ('revised',  'Revised'),
+                                    ('accepted', 'Accepted'),
+                                    ('rejected', 'Rejected'),
+                                    ('done',     'Done')], string='State')
+
+    category       = fields.Selection([('teacher',    'Teacher'), 
+                                    ('supervisor',  'Supervisor')], string='Cateqory') 
+    is_student_meqraa = fields.Boolean(string="Is Student Meqraa")
+
+
+    ###########################################
+
+
+    name               = fields.Char(tracking=True)
+    display_name       = fields.Char(compute="_display_name", string="Name")
+    second_name        = fields.Char('Second Name', tracking=True)
+    third_name         = fields.Char('Third Name',  tracking=True)
+    fourth_name        = fields.Char('Fourth Name', tracking=True)
+    no_identity        = fields.Boolean('No Identity',         tracking=True)
+    identity_no        = fields.Char('Identity No',   tracking=True)
+    passport_no        = fields.Char('Passport No',   tracking=True)
+    mobile             = fields.Char('Mobile',         tracking=True)
+    mobile_add         = fields.Char('second Mobile',  tracking=True)
+    email              = fields.Char('Email',                  tracking=True)
     passwd             = fields.Char('Passwd', default=_generate_passwd)
     gender             = fields.Selection([('male', 'Male'),
-                                           ('female', 'Female')], string="Gender",  default="male",  track_visibility='onchange')
-    country_id         = fields.Many2one('res.country', default=default_country, ondelete="restrict", track_visibility='onchange')
-    nationality        = fields.Char('الجنسية' , compute=get_nationality, store=True, track_visibility='onchange')
+                                           ('female', 'Female')], string="Gender",  default="male",  tracking=True)
+    country_id         = fields.Many2one('res.country', default=default_country, ondelete="restrict", tracking=True)
+    nationality        = fields.Char('الجنسية' , compute=get_nationality, store=True, tracking=True)
     nationality_group  = fields.Selection([('sa', 'سعودي'),
                                            ('non_sa', 'غير سعودي')], 'سعودي/غير سعودي' , compute=get_nationality_group, store=True)
     area_id            = fields.Many2one('res.country.state', string='Area',     required=True, domain=[('type_location','=','area'),
-                                                                                                        ('enable','=',True)], ondelete="restrict", default=default_area, track_visibility='onchange')    
+                                                                                                        ('enable','=',True)], ondelete="restrict", default=default_area, tracking=True)    
     city_id            = fields.Many2one('res.country.state', string='City',     required=True, domain=[('type_location','=','city'),
-                                                                                                        ('enable','=',True)], ondelete="restrict", default=default_city, track_visibility='onchange')
+                                                                                                        ('enable','=',True)], ondelete="restrict", default=default_city, tracking=True)
     district_id        = fields.Many2one('res.country.state', string='District', required=True, domain=[('type_location','=','district'),
-                                                                                                        ('enable','=',True)], ondelete="restrict", track_visibility='onchange')
-    birthdate          = fields.Date('Birthdate', track_visibility='onchange')
+                                                                                                        ('enable','=',True)], ondelete="restrict", tracking=True)
+    birthdate          = fields.Date('Birthdate', tracking=True)
     student_age        = fields.Integer('Student age', compute='get_student_age')
-    student_name       = fields.Char('Student name', size=50, translate=True)
-    mosque_name        = fields.Char('Mosque name',  size=50, translate=True)
-    center_name        = fields.Char('Center name',  size=50, translate=True)
+    student_name       = fields.Char('Student name', translate=True)
+    mosque_name        = fields.Char('Mosque name', translate=True)
+    center_name        = fields.Char('Center name', translate=True)
     mosque_id          = fields.Many2many('mk.mosque',  domain=[('state', '=', 'accept')])
     mosque_new         = fields.Many2one('mk.mosque', string='new mosque', domain=[('state','=','accept')], ondelete="set null")
-    mosq_id            = fields.Many2one('mk.mosque', string='المسجد',     domain=[('state', '=', 'accept')], track_visibility='onchange')
+    mosq_id            = fields.Many2one('mk.mosque', string='المسجد',     domain=[('state', '=', 'accept')], tracking=True)
     department_id      = fields.Many2one('hr.department', string='Center name', compute='get_department', store=True)
     company_id         = fields.Many2one('res.company', string='Company', ondelete='restrict', default=lambda self: self.env.user.company_id.id)
     request_draft_ids  = fields.One2many('mk.link', 'student_id', domain=[('state','=','draft')])
@@ -241,21 +288,22 @@ class mk_student_register(models.Model):
     request_state      = fields.Selection([('draft',  'طلب إنضمام مبدئي'),
                                            ('accept', 'طلب إنضمام مقبول'),
                                            ('reject', 'طلب إنضمام مرفوض'),
-                                           ('done',   'طلب إنضمام منتهي')], string='حالة طلب الانضمام', compute=get_request_state, store=True, track_visibility='onchange')
+                                           ('done',   'طلب إنضمام منتهي')], string='حالة طلب الانضمام', compute=get_request_state, store=True, tracking=True)
     #color              = fields.Integer(compute=get_request, store=True)
-    grade_id           = fields.Many2one('mk.grade', string='Grade', domain=[('active', '=', True)], ondelete="restrict", default=lambda self: self.env.ref('mk_master_models.grade_18').id, track_visibility='onchange')
+    # grade_id           = fields.Many2one('mk.grade', string='Grade', domain=[('active', '=', True)], ondelete="restrict", default=lambda self: self.env.ref('mk_master_models.grade_18').id, tracking=True)
+    grade_id           = fields.Many2one('mk.grade', string='Grade', domain=[('active', '=', True)], ondelete="restrict", tracking=True)
     part_id            = fields.Many2many("mk.parts", string="part")    
     job_type           = fields.Selection([('student',  'طالب'),
-                                           ('employee', 'Employee')], string='Job type', default='student',          track_visibility='onchange')
-    job_id             = fields.Many2one('mk.job',string='Job', domain=[('active', '=', True)], ondelete="restrict", track_visibility='onchange')                    
-    parent_identity    = fields.Char('Parent identity', size=10, translate=True, track_visibility='onchange')
-    st_parent_id       = fields.Many2one('res.partner', string='Parent',  domain=[('company_type','=','parent')], track_visibility='onchange')
+                                           ('employee', 'Employee')], string='Job type', default='student',          tracking=True)
+    job_id             = fields.Many2one('mk.job',string='Job', domain=[('active', '=', True)], ondelete="restrict", tracking=True)                    
+    parent_identity    = fields.Char('Parent identity', translate=True, tracking=True)
+    st_parent_id       = fields.Many2one('res.partner', string='Parent',  domain=[('company_type','=','parent')], tracking=True)
     partner_id         = fields.Many2one('res.partner', string='partner', ondelete="restrict")
     iqama_expire       = fields.Date('Iqama Expire')    
     marital_status     = fields.Selection([('single',   'Single'),
                                            ('married',  'Married'),
                                            ('widower',  'Widower'),
-                                           ('divorced', 'Divorced')], string='Marital status', track_visibility='onchange')
+                                           ('divorced', 'Divorced')], string='Marital status', tracking=True)
     image              = fields.Binary("Image", attachment=True, help="This field holds the image used as avatar for this contact, limited to 1024x1024px",)
     image_medium       = fields.Binary("Medium-sized image", attachment=True, help="Medium-sized image of this contact. It is automatically "\
                                                                                 "resized as a 128x128px image, with aspect ratio preserved. "\
@@ -268,25 +316,179 @@ class mk_student_register(models.Model):
     check_filter       = fields.Char('Check filter', default='student')
     link_ids           = fields.One2many('mk.link',      inverse_name='student_id', string='Episodes')
     banking_accounts   = fields.One2many('account.bank', inverse_name='student_id', string="banking accounts")
-    registeration_code = fields.Char(size=12,     readonly=True, track_visibility='onchange')
-    latitude           = fields.Char('Latitude',  track_visibility='onchange')
-    longitude          = fields.Char('Longitude', track_visibility='onchange')
-    active             = fields.Boolean('Active', default=True, track_visibility='onchange')
+    registeration_code = fields.Char(     readonly=True, tracking=True)
+    latitude           = fields.Char('Latitude',  tracking=True)
+    longitude          = fields.Char('Longitude', tracking=True)
+    active             = fields.Boolean('Active', default=True, tracking=True)
     flag               = fields.Boolean("flag")
     flag2              = fields.Boolean('Flag')
+    # gender_mosque      = fields.Selection([('male','رجالي'),
+    #                                        ('female','نسائي')],  string="Mosque gender",   compute='get_categ_gender', store=True)
+    # categ_mosque_id    = fields.Many2one('mk.mosque.category',   string="Mosque category", compute='get_categ_gender', store=True)
     gender_mosque      = fields.Selection([('male','رجالي'),
-                                           ('female','نسائي')],  string="Mosque gender",   compute='get_categ_gender', store=True)
-    categ_mosque_id    = fields.Many2one('mk.mosque.category',   string="Mosque category", compute='get_categ_gender', store=True)
-    episode_type_id    = fields.Many2one('mk.episode_type', string='Episode Type', ondelete='restrict', track_visibility='onchange')
-    ep_type_id         = fields.Many2one('mk.programs', string='نوع الحلقة', ondelete='restrict', track_visibility='onchange')
+                                           ('female','نسائي')],  string="Mosque gender",  store=True)
+    categ_mosque_id    = fields.Many2one('mk.mosque.category',   string="Mosque category", store=True)
+    episode_type_id    = fields.Many2one('mk.episode_type', string='Episode Type', ondelete='restrict', tracking=True)
+    ep_type_id         = fields.Many2one('mk.programs', string='نوع الحلقة', ondelete='restrict', tracking=True)
     recruit_id           = fields.Many2one('hr.recruitment.degree', string='Recruit')
-    residence_country_id = fields.Many2one('res.country', ondelete="restrict", track_visibility='onchange')
+    residence_country_id = fields.Many2one('res.country', ondelete="restrict", tracking=True)
     notes              = fields.Text('Notes')
-    is_online_student  = fields.Boolean('Online', default=False, track_visibility='onchange')
+    is_online_student  = fields.Boolean('Online', default=False, tracking=True)
     is_duplicated_identity  = fields.Boolean('duplicated student identity', default=False)
     is_duplicated_passport  = fields.Boolean('طالب بنفس الجواز', default=False)
 
     _defaults = {'flag':lambda self, cr, uid, ctx:ctx.get('flag',False),}
+
+
+
+
+    # def _auto_init(self, cr, context=None):
+    #     result = super(mk_student_rigister, self)._auto_init(cr, context=context)
+    #     cr.execute("""
+    #     ALTER TABLE mk_student_register DROP CONSTRAINT IF EXISTS mk_student_register_city_id_fkey;
+    #     ALTER TABLE public.mk_student_register
+    #     ADD CONSTRAINT mk_student_register_city_id_fkey FOREIGN KEY (city_id)
+    #     REFERENCES public.res_country_state (id) MATCH SIMPLE
+    #     ON UPDATE NO ACTION ON DELETE RESTRICT;
+    #     """)
+        
+    #     return result
+
+
+
+    # @api.multi
+    def accept_request(self):        
+        if not self.parent_tel and self.p_country_id.phone_code:
+            raise Warning(_('please insert parent phone number and country phone code'))
+        
+        else:
+            if len(str(self.parent_tel))!=9:
+                raise Warning(_('phone number of parent must contain 9 digits'))
+            
+            if str(self.parent_tel)[0]== '0':
+                raise Warning(_('phone number must not be 0 at first digit')) 
+
+            if len(str(self.p_country_id.phone_code))!=3:
+                raise Warning(_('country code must contain 3 digits'))
+
+            self.write({'state': 'draft'})
+
+        return True
+       
+    # @api.multi
+    def revise_registration(self):
+        resource = self.env['resource.resource'].search([('user_id','=',self.env.user.id)])
+        if resource.ensure_one():
+            employee_id = self.env['hr.employee'].search([('resource_id','=',resource.id)])
+            if not employee_id:
+                raise Warning(_('you do not have permission to do this operation'))
+            
+            else:
+                if self.email:
+                    msjd_id=self.env['mk.masjed'].search([('supervisor', '=',employee_id.id)])
+                    if msjd_id:
+                        msjd_name=msjd_id.name
+                        msjd_name=msjd_name.encode('utf-8','ignore')
+
+                        email_message='شكرا لتسجيلكم بمسجد %s سيتم إشعاركم قريبا بعد مراجعة طلبكم' %msjd_name
+                        decoded_mess=email_message.decode("utf-8")
+
+                        values = {'subject': 'Student registration ',
+                                  'body_html': decoded_mess,
+                                  'email_to': self.email}
+                        
+                        self.env['mk.general_sending'].send(values)
+
+                to=self.env['mk.general_sending'].get_phone(self.parent_tel, self.p_country_id)
+
+                message= "تم تلقي طلبكم وسيتم اشعاركم بعد مراجعته".decode("utf-8")
+                if to:
+                    self.env['mk.general_sending'].send_sms(to, message)
+                    
+                self.write({'state': 'revised'})
+
+                return True
+
+    # @api.multi
+    def action_accept(self):
+        resource = self.env['resource.resource'].search([('user_id','=',self.env.user.id)])
+        employee_id = self.env['hr.employee'].search([('resource_id','=',resource.id)])
+        
+        if not employee_id:
+            raise Warning(_('you do not have permission to do this operation'))
+        
+        else:            
+            msjd_id=self.env['mk.masjed'].search([('supervisor', '=',employee_id.id)])
+            if msjd_id:
+                msjd_name=msjd_id.name
+        
+        if msjd_name:
+            msjd_name=msjd_name.encode('utf-8','ignore')
+            email_message='تم قبول طلب التسجيل بمسجد %s نرجو التوجه للمسجد ﻹستكمال عملية التسجيل  و شكرا ﻹهتمامكم' %msjd_name
+            decoded_mess=email_message.decode("utf-8")
+
+            values = {'subject': 'Student registration ',
+                      'body_html': decoded_mess,
+                      'email_to': self.email,}
+            #---------------------------------------------------------------
+            self.env['mk.general_sending'].send(values)
+
+            to=self.env['mk.general_sending'].get_phone(self.parent_tel, self.p_country_id)
+        
+            if to:        
+                message= "تم قبول تسجيلكم نرجو التوجه للمسجد لاكمال التسجيل".decode("utf-8")
+                self.env['mk.general_sending'].send_sms(to, message)
+                
+        self.write({'state': 'accepted'})
+        
+        return True
+
+    # @api.multi
+    def action_reject(self):
+        resource = self.env['resource.resource'].search([('user_id','=',self.env.user.id)])
+        employee_id = self.env['hr.employee'].search([('resource_id','=',resource.id)])
+        
+        if not employee_id:
+            raise Warning(_('you do not have permission to do this operation'))
+        
+        else:            
+            msjd_id=self.env['mk.masjed'].search([('supervisor', '=',employee_id[0].id)])
+            if msjd_id:
+                msjd_name=msjd_id.name
+
+        if msjd_name:
+            msjd_name=msjd_name.encode('utf-8','ignore')
+            email_message='نشكر لكم إهتمامكم بالتسجيل و يعتذر مسجد %s عن قبول طلبكم و شكرا' %msjd_name
+            decoded_mess=email_message.decode("utf-8")
+
+            values = {'subject': 'Student registration ',
+                      'body_html': decoded_mess,
+                      'email_to': self.email,}
+            self.env['mk.general_sending'].send(values)
+            
+            to = self.env['mk.general_sending'].get_phone(self.parent_tel, self.p_country_id)
+            if to:                
+                sms_partner_obj = self.pool.get('partner.sms.send')
+                message= "نعتذر عن قبول طلبكم و شكرا".decode("utf-8")
+                self.env['mk.general_sending'].send_sms(to, message)
+                
+        self.write({'state': 'rejected'})
+        
+        return True
+
+    # @api.multi
+    def action_cancel(self):
+        pass
+
+    # @api.one
+    def unlink(self):
+        try:
+            super(mk_student_rigister, self).unlink()
+        except:
+            raise ValidationError(_('لا يمكنك حذف هذا السجل لإرتباطه بسجلات أخرى'))
+
+
+
 
     @api.model
     def upload_student_image(self, student_id, student_image):
@@ -1263,7 +1465,7 @@ class wizard_message(models.TransientModel):
     _name = 'wizard.message'
 
     name        = fields.Text('Warning',  readonly=True)
-    identity    = fields.Char(string='identity', size=50, translate=True)
+    identity    = fields.Char(string='identity', translate=True)
     passport    = fields.Char(string="passport")
     original_id = fields.Integer('Original id')
 
@@ -1294,12 +1496,14 @@ class wizard_message(models.TransientModel):
 class StudentAssign(models.TransientModel):
     _name = 'mk.student.assign'
 
-    @api.depends('episode_id')
-    def get_episode_days(self):
-        days = set()
-        for episode_day in self.episode_id.episode_days:
-            days.add(episode_day.id)
-        self.domain_days = list(days)
+    # @api.depends('episode_id')
+    # def get_episode_days(self):
+    #     days = set()
+    #     for episode_day in self.episode_id.episode_days:
+    #         days.add(episode_day.id)
+    #     self.domain_days = list(days)
+
+    is_student_meqraa = fields.Boolean(string="Is Student Meqraa")
 
     @api.onchange('episode_id')
     def onchange_episode(self):
@@ -1309,7 +1513,7 @@ class StudentAssign(models.TransientModel):
             self.student_days = episode.episode_days
             self.selected_period = episode.selected_period
 
-    registeration_code = fields.Char(related='student_id.registeration_code', size=12, string='رقم التسجيل', readonly=True)
+    registeration_code = fields.Char(related='student_id.registeration_code',  string='رقم التسجيل', readonly=True)
     student_id         = fields.Many2one('mk.student.register', string="الطالب")
     link_id            = fields.Many2one('mk.link', string="Student link")
     academic_id        = fields.Many2one('mk.study.year',  string='العام الدراسي', related='episode_id.academic_id')
@@ -1320,7 +1524,8 @@ class StudentAssign(models.TransientModel):
 
     mosq_id      = fields.Many2one('mk.mosque',  string='المسجد', required=True)
     episode_id   = fields.Many2one('mk.episode', string="الحلقة")
-    domain_days  = fields.Many2many('mk.work.days', 'mk_student_assign_mk_work_days_rel', 'mk_assign_id', 'mk_work_days_id', string='أيام الحلقة', compute=get_episode_days)
+    # domain_days  = fields.Many2many('mk.work.days', 'mk_student_assign_mk_work_days_rel', 'mk_assign_id', 'mk_work_days_id', string='أيام الحلقة', compute=get_episode_days)
+    # domain_days  = fields.Many2many('mk.work.days', 'mk_student_assign_mk_work_days_rel', 'mk_assign_id', 'mk_work_days_id', string='أيام الحلقة')
     student_days = fields.Many2many('mk.work.days', 'mk_student_assign_student_days_rel', 'mk_assign_id', 'mk_work_days_id', string='أيام الطالب')
 
     program_type       = fields.Selection([('open',  'مفتوح'),

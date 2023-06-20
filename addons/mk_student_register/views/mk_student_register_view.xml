@@ -6,7 +6,7 @@
 			<field name="name">view.student.register.form</field>
 			<field name="model">mk.student.register</field>
 			<field name="arch" type="xml">
-				<form string="Students" version="8.0">
+				<form string="Students">
 					<header>
 					    <button name="revise" string="Accept Request" type="workflow" states="draft"/>
 					    <button name="accept" string="Accept" type="workflow" states="revised"/>
@@ -84,7 +84,7 @@
         <record id="mk_student_reg_action" model="ir.actions.act_window">
             <field name="name">Student</field>
             <field name="res_model">mk.student.register</field>
-            <field name="view_type">form</field>
+            <field name="binding_view_types">form</field>
             <field name="view_mode">tree,form</field>
         </record>
 
@@ -96,7 +96,7 @@
 
 		<!-- Menue MK Center-->
 		<menuitem id="student_menu"          name="Student"      action="mk_student_reg_action"      parent="reg_view_menu" sequence="2" />
-        <menuitem id="link_student_menu"     name="Link Student" action="mk_link_student_action"     parent="reg_view_menu" sequence="2" />
-        <menuitem id="link_student_menu_new" name="Link Student" action="mk_link_student_action_new" parent="reg_view_menu" sequence="2" />
+        <!-- <menuitem id="link_student_menu"     name="Link Student" action="mk_link_student_action"     parent="reg_view_menu" sequence="2" />
+        <menuitem id="link_student_menu_new" name="Link Student" action="mk_link_student_action_new" parent="reg_view_menu" sequence="2" /> -->
 	</data>
 </odoo>

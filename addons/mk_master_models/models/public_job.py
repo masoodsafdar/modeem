@@ -6,11 +6,11 @@ _logger = logging.getLogger(__name__)
 
 class public_job(models.Model):
     _name = 'mk.job'
-    _inherit = ['mail.thread']
+    _inherit=['mail.thread','mail.activity.mixin']
 
-    active         = fields.Boolean(string='Active', default=True, track_visibility='onchange')
-    age_categories = fields.Many2many("mk.age.category",string="Age Gategories", track_visibility='onchange')
-    name           = fields.Char('Name', track_visibility='onchange')
+    active         = fields.Boolean(string='Active', default=True, tracking=True)
+    age_categories = fields.Many2many("mk.age.category",string="Age Gategories", tracking=True)
+    name           = fields.Char('Name', tracking=True)
 
     @api.model
     def get_jobs(self):

@@ -612,7 +612,7 @@ class mk_events(models.Model):
 
 class Eventinvite(models.Model):
     _name = 'event.invite'
-    #_inherit = ['mail.thread']
+    #_inherit=['mail.thread','mail.activity.mixin']
 
     @api.model
     def create(self, vals):
@@ -726,7 +726,7 @@ class Eventinvite(models.Model):
 
 class EventGuest(models.Model):
     _name = 'event.guest'
-    #_inherit = ['mail.thread']
+    #_inherit=['mail.thread','mail.activity.mixin']
     _order = 'name, create_date desc'
 
     
@@ -817,7 +817,7 @@ class EventGuest(models.Model):
 class EventRegistration(models.Model):
     _name = 'event.attendee'
     _description = 'Attendee'
-    #_inherit = ['mail.thread']
+    #_inherit=['mail.thread','mail.activity.mixin']
 
 
     @api.model

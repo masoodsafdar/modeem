@@ -6,17 +6,20 @@ from odoo.exceptions import Warning
 from odoo.exceptions import UserError
 
 
+
 class episode_type(models.Model):
     _name = 'mk.episode_type'
-    _inherit = ['mail.thread']
-    _description = u'episode_type'
-
+    # _inherit=['mail.thread','mail.activity.mixin']
+    # _description = u'episode_type'
+    _inherit=['mail.thread','mail.activity.mixin']
+    _description = 'Episode Type'
     _rec_name = 'name'
     _order = 'name ASC'
 
-    name        = fields.Char(string='Name',          required=True, index=True, size=50, translate=True, track_visibility='onchange')
-    students_no = fields.Integer(string='Student no', required=True, track_visibility='onchange')
-    active      = fields.Boolean( string='Active', default=True, track_visibility='onchange')
+    # name        = fields.Char(string='Name', required=True, index=True, size=50, translate=True, tracking=True)
+    name        = fields.Char(string='Name', required=True, translate=True, tracking=True)
+    students_no = fields.Integer(string='Student no', required=True, tracking=True)
+    active      = fields.Boolean( string='Active', default=True, tracking=True)
 
     # @api.multi
     def unlink(self):

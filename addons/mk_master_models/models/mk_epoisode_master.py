@@ -8,7 +8,7 @@ _logger = logging.getLogger(__name__)
 
 class MkepisodeMaster(models.Model):    
     _name = 'mk.episode.master'
-    _inherit = ['mail.thread']
+    _inherit=['mail.thread','mail.activity.mixin']
 
     
     @api.model
@@ -22,29 +22,29 @@ class MkepisodeMaster(models.Model):
                                                          ('is_default', '=', True)], limit=1)
         return study_class and study_class.id or False         
         
-    name             = fields.Char('Name', track_visibility='onchange')
-    active           = fields.Boolean("Active", default=True, copy=False, track_visibility='onchange')
-    mosque_id        = fields.Many2one('mk.mosque',      string='Masjed',        track_visibility='onchange')
-    company_id       = fields.Many2one('res.company',    string='company',       default=lambda self: self.env.user.company_id, track_visibility='onchange')
-    academic_id      = fields.Many2one('mk.study.year',  string='Academic Year', default=get_year_default, domain=[('is_default', '=', True)], required=True, copy=False, track_visibility='onchange')
-    study_class_id   = fields.Many2one('mk.study.class', string='Study class',   default=get_study_class,  domain=[('is_default', '=', True)], copy=False, track_visibility='onchange')
+    name             = fields.Char('Name', tracking=True)
+    active           = fields.Boolean("Active", default=True, copy=False, tracking=True)
+    mosque_id        = fields.Many2one('mk.mosque',      string='Masjed',        tracking=True)
+    company_id       = fields.Many2one('res.company',    string='company',       default=lambda self: self.env.user.company_id, tracking=True)
+    academic_id      = fields.Many2one('mk.study.year',  string='Academic Year', default=get_year_default, domain=[('is_default', '=', True)], required=True, copy=False, tracking=True)
+    study_class_id   = fields.Many2one('mk.study.class', string='Study class',   default=get_study_class,  domain=[('is_default', '=', True)], copy=False, tracking=True)
     state            = fields.Selection([('active',  'مفعلة'), 
-                                         ('done',    'مجمدة')], string='الحالة', default='active', track_visibility='onchange')
+                                         ('done',    'مجمدة')], string='الحالة', default='active', tracking=True)
     episode_category = fields.Selection([('course',  'course'), 
-                                         ('episode', 'episode')], string='episode category', track_visibility='onchange')
+                                         ('episode', 'episode')], string='episode category', tracking=True)
     episode_ids      = fields.One2many("mk.episode", "parent_episode", string="periode list")
 
-    subh             = fields.Boolean('Subh',   track_visibility='onchange')
-    zuhr             = fields.Boolean('Zuhr',   track_visibility='onchange')
-    aasr             = fields.Boolean('Aasr',   track_visibility='onchange')
-    magrib           = fields.Boolean('Magrib', track_visibility='onchange')
-    esha             = fields.Boolean('Esha',   track_visibility='onchange')
+    subh             = fields.Boolean('Subh',   tracking=True)
+    zuhr             = fields.Boolean('Zuhr',   tracking=True)
+    aasr             = fields.Boolean('Aasr',   tracking=True)
+    magrib           = fields.Boolean('Magrib', tracking=True)
+    esha             = fields.Boolean('Esha',   tracking=True)
 
-    subh_flag        = fields.Boolean('Subh',   track_visibility='onchange')
-    zuhr_flag        = fields.Boolean('Zuhr',   track_visibility='onchange')
-    aasr_flag        = fields.Boolean('Aasr',   track_visibility='onchange')
-    magrib_flag      = fields.Boolean('Magrib', track_visibility='onchange')
-    esha_flag        = fields.Boolean('Esha',   track_visibility='onchange')
+    subh_flag        = fields.Boolean('Subh',   tracking=True)
+    zuhr_flag        = fields.Boolean('Zuhr',   tracking=True)
+    aasr_flag        = fields.Boolean('Aasr',   tracking=True)
+    magrib_flag      = fields.Boolean('Magrib', tracking=True)
+    esha_flag        = fields.Boolean('Esha',   tracking=True)
 
     @api.model
     def action_done_episode_bf1444(self):

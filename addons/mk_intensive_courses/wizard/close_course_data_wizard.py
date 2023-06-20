@@ -23,8 +23,8 @@ class CloseCourseDataWizard(models.TransientModel):
     students_final_tests_nbr = fields.Integer('Students in final tests', required=True)
     students_parts_tests_nbr = fields.Integer('Students in parts tests', required=True)
 
-    mosque_id          = fields.Many2one('mk.mosque',default=_get_default_masjed, track_visibility='onchange')
-    gender_mosque      = fields.Selection(related="mosque_id.gender_mosque", string='Mosque gender', track_visibility='onchange')
+    mosque_id          = fields.Many2one('mk.mosque',default=_get_default_masjed, tracking=True)
+    gender_mosque      = fields.Selection(related="mosque_id.gender_mosque", string='Mosque gender', tracking=True)
 
 
     @api.one

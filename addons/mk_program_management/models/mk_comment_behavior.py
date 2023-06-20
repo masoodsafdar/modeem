@@ -5,7 +5,7 @@ _logger = logging.getLogger(__name__)
 
 class MkCommentBehavior(models.Model):
     _name = 'mk.comment.behavior'
-    _inherit = ['mail.thread']
+    _inherit=['mail.thread','mail.activity.mixin']
     
     
     # @api.one
@@ -16,12 +16,12 @@ class MkCommentBehavior(models.Model):
     def act_active(self):
         self.state = 'active'
     
-    company_id     = fields.Many2one('res.company', string='Company', default=lambda self: self.env['res.company']._company_default_get('mk.comment.behavior'), track_visibility='onchange')
+    company_id     = fields.Many2one('res.company', string='Company', default=lambda self: self.env['res.company']._company_default_get('mk.comment.behavior'), tracking=True)
     punishment_ids = fields.Many2many('mk.punishment', string='Punishment')
-    name           = fields.Char('Name', track_visibility='onchange')
-    active         = fields.Boolean('Active', default=True, track_visibility='onchange')
+    name           = fields.Char('Name', tracking=True)
+    active         = fields.Boolean('Active', default=True, tracking=True)
     type           = fields.Selection([('general_comment', 'General Comment'),
-                                       ('behavior', 'Behavior')], 'Type', default='general_comment', track_visibility='onchange')
+                                       ('behavior', 'Behavior')], 'Type', default='general_comment', tracking=True)
 	
 	
     """@api.model    

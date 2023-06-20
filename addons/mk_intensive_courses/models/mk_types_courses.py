@@ -4,7 +4,7 @@ from odoo import models, fields, api
 
 class mk_types_courses(models.Model):
     _name = 'mk.types.courses'
-    _inherit = ['mail.thread']
+    _inherit=['mail.thread','mail.activity.mixin']
     
     @api.model
     def get_year_default(self):
@@ -17,16 +17,16 @@ class mk_types_courses(models.Model):
                                                          ('is_default', '=', True)], limit=1)
         return study_class and study_class.id or False           
     
-    number         = fields.Char('Number', track_visibility='onchange')
-    name           = fields.Char('Name', track_visibility='onchange')
-    start_date     = fields.Date('Start Date', required=True, track_visibility='onchange')
-    end_date       = fields.Date('End Date', track_visibility='onchange')
-    # test_str_date  = fields.Date('Test Start Date', required=True, track_visibility='onchange')
-    # test_end_date  = fields.Date('Test End Date', track_visibility='onchange')
-    academic_id    = fields.Many2one('mk.study.year',  string='العام الدراسي', default=get_year_default, track_visibility='onchange')
-    study_class_id = fields.Many2one('mk.study.class', string='الفصل الدراسي', default=get_study_class, track_visibility='onchange')
-    minimum_no_day = fields.Integer(string="Minimum No Of Days", track_visibility='onchange', default=20)
-    active         = fields.Boolean('نشط', default=True, track_visibility='onchange')
+    number         = fields.Char('Number', tracking=True)
+    name           = fields.Char('Name', tracking=True)
+    start_date     = fields.Date('Start Date', required=True, tracking=True)
+    end_date       = fields.Date('End Date', tracking=True)
+    # test_str_date  = fields.Date('Test Start Date', required=True, tracking=True)
+    # test_end_date  = fields.Date('Test End Date', tracking=True)
+    academic_id    = fields.Many2one('mk.study.year',  string='العام الدراسي', default=get_year_default, tracking=True)
+    study_class_id = fields.Many2one('mk.study.class', string='الفصل الدراسي', default=get_study_class, tracking=True)
+    minimum_no_day = fields.Integer(string="Minimum No Of Days", tracking=True, default=20)
+    active         = fields.Boolean('نشط', default=True, tracking=True)
 
     
     @api.constrains('end_date')

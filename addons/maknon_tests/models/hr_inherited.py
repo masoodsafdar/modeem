@@ -13,7 +13,7 @@ class emp(models.Model):
 											 ('administrative', 'اداري'),
 											 ('financial', 'مالي'),
 											 ('qualitative', 'نوعي'),
-											 ('tests', 'الاختبارات')], string='المجال', track_visibility='onchange')
+											 ('tests', 'الاختبارات')], string='المجال', tracking=True)
 	training_course_ids = fields.One2many("mk.training.courses", "employee_id", "Courses")
 
 	@api.model

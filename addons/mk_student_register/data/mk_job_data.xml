@@ -1,6 +1,6 @@
 <odoo>
     <data noupdate="1">
-        <record id="mk_job1" model="mk.job">
+        <!-- <record id="mk_job1" model="mk.job">
             <field name="name">طالب/ة</field>
             <field name="age_categories" eval="[(4, ref('mk_episode_management.mk_age_category1')), (4, ref('mk_episode_management.mk_age_category2')),
                                                        (4, ref('mk_episode_management.mk_age_category3')), (4, ref('mk_episode_management.mk_age_category4')),
@@ -43,7 +43,7 @@
             <field name="name">أخرى</field>
             <field name="age_categories"/>
             <field name="active" eval="True"/>
-        </record>
+        </record> -->
     </data>
 </odoo>
 

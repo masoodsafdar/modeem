@@ -6,7 +6,7 @@ from odoo.tools.translate import _
 
 class MkFormalLeave(models.Model):
     _name = 'mk.formal.leave'
-    _inherit = ['mail.thread']
+    _inherit=['mail.thread','mail.activity.mixin']
     _rec_name = 'name'
 
     # @api.multi
@@ -14,13 +14,13 @@ class MkFormalLeave(models.Model):
         academic_year = self.env['mk.study.year'].search([('is_default', '=', True)], limit=1)
         return academic_year and academic_year.id or False 
         
-    name          = fields.Char('الإجازة', track_visibility='onchange')
-    company_id    = fields.Many2one('res.company',   string='Company',    default=lambda self:self.env.user.company_id.id, track_visibility='onchange')
-    study_year_id = fields.Many2one('mk.study.year', string='Study Year',  default=get_year_default, track_visibility='onchange')
-    leave_id      = fields.Many2one('hr.holidays.status', 'Leave', track_visibility='onchange')
-    start_date    = fields.Date('Start Date', track_visibility='onchange')
-    end_date      = fields.Date('End Date', track_visibility='onchange')
-    active        = fields.Boolean('Active', default=True, track_visibility='onchange')
+    name          = fields.Char('الإجازة', tracking=True)
+    company_id    = fields.Many2one('res.company',   string='Company',    default=lambda self:self.env.user.company_id.id, tracking=True)
+    study_year_id = fields.Many2one('mk.study.year', string='Study Year',  default=get_year_default, tracking=True)
+    leave_id      = fields.Many2one('hr.holidays.status', 'Leave', tracking=True)
+    start_date    = fields.Date('Start Date', tracking=True)
+    end_date      = fields.Date('End Date', tracking=True)
+    active        = fields.Boolean('Active', default=True, tracking=True)
     
     # @api.one
     @api.constrains('start_date', 'end_date')

@@ -78,7 +78,7 @@ class InternalTransfer(models.TransientModel):
     #Subjects
     subject_ids        = fields.One2many('mk.student.internal_transfer.subject', 'transfer_id', string='مقررات الطلاب')
     #Days
-    domain_days        = fields.Many2many('mk.work.days', string='أيام الحلقة')
+    # domain_days        = fields.Many2many('mk.work.days', string='أيام الحلقة')
     student_days       = fields.Many2many('mk.work.days', string='أيام الطلاب')
     selected_period    = fields.Selection([('subh',  'subh'), 
                                            ('zuhr',  'zuhr'),
@@ -244,7 +244,7 @@ class InternalTransfer(models.TransientModel):
             if type_order == 'assign_ep':
                 vals_value.update({'episode_id':      episode_assign_id,
                                    
-                                   'domain_days':     episode_assign.episode_days,
+                                   # 'domain_days':     episode_assign.episode_days,
                                    'student_days':    episode_assign.episode_days,
                                    'selected_period': episode_assign.selected_period,})
                 
@@ -266,79 +266,79 @@ class InternalTransfer(models.TransientModel):
         return {'domain':{'episode_id': [('id', 'in', episode_ids.ids)]}}
 
 
-    @api.onchange('episode_id','registeration_date','msg_error')
-    def onchange_episode(self):
-        self.domain_days = ()
-        self.student_days = ()
-        episode = self.episode_id
-        registeration_date = self.registeration_date
-        msg_error = ''
-        if episode:
-            self.domain_days = episode.episode_days
-            self.student_days = episode.episode_days
-            self.selected_period = episode.selected_period
+    # @api.onchange('episode_id','registeration_date','msg_error')
+    # def onchange_episode(self):
+    #     self.domain_days = ()
+    #     self.student_days = ()
+    #     episode = self.episode_id
+    #     registeration_date = self.registeration_date
+    #     msg_error = ''
+    #     if episode:
+    #         self.domain_days = episode.episode_days
+    #         self.student_days = episode.episode_days
+    #         self.selected_period = episode.selected_period
 
 
-            start_episode = episode.start_date
-            if registeration_date:                
-                if start_episode and registeration_date < start_episode:
-                    msg_error = 'عذرا، تاريخ العملية يجب أن يكون بعد تاريخ بداية الحلقة' + ' ! '
-                    self.registeration_date = False
+    #         start_episode = episode.start_date
+    #         if registeration_date:                
+    #             if start_episode and registeration_date < start_episode:
+    #                 msg_error = 'عذرا، تاريخ العملية يجب أن يكون بعد تاريخ بداية الحلقة' + ' ! '
+    #                 self.registeration_date = False
                 
-                end_episode = episode.end_date
-                if end_episode and registeration_date > end_episode:
-                    msg_error = 'عذرا، تاريخ العملية يجب أن يكون قبل تاريخ نهاية الحلقة' + ' ! '
-                    self.registeration_date = False
+    #             end_episode = episode.end_date
+    #             if end_episode and registeration_date > end_episode:
+    #                 msg_error = 'عذرا، تاريخ العملية يجب أن يكون قبل تاريخ نهاية الحلقة' + ' ! '
+    #                 self.registeration_date = False
                     
-                if not self.msg_error:
-                    self.msg_error2 = msg_error
-            else:
-                self.registeration_date = start_episode
-                self.msg_error2 = ''
+    #             if not self.msg_error:
+    #                 self.msg_error2 = msg_error
+    #         else:
+    #             self.registeration_date = start_episode
+    #             self.msg_error2 = ''
 
 
 
 
-    @api.onchange('type_setting')
-    def onchange_type_setting(self):
-        type_setting = "pusu"
-        self.pgm_ids = ()
-        self.subject_ids = ()
-        self.next_action_pdsd = False
-        # program_type = False
+    # @api.onchange('type_setting')
+    # def onchange_type_setting(self):
+    #     type_setting = "pusu"
+    #     self.pgm_ids = ()
+    #     self.subject_ids = ()
+    #     self.next_action_pdsd = False
+    #     # program_type = False
         
-        if type_setting == 'pdsd':
-            pgm_ids = []
-            for student in self.student_ids:
-                pgm_ids += [(0,0,{'student_id':   student.id,
-                                  'domain_days':  self.domain_days,
-                                  'student_days': self.domain_days,})]
-            self.pgm_ids = pgm_ids
-            self.student_days = ()
+    #     if type_setting == 'pdsd':
+    #         pgm_ids = []
+    #         for student in self.student_ids:
+    #             pgm_ids += [(0,0,{'student_id':   student.id,
+    #                               'domain_days':  self.domain_days,
+    #                               'student_days': self.domain_days,})]
+    #         self.pgm_ids = pgm_ids
+    #         self.student_days = ()
         
-        elif type_setting == 'pusd':            
-            self.student_days = self.domain_days
-            # program_type = 'open'
+    #     elif type_setting == 'pusd':            
+    #         self.student_days = self.domain_days
+    #         # program_type = 'open'
             
-            program_id = self.program_id.id
+    #         program_id = self.program_id.id
             
-            if program_id:
-                subject_ids = []
-                for student in self.student_ids:
-                    student_id = student.id
-                    if self.is_memorize:
-                        subject_ids += [(0,0,{'student_id':   student_id,
-                                              'program_id':   program_id,
-                                              'type_subject': 'm'})]
-                    if self.is_big_review:
-                        subject_ids += [(0,0,{'student_id':   student_id,
-                                              'program_id':   program_id,
-                                              'type_subject': 'r'})]
-                    if self.is_tlawa:
-                        subject_ids += [(0,0,{'student_id':   student_id,
-                                              'program_id':   program_id,
-                                              'type_subject': 't'})]                                        
-                self.subject_ids = subject_ids            
+    #         if program_id:
+    #             subject_ids = []
+    #             for student in self.student_ids:
+    #                 student_id = student.id
+    #                 if self.is_memorize:
+    #                     subject_ids += [(0,0,{'student_id':   student_id,
+    #                                           'program_id':   program_id,
+    #                                           'type_subject': 'm'})]
+    #                 if self.is_big_review:
+    #                     subject_ids += [(0,0,{'student_id':   student_id,
+    #                                           'program_id':   program_id,
+    #                                           'type_subject': 'r'})]
+    #                 if self.is_tlawa:
+    #                     subject_ids += [(0,0,{'student_id':   student_id,
+    #                                           'program_id':   program_id,
+    #                                           'type_subject': 't'})]                                        
+    #             self.subject_ids = subject_ids            
             
         # self.program_type = program_type
         
@@ -349,56 +349,56 @@ class InternalTransfer(models.TransientModel):
             self.program_id = False
             self.approach_id = False
         
-    @api.onchange('program_id')
-    def onchange_pgm(self):
-        students = self.student_ids
-        if students and not students[0].is_student_meqraa:
+    # @api.onchange('program_id')
+    # def onchange_pgm(self):
+    #     students = self.student_ids
+    #     if students and not students[0].is_student_meqraa:
 
-            self.page_id = False
-            self.surah_from_mem_id = False
-            self.memory_direction = False
+    #         self.page_id = False
+    #         self.surah_from_mem_id = False
+    #         self.memory_direction = False
 
-            self.qty_review_id = False
-            self.surah_from_rev_id = False
-            self.review_direction = False
+    #         self.qty_review_id = False
+    #         self.surah_from_rev_id = False
+    #         self.review_direction = False
 
-            self.qty_read_id = False
-            self.surah_from_read_id = False
-            self.read_direction = False
+    #         self.qty_read_id = False
+    #         self.surah_from_read_id = False
+    #         self.read_direction = False
 
-            self.subject_ids = ()
-            type_setting = "pusu"
-            program = self.program_id
+    #         self.subject_ids = ()
+    #         type_setting = "pusu"
+    #         program = self.program_id
 
-            is_big_review = self.is_big_review
-            is_memorize = self.is_memorize
-            is_tlawa = self.is_tlawa
-            if program:
-                program_id = program.id
-                if type_setting == 'pusd':
-                    self.student_days = self.domain_days
-                    subject_ids = []
-                    for student in self.student_ids:
-                        student_id = student.id
-                        if is_memorize:
-                            subject_ids += [(0,0,{'student_id':   student_id,
-                                                  'program_id':   program_id,
-                                                  'type_subject': 'm'})]
-                        if is_big_review:
-                            subject_ids += [(0,0,{'student_id':   student_id,
-                                                  'program_id':   program_id,
-                                                  'type_subject': 'r'})]
-                        if is_tlawa:
-                            subject_ids += [(0,0,{'student_id':   student_id,
-                                                  'program_id':   program_id,
-                                                  'type_subject': 't'})]
-                    self.subject_ids = subject_ids
-        program = self.program_id
-        if program:
-            self.is_tlawa = program.reading
-            self.is_big_review = program.maximum_audit
-            self.is_min_review = program.minimum_audit
-            self.is_memorize = program.memorize
+    #         is_big_review = self.is_big_review
+    #         is_memorize = self.is_memorize
+    #         is_tlawa = self.is_tlawa
+    #         if program:
+    #             program_id = program.id
+    #             if type_setting == 'pusd':
+    #                 self.student_days = self.domain_days
+    #                 subject_ids = []
+    #                 for student in self.student_ids:
+    #                     student_id = student.id
+    #                     if is_memorize:
+    #                         subject_ids += [(0,0,{'student_id':   student_id,
+    #                                               'program_id':   program_id,
+    #                                               'type_subject': 'm'})]
+    #                     if is_big_review:
+    #                         subject_ids += [(0,0,{'student_id':   student_id,
+    #                                               'program_id':   program_id,
+    #                                               'type_subject': 'r'})]
+    #                     if is_tlawa:
+    #                         subject_ids += [(0,0,{'student_id':   student_id,
+    #                                               'program_id':   program_id,
+    #                                               'type_subject': 't'})]
+    #                 self.subject_ids = subject_ids
+    #     program = self.program_id
+    #     if program:
+    #         self.is_tlawa = program.reading
+    #         self.is_big_review = program.maximum_audit
+    #         self.is_min_review = program.minimum_audit
+    #         self.is_memorize = program.memorize
 
 
     @api.onchange('memory_direction')
@@ -611,7 +611,7 @@ class InternalTransfer(models.TransientModel):
                     'mosq_id':            mosq_id,
                     'episode_id':         episode_id,
                     'selected_period':    self.selected_period,
-                    'domain_days':        self.episode_id.episode_days,
+                    # 'domain_days':        self.episode_id.episode_days,
                     'type_order':         type_order,
                     'state':              'accept',
                     'is_memorize': self.is_memorize,
@@ -897,7 +897,7 @@ class InternalTransferPgm(models.TransientModel):
     program_id         = fields.Many2one("mk.programs",        string="البرنامج")
     approach_id        = fields.Many2one('mk.approaches',      string='المنهج')        
     #Days
-    domain_days        = fields.Many2many('mk.work.days', string='أيام الحلقة')
+    # domain_days        = fields.Many2many('mk.work.days', string='أيام الحلقة')
     student_days       = fields.Many2many('mk.work.days', string='أيام الطالب')    
 
     @api.onchange('program_type')
@@ -956,7 +956,7 @@ class InternalTransferSubject(models.TransientModel):
                                        ('down', 'من الناس للفاتحة')], string="المسار")
     start_point_id = fields.Many2one("mk.subject.page", string='نقطة بداية' )
     #Days
-    domain_days    = fields.Many2many('mk.work.days', string='أيام الحلقة')
+    # domain_days    = fields.Many2many('mk.work.days', string='أيام الحلقة')
     student_days   = fields.Many2many('mk.work.days', string='أيام الطالب')
     #Compute
     student_name   = fields.Char("الطالب",   compute=get_student_name, store=True)

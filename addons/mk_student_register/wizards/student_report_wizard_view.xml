@@ -40,8 +40,16 @@
             </field>
         </record>
 
-        <act_window id="action_student_report_wizard" name="Student report" res_model="student.report.wizard"
-                    view_mode="form" target="new"/>
+        <record model="ir.actions.act_window" id="action_student_report_wizard">
+            <field name="name">Student report</field>
+            <field name="res_model">student.report.wizard</field>
+            <field name="binding_view_types">form</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+        <!-- <act_window id="action_student_report_wizard" name="Student report" res_model="student.report.wizard"
+                    view_mode="form" target="new"/> -->
 
         <menuitem name="Student report " action="action_student_report_wizard" id="action_tests_session_wizard_menu"
                   parent="student_management_view_menu"/>

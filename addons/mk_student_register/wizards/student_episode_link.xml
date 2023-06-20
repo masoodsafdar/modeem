@@ -44,7 +44,7 @@
 <record id="episode_student_actoin" model="ir.actions.act_window">
                 <field name="name">link</field>
                 <field name="res_model">episode.student.link</field>
-                <field name="view_type">form</field>
+                <field name="binding_view_types">form</field>
                 <field name="view_mode">form</field>
                 <field name="view_id" ref="episode_students_link_wizerd"/>
                 <field name="target">new</field>

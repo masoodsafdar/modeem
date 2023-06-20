@@ -56,7 +56,7 @@
         <record id="mk_serach_episode_action" model="ir.actions.act_window">
 			<field name="name">Search For Avialable Episodes</field>
 			<field name="res_model">mk.search.episode</field>
-			<field name="view_type">form</field>
+			<field name="binding_view_types">form</field>
 			<field name="view_mode">form</field>
 			<field name="view_id" ref="view_serach_for_episode_form"/>
 			<field name="target">new</field>

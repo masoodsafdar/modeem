@@ -369,7 +369,7 @@ class PointerManagementsupervisors(models.Model):
                                           ('in_progress', 'In Progress')], string='Evaluation Status', )
     supervisor_notes = fields.Text(string='Supervisor Notes')
     mosque_notes = fields.Text(string='Mosque/School Notes')
-    study_class_id = fields.Many2one('mk.study.class', string='الفصل الدراسي', compute="get_study_class",track_visibility='onchange')
+    study_class_id = fields.Many2one('mk.study.class', string='الفصل الدراسي', compute="get_study_class",tracking=True)
     #achievement_percentage = fields.Float(string='Achievement Percentage')
     evaluation_method = fields.Selection([('multiple_choice', 'Multiple Choice'),
                                           ('grade_input', 'Grade Input')], string='Evaluation Method', invisible=1)
@@ -600,7 +600,7 @@ class visitsManagment(models.Model):
 class MasjedPermision(models.Model):
     _inherit = 'mosque.permision'
 
-    supervisor_id = fields.Many2one('supervisor.item', string='Suprervisor item', track_visibility='onchange')
+    supervisor_id = fields.Many2one('supervisor.item', string='Suprervisor item', tracking=True)
 
 class mosque_domain(models.Model):
     _inherit = 'mk.mosque'

@@ -10,17 +10,17 @@ _logger = logging.getLogger(__name__)
 
 class MkUrgentLeave(models.Model):
     _name = 'mk.urgent.leave'
-    _inherit = ['mail.thread']
+    _inherit=['mail.thread','mail.activity.mixin']
     _rec_name = 'leave_id'
         
-    company_id         = fields.Many2one('res.company', string='Company', default=lambda self:self.env.user.company_id.id, track_visibility='onchange')
-    study_year_id      = fields.Many2one('mk.study.year', 'Study Year', track_visibility='onchange')
-    leave_id           = fields.Many2one('hr.holidays.status', 'Leave', track_visibility='onchange')
-    start_date         = fields.Date('Start Date', track_visibility='onchange')
-    end_date           = fields.Date('End Date', track_visibility='onchange')
-    islamic_start_date = fields.Date('Islamic Start Date', track_visibility='onchange')
-    islamic_end_date   = fields.Date('Islamic End Date', track_visibility='onchange')
-    active             = fields.Boolean('Active', default=True, track_visibility='onchange')
+    company_id         = fields.Many2one('res.company', string='Company', default=lambda self:self.env.user.company_id.id, tracking=True)
+    study_year_id      = fields.Many2one('mk.study.year', 'Study Year', tracking=True)
+    leave_id           = fields.Many2one('hr.holidays.status', 'Leave', tracking=True)
+    start_date         = fields.Date('Start Date', tracking=True)
+    end_date           = fields.Date('End Date', tracking=True)
+    islamic_start_date = fields.Date('Islamic Start Date', tracking=True)
+    islamic_end_date   = fields.Date('Islamic End Date', tracking=True)
+    active             = fields.Boolean('Active', default=True, tracking=True)
     
     # @api.one
     @api.constrains('start_date', 'end_date')
